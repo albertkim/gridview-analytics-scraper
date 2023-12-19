@@ -2,6 +2,7 @@
   "name": "gridview-analytics-scraper",
   "version": "1.0.0",
   "dependencies": {
+    "@types/puppeteer": "^7.0.4",
     "jquery": "^3.7.1",
     "puppeteer": "^21.6.1",
     "uuid": "^9.0.1"
