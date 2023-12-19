@@ -5,8 +5,6 @@ const path = require('path')
 const startUrl = 'https://citycouncil.richmond.ca/decisions/search/results.aspx?QB0=AND&QF0=ItemTopic%7cResolutionText%7cFullText%7cSubject%7cNameasSubject%7cCommitteeName%7cResult&QI0=&QB2=AND&QF2=Subject&QI2=&QB3=AND&QF3=NameasSubject&QI3=&QB5=AND&QF5=CommitteeName&QI5=%3d%22Council%22&QB1=AND&QF1=Date&QI1=&QB4=AND&QF4=Date&QI4=&TN=minutes&AC=QBE_QUERY&BU=https%3a%2f%2fcitycouncil.richmond.ca%2fdecisions%2fsearch%2fadvanced.aspx&RF=WebBriefDate&'
 const numberOfPages = 3
 
-let results = []
-
 async function main() {
 
   console.log(`Launching Puppeteer`)
@@ -18,19 +16,21 @@ async function main() {
   console.log(`Opening browser new page`)
   const page = await browser.newPage()
 
+  // Print browser page console events to this node script console
+  page.on('console', msg => {
+    if (msg.type() === 'log') {
+        console.log(msg.text())
+    }
+  })
+
+  // Inject jQuery into the page
+  await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
+
   console.log(`Browser and page initialized`)
 
+  let results = []
+
   try {
-
-    // Print browser page console events to this node script console
-    page.on('console', msg => {
-      if (msg.type() === 'log') {
-          console.log(msg.text())
-      }
-    })
-
-    // Inject jQuery into the page
-    await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
 
     // Scrape parent pages
     let parentData = []
