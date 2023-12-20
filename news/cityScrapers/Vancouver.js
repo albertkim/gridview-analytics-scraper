@@ -1,3 +1,5 @@
+// @ts-check
+
 const puppeteer = require('puppeteer')
 const fs = require('fs')
 const path = require('path')
@@ -47,9 +49,7 @@ async function main() {
   await page.evaluate(async () => {
     $('a:contains("Previous Meetings")').click()
   })
-  await page.waitForSelector('.TableRecords')
-
-  let results = []
+  await page.waitForTimeout(500)
 
   try {
 
@@ -58,17 +58,42 @@ async function main() {
       $('a:contains("Previous Meetings")').click()
     })
 
-    // Scrape parent pages
+    // Scrape parent pages and store a list of the "Agenda and minutes" links
+    /**
+     * @type {
+     *  {
+     *    url: string
+     *  }[]
+     * }
+     */
     let parentData = []
     for (let i = 0; i < numberOfPages; i++) {
       console.log(`Scraping parent page: ${i}`)
       const parentPageResults = await scrapeParentPage(page)
-      console.log(parentPageResults)
       parentData = [...parentData, ...parentPageResults.data]
       // Next page
       await page.evaluate(async () => {
         $('.ListNavigation_Next').click()
       })
+      await page.waitForTimeout(500)
+    }
+
+    console.log(parentData)
+
+    // For each parent page item, scrape the details
+    let results = []
+
+    for (let i = 0; i < parentData.length; i++) {
+      const parentPageResult = parentData[i]
+      console.log(`Scraping page details: ${i}`)
+      const childPageResult = await scrapePageDetails(page, parentPageResult.url)
+      results = [...results, ...childPageResult.map((result) => {
+        return {
+          city: 'Vancouver',
+          metroCity: 'Metro Vancouver',
+          ...result
+        }
+      })]
     }
 
     // Close the browser
@@ -91,7 +116,7 @@ async function main() {
 }
 
 /**
- * @param {puppeteer.page} page
+ * @param {puppeteer.Page} page
 */
 async function scrapeParentPage(page) {
 
@@ -105,14 +130,10 @@ async function scrapeParentPage(page) {
       const date = $(element).find('td:nth-child(1)').text()
       const meetingType = $(element).find('td:nth-child(2)').text()
       let meetingMinutesUrl
-      const meetingMinutesUrlElement = $(element).find(':contains("Agenda and Minutes")')
+      const meetingMinutesUrlElement = $(element).find('td:nth-child(4) a:contains("Agenda and Minutes")')
       if (meetingMinutesUrlElement) {
         meetingMinutesUrl = meetingMinutesUrlElement.attr('href')
       }
-
-      console.log(`Date: ${date}`)
-      console.log(`Meeting type: ${meetingType}`)
-      console.log(`Meeting minutes URL: ${meetingMinutesUrl}`)
 
       if (meetingMinutesUrl) {
         data.push({
@@ -129,5 +150,89 @@ async function scrapeParentPage(page) {
   return results
 
 }
+
+/**
+ * REfers to each item within a Vancouver meeting minute
+ * @typedef {Object} VancouverMeetingDetail
+ * @property {string} url
+ * @property {string} date
+ * @property {string} meetingType
+ * @property {string} title
+ * @property {string} resolutionId
+ * @property {string} contents
+ * @property {string} minutesUrl
+ * @property {string[]} reportUrls
+ */
+
+/**
+ * @param {puppeteer.Page} page
+ * @param {string} url
+ * @returns {VancouverMeetingDetail[]}
+*/
+async function scrapePageDetails(page, url) {
+
+  await page.goto(url)
+
+  const results = await page.evaluate(async () => {
+  
+    let data = []
+
+    /**
+     * 
+     * @param {string} title 
+     */
+    function cleanTitle(title) {
+      if (title) {
+        return title.replace(/^\d+\.\s*/, '').trim()
+      } return {
+        undefined
+      }
+    }
+
+    const meetingType = $('h1').first().html().split('<br>')[0].replace('agenda', '').trim()
+    const date = $('h1').first().html().split('<br>')[1].trim()
+
+    // Vancouver council meeting notes are organized by a series of
+    // - h3 "MATTERS ADOPTED ON CONSENT"/"REPORTS" for primary discussion items followed up by ul
+    // - h2 "REFERRAL REPORTS" followed up by an h3
+    // - h2 "BY-LAWS" followed up by p elements (first may have a PDF)
+
+    $('.main-content h3').each((index, element) => {
+      const title = cleanTitle($(element).text().trim())
+      const reportUrls = $(element).nextAll('ul').first().find('a').map(function() {
+        return $(this)[0].href
+      }).get()
+
+      data.push({
+        date: date,
+        meetingType: meetingType,
+        title: title,
+        resolutionId: null,
+        contents: '',
+        reportUrls: reportUrls
+      })
+    })
+
+    // Now, handle byalws separately
+    // TODO
+
+    
+    return data
+
+  })
+
+  // Populate with additional useful data
+  // Puppeteer page.evaluate cannot access variables outside of it
+  return results.map((d) => {
+    return {
+      url: url,
+      minutesUrl: url,
+      ...d,
+    }
+  })
+
+}
+
+
 
 main()
