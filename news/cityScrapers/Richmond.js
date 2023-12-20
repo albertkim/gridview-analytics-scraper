@@ -49,7 +49,6 @@ async function main() {
       const parentPageResult = parentData[i]
       console.log(`Scraping page details: ${i}`)
       const childPageResult = await scrapePageDetails(page, parentPageResult.url)
-      console.log(`Scraped`)
       if (childPageResult.date) {
         results.push({
           city: 'Richmond',
@@ -136,7 +135,7 @@ async function scrapeParentPage(page, url) {
  *    resolutionId: string | null
  *    contents: string | null
  *    minutesUrl: string | null
- *    reportUrls: string[]
+ *    reportUrls: {title: string, url: string}[]
  * }
 */
 async function scrapePageDetails(page, url) {
@@ -195,7 +194,12 @@ async function scrapePageDetails(page, url) {
       resolutionId: resolutionNumber,
       contents: pickLongerString(fullTextContents, resolutionContents), // Pick the bigger one
       minutesUrl: minutesUrl,
-      reportUrls: reportUrls
+      reportUrls: reportUrls.map((url) => {
+        return {
+          title: 'Report',
+          url: url
+        }
+      })
     }
 
   })

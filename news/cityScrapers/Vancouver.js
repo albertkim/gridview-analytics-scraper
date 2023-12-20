@@ -161,7 +161,7 @@ async function scrapeParentPage(page) {
  * @property {string} resolutionId
  * @property {string} contents
  * @property {string} minutesUrl
- * @property {string[]} reportUrls
+ * @property {{title: string, url: string}[]} reportUrls
  */
 
 /**
@@ -200,7 +200,10 @@ async function scrapePageDetails(page, url) {
     $('.main-content h3').each((index, element) => {
       const title = cleanTitle($(element).text().trim())
       const reportUrls = $(element).nextAll('ul').first().find('a').map(function() {
-        return $(this)[0].href
+        return {
+          title: $(this).text(),
+          url: $(this)[0].href
+        }
       }).get()
 
       data.push({
