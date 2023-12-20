@@ -1,5 +1,3 @@
-// @ts-check
-
 const puppeteer = require('puppeteer')
 const fs = require('fs')
 const path = require('path')
@@ -27,7 +25,7 @@ async function main() {
   // Print browser page console events to this node script console
   page.on('console', msg => {
     if (msg.type() === 'log') {
-        console.log(msg.text())
+      console.log(msg.text())
     }
   })
 
@@ -153,7 +151,7 @@ async function scrapeParentPage(page) {
 
 /**
  * REfers to each item within a Vancouver meeting minute
- * @typedef {Object} VancouverMeetingDetail
+ * @typedef {Object} MeetingDetail
  * @property {string} url
  * @property {string} date
  * @property {string} meetingType
@@ -167,7 +165,7 @@ async function scrapeParentPage(page) {
 /**
  * @param {puppeteer.Page} page
  * @param {string} url
- * @returns {VancouverMeetingDetail[]}
+ * @returns {MeetingDetail[]}
 */
 async function scrapePageDetails(page, url) {
 
@@ -216,9 +214,8 @@ async function scrapePageDetails(page, url) {
       })
     })
 
-    // Now, handle byalws separately
+    // Now, handle bylaws separately
     // TODO
-
     
     return data
 
