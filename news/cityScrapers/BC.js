@@ -89,10 +89,9 @@ async function main() {
       console.log(`Scraping page details: ${i}`)
       const childPageResult = await scrapePageDetails(page, parentPageResult.url, parentPageResult.date)
       results.push({
-        ...childPageResult,
         city: 'BC (province)',
-        meetingType: 'Ministry of Housing',
-        metroCity: null
+        metroCity: null,
+        ...childPageResult
       })
     }
 
@@ -170,12 +169,14 @@ async function scrapePageDetails(page, url, date) {
 
   const results = await page.evaluate(async () => {
 
-    const title = $('table tr:nth-child(4)').text()
-    const contents = $('table tr:nth-child(5)').text()
+    const meetingType = $('table tr:nth-child(3) td:nth-child(2)').text().trim()
+    const title = $('table tr:nth-child(4) td').text().trim()
+    const contents = $('table tr:nth-child(5) td').text().trim()
 
     return {
       title: title,
       resolutionId: null,
+      meetingType: meetingType,
       contents: contents,
       reportUrls: []
     }
