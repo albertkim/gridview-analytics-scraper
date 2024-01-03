@@ -35,10 +35,10 @@ async function main() {
 
     // Filter for news from the Ministry of Housing
     await page.evaluate(async () => {
-      $('#ministryList > select > option:contains("Ministory of Housing")')
+      $('#ministryList > select > option:contains("Ministry of Housing")').attr('selected', 'selected')
       $('#searchButton input').click()
     })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
 
     // Scrape parent pages and store a list of news links
     /**
@@ -63,10 +63,10 @@ async function main() {
 
     // Filter for news from the Ministry of Transportation and Infrastructure
     await page.evaluate(async () => {
-      $('#ministryList > select > option:contains("Ministry of Transportation and Infrastructure")')
+      $('#ministryList > select > option:contains("Ministry of Transportation and Infrastructure")').attr('selected', 'selected')
       $('#searchButton input').click()
     })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
 
     for (let i = 0; i < numberOfPages; i++) {
       console.log(`Ministry of Transportation and Infrastructure - Scraping parent page: ${i}`)
