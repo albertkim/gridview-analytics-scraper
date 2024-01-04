@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfItems = 1
+const numberOfItems = 10
 
 async function main() {
 
@@ -23,11 +23,11 @@ async function main() {
   })
 
   // Print browser page console events to this node script console
-  page.on('console', msg => {
-    if (msg.type() === 'log') {
-      console.log(msg.text())
-    }
-  })
+  // page.on('console', msg => {
+  //   if (msg.type() === 'log') {
+  //     console.log(msg.text())
+  //   }
+  // })
 
   // Inject jQuery into the page
   await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
@@ -90,12 +90,13 @@ async function scrapeParentPage(page, url) {
   const results = await page.evaluate(async () => {
     const date = $('.Date').text()
 
+    // Only look for items with attachments
     const itemElements = $('.AgendaItem').has('img[title="Attachments"]')
 
     const items = []
 
     for (const item of itemElements) {
-      const title = $(item).find('a').text()
+      const title = $(item).find('a').first().text()
       const contents = $(item).find('.AgendaItemDescription').text()
 
       // Clicking the item opens up a floating panel with links. Also changes URL.

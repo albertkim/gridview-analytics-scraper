@@ -2,7 +2,7 @@
   "name": "gridview-analytics-scraper",
   "version": "1.0.0",
   "scripts": {
-    "index": "node news/index.js",
+    "scrape-index": "node news/index.js",
     "scrape-bc": "node news/scrapers/BC.js",
     "scrape-vancouver": "node news/scrapers/Vancouver.js",
     "scrape-richmond": "node news/scrapers/Richmond.js",
@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/puppeteer": "^7.0.4",
     "jquery": "^3.7.1",
+    "moment": "^2.30.1",
     "puppeteer": "^21.6.1",
     "uuid": "^9.0.1"
   }
