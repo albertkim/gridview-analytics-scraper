@@ -2,10 +2,10 @@ const fs = require('fs')
 const path = require('path')
 const moment = require('moment')
 
-const BC = require('./scrapers/BC.json')
-const Vancouver = require('./scrapers/Vancouver.json')
-const Richmond = require('./scrapers/Richmond.json')
-const Burnaby = require('./scrapers/Burnaby.json')
+const BC = require('./BC.json')
+const Vancouver = require('./Vancouver.json')
+const Richmond = require('./Richmond.json')
+const Burnaby = require('./Burnaby.json')
 
 const masterJSONRaw = [...BC, ...Vancouver, ...Richmond, ...Burnaby]
 

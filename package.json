@@ -2,11 +2,11 @@
   "name": "gridview-analytics-scraper",
   "version": "1.0.0",
   "scripts": {
-    "scrape-index": "node news/index.js",
-    "scrape-bc": "node news/scrapers/BC.js",
-    "scrape-vancouver": "node news/scrapers/Vancouver.js",
-    "scrape-richmond": "node news/scrapers/Richmond.js",
-    "scrape-burnaby": "node news/scrapers/Burnaby.js"
+    "scrape-index": "node scrapers/index.js",
+    "scrape-bc": "node scrapers/BC.js",
+    "scrape-vancouver": "node scrapers/Vancouver.js",
+    "scrape-richmond": "node scrapers/Richmond.js",
+    "scrape-burnaby": "node scrapers/Burnaby.js"
   },
   "dependencies": {
     "@types/puppeteer": "^7.0.4",

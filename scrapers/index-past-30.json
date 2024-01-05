@@ -709,6 +709,23 @@
     ]
   },
   {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "date": "2023-12-13",
+    "url": "https://council.vancouver.ca/20231213/cfsc20231213ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20231213/cfsc20231213ag.htm",
+    "meetingType": "Standing Committee on City Finance and Services",
+    "resolutionId": null,
+    "title": "By-laws",
+    "contents": null,
+    "reportUrls": [
+      {
+        "title": "By-laws 1-2",
+        "url": "https://council.vancouver.ca/20231213/documents/bylaws1and2.pdf"
+      }
+    ]
+  },
+  {
     "city": "BC (province)",
     "metroCity": null,
     "date": "2023-12-12",
@@ -1055,6 +1072,31 @@
       {
         "title": "Motion",
         "url": "https://council.vancouver.ca/20231212/documents/a1.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "date": "2023-12-12",
+    "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+    "meetingType": "Council",
+    "resolutionId": null,
+    "title": "By-laws",
+    "contents": null,
+    "reportUrls": [
+      {
+        "title": "By-laws 1 to 27",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf"
+      },
+      {
+        "title": "By-law 16",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaw16revised.pdf"
+      },
+      {
+        "title": "By-law 23",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaw23.pdf"
       }
     ]
   },

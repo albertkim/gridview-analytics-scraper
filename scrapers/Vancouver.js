@@ -214,8 +214,31 @@ async function scrapePageDetails(page, url) {
       })
     })
 
-    // Now, handle bylaws separately
-    // TODO
+    // Now, handle the bylaw section (if exists) separately
+    const bylawSelector = $('h2:contains("BY-LAWS")')
+
+    // If there are any bylaws, pick the first one. If the next element is a p tag with an a tag, then get the link title and url. If the next element is not a p tag with an a tag, stop. Store results in an array.
+    if (bylawSelector.length > 0) {
+      let bylawEntry = {
+        date: date,
+        meetingType: meetingType,
+        title: 'By-laws',
+        resolutionId: null,
+        contents: '',
+        reportUrls: []
+      }
+      const bylawLinkElements = bylawSelector
+        .nextUntil(':not(p:has(a))')
+        .map((index, element) => {
+          return {
+            title: $(element).find('a').text(),
+            url: $(element).find('a')[0].href
+          }
+        })
+        .get()
+      bylawEntry.reportUrls = bylawLinkElements
+      data.push(bylawEntry)
+    }
     
     return data
 
