@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "scrape-index": "node scrapers/index.js",
-    "scrape-bc": "node scrapers/BC.js",
-    "scrape-vancouver": "node scrapers/Vancouver.js",
-    "scrape-richmond": "node scrapers/Richmond.js",
-    "scrape-burnaby": "node scrapers/Burnaby.js"
+    "scrape-bc": "node scrapers/BC.js && yarn run scrape-index",
+    "scrape-vancouver": "node scrapers/Vancouver.js && yarn run scrape-index",
+    "scrape-richmond": "node scrapers/Richmond.js && yarn run scrape-index",
+    "scrape-burnaby": "node scrapers/Burnaby.js && yarn run scrape-index",
+    "rezone": "node scrapers/rezonings/index.js"
   },
   "dependencies": {
     "@types/puppeteer": "^7.0.4",

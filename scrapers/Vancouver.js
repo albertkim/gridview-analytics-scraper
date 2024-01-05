@@ -182,8 +182,8 @@ async function scrapePageDetails(page, url) {
     function cleanTitle(title) {
       if (title) {
         return title.replace(/^\d+\.\s*/, '').trim()
-      } return {
-        undefined
+      } else {
+        return ''
       }
     }
 
@@ -196,22 +196,26 @@ async function scrapePageDetails(page, url) {
     // - h2 "BY-LAWS" followed up by p elements (first may have a PDF)
 
     $('.main-content h3').each((index, element) => {
-      const title = cleanTitle($(element).text().trim())
-      const reportUrls = $(element).nextAll('ul').first().find('a').map(function() {
-        return {
-          title: $(this).text(),
-          url: $(this)[0].href
-        }
-      }).get()
-
-      data.push({
-        date: date,
-        meetingType: meetingType,
-        title: title,
-        resolutionId: null,
-        contents: '',
-        reportUrls: reportUrls
-      })
+      const rawTitle = $(element).text().trim()
+      // Only proceed if a valid title exists
+      if (rawTitle) {
+        const title = cleanTitle(rawTitle)
+        const reportUrls = $(element).nextAll('ul').first().find('a').map(function() {
+          return {
+            title: $(this).text(),
+            url: $(this)[0].href
+          }
+        }).get()
+  
+        data.push({
+          date: date,
+          meetingType: meetingType,
+          title: title,
+          resolutionId: null,
+          contents: '',
+          reportUrls: reportUrls
+        })
+      }
     })
 
     // Now, handle the bylaw section (if exists) separately
