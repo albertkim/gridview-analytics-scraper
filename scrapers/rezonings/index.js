@@ -1,6 +1,7 @@
 // This script will go through each scraped json file and identify which ones are possibly related to rezonings or not. It will then parse through each out and produce a final output file.
 const fs = require('fs')
 const path = require('path')
+const {} = require('./utilities')
 
 const masterJSON = require('../index.json')
 
@@ -8,6 +9,7 @@ const filteredJSON = []
 
 masterJSON.forEach((item) => {
 
+  // BC does not have rezonings
   if (item.city === 'BC') {
     return
   }

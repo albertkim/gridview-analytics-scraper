@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@types/puppeteer": "^7.0.4",
+    "axios": "^1.6.4",
+    "dotenv": "^16.3.1",
     "jquery": "^3.7.1",
     "moment": "^2.30.1",
+    "pdf-lib": "^1.17.1",
+    "pdf2pic": "^3.1.0",
     "puppeteer": "^21.6.1",
     "uuid": "^9.0.1"
   }
