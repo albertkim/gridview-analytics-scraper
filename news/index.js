@@ -31,6 +31,13 @@ const masterJSON = masterJSONRaw.map(item => {
 })
 .sort((a, b) => moment(b.date, 'YYYY-MM-DD').diff(moment(a.date, 'YYYY-MM-DD')))
 
+// Save the total combined file as index.json
 console.log(`Writing file...`)
 fs.writeFileSync(path.join(__dirname, 'index.json'), JSON.stringify(masterJSON, null, 2), 'utf8')
+console.log(`File saved`)
+
+// Create a file that only has the past 30 days worth of news
+const past30Days = masterJSON.filter((item) => moment(item.date).isAfter(moment().subtract(30, 'days')))
+console.log(`Writing file...`)
+fs.writeFileSync(path.join(__dirname, 'index-past-30.json'), JSON.stringify(past30Days, null, 2), 'utf8')
 console.log(`File saved`)

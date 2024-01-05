@@ -64,7 +64,7 @@ async function main() {
     console.log(`Scraping page details: ${i}`)
     const meetingUrl = meetingUrls[i]
     const meetingResults = await scrapeParentPage(page, meetingUrl)
-    results = [...results, ...meetingResults]
+    results = [...results, ...meetingResults].filter((r) => r.reportUrls.length > 0)
   }
 
   // Close the browser
