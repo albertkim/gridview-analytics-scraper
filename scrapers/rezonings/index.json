@@ -1,1 +1,495 @@
-[]
+[
+  {
+    "city": "Vancouver",
+    "address": "2231-2247 East 41st Avenue",
+    "applicant": "Dava Developments Ltd.",
+    "description": "The rezoning is to permit the development of a five-storey rental building with a floor space ratio (FSR) of 2.20 and a height of 16.8 m (55 ft.)",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.2,
+      "height": 16.8
+    },
+    "status": "public hearing",
+    "date": "2023-12-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "6470 Larch Street",
+    "applicant": "AVRP Architecture Inc.",
+    "description": "The rezoning is to permit the development of a five-storey secured market rental building. A floor space ratio (FSR) of 2.20 and height of 16.8 m (55 ft.) are proposed.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.2,
+      "height": 16.8
+    },
+    "status": "pending",
+    "date": "2023-12-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
+    "applicant": "Marcon Developments Ltd.",
+    "description": "The rezoning is to permit the development of a six-storey, 162-unit Community Care Facility. The proposed floor space ratio (FSR) is 3.87 and the height is 27.5 m (90 ft.) with additional height for a rooftop amenity.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 162,
+      "rental": null,
+      "hotel": null,
+      "fsr": 3.87,
+      "height": 27.5
+    },
+    "status": "public hearing",
+    "date": "2023-12-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "848 Seymour Street",
+    "applicant": "Perkins & Will on behalf of Paul Y. Construction (B.C.) LTD., Inc.",
+    "description": "The rezoning is to permit the development of a 30-storey hotel with a floor space ratio (FSR) of 17.67 and a height of 97.7 m (321 ft.). The proposed form of development is generally as prepared by Perkins & Will, received June 24, 2022.",
+    "type": "commercial",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": 30,
+      "fsr": 17.67,
+      "height": 97.7
+    },
+    "status": "pending",
+    "date": "2023-12-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1710-1730 East Pender Street",
+    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc.",
+    "description": "The rezoning is for the development of an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space. The proposed floor space ratio (FSR) is 5.58 and the height is 60.8 m (199 ft.) with additional height for a rooftop amenity space.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 191,
+      "rental": null,
+      "hotel": null,
+      "fsr": 5.58,
+      "height": 60.8
+    },
+    "status": "pending",
+    "date": "2023-12-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "692 West 30th Avenue",
+    "applicant": "Paramax Homes",
+    "description": "The rezoning is to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
+    "type": "townhouse",
+    "stats": {
+      "number of buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 1.2,
+      "height": null
+    },
+    "status": "pending",
+    "date": "2023-12-12"
+  },
+  {
+    "city": "Vancouver",
+    "address": "688 West 29th Avenue",
+    "applicant": "Paramax Homes",
+    "description": "The rezoning is to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
+    "type": "townhouse",
+    "stats": {
+      "number of buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 1.2,
+      "height": null
+    },
+    "status": "pending",
+    "date": "2023-12-12"
+  },
+  {
+    "city": "Vancouver",
+    "address": "4711-4787 Cambie Street",
+    "applicant": "Mosaic Homes",
+    "description": "The rezoning is to permit the development of two six-storey, strata-titled residential buildings with 114 strata-titled residential units. The proposed floor space ratio (FSR) is 2.65 and the height is 23.6 m (77.4 ft.)",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 2,
+      "strata": 114,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.65,
+      "height": 23.6
+    },
+    "status": "approved",
+    "date": "2023-12-12"
+  },
+  {
+    "city": "Vancouver",
+    "address": "8120-8168 Lord Street, 540 West 65th Avenue",
+    "applicant": "Francl Architecture Inc.",
+    "description": "The rezoning is to permit the development of two six-storey residential buildings consisting of 146 secured-market rental units, of which five units would be below-market rental. A floor space ratio (FSR) of 2.88 and a height of 20.7 m (68 ft.) with additional height for a rooftop amenity and mechanical appurtenances are proposed.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 2,
+      "strata": null,
+      "rental": 146,
+      "hotel": null,
+      "fsr": 2.88,
+      "height": 20.7
+    },
+    "status": "pending",
+    "date": "2023-12-12"
+  },
+  {
+    "city": "Vancouver",
+    "address": "3352-3386 Vanness Avenue, 3347 Clive Avenue",
+    "applicant": "Intracorp Vanness Limited Partnership, on behalf of the Strata Corporation of 3352-3386 Vanness Avenue Strata Plan LMS992 and the registered owners of the strata lots in Strata Plan LMS922, and the registered owner of 3347 Clive Avenue",
+    "description": "The rezoning application is to rezone the consolidated lands at 3352-3386 Vanness Avenue and 3347 Clive Avenue from CD-1(201) (Comprehensive Development) District and CD-1(218) (Comprehensive Development) District to CD-1 (Comprehensive Development) District, respectively, to increase the maximum floor space ratio (FSR) from 1.45 and 0.6 respectively to 11.38 and the maximum building height from 35.5 m (120 ft.) and 11.9 m (39 ft.) respectively to 104.9 m (344 ft.), to permit a mixed-use development with 30-storey (west tower) and 33-storey (east tower) buildings connected with a six-storey podium, with 679 secured rental units, of which 10% of the residential floor area will be secured at below market rents, commercial uses on the ground floor and a 37-space turn-key childcare facility for City ownership.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 2,
+      "strata": null,
+      "rental": 679,
+      "hotel": null,
+      "fsr": 11.38,
+      "height": 104.9
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "2015 Main Street and 190 East 4th Avenue",
+    "applicant": "Henriquez Partners Architects, on behalf of 2015 Main Property Inc.",
+    "description": "The rezoning application is to rezone the lands from IC-2 (Industrial) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 3.0 to 6.27 and the maximum building height from 18.3 m (60 ft.) to 79.3 m (260 ft.) with mechanical appurtenances permitted up to a maximum of 3.6 m (12 ft.) above the permitted building height. The proposal is to permit a 25-storey, hybrid mass-timber, mixed-use building containing 210 secured-rental housing units, of which 20% would be secured at below-market rents, under the Broadway Plan.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 210,
+      "hotel": null,
+      "fsr": 6.27,
+      "height": 79.3
+    },
+    "status": "pending",
+    "date": "2023-11-28"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1055 Harwood Street",
+    "applicant": "GWL Realty Advisors Inc., on behalf of Harwood Street Project Nominee Inc.",
+    "description": "The rezoning application is to rezone the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 269,
+      "rental": null,
+      "hotel": null,
+      "fsr": 11.9,
+      "height": 91.44
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1055 Harwood Street",
+    "applicant": "GWL Realty Advisors Inc., on behalf of Harwood Street Project Nominee Inc.",
+    "description": "The rezoning application is to rezone the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 269,
+      "hotel": null,
+      "fsr": 11.9,
+      "height": 91.44
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1890 Southwest Marine Drive",
+    "applicant": "Stuart Howard Architects, on behalf of Yayun Cao",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 0.75 and the building height from 11.5 m (38 ft.) to 13.8 m (45 ft.), to permit 28 secured market rental residential units.",
+    "type": "townhouse",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 28,
+      "rental": null,
+      "hotel": null,
+      "fsr": 0.75,
+      "height": 13.8
+    },
+    "status": "pending",
+    "date": "2023-11-28"
+  },
+  {
+    "city": "Vancouver",
+    "address": "3529-3589 Arbutus Street, 2106 West 19th Avenue",
+    "applicant": "Andrew Cheung Architects, Inc.",
+    "description": "The rezoning is to permit the development of a five-storey rental building with a height of 16.8 m and a floor space ratio (FSR) of 2.40.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.4,
+      "height": 16.8
+    },
+    "status": "pending",
+    "date": "2023-11-16"
+  },
+  {
+    "city": "Vancouver",
+    "address": "6065-6075 Collingwood Place",
+    "applicant": "Strand Holdings Ltd.",
+    "description": "The rezoning is to permit the development of a five-storey rental building with a height of 16.8 m (55 ft.) and a floor space ratio (FSR) of 2.40.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.4,
+      "height": 16.8
+    },
+    "status": "pending",
+    "date": "2023-11-16"
+  },
+  {
+    "city": "Vancouver",
+    "address": "5515-5525 Elizabeth Street",
+    "applicant": "Ardor Development Ltd.",
+    "description": "The rezoning is to permit the development of a four-storey residential building with a partial 5th floor rooftop amenity area with 27 strata-titled residential units. A floor space ratio of 2.0 and a maximum building height of 13.7 m (45 ft.) with additional height to 18.2 m (60 ft.) for a rooftop amenity and mechanical appurtenances are proposed.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 27,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2,
+      "height": "13.7 m"
+    },
+    "status": "public hearing",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1510 West 71st Avenue, 8733 Granville Street",
+    "applicant": "Gradual Architecture Inc",
+    "description": "The rezoning is for the development of a six-storey mixed-use building, with commercial space at-grade and 74 secured market rental units. The proposed height is 22.0 m (72 ft.) and a floor space ratio (FSR) of 3.38.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 74,
+      "hotel": null,
+      "fsr": 3.38,
+      "height": 22
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "430-440 West Pender Street",
+    "applicant": "Architectural Collective Inc.",
+    "description": "The rezoning is to permit the development of a 12-storey mixed-use building with a partial 13th floor rooftop amenity area, with commercial at-grade and 80 secured market rental housing units. The proposed floor space ratio (FSR) is 8.42 and a maximum building height of 32.0 m (105 ft.) with additional height to 35.1 m (115 ft.) for a partial 13th floor rooftop common amenity space.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 80,
+      "hotel": null,
+      "fsr": 8.42,
+      "height": 32
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "3231-3245 Fraser Street, 675 East 17th Avenue",
+    "applicant": "Anthem Fraser Developments LP",
+    "description": "The rezoning is to permit the development of a 14-storey mixed-use building with a partial 15th floor rooftop amenity area, with commercial at-grade and 110 secured rental housing units, of which 20% of the residential floor area will be secured as moderate income units, over three levels of underground parking. A floor space ratio of 6.9 and a maximum building height of 45.5 m (149 ft.) with additional height to 47.5 m (156 ft.) for a partial 15th floor rooftop amenity area are proposed.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 110,
+      "hotel": null,
+      "fsr": 6.9,
+      "height": 45.5
+    },
+    "status": "pending",
+    "date": "2023-11-14"
+  },
+  {
+    "city": "Vancouver",
+    "address": "4711-4787 Cambie Street",
+    "applicant": "Mosaic Homes, on behalf of Mosaic Flora and Fauna Holdings Ltd.",
+    "description": "The rezoning application is to rezone from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the permitted floor space ratio (FSR) from 0.70 to 2.65 and the maximum building height from 11.5 m (37.7 ft.) to 23.6 m (77.4 ft.) to permit the development of two six-storey residential buildings with 114 strata-titled residential units.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 2,
+      "strata": 114,
+      "rental": null,
+      "hotel": null,
+      "fsr": 2.65,
+      "height": 23.6
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "2231-2247 East 41st Avenue",
+    "applicant": "Dava Developments Ltd., on behalf of 1314594 B.C. Ltd.",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) District. The amendment would allow for a five-storey rental building in accordance with the Secured Rental Policy. An estimated total of 61 secured rental units would be delivered through this application. A future building design would be submitted through the development permit process and reviewed with the public at that time.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 61,
+      "hotel": null,
+      "fsr": null,
+      "height": 5
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "6470 Larch Street",
+    "applicant": "AVRP Architecture Inc. on behalf of Pius Ho",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) District. The proposed development is for a five-storey rental building with an estimated total of 33 secured rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": 33,
+      "hotel": null,
+      "fsr": null,
+      "height": 5
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "1710-1730 East Pender Street",
+    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc. on behalf of Lu'ma Native Housing Society and ALT Commercial Housing Society",
+    "description": "The rezoning application is to rezone the lands from RM-4 and RM-4N (Residential) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 1.45 to 5.58 and the maximum building height from 10.7 m (35.1 ft.) to 60.8 m (199.5 ft.), with a maximum of 64.1 m (210.3 ft.) to accommodate a partial 19th floor rooftop amenity area, to permit the development of an 18-storey social housing mixed-use building, containing 191 housing units including six live-work units, with commercial space on the ground floor.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 191,
+      "rental": null,
+      "hotel": null,
+      "fsr": 5.58,
+      "height": 60.8
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "8120-8168 Lord Street and 540 West 65th Avenue",
+    "applicant": "Francl Architecture Inc. on behalf of Lord Street Holdings Ltd.",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 0.70 to 2.88 and the maximum building height from 11.5 m (38 ft.) to  20.7 m (68 ft.), to permit the development of two six-storey residential buildings containing 146 secured-rental units, of which five units will be secured as below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "number of buildings": 2,
+      "strata": null,
+      "rental": 146,
+      "hotel": null,
+      "fsr": 2.88,
+      "height": "20.7 m"
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "692 West 30th Avenue",
+    "applicant": "Paramax Homes, on behalf of Gurjeet Singh Tiwana",
+    "description": "The rezoning application is to rezone the land from R1-1 (Residential Inclusive) District to RM-8A (Residential) District in order to allow for a townhouse or rowhouse development. The maximum floor space ratio (FSR) for RM-8A is 1.20, and approximately ten townhouses can be achieved at this location. The application meets the intent of the Cambie Corridor Plan.",
+    "type": "townhouse",
+    "stats": {
+      "number of buildings": 10,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 1.2,
+      "height": null
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "688 West 29th Avenue",
+    "applicant": "Paramax Homes, on behalf of Vertical Ventures Inc.",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to RM-8A (Residential) District to allow for a townhouse or rowhouse development. The maximum floor space ratio (FSR) for RM-8A can be up to 1.20. Based on the site area, approximately eight townhouses can be achieved at this location.",
+    "type": "townhouse",
+    "stats": {
+      "number of buildings": 8,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": 1.2,
+      "height": null
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "4330-4408 Arbutus Street and 2092 Nanton Avenue",
+    "applicant": "Marcon Developments Ltd., on behalf of Amica Arbutus Nanton Seniors Inc.",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 0.70 to 3.87 and the maximum building height from 11.5 m (37.7 ft.) to 27.5 m (90 ft.) and to 31.5 m (103 ft.) for the portion with rooftop amenity, to permit the development of a six-storey, 162-unit Community Care Facility – Class B.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": 162,
+      "rental": null,
+      "hotel": null,
+      "fsr": 3.87,
+      "height": 31.5
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  },
+  {
+    "city": "Vancouver",
+    "address": "848 Seymour Street",
+    "applicant": "Perkins & Will, on behalf of Paul Y. Construction (B.C.) LTD., Inc.",
+    "description": "The rezoning application is to rezone the lands from DD (Downtown) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 5.75 to 17.67 and the maximum building height from 91.4 m (300 ft.) to 97.7 m (321 ft.), to permit the development of a 30-storey hotel.",
+    "type": "mixed use",
+    "stats": {
+      "number of buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": 30,
+      "fsr": 17.67,
+      "height": 97.7
+    },
+    "status": "pending",
+    "date": "2023-10-31"
+  }
+]

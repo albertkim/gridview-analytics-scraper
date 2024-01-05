@@ -1,10 +1,16 @@
 const axios = require('axios')
+const OpenAI = require('openai')
+const pdfParse = require('pdf-parse')
 const {PDFDocument}	= require('pdf-lib')
 require('dotenv').config()
 
 const environment = process.env.NODE_ENV
 const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY
 const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL
+
+const openai = new OpenAI({
+	apiKey: chatGPTAPIKey
+})
 
 console.log(environment, chatGPTAPIKey, chatGPTAPIUrl)
 
@@ -16,6 +22,20 @@ async function downloadPDF(url) {
   })
 	console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb}`)
   return response.data
+}
+
+async function generateOnlyTextBasedPDF(pdfData) {
+	const pdfDoc = await PDFDocument.load(pdfData)
+	const pageCount = pdfDoc.getPageCount()
+	for (let i = pageCount - 1; i >= 0; i--) {
+		const page = pdfDoc.getPage(i)
+		const textContent = await page.getTextContent()
+		if (textContent.items.length === 0) {
+			// Page has no selectable text, so remove it
+			pdfDoc.removePage(i)
+		}
+	}
+	const modifiedPdfBytes = await pdfDoc.save()
 }
 
 // Given a PDF file, return a new PDF file with only the first X pages 
@@ -60,10 +80,18 @@ async function generateScreenshotFromPDF(pdfData, pageIndex) {
   }
 }
 
+async function parsePDF(pdfData) {
+	console.log(`Parsing PDF`)
+	const parsedPDF = await pdfParse(pdfData)
+	console.log(`Parsed PDF`)
+	return parsedPDF
+}
+
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
 // Make sure that the query includes the word 'JSON'
 async function chatGPTTextQuery(query) {
 	console.log(`Sending text query to ChatGPT`)
+
   const payload = {
 		model: 'gpt-3.5-turbo-1106',
 		messages:[
@@ -77,12 +105,17 @@ async function chatGPTTextQuery(query) {
 		},
     temperature: 0.2
   }
-	const response = await axios.post(chatGPTAPIUrl, payload, {
-		headers: {
-			Authorization: `Bearer ${chatGPTAPIKey}`
+	try {
+		const response = await openai.chat.completions.create(payload)
+		return response
+	} catch (error) {
+		if (error.response && error.response.data) {
+			console.error(error.response.data)
+			throw new Error()
+		} else {
+			throw new Error()
 		}
-	})
-	return response.data
+	}
 }
 
 // Send a text + file query to ChatGPT 4 turbo and get data back in JSON format
@@ -90,10 +123,21 @@ async function chatGPTDataQuery(query, fileData) {
 	console.log(`Sending data query to ChatGPT`)
 	const payload = {
 		model: 'gpt-4-vision-preview',
-		messages:[
+		messages: [
 			{
 				'role': 'user',
-				'content': query
+				'content': [
+					{
+						'type': 'text',
+						'text': query
+					},
+					{
+						'type': 'image_url',
+						'image_url': {
+							'url': ''
+						}
+					}
+				]
 			}
 		],
 		response_format: {
@@ -117,17 +161,19 @@ async function chatGPTDataQuery(query, fileData) {
 	} catch (error) {
 		if (error.response && error.response.data) {
 			console.error(error.response.data)
-			throw new Error(error.response.data)
+			throw new Error()
 		} else {
-			throw error
+			throw new Error()
 		}
 	}
 }
 
 module.exports = {
 	downloadPDF,
+	generateOnlyTextBasedPDF,
 	generatePDF,
 	generateScreenshotFromPDF,
+	parsePDF,
 	chatGPTTextQuery,
 	chatGPTDataQuery
 }
