@@ -83,7 +83,6 @@ async function generateScreenshotFromPDF(pdfData, pageIndex) {
 async function parsePDF(pdfData) {
 	console.log(`Parsing PDF`)
 	const parsedPDF = await pdfParse(pdfData)
-	console.log(`Parsed PDF`)
 	return parsedPDF
 }
 
