@@ -2,14 +2,16 @@
   "name": "gridview-analytics-scraper",
   "version": "1.0.0",
   "scripts": {
-    "scrape-index": "node scrapers/index.js",
-    "scrape-bc": "node scrapers/BC.js && yarn run scrape-index",
-    "scrape-vancouver": "node scrapers/Vancouver.js && yarn run scrape-index",
-    "scrape-richmond": "node scrapers/Richmond.js && yarn run scrape-index",
-    "scrape-burnaby": "node scrapers/Burnaby.js && yarn run scrape-index",
-    "rezone": "node scrapers/rezonings/index.js"
+    "scrape": "ts-node src/scraper/index.ts",
+    "scrape-index": "ts-node src/index.js",
+    "scrape-vancouver": "node src/Vancouver.js && yarn run scrape-index",
+    "scrape-richmond": "node src/Richmond.js && yarn run scrape-index",
+    "scrape-burnaby": "node src/Burnaby.js && yarn run scrape-index",
+    "rezone": "node src/rezonings/index.js"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/pdf-parse": "^1.1.4",
     "@types/puppeteer": "^7.0.4",
     "axios": "^1.6.4",
     "dotenv": "^16.3.1",
@@ -20,6 +22,8 @@
     "pdf-parse": "^1.1.1",
     "pdf2pic": "^3.1.0",
     "puppeteer": "^21.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "uuid": "^9.0.1"
   }
 }
