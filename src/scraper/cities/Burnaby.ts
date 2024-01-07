@@ -2,7 +2,7 @@ import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfItems = 10
+const numberOfItems = 40
 
 interface IOptions {
   startDate: string | null

@@ -24,12 +24,20 @@ interface IBylawData {
   }
 }
 
-export async function analyze() {
+export async function analyze(startDate: string, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Vancouver'})
   const rezoningJSON: IRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Vancouver'})
 
   for (const news of scrapedList) {
+
+    if (moment(news.date).isBefore(startDate)) {
+      break
+    }
+
+    if (endDate && moment(news.date).isAfter(endDate)) {
+      break
+    }
 
     if (news.title.includes('Rezoning:')) {
       if (news.reportUrls.length > 0) {

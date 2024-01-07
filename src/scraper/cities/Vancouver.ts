@@ -2,7 +2,7 @@ import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 
 const startUrl = 'https://covapp.vancouver.ca/councilMeetingPublic/CouncilMeetings.aspx'
-const numberOfPages = 3
+const numberOfPages = 40
 
 interface IOptions {
   startDate: string | null
@@ -151,7 +151,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
     
     let data: Omit<IMeetingDetail, 'city' | 'metroCity' | 'url' | 'minutesUrl'>[] = []
 
-    function cleanTitle(title: string) {
+    function cleanTitle(title: string = '') {
       if (title) {
         return title.replace(/^\d+\.\s*/, '').trim()
       } else {
@@ -159,8 +159,8 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
       }
     }
 
-    const meetingType = $('h1').first().html().split('<br>')[0].replace('agenda', '').trim()
-    const date = $('h1').first().html().split('<br>')[1].trim()
+    const meetingType = ($('h1').first().html().split('<br>')[0].replace('agenda', '') || '').trim()
+    const date = ($('h1').first().html().split('<br>')[1] || '').trim()
 
     // Vancouver council meeting notes are organized by a series of
     // - h3 "MATTERS ADOPTED ON CONSENT"/"REPORTS" for primary discussion items followed up by ul
@@ -168,7 +168,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
     // - h2 "BY-LAWS" followed up by p elements (first may have a PDF)
 
     $('.main-content h3').each((index, element) => {
-      const rawTitle = $(element).text().trim()
+      const rawTitle = ($(element).text() || '').trim()
       // Only proceed if a valid title exists
       if (rawTitle) {
         const title = cleanTitle(rawTitle)

@@ -10,12 +10,20 @@ import {
   chatGPTTextQuery
 } from '../utilities'
 
-export async function analyze() {
+export async function analyze(startDate: string, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Richmond'})
   const rezoningJSON: IRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Richmond'})
 
   for (const news of scrapedList) {
+
+    if (moment(news.date).isBefore(startDate)) {
+      break
+    }
+
+    if (endDate && moment(news.date).isAfter(endDate)) {
+      break
+    }
 
     if (news.title.toLowerCase().includes('rezoning') && news.title.toLowerCase().includes('application')) {
       if (news.reportUrls.length > 0) {

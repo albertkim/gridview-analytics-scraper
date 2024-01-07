@@ -2,7 +2,7 @@ import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 
 const startUrl = 'https://archive.news.gov.bc.ca/'
-const numberOfPages = 3
+const numberOfPages = 40
 
 interface IOptions {
   startDate: string | null
