@@ -1,9 +1,8 @@
-import fs from 'fs'
-import path from 'path'
 import {scrape as scrapeBC} from './cities/BC'
 import {scrape as scrapeVancouver} from './cities/Vancouver'
 import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
+import { RawRepository } from '../repositories/RawRepository'
 
 // TODO: This param isn't properly used in the scraper yet
 const startDate = '2021-01-01'
@@ -25,11 +24,7 @@ async function main() {
       endDate: null,
       headless: false
     })
-    fs.writeFileSync(
-      path.join(__dirname, '/cities/BC-results.json'),
-      JSON.stringify(bcData, null, 2),
-      'utf8'
-    )
+    RawRepository.updateNews('BC', bcData)
   }
 
   if (citiesToScrape.includes('Vancouver')) {
@@ -38,11 +33,7 @@ async function main() {
       endDate: null,
       headless: false
     })
-    fs.writeFileSync(
-      path.join(__dirname, '/cities/Vancouver-results.json'),
-      JSON.stringify(vancouverData, null, 2),
-      'utf8'
-    )
+    RawRepository.updateNews('Vancouver', vancouverData)
   }
 
   if (citiesToScrape.includes('Richmond')) {
@@ -51,29 +42,17 @@ async function main() {
       endDate: null,
       headless: false
     })
-    fs.writeFileSync(
-      path.join(__dirname, '/cities/Richmond-results.json'),
-      JSON.stringify(richmondData, null, 2),
-      'utf8'
-    )
+    RawRepository.updateNews('Richmond', richmondData)
   }
 
   if (citiesToScrape.includes('Burnaby')) {
-    const richmondData = await scrapeBurnaby({
+    const burnabyData = await scrapeBurnaby({
       startDate: startDate,
       endDate: null,
       headless: false
     })
-    fs.writeFileSync(
-      path.join(__dirname, '/cities/Burnaby-results.json'),
-      JSON.stringify(richmondData, null, 2),
-      'utf8'
-    )
+    RawRepository.updateNews('Burnaby', burnabyData)
   }
-
-  // Phase 2 - News
-
-  // Phase 3 - Rezonings
 
 }
 

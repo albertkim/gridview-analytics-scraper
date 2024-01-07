@@ -1,13 +1,12 @@
-const axios = require('axios')
-const OpenAI = require('openai')
-const pdfParse = require('pdf-parse')
-const {PDFDocument}	= require('pdf-lib')
-const { parse } = require('dotenv')
+import axios from 'axios'
+import pdfParse from 'pdf-parse'
+import OpenAI from 'openai'
+import { PDFDocument } from 'pdf-lib'
 require('dotenv').config()
 
-const environment = process.env.NODE_ENV
-const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY
-const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL
+const environment = process.env.NODE_ENV!
+const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
+const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL!
 
 const openai = new OpenAI({
 	apiKey: chatGPTAPIKey
@@ -16,7 +15,7 @@ const openai = new OpenAI({
 console.log(environment, chatGPTAPIKey, chatGPTAPIUrl)
 
 // Download a PDF from a URL and return the data
-async function downloadPDF(url) {
+export async function downloadPDF(url: string) {
 	console.log(`Downloading PDF from ${url}`)
   const response = await axios.get(url, {
     responseType: 'arraybuffer'
@@ -25,8 +24,13 @@ async function downloadPDF(url) {
   return response.data
 }
 
+interface IGeneratePDFTextArrayOptions {
+	minCharacterCount?: number
+	expectedWords?: string[]
+}
+
 // Given a PDF file, return a new text array with only the pages that have selectable text
-async function generatePDFTextArray(pdfData, options = {}) {
+export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePDFTextArrayOptions = {}) {
 	const minCharacterCount = options.minCharacterCount || 5
 	const expectedWords = options.expectedWords || []
 	const pdfDoc = await PDFDocument.load(pdfData)
@@ -41,7 +45,7 @@ async function generatePDFTextArray(pdfData, options = {}) {
 		const [copiedPage] = await singlePagePDF.copyPages(pdfDoc, [i])
 		singlePagePDF.addPage(copiedPage)
 		const singlePagePDFBytes = await singlePagePDF.save()
-		const pageText = (await pdfParse(singlePagePDFBytes)).text
+		const pageText = (await pdfParse(singlePagePDFBytes as Buffer)).text
 		if (pageText.replace(/\s/g, '').length > minCharacterCount && expectedWords.every(word => pageText.toLowerCase().includes(word.toLowerCase()))) {
 			finalPDFTextArray.push(pageText)
 		}
@@ -51,8 +55,14 @@ async function generatePDFTextArray(pdfData, options = {}) {
 	return finalPDFTextArray
 }
 
+interface IGeneratePDFOptions {
+	minCharacterCount?: number
+	expectedWords?: string[]
+	maxPages?: number
+}
+
 // Given a PDF file, return a PDF with only the pages that have selectable text
-async function generatePDF(pdfData, options = {}) {
+export async function generatePDF(pdfData: Buffer, options: IGeneratePDFOptions = {}) {
 	const minCharacterCount = options.minCharacterCount || 5
 	const expectedWords = options.expectedWords || []
 	const maxPages = options.maxPages || null
@@ -68,7 +78,7 @@ async function generatePDF(pdfData, options = {}) {
 		const [copiedPage] = await singlePagePDF.copyPages(pdfDoc, [i])
 		singlePagePDF.addPage(copiedPage)
 		const singlePagePDFBytes = await singlePagePDF.save()
-		const pageText = (await pdfParse(singlePagePDFBytes)).text
+		const pageText = (await pdfParse(singlePagePDFBytes as Buffer)).text
 		if (pageText.replace(/\s/g, '').length > minCharacterCount && expectedWords.every(word => pageText.toLowerCase().includes(word.toLowerCase()))) {
 			const [copiedPage] = await finalPDF.copyPages(pdfDoc, [i])
 			const page = finalPDF.addPage(copiedPage)
@@ -82,28 +92,11 @@ async function generatePDF(pdfData, options = {}) {
 }
 
 // Given a PDF file, return an JPEG image file of the page at the given index
-async function generateScreenshotFromPDF(pdfData, pageIndex) {
-	console.log(`Generating screenshot of page ${pageIndex}`)
-	const options = {
-    density: 300,           // Image density in DPI (dots per inch)
-    format: 'jpeg',         // Output image format (JPEG in this case)
-    size: '600x800',        // Output image size (width x height)
-    page: pageIndex + 1     // Page index (starting from 1)
-  }
-
-  const pdfConverter = new pdf2pic(options)
-
-  try {
-    const imageBuffer = await pdfConverter.convertBuffer(pdfData)
-		console.log(`Generated`)
-    return imageBuffer
-  } catch (error) {
-    console.error('Error converting PDF to image:', error)
-    throw error
-  }
+export async function generateScreenshotFromPDF(pdfData: Uint8Array, pageIndex: number) {
+	// TODO
 }
 
-async function parsePDF(pdfData) {
+export async function parsePDF(pdfData: Buffer) {
 	console.log(`Parsing PDF`)
 	const parsedPDF = await pdfParse(pdfData)
 	return parsedPDF
@@ -111,26 +104,25 @@ async function parsePDF(pdfData) {
 
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
 // Make sure that the query includes the word 'JSON'
-async function chatGPTTextQuery(query) {
+export async function chatGPTTextQuery(query: string) {
 	console.log(`Sending text query to ChatGPT`)
 
-  const payload = {
-		model: 'gpt-3.5-turbo-1106',
-		messages:[
-			{
-				'role': 'user',
-				'content': query
-			}
-		],
-		response_format: {
-			type: 'json_object'
-		},
-    temperature: 0.2
-  }
 	try {
-		const response = await openai.chat.completions.create(payload)
+		const response = await openai.chat.completions.create({
+			model: 'gpt-3.5-turbo-1106',
+			messages:[
+				{
+					'role': 'user',
+					'content': query
+				}
+			],
+			response_format: {
+				type: 'json_object'
+			},
+			temperature: 0.2
+		})
 		return response
-	} catch (error) {
+	} catch (error: any) {
 		if (error.response && error.response.data) {
 			console.error(error.response.data)
 			throw new Error()
@@ -142,7 +134,7 @@ async function chatGPTTextQuery(query) {
 }
 
 // Send a text + file query to ChatGPT 4 turbo and get data back in JSON format
-async function chatGPTDataQuery(query, fileData) {
+export async function chatGPTDataQuery(query: string, fileData: Buffer) {
 	console.log(`Sending data query to ChatGPT`)
 	const payload = {
 		model: 'gpt-4-vision-preview',
@@ -181,7 +173,7 @@ async function chatGPTDataQuery(query, fileData) {
 			}
 		})
 		return response.data
-	} catch (error) {
+	} catch (error: any) {
 		if (error.response && error.response.data) {
 			console.error(error.response.data)
 			throw new Error()
@@ -189,14 +181,4 @@ async function chatGPTDataQuery(query, fileData) {
 			throw new Error()
 		}
 	}
-}
-
-module.exports = {
-	downloadPDF,
-	generatePDFTextArray,
-	generatePDF,
-	generateScreenshotFromPDF,
-	parsePDF,
-	chatGPTTextQuery,
-	chatGPTDataQuery
 }

@@ -7,7 +7,7 @@ const {
   parsePDF,
   chatGPTDataQuery,
   chatGPTTextQuery
-} = require('./utilities')
+} = require('../utilities')
 
 // This dataset includes an application and a public hearing to test data merging
 const scrapedNewsJSON = require('../index.json')

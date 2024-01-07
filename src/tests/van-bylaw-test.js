@@ -4,7 +4,7 @@ const {
   downloadPDF,
   generatePDFTextArray,
   chatGPTTextQuery
-} = require('./utilities')
+} = require('../utilities')
 
 const bylawUrl = 'https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf'
 
