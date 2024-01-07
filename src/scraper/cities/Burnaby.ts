@@ -1,15 +1,21 @@
-const puppeteer = require('puppeteer')
-const fs = require('fs')
-const path = require('path')
+import puppeteer, { Page } from 'puppeteer'
+import { IMeetingDetail } from '../../repositories/RawRepository'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
 const numberOfItems = 10
 
-async function main() {
+interface IOptions {
+  startDate: string | null
+  endDate: string | null
+  headless?: boolean | 'new'
+  verbose?: boolean
+}
+
+export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   console.log(`Launching Puppeteer`)
   const browser = await puppeteer.launch({
-    headless: false
+    headless: options.headless || 'new'
   })
 
   // Pass this page instance around instead of re-using a global variable
@@ -23,11 +29,13 @@ async function main() {
   })
 
   // Print browser page console events to this node script console
-  // page.on('console', msg => {
-  //   if (msg.type() === 'log') {
-  //     console.log(msg.text())
-  //   }
-  // })
+  if (options.verbose) {
+    page.on('console', msg => {
+      if (msg.type() === 'log') {
+        console.log(msg.text())
+      }
+    })
+  }
 
   // Inject jQuery into the page
   await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
@@ -52,14 +60,14 @@ async function main() {
 
   const meetingUrls = await page.evaluate(async () => {
     const urls = $('.calendar-item a:contains("City Council Meeting")')
-      .map((index, element) => element.href)
+      .map((index, element) => (element as HTMLAnchorElement).href)
       .get()
     return urls
   })
 
   console.log(meetingUrls)
 
-  let results = []
+  let results: IMeetingDetail[] = []
   for (let i = 0; i < meetingUrls.length && i < numberOfItems; i++) {
     console.log(`Scraping page details: ${i}`)
     const meetingUrl = meetingUrls[i]
@@ -71,18 +79,12 @@ async function main() {
   await browser.close()
   console.log(`Browser closed`)
 
-  console.log(`Writing file...`)
-  fs.writeFileSync(path.join(__dirname, 'Burnaby.json'), JSON.stringify(results, null, 2), 'utf8')
-  console.log(`File saved`)
+  return results
 
 }
 
 // Parent page refers to the city council meeting page, which includes a list of topics
-/**
- * @param {puppeteer.page} page
- * @param {string} url
-*/
-async function scrapeParentPage(page, url) {
+async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 3000)})
@@ -100,7 +102,7 @@ async function scrapeParentPage(page, url) {
       const contents = $(item).find('.AgendaItemDescription').text()
 
       // Clicking the item opens up a floating panel with links. Also changes URL.
-      const hrefJavascript = $(item).find('.AgendaItemTitle a').attr('href')
+      const hrefJavascript = $(item).find('.AgendaItemTitle a').attr('href')!
       // Regular jQuery click code doesn't work because these links execute javascript in the href instead
       eval(hrefJavascript.replace('javascript:', ''))
       await new Promise((resolve) => {setTimeout(resolve, 500)})
@@ -108,7 +110,7 @@ async function scrapeParentPage(page, url) {
       const reportUrls = $('.AgendaItemSelectedDetails').find('.OrderedAttachment:not(:hidden) a').map((index, element) => {
         return {
           title: $(element).text(),
-          url: new URL($(element).attr('href'), window.location.origin).href
+          url: new URL($(element).attr('href')!, window.location.origin).href
         }
       }).get()
 
@@ -138,5 +140,3 @@ async function scrapeParentPage(page, url) {
   })
 
 }
-
-main()

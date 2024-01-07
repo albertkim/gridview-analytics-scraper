@@ -23,11 +23,13 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
   const page = await browser.newPage()
 
   // Print browser page console events to this node script console
-  page.on('console', msg => {
-    if (msg.type() === 'log') {
-      console.log(msg.text())
-    }
-  })
+  if (options.verbose) {
+    page.on('console', msg => {
+      if (msg.type() === 'log') {
+        console.log(msg.text())
+      }
+    })
+  }
 
   // Inject jQuery into the page
   await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
