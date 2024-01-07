@@ -2,7 +2,9 @@ import axios from 'axios'
 import pdfParse from 'pdf-parse'
 import OpenAI from 'openai'
 import { PDFDocument } from 'pdf-lib'
-require('dotenv').config()
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const environment = process.env.NODE_ENV!
 const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
@@ -12,7 +14,7 @@ const openai = new OpenAI({
 	apiKey: chatGPTAPIKey
 })
 
-console.log(environment, chatGPTAPIKey, chatGPTAPIUrl)
+console.log(environment)
 
 // Download a PDF from a URL and return the data
 export async function downloadPDF(url: string) {

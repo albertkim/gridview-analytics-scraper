@@ -53,6 +53,7 @@ export const RawRepository = {
       JSON.stringify(newData, null, 2),
       'utf8'
     )
+    return this.getNews({city: city})
   }
 
 }
