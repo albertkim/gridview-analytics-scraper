@@ -1,37 +1,367 @@
 [
   {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 27, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70760.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 27, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/20-6",
+    "address": "10511 Lassam Road",
+    "applicant": "Gurjit Pooni",
+    "behalf": null,
+    "description": "Rezoning of 10511 Lassam Road from the “Single Detached RS1/E” Zone to the “Single Detached (RS2/B)” Zone to permit the property to be subdivided to create two single-family lots with access from Lassam Road. Each proposed lot will be approximately 12.6 m (41 ft.) wide and approximately 575 m² (6,189.25 ft²) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached RS1/E Zone",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached RS2/B Zone"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook_Crescent70634.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/19-11",
+    "address": "11831/11833 Seabrook Crescent",
+    "applicant": "Navreet Gill",
+    "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
+    "description": "Rezoning of 11831/11833 Seabrook Crescent from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two single-family lots, each with vehicle access from Seabrook Crescent. The proposed subdivision plan and draft site plan are provided in Attachment 2.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-10-23",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Terra_8120_Number_1_Road_Limited_Partnership_for_Rezoning70635.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/19-12",
+    "address": "8120 and 8140 No. 1 Road",
+    "applicant": "Terra 8120 Number 1 Road Limited Partnership",
+    "behalf": "Cliff Chun and Kai Shen Hsiung of 1296168 BC Ltd. and Yi Jen Wang and Kai Shen Hsiung of Terra West Properties Ltd.",
+    "description": "The applicant wants to rezone the area from the 'Single Detached (RS1/E)' zone to the 'Low Density Townhouses (RTL4)' zone to permit the development of nine townhouse units, with vehicle access from No. 1 Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 9,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low Density Townhouses"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-10-25",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 23, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Pati_Yik_of_Kennon_Construction_for_Rezoning_at_10840_10860_Bonavista_Gate70559.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 23, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/102323_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/18-5",
+    "address": "10840/10860 Bonavista Gate",
+    "applicant": "Pati Yik of Kennon Construction",
+    "behalf": "Thomas Mau Shing Ng, Ling Y Ha, Shui Ting Chua",
+    "description": "The applicant is proposing to rezone the subject site and subdivide it into two single-family lots, each with a secondary suite, with access from Bonavista Gate. The proposed subdivision plan and site plan are provided in Attachment 2. The existing duplex (two-family) dwelling will be demolished prior to subdivision. The existing two-family dwelling is owner-occupied and does not contain any secondary suites. The proposed development is consistent with the Official Community Plan and Steveston Area Plan. The redevelopment must meet the requirements of the Richmond Flood Plain Designation and Protection Bylaw 8204. The applicant has worked with staff to modify the building envelope to enable retention of trees on site at the front and rear of the property.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RD1",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "RS2/C",
+      "newZoningDescription": "Single Detached"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-10-03",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_Hari_Singh_Gill_for_Rezoning_at_3300_Granville_Ave69497.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/17-7",
+    "address": "3300 Granville Avenue",
+    "applicant": "Hari Singh Gill",
+    "behalf": null,
+    "description": "Rezoning of 3300 Granville Avenue from “Single Detached (RS1/E)” zone to “Single Detached (RS2/B)” zone to allow the property to be subdivided into two single-family lots, each with a one bedroom secondary suite. Existing single-family dwelling to be demolished prior to subdivision. Vehicle access proposed to be from Granville Avenue.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_Interface_Architecture_Inc69496.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/17-6",
+    "address": "5471, 5491/5493, 5531, 5551, 5571, 5591, 5595, 5611/5613 Steveston Highway",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": "Steveston Townhouse Ventures Inc.",
+    "description": "The rezoning application is for the development of 30 townhouse units with seven secondary suites and a right-in/right-out vehicle access from Steveston Highway. The proposed density is 0.65 floor area ratio (FAR). The site layout includes 12 two-storey units and 18 three-storey units in ten townhouse clusters. Seven secondary suites and five accessible units are included in this proposal.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 10,
+      "stratas": 30,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 0.65,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B, RS1/E, RD1",
+      "previousZoningDescription": "Single Detached and Two-Unit Dwellings",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Application_-_Matthew_Cheng_-_7300_St69498.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "resolutionId": "R23/17-8",
+    "address": "7300 St. Albans Road",
+    "applicant": "Matthew Cheng",
+    "behalf": "1124053 B.C. LTD",
+    "description": "Rezoning of 7300 St. Albans Road from “Single Detached (RS1/E)” zone to “High Density Townhouses (RTH1)” zone to permit the development of four townhouse units with one secondary suite. The proposed development provides for a total of four three-storey townhouse units and one secondary suite, with a contribution at a rate of $0.34 per buildable square foot for future City Community Planning studies.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 4,
+      "stratas": 4,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTH1",
+      "newZoningDescription": "High Density Townhouses"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 14, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231214/documents/phea1sr.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr3.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231214/documents/phea1ZD.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Staff Presentation",
         "url": "https://council.vancouver.ca/20231214/documents/phea1ppt.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214130000&mediaEndTime=20231214133510&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      {
+        "date": "December 14, 2023",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "2231-2247 East 41st Avenue",
     "applicant": "Dava Developments Ltd.",
     "behalf": "1314594 B.C. Ltd.",
-    "description": "To rezone 2231-2247 East 41st Avenue from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) to permit the development of a five-storey rental building with a floor space ratio (FSR) of 2.20 and height of 16.8 m (55 ft.)",
+    "description": "To rezone 2231-2247 East 41st Avenue from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) to permit the development of a five-storey rental building. A floor space ratio (FSR) of 2.20 and height of 16.8 m (55 ft.) are proposed.",
     "type": "multi-family residential",
     "stats": {
       "buildings": 1,
@@ -63,28 +393,36 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 14, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231214/documents/phea2sr.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr4.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231214/documents/phea2ZD.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Staff Presentation",
         "url": "https://council.vancouver.ca/20231214/documents/phea2ppt.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Video Clip of thiss Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214133500&mediaEndTime=20231214140010&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      {
+        "date": "December 14, 2023",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "6470 Larch Street",
@@ -122,40 +460,51 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 14, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231214/documents/phes3sr.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231214/documents/phea3ZD.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Applicant Boards",
         "url": "https://council.vancouver.ca/20231214/documents/phea3_udp.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Applicant Renderings",
         "url": "https://council.vancouver.ca/20231214/documents/phea3_renderings.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Yellow Memorandum dated December 8, 2023",
         "url": "https://council.vancouver.ca/20231214/documents/phea3_memo.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Staff Presentation",
         "url": "https://council.vancouver.ca/20231214/documents/phea3ppt.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214140000&mediaEndTime=20231214145010&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      {
+        "date": "December 14, 2023",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
@@ -166,7 +515,7 @@
     "stats": {
       "buildings": 1,
       "stratas": 162,
-      "rentals": null,
+      "rentals": 162,
       "hotels": null,
       "fsr": 3.87,
       "height": 27.5
@@ -176,61 +525,6 @@
       "previousZoningDescription": "Residential Inclusive",
       "newZoningCode": "CD-1",
       "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2023-12-14",
-      "publicHearingDate": "2023-12-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "title": "Summary and Recommendation ",
-        "url": "https://council.vancouver.ca/20231214/documents/phea4sr.pdf"
-      },
-      {
-        "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf"
-      },
-      {
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231214/documents/phea4ZD.pdf"
-      },
-      {
-        "title": "Draft By-law -Sign",
-        "url": "https://council.vancouver.ca/20231214/documents/phea4sign.pdf"
-      }
-    ],
-    "minutesUrls": [
-      "https://council.vancouver.ca/20231214/phea20231214ag.htm"
-    ],
-    "resolutionId": null,
-    "address": "848 Seymour Street",
-    "applicant": "Perkins & Will",
-    "behalf": "Paul Y. Construction (B.C.) LTD.",
-    "description": "The rezoning is to permit the development of a 30-storey hotel with a floor space ratio (FSR) of 17.67 and a height of 97.7 m (321 ft.). The application is to rezone the lands from DD (Downtown) District to CD-1 (Comprehensive Development) District.",
-    "type": "mixed use",
-    "stats": {
-      "buildings": 1,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 30,
-      "fsr": 17.67,
-      "height": 97.7
-    },
-    "zoning": {
-      "previousZoningCode": "DD (Downtown) District",
-      "previousZoningDescription": "Downtown district",
-      "newZoningCode": "CD-1 (Comprehensive Development) District",
-      "newZoningDescription": "Comprehensive Development district"
     },
     "status": "public hearing",
     "dates": {
@@ -248,64 +542,55 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5sr.pdf"
+        "date": "December 14, 2023",
+        "title": "Summary and Recommendation ",
+        "url": "https://council.vancouver.ca/20231214/documents/phea4sr.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf"
+        "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf"
       },
       {
+        "date": "December 14, 2023",
         "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5ZD.pdf"
+        "url": "https://council.vancouver.ca/20231214/documents/phea4ZD.pdf"
       },
       {
-        "title": "Draft By-law - Sign",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5sign.pdf"
-      },
-      {
-        "title": "Applicant Boards",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5_udp.pdf"
-      },
-      {
-        "title": "Applicant Renderings",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5_renderings.pdf"
-      },
-      {
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5ppt.pdf"
-      },
-      {
-        "title": "Video Clip of this item",
-        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214154113&mediaEndTime=20231214164840&viewMode=3"
+        "date": "December 14, 2023",
+        "title": "Draft By-law -Sign",
+        "url": "https://council.vancouver.ca/20231214/documents/phea4sign.pdf"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      {
+        "date": "December 14, 2023",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      }
     ],
     "resolutionId": null,
-    "address": "1710-1730 East Pender Street",
-    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc.",
-    "behalf": "Lu'ma Native Housing Society, ALT Commercial Housing Society",
-    "description": "To rezone the area from RM-4 and RM-4N to CD-1 to permit the development of an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space. A floor space ratio (FSR) of 5.58 and a height of 60.8 m (199 ft.) with additional height for a rooftop amenity space are proposed.",
+    "address": "848 Seymour Street",
+    "applicant": "Perkins & Will",
+    "behalf": "Paul Y. Construction (B.C.) LTD.",
+    "description": "To rezone 848 Seymour Street from DD (Downtown) District to CD-1 (Comprehensive Development) District, to permit the development of a 30-storey hotel. A floor space ratio (FSR) of 17.67 and a height of 97.7 m (321 ft.) and are proposed.",
     "type": "mixed use",
     "stats": {
       "buildings": 1,
-      "stratas": 191,
+      "stratas": null,
       "rentals": null,
-      "hotels": null,
-      "fsr": 5.58,
-      "height": 60.8
+      "hotels": 1,
+      "fsr": 17.67,
+      "height": 97.7
     },
     "zoning": {
-      "previousZoningCode": "RM-4 and RM-4N",
-      "previousZoningDescription": "Residential Districts",
-      "newZoningCode": "CD-1",
+      "previousZoningCode": "DD (Downtown) District",
+      "previousZoningDescription": "Downtown District",
+      "newZoningCode": "CD-1 (Comprehensive Development) District",
       "newZoningDescription": "Comprehensive Development District"
     },
-    "status": "pending",
+    "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-10-31",
+      "appliedDate": null,
       "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
@@ -319,33 +604,122 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 14, 2023",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5sr.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5ZD.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5sign.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5_udp.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5_renderings.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5ppt.pdf"
+      },
+      {
+        "date": "December 14, 2023",
+        "title": "Video Clip of this item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214154113&mediaEndTime=20231214164840&viewMode=3"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 14, 2023",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "1710-1730 East Pender Street",
+    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc.",
+    "behalf": "Lu'ma Native Housing Society, ALT Commercial Housing Society",
+    "description": "To rezone 1710-1730 East Pender Street from RM-4 and RM-4N (Residential) Districts to CD-1 (Comprehensive Development) District, to permit the development of an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space. A floor space ratio (FSR) of 5.58 and a height of 60.8 m (199 ft.) with additional height for a rooftop amenity space are proposed.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": 191,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 5.58,
+      "height": 60.8
+    },
+    "zoning": {
+      "previousZoningCode": "RM-4 and RM-4N",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-14",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231212/documents/phea2sr.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr7.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231212/documents/phea2zd.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212183130&mediaEndTime=20231212185230&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "692 West 30th Avenue",
     "applicant": "Paramax Homes",
     "behalf": "Gurjeet Singh Tiwana",
-    "description": "The applicant, Paramax Homes, on behalf of Gurjeet Singh Tiwana, is applying to rezone the property at 692 West 30th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District. The purpose is to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
+    "description": "To rezone 692 West 30th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District, to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
     "type": "townhouse",
     "stats": {
-      "buildings": null,
+      "buildings": 1,
       "stratas": null,
       "rentals": null,
       "hotels": null,
@@ -360,7 +734,7 @@
     },
     "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-10-31",
+      "appliedDate": null,
       "publicHearingDate": "2023-12-12",
       "approvalDate": null,
       "denialDate": null,
@@ -374,33 +748,40 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 12, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231212/documents/phea3sr.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr8.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231212/documents/phea3zd.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212185230&mediaEndTime=20231212190241&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "688 West 29th Avenue",
     "applicant": "Paramax Homes",
     "behalf": "Vertical Ventures Inc.",
-    "description": "The applicant, Paramax Homes, on behalf of Vertical Ventures Inc., is applying to rezone the property at 688 West 29th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District. The purpose of the rezoning is to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
+    "description": "To rezone 688 West 29th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District, to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
     "type": "townhouse",
     "stats": {
-      "buildings": null,
+      "buildings": 1,
       "stratas": null,
       "rentals": null,
       "hotels": null,
@@ -415,7 +796,7 @@
     },
     "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-10-31",
+      "appliedDate": null,
       "publicHearingDate": "2023-12-12",
       "approvalDate": null,
       "denialDate": null,
@@ -429,42 +810,52 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 12, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231212/documents/phea4sr.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr2.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231212/documents/phea4zd.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Applicant Boards",
         "url": "https://council.vancouver.ca/20231212/documents/phea4-applicantboards.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": " Renderings",
         "url": "https://council.vancouver.ca/20231212/documents/phea4-renderings.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Yellow Memorandum dated December 8, 2023, from the Interim Director of Planning, Planning, Urban Design and Sustainability",
         "url": "https://council.vancouver.ca/20231212/documents/phea4-yellowmemo.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212190241&mediaEndTime=20231212191406&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "4711-4787 Cambie Street",
     "applicant": "Mosaic Homes",
     "behalf": "Mosaic Flora and Fauna Holdings Ltd.",
-    "description": "To rezone 4711-4787 Cambie Street from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to permit the development of two six-storey, strata-titled residential buildings. A floor space ratio (FSR) of 2.65 and a height of 23.6 m (77.4 ft.) and are proposed.",
+    "description": "To rezone 4711-4787 Cambie Street from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to permit the development of two six-storey, strata-titled residential buildings. A floor space ratio (FSR) of 2.65 and a height of 23.6 m (77.4 ft.) and are proposed. The development includes 114 strata-titled residential units.",
     "type": "multi-family residential",
     "stats": {
       "buildings": 2,
@@ -496,32 +887,41 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 12, 2023",
         "title": "Summary and Recommendation",
         "url": "https://council.vancouver.ca/20231212/documents/phea5sr.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Referral Report dated October 31, 2023",
         "url": "https://council.vancouver.ca/20231114/documents/rr6.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Draft By-law - Zoning and Development",
         "url": "https://council.vancouver.ca/20231212/documents/phea5zd.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Applicant Boards",
         "url": "https://council.vancouver.ca/20231212/documents/phea5-applicantboards.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Renderings",
         "url": "https://council.vancouver.ca/20231212/documents/phea5-renderings.pdf"
       },
       {
+        "date": "December 12, 2023",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212191406&mediaEndTime=20231212192700&viewMode=3"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "8120-8168 Lord Street, 540 West 65th Avenue",
@@ -531,7 +931,7 @@
     "type": "multi-family residential",
     "stats": {
       "buildings": 2,
-      "stratas": null,
+      "stratas": 146,
       "rentals": 146,
       "hotels": null,
       "fsr": 2.88,
@@ -559,12 +959,276 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
+        "date": "December 12, 2023",
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20231212/documents/rr1.pdf"
       }
     ],
     "minutesUrls": [
-      "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "3352-3386 Vanness Avenue and 3347 Clive Avenue",
+    "applicant": "Intracorp Vanness Limited Partnership",
+    "behalf": "Strata Corporation of 3352-3386 Vanness Avenue Strata Plan LMS992 and the registered owners of the strata lots in Strata Plan LMS922, and the registered owner of 3347 Clive Avenue",
+    "description": "Rezoning of the consolidated lands at 3352-3386 Vanness Avenue and 3347 Clive Avenue from CD-1(201) (Comprehensive Development) District and CD-1(218) (Comprehensive Development) District to CD-1 (Comprehensive Development) District, respectively, to increase the maximum floor space ratio (FSR) from 1.45 and 0.6 respectively to 11.38 and the maximum building height from 35.5 m (120 ft.) and 11.9 m (39 ft.) respectively to 104.9 m (344 ft.), to permit a mixed-use development with 30-storey (west tower) and 33-storey (east tower) buildings connected with a six-storey podium, with 679 secured rental units, of which 10% of the residential floor area will be secured at below market rents, commercial uses on the ground floor and a 37-space turn-key childcare facility for City ownership",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 679,
+      "hotels": null,
+      "fsr": 11.38,
+      "height": 104.9
+    },
+    "zoning": {
+      "previousZoningCode": "CD-1(201) and CD-1(218)",
+      "previousZoningDescription": "Comprehensive Development District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-12",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr2.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "2015 Main Street and 190 East 4th Avenue",
+    "applicant": "Henriquez Partners Architects",
+    "behalf": "2015 Main Property Inc.",
+    "description": "The rezoning application is to rezone the lands from IC-2 (Industrial) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 3.0 to 6.27 and the maximum building height from 18.3 m (60 ft.) to 79.3 m (260 ft.) with mechanical appurtenances permitted up to a maximum of 3.6 m (12 ft.) above the permitted building height, to permit the development of a 25-storey, mixed-use building containing 210 secured-rental housing units, of which 20% of the residential floor area will be secured as below-market rental units, with commercial space on the ground floor.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": 210,
+      "rentals": 210,
+      "hotels": null,
+      "fsr": 6.27,
+      "height": 79.3
+    },
+    "zoning": {
+      "previousZoningCode": "IC-2",
+      "previousZoningDescription": "Industrial District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-11-28",
+      "publicHearingDate": "2023-12-12",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr4.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "1055 Harwood Street",
+    "applicant": "GWL Realty Advisors Inc.",
+    "behalf": "Harwood Street Project Nominee Inc.",
+    "description": "The rezoning application is to rezone the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": 269,
+      "rentals": 269,
+      "hotels": null,
+      "fsr": 11.9,
+      "height": 91.44
+    },
+    "zoning": {
+      "previousZoningCode": "RM-5A",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-12-12",
+      "publicHearingDate": "null",
+      "approvalDate": "null",
+      "denialDate": "null",
+      "withdrawnDate": "null"
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
+        "title": "Referral Report ",
+        "url": "https://council.vancouver.ca/20231212/documents/rr5.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "1890 Southwest Marine Drive",
+    "applicant": "Stuart Howard Architects",
+    "behalf": "Yayun Cao",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 0.75 and the building height from 11.5 m (38 ft.) to 13.8 m (45 ft.), to permit 28 secured market rental residential units.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 28,
+      "hotels": null,
+      "fsr": 0.75,
+      "height": 13.8
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-06-30",
+      "publicHearingDate": "2023-12-12",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231212/documents/phea5sr.pdf"
+      },
+      {
+        "date": "December 12, 2023",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr6.pdf"
+      },
+      {
+        "date": "December 12, 2023",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231212/documents/phea5zd.pdf"
+      },
+      {
+        "date": "December 12, 2023",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231212/documents/phea5-applicantboards.pdf"
+      },
+      {
+        "date": "December 12, 2023",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20231212/documents/phea5-renderings.pdf"
+      },
+      {
+        "date": "December 12, 2023",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212191406&mediaEndTime=20231212192700&viewMode=3"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm"
+      }
+    ],
+    "resolutionId": null,
+    "address": "8120-8168 Lord Street and 540 West 65th Avenue",
+    "applicant": "Francl Architecture Inc.",
+    "behalf": "Lord Street Holdings Ltd.",
+    "description": "To rezone the area from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to permit the development of two six-storey residential buildings consisting of 146 secured-market rental units, of which five units would be below-market rental. A floor space ratio (FSR) of 2.88 and a height of 20.7 m (68 ft.) with additional height for a rooftop amenity and mechanical appurtenances are proposed.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": 146,
+      "rentals": 146,
+      "hotels": null,
+      "fsr": 2.88,
+      "height": 20.7
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-12",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "December 12, 2023",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr1.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2023",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
     ],
     "resolutionId": null,
     "address": "3352-3386 Vanness Avenue, 3347 Clive Avenue",
@@ -600,149 +1264,228 @@
   {
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231212/documents/rr2.pdf"
-      }
-    ],
-    "minutesUrls": [
-      "https://council.vancouver.ca/20231212/regu20231212ag.htm"
-    ],
-    "resolutionId": null,
-    "address": "2015 Main Street and 190 East 4th Avenue",
-    "applicant": "Henriquez Partners Architects",
-    "behalf": "2015 Main Property Inc.",
-    "description": "The rezoning application is to rezone the lands from IC-2 (Industrial) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 3.0 to 6.27 and the maximum building height from 18.3 m (60 ft.) to 79.3 m (260 ft.) with mechanical appurtenances permitted up to a maximum of 3.6 m (12 ft.) above the permitted building height, to permit the development of a 25-storey, mixed-use building containing 210 secured-rental housing units, of which 20% of the residential floor area will be secured as below-market rental units, with commercial space on the ground floor.",
+    "address": "277-291 West 42nd Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
     "type": "mixed use",
     "stats": {
-      "buildings": 1,
-      "stratas": 210,
-      "rentals": 210,
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
       "hotels": null,
-      "fsr": 6.27,
-      "height": 79.3
+      "fsr": null,
+      "height": null
     },
     "zoning": {
-      "previousZoningCode": "IC-2",
-      "previousZoningDescription": "Industrial District",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development District"
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
     },
-    "status": "pending",
+    "status": "approved",
     "dates": {
-      "appliedDate": "2023-12-12",
+      "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2023-12-12",
       "denialDate": null,
       "withdrawnDate": null
     },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
   },
   {
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231212/documents/rr4.pdf"
-      }
-    ],
-    "minutesUrls": [
-      "https://council.vancouver.ca/20231212/regu20231212ag.htm"
-    ],
-    "resolutionId": null,
-    "address": "1055 Harwood Street",
-    "applicant": "GWL Realty Advisors Inc.",
-    "behalf": "H arwood Street Project Nominee Inc.",
-    "description": "The rezoning application is to rezone the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units.",
-    "type": "multi-family residential",
+    "address": "325-341 West 42nd Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": "mixed use",
     "stats": {
-      "buildings": 1,
-      "stratas": 269,
-      "rentals": 269,
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
       "hotels": null,
-      "fsr": 11.9,
-      "height": 91.44
+      "fsr": null,
+      "height": null
     },
     "zoning": {
-      "previousZoningCode": "RM-5A",
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "address": "1247 Kingsway",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": "commercial",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2020-09-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "address": "1977 West 41st Avenue, 5688 Maple Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS-3A",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-3B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "address": "5562-5688 Manson Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": "mixed use",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS-1",
       "previousZoningDescription": "Residential",
       "newZoningCode": "CD-1",
       "newZoningDescription": "Comprehensive Development"
     },
-    "status": "pending",
+    "status": "approved",
     "dates": {
-      "appliedDate": "2022-12-12",
+      "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2023-01-17",
       "denialDate": null,
       "withdrawnDate": null
     },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
   },
   {
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "title": "Referral Report ",
-        "url": "https://council.vancouver.ca/20231212/documents/rr5.pdf"
-      }
-    ],
-    "minutesUrls": [
-      "https://council.vancouver.ca/20231212/regu20231212ag.htm"
-    ],
-    "resolutionId": null,
-    "address": "1890 Southwest Marine Drive",
-    "applicant": "Stuart Howard Architects",
-    "behalf": "Yayun Cao",
-    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 0.75 and the building height from 11.5 m (38 ft.) to 13.8 m (45 ft.), to permit 28 secured market rental residential units.",
-    "type": "townhouse",
-    "stats": {
-      "buildings": 1,
-      "stratas": 28,
-      "rentals": 28,
-      "hotels": null,
-      "fsr": 0.75,
-      "height": 13.8
-    },
-    "zoning": {
-      "previousZoningCode": "R1-1",
-      "previousZoningDescription": "Residential Inclusive",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "pending",
-    "dates": {
-      "appliedDate": "2022-06-30",
-      "publicHearingDate": "2023-12-12",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70760.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/20-6",
-    "address": "10511 Lassam Road",
-    "applicant": "Gurjit Pooni",
+    "address": "668-692 West 54th Avenue",
+    "applicant": null,
     "behalf": null,
-    "description": "Rezoning of 10511 Lassam Road from the “Single Detached RS1/E” Zone to the “Single Detached (RS2/B)” Zone to permit the property to be subdivided to create two single-family lots with access from Lassam Road. Each proposed lot will be approximately 12.6 m (41 ft.) wide and approximately 575 m² (6,189.25 ft²) in area.",
-    "type": "single-family residential",
+    "description": "",
+    "type": "other",
     "stats": {
-      "buildings": 2,
+      "buildings": null,
       "stratas": null,
       "rentals": null,
       "hotels": null,
@@ -750,159 +1493,40 @@
       "height": null
     },
     "zoning": {
-      "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached RS1/E Zone",
-      "newZoningCode": "RS2/B",
-      "newZoningDescription": "Single Detached RS2/B Zone"
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
     },
-    "status": "applied",
+    "status": "approved",
     "dates": {
-      "appliedDate": "2023-11-06",
+      "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2019-09-12",
       "denialDate": null,
       "withdrawnDate": null
     },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
   },
   {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook_Crescent70634.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/19-11",
-    "address": "11831/11833 Seabrook Crescent",
-    "applicant": "Navreet Gill",
-    "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
-    "description": "Rezoning of 11831/11833 Seabrook Crescent from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two single-family lots, each with vehicle access from Seabrook Crescent. The proposed subdivision plan and draft site plan are provided in Attachment 2.",
-    "type": "single-family residential",
-    "stats": {
-      "buildings": 2,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "height": null
-    },
-    "zoning": {
-      "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached (RS1/E)",
-      "newZoningCode": "RS2/B",
-      "newZoningDescription": "Single Detached (RS2/B)"
-    },
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2023-10-23",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Terra_8120_Number_1_Road_Limited_Partnership_for_Rezoning70635.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/19-12",
-    "address": "8120 and 8140 No. 1 Road",
-    "applicant": "Terra 8120 Number 1 Road Limited Partnership",
-    "behalf": "Cliff Chun and Kai Shen Hsiung of 1296168 BC Ltd. and Yi Jen Wang and Kai Shen Hsiung of Terra West Properties Ltd.",
-    "description": "The applicant wants to rezone 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” Zone to the “Low Density Townhouses (RTL4)” Zone to permit the development of nine townhouse units, with vehicle access from No. 1 Road.",
-    "type": "townhouse",
-    "stats": {
-      "buildings": 1,
-      "stratas": 9,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "height": null
-    },
-    "zoning": {
-      "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached",
-      "newZoningCode": "RTL4",
-      "newZoningDescription": "Low Density Townhouses"
-    },
-    "status": "pending",
-    "dates": {
-      "appliedDate": "2023-10-25",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Pati_Yik_of_Kennon_Construction_for_Rezoning_at_10840_10860_Bonavista_Gate70559.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/18-5",
-    "address": "10840/10860 Bonavista Gate",
-    "applicant": "Pati Yik of Kennon Construction",
-    "behalf": "Thomas Mau Shing Ng, Ling Y Ha and Shui Ting Chua",
-    "description": "The applicant is proposing to rezone the subject site and subdivide it into two single-family lots, each with a secondary suite, with access from Bonavista Gate. The proposed subdivision plan and site plan are provided in Attachment 2. The existing duplex (two-family) dwelling will be demolished prior to subdivision. The proposed development includes two single-family lots, each with a secondary suite, with vehicle access from Bonavista Gate. The development proposal is consistent with development in the area. The proposed subdivision plan and site plan are shown in Attachment 2. Staff worked with the applicant to modify the building envelope to enable retention of trees on site at the front and rear of the property.",
-    "type": "single-family residential",
-    "stats": {
-      "buildings": 2,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "height": null
-    },
-    "zoning": {
-      "previousZoningCode": "RD1",
-      "previousZoningDescription": "Two-Unit Dwellings",
-      "newZoningCode": "RS2/C",
-      "newZoningDescription": "Single Detached"
-    },
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2023-10-03",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_Hari_Singh_Gill_for_Rezoning_at_3300_Granville_Ave69497.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/17-7",
-    "address": "3300 Granville Avenue",
-    "applicant": "Hari Singh Gill",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "address": "1111 Kingsway",
+    "applicant": null,
     "behalf": null,
-    "description": "Rezoning of 3300 Granville Avenue from Single Detached (RS1/E) zone to Single Detached (RS2/B) zone to allow the property to be subdivided into two single-family lots, each with a one bedroom secondary suite. Existing single-family dwelling to be demolished prior to subdivision. Vehicle access proposed to be from Granville Avenue.",
-    "type": "single-family residential",
+    "description": "",
+    "type": "mixed use",
     "stats": {
-      "buildings": 2,
+      "buildings": null,
       "stratas": null,
       "rentals": null,
       "hotels": null,
@@ -910,99 +1534,68 @@
       "height": null
     },
     "zoning": {
-      "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached (RS1/E)",
-      "newZoningCode": "RS2/B",
-      "newZoningDescription": "Single Detached (RS2/B)"
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
     },
-    "status": "applied",
+    "status": "approved",
     "dates": {
-      "appliedDate": "2023-09-18",
+      "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2023-12-12",
       "denialDate": null,
       "withdrawnDate": null
     },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
   },
   {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_Interface_Architecture_Inc69496.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/17-6",
-    "address": "5471, 5491/5493, 5531, 5551, 5571, 5591, 5595, 5611/5613 Steveston Highway",
-    "applicant": "Interface Architecture Inc.",
-    "behalf": "Steveston Townhouse Ventures Inc.",
-    "description": "The applicant wants to rezone the properties to permit the development of 30 townhouse units with seven secondary suites and a right-in/right-out vehicle access from Steveston Highway. The proposed density is 0.65 floor area ratio (FAR). The site layout includes 12 two-storey units and 18 three-storey units in ten townhouse clusters. Seven secondary suites and five accessible units are included in this proposal.",
-    "type": "townhouse",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "address": "160 West 44th Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": "other",
     "stats": {
-      "buildings": 10,
-      "stratas": 30,
-      "rentals": 7,
-      "hotels": null,
-      "fsr": 0.65,
-      "height": null
-    },
-    "zoning": {
-      "previousZoningCode": "RS1/B, RS1/E, RD1",
-      "previousZoningDescription": "Single Detached and Two-Unit Dwellings",
-      "newZoningCode": "RTM2",
-      "newZoningDescription": "Medium Density Townhouses"
-    },
-    "status": "pending",
-    "dates": {
-      "appliedDate": "2023-09-18",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-07",
-    "updateDate": "2024-01-07"
-  },
-  {
-    "city": "Richmond",
-    "urls": [
-      {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Application_-_Matthew_Cheng_-_7300_St69498.pdf"
-      }
-    ],
-    "minutesUrls": [],
-    "resolutionId": "R23/17-8",
-    "address": "7300 St. Albans Road",
-    "applicant": "Matthew Cheng",
-    "behalf": "1124053 B.C. LTD",
-    "description": "The applicant wants to rezone the property from 'Single Detached (RS1/E)' zone to 'High Density Townhouses (RTH1)' zone to permit the development of four three-storey townhouse units with one secondary suite. The proposal is generally consistent with the surrounding developments and complies with the guidelines in terms of land use, density, and overall neighborhood character. The applicant is also required to provide a contribution for future City Community Planning studies and register a legal agreement on Title to ensure that future owners are aware of potential impacts due to other developments within the City Centre.",
-    "type": "townhouse",
-    "stats": {
-      "buildings": 4,
-      "stratas": 4,
+      "buildings": null,
+      "stratas": null,
       "rentals": null,
       "hotels": null,
       "fsr": null,
-      "height": 9
+      "height": null
     },
     "zoning": {
-      "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached",
-      "newZoningCode": "RTH1",
-      "newZoningDescription": "High Density Townhouses"
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
     },
-    "status": "pending",
+    "status": "approved",
     "dates": {
-      "appliedDate": "2023-09-18",
+      "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2022-05-17",
       "denialDate": null,
       "withdrawnDate": null
     },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "date": "December 12, 2023"
+      }
+    ],
+    "minutesUrls": [],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
   }

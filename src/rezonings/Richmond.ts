@@ -13,7 +13,7 @@ import {
 export async function analyze() {
 
   const scrapedList = RawRepository.getNews({city: 'Richmond'})
-  const rezoningJSON: IRezoningDetail[] = []
+  const rezoningJSON: IRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Richmond'})
 
   for (const news of scrapedList) {
 
@@ -43,8 +43,17 @@ export async function analyze() {
         if (!replyData.error) {
           const newData = {
             city: 'Richmond',
-            urls: news.reportUrls,
-            minutesUrls: news.minutesUrl ? [news.minutesUrl] : [],
+            urls: news.reportUrls.map((urlObject) => {
+              return {
+                date: news.date,
+                title: urlObject.title,
+                url: urlObject.url
+              }
+            }),
+            minutesUrls: news.minutesUrl ? [{
+              date: news.date,
+              url: news.minutesUrl
+            }] : [],
             resolutionId: news.resolutionId,
             ...replyData,
             stats: GPTStats,

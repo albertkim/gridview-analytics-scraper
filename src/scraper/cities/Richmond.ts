@@ -121,27 +121,11 @@ async function scrapeParentPage(page: Page, url: string): Promise<IScrapeParentP
 
 }
 
-/**
- * @param {puppeteer.page} page
- * @param {string} url
- * @returns {
- *    url: string
- *    date: string
- *    meetingType: string
- *    title: string
- *    resolutionId: string | null
- *    contents: string | null
- *    minutesUrl: string | null
- *    reportUrls: {title: string, url: string}[]
- * }
-*/
 async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeetingDetail, 'city' | 'metroCity'>> {
 
   await page.goto(url)
 
   const results = await page.evaluate(async () => {
-
-    let data = []
 
     const date = $('.TitleFull').text().trim()
 
@@ -166,7 +150,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
     }
 
     let minutesUrl = null
-    const mintesUrlElement = $('.RecordDetailsFull :contains("View Minutes")')
+    const mintesUrlElement = $('a:contains("View Minutes")')
     if (mintesUrlElement) {
         minutesUrl = mintesUrlElement.attr('href') || null
     }

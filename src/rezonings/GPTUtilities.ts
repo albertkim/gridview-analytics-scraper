@@ -12,7 +12,7 @@ export function getGPTBaseRezoningQuery(document: string) {
         buildings: your best guess as to the number of new buildings being proposed or null if unclear
         stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units
         rentals: total number of rental units or null if unclear - do not default to rental if not specified
-        hotels: total number of hotel units or null if unclear - do not default to hotel if not specified
+        hotels: total number of hotel units (not buildings) or null if unclear
         fsr: total floor space ratio or null if unclear
         height: height in meters or null if unclear
       }

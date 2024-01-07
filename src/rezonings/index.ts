@@ -3,7 +3,7 @@ import { analyze as analyzeRichmond } from './Richmond'
 
 const citiesToAnalyze = [
   'Vancouver',
-  'Richmond',
+  // 'Richmond',
 ]
 
 async function main() {

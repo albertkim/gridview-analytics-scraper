@@ -3,7 +3,7 @@ import path from 'path'
 import moment from 'moment'
 import chalk from 'chalk'
 
-type ZoningType =
+export type ZoningType =
   'single-family residential' |
   'townhouse' |
   'mixed-use' |
@@ -11,7 +11,7 @@ type ZoningType =
   'industrial' |
   'commercial'
 
-type ZoningStatus =
+export type ZoningStatus =
   'applied' |
   'pending' |
   'public hearing' |
@@ -52,8 +52,12 @@ export interface IRezoningDetail {
   urls: {
     title: string
     url: string
+    date: string
   }[]
-  minutesUrls: string[]
+  minutesUrls: {
+    url: string
+    date: string
+  }[]
   createDate: string
   updateDate: string
 }
@@ -152,8 +156,8 @@ export function mergeEntries(oldEntry: IRezoningDetail, newEntry: IRezoningDetai
   datesArray.forEach((fieldName) => {
     mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], 'old')
   })
-  mergedData.urls = Array.from(new Map([...oldEntry.urls, ...newEntry.urls].map(obj => [obj.title, obj]))).map(([title, obj]) => obj)
-  mergedData.minutesUrls = Array.from(new Set([...oldEntry.minutesUrls, ...newEntry.minutesUrls]))
+  mergedData.urls = [...new Map([...oldEntry.urls, ...newEntry.urls].map(obj => [obj.url, obj])).values()]
+  mergedData.minutesUrls = [...new Map([...oldEntry.minutesUrls, ...newEntry.minutesUrls].map(obj => [obj.url, obj])).values()]
   mergedData.updateDate = moment().format('YYYY-MM-DD')
 
   return mergedData

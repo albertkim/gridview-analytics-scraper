@@ -1,19 +1,33 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { RawRepository } from '../repositories/RawRepository'
-import { IRezoningDetail, RezoningsRepository, checkGPTJSON, mergeEntries } from '../repositories/RezoningsRepository'
+import { IRezoningDetail, ZoningType, RezoningsRepository, checkGPTJSON, mergeEntries } from '../repositories/RezoningsRepository'
 import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from './GPTUtilities'
 import {
   downloadPDF,
   generatePDF,
+  generatePDFTextArray,
   parsePDF,
   chatGPTTextQuery
 } from '../utilities'
 
+interface IBylawData {
+  address: string
+  status: 'approved' | 'denied' | 'pending'
+  date: string
+  type: ZoningType
+  zoning: {
+    previousZoningCode: string | null
+    previousZoningDescription: string | null
+    newZoningCode: string | null
+    newZoningDescription: string | null
+  }
+}
+
 export async function analyze() {
 
   const scrapedList = RawRepository.getNews({city: 'Vancouver'})
-  const rezoningJSON: IRezoningDetail[] = []
+  const rezoningJSON: IRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Vancouver'})
 
   for (const news of scrapedList) {
 
@@ -44,8 +58,17 @@ export async function analyze() {
           const newData: IRezoningDetail = {
             city: 'Vancouver',
             metroCity: 'Metro Vancouver',
-            urls: news.reportUrls,
-            minutesUrls: news.minutesUrl ? [news.minutesUrl] : [],
+            urls: news.reportUrls.map((urlObject) => {
+              return {
+                date: news.date,
+                title: urlObject.title,
+                url: urlObject.url
+              }
+            }),
+            minutesUrls: news.minutesUrl ? [{
+              date: news.date,
+              url: news.minutesUrl
+            }] : [],
             resolutionId: news.resolutionId,
             ...replyData,
             stats: GPTStats,
@@ -64,6 +87,99 @@ export async function analyze() {
           }
         }
       }
+    }
+
+    if (news.title.includes('By-laws')) {
+      const bylawPDFUrls = news.reportUrls.map((urlObject) => urlObject.url)
+
+      for (const url of bylawPDFUrls) {
+        const pdfData = await downloadPDF(url)
+        const pdfTextOnlyData = await generatePDFTextArray(pdfData, {
+          minCharacterCount: 10,
+          expectedWords: ['Explanation', 'rezon']
+        })
+
+        for (const text of pdfTextOnlyData) {
+          const gptTextReply = await chatGPTTextQuery(`
+            Given the following raw text from a PDF, identify the sections that relate to approving a rezoning, ignore the rest, and identify the following in json format:
+            {
+              address: address in question - if multiple addresses in the same section comma separate
+              status: one of approved, denied, or pending
+              date: date in YYYY-MM-DD format
+              type: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
+              zoning: {
+                previousZoningCode: city zoning code before rezoning or null if unclear
+                previousZoningDescription: best description of previous zoning code (ex. low density residential)
+                newZoningCode: city zoning code after rezoning or null if unclear
+                newZoningDescription: best description of new zoning code (ex. high density residential)
+              }
+            }
+            Otherwise return an error. Here is the data: ${text}
+          `)
+          const replyData: IBylawData = JSON.parse(gptTextReply.choices[0].message.content!)
+
+          if (!(replyData as any).error) {
+
+            const matchingItem = rezoningJSON
+              .find((item) => item.city === 'Vancouver' && item.address === replyData.address)
+
+            if (matchingItem) {
+              const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
+              if (replyData.status === 'approved') {
+                rezoningJSON[matchingItemIndex].dates.approvalDate = replyData.date
+              } else if (replyData.status === 'denied') {
+                rezoningJSON[matchingItemIndex].dates.denialDate = replyData.date
+              }
+              if (!rezoningJSON[matchingItemIndex].urls.find((urlObject) => urlObject.url === url)) {
+                rezoningJSON[matchingItemIndex].urls.push({
+                  title: 'By-laws',
+                  url: url,
+                  date: news.date
+                })
+              }
+              rezoningJSON[matchingItemIndex] = matchingItem
+            } else {
+              // We don't have the rezoning application yet in the database, or it is not from a private application
+              rezoningJSON.push({
+                city: 'Vancouver',
+                metroCity: 'Metro Vancouver',
+                address: replyData.address,
+                applicant: null,
+                behalf: null,
+                description: '',
+                type: replyData.type,
+                stats: {
+                  buildings: null,
+                  stratas: null,
+                  rentals: null,
+                  hotels: null,
+                  fsr: null,
+                  height: null,
+                },
+                zoning: replyData.zoning,
+                status: replyData.status,
+                dates: {
+                  appliedDate: null,
+                  publicHearingDate:null,
+                  approvalDate: replyData.status === 'approved' ? replyData.date : null,
+                  denialDate: replyData.status === 'denied' ? replyData.date : null,
+                  withdrawnDate: null
+                },
+                urls: [{
+                  title: 'By-laws',
+                  url: url,
+                  date: news.date
+                }],
+                minutesUrls: [],
+                createDate: moment().format('YYYY-MM-DD'),
+                updateDate: moment().format('YYYY-MM-DD')
+              })
+            }
+            
+          }
+        }
+      }
+
     }
 
   }
