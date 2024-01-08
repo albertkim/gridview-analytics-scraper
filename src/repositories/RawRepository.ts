@@ -63,6 +63,15 @@ export const RawRepository = {
       'utf8'
     )
     return this.getNews({city: city})
+  },
+
+  dangerouslyUpdateAllNews(news: IMeetingDetail[]) {
+    fs.writeFileSync(
+      path.join(__dirname, '../database/raw.json'),
+      JSON.stringify(news, null, 2),
+      'utf8'
+    )
+    return this.getNews()
   }
 
 }

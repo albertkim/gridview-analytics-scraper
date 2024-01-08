@@ -2,7 +2,7 @@ import moment from 'moment'
 import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { getStatistics } from './StatisticsUtilities'
-import { bulkCleanDates } from './BulkUtilities'
+import { BulkUtilities } from './BulkUtilities'
 
 const startDate = null
 const endDate = null
@@ -24,7 +24,7 @@ async function main() {
   getStatistics()
 
   // Bulk cleaning operations
-  // bulkCleanDates()
+  // BulkUtilities.bulkCleanDates()
 
 }
 
