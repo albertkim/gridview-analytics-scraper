@@ -24,76 +24,89 @@ interface IBylawData {
   }
 }
 
-export async function analyze(startDate: string, endDate: string | null) {
+export async function analyze(startDate: string | null, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Vancouver'})
   const rezoningJSON: IRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Vancouver'})
 
   for (const news of scrapedList) {
 
-    if (moment(news.date).isBefore(startDate)) {
-      break
+    if (startDate && moment(news.date).isBefore(startDate)) {
+      continue
     }
 
     if (endDate && moment(news.date).isAfter(endDate)) {
-      break
+      continue
     }
 
     if (news.title.includes('Rezoning:')) {
       if (news.reportUrls.length > 0) {
-        const firstPDFURL = news.reportUrls[0].url
-        const pdfData = await downloadPDF(firstPDFURL)
-        const pdf3pages = await generatePDF(pdfData, {
-          maxPages: 3
-        })
-        const parsedPDF = await parsePDF(pdf3pages as Buffer)
-        const GPTTextReply = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text))
-        let replyData = JSON.parse(GPTTextReply.choices[0].message.content!)
-        if (!checkGPTJSON(replyData)) {
-          console.warn(chalk.bgYellow('GPT JSON is invalid, running again'))
-          const newGPTTextReply = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text))
-          replyData = JSON.parse(newGPTTextReply.choices[0].message.content!)
-          console.log(replyData)
+
+        try {
+
+          const firstPDFURL = news.reportUrls[0].url
+          const pdfData = await downloadPDF(firstPDFURL)
+          const pdf3pages = await generatePDF(pdfData, {
+            maxPages: 3
+          })
+          const parsedPDF = await parsePDF(pdf3pages as Buffer)
+          const GPTTextReply = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+            rezoningId: 'null'
+          }))
+          let replyData = JSON.parse(GPTTextReply.choices[0].message.content!)
           if (!checkGPTJSON(replyData)) {
-            console.error(chalk.bgRed('GPT JSON is invalid 2nd time, skipping'))
-            break
+            console.warn(chalk.bgYellow('GPT JSON is invalid, running again'))
+            const newGPTTextReply = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+              rezoningId: 'null'
+            }))
+            replyData = JSON.parse(newGPTTextReply.choices[0].message.content!)
+            console.log(replyData)
+            if (!checkGPTJSON(replyData)) {
+              console.error(chalk.bgRed('GPT JSON is invalid 2nd time, skipping'))
+              continue
+            }
           }
-        }
-        console.log(chalk.bgGreen('GPT JSON is valid'))
-        const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(replyData.description))
-        const GPTStats = JSON.parse(GPTStatsReply.choices[0].message.content!)
-        if (!replyData.error ) {
-          const newData: IRezoningDetail = {
-            city: 'Vancouver',
-            metroCity: 'Metro Vancouver',
-            urls: news.reportUrls.map((urlObject) => {
-              return {
+          console.log(chalk.bgGreen('GPT JSON is valid'))
+          const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(replyData.description))
+          const GPTStats = JSON.parse(GPTStatsReply.choices[0].message.content!)
+          if (!replyData.error ) {
+            const newData: IRezoningDetail = {
+              city: 'Vancouver',
+              metroCity: 'Metro Vancouver',
+              urls: news.reportUrls.map((urlObject) => {
+                return {
+                  date: news.date,
+                  title: urlObject.title,
+                  url: urlObject.url
+                }
+              }),
+              minutesUrls: news.minutesUrl ? [{
                 date: news.date,
-                title: urlObject.title,
-                url: urlObject.url
-              }
-            }),
-            minutesUrls: news.minutesUrl ? [{
-              date: news.date,
-              url: news.minutesUrl
-            }] : [],
-            resolutionId: news.resolutionId,
-            ...replyData,
-            stats: GPTStats,
-            createDate: moment().format('YYYY-MM-DD'),
-            updateDate: moment().format('YYYY-MM-DD')
+                url: news.minutesUrl
+              }] : [],
+              resolutionId: news.resolutionId,
+              ...replyData,
+              stats: GPTStats,
+              createDate: moment().format('YYYY-MM-DD'),
+              updateDate: moment().format('YYYY-MM-DD')
+            }
+  
+            const matchingItem = rezoningJSON
+              .find((item) => item.city === newData.city && item.address === replyData.address)
+  
+            if (matchingItem) {
+              const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
+              rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, newData)
+            } else {
+              rezoningJSON.push(newData)
+            }
           }
 
-          const matchingItem = rezoningJSON
-            .find((item) => item.city === newData.city && item.address === replyData.address)
-
-          if (matchingItem) {
-            const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
-            rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, newData)
-          } else {
-            rezoningJSON.push(newData)
-          }
+        } catch (error) {
+          console.error(error)
+          continue
         }
+
       }
     }
 
@@ -133,11 +146,9 @@ export async function analyze(startDate: string, endDate: string | null) {
 
             if (matchingItem) {
               const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
-              if (replyData.status === 'approved') {
-                rezoningJSON[matchingItemIndex].dates.approvalDate = replyData.date
-              } else if (replyData.status === 'denied') {
-                rezoningJSON[matchingItemIndex].dates.denialDate = replyData.date
-              }
+              rezoningJSON[matchingItemIndex].dates.approvalDate = replyData.status === 'approved' ? news.date : null
+              rezoningJSON[matchingItemIndex].dates.denialDate = replyData.status === 'denied' ? news.date : null
+              rezoningJSON[matchingItemIndex].updateDate = moment().format('YYYY-MM-DD')
               if (!rezoningJSON[matchingItemIndex].urls.find((urlObject) => urlObject.url === url)) {
                 rezoningJSON[matchingItemIndex].urls.push({
                   title: 'By-laws',
@@ -145,12 +156,12 @@ export async function analyze(startDate: string, endDate: string | null) {
                   date: news.date
                 })
               }
-              rezoningJSON[matchingItemIndex] = matchingItem
             } else {
               // We don't have the rezoning application yet in the database, or it is not from a private application
               rezoningJSON.push({
                 city: 'Vancouver',
                 metroCity: 'Metro Vancouver',
+                rezoningId: null,
                 address: replyData.address,
                 applicant: null,
                 behalf: null,
@@ -178,7 +189,10 @@ export async function analyze(startDate: string, endDate: string | null) {
                   url: url,
                   date: news.date
                 }],
-                minutesUrls: [],
+                minutesUrls: news.minutesUrl ? [{
+                  url: news.minutesUrl,
+                  date: news.date
+                }] : [],
                 createDate: moment().format('YYYY-MM-DD'),
                 updateDate: moment().format('YYYY-MM-DD')
               })

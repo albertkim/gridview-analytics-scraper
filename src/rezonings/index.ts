@@ -2,11 +2,11 @@ import moment from 'moment'
 import { analyze as analyzeVancouver } from './Vancouver'
 import { analyze as analyzeRichmond } from './Richmond'
 
-const startDate = moment().subtract(1, 'year').format('YYYY-MM-DD')
-const endDate = moment().format('YYYY-MM-DD')
+const startDate = null
+const endDate = null
 const citiesToAnalyze = [
-  'Vancouver',
-  'Richmond',
+  // 'Vancouver',
+  'Richmond'
 ]
 
 async function main() {

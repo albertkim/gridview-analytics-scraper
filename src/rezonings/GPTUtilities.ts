@@ -1,13 +1,18 @@
-export function getGPTBaseRezoningQuery(document: string) {
+interface BaseRezoningQueryParams {
+  rezoningId?: string
+}
+
+export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
 
   return `
     Read this document and give me the following in a JSON format:
     {
+      rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
       address: address in question - if multiple addresses, comma separate
       applicant: who the rezoning applicant is - if behalf exists, do not mention behalf
       behalf: if the applicant is applying on behalf of someone else, who is it
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
-      type: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
+      type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial, commercial, or other
       stats: {
         buildings: your best guess as to the number of new buildings being proposed or null if unclear
         stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units

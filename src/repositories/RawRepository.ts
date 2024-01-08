@@ -44,6 +44,15 @@ export const RawRepository = {
     }
   },
 
+  getLatestDate(city: string) {
+    const news = this.getNews({city: city})
+    if (news.length > 0) {
+      return news[0].date
+    } else {
+      return null
+    }
+  },
+
   updateNews(city: string, news: IMeetingDetail[]) {
     const previousEntries = this.getNews()
     const filteredData = previousEntries.filter((item) => item.city !== city)

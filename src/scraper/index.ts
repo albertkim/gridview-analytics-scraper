@@ -8,7 +8,7 @@ import { RawRepository } from '../repositories/RawRepository'
 const startDate = '2021-01-01'
 const endDate = null
 const citiesToScrape = [
-  'BC',
+  'BC (province)',
   'Vancouver',
   'Richmond',
   'Burnaby'
@@ -18,13 +18,13 @@ async function main() {
 
   // Phase 1 - Raw scraping
 
-  if (citiesToScrape.includes('BC')) {
+  if (citiesToScrape.includes('BC (province)')) {
     const bcData = await scrapeBC({
       startDate: startDate,
       endDate: null,
       headless: false
     })
-    RawRepository.updateNews('BC', bcData)
+    RawRepository.updateNews('BC (province)', bcData)
   }
 
   if (citiesToScrape.includes('Vancouver')) {

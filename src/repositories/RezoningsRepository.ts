@@ -22,6 +22,7 @@ export type ZoningStatus =
 export interface IRezoningDetail {
   city: string
   metroCity: string | null
+  rezoningId: string | null
   address: string
   applicant: string | null
   behalf: string | null
@@ -136,6 +137,7 @@ export function mergeEntries(oldEntry: IRezoningDetail, newEntry: IRezoningDetai
   // city, metroCity, address, and createDate should be consistent
   const mergedData = {...oldEntry}
 
+  mergedData.rezoningId = mergeSimpleField(oldEntry.rezoningId, newEntry.rezoningId, 'old')
   mergedData.applicant = mergeSimpleField(oldEntry.applicant, newEntry.applicant, 'old')
   mergedData.behalf = mergeSimpleField(oldEntry.behalf, newEntry.behalf, 'old')
   mergedData.description = mergeSimpleField(oldEntry.description, newEntry.description, 'longer') || ''
@@ -174,6 +176,7 @@ export function checkGPTJSON(json: any): boolean {
   const checkNumberOrNull = (value: any) => typeof value === 'number' || value === null
 
   // Check for main properties (city and metroCity checks not needed)
+  if (!checkStringOrNull(json.rezoningId)) return false
   if (!checkStringOrNull(json.address)) return false
   if (!checkStringOrNull(json.applicant)) return false
   if (!checkStringOrNull(json.behalf)) return false
