@@ -1,14 +1,17 @@
 import chalk from 'chalk'
 import { IRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
+import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
 
 // Get a birds-eye view of the rezoning data
 export async function getStatistics() {
 
+  const news = RawRepository.getNews()
   const rezonings = RezoningsRepository.getRezonings()
 
   console.log()
 
-  printStatistic('Total rezonings', getCountPerCity(rezonings))
+  printStatistic('Total news', getNewsCountPerCity(news))
+  printStatistic('Total rezonings', getRezoningCountPerCity(rezonings))
   printStatistic('Rezoning date errors', getDateErrorsPerCity(rezonings))
   printStatistic('Rezoning URL date errors', getURLDateErrosPerCity(rezonings))
 
@@ -22,7 +25,23 @@ function printStatistic(title: string, data: any[]) {
   console.log()
 }
 
-function getCountPerCity(rezonings: IRezoningDetail[]) {
+function getNewsCountPerCity(news: IMeetingDetail[]) {
+
+  const countPerCity = news.reduce<Record<string, number>>((acc, obj) => {
+    acc[obj.city] = (acc[obj.city] || 0) + 1
+    return acc
+  }, {})
+  
+  const result: {city: string, count: number}[] = Object.keys(countPerCity).map(city => ({
+    city,
+    count: countPerCity[city]
+  }))
+
+  return result
+
+}
+
+function getRezoningCountPerCity(rezonings: IRezoningDetail[]) {
 
   const countPerCity = rezonings.reduce<Record<string, number>>((acc, obj) => {
     acc[obj.city] = (acc[obj.city] || 0) + 1

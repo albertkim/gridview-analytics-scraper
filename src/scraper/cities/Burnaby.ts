@@ -80,6 +80,10 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
   await browser.close()
   console.log(`Browser closed`)
 
+  results.forEach((result) => {
+    result.date = moment(new Date(result.date)).format('YYYY-MM-DD')
+  })
+
   return results
 
 }
@@ -118,7 +122,7 @@ async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail
       console.log(reportUrls)
 
       items.push({
-        date: moment(new Date(date)).format('YYYY-MM-DD'),
+        date: date,
         meetingType: 'City council',
         title: title,
         resolutionId: null,

@@ -100,6 +100,10 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     await browser.close()
     console.log(`Browser closed`)
 
+    results.forEach((result) => {
+      result.date = moment(new Date(result.date)).format('YYYY-MM-DD')
+    })
+
     return results
 
   } catch (error) {
@@ -181,7 +185,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
         }).get()
   
         data.push({
-          date: moment(new Date(date)).format('YYYY-MM-DD'),
+          date: date,
           meetingType: meetingType,
           title: title,
           resolutionId: null,

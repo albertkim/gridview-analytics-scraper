@@ -10,14 +10,12 @@ const startDate = '2021-01-01'
 const endDate = null
 const citiesToScrape: string[] = [
   // 'BC (province)',
-  // 'Vancouver',
+  'Vancouver',
   // 'Richmond',
   // 'Burnaby'
 ]
 
 async function main() {
-
-  // Phase 1 - Raw scraping
 
   if (citiesToScrape.includes('BC (province)')) {
     const bcData = await scrapeBC({
