@@ -1,15 +1,15 @@
 import moment from 'moment'
 import chalk from 'chalk'
-import { RawRepository } from '../repositories/RawRepository'
-import { IRezoningDetail, ZoningType, RezoningsRepository, checkGPTJSON, mergeEntries } from '../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from './GPTUtilities'
+import { RawRepository } from '../../repositories/RawRepository'
+import { IRezoningDetail, ZoningType, RezoningsRepository, checkGPTJSON, mergeEntries } from '../../repositories/RezoningsRepository'
+import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../GPTUtilities'
 import {
   downloadPDF,
   generatePDF,
   generatePDFTextArray,
   parsePDF,
   chatGPTTextQuery
-} from '../utilities'
+} from '../../utilities'
 
 interface IBylawData {
   address: string
@@ -180,8 +180,8 @@ export async function analyze(startDate: string | null, endDate: string | null) 
                 dates: {
                   appliedDate: null,
                   publicHearingDate:null,
-                  approvalDate: replyData.status === 'approved' ? replyData.date : null,
-                  denialDate: replyData.status === 'denied' ? replyData.date : null,
+                  approvalDate: replyData.status === 'approved' ? news.date : null,
+                  denialDate: replyData.status === 'denied' ? news.date : null,
                   withdrawnDate: null
                 },
                 urls: [{

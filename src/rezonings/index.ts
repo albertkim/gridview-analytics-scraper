@@ -1,12 +1,14 @@
 import moment from 'moment'
-import { analyze as analyzeVancouver } from './Vancouver'
-import { analyze as analyzeRichmond } from './Richmond'
+import { analyze as analyzeVancouver } from './cities/Vancouver'
+import { analyze as analyzeRichmond } from './cities/Richmond'
+import { getStatistics } from './StatisticsUtilities'
+import {  } from './BulkUtilities'
 
 const startDate = null
 const endDate = null
-const citiesToAnalyze = [
+const citiesToAnalyze: string[] = [
   // 'Vancouver',
-  'Richmond'
+  // 'Richmond'
 ]
 
 async function main() {
@@ -18,6 +20,8 @@ async function main() {
   if (citiesToAnalyze.includes('Richmond')) {
     await analyzeRichmond(startDate, endDate)
   }
+
+  getStatistics()
 
 }
 

@@ -1,14 +1,14 @@
 import moment from 'moment'
 import chalk from 'chalk'
-import { RawRepository } from '../repositories/RawRepository'
-import { RezoningsRepository, IRezoningDetail, mergeEntries, checkGPTJSON } from '../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from './GPTUtilities'
+import { RawRepository } from '../../repositories/RawRepository'
+import { RezoningsRepository, IRezoningDetail, mergeEntries, checkGPTJSON } from '../../repositories/RezoningsRepository'
+import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../GPTUtilities'
 import {
   downloadPDF,
   generatePDF,
   parsePDF,
   chatGPTTextQuery
-} from '../utilities'
+} from '../../utilities'
 
 const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'
 
@@ -152,8 +152,8 @@ export async function analyze(startDate: string | null, endDate: string | null) 
             rezoningJSON.push({
               city: 'Richmond',
               metroCity: 'Metro Vancouver',
-              rezoningId: item.rezoningId,
-              address: item.address,
+              rezoningId: item.rezoningId || '',
+              address: item.address || '',
               applicant: null,
               behalf: null,
               description: '',
@@ -176,8 +176,8 @@ export async function analyze(startDate: string | null, endDate: string | null) 
               dates: {
                 appliedDate: null,
                 publicHearingDate:null,
-                approvalDate: item.status === 'approved' ? item.date : null,
-                denialDate: item.status === 'denied' ? item.date : null,
+                approvalDate: item.status === 'approved' ? news.date : null,
+                denialDate: item.status === 'denied' ? news.date : null,
                 withdrawnDate: null
               },
               urls: [{

@@ -1255,5 +1255,3202 @@
     ],
     "createDate": "2024-01-07",
     "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 27, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70760.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 27, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-011080",
+    "address": "10511 Lassam Road",
+    "applicant": "Gurjit Pooni",
+    "behalf": null,
+    "description": "Rezoning of 10511 Lassam Road from the “Single Detached RS1/E” Zone to the “Single Detached (RS2/B)” Zone to permit the property to be subdivided to create two single-family lots with access from Lassam Road. Each proposed lot at the subject site will be approximately 12.6 m (41 ft.) wide and approximately 575 m² (6,189.25 ft²) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached RS1/E Zone",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B) Zone"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 18-820669",
+    "address": "10140, 10160, 10180 No 1 Rd and 4051 & 4068 Cavendish Drive",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15529/",
+        "date": "November 27, 2023"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm",
+        "date": "November 27, 2023"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 21-936512",
+    "address": "3660/3662 Williams Road",
+    "applicant": "Pakland Properties",
+    "behalf": "Pakland Investments Ltd. (Khalid Hasan)",
+    "description": "Rezoning of 3660/3662 Williams Road from the “Two-Unit Dwellings (RD1)” zone to the “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two single-family residential lots each with vehicle access from Williams Road. Existing stratified duplex with one secondary suite on the subject site, which will be demolished. Each new lot will provide a secondary suite. Proposed subdivision plan includes two lots, each 429.0 m2 (4,617.72 ft2) and 463.9 m² (4,993.37 ft²) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RD1",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-05-03",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15530/",
+        "date": "November 27, 2023"
+      },
+      {
+        "date": "May 24, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Pakland_Properties_for_Rezoning_at_3660_3662_Williams_Road62755.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm",
+        "date": "November 27, 2023"
+      },
+      {
+        "date": "May 24, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/052422_minutes.htm"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook_Crescent70634.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-010976",
+    "address": "11831/11833 Seabrook Crescent",
+    "applicant": "Navreet Gill",
+    "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
+    "description": "Rezoning to permit the property to be subdivided into two single-family lots, each with vehicle access from Seabrook Crescent. The proposed subdivision plan and draft site plan are provided in Attachment 2.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-10-23",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Terra_8120_Number_1_Road_Limited_Partnership_for_Rezoning70635.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-945869",
+    "address": "8120 and 8140 No. 1 Road",
+    "applicant": "Terra 8120 Number 1 Road Limited Partnership",
+    "behalf": "Cliff Chun and Kai Shen Hsiung of 1296168 BC Ltd. and Yi Jen Wang and Kai Shen Hsiung of Terra West Properties Ltd.",
+    "description": "Rezoning of 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” zone to the “Low Density Townhouses (RTL4)” zone to permit the development of nine townhouse units, with vehicle access from No. 1 Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 9,
+      "stratas": 9,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low Density Townhouses"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-10-25",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 23, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Pati_Yik_of_Kennon_Construction_for_Rezoning_at_10840_10860_Bonavista_Gate70559.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 23, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/102323_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-011063",
+    "address": "10840/10860 Bonavista Gate",
+    "applicant": "Pati Yik of Kennon Construction",
+    "behalf": "Thomas Mau Shing Ng, Ling Y Ha, Shui Ting Chua",
+    "description": "Rezoning of 10840 and 10860 Bonavista Gate from the “Two-Unit Dwellings (RD1)” zone to the “Single Detached (RS2/C)” zone in order to subdivide the existing duplex lot into two single-family lots, each with vehicle access from Bonavista Gate. The proposed subdivision plan and site plan are provided in Attachment 2.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RD1",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "RS2/C",
+      "newZoningDescription": "Single Detached"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-10-03",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_Hari_Singh_Gill_for_Rezoning_at_3300_Granville_Ave69497.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-026766",
+    "address": "3300 Granville Avenue",
+    "applicant": "Hari Singh Gill",
+    "behalf": null,
+    "description": "Rezoning of 3300 Granville Avenue from Single Detached (RS1/E) zone to Single Detached (RS2/B) zone to allow the property to be subdivided into two single-family lots, each with a one bedroom secondary suite. Existing single-family dwelling to be demolished prior to subdivision. Vehicle access proposed to be from Granville Avenue.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_Interface_Architecture_Inc69496.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-939470",
+    "address": "5471, 5491/5493, 5531, 5551, 5571, 5591, 5595, 5611/5613 Steveston Highway",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": "Steveston Townhouse Ventures Inc.",
+    "description": "Rezoning of 5471, 5491/5493, 5531, 5551, 5571, 5591, 5595, 5611/5613 Steveston Highway from “Single Detached (RS1/B)” zone, “Single Detached (RS1/E)” zone and “Two-Unit Dwellings (RD1)” zone to the “Medium Density Townhouses (RTM2)” zone in order to permit the development of 30 townhouse units with seven secondary suites and a right-in/right-out vehicle access from Steveston Highway. The proposed density is 0.65 floor area ratio (FAR).",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 30,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 0.65,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B, RS1/E, RD1",
+      "previousZoningDescription": "Single Detached and Two-Unit Dwellings",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "October 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Application_-_Matthew_Cheng_-_7300_St69498.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "October 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-943417",
+    "address": "7300 St. Albans Road",
+    "applicant": "Matthew Cheng",
+    "behalf": "1124053 B.C. LTD",
+    "description": "Rezoning from “Single Detached (RS1/E)” Zone to “High Density Townhouses (RTH1)” Zone to permit the development of four townhouse units with one secondary suite",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 4,
+      "stratas": 4,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTH1",
+      "newZoningDescription": "High Density Townhouses"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-09-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 12-123456",
+    "address": "Richmond Zoning Bylaw 8500, Amendment Bylaw 10048",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "July 26, 2021",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15434/",
+        "date": "October 10, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15408/",
+        "date": "September 25, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15264/",
+        "date": "June 12, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15266/",
+        "date": "June 12, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15267/",
+        "date": "June 12, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15239/",
+        "date": "May 23, 2023"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15008/",
+        "date": "December 21, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14837/",
+        "date": "September 26, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14821/",
+        "date": "September 12, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14818/",
+        "date": "September 12, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14779/",
+        "date": "July 25, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14777/",
+        "date": "July 25, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14686/",
+        "date": "June 13, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14553/",
+        "date": "March 28, 2022"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14236/",
+        "date": "September 13, 2021"
+      },
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14218/",
+        "date": "July 26, 2021"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm",
+        "date": "October 10, 2023"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "No address provided",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15426/",
+        "date": "October 10, 2023"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm",
+        "date": "October 10, 2023"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 22-011049",
+    "address": "10331/10333 Bird Road",
+    "applicant": "Iqbal Singh Bhullar",
+    "behalf": "Pardeep Bhullar, Navjinder Bhullar and Gurveer Bhullar",
+    "description": "Rezoning of 10331/10333 Bird Road from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two lots. Each lot at the subject site will be approximately 12 m (40 ft.) wide and approximately 691 m2 (7,437.8 ft2) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-09-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15427/",
+        "date": "October 10, 2023"
+      },
+      {
+        "date": "October 11, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_for_10331_10333_Bird_Rd65617.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/101023_minutes.htm",
+        "date": "October 10, 2023"
+      },
+      {
+        "date": "October 11, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/101122_minutes.htm"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 25, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_9371_Dolphin_Avenue69438.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 25, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/092523_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 23-014545",
+    "address": "9371 Dolphin Avenue",
+    "applicant": "Gurjit Pooni",
+    "behalf": "Gurjit Pooni, Sahib Bath, Lakhbir Bath, Dilbag Bath",
+    "description": "Rezoning of 9371 Dolphin Avenue from 'Single Detached (RS1/B)' zone to 'Single Detached (RS2/K)' zone to permit the property to be subdivided to create two single-family lots with access from Dolphin Avenue.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B",
+      "previousZoningDescription": "Single Detached Residential Low Density",
+      "newZoningCode": "RS2/K",
+      "newZoningDescription": "Single Detached Residential Medium Density"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-08-28",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 25, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Lung_Designs_Ltd69439.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 25, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/092523_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-021110",
+    "address": "7560 Ash Street",
+    "applicant": "Lung Designs Ltd.",
+    "behalf": "Frederico Collaco and Nancy Collaco",
+    "description": "Rezoning of 7560 Ash Street from the 'Single Detached (RS 1/F)' zone to the 'Single Detached (RS2/E)' zone, to allow the property to be subdivided into two single-family lots. Vehicle access to the west lot (Lot 1) is proposed from Ash Street. Vehicle access to the eastern lot (Lot 2) is proposed from a new extension of Armstrong Street. The site is currently occupied by an existing single-family dwelling on the western portion of the lot, which will remain on proposed Lot 1.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Single Family (RS1/F)",
+      "previousZoningDescription": "Single Family (RS1/F)",
+      "newZoningCode": "Single Family (RS2/E)",
+      "newZoningDescription": "Single Family (RS2/E)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-08-28",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 11, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_10111___10113_No69383.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 11, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/091123_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-019002",
+    "address": "10111 & 10113 No. 5 Road",
+    "applicant": "Avtar Bhullar",
+    "behalf": "1364803 B.C. LTD.",
+    "description": "Rezoning of 10111 & 10113 No. 5 Road from the “Single Detached (RS1/E)” zone to the “Arterial Road Compact Two-Unit Dwellings (RCD)” zone. This rezoning would permit the property to be subdivided to create three lots each containing a front-to-back duplex with vehicle access from the existing rear lane.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 3,
+      "stratas": 6,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RCD",
+      "newZoningDescription": "Arterial Road Compact Two-Unit Dwellings"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-08-21",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "July 24, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_8520__8540___8560_Railway_Avenue_PLN_071823__reduced_69098.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "July 24, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/072423_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-936046",
+    "address": "8520 Railway Avenue, 8540 Railway Avenue, 8560 Railway Avenue",
+    "applicant": "Winston Chong Architect Inc.",
+    "behalf": "SD Railway Homes Inc.",
+    "description": "Rezoning from the “Single Detached (RS1/E)” Zone to the “Low Rise Rental Apartment (ZLR47) – Railway Avenue (Blundell)” Zone to permit the construction of a 100 per cent rental residential apartment development consisting of a four-storey building, containing 58 units for seniors. Key components include 29 Low-End Market Rental (LEMR) units and 29 market rental units, approximately 1,534 m2 of LEMR housing and approximately 1,605 m2 of market rental housing, all secured in perpetuity with rental tenure zoning and housing agreements registered on Title, meeting Energy Step Code Step 4, indoor amenity space of approximately 102 m2 and shared outdoor amenity space of approximately 495 m2.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": 58,
+      "rentals": 58,
+      "hotels": null,
+      "fsr": null,
+      "height": 4
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZLR47",
+      "newZoningDescription": "Low Rise Rental Apartment"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-06-28",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "July 10, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_1243059_BC_Ltd69025.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "July 10, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/071023_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-941597",
+    "address": "12120 No. 5 Road",
+    "applicant": "1243059 BC Ltd.",
+    "behalf": null,
+    "description": "Rezoning from 'Agriculture (AG1)' zone to 'Light Industrial (IL)' zone to permit the development of two multi-tenant industrial buildings for a total of 13 strata-titled units. Buildings total approximately 4,266 m2 in light industrial space and 1,276 m2 in ancillary office space. Proposed setback of 3.28 m from No. 5 Road and proposed height of 11.6 m. Landscaping and tree replacement planting within the front yard setback, in conjunction with required frontage upgrades along No. 5 Road (multi-use pathway and landscaped boulevard), will improve the pedestrian scale of the development.",
+    "type": "industrial",
+    "stats": {
+      "buildings": 2,
+      "stratas": 13,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": 11.6
+    },
+    "zoning": {
+      "previousZoningCode": "Agriculture (AG1)",
+      "previousZoningDescription": "Agriculture (AG1)",
+      "newZoningCode": "Light Industrial (IL)",
+      "newZoningDescription": "Light Industrial (IL)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-06-19",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 26, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_7520_Ash_Street_PLN_06202368947.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 26, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/062623_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-945951",
+    "address": "7520 Ash Street",
+    "applicant": "Benito Kho and Verney Kho",
+    "behalf": null,
+    "description": "Rezoning of 7520 Ash Street from the “Single Detached (RS1/F)” zone to the “Single Detached (RS2/E)” zone, to allow the property to be subdivided into two single-family lots. Proposed Lot 1 will be approximately 19.2 m (63 ft.) wide and 799 m² (8,600 ft²) in area. Proposed Lot 2 will be approximately 19.2 m (63 ft.) wide and 799 m² (8,600 ft²) in area. Retain existing single-family dwelling on Lot 1 and construct a new single detached house with a secondary suite on Lot 2.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F",
+      "previousZoningDescription": "Single Detached (RS1/F)",
+      "newZoningCode": "RS2/E",
+      "newZoningDescription": "Single Detached (RS2/E)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-06-05",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 26, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_7100___7120_ASh_Street_PLN_06202368948.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 26, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/062623_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 18-843479",
+    "address": "7100 and 7120 Ash Street",
+    "applicant": "Sian Group Investments Inc.",
+    "behalf": "1199445 BC Ltd. (Sukhinder Kaur Sian)",
+    "description": "The applicant wants to rezone 7100 and 7120 Ash Street from the “Single Detached (RS1/F)” zone to the “Town Housing (ZT16) - South McLennan and St. Albans Sub-Area (City Centre)” zone to permit the development of 17 townhouses.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 17,
+      "stratas": 17,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZT16",
+      "newZoningDescription": "Town Housing"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-06-05",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 12, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Dava_Developments_Ltd68849.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 12, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/061223_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 20-919113",
+    "address": "8911, 8931, 8951, 8991 Patterson Road",
+    "applicant": "Dava Developments Ltd.",
+    "behalf": "Patterson Richmond Nominee Ltd.",
+    "description": "Rezoning of lands to create a new Residential/Limited Commercial (ZMU54) zone and a School & Institutional Use (SI) zone for the development of a mixed-use mid- and high-rise development. The proposed development includes a total floor area of 17,154.73 m2 comprised of 163 dwellings, including 136 market housing units and 27 affordable housing units, as well as 52,834 ft2 of non-residential hotel uses. It also includes the transfer of parcels for public open space and transportation related infrastructure.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": null,
+      "stratas": 163,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Residential Single Family (RS1/F)",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "Residential/Limited Commercial (ZMU54) and School & Institutional Use (SI)",
+      "newZoningDescription": "mixed use residential and limited commercial with school and institutional use"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-05-24",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 12, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Inter_luck_Trading_Corp_for_Rezoning_at_3560_Moncton_Street68850.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 12, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/061223_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 18-817742",
+    "address": "3560 Moncton Street",
+    "applicant": "Inter Luck Trading Corp",
+    "behalf": null,
+    "description": "The applicant wants to rezone 3560 Moncton Street from 'Steveston Commercial (CS2)' to 'Commercial Mixed Use (ZMU43) - Steveston Village' zone in order to develop a two-storey, mixed use building containing approximately 419 m2 (4,513 ft2) of commercial space at grade and five residential units above, with vehicular access from the lane to the west.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": 5,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Steveston Commercial (CS2)",
+      "previousZoningDescription": "commercial",
+      "newZoningCode": "Commercial Mixed Use (ZMU43) - Steveston Village",
+      "newZoningDescription": "mixed use"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 12, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Interface_Architecture_Inc68851.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 12, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/061223_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-922202",
+    "address": "5800, 5840, 5860 Granville Avenue",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": "Satwant Atwal and Surinder Grewal of 1275306 BC Ltd.",
+    "description": "Rezoning from the “Single Detached (RS1/E)” zone to the “Low-Density Townhouses (RTL4)” zone to permit the property to be developed for 18 townhouse units, with vehicle access from Granville Avenue.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 18,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low-Density Townhouses"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-05-24",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 23, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_4651__4671__4691_Smith_Crescent___23301__23321__23361__23381_Gilley_Road_PLN_05162368696.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 23, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/052323_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-942276",
+    "address": "4651, 4671, 4691 Smith Crescent, 23301, 23321, 23361, and 23381 Gilley Road",
+    "applicant": "Maskeen (Hamilton) Properties Corp.",
+    "behalf": null,
+    "description": "The applicant is seeking to rezone the site to permit the development of a mixed-use mid-rise development including 186 dwelling units, 167 strata units, and 19 Low-End Market Rental (LEMR) units. This includes one five-storey mixed-use building, one four-storey apartment building, and one two-storey amenity building atop a common parkade. The total floor area is approximately 15,661 m2 (168,569 ft2) comprised of approximately 130 m2 (1,400 ft2) of City-owned community amenity space (Community Policing Office) and approximately 603.9 m2 (6,500 ft2) of commercial space.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 3,
+      "stratas": 167,
+      "rentals": 19,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZMU53",
+      "newZoningDescription": "Residential/Limited Commercial - Neighbourhood Village Centre"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-05-01",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 23, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_8635__8655__8675___8695_Cook_Crescent_PLN_05162368700.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 23, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/052323_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-012904",
+    "address": "8635, 8655, 8675 and 8695 Cook Crescent, Surplus Portion of the Spires Road and Cook Crescent road allowance",
+    "applicant": "TopStream Management Ltd.",
+    "behalf": "1377591 BC Ltd.",
+    "description": "Rezoning of a 3,302.8 m2 site from 'Single Detached (RS1/E)' zone to 'Town Housing (ZT103) – Parking Structure Townhouses (Spires Road – Cook Crescent)' zone. Proposal includes a stacked townhouse development with 27 townhouse units, including two single-level Basic Universal Housing (BUH) units, four three-level townhouse units, fourteen four-level townhouse units, and seven four-level townhouse units each with a secondary suite. Servicing Agreement required for frontage beautification, road widening, new concrete sidewalk, landscaped boulevard, fire hydrants, public walkways, storm sewer and sanitary sewer upgrades, and service connections.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 27,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZT103",
+      "newZoningDescription": "Town Housing (ZT103) – Parking Structure Townhouses (Spires Road – Cook Crescent)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-05-01",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 8, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Bradley_Dore_for_Rezoning_at_9671_No66587.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 8, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/050823_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-027435",
+    "address": "9671 No. 1 Road",
+    "applicant": "Bradley Dore",
+    "behalf": "Lavocata Holdings Ltd.",
+    "description": "Rezoning of 9671 No. 1 Road from “Single Detached (RS1/E)” zone to “Compact Single Detached (RC2)” zone, to permit the property to be subdivided to create two single-family lots, each with vehicle access from the rear lane.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RC2",
+      "newZoningDescription": "Compact Single Detached"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-04-17",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 8, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Fougere_Architecture_Inc66588.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 8, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/050823_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 20-919143",
+    "address": "7371 No. 4 Road",
+    "applicant": "Fougere Architecture Inc.",
+    "behalf": "Khalid Hasan of Pakland Qadri Gardens Ltd.",
+    "description": "Rezoning of 7371 No. 4 Road from the “Single Detached (RS1/F)” zone to the “Medium Density Townhouses (RTM2)” zone, to permit the property to be developed for 19 townhouse units including two secondary suites, with vehicle access from General Currie Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 19,
+      "stratas": 19,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-04-17",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 8, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Fougere_Architecture68774.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 8, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/050823_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-941625",
+    "address": "10611 and 10751 River Drive",
+    "applicant": "Fougere Architecture Inc.",
+    "behalf": "Bains Properties (River Drive) Inc.",
+    "description": "The applicant wants to rezone the site at 10611 and 10751 River Drive from the “Industrial Storage (IS)” zone to a new “Low to Mid Rise Apartment (ZLR46) – Bridgeport” site specific zone to permit the development of a residential mixed tenure low-rise and mid-rise development. The proposal includes 181 dwelling units, including 150 strata units, 13 market rental units, and 18 Low-End Market Rental (LEMR) units. It also includes one four-storey and two six-storey apartment buildings, and a one-storey amenity building. The total floor area is approximately 15,588 m2 (167,790 ft2). Road, dike, engineering improvement, and public walkway works will be secured through the City’s standard Servicing Agreement process prior to final adoption of the rezoning bylaw.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 3,
+      "stratas": 150,
+      "rentals": 13,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Industrial Storage (IS)",
+      "previousZoningDescription": "Industrial Storage",
+      "newZoningCode": "Low to Mid Rise Apartment (ZLR46) - Bridgeport",
+      "newZoningDescription": "Low to Mid Rise Apartment"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-04-17",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "April 24, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Referral_Response_Application_by_Landa_Oval_Development_Ltd66590.pdf"
+      },
+      {
+        "date": "November 14, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Landa_Oval_Development_Ltd65799.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "April 24, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/042423_minutes.htm"
+      },
+      {
+        "date": "November 14, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/111422_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 17-782750",
+    "address": "6851 and 6871 Elmbridge Way",
+    "applicant": "Landa Oval Development Ltd.",
+    "behalf": null,
+    "description": "Landa Oval Development Ltd. has applied to the City of Richmond to rezone 6851 and 6871 Elmbridge Way from 'Light Industrial Business Park (IB1)' to 'High Density Mixed Use (ZMU52)-Oval Village (City Centre)' to construct a mixed use development in the Oval Village area. The development includes 13,832 m2 (148,887 ft2) of commercial floor area consisting of a 189 room hotel and supporting uses in a tower, along with portions of the development podium and at-grade commercial space. It also includes 27,655 m2 (297,778 ft2) of residential floor area consisting of 321 market residential units and 35 affordable Low End Market Rental (LEMR) housing units. Additionally, dedication and construction of a new road, widening and completion of the existing lane, and related off-site works are to be completed through a City Servicing Agreement.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": 321,
+      "rentals": 35,
+      "hotels": 189,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "IB1",
+      "previousZoningDescription": "Light Industrial Business Park",
+      "newZoningCode": "ZMU52",
+      "newZoningDescription": "High-Density Mixed Use – Oval Village (City Centre)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-11-14",
+      "publicHearingDate": "2023-05-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "April 11, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Ajit_Aujla_and_New_Villa_Holdings_for_Rezoning_at_8491_No66517.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "April 11, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/041123_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 17-777739",
+    "address": "8491 No. 4 Road",
+    "applicant": "Ajit Aujla and New Villa Holdings",
+    "behalf": null,
+    "description": "The proposed rezoning would permit the property to be subdivided to create two lots, each with a principal dwelling and an accessory coach house above a detached garage, with vehicle access from the existing rear lane. The proposed site-specific zone is being introduced to facilitate the proposed lot depth of 34.6 m (113.5 ft.), which does not meet the minimum required lot depth of the standard “Coach Houses (RCH1)” zone of 35.0 m (114.8 ft.). The proposed site-specific zone is identical in all provisions to the standard “Coach Houses (RCH1)” zone, but allows for a reduced lot depth.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached RS1/E",
+      "newZoningCode": "ZS31",
+      "newZoningDescription": "Coach House ZS31 – No. 4 Road"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-03-21",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "April 11, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Avtar_Bhullar_for_Rezoning_at_12260_Woodhead_Road66518.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "April 11, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/041123_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-009404",
+    "address": "12260 Woodhead Road, 12288 Woodhead Road",
+    "applicant": "Avtar Bhullar",
+    "behalf": "Trine Developments Ltd.",
+    "description": "Rezoning of 12260 Woodhead Road and a portion of 12288 Woodhead Road from the “Single Detached (RS1/F)” Zone and the “Single Detached (RS1/B)” Zone to the “Single Detached (RS2/B)” Zone to permit a subdivision to create three lots with vehicle access from Woodhead Road. Proposed lots will be 12.0 m (39.37 ft.) wide and approximately 482.80 m² (5,196.82 ft²) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 3,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F, RS1/B",
+      "previousZoningDescription": "Single Detached (RS1/F), Single Detached (RS1/B)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-03-22",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "March 27, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_8_-_Application_-_8180_Heather_Street_CNCL_03272366472.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "March 27, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/032723_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 17-791280",
+    "address": "8180 Heather Street",
+    "applicant": "1265028 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning of 8180 Heather Street from “Single Detached (RS1/E)” zone to the “Single Detached (RS2/A)” zone, to permit the property to be subdivided into two single-family lots with the western lot accessed from Heather Street and the eastern lot accessed from Dixon Avenue. Existing single-family dwelling on the subject property with vehicular access from Heather Street to be demolished. Proposed subdivision plan included in Attachment 2.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/A",
+      "newZoningDescription": "Single Detached (RS2/A)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "March 27, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_13_-_Application_-_7511_St66466.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "March 27, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/032723_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 18-818548",
+    "address": "7511 St. Albans Road",
+    "applicant": "Matthew Cheng Architect Inc.",
+    "behalf": "1118992 BC Ltd.",
+    "description": "Rezoning from “Single Family Detached (RS1/E)” Zone to “High Density Townhouse (RTH1)” Zone to permit the development of five three-storey townhouse units with vehicle access through an easement registered on Title of the adjacent property to the north at 7433 St. Albans Road. A preliminary site plan, building elevations and landscape plan are contained in Attachment 2.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 5,
+      "stratas": 5,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": 9
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Family Detached",
+      "newZoningCode": "RTH1",
+      "newZoningDescription": "High Density Townhouse"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2023-03-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 15-700431",
+    "address": "9700, 9720 and 9800 Williams Rd",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15100/",
+        "date": "February 27, 2023"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/022723_minutes.htm",
+        "date": "February 27, 2023"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "February 13, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Urban_Solutions_Architecture_Ltd66269.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "February 13, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/021323_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 17-788900",
+    "address": "7780, 7800, 7804, 7820 and 7840 River Road",
+    "applicant": "Urban Solutions Architecture Ltd.",
+    "behalf": "1089260 B C Ltd. (CIBT Education Group and Global Education City Holdings Inc.)",
+    "description": "Rezoning of lands to construct an 11-storey hotel with 183 guest rooms, an 8-storey office building, retail and restaurant uses at grade, and 2 ½ levels of underground parking. Total floor area of approximately 21,625 m2 (232,769 ft2) comprising approximately 7,702 m² (82,908 ft²) of hotel and retail/restaurant and 13,923 m² (149,861 ft²) of office. Design and construction to meet Step 2 of the BC Energy Step Code, together with a low carbon energy plant. Voluntary developer contributions towards public art and community amenities. Off-site works around the perimeter of the subject site and the adjacent City-owned property at 7760 River Road/7891 Cambie Road, including dike upgrades, utility upgrades, road upgrades, and related public realm improvements.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 183,
+      "fsr": null,
+      "height": 11
+    },
+    "zoning": {
+      "previousZoningCode": "Auto-Oriented Commercial (CA)",
+      "previousZoningDescription": "Auto-Oriented Commercial",
+      "newZoningCode": "High Rise Riverfront Commercial (ZC49)",
+      "newZoningDescription": "High Rise Riverfront Commercial"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-01-24",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 21-927633",
+    "address": "7420/7440 Langton Road",
+    "applicant": "Praise Design & Construction Inc.",
+    "behalf": "Hong Chen",
+    "description": "Rezoning of 7420/7440 Langton Road from the “Two-Unit Dwellings (RD1)” zone to the “Single Detached (RS2/B)” zone to permit the property to be subdivided to create two single-family lots with vehicle access from Langton Road. Proposed subdivision plan includes two single-family lots with one providing a secondary suite and a contribution to the Affordable Housing Reserve Fund for the other. Building footprint on the proposed southern lot has been modified to accommodate the retention of a tree on the site by increasing the required setbacks in the southeast corner. Legal agreement to be registered on Title to ensure that the Tree Protection Zone and additional setback requirements are maintained.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Two-Unit Dwellings (RD1)",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "Single Detached (RS2/B)",
+      "newZoningDescription": "Single Detached"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-03-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15053/",
+        "date": "January 30, 2023"
+      },
+      {
+        "date": "April 11, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Praise_Design___Construction_Inc61370.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/council/013023_minutes.htm",
+        "date": "January 30, 2023"
+      },
+      {
+        "date": "April 11, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/041122_minutes.htm"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "January 16, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_8691_Heather_Street_PLN_01102366081.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "January 16, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/011623_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-940333",
+    "address": "8691 Heather Street",
+    "applicant": "Gurjit Pooni",
+    "behalf": null,
+    "description": "The applicant wants to rezone the property at 8691 Heather Street from the 'Single Detached (RS1/B)' zone to the 'Single Detached (RS2/K)' zone in order to subdivide the property to create two single-family lots, with one lot accessed from Heather Street and one lot accessed from Dolphin Avenue. The proposed subdivision is consistent with the lot fabric and vehicular access of adjacent lots.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B",
+      "previousZoningDescription": "Single Detached (RS1/B)",
+      "newZoningCode": "RS2/K",
+      "newZoningDescription": "Single Detached (RS2/K)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-12-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "January 16, 2023",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_8420_Heather_Street_PLN_01102366084.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "January 16, 2023",
+        "url": "https://citycouncil.richmond.ca/agendas/council/011623_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-938262",
+    "address": "8420 Heather Street",
+    "applicant": "Rav Bains",
+    "behalf": null,
+    "description": "The applicant wants to rezone the property to permit the subdivision of the existing single-family lot into two equal-sized single-family lots with secondary suites and vehicle access from Heather Street. The proposed subdivision plan shows two new single-family lots approximately 10m wide. The redevelopment is consistent with the lot fabric, lot width, and vehicular access of lots to the north along Heather Street and with the Ash Street Sub-Area Plan.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B",
+      "previousZoningDescription": "Residential Single Detached (RS1/B)",
+      "newZoningCode": "RS2/A",
+      "newZoningDescription": "Residential Single Detached (RS2/A)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-12-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "December 12, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Lorraine_S_Tsoi_for_Rezoning_at_11431_Williams_Road65895.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "December 12, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/121222_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-014680",
+    "address": "11431 Williams Road",
+    "applicant": "Lorraine S Tsoi",
+    "behalf": "Lorraine S Tsoi, Danny F Leung and Chi L Lau",
+    "description": "The applicant is applying to rezone 11431 Williams Road from the “Single Detached (RS1/E)” zone to the “Compact Single Detached (RC2)” zone, to permit the property to be subdivided to create two single-family lots, each with vehicle access from the rear lane. The proposed subdivision is shown in Attachment 2. The proposed site plan and preliminary landscape plan are shown in Attachment 3.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RC2",
+      "newZoningDescription": "Compact Single Detached"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-11-02",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 28, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Rick_Bowal_for_Rezoning_at_8220_Gilbert_Road65793.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 28, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/112822_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-926304",
+    "address": "8220 Gilbert Road",
+    "applicant": "Rick Bowal",
+    "behalf": "Meena Bowal",
+    "description": "Rezoning of 8220 Gilbert Road from the “Single Detached (RS1/E)” zone to the “Arterial Road Two-Unit Dwellings (RDA)” zone to permit the property to be developed into 2 duplex lots with shared vehicle access to Gilbert Road. Proposed amendment to Single-Family Lot Size Policy 5442 to remove 8220 Gilbert Road from the Policy.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": 4,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RDA",
+      "newZoningDescription": "Arterial Road Two-Unit Dwellings"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-11-07",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 28, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Rick_Bowal_for_Rezoning_at_10851_10871_Bird_Road65792.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 28, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/112822_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 22-009258",
+    "address": "10851/10871 Bird Road",
+    "applicant": "Rick Bowal",
+    "behalf": null,
+    "description": "Rezoning of 10851/10871 Bird Road from “Single Detached (RS1/E)” zone to “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two lots with access from Bird Road. Each proposed lot at the subject site will be approximately 12.1 m (40 ft.) wide and approximately 600 m² (6,458.35 ft²) in area.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-11-07",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Choice_School_for_Gifted_Children_Society_for_Rezoning_at_20411and_2045165798.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/111422_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-944801",
+    "address": "20411 Westminster Highway, 20451 Westminster Highway",
+    "applicant": "Choice School for Gifted Children Society",
+    "behalf": null,
+    "description": "Rezoning of 20411 & 20451 Westminster Highway from Agriculture (AG1) and Assembly (ASY) Zones to Agriculture and Education (ZA5) - Westminster Highway (East Richmond) Zone. The purpose is to allow the existing education uses, a proposed new 261 m2 (2,809 ft2) classroom building, and implementation of the farm plan, consistent with the approved Agricultural Land Reserve (ALR) non-farm use application (AG 19-881146) approved by Council and the Agricultural Land Commission (ALC).",
+    "type": "other",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Agriculture (AG1) and Assembly (ASY)",
+      "previousZoningDescription": "Agriculture and Assembly Zones",
+      "newZoningCode": "Agriculture and Education (ZA5) - Westminster Highway (East Richmond)",
+      "newZoningDescription": "Agriculture and Education Zone"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2022-10-24",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "November 14, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_181_Group_for_Rezoning_at_3360__3380_and_a_Portion_of_344065797.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "November 14, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/111422_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 18-836107",
+    "address": "3360 Sexsmith Road, 3380 Sexsmith Road, Portion of 3440 Sexsmith Road",
+    "applicant": "181 Group",
+    "behalf": "Dava Developments Inc.",
+    "description": "Application for rezoning to construct a mixed-use development in the northeast quadrant of the City Centre's Capstan Village. Includes the creation of a two-lot development site, total floor area of 35,823 m2, 392 apartment units, public open space, heritage interpretation, and off-site works.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 2,
+      "stratas": 392,
+      "rentals": 0,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Assembly (ASY), Single Detached (RS1/F), School & Institutional Use (SI)",
+      "previousZoningDescription": "Mixed zoning including assembly, single detached, and institutional use",
+      "newZoningCode": "Residential/Limited Commercial and Religious Assembly (ZMU51) -Capstan Village (City Centre)",
+      "newZoningDescription": "Mixed zoning for residential, limited commercial, and religious assembly"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2022-10-24",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 26, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_App_by_0923745_BC_Ltd65573.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 26, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/092622_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-931122",
+    "address": "6071 Azure Road",
+    "applicant": "0923745 BC Ltd.",
+    "behalf": null,
+    "description": "The applicant is proposing to rezone the site at 6071 Azure Road from the “Low Density Townhouses (RTL1)” Zone to the “Low to Mid Rise Apartment (ZLR45) – Thompson” Zone. The proposal includes the redevelopment of an existing rental residential site with 330 new residential rental units including 50 Low-End Market Rental (LEMR) units, 110 moderate income rental units, and 170 market rental units. It also includes the construction of two four-storey apartment buildings and one six-storey apartment building, all located over a single level parking structure. The total floor area is approximately 24,355 m2 (262,156 ft2) with additional indoor amenity space provided over the three buildings. Road and engineering improvement works will be secured through the City’s standard Servicing Agreement processes prior to final adoption of the rezoning bylaw.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 3,
+      "stratas": null,
+      "rentals": 330,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Low Density Townhouses (RTL1)",
+      "previousZoningDescription": "Low density townhouses",
+      "newZoningCode": "Low to Mid Rise Apartment (ZLR45) - Thompson",
+      "newZoningDescription": "Low to Mid Rise Apartment"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-09-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 26, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_-_App_by_Pacific_Land_Group_for_rz_at_9100_Cambie_Rd65569.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 26, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/092622_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 19-864731",
+    "address": "9100 Cambie Road",
+    "applicant": "Pacific Land Group",
+    "behalf": "Parkland Fuel Corporation",
+    "description": "Rezoning of the property at 9100 Cambie Road from the “Gas & Service Stations (CG2)” zone to a new site-specific zone, “Gas Station Commercial (ZC50) – West Cambie”, in order to permit a gas station, convenience store and restaurant. The proposal includes the development of a one-storey building with a total floor area of 303.3 m2 (3,265 ft2) to accommodate a convenience store (approximately 186.2 m2 (2,004 ft2)) and a restaurant (approximately 117.1 m2 (1,261 ft2)). The existing gas station is proposed to remain.",
+    "type": "commercial",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "CG2",
+      "previousZoningDescription": "Gas & Service Stations",
+      "newZoningCode": "ZC50",
+      "newZoningDescription": "Gas Station Commercial (ZC50) – West Cambie"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-09-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 12, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/GBL_Architects_for_Rezoning_at_8880_Cook_Road65510.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 12, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/091222_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-932698",
+    "address": "8880 Cook Road, 8751 Citation Drive",
+    "applicant": "GBL Architects",
+    "behalf": "1165225 BC Ltd.",
+    "description": "Rezoning from 'Low Rise Apartment and Town Housing (ZLR32) – Brighouse Village (City Centre)' to 'Low Rise Rental Apartment (ZLR44) – Brighouse Village (City Centre)' to permit the development of a 100% rental residential apartment development consisting of two 6-storey buildings, containing approximately 338 units. The proposal includes approximately 20,510 m2 (220,764 ft2) of purpose-built market rental housing, and approximately 3,374 m2 (36,316 ft2) of purpose-built moderate income rental housing based on BC Housing’s Housing Income Limits (HILs). All purpose-built market rental units and moderate income rental units will be secured in perpetuity with rental tenure zoning and housing agreements registered on Title. The building will meet Energy Step Code step 3 and will provide an on-site low carbon energy plant designed to connect to the future off-site City Centre district energy utility (DEU) system.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 338,
+      "hotels": null,
+      "fsr": null,
+      "height": 6
+    },
+    "zoning": {
+      "previousZoningCode": "ZLR32",
+      "previousZoningDescription": "Low Rise Apartment and Town Housing - Brighouse Village (City Centre)",
+      "newZoningCode": "ZLR44",
+      "newZoningDescription": "Low Rise Rental Apartment - Brighouse Village (City Centre)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2022-08-22",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 12, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Randy_Schuette_and_Updesh_Johal_for_Rezoning65499.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 12, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/091222_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 19-853820",
+    "address": "7600 & 7620 Ash Street",
+    "applicant": "Randy Schuette and Updesh Johal",
+    "behalf": null,
+    "description": "Rezoning of 7600 & 7620 Ash Street from the “Single Detached (RS1/F)” zone to the “Single Detached (RS2/E)” zone and the “Single Detached (ZS14) – South McLennan (City Centre)” zone, in order to subdivide into five single family lots with two fronting Ash Street and three fronting the proposed extension of Armstrong Street. Two existing homes on the subject properties are proposed to be retained.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 5,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Single Detached (RS1/F)",
+      "previousZoningDescription": "Single Detached residential zone with a floor area ratio of 0.6",
+      "newZoningCode": "Single Detached (RS2/E) and Single Detached (ZS14) – South McLennan (City Centre)",
+      "newZoningDescription": "Single Detached residential zone with a floor area ratio of 0.7 and Single Detached residential zone for the City Centre area"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-08-22",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "No. 8500",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14819/",
+        "date": "September 12, 2022"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/091222_minutes.htm",
+        "date": "September 12, 2022"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "July 25, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Deluxe_Custom_Homes_Ltd65083.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "July 25, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/072522_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-930951",
+    "address": "7480 Williams Road",
+    "applicant": "Deluxe Custom Homes Ltd.",
+    "behalf": null,
+    "description": "Rezoning of 7480 Williams Road from the “Single Detached (RS1/E)” zone to the “Coach House (ZS12) - Broadmoor” zone, to permit the property to be subdivided to create two lots. Each lot would have a principal dwelling and an additional smaller dwelling unit above an attached garage, with vehicle access from Williams Road via a shared driveway.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZS12",
+      "newZoningDescription": "Coach House - Broadmoor"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-07-06",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 9973",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14776/",
+        "date": "July 25, 2022"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/072522_minutes.htm",
+        "date": "July 25, 2022"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "July 11, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Pakland_Properties_for_Rezoning_at_11760_Williams_Road63017.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "July 11, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/071122_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-938616",
+    "address": "11760 Williams Road",
+    "applicant": "Pakland Properties",
+    "behalf": "property owners (Muhammad A. Khan, Najia R. Khan)",
+    "description": "Rezoning of 11760 Williams Road from the “Single Detached (RS1/E)” zone to the “Compact Single Detached (RC2)” zone, to permit a subdivision to create two single-family lots. Each lot is proposed to have a single detached dwelling with a secondary suite and vehicle access from the rear lane.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RC2",
+      "newZoningDescription": "Compact Single Detached"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-06-21",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "July 11, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Simarbir_S63018.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "July 11, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/071122_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-932253",
+    "address": "6340 Granville Avenue",
+    "applicant": "Simarbir S. Khangura and Lakhbir S. Khangura",
+    "behalf": "1281585 B.C. Ltd.",
+    "description": "Rezoning of 6340 Granville Avenue from the “Single Detached (RS1/E)” zone to the “Compact Single Detached (RC2)” zone to permit subdivision into two compact lots with vehicle access from an extended rear lane on the south property line. The applicant is required to dedicate the lane to the City prior to final adoption of the rezoning bylaw and enter into a Servicing Agreement with the City for design and construction of the lane prior to subdivision approval.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RC2",
+      "newZoningDescription": "Compact Single Detached"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-06-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 27, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Farrell_Estates_Ltd62917.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 27, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/062722_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-928623",
+    "address": "6831 Graybar Road, 20455 Dyke Road, 20911 Dyke Road, 7500 No. 9 Road, Lot A Block 4N Plan EPP113853 Section 9 Range 4W New Westminster Land District & SEC 16, 17, 20 (031-553-231)",
+    "applicant": "Farrell Estates Ltd.",
+    "behalf": null,
+    "description": "Rezoning to create the “Industrial Business Park and Marina (ZI20) – Graybar Road (East Richmond)” zone, discharge Land Use Contract 127, and permit a light industrial development and boat yard. Proposed multi-phase development consisting of two two-storey buildings (Phase 1 and 2), and three additional buildings in undetermined future phases (Phases 3-5). Existing 1,551 m2 (16,700 ft2) building and additional structures proposed to be retained in the interim.",
+    "type": "industrial",
+    "stats": {
+      "buildings": 5,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Industrial and Marina (ZI17), Industrial Business Park (IB1), Light Industrial (IL)",
+      "previousZoningDescription": "Industrial and Marina, Industrial Business Park, Light Industrial",
+      "newZoningCode": "Industrial Business Park and Marina (ZI20)",
+      "newZoningDescription": "Industrial Business Park and Marina"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2022-06-08",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 27, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Jude_Da_Silva_for_Rezoning_at_11460_Williams_Road62918.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 27, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/062722_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-940331",
+    "address": "11460 Williams Road",
+    "applicant": "Jude Da Silva",
+    "behalf": null,
+    "description": "Rezoning of 11460 Williams Road from the “Single Detached (RS1/E)” zone to the “Compact Single Detached (RC2)” zone, to permit a subdivision to create two lots with vehicle access from the rear lane. Each lot will be approximately 9.1 m wide and 307 m² in area. The applicant has proposed to construct a two-bedroom secondary suite of approximately 42.7 m² (460 ft²) in each of the new dwellings.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RC2",
+      "newZoningDescription": "Compact Single Detached"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-06-02",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 13, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_D62857.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 13, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/061322_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-925460",
+    "address": "9231 Kilby Street",
+    "applicant": "D.C. Ltd. (Dhinjal Construction Ltd.)",
+    "behalf": null,
+    "description": "The applicant wants to rezone 9231 Kilby Street from the 'Single Detached (RS1/E)' zone to the 'Single Detached (RS2/A)' zone in order to permit the property to be subdivided into two single-family residential lots each with vehicle access from the rear lane. The redevelopment proposes to rezone and subdivide one existing single-family property into two new single-family lots and vehicular access from the rear lane. Both of the new lots will provide a minimum one-bedroom secondary suite.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/A",
+      "newZoningDescription": "Single Detached (RS2/A)"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2022-05-25",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 13, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Parm_Dhinjal_for_Rezoning_at_9271_Kilby_Street62858.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 13, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/061322_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-934410",
+    "address": "9271 Kilby Street",
+    "applicant": "Parm Dhinjal",
+    "behalf": "Signature Living Inc.",
+    "description": "Rezoning of 9271 Kilby Street from the 'Single Detached (RS1/E)' zone to the 'Single Detached (RS2/A)' zone in order to permit the property to be subdivided into two single-family residential lots each with vehicle access from the rear lane.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/A",
+      "newZoningDescription": "Single Detached (RS2/A)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-05-18",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 24, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Request_to_Revise_Rezoning_Considerations_for_the_Application_by_Bene62758.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 24, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/052422_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 14-672055",
+    "address": "4700 No. 3 Road",
+    "applicant": "Bene (No. 3) Road Development Ltd.",
+    "behalf": null,
+    "description": "The applicant wants to rezone the property at 4700 No. 3 Road from the “Auto-Oriented Commercial (CA)” Zone to a New “High Rise Office Commercial (ZC44) – Aberdeen Village” Zone. The revised proposal includes retaining two floors as leasable office space, restricting the 5th floor to a maximum of two strata lots and the remaining three floors to a maximum of 12 strata lots per floor. The applicant also offers a voluntary cash contribution of $357,044.61 to the City’s Affordable Housing Reserve.",
+    "type": "commercial",
+    "stats": {
+      "buildings": 1,
+      "stratas": 38,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "Auto-Oriented Commercial (CA)",
+      "previousZoningDescription": "Auto-Oriented Commercial",
+      "newZoningCode": "High Rise Office Commercial (ZC44)",
+      "newZoningDescription": "High Rise Office Commercial - Aberdeen Village"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "April 11, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Doug_Loewen_for_Rezoning_at_4880_Garry_Street61372.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "April 11, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/041122_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-936277",
+    "address": "4880 Garry Street",
+    "applicant": "Doug Loewen",
+    "behalf": "1312563 B.C. Ltd",
+    "description": "Rezoning of 4880 Garry Street from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/A)” zone, to permit the property to be subdivided to create two lots. Each lot approximately 9.7 m in width and 386 m2 in area. Construction of a one-bedroom secondary suite in the dwelling on one of the future lots and a cash contribution to the City’s Affordable Housing Reserve Fund in-lieu of constructing a secondary suite on the other future lot.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/A",
+      "newZoningDescription": "Single Detached (RS2/A)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-03-17",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "February 28, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_Application_by_0853803_BC_Ltd61108.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "February 28, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/022822_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 16-731275",
+    "address": "6571 and 6591 No. 1 Road",
+    "applicant": "0853803 BC Ltd. and 1121648 BC Ltd.",
+    "behalf": null,
+    "description": "Rezoning of 6571 and 6591 No. 1 Road from the 'Single Detached (RS1/F)' zone to the 'Low Density Townhouses (RTL4)' zone in order to develop an eight-unit townhouse project, with access from No. 1 Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 8,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/F",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low Density Townhouses"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-02-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": "RZ 16-754158",
+    "address": "10760, 10780 Bridgeport Road and 3033, 3091, 3111 Shell Road",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14482/",
+        "date": "February 28, 2022"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/022822_minutes.htm",
+        "date": "February 28, 2022"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "January 24, 2022",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/9_Application_by_Pakland_Properties_for_Rezoning_at_8720_and_8740_Rosemary_Avenue59962.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "January 24, 2022",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2022/012422_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 21-934283",
+    "address": "8720/8740 Rosemary Avenue",
+    "applicant": "Pakland Properties",
+    "behalf": null,
+    "description": "Rezoning of 8720/8740 Rosemary Avenue from the 'Single Detached (RS1/E)' zone to the 'Single Detached (RS2/B)' zone to permit the property to be subdivided to create two single detached lots, both with vehicle access from Rosemary Avenue. Existing legal non-conforming duplex on the property would be demolished. Each of the duplex units and secondary suites are currently rented. Surrounding development includes single detached dwellings, a farm, and other single detached dwellings created through rezoning and subdivision. Proposed rezoning and subdivision are consistent with the Official Community Plan and Richmond Zoning Bylaw 8500/Single-Family Lot Size Policy.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2022-01-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "8500, Amendment Bylaw No. 9970",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14386/",
+        "date": "December 6, 2021"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/120621_minutes.htm",
+        "date": "December 6, 2021"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "8500, Amendment Bylaw No. 9983",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14280/",
+        "date": "October 12, 2021"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/101221_minutes.htm",
+        "date": "October 12, 2021"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "September 13, 2021",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_9_-_Application_by_Paul_Atwal_for_Rezoning_at_9631_Patterson_Road_CNCL_09132159116.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "September 13, 2021",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/091321_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 20-906575",
+    "address": "9631 Patterson Road",
+    "applicant": "Paul Atwal",
+    "behalf": null,
+    "description": "Rezoning of 9631 Patterson Road from the 'Single Detached (RS1/E)' zone to a new site specific 'Single Detached (ZS30) - Patterson Road' zone in order to permit the property to be subdivided into two single-family residential lots each with access from Patterson Road. The proposed zone includes setback requirements specified by the Ministry of Transportation and Infrastructure applicable to the rear and side yards adjacent to Highway 99 but is otherwise modeled on the City's existing 'Single Detached (RS2/B)' zone.",
+    "type": "single-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "ZS30",
+      "newZoningDescription": "Single Detached (ZS30) - Patterson Road"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2021-08-23",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "address": "No address provided",
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "urls": [
+      {
+        "title": "By-laws",
+        "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14237/",
+        "date": "September 13, 2021"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/091321_minutes.htm",
+        "date": "September 13, 2021"
+      }
+    ],
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 28, 2021",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_16_-_Application_-_6500_Cooney_Road_CNCL_06282158750.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 28, 2021",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/062821_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 08-429600",
+    "address": "6500 Cooney Road",
+    "applicant": "Kenneth Kim Architecture Inc.",
+    "behalf": null,
+    "description": "Rezoning of 6500 Cooney Road from the “Low Density Townhouses (RTL1)” zone to the “Parking Structure Town Housing (ZT93) - Brighouse (City Centre)” zone in order to permit the development of six townhouse units over a common parking structure with vehicle access from a new lane. A four-storey building fronting Cook Road consisting of six townhouse units, including one convertible unit, over a partially enclosed parking structure. Maximum floor area ratio (FAR) of 1.2, additional floor area ratio (FAR) of 0.01 for shared indoor amenity space, and a maximum height of 15 m. Total floor area of approximately 747 m2 (8,042 ft2). Road dedication and construction of new lane along the east property line. Statutory rights-of-way (SRW) along Cook Road to allow sidewalk and lane to meander on-site for tree retention purposes.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 2,
+      "stratas": 6,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 1.2,
+      "height": 15
+    },
+    "zoning": {
+      "previousZoningCode": "RTL1",
+      "previousZoningDescription": "Low Density Townhouses",
+      "newZoningCode": "ZT93",
+      "newZoningDescription": "Parking Structure Town Housing - Brighouse (City Centre)"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2021-06-07",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "June 28, 2021",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_17_-_Application_-_9200__9220__9240__9260__9280__9300__9320___9340_Francis_Road_CNCL_06282158751.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "June 28, 2021",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/062821_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 20-907463",
+    "address": "9200, 9220, 9240, 9260, 9280, 9300, 9320, 9340 Francis Road",
+    "applicant": "Zhao XD Architect Ltd.",
+    "behalf": "1125640 BC Ltd.",
+    "description": "Rezoning of 9200, 9220, 9240, 9260, 9280, 9300, 9320, and 9340 Francis Road from 'Single Detached (RS1/E)' to 'Town Housing (ZT94)-Francis Road (Broadmoor)' to permit the development of 25 townhouse units with vehicle access from Francis Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 25,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "ZT94",
+      "newZoningDescription": "Town Housing"
+    },
+    "status": "pending",
+    "dates": {
+      "appliedDate": "2021-06-07",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
+  },
+  {
+    "city": "Richmond",
+    "urls": [
+      {
+        "date": "May 25, 2021",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_15_-_Application_by_Kadium_No58571.pdf"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "May 25, 2021",
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2021/052521_minutes.htm"
+      }
+    ],
+    "rezoningId": "RZ 18-831725",
+    "address": "10340, 10360, 10380, 10400, 10420 No. 4 Road",
+    "applicant": "Kadium No. 4 Development Ltd.",
+    "behalf": null,
+    "description": "Rezoning of the site at 10340, 10360, 10380, 10400 and 10420 No. 4 Road from the “Single Detached (RS1/E)” Zone to the “Medium Density Townhouses (RTM2)” Zone in order to develop a 19-unit townhouse project, including four studio secondary suites, with access from No. 4 Road.",
+    "type": "townhouse",
+    "stats": {
+      "buildings": 1,
+      "stratas": 19,
+      "rentals": null,
+      "hotels": null,
+      "fsr": "unclear",
+      "height": "unclear"
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2021-05-03",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-07",
+    "updateDate": "2024-01-07"
   }
 ]
