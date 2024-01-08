@@ -1,5 +1,5 @@
 const chalk = require('chalk')
-const { chatGPTTextQuery } = require('../utilities')
+const { chatGPTTextQuery } = require('../rezonings/PDFUtilities')
 
 const news = {
   "city": "Richmond",

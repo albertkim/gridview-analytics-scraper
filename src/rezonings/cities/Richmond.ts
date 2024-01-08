@@ -8,7 +8,7 @@ import {
   generatePDF,
   parsePDF,
   chatGPTTextQuery
-} from '../../utilities'
+} from '../PDFUtilities'
 
 const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'
 

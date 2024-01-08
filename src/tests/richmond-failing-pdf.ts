@@ -1,4 +1,4 @@
-import { downloadPDF, generatePDF } from "../utilities"
+import { downloadPDF, generatePDF } from "../rezonings/PDFUtilities"
 
 
 const news = {

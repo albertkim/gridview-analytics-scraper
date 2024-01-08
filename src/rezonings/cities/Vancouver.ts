@@ -9,7 +9,7 @@ import {
   generatePDFTextArray,
   parsePDF,
   chatGPTTextQuery
-} from '../../utilities'
+} from '../PDFUtilities'
 
 interface IBylawData {
   address: string
