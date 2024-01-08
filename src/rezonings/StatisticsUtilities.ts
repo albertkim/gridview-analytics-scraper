@@ -9,7 +9,8 @@ export async function getStatistics() {
   console.log()
 
   printStatistic('Total rezonings', getCountPerCity(rezonings))
-  printStatistic('Date errors', getDateErrorsPerCity(rezonings))
+  printStatistic('Rezoning date errors', getDateErrorsPerCity(rezonings))
+  printStatistic('Rezoning URL date errors', getURLDateErrosPerCity(rezonings))
 
 }
 
@@ -34,6 +35,31 @@ function getCountPerCity(rezonings: IRezoningDetail[]) {
   }))
 
   return result
+
+}
+
+interface ICityDateUrlErrors {
+  city: string
+  emptyDates: number
+}
+
+function getURLDateErrosPerCity(rezonings: IRezoningDetail[]) {
+
+  const results: ICityDateUrlErrors[] = []
+
+  // For each city, count the number of rezonings where the a url entry does not have a date
+  const cities = [...new Set(rezonings.map(rezoning => rezoning.city))]
+
+  for (const city of cities) {
+    const rezoningsInCity = rezonings.filter(rezoning => rezoning.city === city)
+    const emptyDates = rezoningsInCity.filter(rezoning => rezoning.urls.some(url => !url.date)).length
+    results.push({
+      city,
+      emptyDates
+    })
+  }
+
+  return results
 
 }
 

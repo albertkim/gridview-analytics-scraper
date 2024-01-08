@@ -1,5 +1,6 @@
 import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
+import moment from 'moment'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
 const numberOfItems = 40
@@ -117,7 +118,7 @@ async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail
       console.log(reportUrls)
 
       items.push({
-        date: date,
+        date: moment(new Date(date)).format('YYYY-MM-DD'),
         meetingType: 'City council',
         title: title,
         resolutionId: null,

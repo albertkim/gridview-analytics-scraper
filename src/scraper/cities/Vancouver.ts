@@ -1,5 +1,6 @@
 import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
+import moment from 'moment'
 
 const startUrl = 'https://covapp.vancouver.ca/councilMeetingPublic/CouncilMeetings.aspx'
 const numberOfPages = 40
@@ -180,7 +181,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
         }).get()
   
         data.push({
-          date: date,
+          date: moment(new Date(date)).format('YYYY-MM-DD'),
           meetingType: meetingType,
           title: title,
           resolutionId: null,

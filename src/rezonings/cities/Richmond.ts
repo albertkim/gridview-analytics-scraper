@@ -200,6 +200,6 @@ export async function analyze(startDate: string | null, endDate: string | null) 
 
   }
 
-  RezoningsRepository.updateRezonings('Richmond', rezoningJSON)
+  RezoningsRepository.updateRezoningsForCity('Richmond', rezoningJSON)
 
 }

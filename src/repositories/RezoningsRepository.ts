@@ -89,7 +89,7 @@ export const RezoningsRepository = {
     }
   },
 
-  updateRezonings(city: string, rezonings: IRezoningDetail[]) {
+  updateRezoningsForCity(city: string, rezonings: IRezoningDetail[]) {
 
     const previousEntries = this.getRezonings()
     const filteredData = previousEntries.filter((item) => item.city !== city)
@@ -102,6 +102,18 @@ export const RezoningsRepository = {
 
     return this.getRezonings({city})
     
+  },
+
+  dangerouslyUpdateAllRezonings(rezonings: IRezoningDetail[]) {
+
+    fs.writeFileSync(
+      path.join(__dirname, '../database/rezonings.json'),
+      JSON.stringify(rezonings, null, 2),
+      'utf8'
+    )
+
+    return this.getRezonings()
+
   }
 
 }
