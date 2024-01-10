@@ -18,12 +18,18 @@ interface BaseRezoningQueryParams {
 
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
 // Make sure that the query includes the word 'JSON'
-export async function chatGPTTextQuery(query: string) {
+// Defaults to 3.5, specify 4 if you want to use 4
+export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4') {
 	console.log(`Sending text query to ChatGPT`)
+
+	const gptVersionMapping = {
+		'3.5': 'gpt-3.5-turbo-1106',
+		'4': 'gpt-4-1106-preview'
+	}
 
 	try {
 		const response = await openai.chat.completions.create({
-			model: 'gpt-3.5-turbo-1106',
+			model: gptVersionMapping[gptVersion || '3.5'],
 			messages:[
 				{
 					'role': 'user',
@@ -141,12 +147,12 @@ export function getGPTBaseRezoningStatsQuery(description: string) {
   return `
     Given the following description, give me the following in a JSON format:
     {
-      buildings: your best guess as to the number of new buildings being proposed or null if unclear - if it's a townhouse, default to 1 unless it's clear that there are multiple separated structures
-      stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units
-      rentals: total number of rental units or null if unclear - do not default to rental if not specified
-      hotels: total number of hotel units or null if unclear - do not default to hotel if not specified
+      buildings: your best guess as to the number of new buildings being proposed - default to 1 - null if unclear - if it's a townhouse, default to 1 unless it's clear that there are multiple separated structures
+      stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units - 0 if it's a commercial/industrial development
+      rentals: total number of rental units - 0 if no explicit mention of rentals - null if unclear
+      hotels: total number of hotel units - 0 if no explicit mention of hotels - null if unclear
       fsr: total floor space ratio or null if unclear
-      height: height in meters or null if unclear
+      height: height in meters or null if unclear - single number no range
     }
     Description here: ${description}
   `

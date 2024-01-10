@@ -55,7 +55,7 @@ export async function analyze(startDate: string | null, endDate: string | null) 
             }
           }
           console.log(chalk.bgGreen('GPT JSON is valid'))
-          const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(replyData.description))
+          const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(replyData.description), '4')
           const GPTStats = JSON.parse(GPTStatsReply.choices[0].message.content!)
           if (!replyData.error) {
             const newData = {
