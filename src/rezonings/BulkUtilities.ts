@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { RezoningsRepository } from '../repositories/RezoningsRepository'
-import { cleanRichmondRezoningId } from './cities/RichmondUtilities'
+import { cleanRichmondRezoningId } from './cities/Richmond/RichmondUtilities'
 import moment from 'moment'
 import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from './GPTUtilities'
 

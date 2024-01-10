@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { IRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
 import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
 import moment from 'moment'
 
@@ -61,7 +61,7 @@ function getNewsCountPerCity(news: IMeetingDetail[]) {
 
 }
 
-function getRezoningCountPerCity(rezonings: IRezoningDetail[]) {
+function getRezoningCountPerCity(rezonings: IFullRezoningDetail[]) {
 
   const countPerCity = rezonings.reduce<Record<string, number>>((acc, obj) => {
     acc[obj.city] = (acc[obj.city] || 0) + 1
@@ -82,7 +82,7 @@ interface ICityDateUrlErrors {
   emptyDates: number
 }
 
-function getURLDateErrosPerCity(rezonings: IRezoningDetail[]) {
+function getURLDateErrosPerCity(rezonings: IFullRezoningDetail[]) {
 
   const results: ICityDateUrlErrors[] = []
 
@@ -112,7 +112,7 @@ interface ICityErrors {
   withdrawnDateErrors: number
 }
 
-function getDateErrorsPerCity(rezonings: IRezoningDetail[]) {
+function getDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
 
   const results: ICityErrors[] = []
 

@@ -109,7 +109,7 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
     Read this document and give me the following in a JSON format:
     {
       rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-      address: address in question - if multiple addresses, comma separate, null if doesn't exist
+      address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist
       applicant: who the rezoning applicant is - if behalf exists, do not mention behalf
       behalf: if the applicant is applying on behalf of someone else, who is it
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics

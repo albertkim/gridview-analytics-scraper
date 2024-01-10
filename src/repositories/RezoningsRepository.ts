@@ -20,29 +20,35 @@ export type ZoningStatus =
   'denied' |
   'withdrawn'
 
-export interface IRezoningDetail {
-  city: string
-  metroCity: string | null
+export interface IRezoningStats {
+  buildings: number | null
+  stratas: number | null
+  rentals: number | null
+  hotels: number | null
+  fsr: number | null
+  height: number | null
+}
+
+// This interface is what is processed by GPT. Other fields in the full detail object are added ia code.
+export interface IPartialRezoningDetail {
   rezoningId: string | null
   address: string
   applicant: string | null
   behalf: string | null
   description: string
   type: ZoningType | null
-  stats: {
-    buildings: number | null
-    stratas: number | null
-    rentals: number | null
-    hotels: number | null
-    fsr: number | null
-    height: number | null
-  }
+  stats: IRezoningStats
   zoning: {
     previousZoningCode: string | null
     previousZoningDescription: string | null
     newZoningCode: string | null
     newZoningDescription: string | null
   }
+}
+
+export interface IFullRezoningDetail extends IPartialRezoningDetail {
+  city: string
+  metroCity: string | null
   status: ZoningStatus
   dates: {
     appliedDate: string | null
@@ -55,6 +61,7 @@ export interface IRezoningDetail {
     title: string
     url: string
     date: string
+    type: 'application' | 'public hearing' | 'bylaw'
   }[]
   minutesUrls: {
     url: string
@@ -64,7 +71,7 @@ export interface IRezoningDetail {
   updateDate: string
 }
 
-function reorderItems(items: IRezoningDetail[]) {
+function reorderItems(items: IFullRezoningDetail[]) {
   return items.sort((a, b) => {
     const dateA = moment(a.updateDate, 'YYYY-MM-DD')
     const dateB = moment(b.updateDate, 'YYYY-MM-DD')
@@ -82,7 +89,7 @@ function reorderItems(items: IRezoningDetail[]) {
 export const RezoningsRepository = {
 
   getRezonings(filter?: {city?: string}) {
-    const rawData = require('../database/rezonings.json') as IRezoningDetail[]
+    const rawData = require('../database/rezonings.json') as IFullRezoningDetail[]
     if (filter?.city) {
       return rawData.filter((item) => item.city === filter.city)
     } else {
@@ -90,7 +97,7 @@ export const RezoningsRepository = {
     }
   },
 
-  updateRezoningsForCity(city: string, rezonings: IRezoningDetail[]) {
+  updateRezoningsForCity(city: string, rezonings: IFullRezoningDetail[]) {
 
     const previousEntries = this.getRezonings()
     const filteredData = previousEntries.filter((item) => item.city !== city)
@@ -105,7 +112,7 @@ export const RezoningsRepository = {
     
   },
 
-  dangerouslyUpdateAllRezonings(rezonings: IRezoningDetail[]) {
+  dangerouslyUpdateAllRezonings(rezonings: IFullRezoningDetail[]) {
 
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
@@ -145,7 +152,7 @@ function mergeStatus(oldStatus: ZoningStatus, newStatus: ZoningStatus) {
   return statusOrder.indexOf(newStatus) > statusOrder.indexOf(oldStatus) ? newStatus : oldStatus
 }
 
-export function mergeEntries(oldEntry: IRezoningDetail, newEntry: IRezoningDetail) {
+export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezoningDetail) {
 
   // city, metroCity, address, and createDate should be consistent
   const mergedData = {...oldEntry}
@@ -158,7 +165,7 @@ export function mergeEntries(oldEntry: IRezoningDetail, newEntry: IRezoningDetai
     console.warn(chalk.bgYellow(`Warning: Field 'type' has different values in old and new data (${oldEntry.type} vs ${newEntry.type}). Preferring the old value.`))
     mergedData.type = mergeSimpleField(oldEntry.type, newEntry.type, 'old')
   }
-  const statsArray: (keyof IRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr', 'height']
+  const statsArray: (keyof IFullRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr', 'height']
   statsArray.forEach((fieldName) => {
     mergedData.stats[fieldName] = mergeSimpleField(oldEntry.stats[fieldName], newEntry.stats[fieldName], 'old')
   })
@@ -167,7 +174,7 @@ export function mergeEntries(oldEntry: IRezoningDetail, newEntry: IRezoningDetai
   mergedData.zoning.previousZoningDescription = mergeSimpleField(oldEntry.zoning.previousZoningDescription, newEntry.zoning.previousZoningDescription, 'longer')
   mergedData.zoning.newZoningDescription = mergeSimpleField(oldEntry.zoning.newZoningDescription, newEntry.zoning.newZoningDescription, 'longer')
   mergedData.status = mergeStatus(oldEntry.status, newEntry.status)
-  const datesArray: (keyof IRezoningDetail['dates'])[] = ['appliedDate', 'publicHearingDate', 'approvalDate', 'denialDate', 'withdrawnDate']
+  const datesArray: (keyof IFullRezoningDetail['dates'])[] = ['appliedDate', 'publicHearingDate', 'approvalDate', 'denialDate', 'withdrawnDate']
   datesArray.forEach((fieldName) => {
     mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], 'old')
   })

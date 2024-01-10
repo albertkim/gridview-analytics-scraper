@@ -2,8 +2,8 @@ import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 import moment from 'moment'
 
-const startUrl = 'https://citycouncil.richmond.ca/decisions/search/results.aspx?QB0=AND&QF0=ItemTopic%7cResolutionText%7cFullText%7cSubject%7cNameasSubject%7cCommitteeName%7cResult&QI0=&QB2=AND&QF2=Subject&QI2=&QB3=AND&QF3=NameasSubject&QI3=&QB5=AND&QF5=CommitteeName&QI5=%3d%22Council%22&QB1=AND&QF1=Date&QI1=&QB4=AND&QF4=Date&QI4=&TN=minutes&AC=QBE_QUERY&BU=https%3a%2f%2fcitycouncil.richmond.ca%2fdecisions%2fsearch%2fadvanced.aspx&RF=WebBriefDate&'
-const numberOfPages = 40
+const startUrl = 'https://citycouncil.richmond.ca/decisions/search/results.aspx?QB0=AND&QF0=ItemTopic%7cResolutionText%7cFullText%7cSubject&QI0=&QB1=AND&QF1=Date&QI1=&QB4=AND&QF4=Date&QI4=%3e%3d%40DATE-1820&TN=minutes&AC=QBE_QUERY&BU=https%3a%2f%2fcitycouncil.richmond.ca%2fdecisions%2fsearch%2fdefault.aspx&RF=WebBriefDate&'
+const numberOfPages = 50
 
 interface IOptions {
   startDate: string | null
