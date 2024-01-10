@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
 import chalk from 'chalk'
+import '../database/rezonings.json'
 
 export type ZoningType =
   'single-family residential' |

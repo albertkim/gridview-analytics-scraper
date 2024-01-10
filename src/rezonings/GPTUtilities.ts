@@ -1,5 +1,100 @@
+import dotenv from 'dotenv'
+import axios from 'axios'
+import OpenAI from 'openai'
+
+dotenv.config()
+
+const environment = process.env.NODE_ENV!
+const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
+const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL!
+
+const openai = new OpenAI({
+	apiKey: chatGPTAPIKey
+})
+
 interface BaseRezoningQueryParams {
   rezoningId?: string
+}
+
+// Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
+// Make sure that the query includes the word 'JSON'
+export async function chatGPTTextQuery(query: string) {
+	console.log(`Sending text query to ChatGPT`)
+
+	try {
+		const response = await openai.chat.completions.create({
+			model: 'gpt-3.5-turbo-1106',
+			messages:[
+				{
+					'role': 'user',
+					'content': query
+				}
+			],
+			response_format: {
+				type: 'json_object'
+			},
+			temperature: 0.2
+		})
+		return response
+	} catch (error: any) {
+		if (error.response && error.response.data) {
+			console.error(error.response.data)
+			throw new Error()
+		} else {
+			console.error(error)
+			throw new Error()
+		}
+	}
+}
+
+// Send a text + file query to ChatGPT 4 turbo and get data back in JSON format
+export async function chatGPTDataQuery(query: string, fileData: Buffer) {
+	console.log(`Sending data query to ChatGPT`)
+	const payload = {
+		model: 'gpt-4-vision-preview',
+		messages: [
+			{
+				'role': 'user',
+				'content': [
+					{
+						'type': 'text',
+						'text': query
+					},
+					{
+						'type': 'image_url',
+						'image_url': {
+							'url': ''
+						}
+					}
+				]
+			}
+		],
+		response_format: {
+			type: 'json_object'
+		},
+		files: [
+			{
+				'name': 'file',
+				'data': fileData
+			}
+		],
+		temperature: 0.2
+	}
+	try {
+		const response = await axios.post(chatGPTAPIUrl, payload, {
+			headers: {
+				Authorization: `Bearer ${chatGPTAPIKey}`
+			}
+		})
+		return response.data
+	} catch (error: any) {
+		if (error.response && error.response.data) {
+			console.error(error.response.data)
+			throw new Error()
+		} else {
+			throw new Error()
+		}
+	}
 }
 
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
@@ -8,7 +103,7 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
     Read this document and give me the following in a JSON format:
     {
       rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-      address: address in question - if multiple addresses, comma separate
+      address: address in question - if multiple addresses, comma separate, null if doesn't exist
       applicant: who the rezoning applicant is - if behalf exists, do not mention behalf
       behalf: if the applicant is applying on behalf of someone else, who is it
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics

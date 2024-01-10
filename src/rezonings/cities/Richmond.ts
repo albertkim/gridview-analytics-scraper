@@ -6,9 +6,9 @@ import { getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../GPTUti
 import {
   downloadPDF,
   generatePDF,
-  parsePDF,
-  chatGPTTextQuery
+  parsePDF
 } from '../PDFUtilities'
+import { chatGPTTextQuery } from '../GPTUtilities'
 
 const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'
 

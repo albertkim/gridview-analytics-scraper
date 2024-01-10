@@ -8,8 +8,8 @@ import {
   generatePDF,
   generatePDFTextArray,
   parsePDF,
-  chatGPTTextQuery
 } from '../PDFUtilities'
+import { chatGPTTextQuery } from '../GPTUtilities'
 
 interface IBylawData {
   address: string

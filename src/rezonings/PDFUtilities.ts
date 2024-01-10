@@ -6,16 +6,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const environment = process.env.NODE_ENV!
-const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
-const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL!
-
-const openai = new OpenAI({
-	apiKey: chatGPTAPIKey
-})
-
-console.log(environment)
-
 // Download a PDF from a URL and return the data
 export async function downloadPDF(url: string) {
 	console.log(`Downloading PDF from ${url}`)
@@ -102,85 +92,4 @@ export async function parsePDF(pdfData: Buffer) {
 	console.log(`Parsing PDF`)
 	const parsedPDF = await pdfParse(pdfData)
 	return parsedPDF
-}
-
-// Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
-// Make sure that the query includes the word 'JSON'
-export async function chatGPTTextQuery(query: string) {
-	console.log(`Sending text query to ChatGPT`)
-
-	try {
-		const response = await openai.chat.completions.create({
-			model: 'gpt-3.5-turbo-1106',
-			messages:[
-				{
-					'role': 'user',
-					'content': query
-				}
-			],
-			response_format: {
-				type: 'json_object'
-			},
-			temperature: 0.2
-		})
-		return response
-	} catch (error: any) {
-		if (error.response && error.response.data) {
-			console.error(error.response.data)
-			throw new Error()
-		} else {
-			console.error(error)
-			throw new Error()
-		}
-	}
-}
-
-// Send a text + file query to ChatGPT 4 turbo and get data back in JSON format
-export async function chatGPTDataQuery(query: string, fileData: Buffer) {
-	console.log(`Sending data query to ChatGPT`)
-	const payload = {
-		model: 'gpt-4-vision-preview',
-		messages: [
-			{
-				'role': 'user',
-				'content': [
-					{
-						'type': 'text',
-						'text': query
-					},
-					{
-						'type': 'image_url',
-						'image_url': {
-							'url': ''
-						}
-					}
-				]
-			}
-		],
-		response_format: {
-			type: 'json_object'
-		},
-		files: [
-			{
-				'name': 'file',
-				'data': fileData
-			}
-		],
-		temperature: 0.2
-	}
-	try {
-		const response = await axios.post(chatGPTAPIUrl, payload, {
-			headers: {
-				Authorization: `Bearer ${chatGPTAPIKey}`
-			}
-		})
-		return response.data
-	} catch (error: any) {
-		if (error.response && error.response.data) {
-			console.error(error.response.data)
-			throw new Error()
-		} else {
-			throw new Error()
-		}
-	}
 }

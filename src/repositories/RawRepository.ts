@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
+import '../database/raw.json'
 
 export interface IMeetingDetail {
   city: string
