@@ -1,0 +1,321 @@
+[
+  {
+    "address": "21030 and 21040 N. 19th Ave. and 1929 W. Quail Ave.",
+    "applicant": "Aztec 19th Ave., LLC",
+    "behalf": null,
+    "description": "Rezoning from IND. PK. DVAO to C-3 DVAO to allow electric vehicle sales and repair",
+    "type": "commercial",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "IND. PK. DVAO",
+      "previousZoningDescription": "Industrial Park, Deer Valley Airport Overlay District",
+      "newZoningCode": "C-3 DVAO",
+      "newZoningDescription": "General Commercial, Deer Valley Airport Overlay District"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2023-08-10",
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "1545 E. Mescal St.",
+    "applicant": "Marty Hall",
+    "behalf": null,
+    "description": "Rezoning from R1-10 to C-3 for the purpose of allowing C-3 commercial use (self-service storage warehouse)",
+    "type": "commercial",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-10",
+      "previousZoningDescription": "Single-Family Residence District",
+      "newZoningCode": "C-3",
+      "newZoningDescription": "General Commercial"
+    },
+    "status": "withdrawn",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": "2024-01-03"
+    }
+  },
+  {
+    "address": "1815 W. Sahuaro Drive",
+    "applicant": "Resilient Health",
+    "behalf": null,
+    "description": "The applicant wants to rezone the site from R-3 (Multifamily Residence District) to PUD (Planned Unit Development) to allow multifamily residential.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R-3",
+      "previousZoningDescription": "Multifamily Residence District",
+      "newZoningCode": "PUD",
+      "newZoningDescription": "Planned Unit Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "Northeast corner of 3rd Street and Cheery Lynn Road, 3201 N. 3rd St. and 306, 310, 314, 316, 318, and 322 E. Cheery Lynn Road",
+    "applicant": "Kristjan Sigurdsson",
+    "behalf": null,
+    "description": "Rezoning from R1-6 and R-5 to WU Code T4:3 MT to allow townhomes",
+    "type": "townhouse",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-6 and R-5",
+      "previousZoningDescription": "Single-Family Residence District and Multifamily Residence District",
+      "newZoningCode": "WU Code T4:3 MT",
+      "newZoningDescription": "Walkable Urban Code, Transect 4:3 District, Transit Midtown Character Area"
+    },
+    "status": "withdrawn",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": "2024-01-03"
+    }
+  },
+  {
+    "address": "7600 N. 27th Ave.",
+    "applicant": "Samantha Keating",
+    "behalf": "City of Phoenix, Human Services Department",
+    "description": "The rezoning application is for a senior housing development.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-6",
+      "previousZoningDescription": "Single-Family Residence District",
+      "newZoningCode": "PUD",
+      "newZoningDescription": "Planned Unit Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "Northwest corner of 44th Street and Earll Drive",
+    "applicant": "Keiko Finnignan and Sera Sheppard",
+    "behalf": null,
+    "description": "The request is to rezone the site from R1-6 (Single-Family Residence District) to R-O (Residential Office - Restricted Commercial District) in order to allow the construction of a chiropractic office.",
+    "type": "commercial",
+    "stats": {
+      "buildings": 1,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-6",
+      "previousZoningDescription": "Single-Family Residence District",
+      "newZoningCode": "R-O",
+      "newZoningDescription": "Residential Office - Restricted Commercial District"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "Southeast and Southwest Corners of 13th Street and Washington Street",
+    "applicant": "Virgil J. Berry Jr.",
+    "behalf": null,
+    "description": "The request is to rezone the site to allow mixed use including multifamily residential, hotel, and general retail; and a Historic Preservation (HP) zoning overlay for the Greenlee-Hammond House/Virgil J. Berry Real Estate & Insurance Agency (1321 E. Washington St.)",
+    "type": "mixed use",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "C-3 TOD-1 and R-5 RI TOD-1",
+      "previousZoningDescription": "General Commercial, Interim Transit-Oriented Zoning Overlay District One and Multifamily Residence District, Residential Infill District, Interim Transit-Oriented Zoning Overlay District One",
+      "newZoningCode": "WU Code T5:7 EG and WU Code T5:7 EG HP",
+      "newZoningDescription": "Walkable Urban Code, Transect 5:7 District, Transit Eastlake-Garfield Character Area and Walkable Urban Code, Transect 5:7 District, Transit Eastlake-Garfield Character Area, Historic Preservation Overlay"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "1633 N. 36th St.",
+    "applicant": "Edge Development, LLC",
+    "behalf": null,
+    "description": "The applicant wants to rezone the site from R1-6 (Single-Family Residence District) to R-4 (Multifamily Residence District) in order to allow for the construction of multifamily residential buildings.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-6",
+      "previousZoningDescription": "Single-Family Residence District",
+      "newZoningCode": "R-4",
+      "newZoningDescription": "Multifamily Residence District"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "Southeast Corner of Kierland Boulevard and Marilyn Road, 14631 and 14635 N. Kierland Blvd.",
+    "applicant": "Ted Akiba, Kierland Sky, LLC",
+    "behalf": null,
+    "description": "Major PUD Amendment to the Kierland Sky PUD to allow commercial and multifamily residential",
+    "type": "mixed use",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "PUD",
+      "previousZoningDescription": "Planned Unit Development",
+      "newZoningCode": "PUD",
+      "newZoningDescription": "Planned Unit Development"
+    },
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2024-01-03",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "3607, 3639, 3831 and 3839 S. 12th St.",
+    "applicant": "Trammell Crow Company",
+    "behalf": null,
+    "description": "Request to rezone the site from R-4 RSIOD to CP/GCP RSIOD to allow office, industrial, and warehouse",
+    "type": "mixed use",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R-4 RSIOD",
+      "previousZoningDescription": "Multifamily Residence District, Rio Salado Interim Overlay District",
+      "newZoningCode": "CP/GCP RSIOD",
+      "newZoningDescription": "Commerce Park District/General Commerce Park Option, Rio Salado Interim Overlay District"
+    },
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2024-01-03",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  },
+  {
+    "address": "Southwest corner of 15th Avenue and McDowell Road",
+    "applicant": "Circle K Stores, Inc.",
+    "behalf": null,
+    "description": "Rezoning from R-5 SNSPD and C-1 SNSPD to C-1 SNSPD to allow retail convenience store with fuel sales",
+    "type": "commercial",
+    "stats": {
+      "buildings": null,
+      "strata": null,
+      "rental": null,
+      "hotel": null,
+      "fsr": null,
+      "height": null
+    },
+    "zoning": {
+      "previousZoningCode": "R-5 SNSPD and C-1 SNSPD",
+      "previousZoningDescription": "Multifamily Residence District and Neighborhood Retail",
+      "newZoningCode": "C-1 SNSPD",
+      "newZoningDescription": "Neighborhood Retail"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2023-10-05",
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-03",
+      "denialDate": null,
+      "withdrawnDate": null
+    }
+  }
+]

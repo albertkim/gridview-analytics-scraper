@@ -1,9 +1,7 @@
-import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, ZoningType, checkGPTJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../GPTUtilities'
-import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
+import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { chatGPTTextQuery } from '../../GPTUtilities'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
 
 interface IBylawData {
@@ -14,8 +12,9 @@ interface IBylawData {
 
 export function checkIfBylaw(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
-  const titleHasBylaw = news.title.toLowerCase().includes('bylaw for adoption')
-  return hasReportURLs && titleHasBylaw
+  const isCouncil = news.meetingType === 'Council Minutes'
+  const titleHasBylaw = news.title.toLowerCase().includes('bylaws for adoption')
+  return hasReportURLs && isCouncil && titleHasBylaw
 }
 
 export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {

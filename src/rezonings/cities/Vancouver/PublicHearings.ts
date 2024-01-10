@@ -8,7 +8,8 @@ import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 export function checkIfPublicHearing(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
   const isPublicHearing = news.meetingType.toLowerCase() === 'public hearing'
-  return hasReportURLs && isPublicHearing
+  const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
+  return hasReportURLs && isPublicHearing && titleIsRezoning
 }
 
 export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {

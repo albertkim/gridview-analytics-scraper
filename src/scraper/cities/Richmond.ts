@@ -3,7 +3,7 @@ import { IMeetingDetail } from '../../repositories/RawRepository'
 import moment from 'moment'
 
 const startUrl = 'https://citycouncil.richmond.ca/decisions/search/results.aspx?QB0=AND&QF0=ItemTopic%7cResolutionText%7cFullText%7cSubject&QI0=&QB1=AND&QF1=Date&QI1=&QB4=AND&QF4=Date&QI4=%3e%3d%40DATE-1820&TN=minutes&AC=QBE_QUERY&BU=https%3a%2f%2fcitycouncil.richmond.ca%2fdecisions%2fsearch%2fdefault.aspx&RF=WebBriefDate&'
-const numberOfPages = 50
+const numberOfPages = 60
 
 interface IOptions {
   startDate: string | null
@@ -133,6 +133,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
   const results = await page.evaluate(async () => {
 
     const date = $('.TitleFull').text().trim()
+    const meetingType = $('.TitleFull').parent().text().split(' -- ')[1].trim()
 
     const resolutionTopic = $('.RecordDetailsFull :contains("Item Topic: ")').next().text().trim()
 
@@ -175,7 +176,7 @@ async function scrapePageDetails(page: Page, url: string): Promise<Omit<IMeeting
     return {
       url: permalink || url,
       date: date,
-      meetingType: 'City council',
+      meetingType: meetingType,
       title: resolutionTopic,
       resolutionId: resolutionNumber,
       contents: pickLongerString(fullTextContents, resolutionContents), // Pick the bigger one

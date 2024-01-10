@@ -11,7 +11,7 @@ const endDate = null
 const citiesToScrape: string[] = [
   // 'BC (province)',
   // 'Vancouver',
-  // 'Richmond',
+  'Richmond',
   // 'Burnaby'
 ]
 

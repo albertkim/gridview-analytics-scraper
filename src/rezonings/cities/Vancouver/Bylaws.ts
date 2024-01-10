@@ -20,8 +20,9 @@ interface IBylawData {
 
 export function checkIfBylaw(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
-  const isBylaw = news.meetingType === 'By-laws'
-  return hasReportURLs && isBylaw
+  const isCouncil = news.meetingType.toLowerCase() === 'council'
+  const isBylaw = news.title === 'By-laws'
+  return hasReportURLs && isCouncil && isBylaw
 }
 
 export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDetail[]> {

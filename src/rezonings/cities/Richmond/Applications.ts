@@ -7,9 +7,10 @@ import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 
 export function checkIfApplication(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
-  const titleHasRezoning = news.title.toLowerCase().includes('rezoning')
+  const isCouncil = news.meetingType === 'Council Minutes'
+  const titleHasRezoning = news.title.toLowerCase().includes('rezon')
   const titleHasApplication = news.title.toLowerCase().includes('application')
-  return hasReportURLs && titleHasRezoning && titleHasApplication
+  return hasReportURLs && isCouncil && titleHasRezoning && titleHasApplication
 }
 
 const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'

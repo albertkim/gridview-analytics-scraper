@@ -8,7 +8,7 @@ import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 export function checkIfApplication(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
   const isCouncil = news.meetingType.toLowerCase() === 'council'
-  const titleIsRezoning = news.title.includes('Rezoning:')
+  const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
   const isReferralReport = news.reportUrls[0].title.toLowerCase().includes('referral report')
   return hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
 }
