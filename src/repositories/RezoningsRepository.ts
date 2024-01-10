@@ -67,6 +67,10 @@ export interface IFullRezoningDetail extends IPartialRezoningDetail {
     url: string
     date: string
   }[]
+  location: {
+    latitude: number | null
+    longitude: number | null
+  }
   createDate: string
   updateDate: string
 }
@@ -180,6 +184,7 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   })
   mergedData.urls = [...new Map([...oldEntry.urls, ...newEntry.urls].map(obj => [obj.url, obj])).values()]
   mergedData.minutesUrls = [...new Map([...oldEntry.minutesUrls, ...newEntry.minutesUrls].map(obj => [obj.url, obj])).values()]
+  mergedData.createDate = moment(oldEntry.createDate).isBefore(moment(newEntry.createDate)) ? oldEntry.createDate : newEntry.createDate
   mergedData.updateDate = moment().format('YYYY-MM-DD')
 
   return mergedData

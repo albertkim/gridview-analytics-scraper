@@ -84,6 +84,10 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
         denialDate: null,
         withdrawnDate: null
       },
+      location: {
+        latitude: null,
+        longitude: null
+      },
       createDate: moment().format('YYYY-MM-DD'),
       updateDate: moment().format('YYYY-MM-DD')
     }

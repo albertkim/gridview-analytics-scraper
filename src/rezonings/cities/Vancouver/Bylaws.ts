@@ -111,6 +111,10 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           denialDate: bylawDetail.status === 'denied' ? news.date : null,
           withdrawnDate: null
         },
+        location: {
+          latitude: null,
+          longitude: null
+        },
         createDate: moment().format('YYYY-MM-DD'),
         updateDate: moment().format('YYYY-MM-DD')
       }

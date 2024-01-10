@@ -81,6 +81,10 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
         denialDate: null,
         withdrawnDate: null
       },
+      location: {
+        latitude: null,
+        longitude: null
+      },
       createDate: moment().format('YYYY-MM-DD'),
       updateDate: moment().format('YYYY-MM-DD')
     }
