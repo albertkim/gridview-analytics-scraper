@@ -16,7 +16,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   console.log(`Launching Puppeteer`)
   const browser = await puppeteer.launch({
-    headless: options.headless || 'new'
+    headless: options.headless !== undefined ? options.headless : 'new'
   })
 
   // Pass this page instance around instead of re-using a global variable

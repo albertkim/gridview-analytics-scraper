@@ -9,9 +9,9 @@ import { BulkUtilities } from './BulkUtilities'
 const startDate = '2021-01-01'
 const endDate = null
 const citiesToScrape: string[] = [
-  // 'BC (province)',
+  'BC (province)',
   // 'Vancouver',
-  'Richmond',
+  // 'Richmond',
   // 'Burnaby'
 ]
 

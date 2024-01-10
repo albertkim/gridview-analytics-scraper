@@ -8,7 +8,7 @@ const startDate = null
 const endDate = null
 const citiesToAnalyze: string[] = [
   // 'Vancouver',
-  'Richmond'
+  // 'Richmond'
 ]
 
 async function main() {

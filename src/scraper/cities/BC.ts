@@ -16,7 +16,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   console.log(`Launching Puppeteer`)
   const browser = await puppeteer.launch({
-    headless: options.headless || 'new'
+    headless: options.headless !== undefined ? options.headless : 'new'
   })
 
   const page = await browser.newPage()
@@ -57,7 +57,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
       await page.evaluate(async () => {
         $('input[title*="Next Page"]').click()
       })
-      await page.waitForTimeout(1000)
+      await page.waitForTimeout(2000)
     }
 
     // Filter for news from the Ministry of Transportation and Infrastructure
@@ -75,7 +75,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
       await page.evaluate(async () => {
         $('input[title*="Next Page"]').click()
       })
-      await page.waitForTimeout(500)
+      await page.waitForTimeout(2000)
     }
 
     console.log(parentData)
@@ -97,6 +97,10 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     // Close the browser
     await browser.close()
     console.log(`Browser closed`)
+
+    results.forEach((result) => {
+      result.date = moment(new Date(result.date)).format('YYYY-MM-DD')
+    })
 
     return results
 
@@ -123,7 +127,7 @@ async function scrapeParentPage(page: Page): Promise<Array<{date: string, url: s
       const date = $(element).find('.dateline').text()
       const url = $(element).find('a')[0].href
       data.push({
-        date: moment(new Date(date)).format('YYYY-MM-DD'),
+        date: date,
         url: url
       })
     })
