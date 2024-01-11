@@ -26,7 +26,6 @@ export interface IRezoningStats {
   rentals: number | null
   hotels: number | null
   fsr: number | null
-  height: number | null
 }
 
 // This interface is what is processed by GPT. Other fields in the full detail object are added ia code.
@@ -169,7 +168,7 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
     console.warn(chalk.bgYellow(`Warning: Field 'type' has different values in old and new data (${oldEntry.type} vs ${newEntry.type}). Preferring the old value.`))
     mergedData.type = mergeSimpleField(oldEntry.type, newEntry.type, 'old')
   }
-  const statsArray: (keyof IFullRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr', 'height']
+  const statsArray: (keyof IFullRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr']
   statsArray.forEach((fieldName) => {
     mergedData.stats[fieldName] = mergeSimpleField(oldEntry.stats[fieldName], newEntry.stats[fieldName], 'old')
   })
@@ -215,7 +214,6 @@ export function checkGPTJSON(json: any): boolean {
   if (!checkNumberOrNull(json.stats.rentals)) return false
   if (!checkNumberOrNull(json.stats.hotels)) return false
   if (!checkNumberOrNull(json.stats.fsr)) return false
-  if (!checkNumberOrNull(json.stats.height)) return false
 
   // Check zoning object
   if (typeof json.zoning !== 'object' || json.zoning === null) return false

@@ -1,36 +1,36 @@
 # Gridview Analytics Scraper
 
-This repository includes code to automatically scrape 2 types of info from the web:
+### Environment variables
 
-1. City council news (see: `/news` directory)
-2. City rezonings and development permits (see: `/rezonings`)
+NODE_ENV
+CHAT_GPT_API_KEY
+GOOGLE_APPLICATION_CREDENTIALS
 
-- `/news/documents` and `/news/rezonings` store a copy of all PDF documents that are scraped. PDFs are stored so that they are easily searchable, crawlable, uploadable, works offline, and eventually machine-learnable.
-- Each `/documents` folder has an `index.json` file that indexes each file that has been added. The format for the index files look like:
+### AI tools
+
+ChatGPT 3.5 Turbo
+
+CHatGPT 4 Turbo
+
+Google Cloud Vision
 
 ```
-  {
-    directory: 'news',
-    files: [
-      {
-        id: string            // auto-generated, probably a guid like 9c38d908-9ac3-4e08-8dc2-66e925d4fdf4
-        city: string          // city name
-        metro_city: string    // metro city name
-        date: string          // date of the PDF (YYYY-MM-DD)
-        create_date: string   // date of when the PDF was scraped (YYYY-MM-DD)
-        page_url: string      // the page the file is found in
-        file_url: string      // the url of the pdf file
-        file_title: string    // the title of the PDF
-        file_name: string     // /documents/vancouver-YYYYMMDD-title-9c38d908-9ac3-4e08-8dc2-66e925d4fdf4
-        format: string        // expected to be PDF, but I guess other file formats can be stored
-      }
-    ]
-  }
+If your application made the following requests in a particular month:
+
+700 images with label detection
+5300 images with landmark detection
+Your cost would be:
+
+$0 for 700 label detection requests.
+$0 for the first 1000 landmark detection requests.
+$7.50 for the remaining 4300 landmark detection requests. Pricing is calculated in 1000-request blocks. For example, exactly 4000 requests is priced at 4 * $1.50. Any number of requests between 4001 and 5000 (including the 4300 requests in this example) moves the total into the next (5th) block of 1000 and is priced accordingly, adding another $1.50 to the existing cost and bringing the total cost to 5 * $1.50, or $7.50.
+Total cost is $7.50.
 ```
 
-### City news
+### OS setup
 
+If you are on a mac m1/similar chip, you can have issues installing node-canvas or pdf-img-convert. To fix, run:
 
+`brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman`
 
-### City rezonings (includes development permits)
-
+Source: https://github.com/Automattic/node-canvas

@@ -16,7 +16,7 @@ async function parseMinutes() {
   const minutesPDFData = await downloadPDF(minutesUrl)
   const minuteTextArray = await generatePDFTextArray(minutesPDFData)
 
-  const gptTextReply = await chatGPTTextQuery(`
+  const response = await chatGPTTextQuery(`
     Read this document and give me the following in a JSON format, but only for items that are rezoning applications:
     {
       items: [
@@ -30,10 +30,10 @@ async function parseMinutes() {
     Here is the document: ${minuteTextArray.join(` `)}
   `)
 
-  const replyData = JSON.parse(gptTextReply.choices[0].message.content).items
-  console.log(replyData)
+  const replyData = response.items
+  console.log(response.items)
 
-  return replyData
+  return response.items
 }
 
 // Then read the agenda for retails
@@ -52,7 +52,7 @@ async function parseAgenda(minutesArray) {
   const rezoningJSON = []
 
   for (const text of pdfTextOnlyData) {
-    const gptTextReply = await chatGPTTextQuery(`
+    const replyData = await chatGPTTextQuery(`
       Given the document date of 2024-01-03 and given the following meeting minutes of what was approved and denied:
 
       ${JSON.stringify(minutesArray)}
@@ -89,7 +89,6 @@ async function parseAgenda(minutesArray) {
       }
       If this document is not a rezoning related document, please reply with "not rezoning". Document here: ${text}
     `)
-    const replyData = JSON.parse(gptTextReply.choices[0].message.content)
     console.log(replyData)
     if (!replyData.error) {
       rezoningJSON.push(replyData)

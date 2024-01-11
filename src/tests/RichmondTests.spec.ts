@@ -1,6 +1,8 @@
 import { checkIfApplication } from '../rezonings/cities/Richmond/Applications'
 import { checkIfPublicHearing } from '../rezonings/cities/Richmond/PublicHearings'
-import { checkIfBylaw } from '../rezonings/cities/Richmond/Bylaws'
+import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Richmond/Bylaws'
+import { downloadPDF, generateScreenshotFromPDF } from '../rezonings/PDFUtilities'
+import { googleVisionQuery } from '../rezonings/GPTUtilities'
 
 const sampleScrapedRezoningApplication = {
   "city": "Richmond",
@@ -71,3 +73,19 @@ const sampleScrapedBylaw = {
 test('Richmond bylaw checkIfBylaw', () => {
   expect(checkIfBylaw(sampleScrapedBylaw)).toBe(true)
 })
+
+test('Aync test', async () => {
+
+  const pdfData = await downloadPDF('https://citycouncil.richmond.ca/__shared/assets/Bylaw1030366179.pdf')
+  const screenshot = await generateScreenshotFromPDF(pdfData, 0)
+  const GPTResponse = await googleVisionQuery(`
+    Given the following image, identify if it is related to a community plan/rezoning. If so, return the following format. Otherwise just return an error.
+
+    Format:
+    Address: address in question - if multiple addresses in the same section comma separate
+    Rezoning ID: rezoning id in the format RZ-12-123456 - reformat if necessary
+    Status: one of approved or denied
+  `, screenshot)
+  console.log(GPTResponse)
+
+}, 30000)

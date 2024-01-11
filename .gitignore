@@ -7,6 +7,11 @@ npm-debug.log*
 
 # Ignore .env files that may contain sensitive information
 .env
+.production.env
+.development.env
+
+# Ignore Google Cloud credentials
+google-cloud.json
 
 # Ignore build output and distribution directories
 /build

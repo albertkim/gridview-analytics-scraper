@@ -1,8 +1,8 @@
 import chalk from 'chalk'
+import moment from 'moment'
 import { RezoningsRepository } from '../repositories/RezoningsRepository'
 import { cleanRichmondRezoningId } from './cities/Richmond/RichmondUtilities'
-import moment from 'moment'
-import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from './GPTUtilities'
+import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
 
 export const BulkUtilities = {
 
@@ -11,9 +11,11 @@ export const BulkUtilities = {
     const rezonings = RezoningsRepository.getRezonings()
 
     for (const rezoning of rezonings) {
-      const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
-      const GPTStats = JSON.parse(GPTStatsReply.choices[0].message.content!)
-      rezoning.updateDate = moment().format('YYYY-MM-DD')
+      const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
+      if (GPTStats) {
+        rezoning.stats = GPTStats
+        rezoning.updateDate = moment().format('YYYY-MM-DD')
+      }
     }
 
     RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)

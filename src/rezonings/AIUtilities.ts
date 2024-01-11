@@ -1,16 +1,18 @@
 import dotenv from 'dotenv'
-import axios from 'axios'
 import OpenAI from 'openai'
+import { ImageAnnotatorClient } from '@google-cloud/vision'
 
 dotenv.config()
 
 const environment = process.env.NODE_ENV!
 const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
-const chatGPTAPIUrl = process.env.CHAT_GPT_API_URL!
 
 const openai = new OpenAI({
 	apiKey: chatGPTAPIKey
 })
+
+// Uses the GOOGLE_APPLICATION_CREDENTIALS environment variable
+const googleVisionClient = new ImageAnnotatorClient()
 
 interface BaseRezoningQueryParams {
   rezoningId?: string
@@ -19,7 +21,7 @@ interface BaseRezoningQueryParams {
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
 // Make sure that the query includes the word 'JSON'
 // Defaults to 3.5, specify 4 if you want to use 4
-export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4') {
+export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
 	console.log(`Sending text query to ChatGPT`)
 
 	const gptVersionMapping = {
@@ -28,6 +30,7 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4') 
 	}
 
 	try {
+
 		const response = await openai.chat.completions.create({
 			model: gptVersionMapping[gptVersion || '3.5'],
 			messages:[
@@ -41,7 +44,18 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4') 
 			},
 			temperature: 0.2
 		})
-		return response
+
+		if (!response) {
+			return null
+		}
+
+		const content = JSON.parse(response.choices[0].message.content!)
+
+		if (content.error) {
+			return null
+		}
+
+		return content
 	} catch (error: any) {
 		if (error.response && error.response.data) {
 			console.error(error.response.data)
@@ -53,54 +67,46 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4') 
 	}
 }
 
-// Send a text + file query to ChatGPT 4 turbo and get data back in JSON format
-export async function chatGPTDataQuery(query: string, fileData: Buffer) {
-	console.log(`Sending data query to ChatGPT`)
-	const payload = {
-		model: 'gpt-4-vision-preview',
-		messages: [
-			{
-				'role': 'user',
-				'content': [
-					{
-						'type': 'text',
-						'text': query
-					},
-					{
-						'type': 'image_url',
-						'image_url': {
-							'url': ''
-						}
-					}
-				]
-			}
-		],
-		response_format: {
-			type: 'json_object'
-		},
-		files: [
-			{
-				'name': 'file',
-				'data': fileData
-			}
-		],
-		temperature: 0.2
-	}
+// Use Google Cloud Vision OCR to extract text from an image
+// Process the text data, then use ChatGPT 3.5 Turbo to get data back in JSON format
+export async function imageQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
+
 	try {
-		const response = await axios.post(chatGPTAPIUrl, payload, {
-			headers: {
-				Authorization: `Bearer ${chatGPTAPIKey}`
+
+		console.log(`Sending data query to Google Cloud Vision`)
+
+		const [result] = await googleVisionClient.textDetection({
+			image: {
+				content: fileData
 			}
 		})
-		return response.data
+
+		console.log(`Google Cloud Vision data returned`)
+
+		const detections = result.textAnnotations
+		if (!detections) {
+			return null
+		}
+
+		const textArray = detections.map(text => text.description).join(' ').replace(/\n/g, ' ').trim()
+
+		const gptResponse = await chatGPTTextQuery(`
+			${query}
+			${textArray}
+		`, gptVersion)
+
+		return gptResponse
+
 	} catch (error: any) {
 		if (error.response && error.response.data) {
 			console.error(error.response.data)
 			throw new Error()
 		} else {
+			console.error(error)
 			throw new Error()
 		}
 	}
+
 }
 
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
@@ -120,7 +126,6 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
         rentals: total number of rental units or null if unclear - do not default to rental if not specified
         hotels: total number of hotel units (not buildings) or null if unclear
         fsr: total floor space ratio or null if unclear
-        height: height in meters or null if unclear
       }
       zoning: {
         previousZoningCode: city zoning code before rezoning or null if unclear
@@ -152,7 +157,6 @@ export function getGPTBaseRezoningStatsQuery(description: string) {
       rentals: total number of rental units - 0 if no explicit mention of rentals - null if unclear
       hotels: total number of hotel units - 0 if no explicit mention of hotels - null if unclear
       fsr: total floor space ratio or null if unclear
-      height: height in meters or null if unclear - single number no range
     }
     Description here: ${description}
   `

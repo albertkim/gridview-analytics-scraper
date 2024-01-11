@@ -2,7 +2,7 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, ZoningType } from '../../../repositories/RezoningsRepository'
-import { chatGPTTextQuery } from '../../GPTUtilities'
+import { chatGPTTextQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray, parsePDF } from '../../PDFUtilities'
 
 interface IBylawData {
@@ -51,7 +51,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     // For each page, analyze rezonings
     for (const page of bylawPDFPages) {
-      const GPTTextResponse = await chatGPTTextQuery(`
+      let bylawDetail = await chatGPTTextQuery(`
         Identify if the given text is a rezoning approval/denial. If so, return the following in JSON format. Otherwise return a {error: message}.
         {
           address: address in question - if multiple addresses in the same section comma separate
@@ -67,13 +67,13 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         }
         Here is the text: ${page}
       `)
-      const bylawDetailRaw = JSON.parse(GPTTextResponse.choices[0].message.content!)
 
-      if (bylawDetailRaw.error) {
+      if (!bylawDetail) {
         continue
       }
 
-      const bylawDetail: IBylawData = JSON.parse(bylawDetailRaw.choices[0].message.content!)
+      bylawDetail = bylawDetail as IBylawData
+
       const fullRezoningDetail: IFullRezoningDetail = {
         ...bylawDetail,
         city: news.city,
@@ -100,8 +100,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           stratas: null,
           rentals: null,
           hotels: null,
-          fsr: null,
-          height: null
+          fsr: null
         },
         status: bylawDetail.status,
         dates: {

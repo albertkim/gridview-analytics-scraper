@@ -2,14 +2,15 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../GPTUtilities'
+import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
+import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 
 export function checkIfApplication(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
   const isCouncil = news.meetingType.toLowerCase() === 'council'
   const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
-  const isReferralReport = news.reportUrls[0].title.toLowerCase().includes('referral report')
+  const isReferralReport = hasReportURLs ? news.reportUrls[0].title.toLowerCase().includes('referral report') : false
   return hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
 }
 
@@ -21,38 +22,38 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     const firstPDFURL = news.reportUrls[0].url
     const pdfData = await downloadPDF(firstPDFURL)
     const pdf3pages = await generatePDF(pdfData, {
-      maxPages: 3
+      maxPages: 4
     })
     const parsedPDF = await parsePDF(pdf3pages as Buffer)
 
     // Get partial rezoning details from GPT
-    const GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+    let partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
       rezoningId: 'null'
     }))
-    let partialRezoningDetailsRaw = JSON.parse(GPTTextResponse.choices[0].message.content!)
-    if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+    if (!checkGPTJSON(partialRezoningDetails)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      const newGPTTextReply = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+      partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
         rezoningId: 'null'
       }))
-      partialRezoningDetailsRaw = JSON.parse(newGPTTextReply.choices[0].message.content!)
-      if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+      if (!checkGPTJSON(partialRezoningDetails)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))
+        console.error(chalk.red(JSON.stringify(partialRezoningDetails, null, 2)))
+        ErrorsRepository.addError(news)
         throw new Error(errorMessage)
       }
     }
     console.log(chalk.bgGreen('Partial rezoning details GPT JSON is valid'))
 
     // Cast as partial rezoning details
-    const partialRezoningDetails = partialRezoningDetailsRaw as IPartialRezoningDetail
+    partialRezoningDetails = partialRezoningDetails as IPartialRezoningDetail
 
     // Get stats
-    const GPTStatsReply = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetailsRaw.description), '4')
-    const GPTStats = JSON.parse(GPTStatsReply.choices[0].message.content!)
+    const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')
     if (GPTStats.error) {
       const errorMessage = 'Partial rezoning details GPT JSON is not valid, skipping'
       console.log(chalk.bgRed(errorMessage))
+      ErrorsRepository.addError(news)
       throw new Error(errorMessage)
     }
 

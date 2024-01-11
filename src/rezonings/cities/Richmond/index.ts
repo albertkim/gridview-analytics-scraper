@@ -1,9 +1,10 @@
 import moment from 'moment'
 import { RawRepository } from '../../../repositories/RawRepository'
-import { RezoningsRepository, IFullRezoningDetail, mergeEntries } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../../repositories/RezoningsRepository'
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
+import chalk from 'chalk'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
@@ -51,18 +52,20 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     }
 
     if (checkIfBylaw(news)) {
-      const bylawDetails = await parseBylaw(news)
-      if (bylawDetails) {
+      const bylawDetailsArray = await parseBylaw(news)
+      bylawDetailsArray.forEach((bylawDetails) => {
         const matchingItem = rezoningJSON
           .find((item) => item.city === bylawDetails.city && item.address === bylawDetails.address)
 
         if (matchingItem) {
           const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
           rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, bylawDetails)
+          console.log(chalk.bgGreen(`Merged ${bylawDetails.address}`))
         } else {
           rezoningJSON.push(bylawDetails)
+          console.log(chalk.bgGreen(`Added ${bylawDetails.address}`))
         }
-      }
+      })
     }
 
   }

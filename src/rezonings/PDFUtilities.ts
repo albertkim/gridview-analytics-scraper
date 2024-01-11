@@ -2,6 +2,7 @@ import axios from 'axios'
 import pdfParse from 'pdf-parse'
 import OpenAI from 'openai'
 import { PDFDocument } from 'pdf-lib'
+import pdf2img from 'pdf-img-convert'
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -85,7 +86,15 @@ export async function generatePDF(pdfData: Buffer, options: IGeneratePDFOptions 
 
 // Given a PDF file, return an JPEG image file of the page at the given index
 export async function generateScreenshotFromPDF(pdfData: Uint8Array, pageIndex: number) {
-	// TODO
+	console.log('Generating screenshot from PDF')
+	const screenshot = await pdf2img.convert(pdfData, {
+		page_numbers: [pageIndex + 1],
+		base64: true
+	})
+	const fileSize = Math.round(screenshot[0].length / 1024)
+	console.log(`Generated. File size is ${fileSize} kb`)
+
+	return screenshot[0] as string
 }
 
 export async function parsePDF(pdfData: Buffer) {
