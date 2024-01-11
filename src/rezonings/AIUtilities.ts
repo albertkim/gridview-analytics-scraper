@@ -54,7 +54,6 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		if (content.error) {
 			return null
 		}
-
 		return content
 	} catch (error: any) {
 		if (error.response && error.response.data) {

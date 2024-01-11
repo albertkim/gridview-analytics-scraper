@@ -80,97 +80,6 @@
   },
   {
     "rezoningId": null,
-    "address": "5562-5688 Manson Street",
-    "applicant": "Oakridge Multi-family Limited Partnership",
-    "behalf": "1119195 B.C. Ltd. and 1265995 B.C. Ltd.",
-    "description": "The applicant wants to rezone the lands from RS-1 (Residential) to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.7 to 6.0 and the building height from 10.7 m to 56.0 m and to 64.3 m for a rooftop amenity, to permit the development of two 18-storey rental residential buildings with a 37-space childcare facility, including 392 secured-rental units, of which 20% of the residential floor area will be secured as below-market rental units.",
-    "type": "multi-family residential",
-    "stats": {
-      "buildings": 2,
-      "stratas": 0,
-      "rentals": 392,
-      "hotels": 0,
-      "fsr": 6
-    },
-    "zoning": {
-      "previousZoningCode": "RS-1",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2022-12-06",
-      "publicHearingDate": "2023-01-17",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-01-17",
-        "title": "Summary and Recommendations",
-        "url": "https://council.vancouver.ca/20230117/documents/phea2sr.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2022-12-06",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20221206/documents/rr3.pdf",
-        "type": "application"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Draft Zoning and Development By-law",
-        "url": "https://council.vancouver.ca/20230117/documents/phea2draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Applicant Boards",
-        "url": "https://council.vancouver.ca/20230117/documents/pheapplicantboards.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Applicant Images",
-        "url": "https://council.vancouver.ca/20230117/documents/phea2applicantimages.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20230117/documents/phea2staffpresentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Video Clip of Item 2",
-        "url": "https://bit.ly/3Wj9tmb",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-01-17",
-        "url": "https://council.vancouver.ca/20230117/phea20230117ag.htm"
-      },
-      {
-        "date": "2022-12-06",
-        "url": "https://council.vancouver.ca/20221206/regu20221206ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
     "address": "1925 Southeast Marine Drive",
     "applicant": "General Manager of Arts, Culture and Community Services",
     "behalf": "City of Vancouver",
@@ -2511,57 +2420,6 @@
   },
   {
     "rezoningId": null,
-    "address": "2970 Kingsway",
-    "applicant": "Formosis Architecture Inc.",
-    "behalf": "1289838 B.C. LT D.",
-    "description": "The rezoning application is to rezone the lands from C-2 (Commercial) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.50 to 3.96 and the building height from 13.8 m (45.3 ft.) to 24.6 m (80.7 ft.), to permit the development of a six-storey mixed-use building containing 127 secured market rental housing units and commercial space on the ground floor.",
-    "type": "mixed use",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 127,
-      "hotels": 0,
-      "fsr": 3.96
-    },
-    "zoning": {
-      "previousZoningCode": "C-2",
-      "previousZoningDescription": "Commercial",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2022-05-17",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2022-05-17",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20220517/documents/rr4.pdf",
-        "type": "application"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2022-05-17",
-        "url": "https://council.vancouver.ca/20220517/regu20220517ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
     "address": "156-180 West 2nd Avenue",
     "applicant": "Westbank Projects Corp.",
     "behalf": "Rogers Media Inc., Inc. No. A0116978",
@@ -2900,91 +2758,6 @@
       {
         "date": "2022-04-12",
         "url": "https://council.vancouver.ca/20220412/phea20220412ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
-    "address": "277-291 West 42nd Avenue",
-    "applicant": "Marcon Properties Ltd.",
-    "behalf": "W 42 Properties E Nominee Corp.",
-    "description": "The rezoning application is to rezone the lands from RS-1 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 6.73 and the building height from 10.7 m (35 ft.) to 57 m (187 ft.), to permit an 18-storey residential building with 211 secured rental residential units, of which 20% of the residential floor area will be secured below-market rental units.",
-    "type": "multi-family residential",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 211,
-      "hotels": 0,
-      "fsr": 6.73
-    },
-    "zoning": {
-      "previousZoningCode": "RS-1",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2022-02-08",
-      "publicHearingDate": "2022-03-03",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2022-03-03",
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20220303/documents/phea1summary.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2022-02-08",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20220208/documents/rr1.pdf",
-        "type": "application"
-      },
-      {
-        "date": "2022-03-03",
-        "title": "Draft By-law Zoning and Development",
-        "url": "https://council.vancouver.ca/20220303/documents/phea1draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2022-03-03",
-        "title": "Models ",
-        "url": "https://council.vancouver.ca/20220303/documents/phea1model.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2022-03-03",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20220303/documents/phea1presentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2022-03-03",
-        "title": "Video Clip of this Item",
-        "url": "https://bit.ly/34j65D2",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2022-03-03",
-        "url": "https://council.vancouver.ca/20220303/phea20220303ag.htm"
-      },
-      {
-        "date": "2022-02-08",
-        "url": "https://council.vancouver.ca/20220208/regu20220208ag.htm"
       }
     ],
     "location": {
@@ -8200,164 +7973,6 @@
   },
   {
     "rezoningId": null,
-    "address": "1977 West 41st Avenue, 5688 Maple Street",
-    "applicant": "Sightline Properties (Maple Street) Ltd.",
-    "behalf": null,
-    "description": "The rezoning application is to rezone the lands from RS-3A (Residential) to RR-3B (Residential Rental) District. The proposal is for a six-storey mixed-use rental building with 20% of the residential floor area secured as below-market rental units. The site area is approximately 1,646 sq. m (17,717 sq. ft.), with a frontage of 43.3 m (142 ft.) along West 41st Avenue and a depth of 38.1 m (125 ft.).",
-    "type": "mixed use",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": 3.5
-    },
-    "zoning": {
-      "previousZoningCode": "RS-3A",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "RR-3B",
-      "newZoningDescription": "Residential Rental"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2023-01-17",
-      "publicHearingDate": "2023-02-16",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-02-16",
-        "title": "Summary and Recommendations",
-        "url": "https://council.vancouver.ca/20230216/documents/phea4SR.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Referral Report dated December 20, 2022",
-        "url": "https://council.vancouver.ca/20230216/documents/rr6.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Draft By-Law - Sign ",
-        "url": "https://council.vancouver.ca/20230216/documents/phea4draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20230216/documents/phea4presentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20230117/documents/rr6.pdf",
-        "type": "application"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-02-16",
-        "url": "https://council.vancouver.ca/20230216/phea20230216ag.htm"
-      },
-      {
-        "date": "2023-01-17",
-        "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
-    "address": "807-847 East 33rd Avenue",
-    "applicant": "Yamamoto Architecture",
-    "behalf": "1327287B.C. Ltd.",
-    "description": "To rezone the lands from RS-1 (Residential) to RR-2B (Residential Rental) District, be approved in principle. The proposed amendment would allow for a five-storey rental building, in accordance with the Secured Rental Policy. A future building design would be submitted through the development permit process and reviewed with the public at that time.",
-    "type": "multi-family residential",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": null
-    },
-    "zoning": {
-      "previousZoningCode": "RS-1",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "RR-2B",
-      "newZoningDescription": "Residential Rental"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2023-01-17",
-      "publicHearingDate": "2023-02-16",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-02-16",
-        "title": "Summary and Recommendations",
-        "url": "https://council.vancouver.ca/20230216/documents/phea5RR.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Referral Report dated December 20, 2022",
-        "url": "https://council.vancouver.ca/20230216/documents/rr7.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Draft By-Law - Sign ",
-        "url": "https://council.vancouver.ca/20230216/documents/phea5draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-02-16",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20230216/documents/phea5presentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-01-17",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20230117/documents/rr7.pdf",
-        "type": "application"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-02-16",
-        "url": "https://council.vancouver.ca/20230216/phea20230216ag.htm"
-      },
-      {
-        "date": "2023-01-17",
-        "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
     "address": "7688-7690 Cambie Street, 7710-7720 Cambie Street",
     "applicant": "Ciccozzi Architecture Inc.",
     "behalf": "1108289 B.C. Ltd., Inc.No. BC1108289",
@@ -9996,57 +9611,6 @@
   },
   {
     "rezoningId": null,
-    "address": "8460 Ash Street, 8495 Cambie Street",
-    "applicant": "Intracorp Ash Street Developments, Ltd.",
-    "behalf": "Ashley Mar Housing Co-operative",
-    "description": "Rezoning of 8460 Ash Street and 8495 Cambie Street from RT-2 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.75 to 8.26 and the building height from 9.2 m (30 ft.) to 103 m (338 ft.) to permit a mixed-use development with ground-floor commercial space, 125 social housing units, and 524 secured market rental units.",
-    "type": "mixed use",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 649,
-      "hotels": 0,
-      "fsr": 8.26
-    },
-    "zoning": {
-      "previousZoningCode": "RT-2",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2021-10-19",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2021-10-19",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20211019/documents/rr14.pdf",
-        "type": "application"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2021-10-19",
-        "url": "https://council.vancouver.ca/20211019/regu20211019ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
     "address": "328-360 West 2nd Avenue",
     "applicant": "1057300 B.C. Ltd.",
     "behalf": null,
@@ -10195,109 +9759,6 @@
         "date": "2021-10-14",
         "title": "Video Clip of this Item",
         "url": "https://bit.ly/3mW6Vea",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2021-10-14",
-        "url": "https://council.vancouver.ca/20211014/phea20211014ag.htm"
-      },
-      {
-        "date": "2021-09-21",
-        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-10",
-    "updateDate": "2024-01-10"
-  },
-  {
-    "rezoningId": null,
-    "address": "4575 Granville Street",
-    "applicant": "Stuart Howard Architects Inc.",
-    "behalf": "Jagmohan Singh Pabla and Kamlesh Rani Pabla",
-    "description": "To rezone 4575 Granville Street from RS-5 (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a four-storey residential building, containing 24 secured market rental units. A height of 11.9 m (39 ft. ) and a floor space ratio (FSR) of 1.23 are recommended.",
-    "type": "multi-family residential",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 24,
-      "hotels": 0,
-      "fsr": 1.23
-    },
-    "zoning": {
-      "previousZoningCode": "RS-5",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2021-09-21",
-      "publicHearingDate": "2021-10-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2021-10-14",
-        "title": "Summary and Recommendations",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3summary.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-09-21",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20210921/documents/rr7.pdf",
-        "type": "application"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Display Boards",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3boards.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Renderings",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3renderings.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Youtube link",
-        "url": "https://www.youtube.com/watch?v=qHGTRIjOdiE",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3staffpresentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Applicant Presentation",
-        "url": "https://council.vancouver.ca/20211014/documents/phea3applicantpresentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2021-10-14",
-        "title": "Video Clip of this Item",
-        "url": "http://bit.ly/3DJOUGB",
         "type": "public hearing"
       }
     ],
@@ -16476,6 +15937,1301 @@
         "url": "https://citycouncil.richmond.ca/agendas/archives/hearings/2021/051721_minutes.htm"
       }
     ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "5562-5688 Manson Street",
+    "applicant": "Oakridge Multi-family Limited Partnership",
+    "behalf": "1119195 B.C. Ltd. and 1265995 B.C. Ltd.",
+    "description": "The applicant wants to rezone the lands from RS-1 (Residential) to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.7 to 6.0 and the building height from 10.7 m to 56.0 m and to 64.3 m for a rooftop amenity, to permit the development of two 18-storey rental residential buildings with a 37-space childcare facility, including 392 secured-rental units, of which 20% of the residential floor area will be secured as below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 392,
+      "hotels": null,
+      "fsr": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RS-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-12-06",
+      "publicHearingDate": "2023-01-17",
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-01-17",
+        "title": "Summary and Recommendations",
+        "url": "https://council.vancouver.ca/20230117/documents/phea2sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2022-12-06",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20221206/documents/rr3.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Draft Zoning and Development By-law",
+        "url": "https://council.vancouver.ca/20230117/documents/phea2draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230117/documents/pheapplicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Applicant Images",
+        "url": "https://council.vancouver.ca/20230117/documents/phea2applicantimages.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230117/documents/phea2staffpresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Video Clip of Item 2",
+        "url": "https://bit.ly/3Wj9tmb",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-01-17",
+        "url": "https://council.vancouver.ca/20230117/phea20230117ag.htm"
+      },
+      {
+        "date": "2022-12-06",
+        "url": "https://council.vancouver.ca/20221206/regu20221206ag.htm"
+      },
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "2970 Kingsway",
+    "applicant": "Formosis Architecture Inc.",
+    "behalf": "1289838 B.C. LT D.",
+    "description": "The rezoning application is to rezone the lands from C-2 (Commercial) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.50 to 3.96 and the building height from 13.8 m (45.3 ft.) to 24.6 m (80.7 ft.), to permit the development of a six-storey mixed-use building containing 127 secured market rental housing units and commercial space on the ground floor.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 127,
+      "hotels": null,
+      "fsr": 3.96
+    },
+    "zoning": {
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-05-17",
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2022-05-17",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20220517/documents/rr4.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2023-06-27",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230627/documents/bylaws1to14.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2022-05-17",
+        "url": "https://council.vancouver.ca/20220517/regu20220517ag.htm"
+      },
+      {
+        "date": "2023-06-27",
+        "url": "https://council.vancouver.ca/20230627/regu20230627ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "277-291 West 42nd Avenue",
+    "applicant": "Marcon Properties Ltd.",
+    "behalf": "W 42 Properties E Nominee Corp.",
+    "description": "The rezoning application is to rezone the lands from RS-1 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 6.73 and the building height from 10.7 m (35 ft.) to 57 m (187 ft.), to permit an 18-storey residential building with 211 secured rental residential units, of which 20% of the residential floor area will be secured below-market rental units.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 211,
+      "hotels": null,
+      "fsr": 6.73
+    },
+    "zoning": {
+      "previousZoningCode": "RS-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2022-02-08",
+      "publicHearingDate": "2022-03-03",
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2022-03-03",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20220303/documents/phea1summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2022-02-08",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20220208/documents/rr1.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2022-03-03",
+        "title": "Draft By-law Zoning and Development",
+        "url": "https://council.vancouver.ca/20220303/documents/phea1draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2022-03-03",
+        "title": "Models ",
+        "url": "https://council.vancouver.ca/20220303/documents/phea1model.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2022-03-03",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20220303/documents/phea1presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2022-03-03",
+        "title": "Video Clip of this Item",
+        "url": "https://bit.ly/34j65D2",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2022-03-03",
+        "url": "https://council.vancouver.ca/20220303/phea20220303ag.htm"
+      },
+      {
+        "date": "2022-02-08",
+        "url": "https://council.vancouver.ca/20220208/regu20220208ag.htm"
+      },
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "1977 West 41st Avenue, 5688 Maple Street",
+    "applicant": "Sightline Properties (Maple Street) Ltd.",
+    "behalf": null,
+    "description": "The rezoning application is to rezone the lands from RS-3A (Residential) to RR-3B (Residential Rental) District. The proposal is for a six-storey mixed-use rental building with 20% of the residential floor area secured as below-market rental units. The site area is approximately 1,646 sq. m (17,717 sq. ft.), with a frontage of 43.3 m (142 ft.) along West 41st Avenue and a depth of 38.1 m (125 ft.).",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 3.5
+    },
+    "zoning": {
+      "previousZoningCode": "RS-3A",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-3B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2023-01-17",
+      "publicHearingDate": "2023-02-16",
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-02-16",
+        "title": "Summary and Recommendations",
+        "url": "https://council.vancouver.ca/20230216/documents/phea4SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Referral Report dated December 20, 2022",
+        "url": "https://council.vancouver.ca/20230216/documents/rr6.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Draft By-Law - Sign ",
+        "url": "https://council.vancouver.ca/20230216/documents/phea4draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230216/documents/phea4presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr6.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-02-16",
+        "url": "https://council.vancouver.ca/20230216/phea20230216ag.htm"
+      },
+      {
+        "date": "2023-01-17",
+        "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm"
+      },
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "807-847 East 33rd Avenue",
+    "applicant": "Yamamoto Architecture",
+    "behalf": "1327287B.C. Ltd.",
+    "description": "To rezone the lands from RS-1 (Residential) to RR-2B (Residential Rental) District, be approved in principle. The proposed amendment would allow for a five-storey rental building, in accordance with the Secured Rental Policy. A future building design would be submitted through the development permit process and reviewed with the public at that time.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2023-01-17",
+      "publicHearingDate": "2023-02-16",
+      "approvalDate": "2023-09-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-02-16",
+        "title": "Summary and Recommendations",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5RR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Referral Report dated December 20, 2022",
+        "url": "https://council.vancouver.ca/20230216/documents/rr7.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Draft By-Law - Sign ",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-02-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-01-17",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr7.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2023-09-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230912/documents/bylaws1to14.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-02-16",
+        "url": "https://council.vancouver.ca/20230216/phea20230216ag.htm"
+      },
+      {
+        "date": "2023-01-17",
+        "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm"
+      },
+      {
+        "date": "2023-09-12",
+        "url": "https://council.vancouver.ca/20230912/regu20230912ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "8460 Ash Street, 8495 Cambie Street",
+    "applicant": "Intracorp Ash Street Developments, Ltd.",
+    "behalf": "Ashley Mar Housing Co-operative",
+    "description": "Rezoning of 8460 Ash Street and 8495 Cambie Street from RT-2 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.75 to 8.26 and the building height from 9.2 m (30 ft.) to 103 m (338 ft.) to permit a mixed-use development with ground-floor commercial space, 125 social housing units, and 524 secured market rental units.",
+    "type": "mixed use",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 649,
+      "hotels": null,
+      "fsr": 8.26
+    },
+    "zoning": {
+      "previousZoningCode": "RT-2",
+      "previousZoningDescription": "For-Profit Affordable Rental Housing",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2021-10-19",
+      "publicHearingDate": null,
+      "approvalDate": "2023-01-31",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2021-10-19",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20211019/documents/rr14.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2023-01-31",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230131/documents/Bylaws1to4.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-10-19",
+        "url": "https://council.vancouver.ca/20211019/regu20211019ag.htm"
+      },
+      {
+        "date": "2023-01-31",
+        "url": "https://council.vancouver.ca/20230131/regu20230131ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "rezoningId": null,
+    "address": "4575 Granville Street",
+    "applicant": "Stuart Howard Architects Inc.",
+    "behalf": "Jagmohan Singh Pabla and Kamlesh Rani Pabla",
+    "description": "To rezone 4575 Granville Street from RS-5 (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a four-storey residential building, containing 24 secured market rental units. A height of 11.9 m (39 ft. ) and a floor space ratio (FSR) of 1.23 are recommended.",
+    "type": "multi-family residential",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 24,
+      "hotels": null,
+      "fsr": 1.23
+    },
+    "zoning": {
+      "previousZoningCode": "RS-5",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2021-09-21",
+      "publicHearingDate": "2021-10-14",
+      "approvalDate": "2023-05-30",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2021-10-14",
+        "title": "Summary and Recommendations",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-09-21",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20210921/documents/rr7.pdf",
+        "type": "application"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Display Boards",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3boards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Youtube link",
+        "url": "https://www.youtube.com/watch?v=qHGTRIjOdiE",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3staffpresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Applicant Presentation",
+        "url": "https://council.vancouver.ca/20211014/documents/phea3applicantpresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2021-10-14",
+        "title": "Video Clip of this Item",
+        "url": "http://bit.ly/3DJOUGB",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-05-30",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230530/documents/bylaws1to14.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-10-14",
+        "url": "https://council.vancouver.ca/20211014/phea20211014ag.htm"
+      },
+      {
+        "date": "2021-09-21",
+        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm"
+      },
+      {
+        "date": "2023-05-30",
+        "url": "https://council.vancouver.ca/20230530/regu20230530ag.htm"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-10",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "650 West 41st Avenue (Oakridge Centre)",
+    "date": "2022-06-21",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2022-06-21",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20220621/documents/bylaws1to46.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2022-06-21",
+        "url": "https://council.vancouver.ca/20220621/regu20220621ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2022-06-21",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "325-341 West 42nd Avenue",
+    "date": "2023-12-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "1247 Kingsway",
+    "date": "2023-12-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "2086-2098 West 7th Avenue, 2091 West 8th Avenue",
+    "date": "2023-09-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "RM-4",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-09-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230912/documents/bylaws1to14.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-09-12",
+        "url": "https://council.vancouver.ca/20230912/regu20230912ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "3435 East Hastings",
+    "date": "2023-09-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-09-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230912/documents/bylaws1to14.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-09-12",
+        "url": "https://council.vancouver.ca/20230912/regu20230912ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "601 Beach Crescent",
+    "date": "2023-03-07",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "CD-1 (366)",
+      "previousZoningDescription": "Comprehensive Development",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-03-07",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230307/documents/bylaws1to8.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-03-07",
+        "url": "https://council.vancouver.ca/20230307/regu20230307ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-03-07",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "622-688 SW Marine Drive",
+    "date": "2023-01-17",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-01-17",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20230117/documents/Bylaws1to13.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-01-17",
+        "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "1805 Larch Street",
+    "date": "2021-10-19",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2021-10-19",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20211019/documents/bylaws1to13.pdf",
+        "type": "bylaw"
+      },
+      {
+        "date": "2021-09-21",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-10-19",
+        "url": "https://council.vancouver.ca/20211019/regu20211019ag.htm"
+      },
+      {
+        "date": "2021-09-21",
+        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-10-19",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "815-825 Commercial Drive, 1680 Adanac Street",
+    "date": "2021-09-21",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2021-09-21",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-09-21",
+        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-09-21",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "3701 – 3743 West Broadway",
+    "date": "2021-06-08",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "RS-1 (Residential) and C-2 (Commercial)",
+      "previousZoningDescription": "Residential and Commercial",
+      "newZoningCode": "CD-1 (Comprehensive Development)",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2021-06-08",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210608/documents/bylaws1to11.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-06-08",
+        "url": "https://council.vancouver.ca/20210608/regu20210608ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-06-08",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "4506 Rupert Street, 3309 Price Street",
+    "date": "2021-04-27",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "C-1, RS-1",
+      "previousZoningDescription": "Commercial, Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2021-04-27",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210427/documents/bylaws.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-04-27",
+        "url": "https://council.vancouver.ca/20210427/regu20210427ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-04-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "1111 Kingsway",
+    "date": "2023-12-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-11",
+    "updateDate": "2024-01-11"
+  },
+  {
+    "address": "1956-1990 Stainsbury Avenue",
+    "date": "2021-04-27",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2021-04-27",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210427/documents/bylaws.pdf",
+        "type": "bylaw"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-04-27",
+        "url": "https://council.vancouver.ca/20210427/regu20210427ag.htm"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-04-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
     "location": {
       "latitude": null,
       "longitude": null

@@ -4,6 +4,7 @@ import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../..
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
+import chalk from 'chalk'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
@@ -60,8 +61,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
           if (matchingItem) {
             const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
             rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, bylawDetail)
+            console.log(chalk.bgGreen(`Bylaw merged for ${bylawDetail.address}`))
           } else {
             rezoningJSON.push(bylawDetail)
+            console.log(chalk.bgGreen(`Bylaw added for ${bylawDetail.address}`))
           }
         }
       }

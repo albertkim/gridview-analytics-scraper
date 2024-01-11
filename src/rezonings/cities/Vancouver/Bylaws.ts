@@ -54,7 +54,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
       }
 
       let bylawDetail = await chatGPTTextQuery(`
-        Identify if the given text is a rezoning approval/denial. If so, return the following in JSON format. Otherwise return a {error: message}.
+        Identify if the given text is a zoning bylaw amendment/housing agreement. If so, return the following in JSON format. Otherwise return a {error: message}.
         {
           address: address in question - if multiple addresses in the same section comma separate
           date: date in YYYY-MM-DD format
@@ -66,7 +66,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
             newZoningDescription: best description of new zoning code (ex. high density residential)
           }
         }
-        Here is the text: ${page}
+        Here is the text: ${page.text}
       `)
 
       if (!bylawDetail) {

@@ -122,7 +122,7 @@ function getSimilarAddresses(rezonings: IFullRezoningDetail[], similarityScore: 
 
     const rezoningsWithMatchingNumbers = otherRezoningsInCity
       .filter(otherRezoning => {
-        const otherNumbersInAddress = otherRezoning.address.match(/\d+/g)
+        const otherNumbersInAddress = (otherRezoning.address || '').match(/\d+/g)
         if (!otherNumbersInAddress) {
           return false
         }
