@@ -1,4 +1,5 @@
 import chalk from 'chalk'
+import similarity from 'similarity'
 import { IFullRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
 import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
 import moment from 'moment'
@@ -13,6 +14,7 @@ export async function getStatistics() {
 
   printStatistic('Total news', getNewsCountPerCity(news))
   printStatistic('Total rezonings', getRezoningCountPerCity(rezonings))
+  printStatistic('Similar addresses', getSimilarAddresses(rezonings, 0.7))
   printStatistic('Rezoning date errors', getDateErrorsPerCity(rezonings))
   printStatistic('Rezoning URL date errors', getURLDateErrosPerCity(rezonings))
 
@@ -97,6 +99,52 @@ function getURLDateErrosPerCity(rezonings: IFullRezoningDetail[]) {
       emptyDates
     })
   }
+
+  return results
+
+}
+
+// For every address, use the similarity library to find addresses that are similar, then return matching addresses with minimum score
+function getSimilarAddresses(rezonings: IFullRezoningDetail[], similarityScore: number) {
+
+  const results: {city: string, address: string, similarAddresses: {address: string, similarity: number}[]}[] = []
+
+  rezonings.forEach((rezoning, index) => {
+
+    const numbersInAddress = (rezoning.address || '').match(/\d+/g)
+
+    if (!numbersInAddress) {
+      return
+    }
+
+    const otherRezonings = [...rezonings.slice(0, index), ...rezonings.slice(index + 1)]
+    const otherRezoningsInCity = otherRezonings.filter(otherRezoning => otherRezoning.city === rezoning.city)
+
+    const rezoningsWithMatchingNumbers = otherRezoningsInCity
+      .filter(otherRezoning => {
+        const otherNumbersInAddress = otherRezoning.address.match(/\d+/g)
+        if (!otherNumbersInAddress) {
+          return false
+        }
+        return otherNumbersInAddress.every(otherNumber => numbersInAddress!.includes(otherNumber))
+      })
+      .map(otherRezoning => {
+        return {
+          address: otherRezoning.address,
+          similarity: similarity(rezoning.address, otherRezoning.address)
+        }
+      })
+      .filter(otherRezoning => otherRezoning.similarity > similarityScore)
+
+    if (rezoningsWithMatchingNumbers.length > 0) {
+      results.push({
+        city: rezoning.city,
+        address: rezoning.address,
+        similarAddresses: rezoningsWithMatchingNumbers
+      })
+    }
+
+  })
 
   return results
 

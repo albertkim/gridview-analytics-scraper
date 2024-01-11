@@ -1,8 +1,6 @@
 import { checkIfApplication } from '../rezonings/cities/Richmond/Applications'
 import { checkIfPublicHearing } from '../rezonings/cities/Richmond/PublicHearings'
-import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Richmond/Bylaws'
-import { downloadPDF, generateScreenshotFromPDF } from '../rezonings/PDFUtilities'
-import { googleVisionQuery } from '../rezonings/GPTUtilities'
+import { checkIfBylaw } from '../rezonings/cities/Richmond/Bylaws'
 
 const sampleScrapedRezoningApplication = {
   "city": "Richmond",
@@ -29,17 +27,17 @@ test('Richmond rezoning application checkIfApplication', () => {
 const sampleScrapedPublicHearing = {
   "city": "Richmond",
   "metroCity": "Metro Vancouver",
-  "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14339/",
-  "date": "2021-11-15",
+  "url": "http://citycouncil.richmond.ca/decisions/search/permalink/14491/",
+  "date": "2022-02-22",
   "meetingType": "Public Hearing Minutes",
-  "title": "RICHMOND ZONING BYLAW 8500, AMENDMENT BYLAW 10294\n(Location:  13340 Smallwood Place; Applicant:  Regional Animal Protections Society (RAPS))",
-  "resolutionId": "PH21/10-1",
-  "contents": "Resolution: It was moved and seconded\n\nThat Richmond Zoning Bylaw 8500, Amendment Bylaw 10294 be given second and third readings.See minutes for detail.",
-  "minutesUrl": "https://citycouncil.richmond.ca/agendas/archives/hearings/2021/111521_minutes.htm",
+  "title": "RICHMOND ZONING BYLAW 8500, AMENDMENT BYLAW 10303 (RZ 21-930446)\n(Location:  11320 Williams Road; Applicant:  Habib Samari)",
+  "resolutionId": "PH22/2-1",
+  "contents": "Resolution: It was moved and seconded\n\nThat Richmond Zoning Bylaw 8500, Amendment Bylaw 10303 be given second and third readings.See minutes for detail.",
+  "minutesUrl": "https://citycouncil.richmond.ca/agendas/archives/hearings/2022/022222_minutes.htm",
   "reportUrls": [
     {
       "title": "Report",
-      "url": "https://citycouncil.richmond.ca/__shared/assets/1_Application_RAPS_13340_SmallwoodPl59478.pdf"
+      "url": "https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf"
     }
   ]
 }
@@ -73,19 +71,3 @@ const sampleScrapedBylaw = {
 test('Richmond bylaw checkIfBylaw', () => {
   expect(checkIfBylaw(sampleScrapedBylaw)).toBe(true)
 })
-
-test('Aync test', async () => {
-
-  const pdfData = await downloadPDF('https://citycouncil.richmond.ca/__shared/assets/Bylaw1030366179.pdf')
-  const screenshot = await generateScreenshotFromPDF(pdfData, 0)
-  const GPTResponse = await googleVisionQuery(`
-    Given the following image, identify if it is related to a community plan/rezoning. If so, return the following format. Otherwise just return an error.
-
-    Format:
-    Address: address in question - if multiple addresses in the same section comma separate
-    Rezoning ID: rezoning id in the format RZ-12-123456 - reformat if necessary
-    Status: one of approved or denied
-  `, screenshot)
-  console.log(GPTResponse)
-
-}, 30000)

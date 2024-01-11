@@ -3,7 +3,7 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
 import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
-import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
+import { downloadPDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
@@ -19,16 +19,19 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     // Parse the referral report PDF
     const firstPDFURL = news.reportUrls[0].url
     const pdfData = await downloadPDF(firstPDFURL)
-    const pdf3pages = await generatePDF(pdfData, {
-      maxPages: 3
-    })
-    const parsedPDF = await parsePDF(pdf3pages as Buffer)
+    const parsedPDF = await parsePDF(pdfData as Buffer, 2)
+
+    // The PDF text should include the words "RZ"
+    if (!parsedPDF.includes('RZ')) {
+      console.log('Not a rezoning public hearing PDF document, skipping')
+      return null
+    }
 
     // Get partial rezoning details from GPT
-    let GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text))
+    let GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF))
     if (!checkGPTJSON(GPTTextResponse)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text))
+      GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF))
       if (!checkGPTJSON(GPTTextResponse)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))

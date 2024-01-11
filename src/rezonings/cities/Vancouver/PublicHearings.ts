@@ -26,12 +26,12 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     const parsedPDF = await parsePDF(pdf3pages as Buffer)
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+    let partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
       rezoningId: 'null'
     }))
     if (!checkGPTJSON(partialRezoningDetails)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF.text, {
+      partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
         rezoningId: 'null'
       }))
       if (!checkGPTJSON(partialRezoningDetails)) {

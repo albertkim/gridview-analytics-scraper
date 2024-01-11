@@ -1,4 +1,4 @@
-import { checkIfApplication, parseApplication } from '../rezonings/cities/Vancouver/Applications'
+import { checkIfApplication } from '../rezonings/cities/Vancouver/Applications'
 import { checkIfPublicHearing } from '../rezonings/cities/Vancouver/PublicHearings'
 import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
 
@@ -84,24 +84,3 @@ const sampleScrapedBylaw = {
 test('Vancouver bylaw checkIfBylaw', () => {
   expect(checkIfBylaw(sampleScrapedBylaw)).toBe(true)
 })
-
-// test('async test', async function() {
-//   const results = await parseApplication({
-//     "city": "Vancouver",
-//     "metroCity": "Metro Vancouver",
-//     "url": "https://council.vancouver.ca/20220517/regu20220517ag.htm",
-//     "minutesUrl": "https://council.vancouver.ca/20220517/regu20220517ag.htm",
-//     "date": "2022-05-17",
-//     "meetingType": "Council",
-//     "title": "CD-1 Rezoning: 1406-1410 East King Edward Avenue",
-//     "resolutionId": null,
-//     "contents": "",
-//     "reportUrls": [
-//       {
-//         "title": "Referral Report",
-//         "url": "https://council.vancouver.ca/20220517/documents/rr13.pdf"
-//       }
-//     ]
-//   })
-//   console.log(JSON.stringify(results, null, 2))
-// }, 30000)

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import pdfParse from 'pdf-parse'
-import OpenAI from 'openai'
 import { PDFDocument } from 'pdf-lib'
 import pdf2img from 'pdf-img-convert'
 import dotenv from 'dotenv'
@@ -55,6 +54,7 @@ interface IGeneratePDFOptions {
 }
 
 // Given a PDF file, return a PDF with only the pages that have selectable text
+// IMPORTANT: This DOES NOT WORK with encrypted PDFs. For encrypted PDFs, use parsePDF() directly with the maxPages parameter instead
 export async function generatePDF(pdfData: Buffer, options: IGeneratePDFOptions = {}) {
 	const minCharacterCount = options.minCharacterCount || 5
 	const expectedWords = options.expectedWords || []
@@ -97,8 +97,11 @@ export async function generateScreenshotFromPDF(pdfData: Uint8Array, pageIndex: 
 	return screenshot[0] as string
 }
 
-export async function parsePDF(pdfData: Buffer) {
+export async function parsePDF(pdfData: Buffer, maxPageIndex?: number) {
 	console.log(`Parsing PDF`)
-	const parsedPDF = await pdfParse(pdfData)
-	return parsedPDF
+	const parsedPDF = await pdfParse(pdfData, {
+		max: maxPageIndex
+	})
+	console.log(`Parsed ${parsedPDF.text.length} characters`)
+	return parsedPDF.text
 }

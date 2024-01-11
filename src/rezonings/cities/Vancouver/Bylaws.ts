@@ -1,4 +1,3 @@
-import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, ZoningType } from '../../../repositories/RezoningsRepository'
@@ -45,17 +44,19 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           url: bylawPDFURL,
           text
         }
-      }
-      ))
+      }))
     }
 
     // For each page, analyze rezonings
     for (const page of bylawPDFPages) {
+      if (!page.text.toLowerCase().includes('housing agreement')) {
+        continue
+      }
+
       let bylawDetail = await chatGPTTextQuery(`
         Identify if the given text is a rezoning approval/denial. If so, return the following in JSON format. Otherwise return a {error: message}.
         {
           address: address in question - if multiple addresses in the same section comma separate
-          status: one of approved or denied
           date: date in YYYY-MM-DD format
           type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial, commercial, or other
           zoning: {
@@ -102,12 +103,12 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           hotels: null,
           fsr: null
         },
-        status: bylawDetail.status,
+        status: 'approved',
         dates: {
           appliedDate: null,
           publicHearingDate: null,
-          approvalDate: bylawDetail.status === 'approved' ? news.date : null,
-          denialDate: bylawDetail.status === 'denied' ? news.date : null,
+          approvalDate: news.date,
+          denialDate: null,
           withdrawnDate: null
         },
         location: {
