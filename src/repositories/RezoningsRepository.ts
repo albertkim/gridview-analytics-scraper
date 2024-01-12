@@ -103,6 +103,8 @@ export const RezoningsRepository = {
 
   getRezoningsWithSimilarAddresses(rezoning: IFullRezoningDetail): {index: number, rezoning: IFullRezoningDetail, similarity: number}[] {
 
+    const minimumSimilarity = 0.8
+
     if (!rezoning.address) {
       return []
     }
@@ -110,8 +112,7 @@ export const RezoningsRepository = {
     const numbersInAddress = (rezoning.address || '').match(/\d+/g)
 
     const allRezonings = require('../database/rezonings.json') as IFullRezoningDetail[]
-    const rezoningIndex = allRezonings.findIndex((item) => item === rezoning)
-    const otherRezonings = [...allRezonings.slice(0, rezoningIndex), ...allRezonings.slice(rezoningIndex + 1)]
+    const rezoningIndex = allRezonings.findIndex((item) => item === rezoning) // Can be -1 if not found
 
     const rezoningsWithMatchingNumbers: {
       index: number
@@ -119,11 +120,11 @@ export const RezoningsRepository = {
       similarity: number
     }[] = []
 
-    for (let i = 0; i < otherRezonings.length; i++) {
+    for (let i = 0; i < allRezonings.length; i++) {
       if (i === rezoningIndex) {
         continue
       }
-      const otherRezoning = otherRezonings[i]
+      const otherRezoning = allRezonings[i]
       if (otherRezoning.city !== rezoning.city) {
         continue
       }
@@ -134,7 +135,7 @@ export const RezoningsRepository = {
       const numbersMatch = otherNumbersInAddress.every(otherNumber => numbersInAddress!.includes(otherNumber))
       if (numbersMatch) {
         const similarityScore = similarity(rezoning.address, otherRezoning.address)
-        if (similarityScore > 0.8) {
+        if (similarityScore > minimumSimilarity) {
           rezoningsWithMatchingNumbers.push({
             index: i,
             rezoning: otherRezoning,

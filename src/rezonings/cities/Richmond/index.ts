@@ -24,12 +24,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        const matchingItem = rezoningJSON
-          .find((item) => item.city === applicationDetails.city && item.address === applicationDetails.address)
+        const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(applicationDetails)
 
-        if (matchingItem) {
-          const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
-          rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, applicationDetails)
+        if (matchingItems.length > 0) {
+          rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, applicationDetails)
         } else {
           rezoningJSON.push(applicationDetails)
         }
@@ -39,12 +37,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfPublicHearing(news)) {
       const publicHearingDetails = await parsePublicHearing(news)
       if (publicHearingDetails) {
-        const matchingItem = rezoningJSON
-          .find((item) => item.city === publicHearingDetails.city && item.address === publicHearingDetails.address)
+        const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(publicHearingDetails)
 
-        if (matchingItem) {
-          const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
-          rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, publicHearingDetails)
+        if (matchingItems.length > 0) {
+          rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, publicHearingDetails)
         } else {
           rezoningJSON.push(publicHearingDetails)
         }
@@ -54,12 +50,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfBylaw(news)) {
       const bylawDetailsArray = await parseBylaw(news)
       bylawDetailsArray.forEach((bylawDetails) => {
-        const matchingItem = rezoningJSON
-          .find((item) => item.city === bylawDetails.city && item.address === bylawDetails.address)
+        const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(bylawDetails)
 
-        if (matchingItem) {
-          const matchingItemIndex = rezoningJSON.indexOf(matchingItem)
-          rezoningJSON[matchingItemIndex] = mergeEntries(matchingItem, bylawDetails)
+        if (matchingItems.length > 0) {
+          rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, bylawDetails)
           console.log(chalk.bgGreen(`Merged ${bylawDetails.address}`))
         } else {
           rezoningJSON.push(bylawDetails)

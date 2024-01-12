@@ -180,9 +180,9 @@ export const BulkUtilities = {
     if (rezoningWithSimilarAddresses) {
 
       console.log('Original rezoning')
-      console.log(rezoningWithSimilarAddresses.rezoning)
+      console.log(rezoningWithSimilarAddresses.rezoning.address)
       console.log('Address matches')
-      console.log(rezoningWithSimilarAddresses.similarAddressRezonings)
+      console.log(rezoningWithSimilarAddresses.similarAddressRezonings.map((similarAddressRezoning) => similarAddressRezoning.rezoning.address))
 
       // Merge into the first entry
       let mergedEntry = rezoningWithSimilarAddresses.rezoning
@@ -204,6 +204,8 @@ export const BulkUtilities = {
       const updatedRezonings = removeMultipleIndices(rezonings, indicesToRemove)
 
       // Update the database
+      console.log(`Previous database length: ${rezonings.length}`)
+      console.log(`Previous database length: ${updatedRezonings.length}`)
       RezoningsRepository.dangerouslyUpdateAllRezonings(updatedRezonings)
 
     }
