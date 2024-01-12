@@ -12,7 +12,7 @@
       "rentals": 87,
       "hotels": 0,
       "fsr": 19.1,
-      "storeys": null
+      "storeys": 47
     },
     "zoning": {
       "previousZoningCode": "RM-5B",
@@ -92,7 +92,7 @@
       "rentals": 72,
       "hotels": 0,
       "fsr": 2.04,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1B",
@@ -144,7 +144,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 0.7,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -316,7 +316,7 @@
       "rentals": 123,
       "hotels": 0,
       "fsr": 3.53,
-      "storeys": null
+      "storeys": 7
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -420,7 +420,7 @@
       "rentals": 0,
       "hotels": 147,
       "fsr": 7.95,
-      "storeys": null
+      "storeys": 12
     },
     "zoning": {
       "previousZoningCode": "C-3A",
@@ -518,7 +518,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.65,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-5N",
@@ -702,7 +702,7 @@
       "rentals": 120,
       "hotels": 0,
       "fsr": 2.5,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -788,7 +788,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 11.96,
-      "storeys": null
+      "storeys": 35
     },
     "zoning": {
       "previousZoningCode": "DD (Downtown District)",
@@ -886,7 +886,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.5,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -978,7 +978,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 21.5,
-      "storeys": null
+      "storeys": 24
     },
     "zoning": {
       "previousZoningCode": "DD",
@@ -1070,7 +1070,7 @@
       "rentals": "null",
       "hotels": 0,
       "fsr": 4.68,
-      "storeys": null
+      "storeys": 19
     },
     "zoning": {
       "previousZoningCode": "I-3 District, I-2 District, CD-1 (761) District",
@@ -1186,7 +1186,7 @@
       "rentals": 279,
       "hotels": 0,
       "fsr": 12.61,
-      "storeys": null
+      "storeys": 33
     },
     "zoning": {
       "previousZoningCode": "RM-5A",
@@ -1278,7 +1278,7 @@
       "rentals": 278,
       "hotels": 0,
       "fsr": 12.55,
-      "storeys": null
+      "storeys": 33
     },
     "zoning": {
       "previousZoningCode": "RM-5A",
@@ -1364,7 +1364,7 @@
       "rentals": 99,
       "hotels": 0,
       "fsr": 6.37,
-      "storeys": null
+      "storeys": 14
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -1462,7 +1462,7 @@
       "rentals": 8,
       "hotels": 0,
       "fsr": 1.51,
-      "storeys": null
+      "storeys": 3.5
     },
     "zoning": {
       "previousZoningCode": "RS-3",
@@ -1566,7 +1566,7 @@
       "rentals": 8,
       "hotels": 0,
       "fsr": 2.77,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "C-1",
@@ -1658,7 +1658,7 @@
       "rentals": 100,
       "hotels": 0,
       "fsr": 3.65,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -1756,7 +1756,7 @@
       "rentals": 109,
       "hotels": 0,
       "fsr": 11.07,
-      "storeys": null
+      "storeys": 13
     },
     "zoning": {
       "previousZoningCode": "RM-1N",
@@ -1860,7 +1860,7 @@
       "rentals": 60,
       "hotels": 0,
       "fsr": 3.97,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2 (Commercial) District",
@@ -1964,7 +1964,7 @@
       "rentals": 7,
       "hotels": 0,
       "fsr": 1.81,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2 (Residential) District",
@@ -2016,7 +2016,7 @@
       "rentals": 181,
       "hotels": 0,
       "fsr": 5.67,
-      "storeys": null
+      "storeys": 16
     },
     "zoning": {
       "previousZoningCode": "DEOD",
@@ -2068,7 +2068,7 @@
       "rentals": 400,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 28
     },
     "zoning": {
       "previousZoningCode": "CD-1 (52A) and CD-1 (80)",
@@ -2306,7 +2306,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -2392,7 +2392,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 10.81,
-      "storeys": null
+      "storeys": 40
     },
     "zoning": {
       "previousZoningCode": "RM-5C",
@@ -2486,7 +2486,7 @@
       "rentals": 129,
       "hotels": null,
       "fsr": 4.4,
-      "storeys": null
+      "storeys": 13
     },
     "zoning": {
       "previousZoningCode": "RM-4",
@@ -2674,7 +2674,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 4.68,
-      "storeys": null
+      "storeys": 10
     },
     "zoning": {
       "previousZoningCode": "RT-1",
@@ -2772,7 +2772,7 @@
       "rentals": 180,
       "hotels": 0,
       "fsr": 4.1,
-      "storeys": null
+      "storeys": 14
     },
     "zoning": {
       "previousZoningCode": "C-1 (Commercial) District and RS-1 (Residential) District",
@@ -3014,7 +3014,7 @@
       "rentals": 122,
       "hotels": 0,
       "fsr": 7.91,
-      "storeys": null
+      "storeys": 18
     },
     "zoning": {
       "previousZoningCode": "M-2 (Industrial) District",
@@ -3066,7 +3066,7 @@
       "rentals": 223,
       "hotels": 0,
       "fsr": 12.3,
-      "storeys": null
+      "storeys": 39
     },
     "zoning": {
       "previousZoningCode": "C-3A",
@@ -3118,7 +3118,7 @@
       "rentals": 180,
       "hotels": 0,
       "fsr": 4.1,
-      "storeys": null
+      "storeys": 14
     },
     "zoning": {
       "previousZoningCode": "C-1 (Commercial) District and RS-1 (Residential) District",
@@ -3170,7 +3170,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.65,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-5N",
@@ -3270,7 +3270,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.6,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -3358,7 +3358,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.2,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -3434,7 +3434,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.2,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -3510,7 +3510,7 @@
       "rentals": 162,
       "hotels": 0,
       "fsr": 3.87,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -3604,7 +3604,7 @@
       "rentals": 0,
       "hotels": null,
       "fsr": 17.67,
-      "storeys": null
+      "storeys": 30
     },
     "zoning": {
       "previousZoningCode": "DD",
@@ -3674,7 +3674,7 @@
       "rentals": 191,
       "hotels": 0,
       "fsr": 5.58,
-      "storeys": null
+      "storeys": 18
     },
     "zoning": {
       "previousZoningCode": "RM-4 and RM-4N",
@@ -3908,7 +3908,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.65,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -3996,7 +3996,7 @@
       "rentals": 146,
       "hotels": 0,
       "fsr": 2.88,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -4078,7 +4078,7 @@
       "rentals": 679,
       "hotels": 0,
       "fsr": 11.38,
-      "storeys": null
+      "storeys": 33
     },
     "zoning": {
       "previousZoningCode": "CD-1(201) and CD-1(218)",
@@ -4130,7 +4130,7 @@
       "rentals": 210,
       "hotels": 0,
       "fsr": 6.27,
-      "storeys": null
+      "storeys": 25
     },
     "zoning": {
       "previousZoningCode": "IC-2",
@@ -4182,7 +4182,7 @@
       "rentals": 269,
       "hotels": 0,
       "fsr": 11.9,
-      "storeys": null
+      "storeys": 32
     },
     "zoning": {
       "previousZoningCode": "RM-5A",
@@ -4286,7 +4286,7 @@
       "rentals": 94,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -4372,7 +4372,7 @@
       "rentals": 34,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -4470,7 +4470,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "R1-1 (Residential) District",
@@ -4558,7 +4558,7 @@
       "rentals": 74,
       "hotels": 0,
       "fsr": 3.38,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2 (Commercial) District, RM-3A (Residential) District",
@@ -4620,7 +4620,7 @@
       "rentals": 80,
       "hotels": 0,
       "fsr": 8.42,
-      "storeys": null
+      "storeys": 12
     },
     "zoning": {
       "previousZoningCode": "DD (Downtown)",
@@ -4682,7 +4682,7 @@
       "rentals": 110,
       "hotels": 0,
       "fsr": 6.9,
-      "storeys": null
+      "storeys": 14
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -4744,7 +4744,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-7",
@@ -4904,7 +4904,7 @@
       "rentals": 69,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -4956,7 +4956,7 @@
       "rentals": 30,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -5060,7 +5060,7 @@
       "rentals": 131,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5112,7 +5112,7 @@
       "rentals": 111,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-6",
@@ -5164,7 +5164,7 @@
       "rentals": 71,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5216,7 +5216,7 @@
       "rentals": 13,
       "hotels": 0,
       "fsr": 1.45,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RT-5",
@@ -5268,7 +5268,7 @@
       "rentals": 34,
       "hotels": 0,
       "fsr": 3.51,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -5366,7 +5366,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.45,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5434,7 +5434,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 3,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-5N",
@@ -5508,7 +5508,7 @@
       "rentals": "null",
       "hotels": 0,
       "fsr": 3.5,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -5600,7 +5600,7 @@
       "rentals": "null",
       "hotels": 0,
       "fsr": 2.2,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5686,7 +5686,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 1.75,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -5762,7 +5762,7 @@
       "rentals": "null",
       "hotels": 0,
       "fsr": 2.2,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5848,7 +5848,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 1,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -5934,7 +5934,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -6010,7 +6010,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.8,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -6102,7 +6102,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -6194,7 +6194,7 @@
       "rentals": 94,
       "hotels": 0,
       "fsr": 2.1,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "CD-1(72)",
@@ -6298,7 +6298,7 @@
       "rentals": 128,
       "hotels": 0,
       "fsr": 8.56,
-      "storeys": null
+      "storeys": 12
     },
     "zoning": {
       "previousZoningCode": "DD (Downtown)",
@@ -6396,7 +6396,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.5,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -6482,7 +6482,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -6568,7 +6568,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 3.5,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -6654,7 +6654,7 @@
       "rentals": 176,
       "hotels": 0,
       "fsr": 6.1,
-      "storeys": null
+      "storeys": 18
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -6798,7 +6798,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -6850,7 +6850,7 @@
       "rentals": 635,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 60
     },
     "zoning": {
       "previousZoningCode": "RM-5B",
@@ -6902,7 +6902,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 6.17,
-      "storeys": null
+      "storeys": 12
     },
     "zoning": {
       "previousZoningCode": "CD-1 (13 7)",
@@ -6954,7 +6954,7 @@
       "rentals": 131,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -7006,7 +7006,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 1.41,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1A",
@@ -7058,7 +7058,7 @@
       "rentals": 170,
       "hotels": 0,
       "fsr": 6.19,
-      "storeys": null
+      "storeys": 16
     },
     "zoning": {
       "previousZoningCode": "RM-5A",
@@ -7110,7 +7110,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -7242,7 +7242,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.75,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-1",
@@ -7318,7 +7318,7 @@
       "rentals": 36,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RM-3A",
@@ -7416,7 +7416,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-3",
@@ -7502,7 +7502,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": 2.2,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -7582,7 +7582,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -7634,7 +7634,7 @@
       "rentals": null,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-5",
@@ -7686,7 +7686,7 @@
       "rentals": 54,
       "hotels": 0,
       "fsr": 2.56,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "C-1",
@@ -7904,7 +7904,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 4.63,
-      "storeys": null
+      "storeys": 35
     },
     "zoning": {
       "previousZoningCode": "I-2",
@@ -7996,7 +7996,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.75,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-1",
@@ -8048,7 +8048,7 @@
       "rentals": 64,
       "hotels": 0,
       "fsr": 2.3,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -8100,7 +8100,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.8,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-3",
@@ -8152,7 +8152,7 @@
       "rentals": 49,
       "hotels": 0,
       "fsr": 3.8,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -8252,7 +8252,7 @@
       "rentals": 79,
       "hotels": 0,
       "fsr": 3.93,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -8352,7 +8352,7 @@
       "rentals": 46,
       "hotels": 0,
       "fsr": 2.4,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -8434,7 +8434,7 @@
       "rentals": 54,
       "hotels": 0,
       "fsr": 3.49,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -8522,7 +8522,7 @@
       "rentals": 66,
       "hotels": 0,
       "fsr": 14.97,
-      "storeys": null
+      "storeys": 43
     },
     "zoning": {
       "previousZoningCode": "RM-5C",
@@ -8604,7 +8604,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 17.35,
-      "storeys": null
+      "storeys": 22
     },
     "zoning": {
       "previousZoningCode": "DD (Downtown District)",
@@ -8758,7 +8758,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 3.05,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "MC-1",
@@ -8846,7 +8846,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 5.01,
-      "storeys": null
+      "storeys": 7
     },
     "zoning": {
       "previousZoningCode": "I-2",
@@ -8934,7 +8934,7 @@
       "rentals": 136,
       "hotels": 0,
       "fsr": 2.87,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RM-4",
@@ -8986,7 +8986,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 1.2,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9038,7 +9038,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 1.2,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9142,7 +9142,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 1.2,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9298,7 +9298,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 4,
-      "storeys": null
+      "storeys": 7
     },
     "zoning": {
       "previousZoningCode": "I-1 (Industrial) District",
@@ -9350,7 +9350,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 7,
-      "storeys": null
+      "storeys": 9
     },
     "zoning": {
       "previousZoningCode": "I-1 (Industrial) District",
@@ -9402,7 +9402,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9454,7 +9454,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 10.16,
-      "storeys": null
+      "storeys": 33
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -9586,7 +9586,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 3.99,
-      "storeys": null
+      "storeys": 14
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9678,7 +9678,7 @@
       "rentals": 162,
       "hotels": 0,
       "fsr": 14.14,
-      "storeys": null
+      "storeys": 49
     },
     "zoning": {
       "previousZoningCode": "DD",
@@ -9788,7 +9788,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 13.37,
-      "storeys": null
+      "storeys": 47
     },
     "zoning": {
       "previousZoningCode": "DD (Downtown District) and C-5 (West End Commercial Districts)",
@@ -9892,7 +9892,7 @@
       "rentals": 419,
       "hotels": 0,
       "fsr": 6.32,
-      "storeys": null
+      "storeys": 22
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -9986,7 +9986,7 @@
       "rentals": 95,
       "hotels": 0,
       "fsr": 5.43,
-      "storeys": null
+      "storeys": 10
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -10074,7 +10074,7 @@
       "rentals": 135,
       "hotels": 0,
       "fsr": 6.05,
-      "storeys": null
+      "storeys": 13
     },
     "zoning": {
       "previousZoningCode": "RM-3",
@@ -10172,7 +10172,7 @@
       "rentals": 27,
       "hotels": 0,
       "fsr": 2.67,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "C-2C1",
@@ -10350,7 +10350,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 2.34,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -10442,7 +10442,7 @@
       "rentals": 154,
       "hotels": 0,
       "fsr": 9.11,
-      "storeys": null
+      "storeys": 17
     },
     "zoning": {
       "previousZoningCode": "Downtown District (DD)",
@@ -10546,7 +10546,7 @@
       "rentals": 82,
       "hotels": 0,
       "fsr": 2.71,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RT-2",
@@ -12878,7 +12878,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 1
     },
     "zoning": {
       "previousZoningCode": "CG2",
@@ -13034,7 +13034,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 2
     },
     "zoning": {
       "previousZoningCode": "Industrial and Marina (ZI17), Industrial Business Park (IB1), Light Industrial (IL)",
@@ -13946,7 +13946,7 @@
       "rentals": 58,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS1/E",
@@ -14050,7 +14050,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 2
     },
     "zoning": {
       "previousZoningCode": "Steveston Commercial (CS2)",
@@ -14258,7 +14258,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "Single Detached (RS1/F)",
@@ -14452,7 +14452,7 @@
       "rentals": 31,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "Industrial Storage (IS)",
@@ -14824,7 +14824,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": "RS1/E",
@@ -15500,7 +15500,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": 1.21,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RTL1",
@@ -15812,7 +15812,7 @@
       "rentals": 392,
       "hotels": null,
       "fsr": 6,
-      "storeys": null
+      "storeys": 18
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -15914,7 +15914,7 @@
       "rentals": 127,
       "hotels": null,
       "fsr": 3.96,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "C-2",
@@ -15976,7 +15976,7 @@
       "rentals": 211,
       "hotels": null,
       "fsr": 6.73,
-      "storeys": null
+      "storeys": 18
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -16072,7 +16072,7 @@
       "rentals": null,
       "hotels": null,
       "fsr": 3.5,
-      "storeys": null
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "RS-3A",
@@ -16162,7 +16162,7 @@
       "rentals": null,
       "hotels": null,
       "fsr": null,
-      "storeys": null
+      "storeys": 5
     },
     "zoning": {
       "previousZoningCode": "RS-1",
@@ -16314,7 +16314,7 @@
       "rentals": 24,
       "hotels": null,
       "fsr": 1.23,
-      "storeys": null
+      "storeys": 4
     },
     "zoning": {
       "previousZoningCode": "RS-5",
