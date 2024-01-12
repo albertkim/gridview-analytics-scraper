@@ -7,7 +7,7 @@ import { BulkUtilities } from './BulkUtilities'
 const startDate = null
 const endDate = null
 const citiesToAnalyze: string[] = [
-  'Vancouver',
+  // 'Vancouver',
   // 'Richmond'
 ]
 
@@ -25,6 +25,7 @@ async function main() {
 
   // Bulk cleaning operations
   // BulkUtilities.bulkCleanDates()
+  // BulkUtilities.bulkMergeSimilarAddressses()
 
 }
 

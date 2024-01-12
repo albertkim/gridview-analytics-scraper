@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
 import chalk from 'chalk'
+import similarity from 'similarity'
 import '../database/rezonings.json'
 
 export type ZoningType =
@@ -100,6 +101,53 @@ export const RezoningsRepository = {
     }
   },
 
+  getRezoningsWithSimilarAddresses(rezoning: IFullRezoningDetail): {index: number, rezoning: IFullRezoningDetail, similarity: number}[] {
+
+    if (!rezoning.address) {
+      return []
+    }
+
+    const numbersInAddress = (rezoning.address || '').match(/\d+/g)
+
+    const allRezonings = require('../database/rezonings.json') as IFullRezoningDetail[]
+    const rezoningIndex = allRezonings.findIndex((item) => item === rezoning)
+    const otherRezonings = [...allRezonings.slice(0, rezoningIndex), ...allRezonings.slice(rezoningIndex + 1)]
+
+    const rezoningsWithMatchingNumbers: {
+      index: number
+      rezoning: IFullRezoningDetail
+      similarity: number
+    }[] = []
+
+    for (let i = 0; i < otherRezonings.length; i++) {
+      if (i === rezoningIndex) {
+        continue
+      }
+      const otherRezoning = otherRezonings[i]
+      if (otherRezoning.city !== rezoning.city) {
+        continue
+      }
+      const otherNumbersInAddress = (otherRezoning.address || '').match(/\d+/g)
+      if (!otherNumbersInAddress) {
+        continue
+      }
+      const numbersMatch = otherNumbersInAddress.every(otherNumber => numbersInAddress!.includes(otherNumber))
+      if (numbersMatch) {
+        const similarityScore = similarity(rezoning.address, otherRezoning.address)
+        if (similarityScore > 0.8) {
+          rezoningsWithMatchingNumbers.push({
+            index: i,
+            rezoning: otherRezoning,
+            similarity: similarityScore
+          })
+        }
+      }
+    }
+
+    return rezoningsWithMatchingNumbers
+
+  },
+
   updateRezoningsForCity(city: string, rezonings: IFullRezoningDetail[]) {
 
     const previousEntries = this.getRezonings()
@@ -181,8 +229,16 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   datesArray.forEach((fieldName) => {
     mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], 'old')
   })
-  mergedData.urls = [...new Map([...oldEntry.urls, ...newEntry.urls].map(obj => [obj.url, obj])).values()]
-  mergedData.minutesUrls = [...new Map([...oldEntry.minutesUrls, ...newEntry.minutesUrls].map(obj => [obj.url, obj])).values()]
+  mergedData.urls = [...new Map(
+    [...oldEntry.urls, ...newEntry.urls]
+    .map(obj => [`${obj.url}_${obj.date}`, obj]))
+    .values()
+  ]
+  mergedData.minutesUrls = [...new Map(
+    [...oldEntry.minutesUrls, ...newEntry.minutesUrls]
+    .map(obj => [`${obj.url}_${obj.date}`, obj]))
+    .values()
+  ]
   mergedData.createDate = moment(oldEntry.createDate).isBefore(moment(newEntry.createDate)) ? oldEntry.createDate : newEntry.createDate
   mergedData.updateDate = moment().format('YYYY-MM-DD')
 
