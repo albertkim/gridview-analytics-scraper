@@ -27,6 +27,7 @@ export interface IRezoningStats {
   rentals: number | null
   hotels: number | null
   fsr: number | null
+  storeys: number | null
 }
 
 // This interface is what is processed by GPT. Other fields in the full detail object are added ia code.
@@ -271,6 +272,7 @@ export function checkGPTJSON(json: any): boolean {
   if (!checkNumberOrNull(json.stats.rentals)) return false
   if (!checkNumberOrNull(json.stats.hotels)) return false
   if (!checkNumberOrNull(json.stats.fsr)) return false
+  if (!checkNumberOrNull(json.stats.storeys)) return false
 
   // Check zoning object
   if (typeof json.zoning !== 'object' || json.zoning === null) return false

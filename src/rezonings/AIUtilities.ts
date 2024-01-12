@@ -156,6 +156,7 @@ export function getGPTBaseRezoningStatsQuery(description: string) {
       rentals: total number of rental units - 0 if no explicit mention of rentals - null if unclear
       hotels: total number of hotel units - 0 if no explicit mention of hotels - null if unclear
       fsr: total floor space ratio or null if unclear
+			storeys: total number of storeys - pick the tallest if multiple - null if unclear
     }
     Description here: ${description}
   `

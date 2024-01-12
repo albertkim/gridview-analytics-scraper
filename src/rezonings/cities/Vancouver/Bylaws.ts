@@ -101,7 +101,8 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           stratas: null,
           rentals: null,
           hotels: null,
-          fsr: null
+          fsr: null,
+          storeys: null
         },
         status: 'approved',
         dates: {
