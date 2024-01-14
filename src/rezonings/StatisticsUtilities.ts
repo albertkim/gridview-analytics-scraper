@@ -15,8 +15,9 @@ export async function getStatistics() {
   printStatistic('Total news', getNewsCountPerCity(news))
   printStatistic('Total rezonings', getRezoningCountPerCity(rezonings))
   printStatistic('Similar addresses', getSimilarAddresses(rezonings, 0.7))
+  printStatistic('Addresses without coordinates', getCoordinateErrorsPerCity(rezonings))
   printStatistic('Rezoning date errors', getDateErrorsPerCity(rezonings))
-  printStatistic('Rezoning URL date errors', getURLDateErrosPerCity(rezonings))
+  printStatistic('Rezoning URL date errors', getURLDateErrorsPerCity(rezonings))
 
 }
 
@@ -84,7 +85,7 @@ interface ICityDateUrlErrors {
   emptyDates: number
 }
 
-function getURLDateErrosPerCity(rezonings: IFullRezoningDetail[]) {
+function getURLDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
 
   const results: ICityDateUrlErrors[] = []
 
@@ -148,6 +149,23 @@ function getSimilarAddresses(rezonings: IFullRezoningDetail[], similarityScore: 
 
   return results
 
+}
+
+function getCoordinateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
+  const results: {city: string, count: number}[] = []
+
+  const cities = [...new Set(rezonings.map(rezoning => rezoning.city))]
+
+  for (const city of cities) {
+    const rezoningsInCity = rezonings.filter(rezoning => rezoning.city === city)
+    const count = rezoningsInCity.filter(rezoning => !rezoning.location.latitude || !rezoning.location.longitude).length
+    results.push({
+      city,
+      count
+    })
+  }
+
+  return results
 }
 
 interface ICityErrors {

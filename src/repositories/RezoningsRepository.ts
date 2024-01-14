@@ -13,6 +13,15 @@ export type ZoningType =
   'industrial' |
   'commercial'
 
+export const ZoningTypeValues = [
+  'single-family residential',
+  'townhouse',
+  'mixed use',
+  'multi-family residential',
+  'industrial',
+  'commercial'
+]
+
 export type ZoningStatus =
   'applied' |
   'pending' |
@@ -20,6 +29,15 @@ export type ZoningStatus =
   'approved' |
   'denied' |
   'withdrawn'
+
+export const ZoningStatusValues = [
+  'applied',
+  'pending',
+  'public hearing',
+  'approved',
+  'denied',
+  'withdrawn'
+]
 
 export interface IRezoningStats {
   buildings: number | null
