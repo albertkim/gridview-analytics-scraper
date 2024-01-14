@@ -1,10 +1,10 @@
 import moment from 'moment'
+import chalk from 'chalk'
 import { RawRepository } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../../repositories/RezoningsRepository'
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
-import chalk from 'chalk'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 

@@ -5,6 +5,7 @@ import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../..
 import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
 import { downloadPDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
+import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
@@ -55,6 +56,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
 
     // Return full rezoning details object
     const fullRezoningDetails: IFullRezoningDetail = {
+      id: generateID('rez'),
       ...partialRezoningDetails,
       city: news.city,
       metroCity: news.metroCity,

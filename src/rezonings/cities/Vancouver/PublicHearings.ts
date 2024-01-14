@@ -5,6 +5,7 @@ import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../..
 import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
+import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
@@ -26,15 +27,15 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     const parsedPDF = await parsePDF(pdf3pages as Buffer)
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
+    let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
       rezoningId: 'null'
     }))
-    if (!checkGPTJSON(partialRezoningDetails)) {
+    if (!checkGPTJSON(partialRezoningDetailsRaw)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetails = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
+      partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
         rezoningId: 'null'
       }))
-      if (!checkGPTJSON(partialRezoningDetails)) {
+      if (!checkGPTJSON(partialRezoningDetailsRaw)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))
         ErrorsRepository.addError(news)
@@ -44,7 +45,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     console.log(chalk.bgGreen('Partial rezoning details GPT JSON is valid'))
 
     // Cast as partial rezoning details
-    partialRezoningDetails = partialRezoningDetails as IPartialRezoningDetail
+    const partialRezoningDetails = partialRezoningDetailsRaw as IPartialRezoningDetail
 
     // Get stats
     const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')
@@ -57,6 +58,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
 
     // Return full rezoning details object
     const fullRezoningDetails: IFullRezoningDetail = {
+      id: generateID('rez'),
       ...partialRezoningDetails,
       city: news.city,
       metroCity: news.metroCity,

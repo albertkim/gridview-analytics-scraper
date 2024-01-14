@@ -48,6 +48,7 @@ export interface IPartialRezoningDetail {
 }
 
 export interface IFullRezoningDetail extends IPartialRezoningDetail {
+  id: string
   city: string
   metroCity: string | null
   status: ZoningStatus
@@ -233,12 +234,12 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   })
   mergedData.urls = [...new Map(
     [...oldEntry.urls, ...newEntry.urls]
-    .map(obj => [`${obj.url}_${obj.date}`, obj]))
+    .map(obj => [`${obj.url}_${obj.date}_${obj.type}`, obj]))
     .values()
   ]
   mergedData.minutesUrls = [...new Map(
     [...oldEntry.minutesUrls, ...newEntry.minutesUrls]
-    .map(obj => [`${obj.url}_${obj.date}`, obj]))
+    .map(obj => [`${obj.url}_${obj.date}}`, obj]))
     .values()
   ]
   mergedData.createDate = moment(oldEntry.createDate).isBefore(moment(newEntry.createDate)) ? oldEntry.createDate : newEntry.createDate

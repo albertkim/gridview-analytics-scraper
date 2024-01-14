@@ -6,6 +6,7 @@ import { imageQuery } from '../../AIUtilities'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
 import { downloadPDF, generateScreenshotFromPDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
+import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfBylaw(news: IMeetingDetail) {
   const hasReportURLs = news.reportUrls.length > 0
@@ -72,6 +73,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     return bylawData.map((bylaw) => {
       return {
+        id: generateID('rez'),
         ...bylaw,
         city: news.city,
         metroCity: news.metroCity,

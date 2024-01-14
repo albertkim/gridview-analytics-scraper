@@ -3,6 +3,7 @@ import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, ZoningType } from '../../../repositories/RezoningsRepository'
 import { chatGPTTextQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray, parsePDF } from '../../PDFUtilities'
+import { generateID } from '../../../repositories/GenerateID'
 
 interface IBylawData {
   address: string
@@ -53,7 +54,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         continue
       }
 
-      let bylawDetail = await chatGPTTextQuery(`
+      let bylawDetailRaw = await chatGPTTextQuery(`
         Identify if the given text is a zoning bylaw amendment/housing agreement. If so, return the following in JSON format. Otherwise return a {error: message}.
         {
           address: address in question - if multiple addresses in the same section comma separate
@@ -69,13 +70,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         Here is the text: ${page.text}
       `)
 
-      if (!bylawDetail) {
+      if (!bylawDetailRaw) {
         continue
       }
 
-      bylawDetail = bylawDetail as IBylawData
+      const bylawDetail = bylawDetailRaw as IBylawData
 
       const fullRezoningDetail: IFullRezoningDetail = {
+        id: generateID('rez'),
         ...bylawDetail,
         city: news.city,
         metroCity: news.metroCity,
