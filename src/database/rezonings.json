@@ -15760,7 +15760,7 @@
     "applicant": "Vivid Green Architects Inc.",
     "behalf": "Ding City Development, Jack Yao (owner)",
     "description": "Rezoning from 'Single Detached (RS1/E)' to a new Site Specific 'Two-Unit Dwellings (ZD7) - Francis Road (Blundell)' zone in order to permit the property to be subdivided to create four duplex lots with shared access from Francis Road. A preliminary site plan, streetscape elevation, and renderings are provided for reference.",
-    "type": "Two-Unit Dwellings",
+    "type": "single-family residential",
     "stats": {
       "buildings": 4,
       "stratas": 8,
