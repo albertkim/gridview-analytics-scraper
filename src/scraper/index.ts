@@ -12,7 +12,7 @@ const citiesToScrape: string[] = [
   // 'BC (province)',
   // 'Vancouver',
   // 'Richmond',
-  'Burnaby'
+  // 'Burnaby'
 ]
 
 async function main() {
@@ -21,7 +21,7 @@ async function main() {
     const bcData = await scrapeBC({
       startDate: startDate,
       endDate: null,
-      headless: false
+      headless: 'new'
     })
     RawRepository.updateNews('BC (province)', bcData)
   }
@@ -30,7 +30,7 @@ async function main() {
     const vancouverData = await scrapeVancouver({
       startDate: startDate,
       endDate: null,
-      headless: false
+      headless: 'new'
     })
     RawRepository.updateNews('Vancouver', vancouverData)
   }
@@ -39,7 +39,7 @@ async function main() {
     const richmondData = await scrapeRichmond({
       startDate: startDate,
       endDate: null,
-      headless: false
+      headless: 'new'
     })
     RawRepository.updateNews('Richmond', richmondData)
   }
@@ -48,9 +48,9 @@ async function main() {
     const burnabyData = await scrapeBurnaby({
       startDate: startDate,
       endDate: null,
-      headless: false
+      headless: 'new'
     })
-    // RawRepository.updateNews('Burnaby', burnabyData)
+    RawRepository.updateNews('Burnaby', burnabyData)
   }
 
   // Bulk operations
