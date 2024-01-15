@@ -1,9 +1,10 @@
 import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 import moment from 'moment'
+import chalk from 'chalk'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfItems = 40
+const numberOfPastYears = 5
 
 interface IOptions {
   startDate: string | null
@@ -43,6 +44,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   console.log(`Browser and page initialized`)
 
+  // Still need to go to the start URL first and select "past" because the page seems to remember the "past" selection for future URLs
   await page.goto(startUrl)
 
   await page.waitForSelector('#maincontent')
@@ -57,22 +59,20 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     $('a:contains("City Council Meeting")').trigger('click')
   })
 
-  await page.waitForSelector('.calendar-item')
+  const meetingObjects: {url: string, meetingType: string}[] = []
 
-  const meetingUrls = await page.evaluate(async () => {
-    const urls = $('.calendar-item a:contains("City Council Meeting")')
-      .map((index, element) => (element as HTMLAnchorElement).href)
-      .get()
-    return urls
-  })
+  for (let i = 0; i < numberOfPastYears; i++) {
+    const newMeetingObjects = await scrapeMeetingListPage(page, moment().subtract(i, 'year').format('YYYY'))
+    meetingObjects.push(...newMeetingObjects)
+  }
 
-  console.log(meetingUrls)
+  console.log(meetingObjects)
 
   let results: IMeetingDetail[] = []
-  for (let i = 0; i < meetingUrls.length && i < numberOfItems; i++) {
-    console.log(`Scraping page details: ${i}`)
-    const meetingUrl = meetingUrls[i]
-    const meetingResults = await scrapeParentPage(page, meetingUrl)
+  for (let i = 0; i < meetingObjects.length; i++) {
+    console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
+    const meeting = meetingObjects[i]
+    const meetingResults = await scrapeMeetingPage(page, meeting.url, meeting.meetingType)
     results = [...results, ...meetingResults].filter((r) => r.reportUrls.length > 0)
   }
 
@@ -88,13 +88,85 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
 }
 
+// The Burnaby meting lists are paginated by year
+async function scrapeMeetingListPage(page: Page, year: string): Promise<{url: string, meetingType: string}[]> {
+
+  console.log(chalk.bgWhite(`Scraping ${year} meeting list page`))
+
+  // Get all city council meetings (may not exist at the start of new year)
+  await page.goto(`https://pub-burnaby.escribemeetings.com/?FillWidth=1&Year=${year}&Expanded=City%20Council%20Meeting`)
+  await new Promise((resolve) => {setTimeout(resolve, 2000)})
+  await page.waitForSelector('.MeetingTypeList:not([style*="display: none"])')
+
+  const councilMeetingExists = await page.evaluate(async () => {
+    const meetingTypes = $('.MeetingTypeList:visible .MeetingTypeNameText').map((index, element) => {
+      return $(element).text().trim()
+    }).get()
+    return meetingTypes.includes('City Council Meeting')
+  })
+
+  let councilMeetingObjects: {url: string, meetingType: string}[] = []
+
+  if (councilMeetingExists) {
+    await page.waitForFunction(() => {
+      return [...document.querySelectorAll('.calendar-item')].some(e => e.parentElement!.style.display !== 'none')
+    })
+    councilMeetingObjects = await page.evaluate(async () => {
+      const entries = $('.calendar-item .meeting-title-heading>a')
+      const entryObjects = entries.map((index, element) => {
+        return {
+          url: (element as HTMLAnchorElement).href!,
+          meetingType: $(element).text()
+        }
+      }).get()
+      return entryObjects
+    })
+  }
+
+  // Get all public hearings (may not exist at the start of new year)
+  await page.goto(`https://pub-burnaby.escribemeetings.com/?FillWidth=1&Year=${year}&Expanded=Public%20Hearing`)
+  await new Promise((resolve) => {setTimeout(resolve, 2000)})
+  await page.waitForSelector('.MeetingTypeList:not([style*="display: none"])')
+
+  const publicHearingMeetingExists = await page.evaluate(async () => {
+    const meetingTypes = $('.MeetingTypeList:visible .MeetingTypeNameText').map((index, element) => {
+      return $(element).text().trim()
+    }).get()
+    return meetingTypes.includes('Public Hearing')
+  })
+
+  let publicHearingMeetingObjects: {url: string, meetingType: string}[] = []
+
+  if (publicHearingMeetingExists) {
+    await page.waitForFunction(() => {
+      return [...document.querySelectorAll('.calendar-item')].some(e => e.parentElement!.style.display !== 'none')
+    })
+    publicHearingMeetingObjects = await page.evaluate(async () => {
+      const entries = $('.calendar-item .meeting-title-heading>a')
+      const entryObjects = entries.map((index, element) => {
+        return {
+          url: (element as HTMLAnchorElement).href!,
+          meetingType: $(element).text()
+        }
+      }).get()
+      return entryObjects
+    })
+  }
+
+  console.log(chalk.bgGreen(`${year} council meetings: ${councilMeetingObjects.length}`))
+  console.log(chalk.bgGreen(`${year} public hearings: ${publicHearingMeetingObjects.length}`))
+
+  return [...councilMeetingObjects, ...publicHearingMeetingObjects]
+
+}
+
 // Parent page refers to the city council meeting page, which includes a list of topics
-async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail[]> {
+async function scrapeMeetingPage(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 3000)})
 
-  const results = await page.evaluate(async () => {
+  const results = await page.evaluate(async (meetingType) => {
     const date = $('.Date').text()
 
     // Only look for items with attachments
@@ -123,7 +195,7 @@ async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail
 
       items.push({
         date: date,
-        meetingType: 'City council',
+        meetingType: meetingType,
         title: title,
         resolutionId: null,
         contents: contents,
@@ -132,7 +204,7 @@ async function scrapeParentPage(page: Page, url: string): Promise<IMeetingDetail
     }
 
     return items
-  })
+  }, meetingType)
 
   return results.map((r) => {
     return {

@@ -9,10 +9,10 @@ import { BulkUtilities } from './BulkUtilities'
 const startDate = '2021-01-01'
 const endDate = null
 const citiesToScrape: string[] = [
-  'BC (province)',
+  // 'BC (province)',
   // 'Vancouver',
   // 'Richmond',
-  // 'Burnaby'
+  'Burnaby'
 ]
 
 async function main() {
@@ -50,7 +50,7 @@ async function main() {
       endDate: null,
       headless: false
     })
-    RawRepository.updateNews('Burnaby', burnabyData)
+    // RawRepository.updateNews('Burnaby', burnabyData)
   }
 
   // Bulk operations

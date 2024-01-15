@@ -1,5 +1,5 @@
 import { cleanBurnabyRezoningId } from '../rezonings/cities/Burnaby/BurnabyUtilities'
-import { parseApplication } from '../rezonings/cities/Burnaby/Applications'
+import { checkIfApplication, parseApplication } from '../rezonings/cities/Burnaby/Applications'
 
 test('Burnaby ID cleaning', async () => {
   
@@ -13,29 +13,36 @@ test('Burnaby ID cleaning', async () => {
 
 })
 
-test.skip('Burnaby check application', async () => {
+const realScrapedNews = {
+  "city": "Burnaby",
+  "metroCity": "Metro Vancouver",
+  "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&Agenda=Agenda&lang=English&Item=59&Tab=attachments",
+  "date": "2023-12-11",
+  "meetingType": "City council",
+  "title": "REZ #20-09 - 3777 AND 3791 KINGSWAY - HIGH-DENSITY MIXED-USE DEVELOPMENT",
+  "resolutionId": null,
+  "contents": "Purpose: To seek Council authorization to forward this application to First Reading and to a future Public Hearing date, if necessary.",
+  "reportUrls": [
+    {
+      "title": "REZ 20-09 3777 and 3791 Kingsway PH Report 2023-12-11.pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73390"
+    },
+    {
+      "title": "Attachment 1 - REZ 20-09 - Sketch 1 and Sketch 2 .pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73391"
+    }
+  ],
+  "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&lang=English"
+}
 
-  const realScrapedNews = {
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&Agenda=Agenda&lang=English&Item=59&Tab=attachments",
-    "date": "2023-12-11",
-    "meetingType": "City council",
-    "title": "REZ #20-09 - 3777 AND 3791 KINGSWAY - HIGH-DENSITY MIXED-USE DEVELOPMENT",
-    "resolutionId": null,
-    "contents": "Purpose: To seek Council authorization to forward this application to First Reading and to a future Public Hearing date, if necessary.",
-    "reportUrls": [
-      {
-        "title": "REZ 20-09 3777 and 3791 Kingsway PH Report 2023-12-11.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73390"
-      },
-      {
-        "title": "Attachment 1 - REZ 20-09 - Sketch 1 and Sketch 2 .pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73391"
-      }
-    ],
-    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&lang=English"
-  }
+test('Burnaby check application', async () => {
+
+  const isApplication = await checkIfApplication(realScrapedNews)
+  expect(isApplication).toEqual(true)
+
+})
+
+test.skip('Burnaby parse application', async () => {
   
   const rezoning = await parseApplication(realScrapedNews)
 
