@@ -22,7 +22,7 @@ interface BaseRezoningQueryParams {
 // Make sure that the query includes the word 'JSON'
 // Defaults to 3.5, specify 4 if you want to use 4
 export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
-	console.log(`Sending text query to ChatGPT`)
+	console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}}`)
 
 	const gptVersionMapping = {
 		'3.5': 'gpt-3.5-turbo-1106',
@@ -125,14 +125,15 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
         rentals: total number of rental units or null if unclear - do not default to rental if not specified
         hotels: total number of hotel units (not buildings) or null if unclear
         fsr: total floor space ratio or null if unclear
+				storeys: total number of storeys - pick the tallest if multiple - null if unclear
       }
       zoning: {
-        previousZoningCode: city zoning code before rezoning or null if unclear
+        previousZoningCode: city zoning code before rezoning or null if unclear - keep short
         previousZoningDescription: best description of previous zoning code (ex. low density residential)
-        newZoningCode: city zoning code after rezoning or null if unclear
+        newZoningCode: city zoning code after rezoning or null if unclear - keep short
         newZoningDescription: best description of new zoning code (ex. high density residential)
       }
-      status: either applied, pending, public hearing, approved, denied, withdrawn
+      status: either applied, public hearing, approved, denied, withdrawn
       dates: {
         appliedDate: if this is an application, the date of this document in YYYY-MM-DD or null if unclear
         publicHearingDate: if this is for a public hearing, the date of this public hearing in YYYY-MM-DD or null if unclear

@@ -1,34 +1,43 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
-import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
+import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
+import { chatGPTTextQuery, getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
 import { generateID } from '../../../repositories/GenerateID'
-import { cleanRichmondRezoningId } from './RichmondUtilities'
+import { cleanBurnabyRezoningId } from './BurnabyUtilities'
 
 export function checkIfApplication(news: IMeetingDetail) {
-  const hasReportURLs = news.reportUrls.length > 0
-  const isCouncil = news.meetingType === 'Council Minutes'
-  const titleHasRezoning = news.title.toLowerCase().includes('rezon')
-  const titleHasApplication = news.title.toLowerCase().includes('application')
-  return hasReportURLs && isCouncil && titleHasRezoning && titleHasApplication
+  const isCityCouncil = news.meetingType === 'City council'
+  const hasRez = news.title.toLowerCase().includes('rez')
+  const hasRezoningId = news.title.toLowerCase().includes('#')
+  const hasDash = news.title.toLowerCase().includes('-')
+
+  return isCityCouncil && hasRez && hasRezoningId && hasDash
 }
 
-const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'
+const baseRezoningIdQuery = 'ID in the format of "REZ #XX-XX", usually in the brackets - correct the format if necessary - null if not found'
 
-export async function parseApplication(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
+export async function parseApplication(news: IMeetingDetail) {
 
   try {
 
     // Parse the referral report PDF
     const firstPDFURL = news.reportUrls[0].url
     const pdfData = await downloadPDF(firstPDFURL)
-    const pdf3pages = await generatePDF(pdfData, {
-      maxPages: 3
-    })
-    const parsedPDF = await parsePDF(pdf3pages as Buffer)
+
+    // Burnaby rezoning recommendations can be quite lengthy - we need the first page (maybe first 2 to be sure) to get the basic details, and the executive summary to get the full details
+    const pdfTextArray = await generatePDFTextArray(pdfData)
+    const firstTwoPages = pdfTextArray.length > 2 ? pdfTextArray.slice(0, 2) : pdfTextArray
+    const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY'))
+    const pageAfterExecutiveSummary = pdfTextArray[executiveSummaryPageIndex + 1] || ''
+
+    if (!executiveSummaryPageIndex) {
+      return null
+    }
+
+    const parsedPDF = [...firstTwoPages, executiveSummaryPageIndex, pageAfterExecutiveSummary].join('\n')
 
     // Get partial rezoning details from GPT
     let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
@@ -62,10 +71,10 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     }
 
     // Return full rezoning details object
-    const fullRezoningDetails: IFullRezoningDetail = {
+    return {
       id: generateID('rez'),
       ...partialRezoningDetails,
-      rezoningId: cleanRichmondRezoningId(partialRezoningDetails.rezoningId),
+      rezoningId: cleanBurnabyRezoningId(partialRezoningDetails.rezoningId),
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {
@@ -97,10 +106,10 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
       updateDate: moment().format('YYYY-MM-DD')
     }
 
-    return fullRezoningDetails
-
   } catch (error) {
-    console.error(error)
+    console.error(chalk.bgRed('Error parsing application'))
+    console.error(chalk.red(error))
+    ErrorsRepository.addError(news)
     return null
   }
 
