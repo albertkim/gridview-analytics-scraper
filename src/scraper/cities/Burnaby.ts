@@ -5,8 +5,8 @@ import chalk from 'chalk'
 import { runPromisesInBatches } from '../BulkUtilities'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfYears = 8 // TODO: CHANGE THIS BACK TO 7
-const parallelBrowserLimit = 2
+const numberOfYears = 8
+const parallelBrowserLimit = 8
 
 interface IOptions {
   startDate: string | null
