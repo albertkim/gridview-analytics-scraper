@@ -49,7 +49,7 @@ async function main() {
       endDate: null,
       headless: 'new'
     })
-    RawRepository.updateNews('Burnaby', burnabyData)
+    // RawRepository.updateNews('Burnaby', burnabyData)
   }
 
 }

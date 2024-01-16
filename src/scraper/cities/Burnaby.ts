@@ -5,8 +5,8 @@ import chalk from 'chalk'
 import { runPromisesInBatches } from '../BulkUtilities'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfYears = 7 // TODO: CHANGE THIS BACK TO 7
-const parallelBrowserLimit = 10
+const numberOfYears = 8 // TODO: CHANGE THIS BACK TO 7
+const parallelBrowserLimit = 2
 
 interface IOptions {
   startDate: string | null
@@ -43,6 +43,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   // Inject jQuery into the page
   await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
+  await page.addScriptTag({url: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'})
 
   console.log(`Browser and page initialized`)
 
@@ -61,12 +62,16 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     $('a:contains("City Council Meeting")').trigger('click')
   })
 
-  const meetingObjects: {url: string, meetingType: string}[] = []
+  const meetingObjects: {url: string, meetingType: string, date: string}[] = []
 
   for (let i = 0; i < numberOfYears; i++) {
     const newMeetingObjects = await scrapeMeetingListPage(page, moment().subtract(i, 'year').format('YYYY'))
     meetingObjects.push(...newMeetingObjects)
   }
+
+  // FOR TESTING PURPOSES ONLY
+  // const newMeetingObjects = await scrapeMeetingListPage(page, '2019')
+  // meetingObjects.push(...newMeetingObjects)
 
   // Scrape X pages in parallel
   const promiseArray = meetingObjects.map((meeting, i) => {
@@ -79,8 +84,13 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
         width: 1980,
         height: 1080
       })
-      console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
-      const meetingResults = await scrapeMeetingPage(parallelPage, meeting.url, meeting.meetingType)
+      console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length} ${meeting.url}`))
+      let meetingResults: IMeetingDetail[] = []
+      if (moment(new Date(meeting.date)).isAfter('2020-02-29')) {
+        meetingResults = await scrapeMeetingPageAfterFeb2020(parallelPage, meeting.url, meeting.meetingType)
+      } else {
+        meetingResults = await scrapeMeetingPageBeforeFeb2020(parallelPage, meeting.url, meeting.meetingType)
+      }
       if (meetingResults.length > 0) {
         console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
       } else {
@@ -106,7 +116,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 }
 
 // The Burnaby meting lists are paginated by year
-async function scrapeMeetingListPage(page: Page, year: string): Promise<{url: string, meetingType: string}[]> {
+async function scrapeMeetingListPage(page: Page, year: string): Promise<{url: string, meetingType: string, date: string}[]> {
 
   console.log(chalk.bgWhite(`Scraping ${year} meeting list page`))
 
@@ -115,70 +125,78 @@ async function scrapeMeetingListPage(page: Page, year: string): Promise<{url: st
   await new Promise((resolve) => {setTimeout(resolve, 2000)})
   await page.waitForSelector('.MeetingTypeList:not([style*="display: none"])')
 
-  const councilMeetingExists = await page.evaluate(async () => {
-    const meetingTypes = $('.MeetingTypeList:visible .MeetingTypeNameText').map((index, element) => {
-      return $(element).text().trim()
-    }).get()
-    return meetingTypes.includes('City Council Meeting')
-  })
-
-  let councilMeetingObjects: {url: string, meetingType: string}[] = []
-
-  if (councilMeetingExists) {
-    await page.waitForFunction(() => {
-      return [...document.querySelectorAll('.calendar-item')].some(e => e.parentElement!.style.display !== 'none')
-    })
-    councilMeetingObjects = await page.evaluate(async () => {
-      const entries = $('.calendar-item .meeting-title-heading>a')
-      const entryObjects = entries.map((index, element) => {
-        return {
-          url: (element as HTMLAnchorElement).href!,
-          meetingType: $(element).text()
-        }
-      }).get()
-      return entryObjects
-    })
-  }
+  const councilMeetingObjects = await parseMeetingListEntries(page, 'City Council Meeting')
 
   // Get all public hearings (may not exist at the start of new year)
   await page.goto(`https://pub-burnaby.escribemeetings.com/?FillWidth=1&Year=${year}&Expanded=Public%20Hearing`)
   await new Promise((resolve) => {setTimeout(resolve, 2000)})
   await page.waitForSelector('.MeetingTypeList:not([style*="display: none"])')
 
-  const publicHearingMeetingExists = await page.evaluate(async () => {
+  let publicHearingMeetingObjects = await parseMeetingListEntries(page, 'Public Hearing')
+
+  // Legacy city council meetings before feb 2020
+  await page.goto(`https://pub-burnaby.escribemeetings.com/?FillWidth=1&Year=${year}&Expanded=City%20Council`)
+  await new Promise((resolve) => {setTimeout(resolve, 2000)})
+  await page.waitForSelector('.MeetingTypeList:not([style*="display: none"])')
+
+  const legacyCouncilMeetingObjects = await parseMeetingListEntries(page, 'City Council')
+
+  console.log(chalk.bgGreen(`${year} council meetings: ${councilMeetingObjects.length}`))
+  console.log(chalk.bgGreen(`${year} public hearings: ${publicHearingMeetingObjects.length}`))
+  console.log(chalk.bgGreen(`${year} legacy council meetings: ${legacyCouncilMeetingObjects.length}`))
+
+  return [...councilMeetingObjects, ...publicHearingMeetingObjects, ...legacyCouncilMeetingObjects]
+
+}
+
+export async function parseMeetingListEntries(page: Page, waitForMeeting: string) {
+
+  const councilMeetingExists = await page.evaluate(async (waitForMeeting: string) => {
     const meetingTypes = $('.MeetingTypeList:visible .MeetingTypeNameText').map((index, element) => {
       return $(element).text().trim()
     }).get()
-    return meetingTypes.includes('Public Hearing')
-  })
+    return meetingTypes.includes(waitForMeeting)
+  }, waitForMeeting)
 
-  let publicHearingMeetingObjects: {url: string, meetingType: string}[] = []
+  let councilMeetingObjects: {url: string, meetingType: string, date: string}[] = []
 
-  if (publicHearingMeetingExists) {
+  if (councilMeetingExists) {
     await page.waitForFunction(() => {
       return [...document.querySelectorAll('.calendar-item')].some(e => e.parentElement!.style.display !== 'none')
     })
-    publicHearingMeetingObjects = await page.evaluate(async () => {
-      const entries = $('.calendar-item .meeting-title-heading>a')
+    councilMeetingObjects = await page.evaluate(async () => {
+      const entries = $('.calendar-item:has(.meeting-title-heading>a:visible)')
       const entryObjects = entries.map((index, element) => {
+        const meetingLink = $(element).find('.meeting-title-heading a')
         return {
-          url: (element as HTMLAnchorElement).href!,
-          meetingType: $(element).text()
+          url: new URL(meetingLink.attr('href')!, window.location.href).href,
+          meetingType: meetingLink.text(),
+          date: $(element).find('.meeting-date').text().split('@')[0]
         }
       }).get()
       return entryObjects
     })
   }
 
-  console.log(chalk.bgGreen(`${year} council meetings: ${councilMeetingObjects.length}`))
-  console.log(chalk.bgGreen(`${year} public hearings: ${publicHearingMeetingObjects.length}`))
-
-  return [...councilMeetingObjects, ...publicHearingMeetingObjects]
+  return councilMeetingObjects
 
 }
 
+interface IPartialMeetingDetails {
+  date: string
+  meetingType: string
+  title: string
+  resolutionId: null
+  contents: string
+  reportUrls: {
+      title: string
+      url: string
+  }[]
+}
+
 // Parent page refers to the city council meeting page, which includes a list of topics
-async function scrapeMeetingPage(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
+// Note that after Feb 2020, the meeting format changed, so entirely different jquery selectors are needed
+async function scrapeMeetingPageAfterFeb2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 3000)})
@@ -197,7 +215,7 @@ async function scrapeMeetingPage(page: Page, url: string, meetingType: string): 
       return true
     }).get()
 
-    const items = []
+    const items: IPartialMeetingDetails[] = []
 
     for (const item of itemElements) {
       let title = $(item).find('a').first().text()
@@ -215,6 +233,94 @@ async function scrapeMeetingPage(page: Page, url: string, meetingType: string): 
       await new Promise((resolve) => {setTimeout(resolve, 2000)})
 
       const reportUrls = $('.AgendaItemSelectedDetails').find('.OrderedAttachment:not(:hidden) a').map((index, element) => {
+        return {
+          title: $(element).text(),
+          url: new URL($(element).attr('href')!, window.location.origin).href
+        }
+      }).get()
+
+      items.push({
+        date: date,
+        meetingType: meetingType,
+        title: `${parentLabel} - ${title}`,
+        resolutionId: null,
+        contents: contents,
+        reportUrls: reportUrls
+      })
+    }
+
+    return items
+  }, meetingType)
+
+  return results.map((r) => {
+    return {
+      city: 'Burnaby',
+      metroCity: 'Metro Vancouver',
+      url: page.url(),
+      ...r,
+      minutesUrl: url
+    }
+  })
+
+}
+
+async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
+
+  await page.goto(url)
+  await new Promise((resolve) => {setTimeout(resolve, 3000)})
+
+  const results = await page.evaluate(async (meetingType) => {
+    // Don't know which tr includes the date, so search each one and see which one is likely to be a date
+    let date: string | null = null
+    const potentialDateElements = $('.MsoNormalTable').first().find('tr').get()
+    potentialDateElements.forEach((element) => {
+      const text = $(element).text().toLowerCase()
+      // Check that the text contains any full month string
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      const containsMonth = months.some((month) => text.includes(month.toLowerCase()))
+      if (containsMonth) {
+        date = text.toLowerCase().split(' at ')[0]
+        .replace(/\s+/g, ' ')
+        .replace(/[\r\n]+/g, '').trim()
+      }
+    })
+
+    if (!date) {
+      return []
+    }
+
+    // Only look for items with attachments
+    // Non-content items have an no-class div that contains all of their child elements - we want to ignore these
+    // TODO: This part doesn't seem to be working properly for some reason, not filtering out the parent items...
+    const itemElements = $('.WordSection1').find('.MsoNormalTable:has(a[href="#"]:visible)').get()
+
+    const items: IPartialMeetingDetails[] = []
+
+    for (const item of itemElements) {
+      const title = $(item).find('tr:eq(0) td:eq(1) p')
+        .map((index, element) => $(element).text())
+        .get().join(' - ')
+        .replace(/\s+/g, ' ') // Replace consecutive spaces
+        .replace(/[\r\n]+/g, '').trim() // Remove special characters
+
+      // Get the parent label - go 2 siblings up (should be a table), and check the text of the 3rd row - after filtering out empty-ish strings, should be empty
+      const parentLabel = $(item)
+        .prevAll('.MsoNormalTable:has(tr:nth-child(1)):not(:has(tr:nth-child(2)))')
+        .first().find('tr td:eq(1)').text()
+        .replace(/\s+/g, ' ')
+        .replace(/[\r\n]+/g, '').trim()
+
+      const contents = $(item).find('tr:eq(2)').text()
+        .replace(/\s+/g, ' ')
+        .replace(/[\n\r]/g, '').trim()
+
+      if (!title || !parentLabel || !contents) continue
+
+      // Clicking the item opens up a floating panel with links. Also changes URL.
+      const itemLink = $(item).find('a')
+      itemLink.trigger('click')
+
+      const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
         return {
           title: $(element).text(),
           url: new URL($(element).attr('href')!, window.location.origin).href
