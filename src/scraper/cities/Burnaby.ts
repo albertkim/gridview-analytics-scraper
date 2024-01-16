@@ -69,35 +69,40 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     meetingObjects.push(...newMeetingObjects)
   }
 
-  // FOR TESTING PURPOSES ONLY
+  // FOR TESTING PURPOSES ONLY TO SCRAPE A SINGLE YEAR
   // const newMeetingObjects = await scrapeMeetingListPage(page, '2019')
   // meetingObjects.push(...newMeetingObjects)
 
   // Scrape X pages in parallel
   const promiseArray = meetingObjects.map((meeting, i) => {
     return async () => {
-      const parallelBrowser = await puppeteer.launch({
-        headless: options.headless !== undefined ? options.headless : 'new'
-      })
-      const parallelPage = await parallelBrowser.newPage()
-      parallelPage.setViewport({
-        width: 1980,
-        height: 1080
-      })
-      console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length} ${meeting.url}`))
-      let meetingResults: IMeetingDetail[] = []
-      if (moment(new Date(meeting.date)).isAfter('2020-02-29')) {
-        meetingResults = await scrapeMeetingPageAfterFeb2020(parallelPage, meeting.url, meeting.meetingType)
-      } else {
-        meetingResults = await scrapeMeetingPageBeforeFeb2020(parallelPage, meeting.url, meeting.meetingType)
+      try {
+        const parallelBrowser = await puppeteer.launch({
+          headless: options.headless !== undefined ? options.headless : 'new'
+        })
+        const parallelPage = await parallelBrowser.newPage()
+        parallelPage.setViewport({
+          width: 1980,
+          height: 1080
+        })
+        console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length} ${meeting.url}`))
+        let meetingResults: IMeetingDetail[] = []
+        if (moment(new Date(meeting.date)).isAfter('2020-02-29')) {
+          meetingResults = await scrapeMeetingPageAfterFeb2020(parallelPage, meeting.url, meeting.meetingType)
+        } else {
+          meetingResults = await scrapeMeetingPageBeforeFeb2020(parallelPage, meeting.url, meeting.meetingType)
+        }
+        if (meetingResults.length > 0) {
+          console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
+        } else {
+          console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
+        }
+        await parallelBrowser.close()
+        return meetingResults.filter((r) => r.reportUrls.length > 0)
+      } catch (error) {
+        console.error(chalk.bgRed(error))
+        return []
       }
-      if (meetingResults.length > 0) {
-        console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
-      } else {
-        console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
-      }
-      await parallelBrowser.close()
-      return meetingResults.filter((r) => r.reportUrls.length > 0)
     }
   })
 
@@ -218,11 +223,11 @@ async function scrapeMeetingPageAfterFeb2020(page: Page, url: string, meetingTyp
     const items: IPartialMeetingDetails[] = []
 
     for (const item of itemElements) {
-      let title = $(item).find('a').first().text()
+      let title = $(item).find('a').first().text().replace(/\s+/g, ' ').replace(/[\n\r]/g, '').trim()
       if (title) title = title.trim()
       // Get the parent label - first parent is div, previous element to that is the parent label
-      const parentLabel = $(item).parents().prev().first().find('.AgendaItemTitle').text()
-      const contents = $(item).find('.AgendaItemDescription').text()
+      const parentLabel = $(item).parents().prev().first().find('.AgendaItemTitle').text().replace(/\s+/g, ' ').replace(/[\n\r]/g, '').trim()
+      const contents = $(item).find('.AgendaItemDescription').text().replace(/\s+/g, ' ').replace(/[\n\r]/g, '').trim()
 
       if (!title || !parentLabel || !contents) continue
 
@@ -258,6 +263,7 @@ async function scrapeMeetingPageAfterFeb2020(page: Page, url: string, meetingTyp
       metroCity: 'Metro Vancouver',
       url: page.url(),
       ...r,
+      date: moment(new Date(r.date)).format('YYYY-MM-DD'),
       minutesUrl: url
     }
   })
@@ -289,9 +295,6 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
       return []
     }
 
-    // Only look for items with attachments
-    // Non-content items have an no-class div that contains all of their child elements - we want to ignore these
-    // TODO: This part doesn't seem to be working properly for some reason, not filtering out the parent items...
     const itemElements = $('.WordSection1').find('.MsoNormalTable:has(a[href="#"]:visible)').get()
 
     const items: IPartialMeetingDetails[] = []
@@ -303,18 +306,19 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
         .replace(/\s+/g, ' ') // Replace consecutive spaces
         .replace(/[\r\n]+/g, '').trim() // Remove special characters
 
-      // Get the parent label - go 2 siblings up (should be a table), and check the text of the 3rd row - after filtering out empty-ish strings, should be empty
+      // Get the parent label - check previous siblings and find a table where the first tr has an a tag with no href
       const parentLabel = $(item)
-        .prevAll('.MsoNormalTable:has(tr:nth-child(1)):not(:has(tr:nth-child(2)))')
+        .prevAll('.MsoNormalTable:not(:has(.SelectableItem))')
         .first().find('tr td:eq(1)').text()
         .replace(/\s+/g, ' ')
         .replace(/[\r\n]+/g, '').trim()
 
+      // Contents may be empty for legacy entries
       const contents = $(item).find('tr:eq(2)').text()
         .replace(/\s+/g, ' ')
-        .replace(/[\n\r]/g, '').trim()
+        .replace(/[\n\r]/g, '').trim() || ''
 
-      if (!title || !parentLabel || !contents) continue
+      if (!title || !parentLabel) continue
 
       // Clicking the item opens up a floating panel with links. Also changes URL.
       const itemLink = $(item).find('a')
@@ -322,7 +326,7 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
 
       const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
         return {
-          title: $(element).text(),
+          title: $(element).text().replace(/\s+/g, ' ').replace(/[\n\r]/g, '').trim(),
           url: new URL($(element).attr('href')!, window.location.origin).href
         }
       }).get()
@@ -346,6 +350,7 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
       metroCity: 'Metro Vancouver',
       url: page.url(),
       ...r,
+      date: moment(new Date(r.date)).format('YYYY-MM-DD'),
       minutesUrl: url
     }
   })
