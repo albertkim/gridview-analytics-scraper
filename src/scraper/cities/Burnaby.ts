@@ -66,13 +66,16 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     meetingObjects.push(...newMeetingObjects)
   }
 
-  console.log(meetingObjects)
-
   let results: IMeetingDetail[] = []
   for (let i = 0; i < meetingObjects.length; i++) {
     console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
     const meeting = meetingObjects[i]
     const meetingResults = await scrapeMeetingPage(page, meeting.url, meeting.meetingType)
+    if (meetingResults.length > 0) {
+      console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
+    } else {
+      console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
+    }
     results = [...results, ...meetingResults].filter((r) => r.reportUrls.length > 0)
   }
 
@@ -170,13 +173,19 @@ async function scrapeMeetingPage(page: Page, url: string, meetingType: string): 
     const date = $('.Date').text()
 
     // Only look for items with attachments
-    const itemElements = $('.AgendaItem').has('img[title="Attachments"]')
+    const itemElements = $('.AgendaItemContainer').has('img[title="Attachments"]')
 
     const items = []
 
     for (const item of itemElements) {
-      const title = $(item).find('a').first().text()
+      let title = $(item).find('a').first().text()
+      if (title) title = title.trim()
       const contents = $(item).find('.AgendaItemDescription').text()
+
+      if (!title || !contents) continue
+
+      // Get the parent label - first parent is div, previous element to that is the parent label
+      const parentLabel = $(item).parents().prev().first().find('.AgendaItemTitle').text()
 
       // Clicking the item opens up a floating panel with links. Also changes URL.
       const hrefJavascript = $(item).find('.AgendaItemTitle a').attr('href')!
@@ -191,12 +200,10 @@ async function scrapeMeetingPage(page: Page, url: string, meetingType: string): 
         }
       }).get()
 
-      console.log(reportUrls)
-
       items.push({
         date: date,
         meetingType: meetingType,
-        title: title,
+        title: `${parentLabel} - ${title}`,
         resolutionId: null,
         contents: contents,
         reportUrls: reportUrls

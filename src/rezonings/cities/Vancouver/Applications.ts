@@ -8,11 +8,12 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfApplication(news: IMeetingDetail) {
+  const isVancouver = news.city === 'Vancouver'
   const hasReportURLs = news.reportUrls.length > 0
   const isCouncil = news.meetingType.toLowerCase() === 'council'
   const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
   const isReferralReport = hasReportURLs ? news.reportUrls[0].title.toLowerCase().includes('referral report') : false
-  return hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
+  return isVancouver && hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
 }
 
 export async function parseApplication(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {

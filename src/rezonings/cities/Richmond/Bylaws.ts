@@ -9,10 +9,11 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfBylaw(news: IMeetingDetail) {
+  const isRichmond = news.city === 'Richmond'
   const hasReportURLs = news.reportUrls.length > 0
   const isCouncil = news.meetingType === 'Council Minutes'
   const titleHasBylaw = news.title.toLowerCase().includes('bylaws for adoption')
-  return hasReportURLs && isCouncil && titleHasBylaw
+  return isRichmond && hasReportURLs && isCouncil && titleHasBylaw
 }
 
 export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDetail[]> {

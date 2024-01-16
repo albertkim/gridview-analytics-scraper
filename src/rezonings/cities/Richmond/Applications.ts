@@ -2,21 +2,21 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
-import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
+import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { downloadPDF, generatePDF, generatePDFTextArray, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
+import { getBurnabyBaseGPTQuery } from '../Burnaby/BurnabyUtilities'
 
 export function checkIfApplication(news: IMeetingDetail) {
+  const isRichmond = news.city === 'Richmond'
   const hasReportURLs = news.reportUrls.length > 0
   const isCouncil = news.meetingType === 'Council Minutes'
   const titleHasRezoning = news.title.toLowerCase().includes('rezon')
   const titleHasApplication = news.title.toLowerCase().includes('application')
-  return hasReportURLs && isCouncil && titleHasRezoning && titleHasApplication
+  return isRichmond && hasReportURLs && isCouncil && titleHasRezoning && titleHasApplication
 }
-
-const baseRezoningIdQuery = 'ID in the format of "RZ 12-123456", usually in the brackets - correct the format if necessary - null if not found'
 
 export async function parseApplication(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
 
@@ -25,20 +25,20 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     // Parse the referral report PDF
     const firstPDFURL = news.reportUrls[0].url
     const pdfData = await downloadPDF(firstPDFURL)
-    const pdf3pages = await generatePDF(pdfData, {
-      maxPages: 3
-    })
-    const parsedPDF = await parsePDF(pdf3pages as Buffer)
+
+    // Burnaby rezoning recommendations can be quite lengthy - we need the first page (maybe first 2 to be sure) to get the basic details, and the executive summary to get the full details
+    const pdfTextArray = await generatePDFTextArray(pdfData)
+    const firstTwoPageIndex = pdfTextArray.length >= 2 ? [0, 1] : [0]
+    const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY')) || 0
+    const pageAfterExecutiveSummaryIndex = pdfTextArray[executiveSummaryPageIndex + 1] ? executiveSummaryPageIndex + 1 : 0
+    const pdfPageIndexesToParse = [...new Set([...firstTwoPageIndex, executiveSummaryPageIndex, pageAfterExecutiveSummaryIndex])].sort()
+    const parsedPDF = pdfPageIndexesToParse.map((i) => pdfTextArray[i]).join('\n')
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
-      rezoningId: baseRezoningIdQuery
-    }))
+    let partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(parsedPDF))
     if (!checkGPTJSON(partialRezoningDetailsRaw)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
-        rezoningId: baseRezoningIdQuery
-      }))
+      partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(parsedPDF))
       if (!checkGPTJSON(partialRezoningDetailsRaw)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))
@@ -100,7 +100,9 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     return fullRezoningDetails
 
   } catch (error) {
-    console.error(error)
+    console.error(chalk.bgRed('Error parsing public hearing'))
+    console.error(chalk.red(error))
+    ErrorsRepository.addError(news)
     return null
   }
 

@@ -25,10 +25,10 @@ function reorderItems(items: IMeetingDetail[]) {
     const dateB = moment(b.date, 'YYYY-MM-DD')
     
     if (dateA.isBefore(dateB)) {
-      return 1
+      return -1
     }
     if (dateA.isAfter(dateB)) {
-      return -1
+      return 1
     }
     return 0
   })
@@ -67,9 +67,10 @@ export const RawRepository = {
   },
 
   dangerouslyUpdateAllNews(news: IMeetingDetail[]) {
+    const orderedMeetingDetails = reorderItems(news)
     fs.writeFileSync(
       path.join(__dirname, '../database/raw.json'),
-      JSON.stringify(news, null, 2),
+      JSON.stringify(orderedMeetingDetails, null, 2),
       'utf8'
     )
     return this.getNews()

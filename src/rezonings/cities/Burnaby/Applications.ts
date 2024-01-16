@@ -8,13 +8,16 @@ import { IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/Rezo
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanBurnabyRezoningId } from './BurnabyUtilities'
 
+// Burnaby includes first, second, and 3rd readings in their council meeting minutes, we only want the first reading
 export function checkIfApplication(news: IMeetingDetail) {
-  const isCityCouncil = news.meetingType === 'City council'
+  const isBurnaby = news.city === 'Burnaby'
+  const isCityCouncil = news.meetingType === 'City Council Meeting'
+  const isAdministrativeReport = news.title.toLowerCase().includes('administrative reports')
   const hasRez = news.title.toLowerCase().includes('rez')
   const hasRezoningId = news.title.toLowerCase().includes('#')
   const hasDash = news.title.toLowerCase().includes('-')
 
-  return isCityCouncil && hasRez && hasRezoningId && hasDash
+  return isBurnaby && isCityCouncil && isAdministrativeReport && hasRez && hasRezoningId && hasDash
 }
 
 const baseRezoningIdQuery = 'ID in the format of "REZ #XX-XX", usually in the brackets - correct the format if necessary - null if not found'
@@ -29,15 +32,14 @@ export async function parseApplication(news: IMeetingDetail) {
 
     // Burnaby rezoning recommendations can be quite lengthy - we need the first page (maybe first 2 to be sure) to get the basic details, and the executive summary to get the full details
     const pdfTextArray = await generatePDFTextArray(pdfData)
-    const firstTwoPages = pdfTextArray.length > 2 ? pdfTextArray.slice(0, 2) : pdfTextArray
-    const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY'))
-    const pageAfterExecutiveSummary = pdfTextArray[executiveSummaryPageIndex + 1] || ''
 
-    if (!executiveSummaryPageIndex) {
-      return null
-    }
+    const firstTwoPageIndex = pdfTextArray.length >= 2 ? [0, 1] : [0]
+    const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY')) || 0
+    const pageAfterExecutiveSummaryIndex = pdfTextArray[executiveSummaryPageIndex + 1] ? executiveSummaryPageIndex + 1 : 0
 
-    const parsedPDF = [...firstTwoPages, executiveSummaryPageIndex, pageAfterExecutiveSummary].join('\n')
+    const pdfPageIndexesToParse = [...new Set([...firstTwoPageIndex, executiveSummaryPageIndex, pageAfterExecutiveSummaryIndex])].sort()
+
+    const parsedPDF = pdfPageIndexesToParse.map((i) => pdfTextArray[i]).join('\n')
 
     // Get partial rezoning details from GPT
     let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {

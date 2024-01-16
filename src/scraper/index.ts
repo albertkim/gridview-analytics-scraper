@@ -3,7 +3,6 @@ import {scrape as scrapeVancouver} from './cities/Vancouver'
 import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
 import { RawRepository } from '../repositories/RawRepository'
-import { BulkUtilities } from './BulkUtilities'
 
 // TODO: This param isn't properly used in the scraper yet
 const startDate = '2021-01-01'
@@ -12,7 +11,7 @@ const citiesToScrape: string[] = [
   // 'BC (province)',
   // 'Vancouver',
   // 'Richmond',
-  // 'Burnaby'
+  'Burnaby'
 ]
 
 async function main() {
@@ -52,9 +51,6 @@ async function main() {
     })
     RawRepository.updateNews('Burnaby', burnabyData)
   }
-
-  // Bulk operations
-  // BulkUtilities.bulkCleanDate()
 
 }
 

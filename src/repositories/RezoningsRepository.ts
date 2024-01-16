@@ -185,15 +185,13 @@ export const RezoningsRepository = {
   },
 
   dangerouslyUpdateAllRezonings(rezonings: IFullRezoningDetail[]) {
-
+    const orderedRezonings = reorderItems(rezonings)
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
-      JSON.stringify(rezonings, null, 2),
+      JSON.stringify(orderedRezonings, null, 2),
       'utf8'
     )
-
     return this.getRezonings()
-
   }
 
 }

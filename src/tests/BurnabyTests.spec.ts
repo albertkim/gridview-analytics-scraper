@@ -1,5 +1,6 @@
 import { cleanBurnabyRezoningId } from '../rezonings/cities/Burnaby/BurnabyUtilities'
 import { checkIfApplication, parseApplication } from '../rezonings/cities/Burnaby/Applications'
+import { checkIfPublicHearing, parsePublicHearing } from '../rezonings/cities/Burnaby/PublicHearings'
 
 test('Burnaby ID cleaning', async () => {
   
@@ -13,13 +14,13 @@ test('Burnaby ID cleaning', async () => {
 
 })
 
-const realScrapedNews = {
+const scrapedApplication = {
   "city": "Burnaby",
   "metroCity": "Metro Vancouver",
   "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&Agenda=Agenda&lang=English&Item=59&Tab=attachments",
   "date": "2023-12-11",
-  "meetingType": "City council",
-  "title": "REZ #20-09 - 3777 AND 3791 KINGSWAY - HIGH-DENSITY MIXED-USE DEVELOPMENT",
+  "meetingType": "City Council Meeting",
+  "title": "ADMINISTRATIVE REPORTS - REZ #20-09 - 3777 AND 3791 KINGSWAY - HIGH-DENSITY MIXED-USE DEVELOPMENT",
   "resolutionId": null,
   "contents": "Purpose: To seek Council authorization to forward this application to First Reading and to a future Public Hearing date, if necessary.",
   "reportUrls": [
@@ -35,16 +36,45 @@ const realScrapedNews = {
   "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&lang=English"
 }
 
+const scrapedPublicHearing = {
+  "city": "Burnaby",
+  "metroCity": "Metro Vancouver",
+  "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=6ed401d8-4b6c-4215-9bdf-5bddd35ebd7f&Agenda=Agenda&lang=English&Item=6&Tab=attachments",
+  "date": "2023-12-12",
+  "meetingType": "Public Hearing",
+  "title": "Burnaby Zoning Bylaw 1965, Amendment Bylaw No. 35, 2023 - Bylaw No. 14613",
+  "resolutionId": null,
+  "contents": "REZ #20-17 - A portion of 6229 Marine DriveFrom: CD Comprehensive Development District (based on the RM3r Multiple Family Residential District, and in accordance with the development guidelines prepared by the City under REZ #19-59)To: Amended CD Comprehensive Development District (based on the RM2 and RM2r Multiple Family Residential Districts, the Edmonds Town Centre Plan as guidelines, and in accordance with the revised development guidelines provided in Appendix A of the Rezoning Bylaw)Purpose: to establish development guidelines for the subject site to facilitate development of non-market housingApplicant: Mania Hormozi, CLT 0012 Community Society",
+  "reportUrls": [
+    {
+      "title": "Revised REZ 20-17 Ptn 6229 Marine Drive PH Report (2023-11-20).pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73290"
+    }
+  ],
+  "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=6ed401d8-4b6c-4215-9bdf-5bddd35ebd7f&lang=English"
+}
+
+const scrapedBylaw = {
+  
+}
+
 test('Burnaby check application', async () => {
 
-  const isApplication = await checkIfApplication(realScrapedNews)
+  const isApplication = await checkIfApplication(scrapedApplication)
   expect(isApplication).toEqual(true)
+
+})
+
+test('Burnaby check public hearing', async () => {
+  
+  const isPublicHearing = await checkIfPublicHearing(scrapedPublicHearing)
+  expect(isPublicHearing).toEqual(true)
 
 })
 
 test.skip('Burnaby parse application', async () => {
   
-  const rezoning = await parseApplication(realScrapedNews)
+  const rezoning = await parseApplication(scrapedApplication)
 
   if (!rezoning) {
     expect(rezoning).not.toEqual(null)

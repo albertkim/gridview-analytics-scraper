@@ -8,10 +8,11 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
+  const isVancouver = news.city === 'Vancouver'
   const hasReportURLs = news.reportUrls.length > 0
   const isPublicHearing = news.meetingType.toLowerCase() === 'public hearing'
   const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
-  return hasReportURLs && isPublicHearing && titleIsRezoning
+  return isVancouver && hasReportURLs && isPublicHearing && titleIsRezoning
 }
 
 export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {

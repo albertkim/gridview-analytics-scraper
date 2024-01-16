@@ -8,9 +8,10 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
+  const isRichmond = news.city === 'Richmond'
   const hasReportURLs = news.reportUrls.length > 0
   const isPublicHearing = news.meetingType === 'Public Hearing Minutes'
-  return hasReportURLs && isPublicHearing
+  return isRichmond && hasReportURLs && isPublicHearing
 }
 
 export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
