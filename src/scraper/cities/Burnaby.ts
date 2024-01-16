@@ -1,8 +1,8 @@
 import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
+import { formatDateString, runPromisesInBatches } from '../BulkUtilities'
 import moment from 'moment'
 import chalk from 'chalk'
-import { runPromisesInBatches } from '../BulkUtilities'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
 const numberOfYears = 8
@@ -43,7 +43,6 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   // Inject jQuery into the page
   await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
-  await page.addScriptTag({url: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'})
 
   console.log(`Browser and page initialized`)
 
@@ -63,10 +62,24 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
   })
 
   const meetingObjects: {url: string, meetingType: string, date: string}[] = []
-
+  
   for (let i = 0; i < numberOfYears; i++) {
     const newMeetingObjects = await scrapeMeetingListPage(page, moment().subtract(i, 'year').format('YYYY'))
-    meetingObjects.push(...newMeetingObjects)
+    const dateFilteredMeetingObjects = newMeetingObjects.filter((meeting) => {
+      // Check with option dates
+      if (options.startDate) {
+        if (moment(meeting.date).isBefore(options.startDate)) {
+          return false
+        }
+      }
+      if (options.endDate) {
+        if (moment(meeting.date).isAfter(options.endDate)) {
+          return false
+        }
+      }
+      return true
+    })
+    meetingObjects.push(...dateFilteredMeetingObjects)
   }
 
   // FOR TESTING PURPOSES ONLY TO SCRAPE A SINGLE YEAR
@@ -75,32 +88,30 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   // Scrape X pages in parallel
   const promiseArray = meetingObjects.map((meeting, i) => {
+
     return async () => {
       try {
-        const parallelBrowser = await puppeteer.launch({
-          headless: options.headless !== undefined ? options.headless : 'new'
-        })
-        const parallelPage = await parallelBrowser.newPage()
+        const parallelPage = await browser.newPage()
         parallelPage.setViewport({
           width: 1980,
           height: 1080
         })
         console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length} ${meeting.url}`))
         let meetingResults: IMeetingDetail[] = []
-        if (moment(new Date(meeting.date)).isAfter('2020-02-29')) {
-          meetingResults = await scrapeMeetingPageAfterFeb2020(parallelPage, meeting.url, meeting.meetingType)
+        if (moment(new Date(meeting.date)).isAfter('2020-03-10')) {
+          meetingResults = await scrapeMeetingPageAfterMar2020(parallelPage, meeting.url, meeting.meetingType)
         } else {
-          meetingResults = await scrapeMeetingPageBeforeFeb2020(parallelPage, meeting.url, meeting.meetingType)
+          meetingResults = await scrapeMeetingPageBeforeMar2020(parallelPage, meeting.url, meeting.meetingType)
         }
         if (meetingResults.length > 0) {
           console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
         } else {
           console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
         }
-        await parallelBrowser.close()
-        return meetingResults.filter((r) => r.reportUrls.length > 0)
+        await parallelPage.close()
+        return meetingResults
       } catch (error) {
-        console.error(chalk.bgRed(error))
+        console.error(chalk.bgRed(meeting.url))
         return []
       }
     }
@@ -113,7 +124,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
   console.log(`Browser closed`)
 
   results.forEach((result) => {
-    result.date = moment(new Date(result.date)).format('YYYY-MM-DD')
+    result.date =  formatDateString(result.date)
   })
 
   return results
@@ -183,6 +194,10 @@ export async function parseMeetingListEntries(page: Page, waitForMeeting: string
     })
   }
 
+  councilMeetingObjects.forEach((meeting) => {
+    meeting.date = formatDateString(meeting.date)
+  })
+
   return councilMeetingObjects
 
 }
@@ -200,8 +215,8 @@ interface IPartialMeetingDetails {
 }
 
 // Parent page refers to the city council meeting page, which includes a list of topics
-// Note that after Feb 2020, the meeting format changed, so entirely different jquery selectors are needed
-async function scrapeMeetingPageAfterFeb2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
+// Legacy meeting note formats up to March 9, 2020. After that, entirely different format
+async function scrapeMeetingPageAfterMar2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 3000)})
@@ -263,14 +278,14 @@ async function scrapeMeetingPageAfterFeb2020(page: Page, url: string, meetingTyp
       metroCity: 'Metro Vancouver',
       url: page.url(),
       ...r,
-      date: moment(new Date(r.date)).format('YYYY-MM-DD'),
+      date: formatDateString(r.date),
       minutesUrl: url
     }
   })
 
 }
 
-async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
+async function scrapeMeetingPageBeforeMar2020(page: Page, url: string, meetingType: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 3000)})
@@ -323,6 +338,7 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
       // Clicking the item opens up a floating panel with links. Also changes URL.
       const itemLink = $(item).find('a')
       itemLink.trigger('click')
+      await new Promise((resolve) => {setTimeout(resolve, 500)})
 
       const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
         return {
@@ -350,7 +366,7 @@ async function scrapeMeetingPageBeforeFeb2020(page: Page, url: string, meetingTy
       metroCity: 'Metro Vancouver',
       url: page.url(),
       ...r,
-      date: moment(new Date(r.date)).format('YYYY-MM-DD'),
+      date: formatDateString(r.date),
       minutesUrl: url
     }
   })

@@ -1,3 +1,5 @@
+import moment from "moment"
+
 export async function runPromisesInBatches<T>(promiseFunctions: (() => Promise<T>)[], limit: number): Promise<T[]> {
   const results: T[] = new Array(promiseFunctions.length)
   let executing: Promise<void>[] = []
@@ -22,4 +24,10 @@ export async function runPromisesInBatches<T>(promiseFunctions: (() => Promise<T
 
   await Promise.all(executing)
   return results
+}
+
+export function formatDateString(dateString: string) {
+  const date = new Date(dateString)
+  const momentDate = moment(date)
+  return momentDate.utc().format('YYYY-MM-DD')
 }

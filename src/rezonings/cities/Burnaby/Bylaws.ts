@@ -10,14 +10,12 @@ import { generateID } from '../../../repositories/GenerateID'
 // Check that title prefixes ABANDONMENT for FINAL ADOPTION
 export function checkIfBylaw(news: IMeetingDetail) {
   const isBurnaby = news.city === 'Burnaby'
-  const isCityCouncil = news.meetingType === 'City Council Meeting'
+  const isCityCouncil = ['City Council Meeting', 'City Council'].some((string) => news.meetingType.includes(string))
   const isFinalAdoptionOrAbandanment = news.title.toLowerCase().includes('final adoption') || news.title.toLowerCase().includes('abandonment')
   const isRezoningTitle = news.title.toLowerCase().includes('zoning bylaw')
   const hasRez = news.title.toLowerCase().includes('rez')
-  const hasRezoningId = news.title.toLowerCase().includes('#')
-  const hasDash = news.title.toLowerCase().includes('-')
 
-  return isBurnaby && isCityCouncil && isFinalAdoptionOrAbandanment && isRezoningTitle && hasRez && hasRezoningId && hasDash
+  return isBurnaby && isCityCouncil && isFinalAdoptionOrAbandanment && isRezoningTitle && hasRez && hasRez
 }
 
 // Burnaby bylaw info can be found in the scraped text, attached PDFs are not very helpful

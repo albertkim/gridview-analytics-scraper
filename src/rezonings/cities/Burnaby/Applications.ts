@@ -11,13 +11,12 @@ import { cleanBurnabyRezoningId } from './BurnabyUtilities'
 // Burnaby includes first, second, and 3rd readings in their council meeting minutes, we only want the first reading
 export function checkIfApplication(news: IMeetingDetail) {
   const isBurnaby = news.city === 'Burnaby'
-  const isCityCouncil = news.meetingType === 'City Council Meeting'
-  const isAdministrativeReport = news.title.toLowerCase().includes('administrative reports')
-  const hasRez = news.title.toLowerCase().includes('rez')
-  const hasRezoningId = news.title.toLowerCase().includes('#')
-  const hasDash = news.title.toLowerCase().includes('-')
+  const isCityCouncil = ['City Council Meeting', 'City Council'].some((string) => news.meetingType.includes(string))
+  const isAdministrativeReport = [`administrative reports`, `manager's reports`, `chief administrative officer's reports`, `manager's reports`]
+    .some((string) => news.title.toLowerCase().includes(string))
+  const isRezoning = ['rezoning reference', 'rez #', 'rez.'].some((string) => news.title.toLowerCase().includes(string))
 
-  return isBurnaby && isCityCouncil && isAdministrativeReport && hasRez && hasRezoningId && hasDash
+  return isBurnaby && isCityCouncil && isAdministrativeReport && isRezoning
 }
 
 const baseRezoningIdQuery = 'ID in the format of "REZ #XX-XX", usually in the brackets - correct the format if necessary - null if not found'

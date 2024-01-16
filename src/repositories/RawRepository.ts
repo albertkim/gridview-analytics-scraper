@@ -25,10 +25,10 @@ function reorderItems(items: IMeetingDetail[]) {
     const dateB = moment(b.date, 'YYYY-MM-DD')
     
     if (dateA.isBefore(dateB)) {
-      return -1
+      return 1
     }
     if (dateA.isAfter(dateB)) {
-      return 1
+      return -1
     }
     return 0
   })
@@ -57,10 +57,32 @@ export const RawRepository = {
   updateNews(city: string, news: IMeetingDetail[]) {
     const previousEntries = this.getNews()
     const filteredData = previousEntries.filter((item) => item.city !== city)
-    const newData = reorderItems([...filteredData, ...news])
+    const orderedData = reorderItems([...filteredData, ...news])
     fs.writeFileSync(
       path.join(__dirname, '../database/raw.json'),
-      JSON.stringify(newData, null, 2),
+      JSON.stringify(orderedData, null, 2),
+      'utf8'
+    )
+    return this.getNews({city: city})
+  },
+
+  // Ignore news with the same citym date, and meeting type
+  upsertNews(city: string, news: IMeetingDetail[]) {
+    const previousEntries = this.getNews()
+    const onlyNewEntries = news.filter((item) => {
+      if (item.city !== city) return false
+      const matchingPreviousEntry = previousEntries.find((entry) => {
+        const sameCity = entry.city === item.city
+        const sameDate = entry.date === item.date
+        const sameMeetingType = entry.meetingType === item.meetingType
+        return sameCity && sameDate && sameMeetingType
+      })
+      return matchingPreviousEntry ? false : true
+    })
+    const orderedData = reorderItems([...previousEntries, ...onlyNewEntries])
+    fs.writeFileSync(
+      path.join(__dirname, '../database/raw.json'),
+      JSON.stringify(orderedData, null, 2),
       'utf8'
     )
     return this.getNews({city: city})

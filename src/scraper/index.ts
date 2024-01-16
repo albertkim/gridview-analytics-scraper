@@ -4,8 +4,8 @@ import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
 import { RawRepository } from '../repositories/RawRepository'
 
-// TODO: This param isn't properly used in the scraper yet
-const startDate = '2021-01-01'
+// TODO: This param is only properly used for Burnaby atm
+const startDate = null
 const endDate = null
 const citiesToScrape: string[] = [
   // 'BC (province)',
@@ -19,7 +19,7 @@ async function main() {
   if (citiesToScrape.includes('BC (province)')) {
     const bcData = await scrapeBC({
       startDate: startDate,
-      endDate: null,
+      endDate: endDate,
       headless: 'new'
     })
     RawRepository.updateNews('BC (province)', bcData)
@@ -28,7 +28,7 @@ async function main() {
   if (citiesToScrape.includes('Vancouver')) {
     const vancouverData = await scrapeVancouver({
       startDate: startDate,
-      endDate: null,
+      endDate: endDate,
       headless: 'new'
     })
     RawRepository.updateNews('Vancouver', vancouverData)
@@ -37,19 +37,20 @@ async function main() {
   if (citiesToScrape.includes('Richmond')) {
     const richmondData = await scrapeRichmond({
       startDate: startDate,
-      endDate: null,
+      endDate: endDate,
       headless: 'new'
     })
     RawRepository.updateNews('Richmond', richmondData)
   }
 
+  // Burnaby code requires running in multiple date batches, upsert entries instead of fully replacing
   if (citiesToScrape.includes('Burnaby')) {
     const burnabyData = await scrapeBurnaby({
       startDate: startDate,
-      endDate: null,
+      endDate: endDate,
       headless: 'new'
     })
-    RawRepository.updateNews('Burnaby', burnabyData)
+    RawRepository.upsertNews('Burnaby', burnabyData)
   }
 
 }
