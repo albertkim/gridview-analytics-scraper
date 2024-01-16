@@ -47,9 +47,9 @@ async function main() {
     const burnabyData = await scrapeBurnaby({
       startDate: startDate,
       endDate: null,
-      headless: 'new'
+      headless: false
     })
-    RawRepository.updateNews('Burnaby', burnabyData)
+    // RawRepository.updateNews('Burnaby', burnabyData)
   }
 
 }

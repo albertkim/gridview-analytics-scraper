@@ -2,9 +2,11 @@ import puppeteer, { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../repositories/RawRepository'
 import moment from 'moment'
 import chalk from 'chalk'
+import { runPromisesInBatches } from '../BulkUtilities'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfPastYears = 5
+const numberOfYears = 2 // TODO: CHANGE THIS BACK TO 7
+const parallelBrowserLimit = 1
 
 interface IOptions {
   startDate: string | null
@@ -61,23 +63,32 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   const meetingObjects: {url: string, meetingType: string}[] = []
 
-  for (let i = 0; i < numberOfPastYears; i++) {
+  for (let i = 0; i < numberOfYears; i++) {
     const newMeetingObjects = await scrapeMeetingListPage(page, moment().subtract(i, 'year').format('YYYY'))
     meetingObjects.push(...newMeetingObjects)
   }
 
-  let results: IMeetingDetail[] = []
-  for (let i = 0; i < meetingObjects.length; i++) {
-    console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
-    const meeting = meetingObjects[i]
-    const meetingResults = await scrapeMeetingPage(page, meeting.url, meeting.meetingType)
-    if (meetingResults.length > 0) {
-      console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
-    } else {
-      console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
+  // Scrape X pages in parallel
+  const promiseArray = meetingObjects.map((meeting, i) => {
+    return async () => {
+      const parallelBrowser = await puppeteer.launch({
+        headless: options.headless !== undefined ? options.headless : 'new'
+      })
+      const parallelPage = await parallelBrowser.newPage()
+      console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
+      const meetingResults = await scrapeMeetingPage(parallelPage, meeting.url, meeting.meetingType)
+      console.log(meetingResults)
+      if (meetingResults.length > 0) {
+        console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
+      } else {
+        console.log(chalk.bgRed(`No meeting details for ${meeting.url}`))
+      }
+      await parallelBrowser.close()
+      return meetingResults.filter((r) => r.reportUrls.length > 0)
     }
-    results = [...results, ...meetingResults].filter((r) => r.reportUrls.length > 0)
-  }
+  })
+
+  const results: IMeetingDetail[] = (await runPromisesInBatches(promiseArray, parallelBrowserLimit)).flat()
 
   // Close the browser
   await browser.close()
@@ -173,25 +184,32 @@ async function scrapeMeetingPage(page: Page, url: string, meetingType: string): 
     const date = $('.Date').text()
 
     // Only look for items with attachments
-    const itemElements = $('.AgendaItemContainer').has('img[title="Attachments"]')
+    // Non-content items have an no-class div that contains all of their child elements - we want to ignore these
+    // TODO: This part doesn't seem to be working properly for some reason, not filtering out the parent items...
+    const itemElements = $('.AgendaItemContainer').has('img[title="Attachments"]').filter((index, element) => {
+      $(element).children().each((index, childElement) => {
+        const hasEmptyClass = $(childElement).hasClass('')
+        if (hasEmptyClass) return false
+      })
+      return true
+    }).get()
 
     const items = []
 
     for (const item of itemElements) {
       let title = $(item).find('a').first().text()
       if (title) title = title.trim()
-      const contents = $(item).find('.AgendaItemDescription').text()
-
-      if (!title || !contents) continue
-
       // Get the parent label - first parent is div, previous element to that is the parent label
       const parentLabel = $(item).parents().prev().first().find('.AgendaItemTitle').text()
+      const contents = $(item).find('.AgendaItemDescription').text()
+
+      if (!title || !parentLabel || !contents) continue
 
       // Clicking the item opens up a floating panel with links. Also changes URL.
       const hrefJavascript = $(item).find('.AgendaItemTitle a').attr('href')!
       // Regular jQuery click code doesn't work because these links execute javascript in the href instead
       eval(hrefJavascript.replace('javascript:', ''))
-      await new Promise((resolve) => {setTimeout(resolve, 500)})
+      await new Promise((resolve) => {setTimeout(resolve, 2000)})
 
       const reportUrls = $('.AgendaItemSelectedDetails').find('.OrderedAttachment:not(:hidden) a').map((index, element) => {
         return {

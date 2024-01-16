@@ -1,6 +1,7 @@
 import { cleanBurnabyRezoningId } from '../rezonings/cities/Burnaby/BurnabyUtilities'
 import { checkIfApplication, parseApplication } from '../rezonings/cities/Burnaby/Applications'
 import { checkIfPublicHearing, parsePublicHearing } from '../rezonings/cities/Burnaby/PublicHearings'
+import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Burnaby/Bylaws'
 
 test('Burnaby ID cleaning', async () => {
   
@@ -54,8 +55,26 @@ const scrapedPublicHearing = {
   "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=6ed401d8-4b6c-4215-9bdf-5bddd35ebd7f&lang=English"
 }
 
-const scrapedBylaw = {
-  
+const scrapedBylawApproved = {
+  "city": "Burnaby",
+  "metroCity": "Metro Vancouver",
+  "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=559162e5-77ea-493e-8421-ca65015d4bd2&Agenda=Agenda&lang=English&Item=100&Tab=attachments",
+  "date": "2022-10-03",
+  "meetingType": "City Council Meeting",
+  "title": "RECONSIDERATION AND FINAL ADOPTION - #14485 - Burnaby Consolidated Fees and Charges Bylaw",
+  "resolutionId": null,
+  "contents": "A bylaw to impose fees and charges for City services and use of City property(Item 3.3., FMC Report, Council 2022 July 25)",
+  "reportUrls": [
+    {
+      "title": "14442. No. 11, 2022 ACD.pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73580"
+    },
+    {
+      "title": "Rezoning Reference 19-38 Final Adoption 2022.10.03.pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73581"
+    }
+  ],
+  "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=559162e5-77ea-493e-8421-ca65015d4bd2&lang=English"
 }
 
 test('Burnaby check application', async () => {
@@ -69,6 +88,13 @@ test('Burnaby check public hearing', async () => {
   
   const isPublicHearing = await checkIfPublicHearing(scrapedPublicHearing)
   expect(isPublicHearing).toEqual(true)
+
+})
+
+test('Burnaby check bylaw - approved', async () => {
+
+  const isBylaw = await checkIfBylaw(scrapedBylawApproved)
+  expect(isBylaw).toEqual(true)
 
 })
 
