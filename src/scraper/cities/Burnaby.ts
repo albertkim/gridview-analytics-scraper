@@ -5,8 +5,8 @@ import chalk from 'chalk'
 import { runPromisesInBatches } from '../BulkUtilities'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
-const numberOfYears = 2 // TODO: CHANGE THIS BACK TO 7
-const parallelBrowserLimit = 1
+const numberOfYears = 7 // TODO: CHANGE THIS BACK TO 7
+const parallelBrowserLimit = 10
 
 interface IOptions {
   startDate: string | null
@@ -75,9 +75,12 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
         headless: options.headless !== undefined ? options.headless : 'new'
       })
       const parallelPage = await parallelBrowser.newPage()
+      parallelPage.setViewport({
+        width: 1980,
+        height: 1080
+      })
       console.log(chalk.bgWhite(`Scraping meeting details: ${i}/${meetingObjects.length}`))
       const meetingResults = await scrapeMeetingPage(parallelPage, meeting.url, meeting.meetingType)
-      console.log(meetingResults)
       if (meetingResults.length > 0) {
         console.log(chalk.bgGreen(`Scraped meeting details for ${meetingResults[0].date} - ${meetingResults.length} items`))
       } else {
