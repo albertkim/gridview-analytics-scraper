@@ -143,7 +143,7 @@ export const BulkUtilities = {
     })
   
     // Save the rezonings back to the database
-    RezoningsRepository.updateRezoningsForCity('Richmond', rezonings)
+    RezoningsRepository.dangerouslyUpdateRezonings('Richmond', rezonings)
   
   }
 

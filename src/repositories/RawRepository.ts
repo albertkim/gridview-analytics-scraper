@@ -54,7 +54,8 @@ export const RawRepository = {
     }
   },
 
-  updateNews(city: string, news: IMeetingDetail[]) {
+  // Replaces all news with the same city
+  dangerouslyUpdateNews(city: string, news: IMeetingDetail[]) {
     const previousEntries = this.getNews()
     const filteredData = previousEntries.filter((item) => item.city !== city)
     const orderedData = reorderItems([...filteredData, ...news])
@@ -66,7 +67,7 @@ export const RawRepository = {
     return this.getNews({city: city})
   },
 
-  // Ignore news with the same citym date, and meeting type
+  // Add news to the database but ignore ones with the same city/date/meeting type
   upsertNews(city: string, news: IMeetingDetail[]) {
     const previousEntries = this.getNews()
     const onlyNewEntries = news.filter((item) => {
@@ -88,6 +89,7 @@ export const RawRepository = {
     return this.getNews({city: city})
   },
 
+  // Replaces all news
   dangerouslyUpdateAllNews(news: IMeetingDetail[]) {
     const orderedMeetingDetails = reorderItems(news)
     fs.writeFileSync(

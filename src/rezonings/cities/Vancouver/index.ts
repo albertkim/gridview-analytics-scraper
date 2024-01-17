@@ -66,6 +66,6 @@ export async function analyze(startDate: string | null, endDate: string | null) 
 
   }
 
-  RezoningsRepository.updateRezoningsForCity('Vancouver', rezoningJSON)
+  RezoningsRepository.dangerouslyUpdateRezonings('Vancouver', rezoningJSON)
 
 }
