@@ -2,7 +2,7 @@ import moment from 'moment'
 import { Page } from 'puppeteer'
 import { formatDateString } from '../../BulkUtilities'
 
-interface IMeetingListItem {
+interface IMeetingListData {
   nextPageUrl: string | null
   earliestDate: string | null
   data: Array<{url: string, date: string}>
@@ -13,12 +13,12 @@ export interface IScrapingDateOptions {
   endDate: string | null
 }
 
-export async function getMeetingList(page: Page, url: string, options: IScrapingDateOptions): Promise<IMeetingListItem> {
+export async function getMeetingList(page: Page, url: string, options: IScrapingDateOptions): Promise<IMeetingListData> {
 
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 500)})
 
-  let results: IMeetingListItem = await page.evaluate(async () => {
+  let results: IMeetingListData = await page.evaluate(async () => {
 
     let data: {url: string, date: string}[] = []
 
