@@ -44,7 +44,7 @@ export async function getMeetingDetailsAfterMar2020(page: Page, url: string, dat
       eval(hrefJavascript.replace('javascript:', ''))
       await new Promise((resolve) => {setTimeout(resolve, 2000)})
 
-      const reportUrls = $('.AgendaItemSelectedDetails').find('.OrderedAttachment:not(:hidden) a').map((index, element) => {
+      const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
         return {
           title: $(element).text(),
           url: new URL($(element).attr('href')!, window.location.origin).href

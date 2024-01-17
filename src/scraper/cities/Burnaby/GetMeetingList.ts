@@ -27,11 +27,14 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions):
   if (options.startDate || options.endDate) {
     const startDate = options.startDate ? moment(options.startDate) : moment().subtract(maxYearsBack, 'years')
     const endDate = options.endDate ? moment(options.endDate) : moment()
-    yearsArray = yearsArray.filter((year) => {
-      const yearStart = moment(`${year}-01-01`)
-      const yearEnd = moment(`${year}-12-31`)
-      return yearStart.isBetween(startDate, endDate, 'day', '[]') || yearEnd.isBetween(startDate, endDate, 'day', '[]')
-    })
+
+    const startYear = startDate.year()
+    const endYear = endDate.year()
+
+    yearsArray = []
+    for (let year = startYear; year <= endYear; year++) {
+      yearsArray.push(year.toString())
+    }
   }
 
   const meetingList: IMeetingListItem[] = []

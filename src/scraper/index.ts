@@ -16,8 +16,8 @@ const citiesToScrape: string[] = [
   // 'Richmond',
   'Burnaby'
 ]
-const headless = false                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
-const shouldUpdateDatabase = false      // If true, updates raw.json, else does not update raw.json
+const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
+const shouldUpdateDatabase = false       // If true, updates raw.json, else does not update raw.json
 
 async function main() {
 
@@ -65,6 +65,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
+    console.log(data)
     if (shouldUpdateDatabase) RawRepository.upsertNews('Burnaby', data)
   }
 
