@@ -12,7 +12,7 @@ const endDate = '2023-11-01'                    // Exclusive (reads up to just b
 const concurrency = 3                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
   // 'BC (province)',
-  'Vancouver',
+  // 'Vancouver',
   // 'Richmond',
   // 'Burnaby'
 ]
@@ -28,43 +28,44 @@ async function main() {
   console.log(`Concurrency: ${concurrency}`)
 
   if (citiesToScrape.includes('BC (province)')) {
-    const bcData = await scrapeBC({
+    const data = await scrapeBC({
       startDate: startDate,
       endDate: endDate,
-      headless: headless
+      headless: headless,
+      concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.updateNews('BC (province)', bcData)
+    if (shouldUpdateDatabase) RawRepository.upsertNews('BC (province)', data)
   }
 
   if (citiesToScrape.includes('Vancouver')) {
-    const vancouverData = await scrapeVancouver({
+    const data = await scrapeVancouver({
       startDate: startDate,
       endDate: endDate,
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.updateNews('Vancouver', vancouverData)
+    if (shouldUpdateDatabase) RawRepository.upsertNews('Vancouver', data)
   }
 
   if (citiesToScrape.includes('Richmond')) {
-    const richmondData = await scrapeRichmond({
+    const data = await scrapeRichmond({
       startDate: startDate,
       endDate: endDate,
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('Richmond', richmondData)
+    if (shouldUpdateDatabase) RawRepository.upsertNews('Richmond', data)
   }
 
   // Burnaby code may require running in multiple date because of rate limiting
   if (citiesToScrape.includes('Burnaby')) {
-    const burnabyData = await scrapeBurnaby({
+    const data = await scrapeBurnaby({
       startDate: startDate,
       endDate: endDate,
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('Burnaby', burnabyData)
+    if (shouldUpdateDatabase) RawRepository.upsertNews('Burnaby', data)
   }
 
 }
