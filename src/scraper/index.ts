@@ -3,44 +3,53 @@ import {scrape as scrapeVancouver} from './cities/Vancouver'
 import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
 import { RawRepository } from '../repositories/RawRepository'
+import chalk from 'chalk'
 
-// TODO: This param is only properly used for Burnaby atm
-const startDate = null
-const endDate = null
+const startDate = '2020-01-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
+const endDate = '2024-02-01'                    // Exclusive (reads up to just before date): YYYY-MM-DD
+const concurrency = 3                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
   // 'BC (province)',
   // 'Vancouver',
   // 'Richmond',
   'Burnaby'
 ]
+const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
+const shouldUpdateDatabase = false      // If true, updates raw.json, else does not update raw.json
 
 async function main() {
+
+  console.log(`Scraping ${citiesToScrape.length} cities`)
+  console.log(`Scraping from ${startDate || '-'} to ${endDate || '-'}`)
+  console.log(`Concurrency: ${concurrency}`)
+  if (shouldUpdateDatabase) console.log(chalk.red(`NOTE: The scraper will update the database. Make sure this is what you want.`))
+  else console.log(chalk.yellow(`NOTE: The scraper will not update the database.`))
 
   if (citiesToScrape.includes('BC (province)')) {
     const bcData = await scrapeBC({
       startDate: startDate,
       endDate: endDate,
-      headless: 'new'
+      headless: headless
     })
-    RawRepository.updateNews('BC (province)', bcData)
+    if (shouldUpdateDatabase) RawRepository.updateNews('BC (province)', bcData)
   }
 
   if (citiesToScrape.includes('Vancouver')) {
     const vancouverData = await scrapeVancouver({
       startDate: startDate,
       endDate: endDate,
-      headless: 'new'
+      headless: headless
     })
-    RawRepository.updateNews('Vancouver', vancouverData)
+    if (shouldUpdateDatabase) RawRepository.updateNews('Vancouver', vancouverData)
   }
 
   if (citiesToScrape.includes('Richmond')) {
     const richmondData = await scrapeRichmond({
       startDate: startDate,
       endDate: endDate,
-      headless: 'new'
+      headless: headless
     })
-    RawRepository.updateNews('Richmond', richmondData)
+    if (shouldUpdateDatabase) RawRepository.updateNews('Richmond', richmondData)
   }
 
   // Burnaby code requires running in multiple date batches, upsert entries instead of fully replacing
@@ -48,9 +57,10 @@ async function main() {
     const burnabyData = await scrapeBurnaby({
       startDate: startDate,
       endDate: endDate,
-      headless: 'new'
+      headless: headless,
+      concurrency: concurrency
     })
-    RawRepository.upsertNews('Burnaby', burnabyData)
+    if (shouldUpdateDatabase) RawRepository.upsertNews('Burnaby', burnabyData)
   }
 
 }
