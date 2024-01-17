@@ -12,7 +12,7 @@ import { cleanBurnabyRezoningId } from './BurnabyUtilities'
 export function checkIfApplication(news: IMeetingDetail) {
   const isBurnaby = news.city === 'Burnaby'
   const isCityCouncil = ['City Council Meeting', 'City Council'].some((string) => news.meetingType.includes(string))
-  const isAdministrativeReport = [`administrative reports`, `manager's reports`, `chief administrative officer's reports`, `manager's reports`]
+  const isAdministrativeReport = [`administrative reports`, `manager's reports`, `chief administrative officer's reports`, `manager's reports`, `rezoning applications`]
     .some((string) => news.title.toLowerCase().includes(string))
   const isRezoning = ['rezoning reference', 'rez #', 'rez.'].some((string) => news.title.toLowerCase().includes(string))
 

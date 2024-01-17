@@ -12,7 +12,7 @@ export async function downloadPDF(url: string) {
   const response = await axios.get(url, {
     responseType: 'arraybuffer'
   })
-	console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb}`)
+	console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb`)
   return response.data
 }
 

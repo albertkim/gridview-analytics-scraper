@@ -7,13 +7,13 @@ import { RezoningsRepository } from '../repositories/RezoningsRepository'
   const rezonings = RezoningsRepository.getRezonings({city: 'Burnaby'})
 
   const filteredRezonings = rezonings.filter((item) => {
-    return item.address === null
+    return item.urls === undefined
   })
 
   filteredRezonings.forEach((item) => {
     console.log(JSON.stringify(item, null, 2))
   })
 
-  console.log(`Null rezonings: ${filteredRezonings.length}`)
+  console.log(`No date url rezonings: ${filteredRezonings.length}`)
 
 })()

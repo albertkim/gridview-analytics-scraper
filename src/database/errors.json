@@ -74,5 +74,39 @@
       }
     ],
     "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=4beef43a-866b-4301-a0e2-7e93b1af2c22&lang=English"
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&Agenda=Agenda&lang=English&Item=39&Tab=attachments",
+    "title": "MANAGER'S REPORTS - EXPANDED SITE - 5151 AND 5255 NORTH FRASER WAY - REZONING REFERENCE #19-12 - BIG BEND AREA PLAN",
+    "resolutionId": null,
+    "contents": "Purpose: To inform Council of an expanded site proposed for Rezoning Reference #19-12.",
+    "reportUrls": [
+      {
+        "title": "Expanded Site Report 2020.08.24.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=48130"
+      }
+    ],
+    "date": "2020-08-24",
+    "meetingType": "City Council Meeting",
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&lang=English"
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&Agenda=Agenda&lang=English&Item=39&Tab=attachments",
+    "title": "MANAGER'S REPORTS - EXPANDED SITE - 5151 AND 5255 NORTH FRASER WAY - REZONING REFERENCE #19-12 - BIG BEND AREA PLAN",
+    "resolutionId": null,
+    "contents": "Purpose: To inform Council of an expanded site proposed for Rezoning Reference #19-12.",
+    "reportUrls": [
+      {
+        "title": "Expanded Site Report 2020.08.24.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=48130"
+      }
+    ],
+    "date": "2020-08-24",
+    "meetingType": "City Council Meeting",
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&lang=English"
   }
 ]

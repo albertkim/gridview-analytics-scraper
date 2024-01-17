@@ -72,22 +72,18 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 export async function chatGPTPartialRezoningQuery(query: string): Promise<IPartialRezoningDetail | null> {
 	try {
 
-		const response = await chatGPTTextQuery(query)
-
-		let content = JSON.parse(response.choices[0].message.content!)
+		const content = await chatGPTTextQuery(query)
 
 		// Re-try once if invalid JSON
 		if (!checkGPTRezoningJSON(content)) {
 
 			console.warn(chalk.yellow('Partial rezoning details GPT JSON is invalid, running again'))
 
-			const response = await chatGPTTextQuery(`Carefully double-check the json format I'm requesting. ${query}`)
+			const content = await chatGPTTextQuery(`Carefully double-check the json format I'm requesting. ${query}`)
 
-			if (!response) {
+			if (!content) {
 				return null
 			}
-	
-			content = JSON.parse(response.choices[0].message.content!)
 
 			if (!checkGPTRezoningJSON(content)) {
         console.error(chalk.red('Partial rezoning details GPT JSON is invalid 2nd time, returning null'))
