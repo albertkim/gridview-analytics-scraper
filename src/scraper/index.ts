@@ -5,14 +5,15 @@ import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
 import { RawRepository } from '../repositories/RawRepository'
 
+// yarn run scrape
 // NOTE: All the controls you need to run the city scraper should be here
 const startDate = '2023-10-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
 const endDate = '2023-11-01'                    // Exclusive (reads up to just before date): YYYY-MM-DD
 const concurrency = 3                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
   // 'BC (province)',
-  // 'Vancouver',
-  'Richmond',
+  'Vancouver',
+  // 'Richmond',
   // 'Burnaby'
 ]
 const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
@@ -20,11 +21,11 @@ const shouldUpdateDatabase = false      // If true, updates raw.json, else does 
 
 async function main() {
 
+  if (shouldUpdateDatabase) console.log(chalk.red(`NOTE: The scraper will update the database. Make sure this is what you want.`))
+  else console.log(chalk.yellow(`NOTE: The scraper will not update the database.`))
   console.log(chalk.green(`Scraping: ${citiesToScrape.join(', ')}`))
   console.log(`Scraping from ${chalk.green(startDate || '-')} to ${chalk.green(endDate || '-')}`)
   console.log(`Concurrency: ${concurrency}`)
-  if (shouldUpdateDatabase) console.log(chalk.red(`NOTE: The scraper will update the database. Make sure this is what you want.`))
-  else console.log(chalk.yellow(`NOTE: The scraper will not update the database.`))
 
   if (citiesToScrape.includes('BC (province)')) {
     const bcData = await scrapeBC({
@@ -39,7 +40,8 @@ async function main() {
     const vancouverData = await scrapeVancouver({
       startDate: startDate,
       endDate: endDate,
-      headless: headless
+      headless: headless,
+      concurrency: concurrency
     })
     if (shouldUpdateDatabase) RawRepository.updateNews('Vancouver', vancouverData)
   }

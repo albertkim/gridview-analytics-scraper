@@ -3,9 +3,9 @@ import puppeteer from 'puppeteer'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { getMeetingList } from './GetMeetingList'
 import { getMeetingDetails } from './GetMeetingDetails'
-import { runPromisesInBatches } from '../../BulkUtilities'
+import { formatDateString, runPromisesInBatches } from '../../BulkUtilities'
 
-const startUrl = 'https://citycouncil.richmond.ca/decisions/search/results.aspx?QB0=AND&QF0=ItemTopic%7cResolutionText%7cFullText%7cSubject&QI0=&QB1=AND&QF1=Date&QI1=&QB4=AND&QF4=Date&QI4=%3e%3d%40DATE-1820&TN=minutes&AC=QBE_QUERY&BU=https%3a%2f%2fcitycouncil.richmond.ca%2fdecisions%2fsearch%2fdefault.aspx&RF=WebBriefDate&'
+const startUrl = 'https://covapp.vancouver.ca/councilMeetingPublic/CouncilMeetings.aspx'
 const maxNumberOfPages = 200
 
 interface IOptions {
@@ -19,10 +19,16 @@ interface IOptions {
 export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   const browser = await puppeteer.launch({
-    headless: options.headless || 'new'
+    headless: options.headless !== undefined ? options.headless : 'new'
   })
 
   const page = await browser.newPage()
+
+  // Vancouver website requires desktop size to show tabular data
+  page.setViewport({
+    width: 1980,
+    height: 1080
+  })
 
   if (options.verbose) {
     page.on('console', msg => {
@@ -32,25 +38,41 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     })
   }
 
-  await page.addScriptTag({ url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js' })
+  await page.addScriptTag({url: 'https://code.jquery.com/jquery-3.3.1.slim.min.js'})
 
-  const meetingList: Array<{ url: string, date: string }> = []
+  await page.goto(startUrl)
 
-  let nextPageUrl: string | null = startUrl
+  // Wait for the text 'Previous Meetings' somewhere on the page, then click
+
+  await page.waitForFunction(
+    text => !!Array.from(document.querySelectorAll('*')).find(el => el.textContent!.includes(text)),
+    {},
+    'Previous Meetings'
+  )
+
+  await page.evaluate(async () => {
+    $('a:contains("Previous Meetings")').trigger('click')
+  })
+  await new Promise((resolve) => {setTimeout(resolve, 500)})
+
+  const meetingList: {url: string, meetingType: string, date: string}[] = []
 
   for (let i = 0; i < maxNumberOfPages; i++) {
-
-    const meetingListResult = await getMeetingList(page, nextPageUrl, { startDate: options.startDate, endDate: options.endDate })
+    const meetingListResult = await getMeetingList(page, { startDate: options.startDate, endDate: options.endDate })
     const count = meetingListResult.data.length > 0 ? chalk.green(`${meetingListResult.data.length} items`) : '0 items'
     console.log(`Scraped list page up to: ${meetingListResult.earliestDate}, ${count}, ${i}/${maxNumberOfPages} max pages`)
 
     meetingList.push(...meetingListResult.data)
-    nextPageUrl = meetingListResult.nextPageUrl
 
-    if (!nextPageUrl) {
+    if (!meetingListResult.goToNextPage) {
       break
     }
 
+    // Go to next page
+    await page.evaluate(async () => {
+      $('.ListNavigation_Next').trigger('click')
+    })
+    await new Promise((resolve) => {setTimeout(resolve, 500)})
   }
 
   // Get meeting details in parallel
@@ -63,10 +85,10 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
         const parallelPage = await browser.newPage()
 
         console.log(`Scraping page details: ${i}/${meetingList.length}`)
+
         const meetingDetails = await getMeetingDetails(parallelPage, m.url, m.date)
 
-        // Do not log progress on meeting details, there are too many
-        // Every page is expected to have meeting details
+        console.log(chalk.bgGreen(`Scraped meeting details for ${meetingDetails[0].date} - ${meetingDetails.length} items`))
 
         await parallelPage.close()
 
@@ -76,14 +98,16 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
         console.log(chalk.bgRed(m.url))
         console.log(error)
-        return null
+        return []
 
       }
 
     }
+
   })
 
-  const results = (await runPromisesInBatches(promiseArray, options.concurrency)).filter((m) => m !== null) as IMeetingDetail[]
+  // For each parent page item, scrape the details
+  const results = (await runPromisesInBatches(promiseArray, options.concurrency)).flat()
 
   await browser.close()
   console.log(`Browser closed`)
