@@ -3,8 +3,8 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
-import { chatGPTTextQuery, getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
+import { chatGPTPartialRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanBurnabyRezoningId } from './BurnabyUtilities'
 
@@ -47,26 +47,13 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     }
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(applicationContent, {
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(getGPTBaseRezoningQuery(applicationContent, {
       rezoningId: baseRezoningIdQuery
     }))
-    if (!checkGPTJSON(partialRezoningDetailsRaw)) {
-      console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(applicationContent, {
-        rezoningId: baseRezoningIdQuery
-      }))
-      if (!checkGPTJSON(partialRezoningDetailsRaw)) {
-        const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
-        console.error(chalk.bgRed(errorMessage))
-        console.error(chalk.red(JSON.stringify(partialRezoningDetailsRaw, null, 2)))
-        ErrorsRepository.addError(news)
-        throw new Error(errorMessage)
-      }
-    }
-    console.log(chalk.bgGreen('Partial rezoning details GPT JSON is valid'))
 
-    // Cast as partial rezoning details
-    const partialRezoningDetails = partialRezoningDetailsRaw as IPartialRezoningDetail
+    if (!partialRezoningDetails) {
+      throw new Error()
+    }
 
     // Get stats
     const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')

@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTRezoningJSON } from '../../../repositories/RezoningsRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
@@ -45,10 +45,10 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
 
     // Get partial rezoning details from GPT
     let partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(applicationContent))
-    if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+    if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
       partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(applicationContent))
-      if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+      if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))
         console.error(chalk.red(JSON.stringify(partialRezoningDetailsRaw, null, 2)))

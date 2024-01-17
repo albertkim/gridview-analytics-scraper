@@ -55,9 +55,17 @@ export const RawRepository = {
   },
 
   // Replaces all news with the same city
-  dangerouslyUpdateNews(city: string, news: IMeetingDetail[]) {
+  dangerouslyUpdateNews(city: string, news: IMeetingDetail[], dateOptions?: {startDate: string, endDate: string}) {
     const previousEntries = this.getNews()
-    const filteredData = previousEntries.filter((item) => item.city !== city)
+    // Remove all entries with the same city and are in the date range if specified
+    const filteredData = previousEntries.filter((item) => {
+      const isCityMatching = item.city === city
+      let isInDateRange = true
+      if (dateOptions) {
+        isInDateRange = moment(item.date).isBetween(moment(dateOptions.startDate), moment(dateOptions.endDate))
+      }
+      return !(isCityMatching && isInDateRange)
+    })
     const orderedData = reorderItems([...filteredData, ...news])
     fs.writeFileSync(
       path.join(__dirname, '../database/raw.json'),

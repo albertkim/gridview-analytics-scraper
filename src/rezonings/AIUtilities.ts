@@ -1,10 +1,11 @@
 import dotenv from 'dotenv'
 import OpenAI from 'openai'
+import chalk from 'chalk'
 import { ImageAnnotatorClient } from '@google-cloud/vision'
+import { IPartialRezoningDetail, checkGPTRezoningJSON } from '../repositories/RezoningsRepository'
 
 dotenv.config()
 
-const environment = process.env.NODE_ENV!
 const chatGPTAPIKey = process.env.CHAT_GPT_API_KEY!
 
 const openai = new OpenAI({
@@ -63,6 +64,59 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 			console.error(error)
 			throw new Error()
 		}
+	}
+}
+
+// This function returns a partial rezoning detail object and retries if the first time doesn't work
+// Caller is expected to handle thrown errors - best practice is to add to the ErrorsRepository
+export async function chatGPTPartialRezoningQuery(query: string): Promise<IPartialRezoningDetail | null> {
+	try {
+
+		const response = await chatGPTTextQuery(query)
+
+		let content = JSON.parse(response.choices[0].message.content!)
+
+		// Re-try once if invalid JSON
+		if (!checkGPTRezoningJSON(content)) {
+
+			console.warn(chalk.yellow('Partial rezoning details GPT JSON is invalid, running again'))
+
+			const response = await chatGPTTextQuery(`Carefully double-check the json format I'm requesting. ${query}`)
+
+			if (!response) {
+				return null
+			}
+	
+			content = JSON.parse(response.choices[0].message.content!)
+
+			if (!checkGPTRezoningJSON(content)) {
+        console.error(chalk.red('Partial rezoning details GPT JSON is invalid 2nd time, returning null'))
+        console.error(chalk.red(JSON.stringify(content, null, 2)))
+				return null
+			}
+
+		}
+
+		if (content.error) {
+			console.error(chalk.red('GPT response error'))
+			console.error(content.error)
+			return null
+		}
+
+		console.log(chalk.green('GPT partial rezoning JSON is valid'))
+
+		return content
+
+	} catch (error: any) {
+
+		if (error.response && error.response.data) {
+			console.error(error.response.data)
+			throw error
+		} else {
+			console.error(error)
+			throw error
+		}
+
 	}
 }
 

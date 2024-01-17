@@ -213,6 +213,7 @@ export const RezoningsRepository = {
       const rezoningWithMatchingID = previousEntries.find((item) => item.rezoningId === newsItem.rezoningId)
       if (rezoningWithMatchingID) {
         const mergedRezoning = mergeEntries(rezoningWithMatchingID, newsItem)
+        mergedRezoning.id = rezoningWithMatchingID.id
         this.updateRezoning(rezoningWithMatchingID.id, mergedRezoning)
         continue
       }
@@ -222,6 +223,7 @@ export const RezoningsRepository = {
       if (similarAddresses.length > 0) {
         const similarRezoning = similarAddresses[0].rezoning
         const mergedRezoning = mergeEntries(similarRezoning, newsItem)
+        mergedRezoning.id = similarRezoning.id
         this.updateRezoning(similarRezoning.id, mergedRezoning)
         continue
       }
@@ -321,7 +323,7 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
 }
 
 // Type-check the json object property types match with the IRezoningDetail property types
-export function checkGPTJSON(json: any): boolean {
+export function checkGPTRezoningJSON(json: any): boolean {
   if (typeof json !== 'object' || json === null) {
       return false
   }

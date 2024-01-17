@@ -112,7 +112,7 @@ export async function getMeetingDetailsBeforeMar2020(page: Page, url: string, da
       // Clicking the item opens up a floating panel with links. Also changes URL.
       const itemLink = $(item).find('a')
       itemLink.trigger('click')
-      await new Promise((resolve) => {setTimeout(resolve, 500)})
+      await new Promise((resolve) => {setTimeout(resolve, 1000)})
 
       const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
         return {

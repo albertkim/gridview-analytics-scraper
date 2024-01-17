@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTJSON } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTRezoningJSON } from '../../../repositories/RezoningsRepository'
 import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
@@ -32,12 +32,12 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
       rezoningId: 'null'
     }))
-    if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+    if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
       partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
         rezoningId: 'null'
       }))
-      if (!checkGPTJSON(partialRezoningDetailsRaw)) {
+      if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))
         console.error(chalk.red(JSON.stringify(partialRezoningDetailsRaw, null, 2)))
