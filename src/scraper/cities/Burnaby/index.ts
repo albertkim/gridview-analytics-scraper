@@ -4,7 +4,7 @@ import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { runPromisesInBatches } from '../../BulkUtilities'
 import { getMeetingList } from './GetMeetingList'
-import { scrapeMeetingPageAfterMar2020, scrapeMeetingPageBeforeMar2020 } from './GetMeetingDetails'
+import { getMeetingDetailsAfterMar2020, getMeetingDetailsBeforeMar2020 } from './GetMeetingDetails'
 
 const startUrl = 'https://pub-burnaby.escribemeetings.com/?FillWidth=1'
 
@@ -56,10 +56,10 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
     $('a:contains("City Council Meeting")').trigger('click')
   })
 
-  const meetingObjects = await getMeetingList(page, {startDate: options.startDate, endDate: options.endDate})
+  const meetingList = await getMeetingList(page, {startDate: options.startDate, endDate: options.endDate})
 
-  // Scrape pages in parallel
-  const promiseArray = meetingObjects.map((meeting, i) => {
+  // Get meeting details in parallel
+  const promiseArray = meetingList.map((meeting, i) => {
 
     return async () => {
 
@@ -71,14 +71,14 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
           height: 1080
         })
 
-        console.log(`Scraping meeting details: ${i}/${meetingObjects.length} ${meeting.url}`)
+        console.log(`Scraping meeting details: ${i}/${meetingList.length} ${meeting.url}`)
 
         let meetingResults: IMeetingDetail[] = []
         // Mar 9, 2020 was the last meeting before the format changed
         if (moment(meeting.date).isAfter('2020-03-10')) {
-          meetingResults = await scrapeMeetingPageAfterMar2020(parallelPage, meeting.url, meeting.date, meeting.meetingType)
+          meetingResults = await getMeetingDetailsAfterMar2020(parallelPage, meeting.url, meeting.date, meeting.meetingType)
         } else {
-          meetingResults = await scrapeMeetingPageBeforeMar2020(parallelPage, meeting.url, meeting.date, meeting.meetingType)
+          meetingResults = await getMeetingDetailsBeforeMar2020(parallelPage, meeting.url, meeting.date, meeting.meetingType)
         }
 
         if (meetingResults.length > 0) {
@@ -94,6 +94,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
       } catch (error) {
 
         console.error(chalk.bgRed(meeting.url))
+        console.error(error)
         return []
 
       }

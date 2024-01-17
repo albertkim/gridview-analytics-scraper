@@ -3,7 +3,7 @@ import { formatDateString } from '../../BulkUtilities'
 import moment from 'moment'
 import chalk from 'chalk'
 
-interface IMeetingListObject {
+interface IMeetingListItem {
   url: string
   meetingType: string
   date: string
@@ -18,7 +18,7 @@ export interface IScrapingDateOptions {
 const maxYearsBack = 7
 
 // STRATEGY: Scrape all 7 years of meeting lists, then filter out meetings that are outside of the date range
-export async function getMeetingList(page: Page, options: IScrapingDateOptions): Promise<IMeetingListObject[]> {
+export async function getMeetingList(page: Page, options: IScrapingDateOptions): Promise<IMeetingListItem[]> {
 
   // Output: ['2023', '2022', '2021', '2020', '2019', '2018', '2017']
   let yearsArray = Array.from({ length: maxYearsBack }, (_, i) => (moment().year() - i).toString())
@@ -34,7 +34,7 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions):
     })
   }
 
-  const meetingList: IMeetingListObject[] = []
+  const meetingList: IMeetingListItem[] = []
 
   for (const year of yearsArray) {
 
@@ -95,7 +95,7 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions):
 // City Council Meeting - main city council meeting type as of Mar 9, 2020
 // City Council - legacy city council meeting type before Mar 9, 2020
 // Public Hearing - public hearing meeting type
-async function parseMeetingListEntries(page: Page, meetingType: string): Promise<IMeetingListObject[]> {
+async function parseMeetingListEntries(page: Page, meetingType: string): Promise<IMeetingListItem[]> {
 
   const councilMeetingExists = await page.evaluate(async (waitForMeeting: string) => {
     const meetingTypes = $('.MeetingTypeList:visible .MeetingTypeNameText').map((index, element) => {

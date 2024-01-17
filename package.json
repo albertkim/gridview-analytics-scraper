@@ -1,6 +1,7 @@
 {
   "name": "gridview-analytics-scraper",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "scrape": "ts-node src/scraper/index.ts",
     "rezone": "ts-node src/rezonings/index.ts",
