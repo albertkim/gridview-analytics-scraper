@@ -22,23 +22,32 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
 
   try {
 
-    // Parse the referral report PDF
-    const firstPDFURL = news.reportUrls[0].url
-    const pdfData = await downloadPDF(firstPDFURL)
+    // Parse the referral report PDF if exists, otherwise just use title + contents
+    let applicationContent: string | null = null
 
-    // Burnaby rezoning recommendations can be quite lengthy - we need the first page (maybe first 2 to be sure) to get the basic details, and the executive summary to get the full details
-    const pdfTextArray = await generatePDFTextArray(pdfData)
-    const firstTwoPageIndex = pdfTextArray.length >= 2 ? [0, 1] : [0]
-    const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY')) || 0
-    const pageAfterExecutiveSummaryIndex = pdfTextArray[executiveSummaryPageIndex + 1] ? executiveSummaryPageIndex + 1 : 0
-    const pdfPageIndexesToParse = [...new Set([...firstTwoPageIndex, executiveSummaryPageIndex, pageAfterExecutiveSummaryIndex])].sort()
-    const parsedPDF = pdfPageIndexesToParse.map((i) => pdfTextArray[i]).join('\n')
+    if (news.reportUrls.length > 0) {
+      const firstPDFURL = news.reportUrls[0].url
+      const pdfData = await downloadPDF(firstPDFURL)
+  
+      // Burnaby rezoning recommendations can be quite lengthy - we need the first page (maybe first 2 to be sure) to get the basic details, and the executive summary to get the full details
+      const pdfTextArray = await generatePDFTextArray(pdfData)
+  
+      const firstTwoPageIndex = pdfTextArray.length >= 2 ? [0, 1] : [0]
+      const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY')) || 0
+      const pageAfterExecutiveSummaryIndex = pdfTextArray[executiveSummaryPageIndex + 1] ? executiveSummaryPageIndex + 1 : 0
+  
+      const pdfPageIndexesToParse = [...new Set([...firstTwoPageIndex, executiveSummaryPageIndex, pageAfterExecutiveSummaryIndex])].sort()
+  
+      applicationContent = pdfPageIndexesToParse.map((i) => pdfTextArray[i]).join('\n')
+    } else {
+      applicationContent = `${news.title}\n${news.contents}`
+    }
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(parsedPDF))
+    let partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(applicationContent))
     if (!checkGPTJSON(partialRezoningDetailsRaw)) {
       console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(parsedPDF))
+      partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(applicationContent))
       if (!checkGPTJSON(partialRezoningDetailsRaw)) {
         const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
         console.error(chalk.bgRed(errorMessage))

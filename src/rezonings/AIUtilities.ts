@@ -22,7 +22,7 @@ interface BaseRezoningQueryParams {
 // Make sure that the query includes the word 'JSON'
 // Defaults to 3.5, specify 4 if you want to use 4
 export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
-	console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}}`)
+	console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}`)
 
 	const gptVersionMapping = {
 		'3.5': 'gpt-3.5-turbo-1106',
@@ -119,6 +119,14 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
       behalf: if the applicant is applying on behalf of someone else, who is it
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
       type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial, commercial, or other
+      status: either applied, public hearing, approved, denied, withdrawn
+      dates: {
+        appliedDate: if this is an application, the date of this document in YYYY-MM-DD or null if unclear
+        publicHearingDate: if this is for a public hearing, the date of this public hearing in YYYY-MM-DD or null if unclear
+        approvalDate: if this is an approval, the date of this approval in YYYY-MM-DD or null if unclear
+        denialDate: if this is a denial, the date of this denial in YYYY-MM-DD or null if unclear
+        withdrawnDate: if this is a withdrawal, the date of this withdrawal in YYYY-MM-DD or null if unclear
+      }
       stats: {
         buildings: your best guess as to the number of new buildings being proposed or null if unclear
         stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units
@@ -132,14 +140,6 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
         previousZoningDescription: best description of previous zoning code (ex. low density residential)
         newZoningCode: city zoning code after rezoning or null if unclear - keep short
         newZoningDescription: best description of new zoning code (ex. high density residential)
-      }
-      status: either applied, public hearing, approved, denied, withdrawn
-      dates: {
-        appliedDate: if this is an application, the date of this document in YYYY-MM-DD or null if unclear
-        publicHearingDate: if this is for a public hearing, the date of this public hearing in YYYY-MM-DD or null if unclear
-        approvalDate: if this is an approval, the date of this approval in YYYY-MM-DD or null if unclear
-        denialDate: if this is a denial, the date of this denial in YYYY-MM-DD or null if unclear
-        withdrawnDate: if this is a withdrawal, the date of this withdrawal in YYYY-MM-DD or null if unclear
       }
     }
     If this document is not a rezoning related document, please reply with "not rezoning". Document here: ${document}

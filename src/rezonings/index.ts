@@ -1,8 +1,8 @@
 import moment from 'moment'
 import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
+import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { getStatistics } from './StatisticsUtilities'
-import { BulkUtilities } from './BulkUtilities'
 
 const startDate = null
 const endDate = null
@@ -22,11 +22,11 @@ async function main() {
     await analyzeRichmond(startDate, endDate)
   }
 
-  getStatistics()
+  if (citiesToAnalyze.includes('Burnaby')) {
+    await analyzeBurnaby(startDate, endDate)
+  }
 
-  // Bulk cleaning operations
-  // BulkUtilities.bulkCleanDates()
-  // BulkUtilities.bulkMergeSimilarAddressses()
+  getStatistics()
 
 }
 

@@ -36,5 +36,43 @@
       }
     ],
     "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cb5a58a2-1bfa-4dc0-87e4-d48189b25d62&lang=English"
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=f84ecfa5-83fa-44b7-a2a2-08c7bc902a5e&Agenda=Agenda&lang=English#28153",
+    "date": "2019-11-19",
+    "meetingType": "Public Hearing",
+    "title": "ZONING BYLAW AMENDMENTS - Burnaby Zoning Bylaw 1965, - Amendment Bylaw No. 33, 2019 - Bylaw No. 14079",
+    "resolutionId": null,
+    "contents": "Rez. #19-36 3713 Kensington Avenue From: CD Comprehensive Development District (based on C2 Community Commercial District, P6 Regional Institutional District and P2 Administration and Assembly District) To: Amended CD Comprehensive Development District (based on C2 Community Commercial District, C3e General Commercial District, P6 Regional Institutional District and P2 Administration and Assembly District in accordance with the development plan entitled “Adamas ESports” prepared by Dsquared Projects) The purpose of the proposed zoning bylaw amendment is to permit one of the units within the Fortius Centre to be utilized for an e-sports training facility.",
+    "reportUrls": [
+      {
+        "title": "Rez Ref 19-36 PH Report.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=44704"
+      },
+      {
+        "title": "REZ 19-36 PH drawings.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=44705"
+      }
+    ],
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=f84ecfa5-83fa-44b7-a2a2-08c7bc902a5e&lang=English"
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=4beef43a-866b-4301-a0e2-7e93b1af2c22&Agenda=Agenda&lang=English#15587",
+    "date": "2017-03-20",
+    "meetingType": "City Council",
+    "title": "MANAGER'S REPORTS - PROPOSED REZONING BYLAW ABANDONMENTS",
+    "resolutionId": null,
+    "contents": "Purpose: To seek Council authorization to abandon outstanding Rezoning Amendment Bylaws in accordance with the adopted Council process.",
+    "reportUrls": [
+      {
+        "title": "Rezoning bylaw Abandonment Rpt 2017.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=37766"
+      }
+    ],
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=4beef43a-866b-4301-a0e2-7e93b1af2c22&lang=English"
   }
 ]
