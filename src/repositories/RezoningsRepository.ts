@@ -274,11 +274,6 @@ function mergeSimpleField<T extends string | number | null>(string1: T, string2:
   return null
 }
 
-function mergeStatus(oldStatus: ZoningStatus, newStatus: ZoningStatus) {
-  const statusOrder = ['applied', 'pending', 'public hearing', 'approved', 'denied', 'withdrawn']
-  return statusOrder.indexOf(newStatus) > statusOrder.indexOf(oldStatus) ? newStatus : oldStatus
-}
-
 // Given a rezoning, let the latest minute url and the type. Use minutes instead of reports because some rezonings don't have reports.
 // Used to see which data should be preferred during merging (perfer application data)
 function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date: string, type: ZoningStatus} | null {
@@ -314,6 +309,11 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
     preferred = 'new'
   }
 
+  // Identify whether the old or new entry has the latest minute date
+  // and set a variable called "newerEntry" that is either 'new' or 'old'
+  // This is used to set the status to be the latest status
+  const newerEntry = oldMinuteDate && newMinuteDate && moment(newMinuteDate.date).isAfter(moment(oldMinuteDate.date)) ? 'new' : 'old'
+
   mergedData.rezoningId = mergeSimpleField(oldEntry.rezoningId, newEntry.rezoningId, preferred)
   mergedData.applicant = mergeSimpleField(oldEntry.applicant, newEntry.applicant, preferred)
   mergedData.behalf = mergeSimpleField(oldEntry.behalf, newEntry.behalf, preferred)
@@ -329,7 +329,10 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   mergedData.zoning.newZoningCode = mergeSimpleField(oldEntry.zoning.newZoningCode, newEntry.zoning.newZoningCode, preferred)
   mergedData.zoning.previousZoningDescription = mergeSimpleField(oldEntry.zoning.previousZoningDescription, newEntry.zoning.previousZoningDescription, preferred)
   mergedData.zoning.newZoningDescription = mergeSimpleField(oldEntry.zoning.newZoningDescription, newEntry.zoning.newZoningDescription, preferred)
-  mergedData.status = mergeStatus(oldEntry.status, newEntry.status)
+
+  // Always accept the latest status (do a date check first) becaue a rezoning can be denied, then approved again
+  mergedData.status = mergeSimpleField(oldEntry.status, newEntry.status, newerEntry) as ZoningStatus
+
   const datesArray: (keyof IFullRezoningDetail['dates'])[] = ['appliedDate', 'publicHearingDate', 'approvalDate', 'denialDate', 'withdrawnDate']
   datesArray.forEach((fieldName) => {
     mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], preferred)
