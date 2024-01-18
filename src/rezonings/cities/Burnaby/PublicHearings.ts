@@ -70,7 +70,8 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
-        url: news.minutesUrl
+        url: news.minutesUrl,
+        type: 'public hearing'
       }] : [],
       status: 'public hearing',
       dates: {

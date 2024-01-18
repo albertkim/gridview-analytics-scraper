@@ -24,7 +24,6 @@ export const ZoningTypeValues = [
 
 export type ZoningStatus =
   'applied' |
-  'pending' |
   'public hearing' |
   'approved' |
   'denied' |
@@ -81,11 +80,12 @@ export interface IFullRezoningDetail extends IPartialRezoningDetail {
     title: string
     url: string
     date: string
-    type: 'application' | 'public hearing' | 'bylaw'
+    type: ZoningStatus
   }[]
   minutesUrls: {
     url: string
     date: string
+    type: ZoningStatus
   }[]
   location: {
     latitude: number | null
@@ -279,31 +279,60 @@ function mergeStatus(oldStatus: ZoningStatus, newStatus: ZoningStatus) {
   return statusOrder.indexOf(newStatus) > statusOrder.indexOf(oldStatus) ? newStatus : oldStatus
 }
 
+// Given a rezoning, let the latest minute url and the type. Use minutes instead of reports because some rezonings don't have reports.
+// Used to see which data should be preferred during merging (perfer application data)
+function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date: string, type: ZoningStatus} | null {
+  const latestDate = rezoning.minutesUrls.reduce((latest, current) => {
+    if (!latest) {
+      return current
+    }
+    if (moment(current.date, 'YYYY-MM-DD').isAfter(moment(latest.date, 'YYYY-MM-DD'))) {
+      return current
+    }
+    return latest
+  }, null as null | {url: string, date: string, type: ZoningStatus})
+  return latestDate
+}
+
 export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezoningDetail) {
 
   // city, metroCity, address, and createDate should be consistent
   const mergedData = {...oldEntry}
 
-  mergedData.rezoningId = mergeSimpleField(oldEntry.rezoningId, newEntry.rezoningId, 'old')
-  mergedData.applicant = mergeSimpleField(oldEntry.applicant, newEntry.applicant, 'old')
-  mergedData.behalf = mergeSimpleField(oldEntry.behalf, newEntry.behalf, 'old')
-  mergedData.description = mergeSimpleField(oldEntry.description, newEntry.description, 'longer') || ''
+  // Always prefer application type rezoning data over other types of rezoning data
+  // But prefer public hearings data over bylaw data, which usually has the least useful information
+  let preferred: 'old' | 'new' = 'old'
+  const oldMinuteDate = getLatestMinuteDate(oldEntry)
+  const newMinuteDate = getLatestMinuteDate(newEntry)
+  if (oldMinuteDate && oldMinuteDate.type === 'applied') {
+    preferred = 'old'
+  } else if (newMinuteDate && newMinuteDate.type === 'applied') {
+    preferred = 'new'
+  } else if (oldMinuteDate && oldMinuteDate.type === 'public hearing') {
+    preferred = 'old'
+  } else if (newMinuteDate && newMinuteDate.type === 'public hearing') {
+    preferred = 'new'
+  }
+
+  mergedData.rezoningId = mergeSimpleField(oldEntry.rezoningId, newEntry.rezoningId, preferred)
+  mergedData.applicant = mergeSimpleField(oldEntry.applicant, newEntry.applicant, preferred)
+  mergedData.behalf = mergeSimpleField(oldEntry.behalf, newEntry.behalf, preferred)
+  mergedData.description = mergeSimpleField(oldEntry.description, newEntry.description, preferred) || ''
   if (oldEntry.type !== newEntry.type) {
-    console.warn(chalk.bgYellow(`Warning: Field 'type' has different values in old and new data (${oldEntry.type} vs ${newEntry.type}). Preferring the old value.`))
-    mergedData.type = mergeSimpleField(oldEntry.type, newEntry.type, 'old')
+    mergedData.type = mergeSimpleField(oldEntry.type, newEntry.type, preferred)
   }
   const statsArray: (keyof IFullRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr']
   statsArray.forEach((fieldName) => {
-    mergedData.stats[fieldName] = mergeSimpleField(oldEntry.stats[fieldName], newEntry.stats[fieldName], 'old')
+    mergedData.stats[fieldName] = mergeSimpleField(oldEntry.stats[fieldName], newEntry.stats[fieldName], preferred)
   })
-  mergedData.zoning.previousZoningCode = mergeSimpleField(oldEntry.zoning.previousZoningCode, newEntry.zoning.previousZoningCode, 'old')
-  mergedData.zoning.newZoningCode = mergeSimpleField(oldEntry.zoning.newZoningCode, newEntry.zoning.newZoningCode, 'old')
-  mergedData.zoning.previousZoningDescription = mergeSimpleField(oldEntry.zoning.previousZoningDescription, newEntry.zoning.previousZoningDescription, 'longer')
-  mergedData.zoning.newZoningDescription = mergeSimpleField(oldEntry.zoning.newZoningDescription, newEntry.zoning.newZoningDescription, 'longer')
+  mergedData.zoning.previousZoningCode = mergeSimpleField(oldEntry.zoning.previousZoningCode, newEntry.zoning.previousZoningCode, preferred)
+  mergedData.zoning.newZoningCode = mergeSimpleField(oldEntry.zoning.newZoningCode, newEntry.zoning.newZoningCode, preferred)
+  mergedData.zoning.previousZoningDescription = mergeSimpleField(oldEntry.zoning.previousZoningDescription, newEntry.zoning.previousZoningDescription, preferred)
+  mergedData.zoning.newZoningDescription = mergeSimpleField(oldEntry.zoning.newZoningDescription, newEntry.zoning.newZoningDescription, preferred)
   mergedData.status = mergeStatus(oldEntry.status, newEntry.status)
   const datesArray: (keyof IFullRezoningDetail['dates'])[] = ['appliedDate', 'publicHearingDate', 'approvalDate', 'denialDate', 'withdrawnDate']
   datesArray.forEach((fieldName) => {
-    mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], 'old')
+    mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], preferred)
   })
   mergedData.urls = [...new Map(
     [...oldEntry.urls, ...newEntry.urls]
@@ -368,4 +397,3 @@ export function checkGPTRezoningJSON(json: any): boolean {
 
   return true
 }
-

@@ -1,7 +1,7 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
 import { imageQuery } from '../../AIUtilities'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
 import { downloadPDF, generateScreenshotFromPDF } from '../../PDFUtilities'
@@ -72,6 +72,11 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     }
 
+    // Figure out if approved, denied, or withdrawn
+    let status: ZoningStatus = 'approved'
+    if (news.title.toLowerCase().includes('defeated')) status = 'denied'
+    if (news.title.toLowerCase().includes('withdrawn')) status = 'withdrawn'
+
     return bylawData.map((bylaw) => {
       return {
         id: generateID('rez'),
@@ -89,12 +94,13 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
             date: news.date,
             title: urlObject.title,
             url: urlObject.url,
-            type: 'bylaw'
+            type: status
           }
         }),
         minutesUrls: news.minutesUrl ? [{
           url: news.minutesUrl,
-          date: news.date
+          date: news.date,
+          type: status
         }] : [],
         stats: {
           buildings: null,

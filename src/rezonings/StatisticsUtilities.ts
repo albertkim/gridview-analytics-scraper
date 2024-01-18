@@ -171,7 +171,6 @@ function getCoordinateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
 interface ICityErrors {
   city: string
   appliedDateErrors: number
-  pendingDateErrors: number
   publicHearingDateErrors: number
   approvedDateErrors: number
   deniedDateErrors: number
@@ -190,7 +189,6 @@ function getDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
     const rezoningsInCity = rezonings.filter(rezoning => rezoning.city === city)
 
     const appliedDateErrors = rezoningsInCity.filter(rezoning => rezoning.status === 'applied' && !rezoning.dates.appliedDate).length
-    const pendingDateErrors = rezoningsInCity.filter(rezoning => rezoning.status === 'pending' && !rezoning.dates.appliedDate).length
     const publicHearingDateErrors = rezoningsInCity.filter(rezoning => rezoning.status === 'public hearing' && !rezoning.dates.publicHearingDate).length
     const approvedDateErrors = rezoningsInCity.filter(rezoning => rezoning.status === 'approved' && !rezoning.dates.approvalDate).length
     const deniedDateErrors = rezoningsInCity.filter(rezoning => rezoning.status === 'denied' && !rezoning.dates.denialDate).length
@@ -199,7 +197,6 @@ function getDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
     results.push({
       city,
       appliedDateErrors,
-      pendingDateErrors,
       publicHearingDateErrors,
       approvedDateErrors,
       deniedDateErrors,

@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningType } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus, ZoningType } from '../../../repositories/RezoningsRepository'
 import { chatGPTTextQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { generateID } from '../../../repositories/GenerateID'
@@ -77,6 +77,11 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
       const bylawDetail = bylawDetailRaw as IBylawData
 
+      // Figure out if approved, denied, or withdrawn
+      let status: ZoningStatus = 'approved'
+      if (news.title.toLowerCase().includes('defeated')) status = 'denied'
+      if (news.title.toLowerCase().includes('withdrawn')) status = 'withdrawn'
+
       const fullRezoningDetail: IFullRezoningDetail = {
         id: generateID('rez'),
         ...bylawDetail,
@@ -92,12 +97,13 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
             date: news.date,
             title: 'By-laws',
             url: page.url,
-            type: 'bylaw'
+            type: status
           }
         ],
         minutesUrls: news.minutesUrl ? [{
           date: news.date,
-          url: news.minutesUrl
+          url: news.minutesUrl,
+          type: status
         }] : [],
         stats: {
           buildings: null,

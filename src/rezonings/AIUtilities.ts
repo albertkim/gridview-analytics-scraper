@@ -221,7 +221,7 @@ export function getGPTBaseRezoningTypeQuery(description: string) {
 		Here are some descriptions of possible rezoning types:
 		- single-family residential (include duplexes)
 		- townhouse
-		- mixed use (only if there is residential + commercial)
+		- mixed use (only if there is residential + commercial, also usually includes comprehensive developments)
 		- multi-family residential
 		- industrial (manufacturing, utilities, etc.)
 		- commercial (offices, sales, hotels, etc.)
@@ -231,6 +231,7 @@ export function getGPTBaseRezoningTypeQuery(description: string) {
 		{
 			type: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
 		}
+
 		Description here: ${description}
 	`
 

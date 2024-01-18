@@ -34,13 +34,10 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
       throw new Error()
     }
 
-    // Figure out if approval or denial
-    const isApproval = news.title.toLowerCase().includes('final adoption')
-    const isDenial = news.title.toLowerCase().includes('abandonment')
-    let status: ZoningStatus
-    if (isApproval) status = 'approved'
-    else if (isDenial) status = 'denied'
-    else throw new Error(`Unknown status for ${news.title}`)
+    // Figure out if approved, denied, or withdrawn
+    let status: ZoningStatus = 'approved'
+    if (news.title.toLowerCase().includes('abandonment')) status = 'denied'
+    if (news.title.toLowerCase().includes('withdrawn')) status = 'withdrawn'
 
     // Return full rezoning details object
     return {
@@ -54,12 +51,13 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'bylaw'
+          type: status
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
-        url: news.minutesUrl
+        url: news.minutesUrl,
+        type: status
       }] : [],
       stats: {
         buildings: null,

@@ -55,12 +55,13 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'application'
+          type: 'applied'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
-        url: news.minutesUrl
+        url: news.minutesUrl,
+        type: 'applied'
       }] : [],
       status: 'applied',
       dates: {

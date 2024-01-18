@@ -1,4 +1,3 @@
-import moment from 'moment'
 import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
