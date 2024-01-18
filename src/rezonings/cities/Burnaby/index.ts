@@ -9,8 +9,18 @@ import { checkIfBylaw, parseBylaw } from './Bylaws'
 export async function analyze(startDate: string | null, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Burnaby'})
+  
+  // Only keep rezoning-related items
   const validLists = scrapedList.filter((item) => {
-    return checkIfApplication(item) || checkIfPublicHearing(item) || checkIfBylaw(item)
+    const isRezoningType = checkIfApplication(item) || checkIfPublicHearing(item) || checkIfBylaw(item)
+    let isInDateRange = true
+    if (startDate && moment(item.date).isBefore(startDate)) {
+      isInDateRange = false
+    }
+    if (endDate && moment(item.date).isSameOrAfter(endDate)) {
+      isInDateRange = false
+    }
+    return isRezoningType && isInDateRange
   })
 
   for (let i = 0; i < validLists.length; i++) {
@@ -18,14 +28,6 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     console.log(chalk.bgWhite(`Analyzing ${i + 1}/${validLists.length} - Burnaby`))
 
     const news = validLists[i]
-
-    if (startDate && moment(news.date).isBefore(startDate)) {
-      continue
-    }
-
-    if (endDate && moment(news.date).isAfter(endDate)) {
-      continue
-    }
 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
