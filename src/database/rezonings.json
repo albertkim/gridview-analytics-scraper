@@ -1,83 +1,5 @@
 [
   {
-    "id": "rez-hu2g8h5ysshnmhlej60na",
-    "rezoningId": null,
-    "address": "2231-2247 East 41st Avenue",
-    "applicant": "Dava Developments Ltd.",
-    "behalf": "1314594 B.C. Ltd.",
-    "description": "To rezone 2231-2247 East 41st Avenue from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) to permit the development of a five-storey rental building. A floor space ratio (FSR) of 2.20 and height of 16.8 m (55 ft.) are proposed.",
-    "type": "multi-family residential",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": 2.2,
-      "storeys": 5
-    },
-    "zoning": {
-      "previousZoningCode": "R1-1",
-      "previousZoningDescription": "Residential Inclusive",
-      "newZoningCode": "RR-2B",
-      "newZoningDescription": "Residential Rental"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-12-14",
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea1sr.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr3.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231214/documents/phea1ZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea1ppt.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Video Clip of this Item",
-        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214130000&mediaEndTime=20231214133510&viewMode=3",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-14",
-        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
-        "type": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
-  },
-  {
     "id": "rez-xe6qk3hgnwku25qgzsurq",
     "rezoningId": null,
     "address": "6470 Larch Street",
@@ -138,102 +60,6 @@
         "date": "2023-12-14",
         "title": "Video Clip of thiss Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214133500&mediaEndTime=20231214140010&viewMode=3",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-14",
-        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
-        "type": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
-  },
-  {
-    "id": "rez-k8tycxk7zi8iicx8me7jt",
-    "rezoningId": null,
-    "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
-    "applicant": "Marcon Developments Ltd.",
-    "behalf": "Amica Arbutus Nanton Seniors Inc.",
-    "description": "To rezone 4330-4408 Arbutus Street and 2092 Nanton Avenue from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey, 162-unit Community Care Facility. A floor space ratio (FSR) of 3.87 and a height of 27.5 m (90 ft.) with additional height for a rooftop amenity are proposed.",
-    "type": "mixed use",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 162,
-      "hotels": 0,
-      "fsr": 3.87,
-      "storeys": 6
-    },
-    "zoning": {
-      "previousZoningCode": "R1-1",
-      "previousZoningDescription": "Residential Inclusive",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-12-14",
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20231214/documents/phes3sr.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231214/documents/phea3ZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Applicant Boards",
-        "url": "https://council.vancouver.ca/20231214/documents/phea3_udp.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Applicant Renderings",
-        "url": "https://council.vancouver.ca/20231214/documents/phea3_renderings.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Yellow Memorandum dated December 8, 2023",
-        "url": "https://council.vancouver.ca/20231214/documents/phea3_memo.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea3ppt.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Video Clip of this Item",
-        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214140000&mediaEndTime=20231214145010&viewMode=3",
         "type": "public hearing"
       }
     ],
@@ -324,102 +150,6 @@
     "updateDate": "2024-01-17"
   },
   {
-    "id": "rez-jsrm2hbmg9lbz49utypc2",
-    "rezoningId": null,
-    "address": "1710-1730 East Pender Street",
-    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc.",
-    "behalf": "Lu'ma Native Housing Society, ALT Commercial Housing Society",
-    "description": "To rezone 1710-1730 East Pender Street from RM-4 and RM-4N (Residential) Districts to CD-1 (Comprehensive Development) District, to permit the development of an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space. A floor space ratio (FSR) of 5.58 and a height of 60.8 m (199 ft.) with additional height for a rooftop amenity space are proposed.",
-    "type": "mixed use",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 191,
-      "hotels": 0,
-      "fsr": 5.58,
-      "storeys": 18
-    },
-    "zoning": {
-      "previousZoningCode": "RM-4 and RM-4N",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-12-14",
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5sr.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5ZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Draft By-law - Sign",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5sign.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Applicant Boards",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5_udp.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Applicant Renderings",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5_renderings.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20231214/documents/phea5ppt.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-14",
-        "title": "Video Clip of this item",
-        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214154113&mediaEndTime=20231214164840&viewMode=3",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-14",
-        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
-        "type": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
-  },
-  {
     "id": "rez-pw804z125ojx58x1sr8pt",
     "rezoningId": null,
     "address": "692 West 30th Avenue",
@@ -474,78 +204,6 @@
         "date": "2023-12-13",
         "title": "Video Clip of this Item",
         "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212183130&mediaEndTime=20231212185230&viewMode=3",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-13",
-        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm",
-        "type": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
-  },
-  {
-    "id": "rez-k7ptye03iylk62exfxb2g",
-    "rezoningId": null,
-    "address": "688 West 29th Avenue",
-    "applicant": "Paramax Homes",
-    "behalf": "Vertical Ventures Inc.",
-    "description": "To rezone 688 West 29th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District, to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
-    "type": "townhouse",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-13",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": null,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": 1.2,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "R1-1",
-      "previousZoningDescription": "Residential Inclusive",
-      "newZoningCode": "RM-8A",
-      "newZoningDescription": "Multiple Dwelling"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-12-13",
-        "title": "Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20231212/documents/phea3sr.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-13",
-        "title": "Referral Report dated October 31, 2023",
-        "url": "https://council.vancouver.ca/20231114/documents/rr8.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-13",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20231212/documents/phea3zd.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2023-12-13",
-        "title": "Video Clip of this Item",
-        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212185230&mediaEndTime=20231212190241&viewMode=3",
         "type": "public hearing"
       }
     ],
@@ -654,6 +312,277 @@
     "updateDate": "2024-01-17"
   },
   {
+    "id": "rez-732eebsw4buqomulcf76w",
+    "rezoningId": null,
+    "address": "3352-3386 Vanness Avenue, 3347 Clive Avenue",
+    "applicant": "Intracorp Vanness Limited Partnership",
+    "behalf": "Strata Corporation of 3352-3386 Vanness Avenue Strata Plan LMS992 and the registered owners of the strata lots in Strata Plan LMS922, and the registered owner of 3347 Clive Avenue",
+    "description": "Rezoning to increase the maximum floor space ratio (FSR) from 1.45 and 0.6 respectively to 11.38 and the maximum building height from 35.5 m (120 ft.) and 11.9 m (39 ft.) respectively to 104.9 m (344 ft.), to permit a mixed-use development with 30-storey (west tower) and 33-storey (east tower) buildings connected with a six-storey podium, with 679 secured rental units, of which 10% of the residential floor area will be secured at below market rents, commercial uses on the ground floor and a 37-space turn-key childcare facility for City ownership",
+    "type": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-12",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 0,
+      "rentals": 679,
+      "hotels": 0,
+      "fsr": 11.38,
+      "storeys": 33
+    },
+    "zoning": {
+      "previousZoningCode": "CD-1(201), CD-1(218)",
+      "previousZoningDescription": "Comprehensive Development",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr1.pdf",
+        "type": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-17",
+    "updateDate": "2024-01-17"
+  },
+  {
+    "id": "rez-pbj5h0k2t04i89f0tuixq",
+    "rezoningId": null,
+    "address": "1055 Harwood Street",
+    "applicant": "GWL Realty Advisors Inc.",
+    "behalf": "H arwood Street Project Nominee Inc.",
+    "description": "Rezoning of the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units",
+    "type": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-12",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 269,
+      "hotels": 0,
+      "fsr": 11.9,
+      "storeys": 32
+    },
+    "zoning": {
+      "previousZoningCode": "RM-5A",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr4.pdf",
+        "type": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-17",
+    "updateDate": "2024-01-17"
+  },
+  {
+    "id": "rez-onrx405lyamerommms9kz",
+    "address": "5562-5688 Manson Street",
+    "date": "2023-12-12",
+    "type": null,
+    "zoning": {
+      "previousZoningCode": "RS-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "approved"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-12",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-17",
+    "updateDate": "2024-01-17"
+  },
+  {
+    "id": "rez-rrqxbpekjabwj90tbrfpj",
+    "rezoningId": null,
+    "address": "1890 Southwest Marine Drive",
+    "applicant": "Stuart Howard Architects",
+    "behalf": "Yayun Cao",
+    "description": "Rezoning of the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 0.75 and the building height from 11.5 m (38 ft.) to 13.8 m (45 ft.), to permit 28 secured market rental residential units.",
+    "type": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-12",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 28,
+      "hotels": 0,
+      "fsr": 0.75,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "Referral Report ",
+        "url": "https://council.vancouver.ca/20231212/documents/rr5.pdf",
+        "type": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "applied"
+      }
+    ],
+    "location": {
+      "latitude": 49.21085050000001,
+      "longitude": -123.1512534
+    },
+    "createDate": "2024-01-17",
+    "updateDate": "2024-01-18"
+  },
+  {
+    "id": "rez-f4x40frxjbndmmlx8jgl6",
+    "rezoningId": null,
+    "address": "2015 Main Street, 190 East 4th Avenue",
+    "applicant": "Henriquez Partners Architects",
+    "behalf": "2015 Main Property Inc.",
+    "description": "The rezoning application is to rezone the lands from IC-2 (Industrial) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 3.0 to 6.27 and the maximum building height from 18.3 m (60 ft.) to 79.3 m (260 ft.) with mechanical appurtenances permitted up to a maximum of 3.6 m (12 ft.) above the permitted building height, to permit the development of a 25-storey, mixed-use building containing 210 secured-rental housing units, of which 20% of the residential floor area will be secured as below-market rental units, with commercial space on the ground floor.",
+    "type": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-12",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 210,
+      "hotels": 0,
+      "fsr": 6.27,
+      "storeys": 25
+    },
+    "zoning": {
+      "previousZoningCode": "IC-2",
+      "previousZoningDescription": "Industrial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-12",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr2.pdf",
+        "type": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "applied"
+      }
+    ],
+    "location": {
+      "latitude": 49.2668893,
+      "longitude": -123.1012246
+    },
+    "createDate": "2024-01-17",
+    "updateDate": "2024-01-18"
+  },
+  {
     "id": "rez-g6mfebrzh5mfdiffk2ixs",
     "rezoningId": null,
     "address": "8120-8168 Lord Street, 540 West 65th Avenue",
@@ -731,78 +660,96 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2112843,
+      "longitude": -123.1182931
     },
     "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
+    "updateDate": "2024-01-18"
   },
   {
-    "id": "rez-732eebsw4buqomulcf76w",
+    "id": "rez-k7ptye03iylk62exfxb2g",
     "rezoningId": null,
-    "address": "3352-3386 Vanness Avenue, 3347 Clive Avenue",
-    "applicant": "Intracorp Vanness Limited Partnership",
-    "behalf": "Strata Corporation of 3352-3386 Vanness Avenue Strata Plan LMS992 and the registered owners of the strata lots in Strata Plan LMS922, and the registered owner of 3347 Clive Avenue",
-    "description": "Rezoning to increase the maximum floor space ratio (FSR) from 1.45 and 0.6 respectively to 11.38 and the maximum building height from 35.5 m (120 ft.) and 11.9 m (39 ft.) respectively to 104.9 m (344 ft.), to permit a mixed-use development with 30-storey (west tower) and 33-storey (east tower) buildings connected with a six-storey podium, with 679 secured rental units, of which 10% of the residential floor area will be secured at below market rents, commercial uses on the ground floor and a 37-space turn-key childcare facility for City ownership",
-    "type": "mixed use",
-    "status": "applied",
+    "address": "688 West 29th Avenue",
+    "applicant": "Paramax Homes",
+    "behalf": "Vertical Ventures Inc.",
+    "description": "To rezone 688 West 29th Avenue from R1-1 (Residential Inclusive) District to RM-8A (Multiple Dwelling) District, to permit a townhouse development with a maximum floor space ratio (FSR) of 1.20.",
+    "type": "townhouse",
+    "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-12-12",
-      "publicHearingDate": null,
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 2,
-      "stratas": 0,
-      "rentals": 679,
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 0,
       "hotels": 0,
-      "fsr": 11.38,
-      "storeys": 33
+      "fsr": 1.2,
+      "storeys": null
     },
     "zoning": {
-      "previousZoningCode": "CD-1(201), CD-1(218)",
-      "previousZoningDescription": "Comprehensive Development",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "RM-8A",
+      "newZoningDescription": "Multiple Dwelling"
     },
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
     "urls": [
       {
-        "date": "2023-12-12",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231212/documents/rr1.pdf",
-        "type": "applied"
+        "date": "2023-12-13",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231212/documents/phea3sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-13",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr8.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-13",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231212/documents/phea3zd.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231213/-1/20456?mediaStartTime=20231212185230&mediaEndTime=20231212190241&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-12-12",
-        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
-        "type": "applied"
+        "date": "2023-12-13",
+        "url": "https://council.vancouver.ca/20231212/phea20231212ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2449626,
+      "longitude": -123.120023
     },
     "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
+    "updateDate": "2024-01-18"
   },
   {
-    "id": "rez-f4x40frxjbndmmlx8jgl6",
+    "id": "rez-jsrm2hbmg9lbz49utypc2",
     "rezoningId": null,
-    "address": "2015 Main Street, 190 East 4th Avenue",
-    "applicant": "Henriquez Partners Architects",
-    "behalf": "2015 Main Property Inc.",
-    "description": "The rezoning application is to rezone the lands from IC-2 (Industrial) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 3.0 to 6.27 and the maximum building height from 18.3 m (60 ft.) to 79.3 m (260 ft.) with mechanical appurtenances permitted up to a maximum of 3.6 m (12 ft.) above the permitted building height, to permit the development of a 25-storey, mixed-use building containing 210 secured-rental housing units, of which 20% of the residential floor area will be secured as below-market rental units, with commercial space on the ground floor.",
+    "address": "1710-1730 East Pender Street",
+    "applicant": "DIALOG BC Architecture Engineering Interior Design Planning Inc.",
+    "behalf": "Lu'ma Native Housing Society, ALT Commercial Housing Society",
+    "description": "To rezone 1710-1730 East Pender Street from RM-4 and RM-4N (Residential) Districts to CD-1 (Comprehensive Development) District, to permit the development of an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space. A floor space ratio (FSR) of 5.58 and a height of 60.8 m (199 ft.) with additional height for a rooftop amenity space are proposed.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-12-12",
-      "publicHearingDate": null,
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -810,67 +757,13 @@
     "stats": {
       "buildings": 1,
       "stratas": 0,
-      "rentals": 210,
+      "rentals": 191,
       "hotels": 0,
-      "fsr": 6.27,
-      "storeys": 25
+      "fsr": 5.58,
+      "storeys": 18
     },
     "zoning": {
-      "previousZoningCode": "IC-2",
-      "previousZoningDescription": "Industrial",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "urls": [
-      {
-        "date": "2023-12-12",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231212/documents/rr2.pdf",
-        "type": "applied"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-12",
-        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
-        "type": "applied"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
-  },
-  {
-    "id": "rez-pbj5h0k2t04i89f0tuixq",
-    "rezoningId": null,
-    "address": "1055 Harwood Street",
-    "applicant": "GWL Realty Advisors Inc.",
-    "behalf": "H arwood Street Project Nominee Inc.",
-    "description": "Rezoning of the lands from RM-5A (Residential) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 2.2 to 11.9 and the maximum building height from 18.30 m (60 ft.) to 91.44 m (300 ft.) to permit the development of a 32-storey residential building containing 269 secured-rental units of which 20% of the residential floor area will be secured as below-market rental units",
-    "type": "multi-family residential",
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2023-12-12",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 269,
-      "hotels": 0,
-      "fsr": 11.9,
-      "storeys": 32
-    },
-    "zoning": {
-      "previousZoningCode": "RM-5A",
+      "previousZoningCode": "RM-4 and RM-4N",
       "previousZoningDescription": "Residential",
       "newZoningCode": "CD-1",
       "newZoningDescription": "Comprehensive Development"
@@ -879,38 +772,80 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
-        "date": "2023-12-12",
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231212/documents/rr4.pdf",
-        "type": "applied"
+        "date": "2023-12-14",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5ZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5sign.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5_udp.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea5ppt.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Video Clip of this item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214154113&mediaEndTime=20231214164840&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-12-12",
-        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
-        "type": "applied"
+        "date": "2023-12-14",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2800811,
+      "longitude": -123.0695486
     },
     "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
+    "updateDate": "2024-01-18"
   },
   {
-    "id": "rez-rrqxbpekjabwj90tbrfpj",
+    "id": "rez-k8tycxk7zi8iicx8me7jt",
     "rezoningId": null,
-    "address": "1890 Southwest Marine Drive",
-    "applicant": "Stuart Howard Architects",
-    "behalf": "Yayun Cao",
-    "description": "Rezoning of the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 0.75 and the building height from 11.5 m (38 ft.) to 13.8 m (45 ft.), to permit 28 secured market rental residential units.",
+    "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
+    "applicant": "Marcon Developments Ltd.",
+    "behalf": "Amica Arbutus Nanton Seniors Inc.",
+    "description": "To rezone 4330-4408 Arbutus Street and 2092 Nanton Avenue from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey, 162-unit Community Care Facility. A floor space ratio (FSR) of 3.87 and a height of 27.5 m (90 ft.) with additional height for a rooftop amenity are proposed.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
-      "appliedDate": "2023-12-12",
-      "publicHearingDate": null,
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -918,10 +853,10 @@
     "stats": {
       "buildings": 1,
       "stratas": 0,
-      "rentals": 28,
+      "rentals": 162,
       "hotels": 0,
-      "fsr": 0.75,
-      "storeys": null
+      "fsr": 3.87,
+      "storeys": 6
     },
     "zoning": {
       "previousZoningCode": "R1-1",
@@ -933,80 +868,145 @@
     "metroCity": "Metro Vancouver",
     "urls": [
       {
-        "date": "2023-12-12",
-        "title": "Referral Report ",
-        "url": "https://council.vancouver.ca/20231212/documents/rr5.pdf",
-        "type": "applied"
+        "date": "2023-12-14",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231214/documents/phes3sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231214/documents/phea3ZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231214/documents/phea3_udp.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231214/documents/phea3_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Yellow Memorandum dated December 8, 2023",
+        "url": "https://council.vancouver.ca/20231214/documents/phea3_memo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea3ppt.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214140000&mediaEndTime=20231214145010&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-12-12",
-        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
-        "type": "applied"
+        "date": "2023-12-14",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2466729,
+      "longitude": -123.1529319
     },
     "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
+    "updateDate": "2024-01-18"
   },
   {
-    "id": "rez-onrx405lyamerommms9kz",
-    "address": "5562-5688 Manson Street",
-    "date": "2023-12-12",
-    "type": null,
-    "zoning": {
-      "previousZoningCode": "RS-1",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
+    "id": "rez-hu2g8h5ysshnmhlej60na",
     "rezoningId": null,
-    "applicant": null,
-    "behalf": null,
-    "description": "",
-    "urls": [
-      {
-        "date": "2023-12-12",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
-        "type": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-12",
-        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
-        "type": "approved"
-      }
-    ],
-    "stats": {
-      "buildings": null,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": null
-    },
-    "status": "approved",
+    "address": "2231-2247 East 41st Avenue",
+    "applicant": "Dava Developments Ltd.",
+    "behalf": "1314594 B.C. Ltd.",
+    "description": "To rezone 2231-2247 East 41st Avenue from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) to permit the development of a five-storey rental building. A floor space ratio (FSR) of 2.20 and height of 16.8 m (55 ft.) are proposed.",
+    "type": "multi-family residential",
+    "status": "public hearing",
     "dates": {
       "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-12",
+      "publicHearingDate": "2023-12-14",
+      "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": 2.2,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-14",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea1sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Referral Report dated October 31, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/rr3.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231214/documents/phea1ZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea1ppt.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214130000&mediaEndTime=20231214133510&viewMode=3",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-14",
+        "url": "https://council.vancouver.ca/20231214/phea20231214ag.htm",
+        "type": "public hearing"
+      }
+    ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2331274,
+      "longitude": -123.0607062
     },
     "createDate": "2024-01-17",
-    "updateDate": "2024-01-17"
+    "updateDate": "2024-01-18"
   },
   {
     "id": "rez-ppoz3ru8iqmfvxa44mifk",
@@ -1113,8 +1113,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.278395,
+      "longitude": -122.9110258
     },
     "createDate": "2024-01-17",
     "updateDate": "2024-01-18"
@@ -1313,8 +1313,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.24943,
+      "longitude": -123.0086995
     },
     "createDate": "2024-01-17",
     "updateDate": "2024-01-18"
@@ -6343,8 +6343,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2572845,
+      "longitude": -123.15287
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6398,8 +6398,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2814211,
+      "longitude": -123.0299335
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6453,8 +6453,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.23578999999999,
+      "longitude": -123.0433
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6508,8 +6508,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2445414,
+      "longitude": -123.1396259
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6563,8 +6563,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27404,
+      "longitude": -123.12956
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6618,8 +6618,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2219346,
+      "longitude": -123.1179302
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6673,8 +6673,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2084075,
+      "longitude": -123.1202601
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6728,8 +6728,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.233315,
+      "longitude": -123.1177762
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6794,8 +6794,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2698565,
+      "longitude": -123.1626492
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6849,8 +6849,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2698712,
+      "longitude": -123.0693768
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6904,8 +6904,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2646299,
+      "longitude": -123.18672
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -6959,8 +6959,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2512342,
+      "longitude": -123.0653652
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7014,8 +7014,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2617002,
+      "longitude": -123.1666683
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7069,8 +7069,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2812789,
+      "longitude": -123.0513647
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7123,8 +7123,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1364525,
+      "longitude": -123.1640422
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7237,8 +7237,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.13414,
+      "longitude": -123.170334
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7302,8 +7302,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1599451,
+      "longitude": -123.1305785
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7367,8 +7367,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1624849,
+      "longitude": -123.1869324
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7450,8 +7450,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1338021,
+      "longitude": -123.1617109
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7515,8 +7515,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1342885,
+      "longitude": -123.1722758
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7569,8 +7569,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1395978,
+      "longitude": -123.0928102
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7623,8 +7623,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.154157,
+      "longitude": -123.1807192
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7688,8 +7688,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1396339,
+      "longitude": -123.0921853
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7753,8 +7753,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.150339,
+      "longitude": -123.1206468
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7818,8 +7818,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1580689,
+      "longitude": -123.1193144
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7883,8 +7883,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1419363,
+      "longitude": -123.1698289
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -7948,8 +7948,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1248381,
+      "longitude": -123.091731
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8049,8 +8049,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.153414,
+      "longitude": -123.1371033
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8114,8 +8114,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1248922,
+      "longitude": -123.1845666
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8179,8 +8179,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.19055100000001,
+      "longitude": -123.125067
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8244,8 +8244,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1623741,
+      "longitude": -123.1609433
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8309,8 +8309,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1584237,
+      "longitude": -123.1194971
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8409,8 +8409,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.188618,
+      "longitude": -123.1225381
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8503,8 +8503,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1409059,
+      "longitude": -123.0974445
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8579,8 +8579,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1518303,
+      "longitude": -123.1196875
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8644,8 +8644,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1665898,
+      "longitude": -123.133569
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8743,8 +8743,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1539702,
+      "longitude": -123.1223067
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8814,8 +8814,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14195669999999,
+      "longitude": -123.181717
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8885,8 +8885,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1974593,
+      "longitude": -123.1033144
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -8956,8 +8956,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1593873,
+      "longitude": -123.1145882
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9021,8 +9021,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1682434,
+      "longitude": -123.1293249
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9180,8 +9180,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1729502,
+      "longitude": -123.1495886
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9245,8 +9245,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 51.46131099999999,
+      "longitude": -0.303742
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9310,8 +9310,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.15106189999999,
+      "longitude": -123.1145615
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9387,8 +9387,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1532035,
+      "longitude": -123.1371756
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9452,8 +9452,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1581658,
+      "longitude": -123.1312827
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9517,8 +9517,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.18624399999999,
+      "longitude": -123.137068
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9582,8 +9582,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1503407,
+      "longitude": -123.1228389
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9647,8 +9647,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.152377,
+      "longitude": -123.1221611
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9735,8 +9735,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1406926,
+      "longitude": -123.1402244
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9800,8 +9800,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.15368220000001,
+      "longitude": -123.1476905
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9871,8 +9871,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1879701,
+      "longitude": -123.1262633
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -9936,8 +9936,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1701731,
+      "longitude": -122.9951226
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10001,8 +10001,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1900673,
+      "longitude": -123.1034721
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10066,8 +10066,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1900816,
+      "longitude": -123.108514
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10178,8 +10178,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14114619999999,
+      "longitude": -123.133066
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10261,8 +10261,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1662309,
+      "longitude": -123.1254758
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10338,8 +10338,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1694621,
+      "longitude": -123.1516284
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10403,8 +10403,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 37.5107696,
+      "longitude": -77.4002057
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10468,8 +10468,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1843249,
+      "longitude": -123.1236078
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10533,8 +10533,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1623983,
+      "longitude": -123.1540077
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10598,8 +10598,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1404671,
+      "longitude": -123.0932533
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10663,8 +10663,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2057179,
+      "longitude": -122.910956
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10728,8 +10728,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1886093,
+      "longitude": -123.1228398
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10793,8 +10793,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1404897,
+      "longitude": -123.0971893
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10858,8 +10858,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1408598,
+      "longitude": -123.1874512
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10940,8 +10940,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1625296,
+      "longitude": -123.1509022
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -10994,8 +10994,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1794518,
+      "longitude": -123.1362338
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11059,8 +11059,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1291173,
+      "longitude": -123.1710976
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11124,8 +11124,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1585229,
+      "longitude": -123.1600018
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11189,8 +11189,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.15473,
+      "longitude": -123.1593883
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11243,8 +11243,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.17982809999999,
+      "longitude": -122.9639069
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11297,8 +11297,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1408857,
+      "longitude": -123.0937223
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11385,8 +11385,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14048830000001,
+      "longitude": -123.1046124
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11473,8 +11473,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1728823,
+      "longitude": -123.1389224
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11538,8 +11538,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1649657,
+      "longitude": -123.1815956
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11638,8 +11638,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1416323,
+      "longitude": -123.1578936
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11692,8 +11692,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1404737,
+      "longitude": -123.0988876
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11746,8 +11746,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14853859999999,
+      "longitude": -123.1521167
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11811,8 +11811,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1338158,
+      "longitude": -123.1275285
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -11889,8 +11889,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1898975,
+      "longitude": -123.1293237
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12132,8 +12132,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1849475,
+      "longitude": -123.124977
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12203,8 +12203,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.133625,
+      "longitude": -123.0999443
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12268,8 +12268,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1903993,
+      "longitude": -123.1179414
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12322,8 +12322,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1606687,
+      "longitude": -123.1693543
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12376,8 +12376,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1554734,
+      "longitude": -123.1892066
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12430,8 +12430,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1966238,
+      "longitude": -123.1041608
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12495,8 +12495,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1479679,
+      "longitude": -123.1214696
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12560,8 +12560,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.16664309999999,
+      "longitude": -123.1311203
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12614,8 +12614,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14809160000001,
+      "longitude": -123.1486963
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12668,8 +12668,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.14809340000001,
+      "longitude": -123.1492879
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12728,8 +12728,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1676201,
+      "longitude": -123.1280989
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12810,8 +12810,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1615085,
+      "longitude": -123.1866599
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12875,8 +12875,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1359139,
+      "longitude": -123.1139824
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -12941,8 +12941,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1665898,
+      "longitude": -123.133569
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13006,8 +13006,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1404749,
+      "longitude": -123.0999833
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13102,8 +13102,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1408552,
+      "longitude": -123.1246592
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13174,8 +13174,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1412936,
+      "longitude": -123.1325312
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13228,8 +13228,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1390081,
+      "longitude": -123.1694719
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13282,8 +13282,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1406913,
+      "longitude": -123.1511353
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13336,8 +13336,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1682529,
+      "longitude": -123.130159
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13390,8 +13390,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1843209,
+      "longitude": -123.1212151
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13450,8 +13450,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.144561,
+      "longitude": -123.1592569
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13504,8 +13504,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.192034,
+      "longitude": -123.1328409
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13558,8 +13558,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.140516,
+      "longitude": -123.1119322
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13629,8 +13629,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.18938000000001,
+      "longitude": -123.1350575
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13695,8 +13695,8 @@
       "withdrawnDate": null
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1729289,
+      "longitude": -123.1417249
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13760,8 +13760,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1393469,
+      "longitude": -123.1808951
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13814,8 +13814,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1736309,
+      "longitude": -123.135918
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -13903,8 +13903,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2238957,
+      "longitude": -122.9871743
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14010,8 +14010,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2669088,
+      "longitude": -123.0132794
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14099,8 +14099,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26376519999999,
+      "longitude": -123.0064833
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14206,8 +14206,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26771220000001,
+      "longitude": -122.9886616
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14307,8 +14307,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2681023,
+      "longitude": -123.0000943
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14465,8 +14465,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2579872,
+      "longitude": -122.9614709
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18",
@@ -14589,8 +14589,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.20404,
+      "longitude": -122.96476
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14694,8 +14694,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2636361,
+      "longitude": -122.9875353
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14789,8 +14789,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22546,
+      "longitude": -122.91727
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -14913,8 +14913,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2534461,
+      "longitude": -123.0068523
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15077,8 +15077,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2679212,
+      "longitude": -123.0034443
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15249,8 +15249,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2577592,
+      "longitude": -122.9582723
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15356,8 +15356,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2485498,
+      "longitude": -122.893559
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15422,8 +15422,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21335999999999,
+      "longitude": -122.9475
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15562,8 +15562,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2606005,
+      "longitude": -123.01709
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15662,8 +15662,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2820547,
+      "longitude": -123.0030289
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15790,8 +15790,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2268869,
+      "longitude": -122.9977607
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15909,8 +15909,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2240601,
+      "longitude": -123.0068924
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -15969,8 +15969,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.20955,
+      "longitude": -122.95173
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16057,8 +16057,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1883855,
+      "longitude": -122.9799769
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16169,8 +16169,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.28072,
+      "longitude": -123.00356
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16312,8 +16312,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2041623,
+      "longitude": -122.9664813
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16430,8 +16430,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2812849,
+      "longitude": -122.997028
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16531,8 +16531,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2468849,
+      "longitude": -123.0014873
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16632,8 +16632,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21831,
+      "longitude": -122.98171
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16727,8 +16727,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.263829,
+      "longitude": -122.98728
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16804,8 +16804,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2231428,
+      "longitude": -122.9915749
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -16910,8 +16910,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.28084,
+      "longitude": -123.01983
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17009,8 +17009,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2503699,
+      "longitude": -122.98576
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17120,8 +17120,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27561,
+      "longitude": -122.90614
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17246,8 +17246,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.20836,
+      "longitude": -122.96567
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17348,8 +17348,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2143882,
+      "longitude": -122.983072
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17426,8 +17426,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2262265,
+      "longitude": -122.9362919
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17534,8 +17534,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230906,
+      "longitude": -123.0021794
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17646,8 +17646,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2308226,
+      "longitude": -123.0076937
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17740,8 +17740,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2707144,
+      "longitude": -122.9518243
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -17828,8 +17828,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2542225,
+      "longitude": -123.0099567
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18029,8 +18029,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18183,8 +18183,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21782,
+      "longitude": -122.95275
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18343,8 +18343,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2637862,
+      "longitude": -123.008076
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18485,8 +18485,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2519314,
+      "longitude": -122.9938228
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18590,8 +18590,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2217549,
+      "longitude": -122.9916326
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18750,8 +18750,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2671287,
+      "longitude": -123.009415
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18863,8 +18863,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2212238,
+      "longitude": -122.9297009
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -18952,8 +18952,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.281295,
+      "longitude": -123.014963
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -19063,8 +19063,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25002,
+      "longitude": -122.89399
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -19396,8 +19396,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2309899,
+      "longitude": -123.009896
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -19718,8 +19718,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2301401,
+      "longitude": -123.0106799
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -19800,8 +19800,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2800044,
+      "longitude": -123.0219126
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -19871,8 +19871,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2061308,
+      "longitude": -122.9681443
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20163,8 +20163,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2556802,
+      "longitude": -122.9953171
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20472,8 +20472,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22142050000001,
+      "longitude": -122.9890835
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20555,8 +20555,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21028570000001,
+      "longitude": -122.9556619
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20626,8 +20626,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2150659,
+      "longitude": -122.980979
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20733,8 +20733,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2155418,
+      "longitude": -122.9613569
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20821,8 +20821,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2456344,
+      "longitude": -122.9746332
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -20932,8 +20932,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230703,
+      "longitude": -123.0052798
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -21060,8 +21060,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2254356,
+      "longitude": -123.0076324
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -21165,8 +21165,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22471789999999,
+      "longitude": -123.0060092
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -21869,8 +21869,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2647,
+      "longitude": -122.99983
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -21940,8 +21940,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2828536,
+      "longitude": -123.0105581
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22017,8 +22017,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.20413,
+      "longitude": -123.01447
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22123,8 +22123,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2541197,
+      "longitude": -123.0127496
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22239,8 +22239,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2681023,
+      "longitude": -123.0000943
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22339,8 +22339,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2162067,
+      "longitude": -122.9412792
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22393,8 +22393,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.216859,
+      "longitude": -123.0055649
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22464,8 +22464,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27541,
+      "longitude": -122.90756
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22570,8 +22570,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2234566,
+      "longitude": -123.0029728
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22652,8 +22652,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2179285,
+      "longitude": -122.972863
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22747,8 +22747,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230273,
+      "longitude": -123.0103831
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22836,8 +22836,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2300956,
+      "longitude": -123.0096761
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22914,8 +22914,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2311178,
+      "longitude": -123.0122775
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -22961,8 +22961,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2149118,
+      "longitude": -122.9530152
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23079,8 +23079,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2228985,
+      "longitude": -123.0080258
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23202,8 +23202,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2277837,
+      "longitude": -122.9857497
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23285,8 +23285,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2486106,
+      "longitude": -122.8944812
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23403,8 +23403,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2497888,
+      "longitude": -122.9020217
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23498,8 +23498,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2627602,
+      "longitude": -122.9950982
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23741,8 +23741,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2886326,
+      "longitude": -123.0219377
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23812,8 +23812,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.250565,
+      "longitude": -123.0044099
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23866,8 +23866,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.266838,
+      "longitude": -123.00155
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -23926,8 +23926,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2625721,
+      "longitude": -123.0025292
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24053,8 +24053,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2005,
+      "longitude": -123.00237
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24164,8 +24164,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2256622,
+      "longitude": -123.0009731
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24235,8 +24235,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24306,8 +24306,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25002,
+      "longitude": -122.89399
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24399,8 +24399,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2516823,
+      "longitude": -122.9677019
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24459,8 +24459,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.280017,
+      "longitude": -123.0167609
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24530,8 +24530,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22593999999999,
+      "longitude": -122.91774
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24707,8 +24707,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2226878,
+      "longitude": -122.9885197
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24761,8 +24761,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2252535,
+      "longitude": -123.0081473
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24832,8 +24832,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2202034,
+      "longitude": -122.9872326
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24886,8 +24886,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27711180000001,
+      "longitude": -122.9655186
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -24997,8 +24997,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2486595,
+      "longitude": -122.9744492
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25051,8 +25051,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.19624,
+      "longitude": -123.00052
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25128,8 +25128,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25196510000001,
+      "longitude": -122.9654182
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25205,8 +25205,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.261311,
+      "longitude": -123.002285
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25276,8 +25276,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22471789999999,
+      "longitude": -123.0060092
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25364,8 +25364,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2231979,
+      "longitude": -123.007375
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25482,8 +25482,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22665869999999,
+      "longitude": -122.9372726
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25623,8 +25623,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26681,
+      "longitude": -122.99986
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25735,8 +25735,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.250565,
+      "longitude": -123.0044099
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25812,8 +25812,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2645843,
+      "longitude": -122.9859637
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25895,8 +25895,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.245903,
+      "longitude": -122.997226
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -25955,8 +25955,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2116,
+      "longitude": -122.94789
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26077,8 +26077,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2292715,
+      "longitude": -123.0106884
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26235,8 +26235,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2308777,
+      "longitude": -123.0116255
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26306,8 +26306,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2010733,
+      "longitude": -122.9827618
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26371,8 +26371,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230906,
+      "longitude": -123.0021794
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26471,8 +26471,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2270172,
+      "longitude": -122.9393579
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26553,8 +26553,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2248223,
+      "longitude": -122.9931971
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26719,8 +26719,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26773,8 +26773,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26827,8 +26827,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25487769999999,
+      "longitude": -123.0186652
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -26904,8 +26904,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2246491,
+      "longitude": -122.9912503
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27066,8 +27066,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1988399,
+      "longitude": -122.99663
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27137,8 +27137,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.19699,
+      "longitude": -122.9993
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27214,8 +27214,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2248837,
+      "longitude": -123.0098506
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27355,8 +27355,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2331803,
+      "longitude": -123.0095671
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27438,8 +27438,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2652099,
+      "longitude": -123.00408
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27544,8 +27544,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22428009999999,
+      "longitude": -123.0048351
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27609,8 +27609,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2116,
+      "longitude": -122.94789
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27669,8 +27669,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2627602,
+      "longitude": -122.9950982
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27763,8 +27763,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1874622,
+      "longitude": -122.9909564
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27810,8 +27810,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2646327,
+      "longitude": -122.9877484
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27887,8 +27887,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22364,
+      "longitude": -123.0057153
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -27947,8 +27947,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2468849,
+      "longitude": -123.0014873
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28083,8 +28083,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21859389999999,
+      "longitude": -122.9506288
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28143,8 +28143,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.28005779999999,
+      "longitude": -123.0207662
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28255,8 +28255,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21738,
+      "longitude": -122.95959
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28344,8 +28344,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26269,
+      "longitude": -122.9986
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28409,8 +28409,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2191072,
+      "longitude": -122.9696587
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28509,8 +28509,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26306659999999,
+      "longitude": -122.9871461
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28569,8 +28569,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2807531,
+      "longitude": -122.9967069
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28674,8 +28674,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2265872,
+      "longitude": -122.9952347
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28779,8 +28779,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28878,8 +28878,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2817732,
+      "longitude": -123.0093593
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28938,8 +28938,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27977,
+      "longitude": -122.91058
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -28998,8 +28998,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2204759,
+      "longitude": -122.9608059
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29152,8 +29152,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2314984,
+      "longitude": -123.0049984
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29276,8 +29276,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2583093,
+      "longitude": -122.9553582
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29323,8 +29323,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.28129,
+      "longitude": -123.00431
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29383,8 +29383,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2817755,
+      "longitude": -123.0151568
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29443,8 +29443,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21759309999999,
+      "longitude": -122.949568
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29503,8 +29503,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2150914,
+      "longitude": -122.9824188
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29557,8 +29557,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230166,
+      "longitude": -122.9411932
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29611,8 +29611,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22516,
+      "longitude": -122.91677
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29665,8 +29665,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2230166,
+      "longitude": -122.9411932
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29765,8 +29765,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2306294,
+      "longitude": -123.0091324
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29860,8 +29860,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2296709,
+      "longitude": -123.0070296
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29914,8 +29914,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26963689999999,
+      "longitude": -123.0224042
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -29968,8 +29968,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2532536,
+      "longitude": -122.9901953
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30022,8 +30022,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2486409,
+      "longitude": -122.978691
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30076,8 +30076,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2176453,
+      "longitude": -122.9325518
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30153,8 +30153,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2033335,
+      "longitude": -122.9580598
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30218,8 +30218,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1994652,
+      "longitude": -123.0090578
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30307,8 +30307,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2243428,
+      "longitude": -123.0046074
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30411,8 +30411,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1972242,
+      "longitude": -122.9967854
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30494,8 +30494,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2673906,
+      "longitude": -123.0021629
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30577,8 +30577,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.24857,
+      "longitude": -122.97622
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30683,8 +30683,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2335184,
+      "longitude": -122.9166545
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30800,8 +30800,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.20715,
+      "longitude": -122.96794
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30854,8 +30854,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2242194,
+      "longitude": -123.0041803
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -30942,8 +30942,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21757239999999,
+      "longitude": -122.9442785
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31002,8 +31002,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2624314,
+      "longitude": -123.0008113
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31062,8 +31062,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.1981505,
+      "longitude": -123.0004562
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31157,8 +31157,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2085985,
+      "longitude": -122.9491353
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31217,8 +31217,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.281295,
+      "longitude": -123.009581
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31277,8 +31277,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.28222640000001,
+      "longitude": -123.0177266
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31337,8 +31337,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2211809,
+      "longitude": -122.9889363
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31397,8 +31397,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2485799,
+      "longitude": -122.97793
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31475,8 +31475,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2488091,
+      "longitude": -122.9805104
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31529,8 +31529,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2328813,
+      "longitude": -123.0204365
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31589,8 +31589,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2627996,
+      "longitude": -123.0039627
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31643,8 +31643,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2315102,
+      "longitude": -123.0035997
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31697,8 +31697,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2635637,
+      "longitude": -123.0014451
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31751,8 +31751,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25884139999999,
+      "longitude": -122.9781387
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31834,8 +31834,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2172784,
+      "longitude": -122.9887266
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -31917,8 +31917,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22349209999999,
+      "longitude": -123.0209109
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32066,8 +32066,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21810199999999,
+      "longitude": -122.9484873
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32149,8 +32149,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2229168,
+      "longitude": -122.9836625
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32226,8 +32226,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2635637,
+      "longitude": -123.0014451
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32286,8 +32286,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2162134,
+      "longitude": -122.9763209
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32381,8 +32381,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2005758,
+      "longitude": -122.9902821
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32476,8 +32476,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2669774,
+      "longitude": -123.0063499
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32530,8 +32530,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2302918,
+      "longitude": -123.0084495
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32624,8 +32624,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2225943,
+      "longitude": -122.9451468
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32684,8 +32684,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2300392,
+      "longitude": -123.0056759
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32744,8 +32744,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25297399999999,
+      "longitude": -123.0114817
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32809,8 +32809,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.26957700000001,
+      "longitude": -122.97812
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32869,8 +32869,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.19883,
+      "longitude": -122.97347
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -32940,8 +32940,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2282159,
+      "longitude": -123.0034643
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33011,8 +33011,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2001109,
+      "longitude": -123.0022879
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33071,8 +33071,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27199,
+      "longitude": -122.95139
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33131,8 +33131,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2649163,
+      "longitude": -123.0128478
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33191,8 +33191,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.25887340000001,
+      "longitude": -123.010129
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33238,8 +33238,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.21757239999999,
+      "longitude": -122.9442785
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
@@ -33285,8 +33285,8 @@
       }
     ],
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2210729,
+      "longitude": -122.9891782
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-18"
