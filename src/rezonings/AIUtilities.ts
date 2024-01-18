@@ -240,7 +240,7 @@ export function getGPTBaseRezoningTypeQuery(description: string) {
 export function getGPTBaseRezoningStatsQuery(description: string) {
 
   return `
-    Given the following description, give me the following in a JSON format:
+    Given the following description, give me the following in a JSON format - always return all fields even if null:
     {
       buildings: your best guess as to the number of new buildings being proposed - default to 1 - null if unclear - if it's a townhouse, default to 1 unless it's clear that there are multiple separated structures
       stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units - 0 if it's a commercial/industrial development

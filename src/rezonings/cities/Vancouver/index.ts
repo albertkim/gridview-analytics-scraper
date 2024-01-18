@@ -1,7 +1,7 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { RawRepository } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../../repositories/RezoningsRepository'
+import { RezoningsRepository } from '../../../repositories/RezoningsRepository'
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
@@ -9,9 +9,15 @@ import { checkIfBylaw, parseBylaw } from './Bylaws'
 export async function analyze(startDate: string | null, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Vancouver'})
-  const rezoningJSON: IFullRezoningDetail[] = RezoningsRepository.getRezonings({city: 'Vancouver'})
+  const validLists = scrapedList.filter((item) => {
+    return checkIfApplication(item) || checkIfPublicHearing(item) || checkIfBylaw(item)
+  })
 
-  for (const news of scrapedList) {
+  for (let i = 0; i < validLists.length; i++) {
+
+    console.log(chalk.bgWhite(`Analyzing ${i + 1}/${validLists.length} - Vancouver`))
+
+    const news = validLists[i]
 
     if (startDate && moment(news.date).isBefore(startDate)) {
       continue
@@ -27,9 +33,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
         const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(applicationDetails)
 
         if (matchingItems.length > 0) {
-          rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, applicationDetails)
+          const matchingItem = matchingItems[0].rezoning
+          RezoningsRepository.updateRezoning(matchingItem.id, applicationDetails)
         } else {
-          rezoningJSON.push(applicationDetails)
+          RezoningsRepository.upsertRezonings([applicationDetails])
         }
       }
     }
@@ -40,9 +47,10 @@ export async function analyze(startDate: string | null, endDate: string | null) 
         const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(publicHearingDetails)
 
         if (matchingItems.length > 0) {
-          rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, publicHearingDetails)
+          const matchingItem = matchingItems[0].rezoning
+          RezoningsRepository.updateRezoning(matchingItem.id, publicHearingDetails)
         } else {
-          rezoningJSON.push(publicHearingDetails)
+          RezoningsRepository.upsertRezonings([publicHearingDetails])
         }
       }
     }
@@ -54,18 +62,15 @@ export async function analyze(startDate: string | null, endDate: string | null) 
           const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(bylawDetail)
 
           if (matchingItems.length > 0) {
-            rezoningJSON[matchingItems[0].index] = mergeEntries(matchingItems[0].rezoning, bylawDetail)
-            console.log(chalk.bgGreen(`Bylaw merged for ${bylawDetail.address}`))
+            const matchingItem = matchingItems[0].rezoning
+            RezoningsRepository.updateRezoning(matchingItem.id, bylawDetail)
           } else {
-            rezoningJSON.push(bylawDetail)
-            console.log(chalk.bgGreen(`Bylaw added for ${bylawDetail.address}`))
+            RezoningsRepository.upsertRezonings([bylawDetail])
           }
         }
       }
     }
 
   }
-
-  RezoningsRepository.dangerouslyUpdateRezonings('Vancouver', rezoningJSON)
 
 }
