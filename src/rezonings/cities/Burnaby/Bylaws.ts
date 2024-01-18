@@ -1,8 +1,8 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, ZoningStatus, checkGPTRezoningJSON } from '../../../repositories/RezoningsRepository'
-import { chatGPTTextQuery } from '../../AIUtilities'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
+import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
@@ -25,23 +25,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     const infoString = `${news.title} - ${news.contents}`
 
-    let partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(infoString))
-    if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
-      console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetailsRaw = await chatGPTTextQuery(getBurnabyBaseGPTQuery(infoString))
-      if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
-        const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
-        console.error(chalk.bgRed(errorMessage))
-        console.error(chalk.red(JSON.stringify(partialRezoningDetailsRaw, null, 2)))
-        ErrorsRepository.addError(news)
-        throw new Error(errorMessage)
-      }
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+      getBurnabyBaseGPTQuery(infoString),
+      {analyzeType: true, analyzeStats: false} // No need to get stats, can't get it from the available documents
+    )
+
+    if (!partialRezoningDetails) {
+      throw new Error()
     }
-
-    // Cast as partial rezoning details
-    const partialRezoningDetails = partialRezoningDetailsRaw as IPartialRezoningDetail
-
-    // No need to get stats, can't get it from the available documents
 
     // Figure out if approval or denial
     const isApproval = news.title.toLowerCase().includes('final adoption')

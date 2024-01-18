@@ -3,10 +3,10 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
-import { chatGPTPartialRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
 import { generateID } from '../../../repositories/GenerateID'
-import { cleanBurnabyRezoningId } from './BurnabyUtilities'
+import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
 
 // Burnaby includes first, second, and 3rd readings in their council meeting minutes, we only want the first reading
 export function checkIfApplication(news: IMeetingDetail) {
@@ -47,21 +47,13 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     }
 
     // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(getGPTBaseRezoningQuery(applicationContent, {
-      rezoningId: baseRezoningIdQuery
-    }))
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+      getBurnabyBaseGPTQuery(applicationContent),
+      {analyzeType: true, analyzeStats: true}
+    )
 
     if (!partialRezoningDetails) {
       throw new Error()
-    }
-
-    // Get stats
-    const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')
-    if (!GPTStats) {
-      const errorMessage = 'Partial rezoning details GPT JSON is not valid, skipping'
-      console.log(chalk.bgRed(errorMessage))
-      ErrorsRepository.addError(news)
-      throw new Error(errorMessage)
     }
 
     // Return full rezoning details object
@@ -83,7 +75,6 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
         date: news.date,
         url: news.minutesUrl
       }] : [],
-      stats: GPTStats,
       status: 'applied',
       dates: {
         appliedDate: news.date,

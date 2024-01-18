@@ -1,11 +1,12 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTRezoningJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
+import { getVancouverBaseGPTQuery } from './VancouverUtilities'
 
 export function checkIfApplication(news: IMeetingDetail) {
   const isVancouver = news.city === 'Vancouver'
@@ -29,34 +30,13 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     const parsedPDF = await parsePDF(pdf3pages as Buffer)
 
     // Get partial rezoning details from GPT
-    let partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
-      rezoningId: 'null'
-    }))
-    if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
-      console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      partialRezoningDetailsRaw = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF, {
-        rezoningId: 'null'
-      }))
-      if (!checkGPTRezoningJSON(partialRezoningDetailsRaw)) {
-        const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
-        console.error(chalk.bgRed(errorMessage))
-        console.error(chalk.red(JSON.stringify(partialRezoningDetailsRaw, null, 2)))
-        ErrorsRepository.addError(news)
-        throw new Error(errorMessage)
-      }
-    }
-    console.log(chalk.bgGreen('Partial rezoning details GPT JSON is valid'))
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+      getVancouverBaseGPTQuery(parsedPDF),
+      {analyzeType: true, analyzeStats: true}
+    )
 
-    // Cast as partial rezoning details
-    const partialRezoningDetails = partialRezoningDetailsRaw as IPartialRezoningDetail
-
-    // Get stats
-    const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')
-    if (GPTStats.error) {
-      const errorMessage = 'Partial rezoning details GPT JSON is not valid, skipping'
-      console.log(chalk.bgRed(errorMessage))
-      ErrorsRepository.addError(news)
-      throw new Error(errorMessage)
+    if (!partialRezoningDetails) {
+      throw new Error()
     }
 
     // Return full rezoning details object
@@ -77,7 +57,6 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
         date: news.date,
         url: news.minutesUrl
       }] : [],
-      stats: GPTStats,
       status: 'applied',
       dates: {
         appliedDate: news.date,
@@ -97,7 +76,9 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     return fullRezoningDetails
 
   } catch (error) {
-    console.error(error)
+    console.error(chalk.bgRed('Error parsing application'))
+    console.error(chalk.red(error))
+    ErrorsRepository.addError(news)
     return null
   }
 

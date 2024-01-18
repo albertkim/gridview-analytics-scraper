@@ -69,7 +69,7 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 
 // This function returns a partial rezoning detail object and retries if the first time doesn't work
 // Caller is expected to handle thrown errors - best practice is to add to the ErrorsRepository
-export async function chatGPTPartialRezoningQuery(query: string): Promise<IPartialRezoningDetail | null> {
+export async function chatGPTPartialRezoningQuery(query: string, options: {analyzeType: boolean, analyzeStats: boolean}): Promise<IPartialRezoningDetail | null> {
 	try {
 
 		const content = await chatGPTTextQuery(query)
@@ -100,6 +100,24 @@ export async function chatGPTPartialRezoningQuery(query: string): Promise<IParti
 		}
 
 		console.log(chalk.green('GPT partial rezoning JSON is valid'))
+
+		if (options && options.analyzeType) {
+			const typeContent = await chatGPTTextQuery(getGPTBaseRezoningTypeQuery(content.description))
+			if (typeContent && typeContent.type) {
+				content.type = typeContent.type
+			} else {
+				console.error(chalk.red('Failed to get rezoning type'))
+			}
+		}
+
+		if (options && options.analyzeStats) {
+			const statsContent = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(content.description), '4')
+			if (statsContent) {
+				content.stats = statsContent
+			} else {
+				console.error(chalk.red('Failed to get rezoning stats'))
+			}
+		}
 
 		return content
 
@@ -161,14 +179,14 @@ export async function imageQuery(query: string, fileData: string, gptVersion?: '
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
 
   return `
-    Read this document and give me the following in a JSON format:
+    If the provided document, is related to a rezoning, give me the following in a JSON format otherwise give an error:
     {
       rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
       address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist
       applicant: who the rezoning applicant is - if behalf exists, do not mention behalf
       behalf: if the applicant is applying on behalf of someone else, who is it
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
-      type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial, commercial, or other
+      type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other
       status: either applied, public hearing, approved, denied, withdrawn
       dates: {
         appliedDate: if this is an application, the date of this document in YYYY-MM-DD or null if unclear
@@ -192,8 +210,29 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
         newZoningDescription: best description of new zoning code (ex. high density residential)
       }
     }
-    If this document is not a rezoning related document, please reply with "not rezoning". Document here: ${document}
+    Document here: ${document}
   `
+
+}
+
+export function getGPTBaseRezoningTypeQuery(description: string) {
+	
+	return `
+		Here are some descriptions of possible rezoning types:
+		- single-family residential (include duplexes)
+		- townhouse
+		- mixed use (only if there is residential + commercial)
+		- multi-family residential
+		- industrial (manufacturing, utilities, etc.)
+		- commercial (offices, sales, hotels, etc.)
+		- other (only if absolutely nothing else fits)
+
+		Given the following description, give me the following in a JSON format. 
+		{
+			type: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
+		}
+		Description here: ${description}
+	`
 
 }
 

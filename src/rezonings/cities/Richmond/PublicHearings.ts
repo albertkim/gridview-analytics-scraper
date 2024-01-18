@@ -1,11 +1,12 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, IPartialRezoningDetail, checkGPTRezoningJSON } from '../../../repositories/RezoningsRepository'
-import { getGPTBaseRezoningQuery, chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from '../../AIUtilities'
+import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { downloadPDF, parsePDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
+import { getRichmondBaseGPTQuery } from './RichmondUtilities'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
   const isRichmond = news.city === 'Richmond'
@@ -30,29 +31,13 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     }
 
     // Get partial rezoning details from GPT
-    let GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF))
-    if (!checkGPTRezoningJSON(GPTTextResponse)) {
-      console.warn(chalk.bgYellow('Partial rezoning details GPT JSON is invalid, running again'))
-      GPTTextResponse = await chatGPTTextQuery(getGPTBaseRezoningQuery(parsedPDF))
-      if (!checkGPTRezoningJSON(GPTTextResponse)) {
-        const errorMessage = 'Partial rezoning details GPT JSON is invalid 2nd time, skipping'
-        console.error(chalk.bgRed(errorMessage))
-        ErrorsRepository.addError(news)
-        throw new Error(errorMessage)
-      }
-    }
-    console.log(chalk.bgGreen('Partial rezoning details GPT JSON is valid'))
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+      getRichmondBaseGPTQuery(parsedPDF),
+      {analyzeType: true, analyzeStats: false}
+    )
 
-    // Cast as partial rezoning details
-    const partialRezoningDetails = GPTTextResponse as IPartialRezoningDetail
-
-    // Get stats
-    const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(partialRezoningDetails.description), '4')
-    if (GPTStats.error) {
-      const errorMessage = 'Partial rezoning details GPT JSON is not valid, skipping'
-      console.log(chalk.bgRed(errorMessage))
-      ErrorsRepository.addError(news)
-      throw new Error(errorMessage)
+    if (!partialRezoningDetails) {
+      throw new Error()
     }
 
     // Return full rezoning details object
@@ -73,7 +58,6 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
         date: news.date,
         url: news.minutesUrl
       }] : [],
-      stats: GPTStats,
       status: 'public hearing',
       dates: {
         appliedDate: null,
@@ -93,7 +77,9 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     return fullRezoningDetails
 
   } catch (error) {
-    console.error(error)
+    console.error(chalk.bgRed('Error parsing public hearing'))
+    console.error(chalk.red(error))
+    ErrorsRepository.addError(news)
     return null
   }
 

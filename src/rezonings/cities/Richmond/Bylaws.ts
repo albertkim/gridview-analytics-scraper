@@ -128,7 +128,8 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
     })
 
   } catch (error) {
-    console.error(error)
+    console.error(chalk.bgRed('Error parsing bylaw'))
+    console.error(chalk.red(error))
     ErrorsRepository.addError(news)
     return []
   }
