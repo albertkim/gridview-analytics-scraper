@@ -2,14 +2,15 @@ import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { getStatistics } from './StatisticsUtilities'
+import { BulkUtilities } from './BulkUtilities'
 
 // yarn run rezone
-const startDate = '2020-01-01'
-const endDate = '2024-01-18'
+const startDate = '2019-01-01'
+const endDate = '2020-01-01'
 const citiesToAnalyze: string[] = [
   'Vancouver',
-  // 'Richmond',
-  // 'Burnaby'
+  'Richmond',
+  'Burnaby'
 ]
 
 async function main() {
@@ -26,6 +27,7 @@ async function main() {
     await analyzeBurnaby(startDate, endDate)
   }
 
+  BulkUtilities.bulkAddCoordinates()
   getStatistics()
 
 }

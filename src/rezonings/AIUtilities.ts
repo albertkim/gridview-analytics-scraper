@@ -73,9 +73,10 @@ export async function chatGPTPartialRezoningQuery(query: string, options: {analy
 	try {
 
 		const content = await chatGPTTextQuery(query)
-		if (content.rezoningId === 'null') {
+
+		if (content && content.rezoningId === 'null') {
 			content.rezoningId = null
-		} else if (content.rezoningId) {
+		} else if (content && content.rezoningId) {
 			content.rezoningId = `${content.rezoningId}` // Sometimes rezoning IDs come back as a number, breaks string-based code later
 		}
 
