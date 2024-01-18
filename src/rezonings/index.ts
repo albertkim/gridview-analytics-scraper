@@ -7,9 +7,9 @@ import { getStatistics } from './StatisticsUtilities'
 const startDate = '2020-01-01'
 const endDate = '2024-01-18'
 const citiesToAnalyze: string[] = [
-  'Vancouver',
-  // 'Richmond',
-  // 'Burnaby'
+  // 'Vancouver',
+  'Richmond',
+  'Burnaby'
 ]
 
 async function main() {

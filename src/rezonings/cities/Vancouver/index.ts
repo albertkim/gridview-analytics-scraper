@@ -30,44 +30,21 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(applicationDetails)
-
-        if (matchingItems.length > 0) {
-          const matchingItem = matchingItems[0].rezoning
-          RezoningsRepository.updateRezoning(matchingItem.id, applicationDetails)
-        } else {
-          RezoningsRepository.upsertRezonings([applicationDetails])
-        }
+        RezoningsRepository.upsertRezonings([applicationDetails])
       }
     }
 
     if (checkIfPublicHearing(news)) {
       const publicHearingDetails = await parsePublicHearing(news)
       if (publicHearingDetails) {
-        const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(publicHearingDetails)
-
-        if (matchingItems.length > 0) {
-          const matchingItem = matchingItems[0].rezoning
-          RezoningsRepository.updateRezoning(matchingItem.id, publicHearingDetails)
-        } else {
-          RezoningsRepository.upsertRezonings([publicHearingDetails])
-        }
+        RezoningsRepository.upsertRezonings([publicHearingDetails])
       }
     }
 
     if (checkIfBylaw(news)) {
       const bylawDetails = await parseBylaw(news)
       if (bylawDetails) {
-        for (const bylawDetail of bylawDetails) {
-          const matchingItems = RezoningsRepository.getRezoningsWithSimilarAddresses(bylawDetail)
-
-          if (matchingItems.length > 0) {
-            const matchingItem = matchingItems[0].rezoning
-            RezoningsRepository.updateRezoning(matchingItem.id, bylawDetail)
-          } else {
-            RezoningsRepository.upsertRezonings([bylawDetail])
-          }
-        }
+        RezoningsRepository.upsertRezonings(bylawDetails)
       }
     }
 

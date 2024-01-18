@@ -201,14 +201,16 @@ export const RezoningsRepository = {
   },
 
   // Add news to the database - merge if there is a rezoning with the same address
-  upsertRezonings(news: IFullRezoningDetail[]) {
+  upsertRezonings(rezonings: IFullRezoningDetail[]) {
 
     const previousEntries = this.getRezonings()
 
-    for (const newsItem of news) {
+    for (const newsItem of rezonings) {
 
       // Check for any entries with the same rezoning ID - take precedent over matching addresses
-      const rezoningWithMatchingID = previousEntries.find((item) => item.rezoningId === newsItem.rezoningId)
+      const rezoningWithMatchingID = newsItem.rezoningId ?
+        previousEntries.find((item) => item.rezoningId === newsItem.rezoningId)
+        : null
       if (rezoningWithMatchingID) {
         const mergedRezoning = mergeEntries(rezoningWithMatchingID, newsItem)
         mergedRezoning.id = rezoningWithMatchingID.id
@@ -355,7 +357,7 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
 // Type-check the json object property types match with the IRezoningDetail property types
 export function checkGPTRezoningJSON(json: any): boolean {
   if (typeof json !== 'object' || json === null) {
-      return false
+    return false
   }
 
   const checkStringOrNull = (value: any) => typeof value === 'string' || value === null

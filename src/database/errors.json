@@ -1,1 +1,303 @@
-[]
+[
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "date": "2023-06-13",
+    "meetingType": "Council",
+    "title": "Rezoning: 3581 West 30th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230613/documents/rr3.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "date": "2023-06-13",
+    "meetingType": "Council",
+    "title": "Rezoning: 5650-5690 Blenheim Street",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230613/documents/rr7.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "date": "2023-05-09",
+    "meetingType": "Council",
+    "title": "Rezoning: 109 East 40th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230509/documents/rr2.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "date": "2023-05-09",
+    "meetingType": "Council",
+    "title": "Rezoning: 2325-2377 West 49th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230509/documents/rr3.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "date": "2023-03-28",
+    "meetingType": "Council",
+    "title": "CD-1 Rezoning: 1045 Burnaby Street (Revised on March 23, 2023)",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230328/documents/rr2_000.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "date": "2023-03-28",
+    "meetingType": "Council",
+    "title": "Rezoning: 2126 West 34th Avenue and 5025 Arbutus Street and 2109-2129 West 35th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230328/documents/rr3.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230216/phea20230216ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230216/phea20230216ag.htm",
+    "date": "2023-02-17",
+    "meetingType": "Public Hearing",
+    "title": "Rezoning: 807-847 East 33rd Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Summary and Recommendations",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5RR.pdf"
+      },
+      {
+        "title": "Referral Report dated December 20, 2022",
+        "url": "https://council.vancouver.ca/20230216/documents/rr7.pdf"
+      },
+      {
+        "title": "Draft By-Law - Sign ",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5draftbylawZD.pdf"
+      },
+      {
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230216/documents/phea5presentation.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "date": "2023-01-17",
+    "meetingType": "Council",
+    "title": "Rezoning: 1977 West 41st Avenue and 5688 Maple Street",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr6.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "date": "2023-01-17",
+    "meetingType": "Council",
+    "title": "Rezoning: 807-847 East 33rd Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr7.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+    "date": "2023-12-12",
+    "meetingType": "Council",
+    "title": "CD-1 Rezoning: 7525 Cambie Street - WITHDRAWN",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231212/documents/rr4.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "date": "2023-06-13",
+    "meetingType": "Council",
+    "title": "Rezoning: 3581 West 30th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230613/documents/rr3.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "date": "2023-06-13",
+    "meetingType": "Council",
+    "title": "Rezoning: 5650-5690 Blenheim Street",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230613/documents/rr7.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230613/regu20230613ag.htm",
+    "date": "2023-06-13",
+    "meetingType": "Council",
+    "title": "Rezoning: 3539 Hull Street",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230613/documents/rr9.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230509/regu20230509ag.htm",
+    "date": "2023-05-09",
+    "meetingType": "Council",
+    "title": "Rezoning: 109 East 40th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230509/documents/rr2.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
+    "date": "2023-03-28",
+    "meetingType": "Council",
+    "title": "Rezoning: 2126 West 34th Avenue and 5025 Arbutus Street and 2109-2129 West 35th Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230328/documents/rr3.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "date": "2023-01-17",
+    "meetingType": "Council",
+    "title": "Rezoning: 1977 West 41st Avenue and 5688 Maple Street",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr6.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20230117/regu20230117ag.htm",
+    "date": "2023-01-17",
+    "meetingType": "Council",
+    "title": "Rezoning: 807-847 East 33rd Avenue",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20230117/documents/rr7.pdf"
+      }
+    ]
+  }
+]
