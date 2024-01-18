@@ -13,6 +13,7 @@ export async function getStatistics() {
   console.log()
 
   printStatistic('Total news', getNewsCountPerCity(news))
+  printStatistic('News date ranges', getNewsDateRangesPerCity(news))
   printStatistic('Total rezonings', getRezoningCountPerCity(rezonings))
   printStatistic('Similar addresses', getSimilarAddresses(rezonings, 0.7))
   printStatistic('Addresses without coordinates', getCoordinateErrorsPerCity(rezonings))
@@ -56,6 +57,35 @@ function getNewsCountPerCity(news: IMeetingDetail[]) {
   const result: {city: string, count: number}[] = Object.keys(countPerCity).map(city => ({
     city,
     count: countPerCity[city],
+    earliestDate: dateRanges[city].earliest,
+    latestDate: dateRanges[city].latest
+  }))
+
+  return result
+
+}
+
+function getNewsDateRangesPerCity(news: IMeetingDetail[]) {
+
+  const dateRanges = news.reduce<Record<string, {earliest: string, latest: string}>>((acc, obj) => {
+    if (!acc[obj.city]) {
+      acc[obj.city] = {
+        earliest: obj.date,
+        latest: obj.date
+      }
+    } else {
+      // Use moment instead of Date for comparisons
+      if (moment(obj.date).isBefore(acc[obj.city].earliest)) {
+        acc[obj.city].earliest = obj.date
+      } else if (moment(obj.date).isAfter(acc[obj.city].latest)) {
+        acc[obj.city].latest = obj.date
+      }
+    }
+    return acc
+  }, {})
+  
+  const result: {city: string, earliestDate: string, latestDate: string}[] = Object.keys(dateRanges).map(city => ({
+    city,
     earliestDate: dateRanges[city].earliest,
     latestDate: dateRanges[city].latest
   }))
