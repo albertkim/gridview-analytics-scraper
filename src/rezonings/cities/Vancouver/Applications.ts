@@ -43,6 +43,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
       ...partialRezoningDetails,
+      rezoningId: null,
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {

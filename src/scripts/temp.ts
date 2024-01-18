@@ -5,24 +5,8 @@ import { parseApplication } from '../rezonings/cities/Vancouver/Applications'
 
 (async () => {
 
-  const parsedRezoning = await parseApplication({
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "url": "https://council.vancouver.ca/20230912/regu20230912ag.htm",
-    "minutesUrl": "https://council.vancouver.ca/20230912/regu20230912ag.htm",
-    "date": "2023-09-12",
-    "meetingType": "Council",
-    "title": "Rezoning: 2821-2869 East 49th Avenue",
-    "resolutionId": null,
-    "contents": "",
-    "reportUrls": [
-      {
-        "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20230912/documents/rr4.pdf"
-      }
-    ]
-  })
-
-  console.log(parsedRezoning)
+  const rezonings = RezoningsRepository.getRezonings()
+  const noVanccouverRezonings = rezonings.filter((rezoning) => rezoning.city !== 'Vancouver')
+  RezoningsRepository.dangerouslyUpdateAllRezonings(noVanccouverRezonings)
 
 })()

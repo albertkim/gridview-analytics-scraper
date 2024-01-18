@@ -42,6 +42,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
       ...partialRezoningDetails,
+      rezoningId: null,
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {
