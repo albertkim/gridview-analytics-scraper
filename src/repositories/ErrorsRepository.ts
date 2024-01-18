@@ -1,12 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import '../database/errors.json'
 import { IMeetingDetail } from './RawRepository'
 
 export const ErrorsRepository = {
 
   getErrors() {
-    const errors = require('../database/errors.json') as IMeetingDetail[]
+    const errors = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/errors.json'), 'utf8')) as IMeetingDetail[]
     return errors
   },
 

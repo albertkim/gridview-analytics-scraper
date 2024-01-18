@@ -129,7 +129,7 @@ export const RezoningsRepository = {
 
     if (!numbersInAddress) return []
 
-    const allRezonings = require('../database/rezonings.json') as IFullRezoningDetail[]
+    const allRezonings = this.getRezonings()
     const rezoningIndex = allRezonings.findIndex((item) => item === rezoning) // Can be -1 if not found
 
     const rezoningsWithMatchingNumbers: {
@@ -187,9 +187,9 @@ export const RezoningsRepository = {
   },
 
   updateRezoning(id: string, rezoning: IFullRezoningDetail) {
-    if (rezoning.id !== id) throw new Error(`Rezoning id ${rezoning.id} does not match ${id}`)
+    rezoning.id = id
     const previousEntries = this.getRezonings()
-    const matchingRezoningIndex = previousEntries.findIndex((item) => item.id !== id)
+    const matchingRezoningIndex = previousEntries.findIndex((item) => item.id === id)
     if (matchingRezoningIndex === -1) throw new Error(`Could not find rezoning with id ${id}`)
     previousEntries[matchingRezoningIndex] = rezoning
     const newData = reorderItems(previousEntries)
