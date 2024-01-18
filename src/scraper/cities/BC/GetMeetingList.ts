@@ -15,9 +15,14 @@ const maxNumberOfPages = 200
 export async function getMeetingList(page: Page, options: IScrapingDateOptions): Promise<{date: string, meetingType: string, url: string}[]> {
 
   // Note that the BC website only shows up to Nov 26, 2020
+  // If date is not set or is before 2021-01-01
+  // When you reach the last page, the same item with date 2020-12-02 is repeatedly shown
   // Going back earlier requires scraping a different set of pages, not necessary at this time
+  const earliestDate = '2021-01-01'
   if (!options.startDate) {
-    options.startDate = '2020-11-26'
+    options.startDate = earliestDate
+  } else if (moment(options.startDate).isBefore(earliestDate)) {
+    options.startDate = earliestDate
   }
 
   await page.goto(startUrl)
@@ -65,7 +70,7 @@ async function getMeetingListForMinistry(page: Page, ministry: string, options: 
 
     // Go to next page
     await page.evaluate(async () => {
-      $('input[title*="Next Page"]').click()
+      $('input[title*="Next Page"]').trigger('click')
     })
     await new Promise((resolve) => {setTimeout(resolve, 2000)})
   }
@@ -81,8 +86,6 @@ interface IMeetingListData {
 }
 
 async function getSingleMeetingListPage(page: Page, ministry: string, options: IScrapingDateOptions): Promise<IMeetingListData> {
-
-  console.log(`Scraping ${ministry} meeting list pages`)
 
   const results = await page.evaluate(async (ministry) => {
 

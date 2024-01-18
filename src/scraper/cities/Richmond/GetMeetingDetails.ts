@@ -8,22 +8,22 @@ export async function getMeetingDetails(page: Page, url: string, date: string): 
 
   const results = await page.evaluate(async (date) => {
 
-    const meetingType = $('.TitleFull').parent().text().split(' -- ')[1].trim()
+    const meetingType = $('.TitleFull').parent().text().split(' -- ')[1]?.trim()
 
-    const resolutionTopic = $('.RecordDetailsFull :contains("Item Topic: ")').next().text().trim()
+    const resolutionTopic = $('.RecordDetailsFull :contains("Item Topic: ")').next().text()?.trim()
 
     let resolutionNumber = null
     const resolutionNumberElement = $('.RecordDetailsFull :contains("Resolution Number")')
     if (resolutionNumberElement) {
-        resolutionNumber = resolutionNumberElement.next().text().trim()
+        resolutionNumber = resolutionNumberElement.next().text()?.trim()
     }
 
     let fullTextContents = ''
     const fullTextContentsElement = $('.RecordDetailsFull :contains("Full Text")')
     if (fullTextContentsElement) {
-      fullTextContents = fullTextContentsElement.next().text().trim()
+      fullTextContents = fullTextContentsElement.next().text()?.trim()
         .replace(/\s+/g, ' ')
-        .replace(/[\r\n]+/g, '').trim()
+        .replace(/[\r\n]+/g, '')?.trim()
     }
 
     let resolutionContents = ''
@@ -31,7 +31,7 @@ export async function getMeetingDetails(page: Page, url: string, date: string): 
     if (resolutionContentsElement) {
         resolutionContents = resolutionContentsElement.next().text()
           .replace(/\s+/g, ' ')
-          .replace(/[\r\n]+/g, '').trim()
+          .replace(/[\r\n]+/g, '')?.trim()
     }
 
     let minutesUrl = null

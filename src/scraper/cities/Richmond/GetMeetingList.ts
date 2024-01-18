@@ -18,7 +18,7 @@ export async function getMeetingList(page: Page, url: string, options: IScraping
   await page.goto(url)
   await new Promise((resolve) => {setTimeout(resolve, 500)})
 
-  let results: IMeetingListData = await page.evaluate(async () => {
+  const results: IMeetingListData = await page.evaluate(async () => {
 
     let data: {url: string, date: string}[] = []
 

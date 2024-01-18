@@ -1,9 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
-import chalk from 'chalk'
 import similarity from 'similarity'
-import '../database/rezonings.json'
 
 export type ZoningType =
   'single-family residential' |
@@ -113,7 +111,7 @@ function reorderItems(items: IFullRezoningDetail[]) {
 export const RezoningsRepository = {
 
   getRezonings(filter?: {city?: string}) {
-    const rawData = require('../database/rezonings.json') as IFullRezoningDetail[]
+    const rawData = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/rezonings.json'), 'utf8')) as IFullRezoningDetail[]
     if (filter?.city) {
       return rawData.filter((item) => item.city === filter.city)
     } else {

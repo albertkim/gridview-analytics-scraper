@@ -33,7 +33,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     // Get partial rezoning details from GPT
     const partialRezoningDetails = await chatGPTPartialRezoningQuery(
       getRichmondBaseGPTQuery(parsedPDF),
-      {analyzeType: true, analyzeStats: false}
+      {analyzeType: true, analyzeStats: true}
     )
 
     if (!partialRezoningDetails) {

@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
-import '../database/raw.json'
 
 export interface IMeetingDetail {
   city: string
@@ -37,7 +36,8 @@ function reorderItems(items: IMeetingDetail[]) {
 export const RawRepository = {
 
   getNews(filter?: {city?: string}) {
-    const rawData = require('../database/raw.json') as IMeetingDetail[]
+    
+    const rawData = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/raw.json'), 'utf8')) as IMeetingDetail[]
     if (filter?.city) {
       return rawData.filter((item) => item.city === filter.city)
     } else {
@@ -72,14 +72,12 @@ export const RawRepository = {
       JSON.stringify(orderedData, null, 2),
       'utf8'
     )
-    return this.getNews({city: city})
   },
 
   // Add news to the database but ignore ones with the same city/date/meeting type
-  upsertNews(city: string, news: IMeetingDetail[]) {
+  upsertNews(news: IMeetingDetail[]) {
     const previousEntries = this.getNews()
     const onlyNewEntries = news.filter((item) => {
-      if (item.city !== city) return false
       const matchingPreviousEntry = previousEntries.find((entry) => {
         const sameCity = entry.city === item.city
         const sameDate = entry.date === item.date
@@ -94,7 +92,6 @@ export const RawRepository = {
       JSON.stringify(orderedData, null, 2),
       'utf8'
     )
-    return this.getNews({city: city})
   },
 
   // Replaces all news

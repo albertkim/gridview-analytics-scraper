@@ -34,7 +34,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('BC (province)', data)
+    if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
   if (citiesToScrape.includes('Vancouver')) {
@@ -44,7 +44,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('Vancouver', data)
+    if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
   if (citiesToScrape.includes('Richmond')) {
@@ -54,7 +54,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('Richmond', data)
+    if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
   // Burnaby code may require running in multiple date ranges because of rate limiting
@@ -65,7 +65,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
-    if (shouldUpdateDatabase) RawRepository.upsertNews('Burnaby', data)
+    if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
 }
