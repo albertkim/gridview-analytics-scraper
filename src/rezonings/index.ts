@@ -4,10 +4,10 @@ import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { getStatistics } from './StatisticsUtilities'
 
 // yarn run rezone
-const startDate = '2020-01-01'
+const startDate = '2023-12-01'
 const endDate = '2024-01-18'
 const citiesToAnalyze: string[] = [
-  // 'Vancouver',
+  'Vancouver',
   'Richmond',
   'Burnaby'
 ]
