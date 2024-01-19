@@ -53,15 +53,17 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		const content = JSON.parse(response.choices[0].message.content!)
 
 		if (content.error) {
+			console.log(`Error query: ${query}`)
+			console.log(chalk.red(JSON.stringify(content, null, 2)))
 			return null
 		}
 		return content
 	} catch (error: any) {
 		if (error.response && error.response.data) {
-			console.error(error.response.data)
+			console.error(chalk.red(error.response.data))
 			throw new Error()
 		} else {
-			console.error(error)
+			console.error(chalk.red(error))
 			throw new Error()
 		}
 	}
@@ -74,10 +76,21 @@ export async function chatGPTPartialRezoningQuery(query: string, options: {analy
 
 		const content = await chatGPTTextQuery(query)
 
+		// Check and fix rezoning ID correctness (null, "null", undefined values)
 		if (content && content.rezoningId === 'null') {
 			content.rezoningId = null
+		} else if (content && content.rezoningId === undefined) {
+			content.rezoningId = null
 		} else if (content && content.rezoningId) {
-			content.rezoningId = `${content.rezoningId}` // Sometimes rezoning IDs come back as a number, breaks string-based code later
+			content.rezoningId = `${content.rezoningId}`
+		}
+
+		// Check and fix location correctness
+		if (content && !content.location) {
+			content.location = {
+				latitude: null,
+				longitude: null
+			}
 		}
 
 		if (!content.address) {

@@ -1,11 +1,11 @@
 import { Page } from 'puppeteer'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 
-export async function getMeetingDetails(page: Page, url: string, date: string): Promise<IMeetingDetail[]> {
+export async function getMeetingDetails(page: Page, url: string, meetingType: string, date: string): Promise<IMeetingDetail[]> {
 
   await page.goto(url)
 
-  const results = await page.evaluate(async (date) => {
+  const results = await page.evaluate(async (meetingType, date) => {
     
     let data: Omit<IMeetingDetail, 'city' | 'metroCity' | 'url' | 'minutesUrl'>[] = []
 
@@ -17,8 +17,6 @@ export async function getMeetingDetails(page: Page, url: string, date: string): 
       }
     }
 
-    const meetingType = ($('h1').first().html().split('<br>')[0].replace('agenda', '') || '').trim()
-
     // Vancouver council meeting notes are organized by a series of
     // - h3 "MATTERS ADOPTED ON CONSENT"/"REPORTS" for primary discussion items followed up by ul
     // - h2 "REFERRAL REPORTS" followed up by an h3
@@ -29,7 +27,7 @@ export async function getMeetingDetails(page: Page, url: string, date: string): 
       // Only proceed if a valid title exists
       if (rawTitle) {
         const title = cleanTitle(rawTitle)
-        const reportUrls = $(element).nextAll('ul').first().find('a').map(function() {
+        const reportUrls = $(element).nextUntil(':not(ul)').filter('ul').first().find('a').map(function() {
           return {
             title: $(this).text(),
             url: $(this)[0].href
@@ -47,43 +45,44 @@ export async function getMeetingDetails(page: Page, url: string, date: string): 
       }
     })
 
-    // Now, handle the bylaw section (if exists) separately
-    const bylawSelector = $('h2:contains("BY-LAWS")')
+    const bylawLinks = $('h2:contains("BY-LAWS")')
+      .nextAll()
+      .find('a')
+      .filter(function() {
+        const hashref = !!$(this)[0].href
+        const regexBy = /by/i
+        const regexLaw = /law/i
+        const text = $(this).text()
+        return hashref && regexBy.test(text) && regexLaw.test(text)
+      }).map((index, element) => {
+        return {
+          title: $(element).text(),
+          url: $(element)[0].href
+        }
+      }).get()
 
-    // If there are any bylaws, pick the first one. If the next element is a p tag with an a tag, then get the link title and url. If the next element is not a p tag with an a tag, stop. Store results in an array.
-    if (bylawSelector.length > 0) {
-      const bylawLinkElements = bylawSelector
-        .nextUntil(':not(p:has(a))')
-        .map((index, element) => {
-          return {
-            title: $(element).find('a').text(),
-            url: $(element).find('a')[0].href
-          }
-        })
-        .get()
+    if (bylawLinks.length > 0) {
       data.push({
         date: date,
         meetingType: meetingType,
         title: 'By-laws',
         resolutionId: null,
         contents: '',
-        reportUrls: bylawLinkElements
+        reportUrls: bylawLinks
       })
     }
     
     return data
 
-  }, date)
+  }, meetingType, date)
 
-  // Populate with additional useful data
-  // Puppeteer page.evaluate cannot access variables outside of it
   return results.map((d) => {
     return {
       city: 'Vancouver',
       metroCity: 'Metro Vancouver',
       url: url,
       minutesUrl: url,
-      ...d,
+      ...d
     }
   })
 

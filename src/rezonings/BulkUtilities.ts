@@ -33,6 +33,14 @@ export const BulkUtilities = {
       console.log(chalk.bgWhite(`Progress: ${rezonings.indexOf(rezoning) + 1}/${rezonings.length}`))
       
       if (!rezoning.address) continue
+      // Correct any potential issues with undefined locations
+      if (!rezoning.location) {
+        console.log(chalk.yellow(`Undefined coordinates corrected ${rezoning.address}, ${rezoning.city} `))
+        rezoning.location = {
+          latitude: null,
+          longitude: null
+        }
+      }
       if (rezoning.location.latitude && rezoning.location.longitude) continue
   
       // Use Google Maps API to get coordinates

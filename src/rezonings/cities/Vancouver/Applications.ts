@@ -11,9 +11,15 @@ import { getVancouverBaseGPTQuery } from './VancouverUtilities'
 export function checkIfApplication(news: IMeetingDetail) {
   const isVancouver = news.city === 'Vancouver'
   const hasReportURLs = news.reportUrls.length > 0
-  const isCouncil = news.meetingType.toLowerCase() === 'council'
+  // Sometime in 2019, council meetings were called regular council, then switched to council
+  const isCouncil = ['council', 'regular council']
+    .some((match) => news.meetingType.toLowerCase() === match)
   const titleIsRezoning = news.title.toLowerCase().includes('rezoning:')
-  const isReferralReport = hasReportURLs ? news.reportUrls[0].title.toLowerCase().includes('referral report') : false
+  let isReferralReport = false
+  if (hasReportURLs) {
+    const firstReport = news.reportUrls[0]
+    isReferralReport = ['referral report', 'staff report'].some((match) => firstReport.title.toLowerCase().includes(match))
+  }
   return isVancouver && hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
 }
 

@@ -4455,5 +4455,54 @@
     "date": "2019-01-28",
     "meetingType": "City Council",
     "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=2023b5cd-6c24-4eb0-ad77-6235d0c4ba17&lang=English"
+  },
+  {
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "url": "https://council.vancouver.ca/20191022/phea20191022ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20191022/phea20191022ag.htm",
+    "date": "2019-10-23",
+    "meetingType": "Public Hearing",
+    "title": "REZONING:  1002 Station Street and 250-310 Prior Street\n  (New St. Paul’s Hospital and Health Campus)",
+    "resolutionId": null,
+    "contents": "",
+    "reportUrls": [
+      {
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3summary_revised.pdf"
+      },
+      {
+        "title": "Draft By-law - Zoning and Development (CD-1)",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3by-law-ZD_CD-1.pdf"
+      },
+      {
+        "title": "Draft By-law - Regional Context Statement Official Development Plan",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3by-law-RCSODP.pdf"
+      },
+      {
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3by-law-Sign.pdf"
+      },
+      {
+        "title": "Draft By-law - Zoning and Development (I-3 District Schedule)",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3by-law-ZD.pdf"
+      },
+      {
+        "title": "Policy Report dated September 17, 2019",
+        "url": "https://council.vancouver.ca/20191001/documents/p13.pdf"
+      },
+      {
+        "title": "Memorandum dated August 22, 2019",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3memo.pdf"
+      },
+      {
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3staffpresentation.PDF"
+      },
+      {
+        "title": "Applicant Presentation",
+        "url": "https://council.vancouver.ca/20191022/documents/phea3applicantpresentation.PDF"
+      }
+    ]
   }
 ]

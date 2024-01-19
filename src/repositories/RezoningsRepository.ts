@@ -139,10 +139,10 @@ export const RezoningsRepository = {
     }[] = []
 
     for (let i = 0; i < allRezonings.length; i++) {
-      if (i === rezoningIndex) {
+      const otherRezoning = allRezonings[i]
+      if (otherRezoning.id === rezoning.id) {
         continue
       }
-      const otherRezoning = allRezonings[i]
       if (otherRezoning.city !== rezoning.city) {
         continue
       }
@@ -256,10 +256,10 @@ export const RezoningsRepository = {
 // Return one of the 2 strongs provided.
 // If one string is null/empty, return the non-null strong. Otherwise, return based on priority.
 function mergeSimpleField<T extends string | number | null>(string1: T, string2: T, priority: 'old' | 'new' | 'longer') {
-  if (!string1) {
+  if (string1 === null || string1 === undefined) {
     return string2
   }
-  if (!string2) {
+  if (!string2 === null || string1 === undefined) {
     return string1
   }
   if (priority === 'old') {
@@ -268,7 +268,7 @@ function mergeSimpleField<T extends string | number | null>(string1: T, string2:
   if (priority === 'new') {
     return string2
   }
-  if (typeof string1 === 'string' && typeof string2 === 'string' && priority === 'longer') {
+  if (priority === 'longer' && typeof string1 === 'string' && typeof string2 === 'string') {
     return string1.length > string2.length ? string1 : string2
   }
   return null

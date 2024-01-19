@@ -6,11 +6,11 @@ import { BulkUtilities } from './BulkUtilities'
 
 // yarn run rezone
 const startDate = '2019-01-01'
-const endDate = '2020-01-01'
+const endDate = '2021-01-01'
 const citiesToAnalyze: string[] = [
-  'Vancouver',
-  'Richmond',
-  'Burnaby'
+  // 'Vancouver',
+  // 'Richmond',
+  // 'Burnaby'
 ]
 
 async function main() {

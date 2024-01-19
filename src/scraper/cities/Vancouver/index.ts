@@ -86,7 +86,7 @@ export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
         console.log(`Scraping page details: ${i}/${meetingList.length}`)
 
-        const meetingDetails = await getMeetingDetails(parallelPage, m.url, m.date)
+        const meetingDetails = await getMeetingDetails(parallelPage, m.url, m.meetingType, m.date)
 
         console.log(chalk.bgGreen(`Scraped meeting details for ${meetingDetails.length > 0 ? meetingDetails[0].date : '-'} - ${meetingDetails.length} items`))
 

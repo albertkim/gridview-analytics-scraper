@@ -7,28 +7,85 @@ import { generateID } from '../../../repositories/GenerateID'
 
 interface IBylawData {
   address: string
-  status: 'approved' | 'denied'
-  date: string
-  type: ZoningType
-  zoning: {
-    previousZoningCode: string | null
-    previousZoningDescription: string | null
-    newZoningCode: string | null
-    newZoningDescription: string | null
-  }
 }
 
+const withdrawalWords = ['rezon', 'withdraw']
+
+// Vancouver rezoning withdrawals are not under the 'By-law' title entries
 export function checkIfBylaw(news: IMeetingDetail) {
   const isVancouver = news.city === 'Vancouver'
-  const hasReportURLs = news.reportUrls.length > 0
-  const isCouncil = news.meetingType.toLowerCase() === 'council'
+  const isCouncil = ['council', 'regular council']
+    .some((match) => news.meetingType.toLowerCase() === match)
   const isBylaw = news.title === 'By-laws'
-  return isVancouver && hasReportURLs && isCouncil && isBylaw
+  const isWithdrawal = withdrawalWords.every((word) => news.title.toLowerCase().includes(word))
+  return isVancouver && isCouncil && (isBylaw || isWithdrawal)
 }
 
 export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDetail[]> {
 
   const fullRezoningDetails: IFullRezoningDetail[] = []
+
+  // Check for withdrawals
+  if (withdrawalWords.every((word) => news.title.toLowerCase().includes(word))) {
+    const bylawDetailRaw = await getAddressObject(news.title)
+    if (bylawDetailRaw && bylawDetailRaw.address) {
+      const bylawDetail = bylawDetailRaw as IBylawData
+      const fullRezoningDetail: IFullRezoningDetail = {
+        id: generateID('rez'),
+        address: bylawDetail.address,
+        city: news.city,
+        metroCity: news.metroCity,
+        rezoningId: null,
+        applicant: null,
+        behalf: null,
+        description: '',
+        type: null,
+        urls: [
+          {
+            date: news.date,
+            title: 'By-laws',
+            url: news.url,
+            type: 'withdrawn'
+          }
+        ],
+        zoning: {
+          previousZoningCode: null,
+          previousZoningDescription: null,
+          newZoningCode: null,
+          newZoningDescription: null
+        },
+        minutesUrls: news.minutesUrl ? [{
+          date: news.date,
+          url: news.minutesUrl,
+          type: 'withdrawn'
+        }] : [],
+        stats: {
+          buildings: null,
+          stratas: null,
+          rentals: null,
+          hotels: null,
+          fsr: null,
+          storeys: null
+        },
+        status: 'withdrawn',
+        dates: {
+          appliedDate: null,
+          publicHearingDate: null,
+          approvalDate: null,
+          denialDate: null,
+          withdrawnDate: news.date
+        },
+        location: {
+          latitude: null,
+          longitude: null
+        },
+        createDate: moment().format('YYYY-MM-DD'),
+        updateDate: moment().format('YYYY-MM-DD')
+      }
+      fullRezoningDetails.push(fullRezoningDetail)
+      return fullRezoningDetails
+    }
+  }
 
   try {
 
@@ -39,7 +96,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
       const pdfData = await downloadPDF(bylawPDFURL)
       const pdfTextOnlyData = await generatePDFTextArray(pdfData, {
         minCharacterCount: 10,
-        expectedWords: ['Explanation', 'rezon']
+        expectedWords: ['explanation', 'rezon', 'housing agreement']
       })
       bylawPDFPages.push(...pdfTextOnlyData.map((text) => {
         return {
@@ -51,25 +108,8 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     // For each page, analyze rezonings
     for (const page of bylawPDFPages) {
-      if (!page.text.toLowerCase().includes('housing agreement')) {
-        continue
-      }
 
-      let bylawDetailRaw = await chatGPTTextQuery(`
-        Identify if the given text is a zoning bylaw amendment/housing agreement. If so, return the following in JSON format. Otherwise return a {error: message}.
-        {
-          address: address in question - if multiple addresses in the same section comma separate
-          date: date in YYYY-MM-DD format
-          type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial, commercial, or other
-          zoning: {
-            previousZoningCode: city zoning code before rezoning or null if unclear
-            previousZoningDescription: best description of previous zoning code (ex. low density residential)
-            newZoningCode: city zoning code after rezoning or null if unclear
-            newZoningDescription: best description of new zoning code (ex. high density residential)
-          }
-        }
-        Here is the text: ${page.text}
-      `)
+      const bylawDetailRaw = await getAddressObject(page.text)
 
       if (!bylawDetailRaw) {
         continue
@@ -79,12 +119,16 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
       // Figure out if approved, denied, or withdrawn
       let status: ZoningStatus = 'approved'
-      if (news.title.toLowerCase().includes('defeated')) status = 'denied'
-      if (news.title.toLowerCase().includes('withdrawn')) status = 'withdrawn'
+      const approvedWords = ['enact', 'amend', 'approved', 'passed', 'adopted']
+      const deniedWords = ['abandonment', 'defeated', 'denied', 'rejected', 'refused']
+      const withdrawnWords = ['withdraw']
+      // if (approvedWords.some((word) => page.text.toLowerCase().includes(word))) status = 'approved'
+      if (deniedWords.some((word) => page.text.toLowerCase().includes(word))) status = 'denied'
+      if (withdrawnWords.some((word) => page.text.toLowerCase().includes(word))) status = 'withdrawn'
 
       const fullRezoningDetail: IFullRezoningDetail = {
         id: generateID('rez'),
-        ...bylawDetail,
+        address: bylawDetail.address,
         city: news.city,
         metroCity: news.metroCity,
         rezoningId: null,
@@ -100,6 +144,12 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
             type: status
           }
         ],
+        zoning: {
+          previousZoningCode: null,
+          previousZoningDescription: null,
+          newZoningCode: null,
+          newZoningDescription: null
+        },
         minutesUrls: news.minutesUrl ? [{
           date: news.date,
           url: news.minutesUrl,
@@ -113,7 +163,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           fsr: null,
           storeys: null
         },
-        status: 'approved',
+        status: status,
         dates: {
           appliedDate: null,
           publicHearingDate: null,
@@ -138,4 +188,20 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
     return fullRezoningDetails
   }
 
+}
+
+async function getAddressObject(text: string): Promise<IBylawData | null> {
+  let bylawDetailRaw = await chatGPTTextQuery(`
+    Read the provided text and find the street address in question with the following JSON - otherwise return a {error: message, reason: string}.
+    {
+      address: address in question, if multiple addresses comma separate
+    }
+    Here is the text: ${text}
+  `)
+  if (!bylawDetailRaw || !bylawDetailRaw.address || bylawDetailRaw.error) {
+    return null
+  }
+
+  const bylawDetail = bylawDetailRaw as IBylawData
+  return bylawDetailRaw
 }
