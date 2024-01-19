@@ -29,7 +29,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
       try {
 
-        const pdfData = await downloadPDF(pdfUrl.title)
+        const pdfData = await downloadPDF(pdfUrl.url)
         const screenshot = await generateScreenshotFromPDF(pdfData, 0)
         const imageQueryResponse = await imageQuery(`
           Given the following data, identify if it is related to a community plan/zoning bylaw. If so, read it carefully and return the following JSON format. Otherwise just return an error.
@@ -40,17 +40,17 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         `, screenshot)
 
         if (imageQueryResponse.address && imageQueryResponse.rezoningId) {
-          bylawData.push(imageQueryResponse)
           bylawData.push({
             ...imageQueryResponse,
             url: pdfUrl
           })
         } else {
-          console.log(chalk.bgYellow(`Image query response did not return an address for: ${pdfUrl}`))
+          console.log(chalk.bgYellow(`Image query response did not return an address for: ${pdfUrl.url}`))
         }
 
       } catch (error) {
 
+        console.error(error)
         continue
 
       }
