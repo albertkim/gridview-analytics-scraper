@@ -9,7 +9,8 @@ export type ZoningType =
   'mixed use' |
   'multi-family residential' |
   'industrial' |
-  'commercial'
+  'commercial' |
+  'other'
 
 export const ZoningTypeValues = [
   'single-family residential',
@@ -17,7 +18,8 @@ export const ZoningTypeValues = [
   'mixed use',
   'multi-family residential',
   'industrial',
-  'commercial'
+  'commercial',
+  'other'
 ]
 
 export type ZoningStatus =
