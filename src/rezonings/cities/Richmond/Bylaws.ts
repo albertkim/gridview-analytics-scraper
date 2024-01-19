@@ -21,45 +21,30 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
   try {
 
     // Parsing Richmond zoning bylaws are tricky because they only use scanned PDFs and don't show much info about the PDF before opening.
-    // But I found that if you find the bylaw number (10308), the PDF url includes the number as Bylaw_12345[more_numbers].pdf
-    // Strategy: Write code to parse all the potential zoning/community bylaw numbers. Then find the relevant PDFs, and send the image to GPT 4 Vision.
+    // Strategy: Scan every PDF with Google Cloud Vision and find ones that relate to zoning bylaws
 
-    // Case insensitive, find all 5 digit numbers that follow the format "Richmond Zoning Bylaw No. (4 digit number), Amendment Bylaw No. (5 digit number)" or "Community Plan Bylaw (4 digit number), Amendment Bylaw No. (5 digit number)", and return an array of the 5 digit numbers
-    const zoningBylawMatches = news.contents.match(/(Richmond\sZoning\sBylaw\sNo\.\s\d{4},\sAmendment\sBylaw\sNo\.\s\d{5})|(Community\sPlan\sBylaw\s\d{4},\sAmendment\sBylaw\sNo\.\s\d{5})/gi) || []
-    // Return an array of the 5 digit numbers as a string array
-    const zoningBylawNumbersArray = zoningBylawMatches.map((match) => {
-      const bylawNumberMatches = match.match(/\d{5}/g) || []
-      return bylawNumberMatches[0]
-    })
+    const bylawData: {address: string, rezoningId: string | null, url: {title: string, url: string}}[] = []
 
-    const matchingURLs = news.reportUrls
-      .filter((urlObject) => {
-        return zoningBylawNumbersArray.some((bylawNumber) => {
-          return urlObject.url.includes(`${bylawNumber}`)
-        })
-      })
-      .map((urlObject) => urlObject.url)
-
-    const bylawData: {address: string, rezoningId: string | null}[] = []
-
-    for (const pdfUrl of matchingURLs) {
+    for (const pdfUrl of news.reportUrls) {
 
       try {
 
-        const pdfData = await downloadPDF(pdfUrl)
+        const pdfData = await downloadPDF(pdfUrl.title)
         const screenshot = await generateScreenshotFromPDF(pdfData, 0)
         const imageQueryResponse = await imageQuery(`
-          Given the following data, identify if it is related to a community plan/rezoning. If so, read it carefully and return the following JSON format. Otherwise just return an error.
+          Given the following data, identify if it is related to a community plan/zoning bylaw. If so, read it carefully and return the following JSON format. Otherwise just return an error.
           {
-            address: address in question - if multiple addresses in the same section comma separate
-            rezoningId: rezoning id usually in the format "RZ XX-XXXXX" where the Xs are numbers - reformat if necessary - null if not found
+            address: address in question - if multiple addresses in the same section comma separate - null if not found
+            rezoningId: rezoning id in the format "RZ XX-XXXXX" where the Xs are numbers - reformat if necessary - null if not found
           }
         `, screenshot)
 
-        console.log(imageQueryResponse)
-
-        if (imageQueryResponse.address) {
+        if (imageQueryResponse.address && imageQueryResponse.rezoningId) {
           bylawData.push(imageQueryResponse)
+          bylawData.push({
+            ...imageQueryResponse,
+            url: pdfUrl
+          })
         } else {
           console.log(chalk.bgYellow(`Image query response did not return an address for: ${pdfUrl}`))
         }
@@ -80,7 +65,6 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
     return bylawData.map((bylaw) => {
       return {
         id: generateID('rez'),
-        ...bylaw,
         city: news.city,
         metroCity: news.metroCity,
         address: bylaw.address,
@@ -89,14 +73,12 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         behalf: null,
         description: '',
         type: null,
-        urls: news.reportUrls.map((urlObject) => {
-          return {
-            date: news.date,
-            title: urlObject.title,
-            url: urlObject.url,
-            type: status
-          }
-        }),
+        urls: [{
+          title: bylaw.url.title,
+          url: bylaw.url.title,
+          date: news.date,
+          type: status
+        }],
         minutesUrls: news.minutesUrl ? [{
           url: news.minutesUrl,
           date: news.date,
