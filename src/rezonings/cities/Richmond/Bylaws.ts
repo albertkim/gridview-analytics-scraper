@@ -39,7 +39,8 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           }
         `, screenshot)
 
-        if (imageQueryResponse.address && imageQueryResponse.rezoningId) {
+        if (imageQueryResponse && imageQueryResponse.address && imageQueryResponse.rezoningId) {
+          console.log(chalk.bgGreen(`Bylaw added for ${imageQueryResponse.address} - ${imageQueryResponse.rezoningId}`))
           bylawData.push({
             ...imageQueryResponse,
             url: pdfUrl
@@ -75,7 +76,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         type: null,
         urls: [{
           title: bylaw.url.title,
-          url: bylaw.url.title,
+          url: bylaw.url.url,
           date: news.date,
           type: status
         }],

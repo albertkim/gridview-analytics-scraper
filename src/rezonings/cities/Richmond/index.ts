@@ -9,8 +9,7 @@ import { checkIfBylaw, parseBylaw } from './Bylaws'
 export async function analyze(startDate: string | null, endDate: string | null) {
 
   const scrapedList = RawRepository.getNews({city: 'Richmond'})
-  
-  // Only keep rezoning-related items
+
   const validLists = scrapedList.filter((item) => {
     const isRezoningType = checkIfApplication(item) || checkIfPublicHearing(item) || checkIfBylaw(item)
     let isInDateRange = true

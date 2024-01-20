@@ -53,7 +53,6 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		const content = JSON.parse(response.choices[0].message.content!)
 
 		if (content.error) {
-			console.log(`Error query: ${query}`)
 			console.log(chalk.red(JSON.stringify(content, null, 2)))
 			return null
 		}
@@ -162,8 +161,6 @@ export async function chatGPTPartialRezoningQuery(query: string, options: {analy
 export async function imageQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
 
 	try {
-
-		console.log(`Sending data query to Google Cloud Vision`)
 
 		const [result] = await googleVisionClient.textDetection({
 			image: {

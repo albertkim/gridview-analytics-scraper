@@ -8,11 +8,11 @@ dotenv.config()
 
 // Download a PDF from a URL and return the data
 export async function downloadPDF(url: string) {
-	console.log(`Downloading PDF from ${url}`)
+	// console.log(`Downloading PDF from ${url}`)
   const response = await axios.get(url, {
     responseType: 'arraybuffer'
   })
-	console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb`)
+	// console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb`)
   return response.data
 }
 
@@ -86,19 +86,17 @@ export async function generatePDF(pdfData: Buffer, options: IGeneratePDFOptions 
 
 // Given a PDF file, return an JPEG image file of the page at the given index
 export async function generateScreenshotFromPDF(pdfData: Uint8Array, pageIndex: number) {
-	console.log('Generating screenshot from PDF')
 	const screenshot = await pdf2img.convert(pdfData, {
 		page_numbers: [pageIndex + 1],
 		base64: true
 	})
 	const fileSize = Math.round(screenshot[0].length / 1024)
-	console.log(`Generated. File size is ${fileSize} kb`)
+	console.log(`Generated. PDF screenshot file size is ${fileSize} kb`)
 
 	return screenshot[0] as string
 }
 
 export async function parsePDF(pdfData: Buffer, maxPageIndex?: number) {
-	console.log(`Parsing PDF`)
 	const parsedPDF = await pdfParse(pdfData, {
 		max: maxPageIndex
 	})
