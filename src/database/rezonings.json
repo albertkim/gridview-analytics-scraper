@@ -20310,7 +20310,7 @@
       "longitude": -123.1190525
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-p5cbnq74gber8l61wjj4u",
@@ -21235,12 +21235,23 @@
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20230912/documents/bylaws1to14.pdf",
         "type": "approved"
+      },
+      {
+        "date": "2020-06-09",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20200609/documents/bylaws1to68and9.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
       {
         "date": "2023-09-12",
         "url": "https://council.vancouver.ca/20230912/regu20230912ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2020-06-09",
+        "url": "https://council.vancouver.ca/20200609/regu20200609ag.htm",
         "type": "approved"
       }
     ],
@@ -21265,7 +21276,7 @@
       "longitude": -123.0299335
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-g9wqv0x3h38o1khr8arwj",
@@ -23161,7 +23172,7 @@
       "longitude": -123.1396259
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-ith25nirbqbrw1xma59yg",
@@ -24136,7 +24147,7 @@
       "longitude": -123.12956
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-thd3gu9725kblki4c2rmi",
@@ -24497,7 +24508,7 @@
       "longitude": -123.151491
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-4ka8nl9nzh4hrn89ecpme",
@@ -24591,7 +24602,7 @@
       "longitude": -123.0871512
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-nzsxpwazqlklwecomuxiq",
@@ -24711,7 +24722,7 @@
       "longitude": -123.1179302
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-tfa5zlatdu6ncip7ay899",
@@ -25195,7 +25206,7 @@
       "longitude": -123.1202601
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-axn50cz60wgk7o7ooatxk",
@@ -25313,7 +25324,7 @@
       "longitude": -123.0640334
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-8scpcrioaswd5hctz3469",
@@ -26257,7 +26268,7 @@
       "longitude": -123.132814
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-ym1088y2do8q9scrdg7my",
@@ -26363,7 +26374,7 @@
       "longitude": -123.133359
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-5fhfemzhy89qrie3sfzhh",
@@ -27644,7 +27655,7 @@
       "longitude": -123.1526305
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-zybqcij5kusoe2vvf9px2",
@@ -27982,11 +27993,11 @@
     "behalf": "W 42 Properties E Nominee Corp.",
     "description": "Rezoning of the lands from RS-1 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.70 to 6.73 and the building height from 10.7 m (35 ft.) to 57 m (187 ft.), to permit an 18-storey residential building with 211 secured rental residential units, of which 20% of the residential floor area will be secured below-market rental units",
     "type": "multi-family residential",
-    "status": "public hearing",
+    "status": "approved",
     "dates": {
       "appliedDate": "2022-02-08",
       "publicHearingDate": "2022-03-04",
-      "approvalDate": null,
+      "approvalDate": "2023-12-12",
       "denialDate": null,
       "withdrawnDate": null
     },
@@ -28048,6 +28059,12 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20220208/documents/rr1.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
@@ -28060,6 +28077,11 @@
         "date": "2022-02-08",
         "url": "https://council.vancouver.ca/20220208/regu20220208ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
+        "type": "approved"
       }
     ],
     "location": {
@@ -28067,7 +28089,7 @@
       "longitude": -123.1125787
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-biv477hy254cxi0cphulf",
@@ -31090,6 +31112,12 @@
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20231031/documents/bylaws2-10.pdf",
         "type": "approved"
+      },
+      {
+        "date": "2024-01-23",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
@@ -31107,6 +31135,11 @@
         "date": "2023-10-31",
         "url": "https://council.vancouver.ca/20231031/regu20231031ag.htm",
         "type": "approved"
+      },
+      {
+        "date": "2024-01-23",
+        "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+        "type": "approved"
       }
     ],
     "location": {
@@ -31114,7 +31147,7 @@
       "longitude": -123.1288386
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-wfal9twz78fe9n1o4sixk",
@@ -31270,7 +31303,7 @@
       "longitude": -123.18672
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-qdcizpk5ufxr1xvt2t81h",
@@ -31378,7 +31411,7 @@
       "longitude": -123.0336
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-thwbym0xc65fgrx24eehj",
@@ -31649,7 +31682,7 @@
       "longitude": -123.1666683
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-31eeza8fo0yud22u1j8gg",
@@ -31744,7 +31777,7 @@
       "longitude": -123.1353215
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-ucywkkonujbllmi13oy1h",
@@ -32009,7 +32042,7 @@
       "longitude": -123.0513647
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-8dsx0v75qu6vyreb20sgr",
@@ -32623,7 +32656,7 @@
       "longitude": -123.0812031
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-16udkqsasnmlwq2fsb5l1",
@@ -40559,7 +40592,7 @@
       "longitude": -123.0776444
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-l5dh16ed5nzwh9ijo9w19",
@@ -40613,7 +40646,7 @@
       "longitude": -123.0902379
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-1rhgjeyd9zvnheuu4gf74",
@@ -40667,7 +40700,7 @@
       "longitude": -123.1256944
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-5wfzu4kc6o96jgmrgwuxb",
@@ -40721,7 +40754,7 @@
       "longitude": -123.043021
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-77vn9i18tgprr0109hrpu",
@@ -41495,7 +41528,7 @@
       "longitude": -123.071257
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-b79c0z8czruw37wtgw5ro",
@@ -41513,6 +41546,12 @@
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20211207/documents/bylaws24to38.pdf",
         "type": "approved"
+      },
+      {
+        "date": "2023-12-12",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
+        "type": "approved"
       }
     ],
     "zoning": {
@@ -41525,6 +41564,11 @@
       {
         "date": "2021-12-07",
         "url": "https://council.vancouver.ca/20211207/regu20211207ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2023-12-12",
+        "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
         "type": "approved"
       }
     ],
@@ -41549,7 +41593,7 @@
       "longitude": -123.1132233
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-0hczof1se24wf14ets8oh",
@@ -41621,6 +41665,12 @@
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20231031/documents/bylaws2-10.pdf",
         "type": "approved"
+      },
+      {
+        "date": "2024-01-23",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
+        "type": "approved"
       }
     ],
     "zoning": {
@@ -41633,6 +41683,11 @@
       {
         "date": "2023-10-31",
         "url": "https://council.vancouver.ca/20231031/regu20231031ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2024-01-23",
+        "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
         "type": "approved"
       }
     ],
@@ -41657,7 +41712,7 @@
       "longitude": -123.0345
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-nt321jn6fyrl4qlouzflm",
@@ -41775,7 +41830,7 @@
       "longitude": -123.185031
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-m11igsr6ay9iw8xld7mdx",
@@ -41829,7 +41884,7 @@
       "longitude": -123.0907169
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-aa8wlgjhg8lpgm3011wcd",
@@ -41937,7 +41992,7 @@
       "longitude": -123.1388506
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-9506mqzu4eo75xee5e6eg",
@@ -41991,7 +42046,7 @@
       "longitude": -123.0863606
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-r8gcm3pirw7ahhsryjvrc",
@@ -42045,7 +42100,7 @@
       "longitude": -123.068949
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-06n75wmaoa7v2fpyzgn65",
@@ -42099,7 +42154,7 @@
       "longitude": -123.086689
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-tl5pln10wwroaijkiji9o",
@@ -42153,7 +42208,7 @@
       "longitude": -123.185782
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-c8xlg7se9c7s0cze5fgz3",
@@ -42207,7 +42262,7 @@
       "longitude": -123.0788611
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-7ilqegivkyal4a96c0ntx",
@@ -42261,7 +42316,7 @@
       "longitude": -123.0817206
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-zhe2k5sbwk5xu1uzrgsqw",
@@ -42415,7 +42470,7 @@
       "longitude": -123.1174331
     },
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-4xck8vtoejdfj6230iqqq",
@@ -42469,7 +42524,7 @@
       "longitude": -123.1142567
     },
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-jyjlv3ivtuyvzxj28ywdp",
@@ -42523,7 +42578,7 @@
       "longitude": -123.070619
     },
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-ymuc6onwg8n3egdfk3rhe",
@@ -42587,11 +42642,11 @@
     "behalf": "1061511 B.C. Ltd (Jameson Development Corporation)",
     "description": "Amend CD-1 (708) District to increase permitted floor space ratio (FSR) from 7.07 to 10.55 and maximum building height from 52.14 m to 86.19 m to permit a taller mixed-use building (27 storey with a mezzanine) with approximately 258 secured rental units on the upper floors with 22% of the residential floor area being secured as moderate income units under the Moderate Income Rental Housing Pilot Program.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "approved",
     "dates": {
       "appliedDate": "2020-06-09",
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2020-11-24",
       "denialDate": null,
       "withdrawnDate": null
     },
@@ -42621,6 +42676,12 @@
         "title": "Staff Report",
         "url": "https://council.vancouver.ca/20200609/documents/rr1.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2020-11-24",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20201124/documents/bylaws.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
@@ -42628,10 +42689,15 @@
         "date": "2020-06-09",
         "url": "https://council.vancouver.ca/20200609/regu20200609ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2020-11-24",
+        "url": "https://council.vancouver.ca/20201124/regu20201124ag.htm",
+        "type": "approved"
       }
     ],
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-t5m2oc17orzb30bv1nmnn",
@@ -43235,11 +43301,11 @@
     "behalf": "Renfrew & East 10th Nominee Inc. (BC 1089647) (Molnar Group)",
     "description": "The applicant wants to rezone the property from RS-1 (Single-family Dwelling) District to CD-1 (Comprehensive Development) District to increase the permitted floor space ratio (FSR) from 0.70 to 3.54 and the building height from 10.70 m (35.0 ft.) to 25.8 m (84.5 ft.) to permit the development of a seven-storey mixed-use building with commercial uses at grade and 82 secured rental housing units with 20 per cent of the residential floor area being secured as moderate income units under the Moderate Income Rental Housing Pilot Program.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "approved",
     "dates": {
       "appliedDate": "2019-11-05",
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2024-01-23",
       "denialDate": null,
       "withdrawnDate": null
     },
@@ -43269,6 +43335,18 @@
         "title": "Staff Report",
         "url": "https://council.vancouver.ca/20191105/documents/p5.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2024-01-23",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2021-06-22",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210622/documents/by-laws25to41.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
@@ -43276,10 +43354,20 @@
         "date": "2019-11-05",
         "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2024-01-23",
+        "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2021-06-22",
+        "url": "https://council.vancouver.ca/20210622/regu20210622ag.htm",
+        "type": "approved"
       }
     ],
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-mcnv8pxaeekquvw5sduyt",
@@ -43289,11 +43377,11 @@
     "behalf": "Renfrew & East 10th (No.2) Nominee Inc. (Inc., No. BC1089655) (Molnar Group)",
     "description": "Rezoning of 2543-2583 Renfrew Street and 2895 East 10th Avenue from RS-1 (Single-family Dwelling) District and C-1 (Commercial) District to CD-1 (Comprehensive Development) District to increase the permitted floor space ratio (FSR) to 3.60 and to increase the building height to 26.2 m (86 ft.) to permit the development of a seven-storey mixed-use building with commercial uses at grade and 96 secured rental housing units with 20 per cent of the residential floor area being secured as moderate income units under the Moderate Income Rental Housing Pilot Program",
     "type": "mixed use",
-    "status": "applied",
+    "status": "approved",
     "dates": {
       "appliedDate": "2019-11-05",
       "publicHearingDate": null,
-      "approvalDate": null,
+      "approvalDate": "2024-01-23",
       "denialDate": null,
       "withdrawnDate": null
     },
@@ -43323,6 +43411,12 @@
         "title": "Staff Report",
         "url": "https://council.vancouver.ca/20191105/documents/p6.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2024-01-23",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
+        "type": "approved"
       }
     ],
     "minutesUrls": [
@@ -43330,10 +43424,15 @@
         "date": "2019-11-05",
         "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2024-01-23",
+        "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+        "type": "approved"
       }
     ],
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-19"
+    "updateDate": "2024-01-20"
   },
   {
     "id": "rez-3h2dkdmr3w2mka2sw2amc",
@@ -48201,6 +48300,12 @@
         "title": "Staff Report",
         "url": "https://council.vancouver.ca/20191210/documents/rr6.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2020-11-24",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20201124/documents/bylaws.pdf",
+        "type": "approved"
       }
     ],
     "zoning": {
@@ -48219,6 +48324,11 @@
         "date": "2019-12-10",
         "url": "https://council.vancouver.ca/20191210/regu20191210ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2020-11-24",
+        "url": "https://council.vancouver.ca/20201124/regu20201124ag.htm",
+        "type": "approved"
       }
     ],
     "stats": {
@@ -49911,6 +50021,222 @@
         "type": "applied"
       }
     ],
+    "createDate": "2024-01-20",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-0u7vtnl1mygrggcfsht36",
+    "address": "441-475 West 42nd Avenue",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "urls": [
+      {
+        "date": "2024-01-23",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
+        "type": "approved"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "minutesUrls": [
+      {
+        "date": "2024-01-23",
+        "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+        "type": "approved"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-23",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-20",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-ch4dwozhql3wvk21xwew2",
+    "address": "2538 Birch Street, 1296 West Broadway",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "urls": [
+      {
+        "date": "2021-11-02",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20211102/documents/by-laws2-24.pdf",
+        "type": "approved"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-11-02",
+        "url": "https://council.vancouver.ca/20211102/regu20211102ag.htm",
+        "type": "approved"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-11-02",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-20",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-uqoqgyzy3uoapfdkibmom",
+    "address": "3070 Kingsway",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "urls": [
+      {
+        "date": "2021-06-22",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210622/documents/by-laws25to41.pdf",
+        "type": "approved"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-06-22",
+        "url": "https://council.vancouver.ca/20210622/regu20210622ag.htm",
+        "type": "approved"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-06-22",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-20",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-nqv5r588zhfpa4uxgnt2z",
+    "address": "1425 East 12th Avenue, 1451 East 12th Avenue",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "",
+    "type": null,
+    "urls": [
+      {
+        "date": "2021-03-30",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210330/documents/bylaws15to23.pdf",
+        "type": "approved"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-03-30",
+        "url": "https://council.vancouver.ca/20210330/regu20210330ag.htm",
+        "type": "approved"
+      }
+    ],
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2021-03-30",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
     "createDate": "2024-01-20",
     "updateDate": "2024-01-20"
   }

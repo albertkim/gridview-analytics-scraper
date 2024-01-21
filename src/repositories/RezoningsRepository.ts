@@ -196,10 +196,9 @@ export const RezoningsRepository = {
     const matchingRezoningIndex = previousEntries.findIndex((item) => item.id === id)
     if (matchingRezoningIndex === -1) throw new Error(`Could not find rezoning with id ${id}`)
     previousEntries[matchingRezoningIndex] = rezoning
-    const newData = reorderItems(previousEntries)
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
-      JSON.stringify(newData, null, 2),
+      JSON.stringify(previousEntries, null, 2),
       'utf8'
     )
   },
@@ -241,10 +240,9 @@ export const RezoningsRepository = {
       }
 
       // Otherwise, just add the entry to the database
-      const orderedData = reorderItems([...previousEntries, rezoning])
       fs.writeFileSync(
         path.join(__dirname, '../database/rezonings.json'),
-        JSON.stringify(orderedData, null, 2),
+        JSON.stringify([...previousEntries, rezoning], null, 2),
         'utf8'
       )
 
