@@ -188,6 +188,8 @@ export const RezoningsRepository = {
     
   },
 
+  // Update a rezoning completely, does not merge with previous entry
+  // Most use cases will require the upsertRezonings() function, defined below
   updateRezoning(id: string, rezoning: IFullRezoningDetail) {
     rezoning.id = id
     const previousEntries = this.getRezonings()
@@ -207,31 +209,39 @@ export const RezoningsRepository = {
 
     const previousEntries = this.getRezonings()
 
-    for (const newsItem of rezonings) {
+    for (const rezoning of rezonings) {
 
-      // Check for any entries with the same rezoning ID - take precedent over matching addresses
-      const rezoningWithMatchingID = newsItem.rezoningId ?
-        previousEntries.find((item) => item.rezoningId === newsItem.rezoningId)
-        : null
+      // Check for any entries with the same ID (not rezoning ID)
+      const rezoningWithMatchingID = previousEntries.find((item) => item.id === rezoning.id)
       if (rezoningWithMatchingID) {
-        const mergedRezoning = mergeEntries(rezoningWithMatchingID, newsItem)
-        mergedRezoning.id = rezoningWithMatchingID.id
+        const mergedRezoning = mergeEntries(rezoningWithMatchingID, rezoning)
         this.updateRezoning(rezoningWithMatchingID.id, mergedRezoning)
         continue
       }
 
+      // Check for any entries with the same rezoning ID - take precedent over matching addresses
+      const rezoningWithMatchingRezoningID = rezoning.rezoningId ?
+        previousEntries.find((item) => item.rezoningId === rezoning.rezoningId)
+        : null
+      if (rezoningWithMatchingRezoningID) {
+        const mergedRezoning = mergeEntries(rezoningWithMatchingRezoningID, rezoning)
+        mergedRezoning.id = rezoningWithMatchingRezoningID.id
+        this.updateRezoning(rezoningWithMatchingRezoningID.id, mergedRezoning)
+        continue
+      }
+
       // Check for any entries with the same/similar addresses
-      const similarAddresses = this.getRezoningsWithSimilarAddresses(newsItem)
+      const similarAddresses = this.getRezoningsWithSimilarAddresses(rezoning)
       if (similarAddresses.length > 0) {
         const similarRezoning = similarAddresses[0].rezoning
-        const mergedRezoning = mergeEntries(similarRezoning, newsItem)
+        const mergedRezoning = mergeEntries(similarRezoning, rezoning)
         mergedRezoning.id = similarRezoning.id
         this.updateRezoning(similarRezoning.id, mergedRezoning)
         continue
       }
 
       // Otherwise, just add the entry to the database
-      const orderedData = reorderItems([...previousEntries, newsItem])
+      const orderedData = reorderItems([...previousEntries, rezoning])
       fs.writeFileSync(
         path.join(__dirname, '../database/rezonings.json'),
         JSON.stringify(orderedData, null, 2),

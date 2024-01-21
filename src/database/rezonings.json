@@ -40497,159 +40497,6 @@
     "updateDate": "2024-01-19"
   },
   {
-    "id": "rez-9geglytxpefrm5oagaus0",
-    "address": "1805 Larch Street",
-    "date": "2021-10-19",
-    "type": "multi-family residential",
-    "zoning": {
-      "previousZoningCode": "RT-8",
-      "previousZoningDescription": "Two-family Dwelling",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "rezoningId": null,
-    "applicant": "Metric Architecture",
-    "behalf": "1157013 B.C. Ltd.",
-    "description": "Rezoning of 1805 Larch Street from RT-8 to CD-1 to increase FSR from 0.75 to 2.53 and building height from 10.7m to 20.5m for a five-storey residential building with 63 secured rental housing units, 20% of which are secured as moderate income units under the Moderate Income Rental Housing Pilot Program.",
-    "urls": [
-      {
-        "date": "2021-10-19",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20211019/documents/bylaws1to13.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2021-09-21",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2020-07-07",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20200707/documents/bylaws1to5.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2019-11-05",
-        "title": "Staff Report",
-        "url": "https://council.vancouver.ca/20191105/documents/p7.pdf",
-        "type": "applied"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2021-10-19",
-        "url": "https://council.vancouver.ca/20211019/regu20211019ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2021-09-21",
-        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2020-07-07",
-        "url": "https://council.vancouver.ca/20200707/regu20200707ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2019-11-05",
-        "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
-        "type": "applied"
-      }
-    ],
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 63,
-      "hotels": 0,
-      "fsr": 2.53,
-      "storeys": null
-    },
-    "status": "approved",
-    "dates": {
-      "appliedDate": "2019-11-05",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "location": {
-      "latitude": 49.2698565,
-      "longitude": -123.1626492
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
-  },
-  {
-    "id": "rez-tsozlmf227fxminkavqvy",
-    "address": "1102 - 1138 East Georgia Street",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "rezoningId": null,
-    "applicant": "Ekistics Architecture",
-    "behalf": "CH (East Georgia) GP Inc.",
-    "description": "Rezoning of industrial-zoned lands to permit development of a four-storey mixed-use building consisting of commercial and light industrial uses at grade with a mezzanine level, and a total of 47 residential units (37 strata-titled units and 10 social housing units), with a floor space ratio (FSR) of 2.57 and a building height of 15.9 m (52.2 ft.)",
-    "type": "mixed use",
-    "urls": [
-      {
-        "date": "2021-03-30",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20210330/documents/bylaws15to23.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2019-11-05",
-        "title": "Staff Report",
-        "url": "https://council.vancouver.ca/20191105/documents/p3.pdf",
-        "type": "applied"
-      }
-    ],
-    "zoning": {
-      "previousZoningCode": "I-2",
-      "previousZoningDescription": "Industrial",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "minutesUrls": [
-      {
-        "date": "2021-03-30",
-        "url": "https://council.vancouver.ca/20210330/regu20210330ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2019-11-05",
-        "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
-        "type": "applied"
-      }
-    ],
-    "stats": {
-      "buildings": 1,
-      "stratas": 37,
-      "rentals": 10,
-      "hotels": 0,
-      "fsr": 2.57,
-      "storeys": null
-    },
-    "status": "approved",
-    "dates": {
-      "appliedDate": "2019-11-05",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "location": {
-      "latitude": 49.2781338,
-      "longitude": -123.0804595
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
-  },
-  {
     "id": "rez-fk4vvx04js4um8y4jiteb",
     "address": "1303 Kingsway, 3728 Clark Drive",
     "city": "Vancouver",
@@ -40944,108 +40791,6 @@
     "location": {
       "latitude": 49.2171551,
       "longitude": -123.1152269
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
-  },
-  {
-    "id": "rez-cl68h51fjggqbwc8inv30",
-    "address": "815-825 Commercial Drive, 1680 Adanac Street",
-    "date": "2021-09-21",
-    "type": "mixed use",
-    "zoning": {
-      "previousZoningCode": "RM-4N",
-      "previousZoningDescription": "Residential",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "rezoningId": null,
-    "applicant": "Cornerstone Architecture",
-    "behalf": "Park Drive Investments Inc.",
-    "description": "To rezone 815-825 Commercial Drive and 1680 Adanac Street from RM-4N (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey mixed-use building with commercial at grade and 38 for-profit affordable rental housing units over one level of underground parking. A height of 22.0 metres (72.2 feet) and a floor space ratio (FSR) of 3.00 are proposed.",
-    "urls": [
-      {
-        "date": "2021-09-21",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2019-02-13",
-        "title": " Summary and Recommendation",
-        "url": "https://council.vancouver.ca/20190212/documents/phea2summary.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": "Draft By-law - Zoning and Development",
-        "url": "https://council.vancouver.ca/20190212/documents/phea2draftbylawZD.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": " Draft By-law - Sign",
-        "url": "https://council.vancouver.ca/20190212/documents/phea2draftbylawSIGN.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": "Policy Report dated January 2, 2019 ",
-        "url": "https://council.vancouver.ca/20190115/documents/p1.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": "Memorandum dated February 4, 2019 ",
-        "url": "https://council.vancouver.ca/20190212/documents/phea2yellowmemo.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": "Staff Presentation",
-        "url": "https://council.vancouver.ca/20190212/documents/phea2presentation.pdf",
-        "type": "public hearing"
-      },
-      {
-        "date": "2019-02-13",
-        "title": "Video Clip of this Item",
-        "url": "http://vancouver.ca/councilvideo/cityofvancouver/index.php?clipid=3496197,002",
-        "type": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2021-09-21",
-        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2019-02-13",
-        "url": "https://council.vancouver.ca/20190212/phea20190212ag.htm",
-        "type": "public hearing"
-      }
-    ],
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 38,
-      "hotels": 0,
-      "fsr": 3,
-      "storeys": null
-    },
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2019-02-13",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "location": {
-      "latitude": 49.2698712,
-      "longitude": -123.0693768
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-19"
@@ -41753,71 +41498,6 @@
     "updateDate": "2024-01-19"
   },
   {
-    "id": "rez-3vhvfhn5ver3ci2kwz2g5",
-    "address": "1956-1990 Stainsbury Avenue",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "rezoningId": null,
-    "applicant": "Carscadden Stokes McDonald Architects Inc.",
-    "behalf": "1196908 B.C. Ltd. and 0997647 B.C. Ltd.",
-    "description": "Rezoning of lands from RS-1A (single-family dwelling) District to a new CD-1 (Comprehensive Development) District, to increase the permitted floor space ratio (FSR) from 0.70 to 2.67 and building height from 10.7 m (35.1 ft.) to 18 m (59.2 ft.) to permit the development of a five-storey residential building, with 80 secured rental housing units, of which 20 per cent of the residential floor area will be secured as moderate income rental housing units, under the Moderate Income Rental Housing Pilot Program.",
-    "type": "mixed use",
-    "urls": [
-      {
-        "date": "2021-04-27",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20210427/documents/bylaws.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2019-12-10",
-        "title": "Staff Report",
-        "url": "https://council.vancouver.ca/20191210/documents/rr6.pdf",
-        "type": "applied"
-      }
-    ],
-    "zoning": {
-      "previousZoningCode": "RS-1A",
-      "previousZoningDescription": "single-family dwelling",
-      "newZoningCode": "CD-1",
-      "newZoningDescription": "Comprehensive Development"
-    },
-    "minutesUrls": [
-      {
-        "date": "2021-04-27",
-        "url": "https://council.vancouver.ca/20210427/regu20210427ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2019-12-10",
-        "url": "https://council.vancouver.ca/20191210/regu20191210ag.htm",
-        "type": "applied"
-      }
-    ],
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 80,
-      "hotels": 0,
-      "fsr": 2.67,
-      "storeys": null
-    },
-    "status": "approved",
-    "dates": {
-      "appliedDate": "2019-12-10",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "location": {
-      "latitude": 49.2512342,
-      "longitude": -123.0653652
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
-  },
-  {
     "id": "rez-b79c0z8czruw37wtgw5ro",
     "address": "325 - 341 West 42nd Avenue",
     "city": "Vancouver",
@@ -42201,71 +41881,6 @@
     "location": {
       "latitude": 49.2076305,
       "longitude": -123.1298618
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-19"
-  },
-  {
-    "id": "rez-sfcu4y9piqn1tz4dsxalw",
-    "address": "3235 - 3261 Clive Avenue",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "rezoningId": null,
-    "applicant": "dys architecture",
-    "behalf": "Nexst Clive Development Ltd.",
-    "description": "Rezoning of 3235-3261 Clive Avenue from CD-1 (Comprehensive Development) District (219) to a new CD-1 (Comprehensive Development) District, to increase the floor space ratio (FSR) from 1.20 to 2.25 and a maximum building height from 11.9 m (39 ft.) to 21.4 m (70.2 ft.), to permit development of a six-storey residential building fronting Vanness Avenue and three-and-a-half storey townhouses fronting Clive Avenue, consisting of a total of 68 residential units (62 strata-titled units and six market rental units)",
-    "type": "mixed use",
-    "urls": [
-      {
-        "date": "2021-03-09",
-        "title": "By-laws",
-        "url": "https://council.vancouver.ca/20210309/documents/bylaws1to9.pdf",
-        "type": "approved"
-      },
-      {
-        "date": "2020-01-21",
-        "title": "Staff Report",
-        "url": "https://council.vancouver.ca/20200121/documents/rr1.pdf",
-        "type": "applied"
-      }
-    ],
-    "zoning": {
-      "previousZoningCode": "CD-1 (Comprehensive Development) District (219)",
-      "previousZoningDescription": "Comprehensive Development District",
-      "newZoningCode": "CD-1 (Comprehensive Development) District",
-      "newZoningDescription": "Comprehensive Development District"
-    },
-    "minutesUrls": [
-      {
-        "date": "2021-03-09",
-        "url": "https://council.vancouver.ca/20210309/regu20210309ag.htm",
-        "type": "approved"
-      },
-      {
-        "date": "2020-01-21",
-        "url": "https://council.vancouver.ca/20200121/regu20200121ag.htm",
-        "type": "applied"
-      }
-    ],
-    "stats": {
-      "buildings": 2,
-      "stratas": 62,
-      "rentals": 6,
-      "hotels": 0,
-      "fsr": 2.25,
-      "storeys": null
-    },
-    "status": "approved",
-    "dates": {
-      "appliedDate": "2020-01-21",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "location": {
-      "latitude": 49.2395585,
-      "longitude": -123.0356728
     },
     "createDate": "2024-01-18",
     "updateDate": "2024-01-19"
@@ -48500,6 +48115,391 @@
     "updateDate": "2024-01-19"
   },
   {
+    "id": "rez-sfcu4y9piqn1tz4dsxalw",
+    "address": "3235 - 3261 Clive Avenue",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": "dys architecture",
+    "behalf": "Nexst Clive Development Ltd.",
+    "description": "Rezoning of 3235-3261 Clive Avenue from CD-1 (Comprehensive Development) District (219) to a new CD-1 (Comprehensive Development) District, to increase the floor space ratio (FSR) from 1.20 to 2.25 and a maximum building height from 11.9 m (39 ft.) to 21.4 m (70.2 ft.), to permit development of a six-storey residential building fronting Vanness Avenue and three-and-a-half storey townhouses fronting Clive Avenue, consisting of a total of 68 residential units (62 strata-titled units and six market rental units)",
+    "type": "mixed use",
+    "urls": [
+      {
+        "date": "2021-03-09",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210309/documents/bylaws1to9.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2020-01-21",
+        "title": "Staff Report",
+        "url": "https://council.vancouver.ca/20200121/documents/rr1.pdf",
+        "type": "applied"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": "CD-1 (Comprehensive Development) District (219)",
+      "previousZoningDescription": "Comprehensive Development District",
+      "newZoningCode": "CD-1 (Comprehensive Development) District",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-03-09",
+        "url": "https://council.vancouver.ca/20210309/regu20210309ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2020-01-21",
+        "url": "https://council.vancouver.ca/20200121/regu20200121ag.htm",
+        "type": "applied"
+      }
+    ],
+    "stats": {
+      "buildings": 2,
+      "stratas": 62,
+      "rentals": 6,
+      "hotels": 0,
+      "fsr": 2.25,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2020-01-21",
+      "publicHearingDate": null,
+      "approvalDate": "2021-03-09",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": 49.2395585,
+      "longitude": -123.0356728
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-3vhvfhn5ver3ci2kwz2g5",
+    "address": "1956-1990 Stainsbury Avenue",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": "Carscadden Stokes McDonald Architects Inc.",
+    "behalf": "1196908 B.C. Ltd. and 0997647 B.C. Ltd.",
+    "description": "Rezoning of lands from RS-1A (single-family dwelling) District to a new CD-1 (Comprehensive Development) District, to increase the permitted floor space ratio (FSR) from 0.70 to 2.67 and building height from 10.7 m (35.1 ft.) to 18 m (59.2 ft.) to permit the development of a five-storey residential building, with 80 secured rental housing units, of which 20 per cent of the residential floor area will be secured as moderate income rental housing units, under the Moderate Income Rental Housing Pilot Program.",
+    "type": "mixed use",
+    "urls": [
+      {
+        "date": "2021-04-27",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210427/documents/bylaws.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2019-12-10",
+        "title": "Staff Report",
+        "url": "https://council.vancouver.ca/20191210/documents/rr6.pdf",
+        "type": "applied"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": "RS-1A",
+      "previousZoningDescription": "single-family dwelling",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-04-27",
+        "url": "https://council.vancouver.ca/20210427/regu20210427ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2019-12-10",
+        "url": "https://council.vancouver.ca/20191210/regu20191210ag.htm",
+        "type": "applied"
+      }
+    ],
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 80,
+      "hotels": 0,
+      "fsr": 2.67,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2019-12-10",
+      "publicHearingDate": null,
+      "approvalDate": "2021-04-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": 49.2512342,
+      "longitude": -123.0653652
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-cl68h51fjggqbwc8inv30",
+    "address": "815-825 Commercial Drive, 1680 Adanac Street",
+    "date": "2021-09-21",
+    "type": "mixed use",
+    "zoning": {
+      "previousZoningCode": "RM-4N",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": "Cornerstone Architecture",
+    "behalf": "Park Drive Investments Inc.",
+    "description": "To rezone 815-825 Commercial Drive and 1680 Adanac Street from RM-4N (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey mixed-use building with commercial at grade and 38 for-profit affordable rental housing units over one level of underground parking. A height of 22.0 metres (72.2 feet) and a floor space ratio (FSR) of 3.00 are proposed.",
+    "urls": [
+      {
+        "date": "2021-09-21",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2019-02-13",
+        "title": " Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20190212/documents/phea2summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20190212/documents/phea2draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": " Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20190212/documents/phea2draftbylawSIGN.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": "Policy Report dated January 2, 2019 ",
+        "url": "https://council.vancouver.ca/20190115/documents/p1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": "Memorandum dated February 4, 2019 ",
+        "url": "https://council.vancouver.ca/20190212/documents/phea2yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20190212/documents/phea2presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-13",
+        "title": "Video Clip of this Item",
+        "url": "http://vancouver.ca/councilvideo/cityofvancouver/index.php?clipid=3496197,002",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-09-21",
+        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2019-02-13",
+        "url": "https://council.vancouver.ca/20190212/phea20190212ag.htm",
+        "type": "public hearing"
+      }
+    ],
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 38,
+      "hotels": 0,
+      "fsr": 3,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2019-02-13",
+      "approvalDate": "2021-09-21",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": 49.2698712,
+      "longitude": -123.0693768
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-tsozlmf227fxminkavqvy",
+    "address": "1102 - 1138 East Georgia Street",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": "Ekistics Architecture",
+    "behalf": "CH (East Georgia) GP Inc.",
+    "description": "Rezoning of industrial-zoned lands to permit development of a four-storey mixed-use building consisting of commercial and light industrial uses at grade with a mezzanine level, and a total of 47 residential units (37 strata-titled units and 10 social housing units), with a floor space ratio (FSR) of 2.57 and a building height of 15.9 m (52.2 ft.)",
+    "type": "mixed use",
+    "urls": [
+      {
+        "date": "2021-03-30",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210330/documents/bylaws15to23.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2019-11-05",
+        "title": "Staff Report",
+        "url": "https://council.vancouver.ca/20191105/documents/p3.pdf",
+        "type": "applied"
+      }
+    ],
+    "zoning": {
+      "previousZoningCode": "I-2",
+      "previousZoningDescription": "Industrial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "minutesUrls": [
+      {
+        "date": "2021-03-30",
+        "url": "https://council.vancouver.ca/20210330/regu20210330ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2019-11-05",
+        "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
+        "type": "applied"
+      }
+    ],
+    "stats": {
+      "buildings": 1,
+      "stratas": 37,
+      "rentals": 10,
+      "hotels": 0,
+      "fsr": 2.57,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2019-11-05",
+      "publicHearingDate": null,
+      "approvalDate": "2021-03-30",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": 49.2781338,
+      "longitude": -123.0804595
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-9geglytxpefrm5oagaus0",
+    "address": "1805 Larch Street",
+    "date": "2021-10-19",
+    "type": "multi-family residential",
+    "zoning": {
+      "previousZoningCode": "RT-8",
+      "previousZoningDescription": "Two-family Dwelling",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "rezoningId": null,
+    "applicant": "Metric Architecture",
+    "behalf": "1157013 B.C. Ltd.",
+    "description": "Rezoning of 1805 Larch Street from RT-8 to CD-1 to increase FSR from 0.75 to 2.53 and building height from 10.7m to 20.5m for a five-storey residential building with 63 secured rental housing units, 20% of which are secured as moderate income units under the Moderate Income Rental Housing Pilot Program.",
+    "urls": [
+      {
+        "date": "2021-10-19",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20211019/documents/bylaws1to13.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2021-09-21",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20210921/documents/bylaws1to20.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2020-07-07",
+        "title": "By-laws",
+        "url": "https://council.vancouver.ca/20200707/documents/bylaws1to5.pdf",
+        "type": "approved"
+      },
+      {
+        "date": "2019-11-05",
+        "title": "Staff Report",
+        "url": "https://council.vancouver.ca/20191105/documents/p7.pdf",
+        "type": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2021-10-19",
+        "url": "https://council.vancouver.ca/20211019/regu20211019ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2021-09-21",
+        "url": "https://council.vancouver.ca/20210921/regu20210921ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2020-07-07",
+        "url": "https://council.vancouver.ca/20200707/regu20200707ag.htm",
+        "type": "approved"
+      },
+      {
+        "date": "2019-11-05",
+        "url": "https://council.vancouver.ca/20191105/regu20191105ag.htm",
+        "type": "applied"
+      }
+    ],
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 63,
+      "hotels": 0,
+      "fsr": 2.53,
+      "storeys": null
+    },
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2019-11-05",
+      "publicHearingDate": null,
+      "approvalDate": "2020-07-07",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "location": {
+      "latitude": 49.2698565,
+      "longitude": -123.1626492
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-20"
+  },
+  {
     "id": "rez-ank30amrrvdk32l6opwk7",
     "rezoningId": null,
     "address": "2015 Main Street, 190 East 4th Avenue",
@@ -48872,7 +48872,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -48955,7 +48955,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49062,7 +49062,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49145,7 +49145,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49228,7 +49228,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49323,7 +49323,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49430,7 +49430,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49519,7 +49519,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-14",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49608,7 +49608,7 @@
     "status": "public hearing",
     "dates": {
       "appliedDate": "2023-11-14",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-12-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -49729,8 +49729,8 @@
       "newZoningDescription": "Comprehensive Development District"
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.27830410000001,
+      "longitude": -123.1218514
     },
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -49783,8 +49783,8 @@
       "newZoningDescription": "Residential Rental"
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2573799,
+      "longitude": -123.1661032
     },
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -49837,8 +49837,8 @@
       "newZoningDescription": "Comprehensive Development"
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.2577867,
+      "longitude": -123.0438638
     },
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -49891,8 +49891,8 @@
       "newZoningDescription": "Comprehensive Development"
     },
     "location": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 49.22947079999999,
+      "longitude": -123.0910064
     },
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",

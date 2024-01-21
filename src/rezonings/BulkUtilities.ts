@@ -30,7 +30,6 @@ export const BulkUtilities = {
     const rezonings = RezoningsRepository.getRezonings()
   
     for (const rezoning of rezonings) {
-      console.log(chalk.bgWhite(`Progress: ${rezonings.indexOf(rezoning) + 1}/${rezonings.length}`))
       
       if (!rezoning.address) continue
       // Correct any potential issues with undefined locations

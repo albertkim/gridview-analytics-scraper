@@ -51,11 +51,11 @@ import { checkIfPublicHearing, parsePublicHearing } from '../rezonings/cities/Va
   console.log()
 
   // Update rezonings database
-  for (const n of noPublicHearingNews) {
-    const parsed = await parsePublicHearing(n)
-    if (parsed) {
-      await RezoningsRepository.upsertRezonings([parsed])
-    }
-  }
+  // for (const n of noPublicHearingNews) {
+  //   const parsed = await parsePublicHearing(n)
+  //   if (parsed) {
+  //     await RezoningsRepository.upsertRezonings([parsed])
+  //   }
+  // }
 
 })()
