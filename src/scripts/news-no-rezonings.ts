@@ -21,7 +21,7 @@ import { checkIfBylaw as richmondCheckIfBylaw, parseBylaw as richmondParseBylaw 
 // Accomplish that by checking for existance of the minutes URL
 // Change cities by updating the confiruations below
 
-const city: CityType = 'Richmond'
+const city: CityType = 'Vancouver'
 const updateApplications: boolean = false
 const updatePublicHearings: boolean = false
 const updateBylaws: boolean = false
@@ -118,7 +118,9 @@ async function main() {
   // Update rezonings database if settings are enabled
 
   if (updateApplications) {
-    for (const n of applicationNews) {
+    for (let i = 0; i < noApplicationNews.length; i++) {
+      console.log(chalk.bgWhite(`Parsing application ${i + 1} of ${noApplicationNews.length}`))
+      const n = noApplicationNews[i]
       const parsed = await functionCityMapping.parseApplication[city](n)
       if (parsed) {
         await RezoningsRepository.upsertRezonings([parsed])
@@ -127,7 +129,9 @@ async function main() {
   }
 
   if (updatePublicHearings) {
-    for (const n of publicHearingNews) {
+    for (let i = 0; i < noPublicHearingNews.length; i++) {
+      console.log(chalk.bgWhite(`Parsing public hearing ${i + 1} of ${noPublicHearingNews.length}`))
+      const n = noPublicHearingNews[i]
       const parsed = await functionCityMapping.parsePublicHearing[city](n)
       if (parsed) {
         await RezoningsRepository.upsertRezonings([parsed])
@@ -136,9 +140,10 @@ async function main() {
   }
 
   if (updateBylaws) {
-    for (const n of bylawNews) {
+    for (let i = 0; i < noBylawNews.length; i++) {
+      console.log(chalk.bgWhite(`Parsing bylaw ${i + 1} of ${noBylawNews.length}`))
+      const n = noBylawNews[i]
       const parsed = await functionCityMapping.parseBylaw[city](n)
-      // check if parsed is an array or not
       if (parsed && Array.isArray(parsed)) {
         await RezoningsRepository.upsertRezonings(parsed)
       } else if (parsed) {

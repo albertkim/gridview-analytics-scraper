@@ -20292,7 +20292,7 @@
       "longitude": -123.15287
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-q878eh00dgw67f04le6mq",
@@ -20382,7 +20382,7 @@
       "longitude": -123.1124049
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-96ivqj2upbr98m3c6nqcs",
@@ -20434,6 +20434,42 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20231017/documents/rr3.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2CD1.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2sign.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2-staffpresentation-November142023.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114181710&mediaEndTime=20231114184000&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -20453,7 +20489,7 @@
       "longitude": -123.1410624
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-9qob5dgr9s28o0l0wnghd",
@@ -20505,6 +20541,36 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20231017/documents/rr1.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3CD1.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3sign.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114184001&mediaEndTime=20231114191900&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -20524,7 +20590,7 @@
       "longitude": -123.112871
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-7lamnyru4vdw3nnjldp7z",
@@ -20576,6 +20642,42 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20231017/documents/rr2.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4CD1.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4sign.PDF",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_udp_boards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4-staffpresentation-November142023.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114192258&mediaEndTime=20231114195900&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -20595,7 +20697,7 @@
       "longitude": -123.0902879
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-xphbevdkmlpt4o7p3lax8",
@@ -20684,7 +20786,7 @@
       "longitude": -123.1644307
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-9qgak7fjan15oy7cdt7cm",
@@ -20773,7 +20875,7 @@
       "longitude": -123.1149997
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-vilw50fap3euj6jt5b8rq",
@@ -21107,10 +21209,10 @@
     "behalf": "Panagiotis and Despina Kefalas",
     "description": "The rezoning application is to rezone the lands from RT-5 (Residential) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 0.75 to 1.45 and the building height from 10.7 m (35 ft.) to 11.5 m (38 ft.), to permit a four-storey and a three-storey residential building with 13 secured rental units.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-07-25",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-09-13",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -21137,6 +21239,54 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230725/documents/rr5.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Referral Report dated July 11, 2023",
+        "url": "https://council.vancouver.ca/20230725/documents/rr5.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Draft CD-1 By-law",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3CD-1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3applicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3Images.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Yellow Memorandum dated September 8, 2023",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230912/documents/phea3presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230913/-1/20416?mediaStartTime=20230912191917&mediaEndTime=20230912194735&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -21144,6 +21294,11 @@
         "date": "2023-07-25",
         "url": "https://council.vancouver.ca/20230725/regu20230725ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-09-13",
+        "url": "https://council.vancouver.ca/20230912/phea20230912ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -21151,7 +21306,7 @@
       "longitude": -123.1122632
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-p2lj5ta3ju7xy7phg1jo5",
@@ -21258,7 +21413,7 @@
       "longitude": -123.1527731
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-dbzkksy3fvlpwxf4w5x3f",
@@ -21316,6 +21471,30 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230613/documents/rr12.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230713/documents/phea3-applicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20230713/documents/phea3-images.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230713/documents/phea3-Presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230714/-1/20402?mediaStartTime=20230713142430&mediaEndTime=20230713145813&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -21335,7 +21514,7 @@
       "longitude": -123.1189096
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-3p7mo86m95tcp5l8ij50o",
@@ -21399,6 +21578,30 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230613/documents/rr11.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230713/documents/phea4-applicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20230713/documents/phea4-images.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230713/documents/phea4-Presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-07-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230714/-1/20402?mediaStartTime=20230713145815&mediaEndTime=20230713151026&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -21418,7 +21621,7 @@
       "longitude": -123.0637922
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-rq89macx0yqb2313ghhvp",
@@ -21513,7 +21716,7 @@
       "longitude": -123.1390782
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-59ijmv5a4k8zy9hec2aph",
@@ -21602,7 +21805,7 @@
       "longitude": -123.0921005
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-ek5dgn81graq85bse8nh0",
@@ -21691,7 +21894,7 @@
       "longitude": -123.1843
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-0ioxkkh5ulps81lmmeefp",
@@ -21780,7 +21983,7 @@
       "longitude": -123.0525843
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-4oki3o8o3tlaxfgoyvkao",
@@ -21869,7 +22072,7 @@
       "longitude": -123.0644078
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-hndw7rzo38zcsrjypfvfr",
@@ -21958,7 +22161,7 @@
       "longitude": -123.178365
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-cflenoxacy5xiy1wsei99",
@@ -22059,7 +22262,7 @@
       "longitude": -123.1205187
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-jeedp13bzoznbzt0qhcs6",
@@ -22160,7 +22363,7 @@
       "longitude": -123.1182973
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-d9anmap6ijhfkdopviove",
@@ -22273,7 +22476,7 @@
       "longitude": -123.0394203
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-s46b3b9ewnvzghytnjuxw",
@@ -22380,7 +22583,7 @@
       "longitude": -123.1105903
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-xnmb9gipis6fsqa3wg2z4",
@@ -22475,7 +22678,7 @@
       "longitude": -123.1031839
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-yt0tsectyazw4ku3sexcc",
@@ -22630,7 +22833,7 @@
       "longitude": -123.1610945
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-c71elg0ajvb3gv4d1txzn",
@@ -22719,7 +22922,7 @@
       "longitude": -123.1886147
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-2c8qniuvexaiahpaz97vr",
@@ -22814,7 +23017,7 @@
       "longitude": -123.1144902
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-hjd7t3uhhehzv9lilp9km",
@@ -23040,10 +23243,10 @@
     "behalf": "Association of Neighbourhood Houses of British Columbia, Inc. No. S-36",
     "description": "The rezoning application is to rezone the lands from RS-1A (Residential) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 0.60 to 1.41 and the maximum building height from 10.7 m (35 ft.) to 13.9 m (46 ft.) to permit a three-storey replacement of the Cedar Cottage Neighbourhood House. The proposal includes a 37-space childcare facility, adult daycare facility, multi-purpose community spaces, administrative, and support spaces.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-28",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-28",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23070,6 +23273,48 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230328/documents/rr1.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Referral Report dated March 14, 2023",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2rr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Applicant Virtual Open House Boards",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2VOH.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230427/documents/phea2presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230501/-1/20351?mediaStartTime=20230427182644&mediaEndTime=20230427184319&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23077,6 +23322,11 @@
         "date": "2023-03-28",
         "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "url": "https://council.vancouver.ca/20230427/phea20230427ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23084,7 +23334,7 @@
       "longitude": -123.0653271
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-xmuyx0zgu07pysr7mf27i",
@@ -23094,10 +23344,10 @@
     "behalf": "1318743 B.C. Ltd.",
     "description": "The rezoning application is to rezone the lands from RM-5A (Residential) to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 2.2 to 6.19 and permit the development of a 16-storey residential building with a maximum height of 49.0m (160.8 ft.), containing 133 secured-market rental units and 37 below-market rental units.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-28",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-28",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23124,6 +23374,36 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230328/documents/rr2_000.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230427/documents/phea1SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Referral Report dated March 14, 2023",
+        "url": "https://council.vancouver.ca/20230427/documents/phea1rr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230427/documents/phea1zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20230427/documents/phea1renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230501/-1/20351?mediaStartTime=20230427181008&mediaEndTime=20230427182605&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23131,6 +23411,11 @@
         "date": "2023-03-28",
         "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "url": "https://council.vancouver.ca/20230427/phea20230427ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23138,7 +23423,7 @@
       "longitude": -123.1313451
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-88s8bydyybdb2khbbzj6n",
@@ -23148,10 +23433,10 @@
     "behalf": "Ravine Park Development Nominee Inc.",
     "description": "Rezoning from RS-5 (Residential) District to RR-2B (Residential Rental) District for the construction of a five-storey market rental building in accordance with the Secured Rental Policy. The site area is approximately 3,957.3 sq. m (42,596 sq. ft.). The rezoning site includes a portion of the east/west lane.",
     "type": "multi-family residential",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-28",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-28",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23161,7 +23446,7 @@
       "stratas": 0,
       "rentals": null,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 2.4,
       "storeys": 5
     },
     "zoning": {
@@ -23178,6 +23463,42 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230328/documents/rr3.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230427/documents/phea3SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Referral Report dated March 14, 2023",
+        "url": "https://council.vancouver.ca/20230427/documents/phea3rr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230427/documents/phea3zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Yellow memorandum dated April 27, 2023",
+        "url": "https://council.vancouver.ca/20230427/documents/phea3yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230427/documents/phea3presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-28",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230501/-1/20351?mediaStartTime=20230427184333&mediaEndTime=20230427192757&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23185,6 +23506,11 @@
         "date": "2023-03-28",
         "url": "https://council.vancouver.ca/20230328/regu20230328ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-28",
+        "url": "https://council.vancouver.ca/20230427/phea20230427ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23192,7 +23518,7 @@
       "longitude": -123.1550477
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-dl5ty3j88ca1aldk9co8p",
@@ -23636,10 +23962,10 @@
     "behalf": "1266234 B.C. LTD.",
     "description": "Rezoning of the lands from RS-1 (Residential) District to RR-2A (Residential Rental) District to allow for a four-storey market rental building in accordance with the Secured Rental Policy. The total site area is approximately 1,118 sq. m (12,034 sq. ft.), with a frontage of 30 m (98.4 ft.) along East 18th Avenue and a depth of 37.5 m (123 ft.).",
     "type": "multi-family residential",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-07",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-26",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23649,7 +23975,7 @@
       "stratas": 0,
       "rentals": null,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 1.75,
       "storeys": 4
     },
     "zoning": {
@@ -23666,6 +23992,30 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230307/documents/rr3.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230425/documents/phea1SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Referral Report dated February 21, 2023",
+        "url": "https://council.vancouver.ca/20230307/documents/rr3.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230425/documents/phea1zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230426/-1/20349?mediaStartTime=20230425181359&mediaEndTime=20230425182606&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23673,6 +24023,11 @@
         "date": "2023-03-07",
         "url": "https://council.vancouver.ca/20230307/regu20230307ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "url": "https://council.vancouver.ca/20230425/phea20230425ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23680,7 +24035,7 @@
       "longitude": -123.09079
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-5vpbvxr7t3nhfmrb7ybji",
@@ -23690,10 +24045,10 @@
     "behalf": "Dunbar Street West Nominee Inc.",
     "description": "The rezoning application is to rezone a consolidation of the properties comprising the site from RS-5 (Residential) District to RR-2B (Residential Rental) District. The proposed plan is for a five-storey market rental building in accordance with the Secured Rental Policy.",
     "type": "multi-family residential",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-07",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-26",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23703,7 +24058,7 @@
       "stratas": 0,
       "rentals": null,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 2.2,
       "storeys": 5
     },
     "zoning": {
@@ -23720,6 +24075,30 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230307/documents/rr4.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230425/documents/phea2SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Referral Report dated February 21, 2023",
+        "url": "https://council.vancouver.ca/20230307/documents/rr4.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230425/documents/phea2zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230426/-1/20349?mediaStartTime=20230425182612&mediaEndTime=20230425183924&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23727,6 +24106,11 @@
         "date": "2023-03-07",
         "url": "https://council.vancouver.ca/20230307/regu20230307ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "url": "https://council.vancouver.ca/20230425/phea20230425ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23734,7 +24118,7 @@
       "longitude": -123.1857583
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-grq62efngjlz13qj6xasj",
@@ -23744,10 +24128,10 @@
     "behalf": "1088573 B.C. Ltd.",
     "description": "The rezoning application is to rezone the lands from C-1 (Commercial) District to CD-1 (Comprehensive Development) District to increase the floor space ratio (FSR) from 1.20 to 2.56 and the building height from 10.7 m (35 ft.) to 19.2 m (63 ft.), to permit a four storey mixed-use building with 54 secured market rental units and commercial space.",
     "type": "mixed use",
-    "status": "applied",
+    "status": "public hearing",
     "dates": {
       "appliedDate": "2023-03-07",
-      "publicHearingDate": null,
+      "publicHearingDate": "2023-04-26",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -23774,6 +24158,42 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20230307/documents/rr5.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230425/documents/phea3SR.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Referral Report dated February 21, 2023",
+        "url": "https://council.vancouver.ca/20230307/documents/rr5.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20230425/documents/phea3zdby-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Applicant Virtual Open House Boards",
+        "url": "https://council.vancouver.ca/20230425/documents/phea3openhouse.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20230425/documents/phea3renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-04-26",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230426/-1/20349?mediaStartTime=20230425183930&mediaEndTime=20230425184804&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -23781,6 +24201,11 @@
         "date": "2023-03-07",
         "url": "https://council.vancouver.ca/20230307/regu20230307ag.htm",
         "type": "applied"
+      },
+      {
+        "date": "2023-04-26",
+        "url": "https://council.vancouver.ca/20230425/phea20230425ag.htm",
+        "type": "public hearing"
       }
     ],
     "location": {
@@ -23788,7 +24213,7 @@
       "longitude": -123.1532794
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-18"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-thd3gu9725kblki4c2rmi",
@@ -47411,7 +47836,7 @@
       "longitude": -123.185031
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-m11igsr6ay9iw8xld7mdx",
@@ -47743,44 +48168,103 @@
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
     "rezoningId": null,
-    "applicant": null,
-    "behalf": null,
-    "description": "",
-    "type": null,
+    "applicant": "Tatla Developments Ltd.",
+    "behalf": "Da Hua Investment Holdings Ltd.",
+    "description": "To rezone 1247 Kingsway from C-2 (Commercial) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey mixed-use building with commercial uses at grade and 31 secured rental residential units. A height of 21.9 m (71.9 ft.) and a floor space ratio (FSR) of 3.61 are proposed.",
+    "type": "mixed use",
     "urls": [
       {
         "date": "2023-12-12",
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20231212/documents/bylaws1to27.pdf",
         "type": "approved"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Draft By-law - CD-1",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2bylawCD1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2bylawSign.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Referral Report dated July 16, 2020",
+        "url": "https://council.vancouver.ca/20200915/documents/rr4.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Model Photos",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2modelphotos.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Display Boards",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2udpboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2-StaffPresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Applicant Presentation",
+        "url": "https://council.vancouver.ca/20200915/documents/phea2-ApplicantPresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Video Clip of this Item",
+        "url": "https://bit.ly/3kxQLEK",
+        "type": "public hearing"
       }
     ],
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
     },
     "minutesUrls": [
       {
         "date": "2023-12-12",
         "url": "https://council.vancouver.ca/20231212/regu20231212ag.htm",
         "type": "approved"
+      },
+      {
+        "date": "2020-09-16",
+        "url": "https://council.vancouver.ca/20200915/phea20200915ag.htm",
+        "type": "public hearing"
       }
     ],
     "stats": {
-      "buildings": null,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 31,
+      "hotels": 0,
+      "fsr": 3.61,
       "storeys": null
     },
     "status": "approved",
     "dates": {
       "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-12",
+      "publicHearingDate": "2020-09-16",
+      "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
@@ -47789,7 +48273,7 @@
       "longitude": -123.0788611
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-7ilqegivkyal4a96c0ntx",
@@ -49033,6 +49517,30 @@
         "title": "Referral Report",
         "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf",
         "type": "applied"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231214/documents/phea4_udp.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231214/documents/phea4_renderings.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231214/documents/phea4ppt.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-12-14",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231218/-1/20458?mediaStartTime=20231214145013&mediaEndTime=20231214154140&viewMode=3",
+        "type": "public hearing"
       }
     ],
     "minutesUrls": [
@@ -49052,7 +49560,7 @@
       "longitude": -123.1190759
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-vt9uu5xjrxg0l7msqlou5",
@@ -49159,7 +49667,7 @@
       "longitude": -123.1529319
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-a7j44vnq5c1lvtf0s4nhk",
@@ -49242,7 +49750,7 @@
       "longitude": -123.120023
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-3hl8lghtzs2q22oeg9c08",
@@ -49325,7 +49833,7 @@
       "longitude": -123.120351
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-p7npq0bvx8y4bz7wmoaud",
@@ -49420,7 +49928,7 @@
       "longitude": -123.1182931
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-mgc2z15rmmkzns74cqyen",
@@ -49527,7 +50035,7 @@
       "longitude": -123.0695486
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-litdpa8o281vgqq7kw92k",
@@ -49550,7 +50058,7 @@
       "stratas": 0,
       "rentals": 33,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 2.2,
       "storeys": 5
     },
     "zoning": {
@@ -49616,7 +50124,7 @@
       "longitude": -123.16273
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-oq34eyjji0pxrbj7t3jmo",
@@ -49639,7 +50147,7 @@
       "stratas": 0,
       "rentals": 61,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 2.2,
       "storeys": 5
     },
     "zoning": {
@@ -49705,7 +50213,7 @@
       "longitude": -123.0607062
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-l1felz6ztmud0vbd3lxbb",
@@ -49806,7 +50314,7 @@
       "longitude": -123.1189483
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20"
+    "updateDate": "2024-01-21"
   },
   {
     "id": "rez-wkmvdmrw9v13ei4mhydpu",
@@ -50239,5 +50747,383 @@
     },
     "createDate": "2024-01-20",
     "updateDate": "2024-01-20"
+  },
+  {
+    "id": "rez-pkekc1qwpp74ueo1zqquh",
+    "rezoningId": null,
+    "address": "5235-5275 Kersland Drive",
+    "applicant": "Listraor and Locarno",
+    "behalf": "1236235 B.C. Ltd",
+    "description": "To rezone 5235-5275 Kersland Drive from RS-1 (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a five-storey residential building with 65 strata-titled residential units. A height of 18.0 metres (59 feet) and a floor space ratio (FSR) of 2.0 are proposed.",
+    "type": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-09-13",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 65,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "RS-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-09-13",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Referral Report dated June 27, 2023",
+        "url": "https://council.vancouver.ca/20230711/documents/rr1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Draft CD-1 By-law",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2CD-1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2applicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2images.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Yellow Memorandum dated September 8, 2023",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20230912/documents/phea2presentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230913/-1/20416?mediaStartTime=20230912184549&mediaEndTime=20230912191916&viewMode=3",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-09-13",
+        "url": "https://council.vancouver.ca/20230912/phea20230912ag.htm",
+        "type": "public hearing"
+      }
+    ],
+    "createDate": "2024-01-21",
+    "updateDate": "2024-01-21"
+  },
+  {
+    "id": "rez-8dgub9pdbzhcr1iylb9sq",
+    "rezoningId": null,
+    "address": "3747-3761 Renfrew Street",
+    "applicant": "Sian Enterprises Ltd.",
+    "behalf": null,
+    "description": "To rezone 3747-3761 Renfrew Street from C-1 (Commercial) District to CD-1 (Comprehensive Development) District, to permit the development of a four-storey mixed-use building containing 18 secured market rental residential units with commercial space on the ground floor. A height of 16.3 meters (53 feet) and 17.8 metres (58 feet) for the portion with rooftop amenity and a floor space ratio (FSR) of 2.5 are proposed.",
+    "type": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-09-13",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 18,
+      "hotels": 0,
+      "fsr": 2.5,
+      "storeys": 4
+    },
+    "zoning": {
+      "previousZoningCode": "C-1",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-09-13",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4sr.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Referral Report dated June 27, 2023",
+        "url": "https://council.vancouver.ca/20230711/documents/rr2.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Draft CD-1 By-law",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4CD-1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Draft Sign By-law",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4SignBy-law.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4applicantboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Renderings",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4Images.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Yellow Memorandum dated September 8, 2023",
+        "url": "https://council.vancouver.ca/20230912/documents/phea4yellowmemo.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "Video Clip of this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20230913/-1/20416?mediaStartTime=20230912194736&mediaEndTime=20230912195931&viewMode=3",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-09-13",
+        "url": "https://council.vancouver.ca/20230912/phea20230912ag.htm",
+        "type": "public hearing"
+      }
+    ],
+    "createDate": "2024-01-21",
+    "updateDate": "2024-01-21"
+  },
+  {
+    "id": "rez-k1rqylxdmgldgp2rfmc38",
+    "rezoningId": null,
+    "address": "2336-2366 Charles Street",
+    "applicant": "Human Studio Architecture + Urban Design",
+    "behalf": "2366 Charles St Properties GP Ltd.",
+    "description": "To rezone 2336-2366 Charles Street from C-1 (Commercial) District and RT-5 (Two-Family Dwelling) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey mixed-use building with commercial uses at grade and 62 secured rental residential units. A height of 22.0 m (72.2 ft.) and a floor space ratio (FSR) of 3.2 are proposed.",
+    "type": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2020-09-16",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 62,
+      "hotels": 0,
+      "fsr": 3.2,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "C-1, RT-5",
+      "previousZoningDescription": "Commercial and Two-Family Dwelling",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2020-09-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Draft By-law - CD-1",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4bylawCD1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4bylawSign.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Referral Report dated July 7, 2020",
+        "url": "https://council.vancouver.ca/20200915/documents/rr2.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Model Photos",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4modelphotos.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Display Boards",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4udpboards.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20200915/documents/phea4-StaffPresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2020-09-16",
+        "title": "Video Clip of this Item",
+        "url": "https://bit.ly/3c993JK",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2020-09-16",
+        "url": "https://council.vancouver.ca/20200915/phea20200915ag.htm",
+        "type": "public hearing"
+      }
+    ],
+    "createDate": "2024-01-21",
+    "updateDate": "2024-01-21"
+  },
+  {
+    "id": "rez-n8rvob0tfj7aypomp9rtp",
+    "rezoningId": null,
+    "address": "1636 Clark Drive, 1321-1395 East 1st Avenue",
+    "applicant": "HDR|CEI Architecture Associates Inc.",
+    "behalf": "British Columbia Housing Management Commission",
+    "description": "To rezone 1636 Clark Drive and 1321-1395 East 1st Avenue from I-2 (Industrial) and RM-4N (Multiple Dwelling) Districts to CD-1 (Comprehensive Development) District, to permit the development of a 10-storey mixed-use building containing 90 social housing units, a social enterprise space and a withdrawal management centre with up to 20 short-term transitional beds. A maximum height of 36.6 metres (120 feet) and a floor space ratio (FSR) of 3.22 are proposed.",
+    "type": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2019-02-21",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 90,
+      "hotels": 0,
+      "fsr": 3.22,
+      "storeys": 10
+    },
+    "zoning": {
+      "previousZoningCode": "I-2, RM-4N",
+      "previousZoningDescription": "Industrial, Multiple Dwelling",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2019-02-21",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1summary.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1draftbylawZD.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1draftbylawSign.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Draft By-law - ODP",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1draftbylawODP.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Policy Report dated January 15, 2019",
+        "url": "https://council.vancouver.ca/20190129/documents/p1.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1-staffpresentation.pdf",
+        "type": "public hearing"
+      },
+      {
+        "date": "2019-02-21",
+        "title": "Applicant Team Presentation",
+        "url": "https://council.vancouver.ca/20190220/documents/phea1-applicantpresentation.pdf",
+        "type": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2019-02-21",
+        "url": "https://council.vancouver.ca/20190220/phea20190220ag.htm",
+        "type": "public hearing"
+      }
+    ],
+    "createDate": "2024-01-21",
+    "updateDate": "2024-01-21"
   }
 ]
