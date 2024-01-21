@@ -1,6 +1,6 @@
 import chalk from 'chalk'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
-import { chatGPTTextQuery } from '../rezonings/AIUtilities'
+import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
 
 (async () => {
 

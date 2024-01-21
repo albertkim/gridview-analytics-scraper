@@ -1,15 +1,15 @@
 import moment from 'moment'
-import { RawRepository } from '../repositories/RawRepository'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
-import { checkIfApplication } from '../rezonings/cities/Vancouver/Applications'
-import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
+import { RawRepository } from '../../repositories/RawRepository'
+import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { checkIfApplication } from '../../rezonings/cities/Richmond/Applications'
+import { checkIfBylaw } from '../../rezonings/cities/Richmond/Bylaws'
 import chalk from 'chalk'
 
 /**
  * Jan 14, 2023
  * This script was made to fill in missing applied dates mainly for Richmond rezonings. We do that by comparing the rezoning urls with the news urls to see which ones are applications/bylaw approvals, then updating the dates.
  * The issue originally happened from buggy rezoning analysis code.
- * There is also a Richmond version of this script.
+ * There is also a Vancouver version of this script.
  */
 
 (async () => {
@@ -19,7 +19,7 @@ import chalk from 'chalk'
 
   for (const rezoning of rezonings) {
 
-    if (rezoning.city !== 'Vancouver') continue
+    if (rezoning.city !== 'Richmond') continue
       
     let appliedDate: string | null = null
     let approvalDate: string | null = null

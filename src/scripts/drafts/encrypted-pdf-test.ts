@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import pdf2img from 'pdf-img-convert'
-import { downloadPDF, generatePDF, generateScreenshotFromPDF, parsePDF } from '../rezonings/PDFUtilities'
-import { chatGPTTextQuery, getGPTBaseRezoningQuery, imageQuery } from '../rezonings/AIUtilities'
+import { downloadPDF, generatePDF, generateScreenshotFromPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { chatGPTTextQuery, getGPTBaseRezoningQuery, imageQuery } from '../../rezonings/AIUtilities'
 
 (async function() {
   try {

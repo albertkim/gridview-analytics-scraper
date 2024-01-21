@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer'
-import { getMeetingDetailsAfterMar2020 } from '../scraper/cities/Burnaby/GetMeetingDetails'
+import { getMeetingDetailsAfterMar2020 } from '../../scraper/cities/Burnaby/GetMeetingDetails'
 
 (async () => {
 

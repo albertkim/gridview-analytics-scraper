@@ -1,5 +1,5 @@
-import { generateID } from '../repositories/GenerateID'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { generateID } from '../../repositories/GenerateID'
+import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
 (async () => {
 

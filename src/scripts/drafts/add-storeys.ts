@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { IFullRezoningDetail } from '../repositories/RezoningsRepository'
+import { IFullRezoningDetail } from '../../repositories/RezoningsRepository'
 
 const directory = path.join(__dirname, '../database/rezonings.json')
 console.log(directory)

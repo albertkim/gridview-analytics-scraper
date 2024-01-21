@@ -1,4 +1,4 @@
-import { RawRepository } from '../repositories/RawRepository'
+import { RawRepository } from '../../repositories/RawRepository'
 
 (async () => {
 

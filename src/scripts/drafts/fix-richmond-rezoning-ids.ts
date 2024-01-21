@@ -1,6 +1,6 @@
 import chalk from 'chalk'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
-import { cleanRichmondRezoningId } from '../rezonings/cities/Richmond/RichmondUtilities'
+import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { cleanRichmondRezoningId } from '../../rezonings/cities/Richmond/RichmondUtilities'
 
 (async () => {
 

@@ -1,5 +1,5 @@
-import { parseBylaw } from '../rezonings/cities/Richmond/Bylaws'
-import { parseApplication } from '../rezonings/cities/Vancouver/Applications'
+import { parseBylaw } from '../../rezonings/cities/Richmond/Bylaws'
+import { parseApplication } from '../../rezonings/cities/Vancouver/Applications'
 
 (async () => {
 

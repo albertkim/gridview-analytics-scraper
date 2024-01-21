@@ -1,4 +1,4 @@
-import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Vancouver/Bylaws'
+import { checkIfBylaw, parseBylaw } from '../../rezonings/cities/Vancouver/Bylaws'
 
 (async () => {
 

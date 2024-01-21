@@ -25,7 +25,14 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions):
       const date = $(element).find('td:nth-child(1)').text().trim()
       const meetingType = $(element).find('td:nth-child(2)').text().trim()
       let meetingMinutesUrl
-      const meetingMinutesUrlElement = $(element).find('td:nth-child(4) a:contains("Agenda and Minutes")')
+      // Most links are called "Agenda and Minutes" but some have different names and extra context in brackets
+      const meetingMinutesUrlElement = $(element).find('td:nth-child(4) a').filter(function() {
+        const text = $(this).text() as string | undefined
+        if (text) {
+          return text.toLowerCase().includes('agenda') && text.toLowerCase().includes('minute')
+        }
+        return false
+      })
       if (meetingMinutesUrlElement) {
         meetingMinutesUrl = meetingMinutesUrlElement.attr('href')
       }

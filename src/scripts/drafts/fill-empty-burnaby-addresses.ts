@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import { RawRepository } from '../repositories/RawRepository'
-import { IFullRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
-import { checkIfApplication, parseApplication } from '../rezonings/cities/Burnaby/Applications'
-import { checkIfPublicHearing } from '../rezonings/cities/Burnaby/PublicHearings'
-import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Burnaby/Bylaws'
-import { parsePublicHearing } from '../rezonings/cities/Burnaby/PublicHearings'
+import { RawRepository } from '../../repositories/RawRepository'
+import { IFullRezoningDetail, RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { checkIfApplication, parseApplication } from '../../rezonings/cities/Burnaby/Applications'
+import { checkIfPublicHearing } from '../../rezonings/cities/Burnaby/PublicHearings'
+import { checkIfBylaw, parseBylaw } from '../../rezonings/cities/Burnaby/Bylaws'
+import { parsePublicHearing } from '../../rezonings/cities/Burnaby/PublicHearings'
 
 // STRATEGY: Get all meeting minute URLs for null address Burnaby rezonings, then fully re-analyze their rezonings
 // After, take count, upsert, then remove all previous null addresses

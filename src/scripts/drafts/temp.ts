@@ -1,4 +1,4 @@
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
 (async () => {
 

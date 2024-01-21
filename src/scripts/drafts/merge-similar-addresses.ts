@@ -1,4 +1,4 @@
-import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../repositories/RezoningsRepository'
 
 // NOTE: Due to array handling complexity, this only merges one address at a time
 (async () =>{

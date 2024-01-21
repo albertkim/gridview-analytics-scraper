@@ -1,4 +1,4 @@
-import { RezoningsRepository, ZoningTypeValues } from '../repositories/RezoningsRepository'
+import { RezoningsRepository, ZoningTypeValues } from '../../repositories/RezoningsRepository'
 
 (async () => {
 
