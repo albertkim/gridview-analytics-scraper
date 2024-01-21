@@ -27,12 +27,28 @@ export async function getMeetingDetails(page: Page, url: string, meetingType: st
       // Only proceed if a valid title exists
       if (rawTitle) {
         const title = cleanTitle(rawTitle)
-        const reportUrls = $(element).nextUntil(':not(ul)').filter('ul').first().find('a').map(function() {
-          return {
-            title: $(this).text(),
-            url: $(this)[0].href
+
+        const reportUrls: {title: string, url: string}[] = []
+
+        $(element).nextAll().not('p').each(function() {
+          // Check if the element matches the stopping condition
+          if (!$(this).is(':not(:has(a))')) {
+              // Find all 'a' tags in this element
+              $(this).find('a').each(function() {
+                const urlTitle = $(this).text().trim()
+                // check the length of letters only in urlTitle to see if it's a valid title
+                if (urlTitle.replace(/[^a-zA-Z]/g, '').length > 3) {
+                  reportUrls.push({
+                    title: $(this).text(),
+                    url: $(this)[0].href
+                  })
+                }
+              })
+          } else {
+            // Stop the iteration once the stopping condition is met
+            return false
           }
-        }).get()
+        })
   
         data.push({
           date: date,
