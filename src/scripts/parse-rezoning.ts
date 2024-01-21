@@ -1,26 +1,27 @@
 import { parseBylaw } from '../rezonings/cities/Richmond/Bylaws'
+import { parseApplication } from '../rezonings/cities/Vancouver/Applications'
 
 (async () => {
 
   const news = {
-    "city": "Richmond",
+    "city": "Vancouver",
     "metroCity": "Metro Vancouver",
-    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15528/",
-    "date": "2023-11-27",
-    "meetingType": "Council Minutes",
-    "title": "BYLAW FOR ADOPTION - BYLAW 10155",
-    "resolutionId": "R23/20-9",
-    "contents": "R23/20-9Outcome: It was moved and seconded That Richmond Official Community Plan Bylaw 7100, Amendment Bylaw No. 10155 (10140, 10160, 10180 No 1 Rd and 4051 & 4068 Cavendish Drive, RZ 18-820669) be adopted. CARRIED Opposed: Cllr. Wolfe",
-    "minutesUrl": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm",
+    "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+    "date": "2023-11-14",
+    "meetingType": "Council",
+    "title": "CD-1 Rezoning: 4330-4408 Arbutus Street and 2092 Nanton Avenue",
+    "resolutionId": null,
+    "contents": "",
     "reportUrls": [
       {
-        "title": "Report",
-        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1015570857.pdf"
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf"
       }
     ]
   }
 
-  const parsed = await parseBylaw(news)
+  const parsed = await parseApplication(news)
   console.log(parsed)
 
 })()

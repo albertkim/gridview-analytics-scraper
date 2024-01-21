@@ -3,7 +3,7 @@ import { RawRepository } from '../repositories/RawRepository'
 import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
 import { RezoningsRepository } from '../repositories/RezoningsRepository'
 
-// Given an array of entries with a date in YYYY-MM-DD format, from 2019 - current year, render a graph of number of entries for each of the 12 months as a [x] if an entry exists or a [ ] if an entry does not exist
+// Purpose: Given an array of entries with a date in YYYY-MM-DD format, from 2019 - current year, render a graph of number of entries for each of the 12 months as a [x] if an entry exists or a [ ] if an entry does not exist
 // Like this:
 // 2022: [x] [x] [x] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
 // 2023: [ ] [ ] [ ] [ ] [ ] [ ] [x] [x] [ ] [ ] [ ] [ ]
