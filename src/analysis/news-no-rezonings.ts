@@ -3,7 +3,7 @@ import { RawRepository } from '../repositories/RawRepository'
 import { RezoningsRepository } from '../repositories/RezoningsRepository'
 import { checkIfApplication, parseApplication } from '../rezonings/cities/Vancouver/Applications'
 import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
-import { checkIfPublicHearing } from '../rezonings/cities/Vancouver/PublicHearings'
+import { checkIfPublicHearing, parsePublicHearing } from '../rezonings/cities/Vancouver/PublicHearings'
 
 // Purpose: For a given city, find how many of the rezoning-checked news items are not in the rezonings database
 // Accomplish that by checking for existance of the minutes URL
@@ -51,11 +51,11 @@ import { checkIfPublicHearing } from '../rezonings/cities/Vancouver/PublicHearin
   console.log()
 
   // Update rezonings database
-  // for (const n of noApplicationNews) {
-  //   const parsed = await parseApplication(n)
-  //   if (parsed) {
-  //     await RezoningsRepository.upsertRezonings([parsed])
-  //   }
-  // }
+  for (const n of noPublicHearingNews) {
+    const parsed = await parsePublicHearing(n)
+    if (parsed) {
+      await RezoningsRepository.upsertRezonings([parsed])
+    }
+  }
 
 })()
