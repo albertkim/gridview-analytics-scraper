@@ -3,21 +3,23 @@ import {scrape as scrapeBC} from './cities/BC'
 import {scrape as scrapeVancouver} from './cities/Vancouver'
 import {scrape as scrapeRichmond} from './cities/Richmond'
 import {scrape as scrapeBurnaby} from './cities/Burnaby'
+import {scrape as scrapeSurrey} from './cities/Surrey'
 import { RawRepository } from '../repositories/RawRepository'
 
 // yarn run scrape
 // NOTE: All the controls you need to run the city scraper should be here
 const startDate = '2019-01-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
-const endDate = '2025-01-01'                    // Exclusive (reads up to just before date): YYYY-MM-DD
+const endDate = '2024-01-24'                    // Exclusive (reads up to just before date): YYYY-MM-DD
 const concurrency = 5                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
   // 'BC (province)',
-  'Vancouver',
+  // 'Vancouver',
   // 'Richmond',
   // 'Burnaby'
+  'Surrey'
 ]
 const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
-const shouldUpdateDatabase = true       // If true, updates raw.json, else does not update raw.json
+const shouldUpdateDatabase = false       // If true, updates raw.json, else does not update raw.json
 
 async function main() {
 
@@ -66,6 +68,16 @@ async function main() {
       concurrency: concurrency
     })
     if (shouldUpdateDatabase) RawRepository.upsertNews(data)
+  }
+
+  if (citiesToScrape.includes('Surrey')) {
+    const data = await scrapeSurrey({
+      startDate: startDate,
+      endDate: endDate,
+      headless: headless,
+      concurrency: concurrency
+    })
+    // if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
 }
