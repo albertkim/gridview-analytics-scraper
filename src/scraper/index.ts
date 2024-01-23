@@ -77,7 +77,7 @@ async function main() {
       headless: headless,
       concurrency: concurrency
     })
-    // if (shouldUpdateDatabase) RawRepository.upsertNews(data)
+    if (shouldUpdateDatabase) RawRepository.upsertNews(data)
   }
 
 }
