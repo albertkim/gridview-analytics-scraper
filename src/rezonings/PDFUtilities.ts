@@ -100,6 +100,5 @@ export async function parsePDF(pdfData: Buffer, maxPageIndex?: number) {
 	const parsedPDF = await pdfParse(pdfData, {
 		max: maxPageIndex
 	})
-	console.log(`Parsed ${parsedPDF.text.length} characters`)
 	return parsedPDF.text
 }

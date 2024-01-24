@@ -8,7 +8,7 @@ import { RawRepository } from '../repositories/RawRepository'
 
 // yarn run scrape
 // NOTE: All the controls you need to run the city scraper should be here
-const startDate = '2019-01-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
+const startDate = '2023-01-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
 const endDate = '2024-01-24'                    // Exclusive (reads up to just before date): YYYY-MM-DD
 const concurrency = 5                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
@@ -19,7 +19,7 @@ const citiesToScrape: string[] = [
   'Surrey'
 ]
 const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
-const shouldUpdateDatabase = false       // If true, updates raw.json, else does not update raw.json
+const shouldUpdateDatabase = true       // If true, updates raw.json, else does not update raw.json
 
 async function main() {
 

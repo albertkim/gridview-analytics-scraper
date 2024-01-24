@@ -303,15 +303,3 @@ function getMeetingTypeFromMessyString(raw: string) {
   return meetingType
 
 }
-
-function formatPlanningReportContents(raw: string) {
-
-  // Remove all potential consecutive spaces
-  raw = raw.replace(/\s\s+/g, ' ').trim()
-
-  // Separate by newlines
-  const lines = raw.split('\n')
-
-  // Only get
-
-}
