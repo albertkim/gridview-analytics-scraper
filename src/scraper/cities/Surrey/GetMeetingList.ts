@@ -3,6 +3,7 @@ import moment from 'moment'
 import { Page } from 'puppeteer'
 import { formatDateString } from '../../BulkUtilities'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
+import { getMeetingDetails } from './GetMeetingDetails'
 
 export interface IScrapingDateOptions {
   startDate: string | null
@@ -17,24 +18,76 @@ interface IMeetingListItem {
   tag: string
 }
 
-const allReportsStartUrl = 'https://www.surrey.ca/city-government/councilmeetings/council-committee-commission-board-and-task-force-minutes'
+const meetingsStartUrl = 'https://www.surrey.ca/city-government/councilmeetings/council-committee-commission-board-and-task-force-minutes'
 const corporateReportsStartUrl = 'https://www.surrey.ca/city-government/councilmeetings/corporate-reports'
 const planningReportsStartUrl = 'https://www.surrey.ca/city-government/councilmeetings/planning-reports'
 
 const maxNumberOfPages = 200
 
-// STRATEGY: Scrape all meeting URLs, then combine with with corporate reports and planning report URLs based on date and report type
+// STRATEGY: Scrape all meetings, then combine with with corporate reports and planning reports
 export async function getMeetingList(page: Page, options: IScrapingDateOptions) {
 
   // This is the array to return
-  const finalMeetingList: IMeetingDetail[] = []
+  const results: IMeetingDetail[] = []
 
-  // Step 1: Get all meeting URLs
+  let corporateReports: {date: string, url: string, title: string, tag: string, contents: string}[] = []
+  let planningReports: {date: string, url: string, title: string, tag: string, contents: string}[] = []
+  const meetings: {date: string, meetingType: string, url: string}[] = []
 
-  // This will store the meeting urls - will merge into the items from corproate reports and planning reports for the final meeting list
-  const tempMeetingUrls: {date: string, meetingType: string, url: string}[] = []
+  // Step 1: Get all corporate reports
 
-  await page.goto(allReportsStartUrl)
+  await page.goto(corporateReportsStartUrl)
+  await new Promise((resolve) => {setTimeout(resolve, 1000)})
+
+  console.log(`Scraping Surrey corporate reports`)
+  for (let i = 0; i < maxNumberOfPages; i++) {
+    const corporateReportResult = await getMeetingListItems(page, options)
+    const count = corporateReportResult.data.length > 0 ? chalk.green(`${corporateReportResult.data.length} items`) : '0 items'
+    console.log(`Scraped corporate report list page up to: ${corporateReportResult.data[0]?.date}, ${count}, ${i}/${maxNumberOfPages} max pages`)
+
+    corporateReports.push(...corporateReportResult.data)
+
+    if (corporateReportResult.nextPageUrl) {
+      await page.goto(corporateReportResult.nextPageUrl)
+    } else {
+      break
+    }
+  }
+
+  // Step 2: Get all planning reports
+
+  await page.goto(planningReportsStartUrl)
+  await new Promise((resolve) => {setTimeout(resolve, 1000)})
+
+  console.log(`Scraping Surrey planning reports`)
+  for (let i = 0; i < maxNumberOfPages; i++) {
+    // For planning reports, sometimes dates are not an exact match. As a result, get results up to 1 week prior
+    const planningReportResult = await getMeetingListItems(page, {
+      startDate: moment(options.startDate).subtract(1, 'week').format('YYYY-MM-DD'),
+      endDate: options.endDate
+    })
+    const count = planningReportResult.data.length > 0 ? chalk.green(`${planningReportResult.data.length} items`) : '0 items'
+    console.log(`Scraped planning report list page up to: ${planningReportResult.data[0]?.date}, ${count}, ${i}/${maxNumberOfPages} max pages`)
+
+    // Update planning report titles to include the contents
+    planningReportResult.data.forEach((r) => {
+      if (r.contents) {
+        r.title = `${r.title} (${r.contents})`
+      }
+    })
+
+    planningReports.push(...planningReportResult.data)
+
+    if (planningReportResult.nextPageUrl) {
+      await page.goto(planningReportResult.nextPageUrl)
+    } else {
+      break
+    }
+  }
+
+  // Step 3: Get all meeting minutes
+
+  await page.goto(meetingsStartUrl)
   await new Promise((resolve) => {setTimeout(resolve, 1000)})
 
   console.log(`Scraping Surrey meeting list`)
@@ -63,9 +116,7 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions) 
           url: data.url,
           meetingType: meetingType
         }
-        tempMeetingUrls.push(tempMeetingObject)
-      } else {
-        console.log(chalk.yellow(`Skipping Surrey meeting list item, empty value: ${date}, ${data.title}, ${url}, ${meetingType}`))
+        meetings.push(tempMeetingObject)
       }
     })
 
@@ -76,109 +127,35 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions) 
     }
   }
 
-  // Step 2: Get corporate report URLs
+  // Step 4: Parse meeting minutes and combine with corporate/planning reports
 
-  await page.goto(corporateReportsStartUrl)
-  await new Promise((resolve) => {setTimeout(resolve, 1000)})
+  for (const meeting of meetings) {
 
-  console.log(`Scraping Surrey corporate reports`)
-  for (let i = 0; i < maxNumberOfPages; i++) {
-    const corporateReportResult = await getMeetingListItems(page, options)
-    const count = corporateReportResult.data.length > 0 ? chalk.green(`${corporateReportResult.data.length} items`) : '0 items'
-    console.log(`Scraped corporate report list page up to: ${corporateReportResult.data[0]?.date}, ${count}, ${i}/${maxNumberOfPages} max pages`)
-
-    corporateReportResult.data.forEach((data) => {
-
-      // Find the matching meeting list item, then add to final array
-      const matchingMeetingListItem = tempMeetingUrls.find((m) => {
-        let meetingType: string | null = 'regular council public hearing'
-        if (data.tag.toLowerCase().includes('finance')) {
-          meetingType = 'finance committee'
-        }
-        return m.date === data.date && m.meetingType.toLowerCase() === meetingType
-      })
-
-      if (matchingMeetingListItem) {
-        finalMeetingList.push({
-          city: 'Surrey',
-          metroCity: 'Metro Vancouver',
-          date: data.date,
-          url: data.url,
-          title: data.title,
-          contents: data.contents,
-          meetingType: matchingMeetingListItem.meetingType,
-          resolutionId: null,
-          reportUrls: [{
-            title: data.title,
-            url: data.url
-          }],
-          minutesUrl: matchingMeetingListItem.url
-        })
-      } else {
-        console.log(chalk.yellow(`Skipping Surrey corporate report item, ${data.title}, ${data.date}`))
-      }
+    const meetingDetails = await getMeetingDetails({
+      page: page,
+      url: meeting.url,
+      date: meeting.date,
+      meetingType: meeting.meetingType,
+      allCorporateReports: corporateReports,
+      allPlanningReports: planningReports
     })
 
-    if (corporateReportResult.nextPageUrl) {
-      await page.goto(corporateReportResult.nextPageUrl)
-    } else {
-      break
-    }
+    results.push(...meetingDetails)
+
   }
 
-  // Step 3: Get planning report URLs
-
-  await page.goto(planningReportsStartUrl)
-  await new Promise((resolve) => {setTimeout(resolve, 1000)})
-
-  console.log(`Scraping Surrey planning reports`)
-  for (let i = 0; i < maxNumberOfPages; i++) {
-    const planningReportResult = await getMeetingListItems(page, options)
-    const count = planningReportResult.data.length > 0 ? chalk.green(`${planningReportResult.data.length} items`) : '0 items'
-    console.log(`Scraped planning report list page up to: ${planningReportResult.data[0]?.date}, ${count}, ${i}/${maxNumberOfPages} max pages`)
-
-    planningReportResult.data.forEach((data) => {
-
-      // Find the matching meeting list item, then add to final array
-      // Find the meeting item that matches the date or comes closest after the date that has the case-insensitive meeting type of 'regular council land use'
-      const matchingMeetingListItem = tempMeetingUrls
-        .filter((m) => m.meetingType.toLowerCase() === 'regular council land use')
-        .filter((m) => {
-          return moment(m.date).isSameOrAfter(data.date)
-        })
-        .sort((a, b) => moment(a.date).diff(moment(b.date)))
-        .find(() => true)
-
-      if (matchingMeetingListItem) {
-        finalMeetingList.push({
-          city: 'Surrey',
-          metroCity: 'Metro Vancouver',
-          date: data.date,
-          url: data.url,
-          title: data.title,
-          contents: data.contents,
-          meetingType: matchingMeetingListItem.meetingType,
-          resolutionId: null,
-          reportUrls: [{
-            title: data.title,
-            url: data.url
-          }],
-          minutesUrl: matchingMeetingListItem.url
-        })
-      } else {
-        console.log(chalk.yellow(`Skipping Surrey planning report item, ${data.title}, ${data.date}`))
-      }
-    })
-
-    if (planningReportResult.nextPageUrl) {
-      await page.goto(planningReportResult.nextPageUrl)
-    } else {
-      break
-    }
+  // Check that all corporate and planning reports urls are incorporated somewhere in results, but only within the min/max dates from results
+  const latestMeetingDate = moment(meetings[0].date || options.endDate)
+  const corporateReportUrls = corporateReports.filter((r) => moment(r.date).isBetween(options.startDate, latestMeetingDate, undefined, '[]')).map((r) => r.url)
+  const planningReportUrls = planningReports.filter((r) => moment(r.date).isBetween(options.startDate, latestMeetingDate, undefined, '[]')).map((r) => r.url)
+  const allReportUrls = [...corporateReportUrls, ...planningReportUrls]
+  const allReportUrlsInResults = results.map((r) => r.reportUrls.map((u) => u.url)).flat()
+  const missingReportUrls = allReportUrls.filter((u) => !allReportUrlsInResults.includes(u))
+  if (missingReportUrls.length > 0) {
+    console.log(chalk.red(`Missing Surrey report urls in results: \n${missingReportUrls.join('\n')}`))
   }
 
-  // Return final result
-  return finalMeetingList
+  return results
 
 }
 

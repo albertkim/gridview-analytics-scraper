@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { IMeetingDetail, RawRepository } from '../../../repositories/RawRepository'
-import { ISurreyLandUseMinutesItems, getSurreyLandUseMinutes } from './SurreyUtilities'
+import { ISurreyMeetingItems, parseSurreyMeetingMinutes } from '../../../scraper/cities/Surrey/SurreyUtilities'
 import { checkIfApplication, parseApplication } from './Applications'
 import moment from 'moment'
 

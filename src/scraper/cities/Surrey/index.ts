@@ -26,10 +26,8 @@ export async function scrape(options: IOptions) {
   }
 
   // Don't need to use concurrency, Surrey website is fast and does not use JavaScript
-  const meetingList = await getMeetingList(page, { startDate: options.startDate, endDate: options.endDate })
-
-  // Surrey does not have meeting details to scrape, everything is a PDF URL
   // Because everything is a PDF, read and parse the decisions from the meeting minutes
+  const meetingList = await getMeetingList(page, { startDate: options.startDate, endDate: options.endDate })
 
   return meetingList
 

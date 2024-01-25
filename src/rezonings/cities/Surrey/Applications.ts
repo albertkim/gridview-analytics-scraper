@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { getSurreyLandUseMinutes } from './SurreyUtilities'
+import { parseSurreyMeetingMinutes } from '../../../scraper/cities/Surrey/SurreyUtilities'
 import { downloadPDF, parsePDF } from '../../PDFUtilities'
 import { chatGPTPartialRezoningQuery, getGPTBaseRezoningQuery } from '../../AIUtilities'
 
@@ -19,7 +19,7 @@ export async function checkIfApplication(news: IMeetingDetail): Promise<boolean>
   }
 
   const permitNumber = news.title.replace('Planning Report', '').trim()
-  const parsedMinutes = await getSurreyLandUseMinutes(news.minutesUrl)
+  const parsedMinutes = await parseSurreyMeetingMinutes(news.minutesUrl)
 
   // Find the section that contains the permit number
   const matchingItem = parsedMinutes.find((item) => item.content.includes(permitNumber))
