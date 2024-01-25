@@ -22,30 +22,34 @@ export async function getMeetingDetails({page, url, date, meetingType, allCorpor
 
     const matchingReports: {date: string, url: string, title: string, contents: string, tag: string}[] = []
 
-    // Search all corporate reports from before the date
+    // Search all corporate reports from before the date, find the first match
     allCorporateReports
       .filter((r) => {
         return moment(r.date).isSameOrBefore(date)
       })
-      .forEach((r) => {
+      .some((r) => {
         // Use regex to get the text up to the first colon from report.title
         const reportId = r.title.match(/^(.*?):/)?.[1] || null
         if (reportId && item.content.includes(reportId)) {
           matchingReports.push(r)
+          return true
         }
+        return false
       })
 
-    // Search all planning reports from before the date
+    // Search all planning reports from before the date, find the first match
     allPlanningReports
       .filter((r) => {
         return moment(r.date).isSameOrBefore(date)
       })
-      .forEach((r) => {
+      .some((r) => {
         // Use regex to find planning report IDs in the format of XXXX-XXXX-XX where Xs are numbers
         const planningIds = r.title.match(/(\d{4}-\d{4}-\d{2})/g) || []
         if (planningIds.some((id) => item.content.includes(id))) {
           matchingReports.push(r)
+          return true
         }
+        return false
       })
 
     results.push({
