@@ -1,7 +1,7 @@
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RawRepository } from '../repositories/RawRepository'
 
 (async () => {
 
-  RezoningsRepository.dangerouslyUpdateRezonings('Surrey', [])
+  RawRepository.dangerouslyUpdateNews('Surrey', [])
 
 })()
