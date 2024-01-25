@@ -16,5 +16,6 @@ function printNonSingleFamilyHomeRezoningApproval(city: string) {
   printNonSingleFamilyHomeRezoningApproval('Vancouver')
   printNonSingleFamilyHomeRezoningApproval('Burnaby')
   printNonSingleFamilyHomeRezoningApproval('Richmond')
+  printNonSingleFamilyHomeRezoningApproval('Surrey')
 
 })()

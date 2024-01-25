@@ -1,61 +1,79 @@
 import chalk from 'chalk'
+import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { parseSurreyMeetingMinutes } from '../../../scraper/cities/Surrey/SurreyUtilities'
-import { downloadPDF, parsePDF } from '../../PDFUtilities'
-import { chatGPTPartialRezoningQuery, getGPTBaseRezoningQuery } from '../../AIUtilities'
+import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { getSurreyBaseGPTQuery } from './SurreyUtilities'
+import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
+import { generateID } from '../../../repositories/GenerateID'
+import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
 
-export async function checkIfApplication(news: IMeetingDetail): Promise<boolean> {
+// Note that rezoning applications may show up in council, special, and land use meetings
+export function checkIfApplication(news: IMeetingDetail): boolean {
 
-  if (!news.minutesUrl) {
-    return false
-  }
+  const isApplication = news.title.toLowerCase().includes('land use applications')
+  const includesRezoning = news.contents.toLowerCase().includes('rezon')
+  const hasPlanningReport = news.reportUrls.length > 0 && !!news.reportUrls.find((r) => r.title.toLowerCase().includes('planning report'))
 
-  if (news.meetingType.toLowerCase() !== 'regular council land use') {
-    return false
-  }
-
-  if (!news.title.toLowerCase().includes('planning report')) {
-    return false
-  }
-
-  const permitNumber = news.title.replace('Planning Report', '').trim()
-  const parsedMinutes = await parseSurreyMeetingMinutes(news.minutesUrl)
-
-  // Find the section that contains the permit number
-  const matchingItem = parsedMinutes.find((item) => item.content.includes(permitNumber))
-  if (!matchingItem) {
-    return false
-  }
-
-  if (!matchingItem.content.toLowerCase().includes('rezoning')) {
-    return false
-  }
-
-  if (matchingItem.section.toLowerCase().includes('land use applications')) {
-    return true
-  } else {
-    return false
-  }
+  return isApplication && includesRezoning && hasPlanningReport
 
 }
 
 export async function parseApplication(news: IMeetingDetail) {
 
-  // Expect at least 1 report URL
-  if (news.reportUrls.length === 0) {
+  try {
+
+    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+      getSurreyBaseGPTQuery(news.contents),
+      {analyzeType: true, analyzeStats: true}
+    )
+
+    if (!partialRezoningDetails) {
+      throw new Error()
+    }
+
+    const fullRezoningDetails: IFullRezoningDetail = {
+      id: generateID('rez'),
+      ...partialRezoningDetails,
+      rezoningId: null,
+      city: news.city,
+      metroCity: news.metroCity,
+      urls: news.reportUrls.map((urlObject) => {
+        return {
+          date: news.date,
+          title: urlObject.title,
+          url: urlObject.url,
+          type: 'applied'
+        }
+      }),
+      minutesUrls: news.minutesUrl ? [{
+        date: news.date,
+        url: news.minutesUrl,
+        type: 'applied'
+      }] : [],
+      status: 'applied',
+      dates: {
+        appliedDate: news.date,
+        publicHearingDate: null,
+        approvalDate: null,
+        denialDate: null,
+        withdrawnDate: null
+      },
+      location: {
+        latitude: null,
+        longitude: null
+      },
+      createDate: moment().format('YYYY-MM-DD'),
+      updateDate: moment().format('YYYY-MM-DD')
+    }
+
+    return fullRezoningDetails
+
+  } catch (error) {
+    console.error(chalk.bgRed('Error parsing application'))
+    console.error(chalk.red(error))
+    ErrorsRepository.addError(news)
     return null
   }
 
-  const reportUrl = news.reportUrls[0].url
-
-  const firstPagePDF = await downloadPDF(reportUrl)
-  const firstPageText = await parsePDF(firstPagePDF, 1)
-
-  // Should not include the word "memo"
-  if (!firstPageText || firstPageText.toLowerCase().includes('memo')) {
-    return null
-  }
-
-  const rezoningDetail = await chatGPTPartialRezoningQuery(getGPTBaseRezoningQuery(firstPageText), {analyzeType: true, analyzeStats: true})
 
 }

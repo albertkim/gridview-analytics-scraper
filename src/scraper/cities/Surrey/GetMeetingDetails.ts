@@ -37,11 +37,8 @@ export async function getMeetingDetails({page, url, date, meetingType, allCorpor
         return false
       })
 
-    // Search all planning reports from before the date, find the first match
+    // Search all planning reports regardless of date
     allPlanningReports
-      .filter((r) => {
-        return moment(r.date).isSameOrBefore(date)
-      })
       .some((r) => {
         // Use regex to find planning report IDs in the format of XXXX-XXXX-XX where Xs are numbers
         const planningIds = r.title.match(/(\d{4}-\d{4}-\d{2})/g) || []

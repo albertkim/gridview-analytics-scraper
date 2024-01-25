@@ -1,45 +1,19 @@
 import chalk from 'chalk'
-import { IMeetingDetail, RawRepository } from '../../../repositories/RawRepository'
-import { ISurreyMeetingItems, parseSurreyMeetingMinutes } from '../../../scraper/cities/Surrey/SurreyUtilities'
-import { checkIfApplication, parseApplication } from './Applications'
 import moment from 'moment'
+import { IMeetingDetail, RawRepository } from '../../../repositories/RawRepository'
+import { checkIfApplication, parseApplication } from './Applications'
+import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
+import { checkIfBylaw, parseBylaw } from './Bylaws'
+import { RezoningsRepository } from '../../../repositories/RezoningsRepository'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
   const news = RawRepository.getNews({city: 'Surrey'})
 
-  // // Get an land use meeting minutes and get the rezoning items
-  // const landUseMinutes = news.filter((item) => {
-  //   return item.title.toLowerCase().includes('planning report') && item.meetingType.toLowerCase() === 'regular council land use'
-  // })
-
-  // // Get unique meeting minute urls in order of appearance
-  // const parsedLandUseMinutes: {url: string, landUseItems: ISurreyLandUseMinutesItems[]}[] = []
-  // for (const item of landUseMinutes) {
-  //   if (item.minutesUrl && !parsedLandUseMinutes.find((i) => i.url === item.minutesUrl)) {
-  //     parsedLandUseMinutes.push({
-  //       url: item.minutesUrl,
-  //       landUseItems: await getSurreyLandUseMinutes(item.minutesUrl)
-  //     })
-  //   }
-  // }
-
-  // // Check that all planning IDs are included in their respective minutes
-  // landUseMinutes.forEach((item) => {
-  //   const permitNumber = item.title.replace('Planning Report', '').trim()
-  //   const matchingLandUseMinute = parsedLandUseMinutes.find((i) => i.url === item.minutesUrl)
-  //   if (matchingLandUseMinute) {
-  //     matchingLandUseMinute.landUseItems.find((i) => i.content.includes(permitNumber))
-  //     console.log(chalk.green(`Match for ${permitNumber}`))
-  //   } else {
-  //     console.log(chalk.red(`No match for ${permitNumber}`))
-  //   }
-  // })
-
   const validLists: IMeetingDetail[] = []
 
   for (const n of news) {
-    const isRezoningType = await checkIfApplication(n)
+    const isRezoningType = checkIfApplication(n) || checkIfPublicHearing(n) || checkIfBylaw(n)
     let isInDateRange = true
     if (startDate && moment(n.date).isBefore(startDate)) {
       isInDateRange = false
@@ -58,20 +32,31 @@ export async function analyze(startDate: string | null, endDate: string | null) 
 
     const news = validLists[i]
 
-    if (await checkIfApplication(news)) {
+    if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
         console.log(applicationDetails)
+        // RezoningsRepository.upsertRezonings([applicationDetails])
+      }
+    }
+
+    if (checkIfPublicHearing(news)) {
+      const publicHearingDetails = await parsePublicHearing(news)
+      if (publicHearingDetails) {
+        console.log(publicHearingDetails)
+        // RezoningsRepository.upsertRezonings([applicationDetails])
+      }
+    }
+
+    if (checkIfBylaw(news)) {
+      const bylawDetails = await parseBylaw(news)
+      if (bylawDetails) {
+        console.log(bylawDetails)
+        // RezoningsRepository.upsertRezonings([applicationDetails])
       }
     }
 
   }
-
-  // Applications
-
-  // Public hearings
-
-  // Bylaws
 
 }
 
