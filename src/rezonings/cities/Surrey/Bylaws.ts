@@ -23,9 +23,10 @@ export async function parseBylaw(news: IMeetingDetail) {
 
   try {
 
+    // Don't need to be strict with getting stats for bylaws - application data is more accurate anyways, save a GPT 4 call
     const partialRezoningDetails = await chatGPTPartialRezoningQuery(
       getSurreyBylawGPTQuery(news.contents),
-      {analyzeType: true, analyzeStats: true}
+      {analyzeType: true, analyzeStats: false}
     )
 
     if (!partialRezoningDetails) {

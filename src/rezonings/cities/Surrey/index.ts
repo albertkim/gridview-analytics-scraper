@@ -4,6 +4,7 @@ import { IMeetingDetail, RawRepository } from '../../../repositories/RawReposito
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
+import { RezoningsRepository } from '../../../repositories/RezoningsRepository'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
@@ -34,24 +35,21 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        console.log(applicationDetails)
-        // RezoningsRepository.upsertRezonings([applicationDetails])
+        RezoningsRepository.upsertRezonings([applicationDetails])
       }
     }
 
     if (checkIfPublicHearing(news)) {
       const publicHearingDetails = await parsePublicHearing(news)
       if (publicHearingDetails) {
-        console.log(publicHearingDetails)
-        // RezoningsRepository.upsertRezonings([applicationDetails])
+        RezoningsRepository.upsertRezonings([publicHearingDetails])
       }
     }
 
     if (checkIfBylaw(news)) {
       const bylawDetails = await parseBylaw(news)
       if (bylawDetails) {
-        console.log(bylawDetails)
-        // RezoningsRepository.upsertRezonings([applicationDetails])
+        RezoningsRepository.upsertRezonings([bylawDetails])
       }
     }
 
