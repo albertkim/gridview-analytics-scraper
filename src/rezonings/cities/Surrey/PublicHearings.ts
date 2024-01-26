@@ -3,18 +3,19 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
-import { getSurreyBaseGPTQuery } from './SurreyUtilities'
+import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { generateID } from '../../../repositories/GenerateID'
 import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
 
+  const includesDevelopmentId = !!getSurreyDevelopmentID(news.contents)
   const isPublicHearingMeetingType = news.meetingType.toLowerCase().includes('public hearing')
   const isPublicHearingItem = ['public hearing', 'delegations'].every((word) => news.title.toLowerCase().includes(word))
   const includesRezoning = news.contents.toLowerCase().includes('rezon')
   const hasPlanningReport = news.reportUrls.length > 0 && !!news.reportUrls.find((r) => r.title.toLowerCase().includes('planning report'))
 
-  return isPublicHearingMeetingType && isPublicHearingItem && includesRezoning && hasPlanningReport
+  return includesDevelopmentId && isPublicHearingMeetingType && isPublicHearingItem && includesRezoning && hasPlanningReport
 
 }
 
@@ -34,7 +35,7 @@ export async function parsePublicHearing(news: IMeetingDetail) {
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
       ...partialRezoningDetails,
-      rezoningId: null,
+      rezoningId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {
@@ -69,7 +70,7 @@ export async function parsePublicHearing(news: IMeetingDetail) {
     return fullRezoningDetails
 
   } catch (error) {
-    console.error(chalk.bgRed('Error parsing application'))
+    console.error(chalk.bgRed('Error parsing public hearing'))
     console.error(chalk.red(error))
     ErrorsRepository.addError(news)
     return null

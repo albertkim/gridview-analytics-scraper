@@ -16,7 +16,9 @@ const openai = new OpenAI({
 const googleVisionClient = new ImageAnnotatorClient()
 
 interface BaseRezoningQueryParams {
+	introduction?: string
   rezoningId?: string
+	status?: string
 }
 
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
@@ -203,22 +205,15 @@ export async function imageQuery(query: string, fileData: string, gptVersion?: '
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
 
   return `
-    If the provided document, is related to a rezoning, give me the following in a JSON format otherwise give an error:
+		${options?.introduction ? options.introduction : 'Read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: string}.'}
     {
       rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
       address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist
-      applicant: who the rezoning applicant is - if behalf exists, do not mention behalf
-      behalf: if the applicant is applying on behalf of someone else, who is it
+      applicant: who the rezoning applicant is
+      behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
-      type: one of single-family residential, townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other
-      status: either applied, public hearing, approved, denied, withdrawn
-      dates: {
-        appliedDate: if this is an application, the date of this document in YYYY-MM-DD or null if unclear
-        publicHearingDate: if this is for a public hearing, the date of this public hearing in YYYY-MM-DD or null if unclear
-        approvalDate: if this is an approval, the date of this approval in YYYY-MM-DD or null if unclear
-        denialDate: if this is a denial, the date of this denial in YYYY-MM-DD or null if unclear
-        withdrawnDate: if this is a withdrawal, the date of this withdrawal in YYYY-MM-DD or null if unclear
-      }
+      type: one of single-family residential (including duplexes), townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other
+      status: ${options?.status ? options.status : 'one of applied, public hearing, approved, denied, withdrawn'} 
       stats: {
         buildings: your best guess as to the number of new buildings being proposed or null if unclear
         stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming non-rental units

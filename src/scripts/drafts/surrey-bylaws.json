@@ -1,0 +1,380 @@
+[
+  {
+    "id": "rez-d2ry0fxpb8cxfmgl5witq",
+    "rezoningId": "7921-0105-00",
+    "address": "16615 - 18 Avenue, 1834 - 165A Street",
+    "applicant": "Dosanjh Ventures Ltd.",
+    "behalf": null,
+    "description": "The applicant wants to subdivide the site into 13 single-family small lots.",
+    "type": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 13,
+      "stratas": 13,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "Residential Agriculture",
+      "newZoningCode": "RF-13",
+      "newZoningDescription": "Single Family Residential"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-18",
+        "title": "Planning Report 7921-0105-00 (16615 - 18 Avenue\n1834 - 165A Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0105-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_18.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-18",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-e4qbp3mhk2fp26ff9fh3g",
+    "rezoningId": "7921-0285-00",
+    "address": "13868 - 104 Avenue, 13870 - 104 Avenue",
+    "applicant": "Streetside Developments (B.C.) Ltd.",
+    "behalf": null,
+    "description": "To increase the density for the address from 3.5 FAR to 5.5 FAR",
+    "type": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 5.5,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-18",
+        "title": "Planning Report 7921-0285-00 (13868 -104 Avenue\n(13870 - 104 Avenue))",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0285-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_18.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-18",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-qed5nni000cfjj6wfxlrn",
+    "rezoningId": "7922-0254-00",
+    "address": "10164 - 177A Street",
+    "applicant": "Qualico Developments (Vancouver) Inc.",
+    "behalf": null,
+    "description": "To redesignate the subject site from Suburban to Urban. Amend the Abbey Ridge Local Area Plan (LAP) to redesignate the subject site from 'Low Density Townhouse 12-15 UPA Gross' to 'Townhouse 15-20 UPA Gross' to permit the development of 58 townhouse units.",
+    "type": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 58,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": "Suburban",
+      "newZoningCode": null,
+      "newZoningDescription": "Urban"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-18",
+        "title": "Planning Report 7922-0254-00 (10164 - 177A Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0254-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_18.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-18",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-igafze06hczp5y8pf4n2g",
+    "rezoningId": "7919-0295-00",
+    "address": "19124 - 61A Avenue",
+    "applicant": "J. Singh",
+    "behalf": null,
+    "description": "Subdivision of the site into two single family residential lots",
+    "type": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RF",
+      "newZoningDescription": "single family residential"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7919-0295-00 (19124 - 61A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0295-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-jzmetcn5l32r8xon6urzj",
+    "rezoningId": "7921-0292-00",
+    "address": "12674 - 88 Avenue",
+    "applicant": "1243153 B.C. Ltd.",
+    "behalf": null,
+    "description": "To develop a 3,500 square metre industrial building",
+    "type": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "Residential Agriculture",
+      "newZoningCode": "IL",
+      "newZoningDescription": "Light Industrial"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7921-0292-00 (12674 – 88 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0292-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-644fnidoqxcbrequjst77",
+    "rezoningId": "7922-0306-00",
+    "address": "2507 - 128 Street",
+    "applicant": "Crescent Park Developments Inc.",
+    "behalf": null,
+    "description": "Rezoning from C-4 to C-5 to permit a Child Care Centre within an existing commercial building.",
+    "type": "commercial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "C-4",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "C-5",
+      "newZoningDescription": "Commercial"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0306-00 (2507 - 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0306-00_1.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  },
+  {
+    "id": "rez-7qds3rk9mxpkf9glc9mou",
+    "rezoningId": "7920-0223-00",
+    "address": "17697, 17707, 17719, 17725 and 17739 - 56A Avenue",
+    "applicant": "Ekam Holdings Ltd., 1177009 B.C. Ltd.",
+    "behalf": null,
+    "description": "The rezoning is to permit the development of a 5-storey, 72-unit, mid-rise residential building over one level of underground parking on a consolidated site in Cloverdale Town Centre.",
+    "type": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 72,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "C-15",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "urls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7920-0223-00 (17697, 17707, 17719, 17725 and\n17739 - 56A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0223-00.pdf",
+        "type": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "type": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-26"
+  }
+]

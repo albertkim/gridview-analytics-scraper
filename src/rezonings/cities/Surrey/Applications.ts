@@ -2,7 +2,7 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
-import { getSurreyBaseGPTQuery } from './SurreyUtilities'
+import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
@@ -11,10 +11,23 @@ import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
 export function checkIfApplication(news: IMeetingDetail): boolean {
 
   const isApplication = news.title.toLowerCase().includes('land use applications')
-  const includesRezoning = news.contents.toLowerCase().includes('rezon')
-  const hasPlanningReport = news.reportUrls.length > 0 && !!news.reportUrls.find((r) => r.title.toLowerCase().includes('planning report'))
 
-  return isApplication && includesRezoning && hasPlanningReport
+  // In Surrey applications, the key details come before the "it was" line
+
+  const beforeItWasContents = news.contents.toLowerCase().split('it was')[0]
+
+  if (beforeItWasContents) {
+
+    const includesDevelopmentId = !!getSurreyDevelopmentID(beforeItWasContents)
+    const includesRezoning = beforeItWasContents.includes('rezoning')
+    const isNotTemporary = !beforeItWasContents.includes('temporary use permit')
+    const hasPlanningReport = news.reportUrls.length > 0 && !!news.reportUrls.find((r) => r.title.toLowerCase().includes('planning report'))
+  
+    return includesDevelopmentId && isApplication && includesRezoning && isNotTemporary && hasPlanningReport
+
+  } else {
+    return false
+  }
 
 }
 
@@ -34,13 +47,13 @@ export async function parseApplication(news: IMeetingDetail) {
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
       ...partialRezoningDetails,
-      rezoningId: null,
+      rezoningId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
-          title: urlObject.title,
+          title: urlObject.title.replace('\n', ', '),
           url: urlObject.url,
           type: 'applied'
         }

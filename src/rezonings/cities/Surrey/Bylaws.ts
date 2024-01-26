@@ -3,40 +3,49 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
-import { getSurreyBaseGPTQuery } from './SurreyUtilities'
+import { getSurreyBylawGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { generateID } from '../../../repositories/GenerateID'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
 
 export function checkIfBylaw(news: IMeetingDetail) {
 
+  const includesDevelopmentId = !!getSurreyDevelopmentID(news.contents)
+  const isNotLandUseApplication = !news.title.toLowerCase().includes('land use application')
   const includesBylawsAndPermits = news.title.toLowerCase().includes('bylaws and permits')
-  const includesRezoning = news.contents.toLowerCase().includes('rezon')
+  const includesRezoning = news.contents.toLowerCase().includes('amendment bylaw')
   const isNotReading = !news.contents.toLowerCase().includes('reading')
 
-  return includesBylawsAndPermits && includesRezoning && isNotReading
+  return includesDevelopmentId && isNotLandUseApplication && includesBylawsAndPermits && includesRezoning && isNotReading
 
 }
 
-// "finally adopted" = approved
 export async function parseBylaw(news: IMeetingDetail) {
 
   try {
 
     const partialRezoningDetails = await chatGPTPartialRezoningQuery(
-      getSurreyBaseGPTQuery(news.contents),
+      getSurreyBylawGPTQuery(news.contents),
       {analyzeType: true, analyzeStats: true}
     )
 
     if (!partialRezoningDetails) {
-      throw new Error()
+      // No need to throw error, because we expect some to not be final bylaw decisions
+      console.log(chalk.yellow(`No final bylaw decision found for ${news.date} - ${news.title}`))
+      return null
     }
 
-    const status = ['final', 'adopted'].every((word) => news.contents.toLowerCase().includes(word)) ? 'approved' : 'denied'
+    let status: ZoningStatus
+    if (['approved', 'denied', 'withdrawn'].some((status) => partialRezoningDetails.status === status)) {
+      status = partialRezoningDetails.status as ZoningStatus
+    } else {
+      console.log(chalk.yellow(`Invalid status returned by GPT: ${partialRezoningDetails.status}`))
+      throw new Error()
+    }
 
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
       ...partialRezoningDetails,
-      rezoningId: null,
+      rezoningId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
       urls: news.reportUrls.map((urlObject) => {
@@ -54,11 +63,11 @@ export async function parseBylaw(news: IMeetingDetail) {
       }] : [],
       status: status,
       dates: {
-        appliedDate: news.date,
+        appliedDate: null,
         publicHearingDate: null,
-        approvalDate: null,
-        denialDate: null,
-        withdrawnDate: null
+        approvalDate: status === 'approved' ? news.date : null,
+        denialDate: status === 'denied' ? news.date : null,
+        withdrawnDate: status === 'withdrawn' ? news.date : null
       },
       location: {
         latitude: null,
@@ -71,7 +80,7 @@ export async function parseBylaw(news: IMeetingDetail) {
     return fullRezoningDetails
 
   } catch (error) {
-    console.error(chalk.bgRed('Error parsing application'))
+    console.error(chalk.bgRed(`Error parsing bylaw for ${news.date} - ${news.title}`))
     console.error(chalk.red(error))
     ErrorsRepository.addError(news)
     return null

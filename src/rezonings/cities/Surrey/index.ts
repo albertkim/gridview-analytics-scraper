@@ -4,7 +4,6 @@ import { IMeetingDetail, RawRepository } from '../../../repositories/RawReposito
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
-import { RezoningsRepository } from '../../../repositories/RezoningsRepository'
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
@@ -59,5 +58,3 @@ export async function analyze(startDate: string | null, endDate: string | null) 
   }
 
 }
-
-analyze('2023-12-01', '2024-01-24')

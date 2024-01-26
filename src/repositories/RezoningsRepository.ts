@@ -47,7 +47,7 @@ export interface IRezoningStats {
   storeys: number | null
 }
 
-// This interface is what is processed by GPT. Other fields in the full detail object are added ia code.
+// This interface is what is processed by GPT. Other fields in the full detail object are added via code.
 export interface IPartialRezoningDetail {
   rezoningId: string | null
   address: string
@@ -55,6 +55,7 @@ export interface IPartialRezoningDetail {
   behalf: string | null
   description: string
   type: ZoningType | null
+  status: ZoningStatus | null
   stats: IRezoningStats
   zoning: {
     previousZoningCode: string | null
@@ -373,7 +374,7 @@ export function checkGPTRezoningJSON(json: any): boolean {
   const checkStringOrNull = (value: any) => typeof value === 'string' || value === null
   const checkNumberOrNull = (value: any) => typeof value === 'number' || value === null
 
-  // Check for main properties (city and metroCity checks not needed)
+  // Check for main properties
   if (!checkStringOrNull(json.rezoningId)) return false
   if (!checkStringOrNull(json.address)) return false
   if (!checkStringOrNull(json.applicant)) return false
@@ -398,15 +399,7 @@ export function checkGPTRezoningJSON(json: any): boolean {
   if (!checkStringOrNull(json.zoning.newZoningDescription)) return false
 
   // Check status
-  if (typeof json.status !== 'string') return false
-
-  // Check dates object
-  if (typeof json.dates !== 'object' || json.dates === null) return false
-  if (!checkStringOrNull(json.dates.appliedDate)) return false
-  if (!checkStringOrNull(json.dates.publicHearingDate)) return false
-  if (!checkStringOrNull(json.dates.approvalDate)) return false
-  if (!checkStringOrNull(json.dates.denialDate)) return false
-  if (!checkStringOrNull(json.dates.withdrawnDate)) return false
+  if (!checkStringOrNull(json.status)) return false
 
   return true
 }
