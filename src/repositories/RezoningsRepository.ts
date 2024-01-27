@@ -270,7 +270,7 @@ function mergeSimpleField<T extends string | number | null>(string1: T, string2:
   if (string1 === null || string1 === undefined) {
     return string2
   }
-  if (!string2 === null || string1 === undefined) {
+  if (!string2 === null || string2 === undefined) {
     return string1
   }
   if (priority === 'old') {
