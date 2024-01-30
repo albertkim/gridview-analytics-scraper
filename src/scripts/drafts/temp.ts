@@ -4,27 +4,33 @@ import { RezoningsRepository, checkGPTRezoningJSON } from '../../repositories/Re
 import { checkIfApplication } from '../../rezonings/cities/Surrey/Applications'
 import { checkIfBylaw } from '../../rezonings/cities/Surrey/Bylaws'
 import { checkIfPublicHearing, parsePublicHearing } from '../../rezonings/cities/Surrey/PublicHearings'
+import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
 
 (async () => {
 
-  const news = RawRepository.getNews({city: 'Surrey'})
+  const url = 'https://www.burnaby.ca/sites/default/files/acquiadam/2023-04/April-27-2023.pdf'
 
-  const validLists: IMeetingDetail[] = []
+  const pdf = await downloadPDF(url)
+  const parsed = await parsePDF(pdf)
 
-  for (const n of news) {
-    const isRezoningType = checkIfApplication(n) || checkIfPublicHearing(n) || checkIfBylaw(n)
-    let isInDateRange = true
-    if (moment(n.date).isBefore('2023-01-01')) {
-      isInDateRange = false
+  const response = await chatGPTTextQuery(`
+    Given the following text extracted from a PDF that represents development permit data, identify only permits that relate to the construction of new buildings, then give me the data in the following JSON data structure:
+    {
+      data: {
+        permitNumber: usually in the format of BLDXX-XXXXX
+        address: address in question, only include street address, not city or postal code
+        buildingType: one of single-family residential (including duplexes), townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other (if demo or not a permit for a new building) - all lowercase
+        value: $ value as a number
+        numberOfUnits: number of units, usually a number listed right after the $ value
+        applicant: name of applicant
+        description: complete description of project
+      }[]
     }
-    if (moment(n.date).isSameOrAfter('2024-01-01')) {
-      isInDateRange = false
-    }
-    if (isRezoningType && isInDateRange) {
-      validLists.push(n)
-    }
-  }
 
-  console.log(`List length: ${validLists.length}`)
+    Here is the text: ${parsed}
+  `, '4')
+
+  console.log(response)
 
 })()
