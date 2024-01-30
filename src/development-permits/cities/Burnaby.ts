@@ -8,10 +8,9 @@ interface IOptions {
   endDate: string | null
   concurrency: number
   headless?: boolean | 'new'
-  verbose?: boolean
 }
 
-export async function scrape(options: IOptions) {
+async function scrape(options: IOptions) {
 
   const browser = await puppeteer.launch({
     headless: options.headless !== undefined ? options.headless : 'new'
@@ -69,7 +68,7 @@ export async function analyze(options: IOptions) {
   const developmentPermits = []
 
   for (const urlObject of developmentPermitUrls) {
-
+    // TODO: Need to refactor RezoningsRepository to use this
   }
 
 }
