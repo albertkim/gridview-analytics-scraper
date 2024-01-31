@@ -50,9 +50,9 @@ function visualizeEntries(title: string, entries: {date: string}[]) {
 
 function printNonSingleFamilyHomeRezoningApproval(city: string) {
   const entries = RezoningsRepository.getRezonings({city: city})
-    .filter((m) => m.type !== 'single-family residential' && m.type !== 'other')
+    .filter((m) => m.buildingType !== 'single-family residential' && m.buildingType !== 'other')
     .map((r) => r.minutesUrls).flat()
-    .filter((m) => ['approved'].includes(m.type))
+    .filter((m) => ['approved'].includes(m.status))
   visualizeEntries(`${city} rezoning bylaw approvals (not including single-family)`, entries.map((b) => {
     return {date: b.date}
   }))

@@ -48,22 +48,23 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     // Return full rezoning details object
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: null,
+      applicationId: null,
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'applied'
+          status: 'applied'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: 'applied'
+        status: 'applied'
       }] : [],
       status: 'applied',
       dates: {

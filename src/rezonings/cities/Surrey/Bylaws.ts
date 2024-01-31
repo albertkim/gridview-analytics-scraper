@@ -45,22 +45,23 @@ export async function parseBylaw(news: IMeetingDetail) {
 
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: getSurreyDevelopmentID(news.contents),
+      applicationId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: status
+          status: status
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: status
+        status: status
       }] : [],
       status: status,
       dates: {

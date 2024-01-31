@@ -34,22 +34,23 @@ export async function parsePublicHearing(news: IMeetingDetail) {
 
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: getSurreyDevelopmentID(news.contents),
+      applicationId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'public hearing'
+          status: 'public hearing'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: 'public hearing'
+        status: 'public hearing'
       }] : [],
       status: 'public hearing',
       dates: {

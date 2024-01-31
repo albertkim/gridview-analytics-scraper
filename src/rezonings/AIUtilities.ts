@@ -17,7 +17,7 @@ const googleVisionClient = new ImageAnnotatorClient()
 
 interface BaseRezoningQueryParams {
 	introduction?: string
-  rezoningId?: string
+  applicationId?: string
 	status?: string
 }
 
@@ -81,13 +81,13 @@ export async function chatGPTPartialRezoningQuery(query: string, options: {analy
 			return null
 		}
 
-		// Check and fix rezoning ID correctness (null, "null", undefined values)
-		if (content && content.rezoningId === 'null') {
-			content.rezoningId = null
-		} else if (content && content.rezoningId === undefined) {
-			content.rezoningId = null
-		} else if (content && content.rezoningId) {
-			content.rezoningId = `${content.rezoningId}`
+		// Check and fix application ID correctness (null, "null", undefined values)
+		if (content && content.applicationId === 'null') {
+			content.applicationId = null
+		} else if (content && content.applicationId === undefined) {
+			content.applicationId = null
+		} else if (content && content.applicationId) {
+			content.applicationId = `${content.applicationId}`
 		}
 
 		// Check and fix location correctness
@@ -131,8 +131,8 @@ export async function chatGPTPartialRezoningQuery(query: string, options: {analy
 
 		if (options && options.analyzeType) {
 			const typeContent = await chatGPTTextQuery(getGPTBaseRezoningTypeQuery(content.description))
-			if (typeContent && typeContent.type) {
-				content.type = typeContent.type
+			if (typeContent && typeContent.buildingType) {
+				content.buildingType = typeContent.buildingType
 			} else {
 				console.error(chalk.red('Failed to get rezoning type'))
 			}
@@ -207,12 +207,12 @@ export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoning
   return `
 		${options?.introduction ? options.introduction : 'Read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: string}.'}
     {
-      rezoningId: ${options?.rezoningId ? options.rezoningId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
+      applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
       address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist
       applicant: who the rezoning applicant is
       behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
       description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
-      type: one of single-family residential (including duplexes), townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other
+      buildingType: one of single-family residential (including duplexes), townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other
       status: ${options?.status ? options.status : 'one of applied, public hearing, approved, denied, withdrawn'} 
       stats: {
         buildings: your best guess as to the number of new buildings being proposed or null if unclear
@@ -248,7 +248,7 @@ export function getGPTBaseRezoningTypeQuery(description: string) {
 
 		Given the following description, give me the following in a JSON format. 
 		{
-			type: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
+			buildingType: one of single-family residential, townhouse, mixed use, multi-family residential, industrial, commercial, or other
 		}
 
 		Description here: ${description}

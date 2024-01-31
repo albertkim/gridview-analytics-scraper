@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningStatus, ZoningType } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
 import { chatGPTTextQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { generateID } from '../../../repositories/GenerateID'
@@ -32,20 +32,21 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
       const bylawDetail = bylawDetailRaw as IBylawData
       const fullRezoningDetail: IFullRezoningDetail = {
         id: generateID('rez'),
+        type: 'rezoning',
         address: bylawDetail.address,
         city: news.city,
         metroCity: news.metroCity,
-        rezoningId: null,
+        applicationId: null,
         applicant: null,
         behalf: null,
         description: '',
-        type: null,
-        urls: [
+        buildingType: null,
+        reportUrls: [
           {
             date: news.date,
             title: 'By-laws',
             url: news.url,
-            type: 'withdrawn'
+            status: 'withdrawn'
           }
         ],
         zoning: {
@@ -57,7 +58,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         minutesUrls: news.minutesUrl ? [{
           date: news.date,
           url: news.minutesUrl,
-          type: 'withdrawn'
+          status: 'withdrawn'
         }] : [],
         stats: {
           buildings: null,
@@ -128,20 +129,21 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
       const fullRezoningDetail: IFullRezoningDetail = {
         id: generateID('rez'),
+        type: 'rezoning',
         address: bylawDetail.address,
         city: news.city,
         metroCity: news.metroCity,
-        rezoningId: null,
+        applicationId: null,
         applicant: null,
         behalf: null,
         description: '',
-        type: null,
-        urls: [
+        buildingType: null,
+        reportUrls: [
           {
             date: news.date,
             title: 'By-laws',
             url: page.url,
-            type: status
+            status: status
           }
         ],
         zoning: {
@@ -153,7 +155,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
         minutesUrls: news.minutesUrl ? [{
           date: news.date,
           url: news.minutesUrl,
-          type: status
+          status: status
         }] : [],
         stats: {
           buildings: null,
@@ -203,5 +205,5 @@ async function getAddressObject(text: string): Promise<IBylawData | null> {
   }
 
   const bylawDetail = bylawDetailRaw as IBylawData
-  return bylawDetailRaw
+  return bylawDetail
 }

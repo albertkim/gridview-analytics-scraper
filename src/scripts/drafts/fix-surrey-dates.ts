@@ -8,7 +8,7 @@ import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
     // approved
     if (rezoning.status === 'approved' && rezoning.dates.approvalDate === null) {
-      const matchingApprovedDate = rezoning.minutesUrls.find(url => url.type === 'approved')
+      const matchingApprovedDate = rezoning.minutesUrls.find(url => url.status === 'approved')
       if (matchingApprovedDate) {
         rezoning.dates.approvalDate = matchingApprovedDate.date
       }
@@ -16,7 +16,7 @@ import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
     // same for public hearing
     if (rezoning.status === 'public hearing' && rezoning.dates.publicHearingDate === null) {
-      const matchingPublicHearingDate = rezoning.minutesUrls.find(url => url.type === 'public hearing')
+      const matchingPublicHearingDate = rezoning.minutesUrls.find(url => url.status === 'public hearing')
       if (matchingPublicHearingDate) {
         rezoning.dates.publicHearingDate = matchingPublicHearingDate.date
       }
@@ -24,7 +24,7 @@ import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
     // same for denied
     if (rezoning.status === 'denied' && rezoning.dates.denialDate === null) {
-      const matchingDeniedDate = rezoning.minutesUrls.find(url => url.type === 'denied')
+      const matchingDeniedDate = rezoning.minutesUrls.find(url => url.status === 'denied')
       if (matchingDeniedDate) {
         rezoning.dates.denialDate = matchingDeniedDate.date
       }
@@ -32,7 +32,7 @@ import { RezoningsRepository } from '../../repositories/RezoningsRepository'
 
     // same for withdrawn
     if (rezoning.status === 'withdrawn' && rezoning.dates.withdrawnDate === null) {
-      const matchingWithdrawalDate = rezoning.minutesUrls.find(url => url.type === 'withdrawn')
+      const matchingWithdrawalDate = rezoning.minutesUrls.find(url => url.status === 'withdrawn')
       if (matchingWithdrawalDate) {
         rezoning.dates.withdrawnDate = matchingWithdrawalDate.date
       }

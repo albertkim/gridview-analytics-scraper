@@ -19,8 +19,6 @@ export function checkIfApplication(news: IMeetingDetail) {
   return isBurnaby && isCityCouncil && isAdministrativeReport && isRezoning
 }
 
-const baseRezoningIdQuery = 'ID in the format of "REZ #XX-XX", usually in the brackets - correct the format if necessary - null if not found'
-
 export async function parseApplication(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
 
   try {
@@ -59,22 +57,23 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     // Return full rezoning details object
     return {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: cleanBurnabyRezoningId(partialRezoningDetails.rezoningId),
+      applicationId: cleanBurnabyRezoningId(partialRezoningDetails.applicationId),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'applied'
+          status: 'applied'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: 'applied'
+        status: 'applied'
       }] : [],
       status: 'applied',
       dates: {

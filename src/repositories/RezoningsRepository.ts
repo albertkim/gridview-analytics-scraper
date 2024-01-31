@@ -49,12 +49,12 @@ export interface IRezoningStats {
 
 // This interface is what is processed by GPT. Other fields in the full detail object are added via code.
 export interface IPartialRezoningDetail {
-  rezoningId: string | null
+  applicationId: string | null
   address: string
   applicant: string | null
   behalf: string | null
   description: string
-  type: ZoningType | null
+  buildingType: ZoningType | null
   status: ZoningStatus | null
   stats: IRezoningStats
   zoning: {
@@ -69,6 +69,7 @@ export interface IFullRezoningDetail extends IPartialRezoningDetail {
   id: string
   city: string
   metroCity: string | null
+  type: 'rezoning' | 'development permit'
   status: ZoningStatus
   dates: {
     appliedDate: string | null
@@ -77,16 +78,16 @@ export interface IFullRezoningDetail extends IPartialRezoningDetail {
     denialDate: string | null
     withdrawnDate: string | null
   }
-  urls: {
+  reportUrls: {
     title: string
     url: string
     date: string
-    type: ZoningStatus
+    status: ZoningStatus
   }[]
   minutesUrls: {
     url: string
     date: string
-    type: ZoningStatus
+    status: ZoningStatus
   }[]
   location: {
     latitude: number | null
@@ -219,14 +220,14 @@ export const RezoningsRepository = {
         continue
       }
 
-      // Check for any entries with the same rezoning ID - take precedent over matching addresses
-      const rezoningWithMatchingRezoningID = rezoning.rezoningId ?
-        previousEntries.find((item) => item.rezoningId === rezoning.rezoningId)
+      // Check for any entries with the same application ID - take precedent over matching addresses
+      const rezoningWithMatchingApplicationID = rezoning.applicationId ?
+        previousEntries.find((item) => item.applicationId === rezoning.applicationId)
         : null
-      if (rezoningWithMatchingRezoningID) {
-        const mergedRezoning = mergeEntries(rezoningWithMatchingRezoningID, rezoning)
-        mergedRezoning.id = rezoningWithMatchingRezoningID.id
-        this.updateRezoning(rezoningWithMatchingRezoningID.id, mergedRezoning)
+      if (rezoningWithMatchingApplicationID) {
+        const mergedRezoning = mergeEntries(rezoningWithMatchingApplicationID, rezoning)
+        mergedRezoning.id = rezoningWithMatchingApplicationID.id
+        this.updateRezoning(rezoningWithMatchingApplicationID.id, mergedRezoning)
         continue
       }
 
@@ -287,7 +288,7 @@ function mergeSimpleField<T extends string | number | null>(string1: T, string2:
 
 // Given a rezoning, let the latest minute url and the type. Use minutes instead of reports because some rezonings don't have reports.
 // Used to see which data should be preferred during merging (perfer application data)
-function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date: string, type: ZoningStatus} | null {
+function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date: string, status: ZoningStatus} | null {
   const latestDate = rezoning.minutesUrls.reduce((latest, current) => {
     if (!latest) {
       return current
@@ -296,7 +297,7 @@ function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date:
       return current
     }
     return latest
-  }, null as null | {url: string, date: string, type: ZoningStatus})
+  }, null as null | {url: string, date: string, status: ZoningStatus})
   return latestDate
 }
 
@@ -310,13 +311,13 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   let preferred: 'old' | 'new' = 'old'
   const oldMinuteDate = getLatestMinuteDate(oldEntry)
   const newMinuteDate = getLatestMinuteDate(newEntry)
-  if (oldMinuteDate && oldMinuteDate.type === 'applied') {
+  if (oldMinuteDate && oldMinuteDate.status === 'applied') {
     preferred = 'old'
-  } else if (newMinuteDate && newMinuteDate.type === 'applied') {
+  } else if (newMinuteDate && newMinuteDate.status === 'applied') {
     preferred = 'new'
-  } else if (oldMinuteDate && oldMinuteDate.type === 'public hearing') {
+  } else if (oldMinuteDate && oldMinuteDate.status === 'public hearing') {
     preferred = 'old'
-  } else if (newMinuteDate && newMinuteDate.type === 'public hearing') {
+  } else if (newMinuteDate && newMinuteDate.status === 'public hearing') {
     preferred = 'new'
   }
 
@@ -325,12 +326,12 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   // This is used to set the status to be the latest status
   const newerEntry = oldMinuteDate && newMinuteDate && moment(newMinuteDate.date).isAfter(moment(oldMinuteDate.date)) ? 'new' : 'old'
 
-  mergedData.rezoningId = mergeSimpleField(oldEntry.rezoningId, newEntry.rezoningId, preferred)
+  mergedData.applicationId = mergeSimpleField(oldEntry.applicationId, newEntry.applicationId, preferred)
   mergedData.applicant = mergeSimpleField(oldEntry.applicant, newEntry.applicant, preferred)
   mergedData.behalf = mergeSimpleField(oldEntry.behalf, newEntry.behalf, preferred)
   mergedData.description = mergeSimpleField(oldEntry.description, newEntry.description, preferred) || ''
-  if (oldEntry.type !== newEntry.type) {
-    mergedData.type = mergeSimpleField(oldEntry.type, newEntry.type, preferred)
+  if (oldEntry.buildingType !== newEntry.buildingType) {
+    mergedData.buildingType = mergeSimpleField(oldEntry.buildingType, newEntry.buildingType, preferred)
   }
   const statsArray: (keyof IFullRezoningDetail['stats'])[] = ['buildings', 'stratas', 'rentals', 'hotels', 'fsr']
   statsArray.forEach((fieldName) => {
@@ -348,14 +349,14 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   datesArray.forEach((fieldName) => {
     mergedData.dates[fieldName] = mergeSimpleField(oldEntry.dates[fieldName], newEntry.dates[fieldName], preferred)
   })
-  mergedData.urls = [...new Map(
-    [...oldEntry.urls, ...newEntry.urls]
-    .map(obj => [`${obj.url}_${obj.date}_${obj.type}`, obj]))
+  mergedData.reportUrls = [...new Map(
+    [...oldEntry.reportUrls, ...newEntry.reportUrls]
+    .map(obj => [`${obj.url}_${obj.date}_${obj.status}`, obj]))
     .values()
   ]
   mergedData.minutesUrls = [...new Map(
     [...oldEntry.minutesUrls, ...newEntry.minutesUrls]
-    .map(obj => [`${obj.url}_${obj.date}}`, obj]))
+    .map(obj => [`${obj.url}_${obj.date}}_${obj.status}`, obj]))
     .values()
   ]
   mergedData.createDate = moment(oldEntry.createDate).isBefore(moment(newEntry.createDate)) ? oldEntry.createDate : newEntry.createDate
@@ -375,12 +376,12 @@ export function checkGPTRezoningJSON(json: any): boolean {
   const checkNumberOrNull = (value: any) => typeof value === 'number' || value === null
 
   // Check for main properties
-  if (!checkStringOrNull(json.rezoningId)) return false
+  if (!checkStringOrNull(json.applicationId)) return false
   if (!checkStringOrNull(json.address)) return false
   if (!checkStringOrNull(json.applicant)) return false
   if (!checkStringOrNull(json.behalf)) return false
   if (!checkStringOrNull(json.description)) return false
-  if (!(json.type === null || typeof json.type === 'string')) return false
+  if (!(json.buildingType === null || typeof json.buildingType === 'string')) return false
 
   // Check stats object
   if (typeof json.stats !== 'object' || json.stats === null) return false

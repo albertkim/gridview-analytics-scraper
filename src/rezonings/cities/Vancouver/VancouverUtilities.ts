@@ -4,6 +4,6 @@ import { getGPTBaseRezoningQuery } from '../../AIUtilities'
 export function getVancouverBaseGPTQuery(content: string) {
   const baseRezoningIdQuery = 'always null'
   return getGPTBaseRezoningQuery(content, {
-    rezoningId: baseRezoningIdQuery
+    applicationId: baseRezoningIdQuery
   })
 }

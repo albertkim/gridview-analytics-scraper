@@ -14,17 +14,17 @@ import moment from 'moment'
 
   // Application checks
   const applicationRezonings = rezonings
-    .filter((r) => r.minutesUrls.some((u) => u.type === 'applied'))
+    .filter((r) => r.minutesUrls.some((u) => u.status === 'applied'))
     .filter((r) => !r.dates.appliedDate)
 
   // Public hearing checks
   const publicHearingRezonings = rezonings
-    .filter((r) => r.minutesUrls.some((u) => u.type === 'public hearing'))
+    .filter((r) => r.minutesUrls.some((u) => u.status === 'public hearing'))
     .filter((r) => !r.dates.publicHearingDate)
 
   // Bylaw checks
   const bylawRezonings = rezonings
-    .filter((r) => r.minutesUrls.some((u) => u.type === 'approved'))
+    .filter((r) => r.minutesUrls.some((u) => u.status === 'approved'))
     .filter((r) => !r.dates.approvalDate)
 
   console.log()
@@ -35,7 +35,7 @@ import moment from 'moment'
   // Fill in correct dates
 
   publicHearingRezonings.forEach((r) => {
-    const publicHearingMinutes = r.minutesUrls.filter((u) => u.type === 'public hearing')
+    const publicHearingMinutes = r.minutesUrls.filter((u) => u.status === 'public hearing')
     if (publicHearingMinutes.length > 0) {
       const latestDate = publicHearingMinutes
         .map((u) => u.date)
@@ -45,7 +45,7 @@ import moment from 'moment'
   })
 
   bylawRezonings.forEach((r) => {
-    const approvalMinutes = r.minutesUrls.filter((u) => u.type === 'approved')
+    const approvalMinutes = r.minutesUrls.filter((u) => u.status === 'approved')
     if (approvalMinutes.length > 0) {
       const latestDate = approvalMinutes
         .map((u) => u.date)

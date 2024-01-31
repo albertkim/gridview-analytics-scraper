@@ -46,22 +46,23 @@ export async function parseApplication(news: IMeetingDetail) {
 
     const fullRezoningDetails: IFullRezoningDetail = {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: getSurreyDevelopmentID(news.contents),
+      applicationId: getSurreyDevelopmentID(news.contents),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title.replace('\n', ', '),
           url: urlObject.url,
-          type: 'applied'
+          status: 'applied'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: 'applied'
+        status: 'applied'
       }] : [],
       status: 'applied',
       dates: {

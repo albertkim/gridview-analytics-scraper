@@ -42,22 +42,23 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
     // Return full rezoning details object
     return {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: cleanBurnabyRezoningId(partialRezoningDetails.rezoningId),
+      applicationId: cleanBurnabyRezoningId(partialRezoningDetails.applicationId),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: status
+          status: status
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: status
+        status: status
       }] : [],
       stats: {
         buildings: null,

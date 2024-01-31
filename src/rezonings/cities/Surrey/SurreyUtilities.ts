@@ -3,7 +3,7 @@ import { getGPTBaseRezoningQuery } from '../../AIUtilities'
 export function getSurreyBaseGPTQuery(content: string) {
   const baseRezoningIdQuery = 'in the format of XXXX-XXXX-XX where Xs are numbers'
   return getGPTBaseRezoningQuery(content, {
-    rezoningId: baseRezoningIdQuery
+    applicationId: baseRezoningIdQuery
   })
 }
 
@@ -13,7 +13,7 @@ export function getSurreyBylawGPTQuery(content: string) {
   const status = 'one of approved, denied, or withdrawn'
   return getGPTBaseRezoningQuery(content, {
     introduction: introduction,
-    rezoningId: baseRezoningIdQuery,
+    applicationId: baseRezoningIdQuery,
     status: status
   })
 }

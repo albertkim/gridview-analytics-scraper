@@ -9,13 +9,13 @@ import { cleanRichmondRezoningId } from '../../rezonings/cities/Richmond/Richmon
   for (const rezoning of rezonings) {
 
     if (rezoning.city !== 'Richmond') continue
-    if (!rezoning.rezoningId) continue
+    if (!rezoning.applicationId) continue
 
-    const oldRezoningId = rezoning.rezoningId
-    const newRezoningId = cleanRichmondRezoningId(rezoning.rezoningId)
+    const oldRezoningId = rezoning.applicationId
+    const newRezoningId = cleanRichmondRezoningId(rezoning.applicationId)
     if (oldRezoningId !== newRezoningId) {
       console.log(chalk.bgGreen(`${oldRezoningId} -> ${newRezoningId}`))
-      rezoning.rezoningId = newRezoningId
+      rezoning.applicationId = newRezoningId
     }
 
   }

@@ -3,7 +3,7 @@ import { getGPTBaseRezoningQuery } from '../../AIUtilities'
 export function getRichmondBaseGPTQuery(content: string) {
   const baseRezoningIdQuery = 'usually in the format "RZ XX-XXXXX" where the Xs are numbers - reformat if necessary - null if not found'
   return getGPTBaseRezoningQuery(content, {
-    rezoningId: baseRezoningIdQuery
+    applicationId: baseRezoningIdQuery
   })
 }
 

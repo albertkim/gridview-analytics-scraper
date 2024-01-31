@@ -58,23 +58,23 @@ const scrapedPublicHearing = {
 const scrapedBylawApproved = {
   "city": "Burnaby",
   "metroCity": "Metro Vancouver",
-  "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=559162e5-77ea-493e-8421-ca65015d4bd2&Agenda=Agenda&lang=English&Item=100&Tab=attachments",
-  "date": "2022-10-03",
-  "meetingType": "City Council Meeting",
-  "title": "RECONSIDERATION AND FINAL ADOPTION - #14485 - Burnaby Consolidated Fees and Charges Bylaw",
+  "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&Agenda=Agenda&lang=English&Item=39&Tab=attachments",
+  "title": "RECONSIDERATION AND FINAL ADOPTION - #13924 - Burnaby Zoning Bylaw 1965, Amendment Bylaw No. 32, 2018 - Rez. #16-38 (7422 & 7270 Buller Avenue)",
   "resolutionId": null,
-  "contents": "A bylaw to impose fees and charges for City services and use of City property(Item 3.3., FMC Report, Council 2022 July 25)",
+  "contents": "Purpose: to permit the construction of a three-storey stacked townhouse development (124 units) with full underground parking (Item 7(5), Manager's Report, Council 2018 November 19) Memorandum - Director Planning & Building - 2020 August 19",
   "reportUrls": [
     {
-      "title": "14442. No. 11, 2022 ACD.pdf",
-      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73580"
+      "title": "13924.cd.pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=48137"
     },
     {
-      "title": "Rezoning Reference 19-38 Final Adoption 2022.10.03.pdf",
-      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=73581"
+      "title": "Rezoning Reference 16-38 Final Adoption Memo 2020.08.24.pdf",
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=48138"
     }
   ],
-  "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=559162e5-77ea-493e-8421-ca65015d4bd2&lang=English"
+  "date": "2020-08-24",
+  "meetingType": "City Council Meeting",
+  "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=cc4ab0c2-2dac-450f-8466-257b862a9e6b&lang=English"
 }
 
 test('Burnaby check application', async () => {
@@ -107,17 +107,17 @@ test.skip('Burnaby parse application', async () => {
     return
   }
 
-  expect(rezoning.rezoningId).toEqual('REZ #20-09')
+  expect(rezoning.applicationId).toEqual('REZ #20-09')
   expect(rezoning.city).toEqual('Burnaby')
   expect(rezoning.metroCity).toEqual('Metro Vancouver')
   expect(rezoning.address.toLowerCase()).toContain('3777')
   expect(rezoning.address.toLowerCase()).toContain('3791')
   expect(rezoning.address.toLowerCase()).toContain('kingsway')
   expect(rezoning.status).toEqual('applied')
-  expect(rezoning.type).toEqual('mixed use')
-  expect(rezoning.urls.length).toEqual(2)
-  rezoning.urls.forEach((url) => {
-    expect(url.type).toEqual('application')
+  expect(rezoning.buildingType).toEqual('mixed use')
+  expect(rezoning.reportUrls.length).toEqual(2)
+  rezoning.reportUrls.forEach((url) => {
+    expect(url.status).toEqual('applied')
   })
   expect(rezoning.minutesUrls.length).toEqual(1)
   expect(rezoning.dates.appliedDate).toEqual('2023-12-11')

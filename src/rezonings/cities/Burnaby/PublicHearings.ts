@@ -56,22 +56,23 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     // Return full rezoning details object
     return {
       id: generateID('rez'),
+      type: 'rezoning',
       ...partialRezoningDetails,
-      rezoningId: cleanBurnabyRezoningId(partialRezoningDetails.rezoningId),
+      applicationId: cleanBurnabyRezoningId(partialRezoningDetails.applicationId),
       city: news.city,
       metroCity: news.metroCity,
-      urls: news.reportUrls.map((urlObject) => {
+      reportUrls: news.reportUrls.map((urlObject) => {
         return {
           date: news.date,
           title: urlObject.title,
           url: urlObject.url,
-          type: 'public hearing'
+          status: 'public hearing'
         }
       }),
       minutesUrls: news.minutesUrl ? [{
         date: news.date,
         url: news.minutesUrl,
-        type: 'public hearing'
+        status: 'public hearing'
       }] : [],
       status: 'public hearing',
       dates: {

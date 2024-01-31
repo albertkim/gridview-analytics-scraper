@@ -175,16 +175,16 @@ export const BulkUtilities = {
   
     rezonings.forEach((rezoning) => {
   
-      if (rezoning.rezoningId) {
-        const correct = checkRezoningId(rezoning.rezoningId)
+      if (rezoning.applicationId) {
+        const correct = checkRezoningId(rezoning.applicationId)
         if (!correct) {
-          const formattedRezoningId = cleanRichmondRezoningId(rezoning.rezoningId)
+          const formattedRezoningId = cleanRichmondRezoningId(rezoning.applicationId)
           if (formattedRezoningId) {
-            console.log(chalk.bgGreen(`Reformatted rezoning ID: ${rezoning.rezoningId} => ${formattedRezoningId}`))
-            rezoning.rezoningId = formattedRezoningId
+            console.log(chalk.bgGreen(`Reformatted application ID: ${rezoning.applicationId} => ${formattedRezoningId}`))
+            rezoning.applicationId = formattedRezoningId
           } else {
-            console.log(chalk.bgRed(`Invalid rezoning ID: ${rezoning.rezoningId}, clearing...`))
-            rezoning.rezoningId = null
+            console.log(chalk.bgRed(`Invalid rezoning ID: ${rezoning.applicationId}, clearing...`))
+            rezoning.applicationId = null
           }
           rezoning.updateDate = moment().format('YYYY-MM-DD')
         }
