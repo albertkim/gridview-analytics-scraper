@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { RawRepository } from '../repositories/RawRepository'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RecordsRepository } from '../repositories/RecordsRepository'
 import { checkIfApplication, parseApplication } from '../rezonings/cities/Vancouver/Applications'
 import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
 import { checkIfPublicHearing } from '../rezonings/cities/Vancouver/PublicHearings'
@@ -10,7 +10,7 @@ import moment from 'moment'
 (async () => {
 
   // City
-  const rezonings = RezoningsRepository.getRezonings({city: 'Vancouver'})
+  const rezonings = RecordsRepository.getRecords('rezoning', {city: 'Vancouver'})
 
   // Application checks
   const applicationRezonings = rezonings

@@ -1,7 +1,7 @@
-import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { RecordsRepository } from '../../repositories/RecordsRepository'
 
 (async () => {
 
-  RezoningsRepository.dangerouslyUpdateRezonings('Surrey', [])
+  RecordsRepository.dangerouslyReplaceRecords('rezoning', 'Surrey', [])
 
 })()

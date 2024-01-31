@@ -11,7 +11,6 @@ const startUrl = 'https://data.opendatasoft.com/explore/dataset/issued-building-
 interface IOptions {
   startDate: string | null
   endDate: string | null
-  concurrency: number
   headless?: boolean | 'new'
 }
 

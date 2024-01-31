@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
+    "build": "tsc",
     "scrape": "ts-node src/scraper/index.ts",
     "rezone": "ts-node src/rezonings/index.ts",
+    "development-permit": "ts-node src/development-permit/index.ts",
     "test": "jest"
   },
   "jest": {

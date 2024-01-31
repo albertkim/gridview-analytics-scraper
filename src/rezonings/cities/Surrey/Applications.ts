@@ -5,7 +5,7 @@ import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 
 // Note that rezoning applications may show up in council, special, and land use meetings
 export function checkIfApplication(news: IMeetingDetail): boolean {

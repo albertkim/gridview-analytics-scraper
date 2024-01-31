@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
 import { chatGPTTextQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { generateID } from '../../../repositories/GenerateID'

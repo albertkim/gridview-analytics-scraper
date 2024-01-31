@@ -4,7 +4,6 @@ import { RawRepository } from '../../repositories/RawRepository'
 interface IOptions {
   startDate: string | null
   endDate: string | null
-  concurrency: number
   headless?: boolean | 'new'
 }
 

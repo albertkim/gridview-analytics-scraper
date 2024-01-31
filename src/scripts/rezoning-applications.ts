@@ -1,8 +1,8 @@
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RecordsRepository } from '../repositories/RecordsRepository'
 import { visualizeMonthlyEntries } from './ScriptUtilities'
 
 function printNonSingleFamilyHomeRezoningApproval(city: string) {
-  const entries = RezoningsRepository.getRezonings({city: city})
+  const entries = RecordsRepository.getRecords('rezoning', {city: city})
     .filter((m) => m.buildingType !== 'single-family residential' && m.buildingType !== 'other')
     .map((r) => r.minutesUrls).flat()
     .filter((m) => ['applied'].includes(m.status))

@@ -1,7 +1,7 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { RawRepository } from '../../../repositories/RawRepository'
-import { RezoningsRepository } from '../../../repositories/RezoningsRepository'
+import { RecordsRepository } from '../../../repositories/RecordsRepository'
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
@@ -32,21 +32,21 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        RezoningsRepository.upsertRezonings([applicationDetails])
+        RecordsRepository.upsertRecords('rezoning', [applicationDetails])
       }
     }
 
     if (checkIfPublicHearing(news)) {
       const publicHearingDetails = await parsePublicHearing(news)
       if (publicHearingDetails) {
-        RezoningsRepository.upsertRezonings([publicHearingDetails])
+        RecordsRepository.upsertRecords('rezoning', [publicHearingDetails])
       }
     }
 
     if (checkIfBylaw(news)) {
       const bylawDetail = await parseBylaw(news)
       if (bylawDetail) {
-        RezoningsRepository.upsertRezonings([bylawDetail])
+        RecordsRepository.upsertRecords('rezoning', [bylawDetail])
       }
     }
 

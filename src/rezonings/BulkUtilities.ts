@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { Client } from '@googlemaps/google-maps-services-js'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RecordsRepository } from '../repositories/RecordsRepository'
 import { cleanRichmondRezoningId } from './cities/Richmond/RichmondUtilities'
 import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
 
@@ -9,7 +9,7 @@ export const BulkUtilities = {
 
   async bulkUpdateStats() {
 
-    const rezonings = RezoningsRepository.getRezonings()
+    const rezonings = RecordsRepository.getRecords('rezoning')
 
     for (const rezoning of rezonings) {
       const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
@@ -19,7 +19,7 @@ export const BulkUtilities = {
       }
     }
 
-    RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)
+    RecordsRepository.dangerouslyUpdateAllRecords('rezoning', rezonings)
 
   },
 
@@ -27,174 +27,49 @@ export const BulkUtilities = {
 
     const client = new Client({})
 
-    const rezonings = RezoningsRepository.getRezonings()
+    const records = RecordsRepository.getRecords('all')
   
-    for (const rezoning of rezonings) {
+    for (const record of records) {
       
-      if (!rezoning.address) continue
+      if (!record.address) continue
       // Correct any potential issues with undefined locations
-      if (!rezoning.location) {
-        console.log(chalk.yellow(`Undefined coordinates corrected ${rezoning.address}, ${rezoning.city} `))
-        rezoning.location = {
+      if (!record.location) {
+        console.log(chalk.yellow(`Undefined coordinates corrected ${record.address}, ${record.city} `))
+        record.location = {
           latitude: null,
           longitude: null
         }
       }
-      if (rezoning.location.latitude && rezoning.location.longitude) continue
+      if (record.location.latitude && record.location.longitude) continue
   
       // Use Google Maps API to get coordinates
       const response = await client.geocode({
         params: {
-          address: `${rezoning.address}, ${rezoning.city}`,
+          address: `${record.address}, ${record.city}`,
           key: process.env.GOOGLE_MAPS_API_KEY!
         }
       })
   
       if (response.data.results.length === 0) {
-        console.log(`No coordinates found for ${rezoning.address}, ${rezoning.city} `)
+        console.log(`No coordinates found for ${record.address}, ${record.city} `)
         continue
       }
   
       const coordinates = response.data.results[0].geometry.location
-      rezoning.location.latitude = coordinates.lat
-      rezoning.location.longitude = coordinates.lng
-      rezoning.updateDate = moment().format('YYYY-MM-DD')
+      record.location.latitude = coordinates.lat
+      record.location.longitude = coordinates.lng
+      record.updateDate = moment().format('YYYY-MM-DD')
   
-      const message = `${rezoning.id} coordinates: ${rezoning.location.latitude}, ${rezoning.location.longitude}`
-      if (!rezoning.location.latitude || !rezoning.location.longitude) {
+      const message = `${record.id} coordinates: ${record.location.latitude}, ${record.location.longitude}`
+      if (!record.location.latitude || !record.location.longitude) {
         console.log(chalk.bgGreen(message))
       } else {
         console.log(chalk.bgWhite(message))
       }
   
-      RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)
+      RecordsRepository.dangerouslyUpdateAllRecords('all', records)
     }
 
-  },
-
-  bulkCleanDates() {
-
-    const rezonings = RezoningsRepository.getRezonings()
-  
-    rezonings.forEach((rezoning) => {
-  
-      // Fill in any missing date fields
-      if (rezoning.dates.appliedDate === undefined) {
-        console.log(chalk.bgWhite(`Filled in missing applied date`))
-        rezoning.dates.appliedDate = null
-      }
-      if (rezoning.dates.publicHearingDate === undefined) {
-        console.log(chalk.bgWhite(`Filled in missing public hearing date`))
-        rezoning.dates.publicHearingDate = null
-      }
-      if (rezoning.dates.approvalDate === undefined) {
-        console.log(chalk.bgWhite(`Filled in missing approval date`))
-        rezoning.dates.approvalDate = null
-      }
-      if (rezoning.dates.denialDate === undefined) {
-        console.log(chalk.bgWhite(`Filled in missing denial date`))
-        rezoning.dates.denialDate = null
-      }
-      if (rezoning.dates.withdrawnDate === undefined) {
-        console.log(chalk.bgWhite(`Filled in missing withdrawn date`))
-        rezoning.dates.withdrawnDate = null
-      }
-  
-      // Clean and format dates in the url field
-      rezoning.urls.forEach((url) => {
-        if (url.date && !moment(url.date, 'YYYY-MM-DD', true).isValid()) {
-          const formattedDate = moment(new Date(url.date)).format('YYYY-MM-DD')
-          console.log(chalk.bgWhite(`Reformatted url date: ${url.date} => ${formattedDate}`))
-          url.date = formattedDate
-        }
-      })
-  
-      // Clean and format dates in the minutes url field
-      rezoning.minutesUrls.forEach((url) => {
-        if (url.date && !moment(url.date, 'YYYY-MM-DD', true).isValid()) {
-          const formattedDate = moment(new Date(url.date)).format('YYYY-MM-DD')
-          console.log(chalk.bgWhite(`Reformatted minutes url date: ${url.date} => ${formattedDate}`))
-          url.date = formattedDate
-        }
-      })
-  
-      if (rezoning.status === 'applied') {
-        if (!rezoning.dates.appliedDate) {
-          // Go through the rezoning url list and get the earliest available date
-          let earliestDate: string | null = null
-          if (rezoning.urls) {
-            rezoning.urls.forEach((url) => {
-              if (url.date) {
-                if (!earliestDate || moment(url.date).isBefore(earliestDate)) {
-                  earliestDate = url.date
-                }
-              }
-            })
-          }
-          if (earliestDate) {
-            console.log(chalk.bgGreen(`Updated applied date: ${earliestDate}`))
-          }
-          rezoning.dates.appliedDate = earliestDate
-        }
-      }
-  
-      if (rezoning.status === 'approved') {
-        if (!rezoning.dates.approvalDate) {
-          // Go through the rezoning url list and get the latest available date
-          let latestDate: string | null = null
-          if (rezoning.urls) {
-            rezoning.urls.forEach((url) => {
-              if (url.date) {
-                if (!latestDate || moment(url.date).isBefore(latestDate)) {
-                  latestDate = url.date
-                }
-              }
-            })
-          }
-          if (latestDate) {
-            console.log(chalk.bgGreen(`Updated approval date: ${latestDate}`))
-          }
-          rezoning.dates.approvalDate = latestDate
-        }
-      }
-  
-    })
-  
-    RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)
-  
-  },
-
-  bulkCleanRichmondRezoningIDs() {
-
-    // Always format Richmond rezoning IDs as RZ 12-123456
-    function checkRezoningId(rezoningId: string): boolean {
-      return /^RZ\s+\d{2}-\d{6}$/.test(rezoningId)
-    }
-  
-    const rezonings = RezoningsRepository.getRezonings({city: 'Richmond'})
-  
-    rezonings.forEach((rezoning) => {
-  
-      if (rezoning.applicationId) {
-        const correct = checkRezoningId(rezoning.applicationId)
-        if (!correct) {
-          const formattedRezoningId = cleanRichmondRezoningId(rezoning.applicationId)
-          if (formattedRezoningId) {
-            console.log(chalk.bgGreen(`Reformatted application ID: ${rezoning.applicationId} => ${formattedRezoningId}`))
-            rezoning.applicationId = formattedRezoningId
-          } else {
-            console.log(chalk.bgRed(`Invalid rezoning ID: ${rezoning.applicationId}, clearing...`))
-            rezoning.applicationId = null
-          }
-          rezoning.updateDate = moment().format('YYYY-MM-DD')
-        }
-      }
-  
-    })
-  
-    // Save the rezonings back to the database
-    RezoningsRepository.dangerouslyUpdateRezonings('Richmond', rezonings)
-  
   }
 
 }

@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'

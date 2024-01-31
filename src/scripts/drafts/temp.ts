@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { IMeetingDetail, RawRepository } from '../../repositories/RawRepository'
-import { RezoningsRepository, checkGPTRezoningJSON } from '../../repositories/RezoningsRepository'
+import { RecordsRepository, checkGPTRezoningJSON } from '../../repositories/RecordsRepository'
 import { checkIfApplication } from '../../rezonings/cities/Surrey/Applications'
 import { checkIfBylaw } from '../../rezonings/cities/Surrey/Bylaws'
 import { checkIfPublicHearing, parsePublicHearing } from '../../rezonings/cities/Surrey/PublicHearings'

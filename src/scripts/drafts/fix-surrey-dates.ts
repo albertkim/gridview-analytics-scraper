@@ -1,8 +1,8 @@
-import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { RecordsRepository } from '../../repositories/RecordsRepository'
 
 (async () => {
 
-  const rezonings = RezoningsRepository.getRezonings({city: 'Surrey'})
+  const rezonings = RecordsRepository.getRecords('rezoning', {city: 'Surrey'})
 
   for (const rezoning of rezonings) {
 
@@ -40,6 +40,6 @@ import { RezoningsRepository } from '../../repositories/RezoningsRepository'
   
   }
 
-  RezoningsRepository.dangerouslyUpdateRezonings('Surrey', rezonings)
+  RecordsRepository.dangerouslyReplaceRecords('rezoning', 'Surrey', rezonings)
 
 })()

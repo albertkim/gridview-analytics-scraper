@@ -5,7 +5,7 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { getSurreyBylawGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { generateID } from '../../../repositories/GenerateID'
-import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
 
 export function checkIfBylaw(news: IMeetingDetail) {
 

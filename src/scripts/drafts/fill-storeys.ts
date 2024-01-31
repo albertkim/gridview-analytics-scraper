@@ -1,10 +1,10 @@
 import chalk from 'chalk'
-import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { RecordsRepository } from '../../repositories/RecordsRepository'
 import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
 
 (async () => {
 
-  const rezonings = RezoningsRepository.getRezonings()
+  const rezonings = RecordsRepository.getRecords('rezoning')
 
   for (let i = 0; i < rezonings.length; i++) {
     console.log(chalk.bgWhite(`Progress: ${i + 1}/${rezonings.length}`))
@@ -24,6 +24,6 @@ import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
     }
   }
 
-  RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)
+  RecordsRepository.dangerouslyUpdateAllRecords('rezoning', rezonings)
 
 })()

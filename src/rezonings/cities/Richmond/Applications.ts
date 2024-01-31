@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'

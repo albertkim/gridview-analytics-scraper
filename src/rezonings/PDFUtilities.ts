@@ -100,5 +100,8 @@ export async function parsePDF(pdfData: Buffer, maxPageIndex?: number) {
 	const parsedPDF = await pdfParse(pdfData, {
 		max: maxPageIndex
 	})
-	return parsedPDF.text
+	const text = parsedPDF.text
+	// Clean text - trim each line of text, remove consecutive spaces, remove consecutive newlines
+	const cleanedText = text.split('\n').map(line => line.trim()).join('\n').replace(/\s+/g, ' ').replace(/\n+/g, '\n')
+	return cleanedText
 }

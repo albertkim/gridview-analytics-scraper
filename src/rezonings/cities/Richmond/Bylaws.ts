@@ -1,7 +1,7 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
 import { imageQuery } from '../../AIUtilities'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
 import { downloadPDF, generateScreenshotFromPDF } from '../../PDFUtilities'

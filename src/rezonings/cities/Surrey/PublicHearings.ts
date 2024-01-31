@@ -5,7 +5,7 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
 import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { generateID } from '../../../repositories/GenerateID'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
 

@@ -4,7 +4,7 @@ import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
-import { IFullRezoningDetail } from '../../../repositories/RezoningsRepository'
+import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
 

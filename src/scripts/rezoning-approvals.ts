@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import { RawRepository } from '../repositories/RawRepository'
 import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
-import { RezoningsRepository } from '../repositories/RezoningsRepository'
+import { RecordsRepository } from '../repositories/RecordsRepository'
 
 // Purpose: Given an array of entries with a date in YYYY-MM-DD format, from 2019 - current year, render a graph of number of entries for each of the 12 months as a [x] if an entry exists or a [ ] if an entry does not exist
 // Like this:
@@ -49,7 +49,7 @@ function visualizeEntries(title: string, entries: {date: string}[]) {
 }
 
 function printNonSingleFamilyHomeRezoningApproval(city: string) {
-  const entries = RezoningsRepository.getRezonings({city: city})
+  const entries = RecordsRepository.getRecords('rezoning', {city: city})
     .filter((m) => m.buildingType !== 'single-family residential' && m.buildingType !== 'other')
     .map((r) => r.minutesUrls).flat()
     .filter((m) => ['approved'].includes(m.status))

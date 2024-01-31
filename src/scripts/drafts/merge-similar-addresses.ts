@@ -1,9 +1,9 @@
-import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RecordsRepository, mergeEntries } from '../../repositories/RecordsRepository'
 
 // NOTE: Due to array handling complexity, this only merges one address at a time
 (async () =>{
 
-  const rezonings = RezoningsRepository.getRezonings()
+  const rezonings = RecordsRepository.getRecords('rezoning')
 
   interface ISimilarAddressStructure {
     index: number
@@ -19,7 +19,7 @@ import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../re
 
   for (let i = 0; i < rezonings.length; i++) {
     const rezoning = rezonings[i]
-    const similarAddressRezonings = RezoningsRepository.getRezoningsWithSimilarAddresses(rezoning)
+    const similarAddressRezonings = RecordsRepository.getRecordsWithSimilarAddresses('rezoning', rezoning)
     if (similarAddressRezonings.length > 0) {
       rezoningWithSimilarAddresses = {
         index: i,
@@ -59,7 +59,7 @@ import { IFullRezoningDetail, RezoningsRepository, mergeEntries } from '../../re
     // Update the database
     console.log(`Previous database length: ${rezonings.length}`)
     console.log(`Previous database length: ${updatedRezonings.length}`)
-    RezoningsRepository.dangerouslyUpdateAllRezonings(updatedRezonings)
+    RecordsRepository.dangerouslyUpdateAllRecords('rezoning', updatedRezonings)
 
   }
 

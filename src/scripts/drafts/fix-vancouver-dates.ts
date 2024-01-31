@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { RawRepository } from '../../repositories/RawRepository'
-import { RezoningsRepository } from '../../repositories/RezoningsRepository'
+import { RecordsRepository } from '../../repositories/RecordsRepository'
 import { checkIfApplication } from '../../rezonings/cities/Vancouver/Applications'
 import { checkIfBylaw } from '../../rezonings/cities/Vancouver/Bylaws'
 import chalk from 'chalk'
@@ -15,7 +15,7 @@ import chalk from 'chalk'
 (async () => {
 
   const news = RawRepository.getNews()
-  const rezonings = RezoningsRepository.getRezonings()
+  const rezonings = RecordsRepository.getRecords('rezoning')
 
   for (const rezoning of rezonings) {
 
@@ -24,7 +24,7 @@ import chalk from 'chalk'
     let appliedDate: string | null = null
     let approvalDate: string | null = null
 
-    for (const urlObject of rezoning.urls) {
+    for (const urlObject of rezoning.reportUrls) {
 
       // Get news where the reportURL includes the rezoning URL
       const matchingRawNews = news.filter(newsEntry => newsEntry.reportUrls.map((r) => r.url).includes(urlObject.url))
@@ -60,6 +60,6 @@ import chalk from 'chalk'
   }
 
   // Bulk update
-  RezoningsRepository.dangerouslyUpdateAllRezonings(rezonings)
+  RecordsRepository.dangerouslyUpdateAllRecords('rezoning', rezonings)
 
 })()

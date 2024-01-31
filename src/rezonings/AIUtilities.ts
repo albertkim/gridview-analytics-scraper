@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import OpenAI from 'openai'
 import chalk from 'chalk'
 import { ImageAnnotatorClient } from '@google-cloud/vision'
-import { IPartialRezoningDetail, checkGPTRezoningJSON } from '../repositories/RezoningsRepository'
+import { IPartialRezoningDetail, checkGPTRezoningJSON } from '../repositories/RecordsRepository'
 
 dotenv.config()
 

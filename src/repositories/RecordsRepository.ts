@@ -112,92 +112,93 @@ function reorderItems(items: IFullRezoningDetail[]) {
   })
 }
 
-export const RezoningsRepository = {
+export const RecordsRepository = {
 
-  getRezonings(filter?: {city?: string}) {
-    const rawData = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/rezonings.json'), 'utf8')) as IFullRezoningDetail[]
-    if (filter?.city) {
-      return rawData.filter((item) => item.city === filter.city)
-    } else {
-      return rawData
+  getRecords(type: 'all' | 'rezoning' | 'development permit', filter?: {city?: string}) {
+    let records = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/rezonings.json'), 'utf8')) as IFullRezoningDetail[]
+    if (type !== 'all') {
+      records = records.filter((item) => item.type === type)
     }
+    if (filter?.city) {
+      records = records.filter((item) => item.city === filter.city)
+    }
+    return records
   },
 
-  getRezoningsWithSimilarAddresses(rezoning: IFullRezoningDetail): {index: number, rezoning: IFullRezoningDetail, similarity: number}[] {
+  getRecordsWithSimilarAddresses(type: 'rezoning' | 'development permit', item: IFullRezoningDetail): {index: number, rezoning: IFullRezoningDetail, similarity: number}[] {
 
     const minimumSimilarity = 0.7
 
-    if (!rezoning.address) return []
+    if (!item.address) return []
 
-    const numbersInAddress = (rezoning.address || '').match(/\d+/g)
+    const numbersInAddress = (item.address || '').match(/\d+/g)
 
     if (!numbersInAddress) return []
 
-    const allRezonings = this.getRezonings()
-    const rezoningIndex = allRezonings.findIndex((item) => item === rezoning) // Can be -1 if not found
+    const allRecords = this.getRecords(type)
 
-    const rezoningsWithMatchingNumbers: {
+    const recordsWithMatchingNumbers: {
       index: number
       rezoning: IFullRezoningDetail
       similarity: number
     }[] = []
 
-    for (let i = 0; i < allRezonings.length; i++) {
-      const otherRezoning = allRezonings[i]
-      if (otherRezoning.id === rezoning.id) {
+    for (let i = 0; i < allRecords.length; i++) {
+      const otherRecord = allRecords[i]
+      if (otherRecord.id === item.id) {
         continue
       }
-      if (otherRezoning.city !== rezoning.city) {
+      if (otherRecord.city !== item.city) {
         continue
       }
-      if (!otherRezoning.address) {
+      if (!otherRecord.address) {
         continue
       }
-      const otherNumbersInAddress = (otherRezoning.address || '').match(/\d+/g)
+      const otherNumbersInAddress = (otherRecord.address || '').match(/\d+/g)
       if (!otherNumbersInAddress) {
         continue
       }
       const numbersMatch = otherNumbersInAddress.every(otherNumber => numbersInAddress.includes(otherNumber))
       if (numbersMatch) {
-        const similarityScore = similarity(rezoning.address, otherRezoning.address)
+        const similarityScore = similarity(item.address, otherRecord.address)
         if (similarityScore > minimumSimilarity) {
-          rezoningsWithMatchingNumbers.push({
+          recordsWithMatchingNumbers.push({
             index: i,
-            rezoning: otherRezoning,
+            rezoning: otherRecord,
             similarity: similarityScore
           })
         }
       }
     }
 
-    return rezoningsWithMatchingNumbers
+    return recordsWithMatchingNumbers
 
   },
 
-  // Replaces all rezonings with the same city
-  dangerouslyUpdateRezonings(city: string, rezonings: IFullRezoningDetail[]) {
+  // Replaces all records with the same record type and city
+  dangerouslyReplaceRecords(type: 'rezoning' | 'development permit', city: string, newRecords: IFullRezoningDetail[]) {
 
-    const previousEntries = this.getRezonings()
-    const filteredData = previousEntries.filter((item) => item.city !== city)
-    const newData = reorderItems([...filteredData, ...rezonings])
+    const previousRecords = this.getRecords('all')
+    const recordsToKeep = previousRecords.filter((item) => item.type !== type || item.city !== city)
+    const recordsToWrite = [...recordsToKeep, ...newRecords]
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
-      JSON.stringify(newData, null, 2),
+      JSON.stringify(recordsToWrite, null, 2),
       'utf8'
     )
 
-    return this.getRezonings({city})
+    return this.getRecords(type, {city})
     
   },
 
-  // Update a rezoning completely, does not merge with previous entry
-  // Most use cases will require the upsertRezonings() function, defined below
-  updateRezoning(id: string, rezoning: IFullRezoningDetail) {
-    rezoning.id = id
-    const previousEntries = this.getRezonings()
+  // Update a record completely, does not merge with previous entry
+  // Most use cases will require the upsertRecords() function, defined below
+  updateRecord(id: string, record: IFullRezoningDetail) {
+    record.id = id
+    const previousEntries = this.getRecords('all')
     const matchingRezoningIndex = previousEntries.findIndex((item) => item.id === id)
     if (matchingRezoningIndex === -1) throw new Error(`Could not find rezoning with id ${id}`)
-    previousEntries[matchingRezoningIndex] = rezoning
+    previousEntries[matchingRezoningIndex] = record
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
       JSON.stringify(previousEntries, null, 2),
@@ -205,46 +206,51 @@ export const RezoningsRepository = {
     )
   },
 
-  // Add news to the database - merge if there is a rezoning with the same address
-  upsertRezonings(rezonings: IFullRezoningDetail[]) {
+  // Add records to the database - merge if there is a record of the same type and the same address
+  upsertRecords(type: 'rezoning' | 'development permit', records: IFullRezoningDetail[]) {
 
-    const previousEntries = this.getRezonings()
+    const previousRecords = this.getRecords('all')
 
-    for (const rezoning of rezonings) {
+    for (const record of records) {
 
-      // Check for any entries with the same ID (not rezoning ID)
-      const rezoningWithMatchingID = previousEntries.find((item) => item.id === rezoning.id)
-      if (rezoningWithMatchingID) {
-        const mergedRezoning = mergeEntries(rezoningWithMatchingID, rezoning)
-        this.updateRezoning(rezoningWithMatchingID.id, mergedRezoning)
+      // Only update matching types
+      if (record.type !== type) {
+        continue
+      }
+
+      // Check for any entries with the same ID (not application ID)
+      const recordWithMatchingID = previousRecords.find((item) => item.id === record.id)
+      if (recordWithMatchingID) {
+        const mergedRecord = mergeEntries(recordWithMatchingID, record)
+        this.updateRecord(recordWithMatchingID.id, mergedRecord)
         continue
       }
 
       // Check for any entries with the same application ID - take precedent over matching addresses
-      const rezoningWithMatchingApplicationID = rezoning.applicationId ?
-        previousEntries.find((item) => item.applicationId === rezoning.applicationId)
+      const recordWithMatchingApplicationID = record.applicationId ?
+        previousRecords.find((item) => item.applicationId === record.applicationId)
         : null
-      if (rezoningWithMatchingApplicationID) {
-        const mergedRezoning = mergeEntries(rezoningWithMatchingApplicationID, rezoning)
-        mergedRezoning.id = rezoningWithMatchingApplicationID.id
-        this.updateRezoning(rezoningWithMatchingApplicationID.id, mergedRezoning)
+      if (recordWithMatchingApplicationID) {
+        const mergedRecord = mergeEntries(recordWithMatchingApplicationID, record)
+        mergedRecord.id = recordWithMatchingApplicationID.id
+        this.updateRecord(recordWithMatchingApplicationID.id, mergedRecord)
         continue
       }
 
       // Check for any entries with the same/similar addresses
-      const similarAddresses = this.getRezoningsWithSimilarAddresses(rezoning)
+      const similarAddresses = this.getRecordsWithSimilarAddresses(type, record)
       if (similarAddresses.length > 0) {
-        const similarRezoning = similarAddresses[0].rezoning
-        const mergedRezoning = mergeEntries(similarRezoning, rezoning)
-        mergedRezoning.id = similarRezoning.id
-        this.updateRezoning(similarRezoning.id, mergedRezoning)
+        const similarRecord = similarAddresses[0].rezoning
+        const mergedRecord = mergeEntries(similarRecord, record)
+        mergedRecord.id = similarRecord.id
+        this.updateRecord(similarRecord.id, mergedRecord)
         continue
       }
 
       // Otherwise, just add the entry to the database
       fs.writeFileSync(
         path.join(__dirname, '../database/rezonings.json'),
-        JSON.stringify([...previousEntries, rezoning], null, 2),
+        JSON.stringify([...previousRecords, record], null, 2),
         'utf8'
       )
 
@@ -252,15 +258,16 @@ export const RezoningsRepository = {
 
   },
 
-  // Replaces all rezonings
-  dangerouslyUpdateAllRezonings(rezonings: IFullRezoningDetail[]) {
-    const orderedRezonings = reorderItems(rezonings)
+  // Replaces all records of a certain type if specified
+  dangerouslyUpdateAllRecords(type: 'all' | 'rezoning' | 'development permit', newRecords: IFullRezoningDetail[]) {
+    const allRecords = this.getRecords('all')
+    const recordsToKeep = allRecords.filter((item) => item.type !== type) // will be empty if 'all' type is provided, meaning everything should be replaced
+    const recordsToWrite = reorderItems([...recordsToKeep, ...newRecords])
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
-      JSON.stringify(orderedRezonings, null, 2),
+      JSON.stringify(recordsToWrite, null, 2),
       'utf8'
     )
-    return this.getRezonings()
   }
 
 }

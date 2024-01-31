@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
-import { IFullRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RecordsRepository } from '../repositories/RecordsRepository'
 
 // Vancouver imports
 import { checkIfApplication as vancouverCheckIfApplication, parseApplication as vancouverParseApplication } from '../rezonings/cities/Vancouver/Applications'
@@ -78,7 +78,7 @@ async function main() {
   }
 
   const news = RawRepository.getNews({city: city})
-  const rezonings = RezoningsRepository.getRezonings({city: city})
+  const rezonings = RecordsRepository.getRecords('rezoning', {city: city})
 
   // Application checks
   const applicationNews = news.filter((n) => functionCityMapping.checkIfApplication[city](n))
@@ -123,7 +123,7 @@ async function main() {
       const n = noApplicationNews[i]
       const parsed = await functionCityMapping.parseApplication[city](n)
       if (parsed) {
-        await RezoningsRepository.upsertRezonings([parsed])
+        await RecordsRepository.upsertRecords('rezoning', [parsed])
       }
     }
   }
@@ -134,7 +134,7 @@ async function main() {
       const n = noPublicHearingNews[i]
       const parsed = await functionCityMapping.parsePublicHearing[city](n)
       if (parsed) {
-        await RezoningsRepository.upsertRezonings([parsed])
+        await RecordsRepository.upsertRecords('rezoning', [parsed])
       }
     }
   }
@@ -145,9 +145,9 @@ async function main() {
       const n = noBylawNews[i]
       const parsed = await functionCityMapping.parseBylaw[city](n)
       if (parsed && Array.isArray(parsed)) {
-        await RezoningsRepository.upsertRezonings(parsed)
+        await RecordsRepository.upsertRecords('rezoning', parsed)
       } else if (parsed) {
-        await RezoningsRepository.upsertRezonings([parsed])
+        await RecordsRepository.upsertRecords('rezoning', [parsed])
       }
     }
   }

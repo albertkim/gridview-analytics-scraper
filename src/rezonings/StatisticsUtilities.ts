@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import similarity from 'similarity'
-import { IFullRezoningDetail, RezoningsRepository } from '../repositories/RezoningsRepository'
+import { IFullRezoningDetail, RecordsRepository } from '../repositories/RecordsRepository'
 import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
 import moment from 'moment'
 
@@ -8,7 +8,7 @@ import moment from 'moment'
 export async function getStatistics() {
 
   const news = RawRepository.getNews()
-  const rezonings = RezoningsRepository.getRezonings()
+  const rezonings = RecordsRepository.getRecords('rezoning')
 
   console.log()
 
@@ -124,7 +124,7 @@ function getURLDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
 
   for (const city of cities) {
     const rezoningsInCity = rezonings.filter(rezoning => rezoning.city === city)
-    const emptyDates = rezoningsInCity.filter(rezoning => rezoning.urls.some(url => !url.date)).length
+    const emptyDates = rezoningsInCity.filter(rezoning => rezoning.reportUrls.some(url => !url.date)).length
     results.push({
       city,
       emptyDates
