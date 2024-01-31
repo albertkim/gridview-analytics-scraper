@@ -205,7 +205,7 @@ export async function imageQuery(query: string, fileData: string, gptVersion?: '
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
 
   return `
-		${options?.introduction ? options.introduction : 'Read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: string}.'}
+		${options?.introduction ? options.introduction : 'Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}.'}
     {
       applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
       address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist

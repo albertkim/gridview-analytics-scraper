@@ -6,17 +6,17 @@ import { parseApplication } from '../../rezonings/cities/Vancouver/Applications'
   const news = {
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
-    "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
-    "minutesUrl": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
-    "date": "2023-11-14",
+    "url": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+    "minutesUrl": "https://council.vancouver.ca/20240123/regu20240123ag.htm",
+    "date": "2024-01-23",
     "meetingType": "Council",
-    "title": "CD-1 Rezoning: 4330-4408 Arbutus Street and 2092 Nanton Avenue",
+    "title": "Rezoning: 2726-2734 West 16th Avenue",
     "resolutionId": null,
     "contents": "",
     "reportUrls": [
       {
         "title": "Referral Report",
-        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf"
+        "url": "https://council.vancouver.ca/20240123/documents/rr2.pdf"
       }
     ]
   }

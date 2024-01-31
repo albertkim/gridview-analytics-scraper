@@ -97,19 +97,40 @@ export interface IFullRezoningDetail extends IPartialRezoningDetail {
   updateDate: string
 }
 
-function reorderItems(items: IFullRezoningDetail[]) {
-  return items.sort((a, b) => {
-    const dateA = moment(a.updateDate, 'YYYY-MM-DD')
-    const dateB = moment(b.updateDate, 'YYYY-MM-DD')
-    
-    if (dateA.isBefore(dateB)) {
-      return -1
+// Sort by latest activity date desc, determined by the latest date from either reportUrls or minutesUrls
+function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
+  const mappedItems = items.map((item) => {
+    const reportUrlDates = item.reportUrls.map((report) => report.date)
+    const minutesUrlDates = item.minutesUrls.map((minutes) => minutes.date)
+    const combinedDates = [...reportUrlDates, ...minutesUrlDates]
+    const latestDate = combinedDates.reduce((latest, current) => {
+      if (!latest) {
+        return current
+      }
+      if (moment(current, 'YYYY-MM-DD').isAfter(moment(latest, 'YYYY-MM-DD'))) {
+        return current
+      }
+      return latest
+    })
+    return {
+      latestDate: latestDate,
+      item: item
     }
-    if (dateA.isAfter(dateB)) {
-      return 1
-    }
-    return 0
   })
+
+  const sortedItems = mappedItems
+    .sort((a, b) => {
+      if (!a.latestDate) {
+        return 1
+      }
+      if (!b.latestDate) {
+        return -1
+      }
+      return moment(b.latestDate, 'YYYY-MM-DD').diff(moment(a.latestDate, 'YYYY-MM-DD'))
+    })
+    .map((items) => items.item)
+
+  return sortedItems
 }
 
 export const RecordsRepository = {
@@ -209,14 +230,9 @@ export const RecordsRepository = {
   // Add records to the database - merge if there is a record of the same type and the same address
   upsertRecords(type: 'rezoning' | 'development permit', records: IFullRezoningDetail[]) {
 
-    const previousRecords = this.getRecords('all')
+    const previousRecords = this.getRecords(type)
 
     for (const record of records) {
-
-      // Only update matching types
-      if (record.type !== type) {
-        continue
-      }
 
       // Check for any entries with the same ID (not application ID)
       const recordWithMatchingID = previousRecords.find((item) => item.id === record.id)
@@ -256,12 +272,17 @@ export const RecordsRepository = {
 
     }
 
+    // Reorder all entries
+    const allRecords = this.getRecords('all')
+    const reorderedRecords = reorderItems(allRecords)
+    this.dangerouslyUpdateAllRecords('all', reorderedRecords)
+
   },
 
   // Replaces all records of a certain type if specified
   dangerouslyUpdateAllRecords(type: 'all' | 'rezoning' | 'development permit', newRecords: IFullRezoningDetail[]) {
     const allRecords = this.getRecords('all')
-    const recordsToKeep = allRecords.filter((item) => item.type !== type) // will be empty if 'all' type is provided, meaning everything should be replaced
+    const recordsToKeep = type === 'all' ? [] : allRecords.filter((item) => item.type !== type) // will be empty if 'all' type is provided, meaning everything should be replaced
     const recordsToWrite = reorderItems([...recordsToKeep, ...newRecords])
     fs.writeFileSync(
       path.join(__dirname, '../database/rezonings.json'),
