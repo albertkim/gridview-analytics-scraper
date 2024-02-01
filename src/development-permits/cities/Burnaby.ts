@@ -127,7 +127,6 @@ export async function analyze(options: IOptions) {
         description: permit.description,
         buildingType: permit.buildingType,
         status: 'approved',
-        date: urlObject.date,
         dates: {
           appliedDate: null,
           publicHearingDate: null,
@@ -148,9 +147,15 @@ export async function analyze(options: IOptions) {
           previousZoningDescription: null,
           newZoningCode: null,
           newZoningDescription: null
-
         },
-        reportUrls: [],
+        reportUrls: [
+          {
+            title: urlObject.title,
+            url: urlObject.url,
+            date: urlObject.date,
+            status: 'approved'
+          }
+        ],
         minutesUrls: [],
         location: {
           latitude: null,

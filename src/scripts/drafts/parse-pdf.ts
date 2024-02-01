@@ -4,10 +4,10 @@ import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
 
 (async () => {
 
-  const pdfUrl = 'https://www.surrey.ca/sites/default/files/planning-reports/PLR_7916-0225-00_2.pdf'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/Dec_13_DPP_Chairs_report70971.pdf'
 
   const pdfData = await downloadPDF(pdfUrl)
-  let parsed = await parsePDF(pdfData, 1)
+  let parsed = await parsePDF(pdfData, 2)
 
   console.log(parsed)
 

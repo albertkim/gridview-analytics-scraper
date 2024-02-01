@@ -107,7 +107,7 @@ function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
       if (!latest) {
         return current
       }
-      if (moment(current, 'YYYY-MM-DD').isAfter(moment(latest, 'YYYY-MM-DD'))) {
+      if (moment(current).isAfter(moment(latest))) {
         return current
       }
       return latest
@@ -126,7 +126,7 @@ function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
       if (!b.latestDate) {
         return -1
       }
-      return moment(b.latestDate, 'YYYY-MM-DD').diff(moment(a.latestDate, 'YYYY-MM-DD'))
+      return moment(b.latestDate).diff(moment(a.latestDate))
     })
     .map((items) => items.item)
 
@@ -181,7 +181,7 @@ export const RecordsRepository = {
       }
       const numbersMatch = otherNumbersInAddress.every(otherNumber => numbersInAddress.includes(otherNumber))
       if (numbersMatch) {
-        const similarityScore = similarity(item.address, otherRecord.address)
+        const similarityScore = similarity(item.address.toLowerCase(), otherRecord.address.toLowerCase())
         if (similarityScore > minimumSimilarity) {
           recordsWithMatchingNumbers.push({
             index: i,
