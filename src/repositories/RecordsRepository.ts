@@ -103,7 +103,7 @@ function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
     const reportUrlDates = item.reportUrls.map((report) => report.date)
     const minutesUrlDates = item.minutesUrls.map((minutes) => minutes.date)
     const combinedDates = [...reportUrlDates, ...minutesUrlDates]
-    const latestDate = combinedDates.reduce((latest, current) => {
+    const latestDate = combinedDates.length > 0 ? combinedDates.reduce((latest, current) => {
       if (!latest) {
         return current
       }
@@ -111,7 +111,7 @@ function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
         return current
       }
       return latest
-    })
+    }) : '2000-01-01' // If no dates for some reason, set to a very old date
     return {
       latestDate: latestDate,
       item: item
@@ -212,6 +212,16 @@ export const RecordsRepository = {
     
   },
 
+  createRecord(record: IFullRezoningDetail) {
+    const previousEntries = this.getRecords('all')
+    const orderedEntries = reorderItems([...previousEntries, record])
+    fs.writeFileSync(
+      path.join(__dirname, '../database/rezonings.json'),
+      JSON.stringify([...orderedEntries, record], null, 2),
+      'utf8'
+    )
+  },
+
   // Update a record completely, does not merge with previous entry
   // Most use cases will require the upsertRecords() function, defined below
   updateRecord(id: string, record: IFullRezoningDetail) {
@@ -264,11 +274,7 @@ export const RecordsRepository = {
       }
 
       // Otherwise, just add the entry to the database
-      fs.writeFileSync(
-        path.join(__dirname, '../database/rezonings.json'),
-        JSON.stringify([...previousRecords, record], null, 2),
-        'utf8'
-      )
+      this.createRecord(record)
 
     }
 

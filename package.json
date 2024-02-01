@@ -6,7 +6,7 @@
     "build": "tsc",
     "scrape": "ts-node src/scraper/index.ts",
     "rezone": "ts-node src/rezonings/index.ts",
-    "development-permit": "ts-node src/development-permit/index.ts",
+    "development-permit": "ts-node src/development-permits/index.ts",
     "test": "jest"
   },
   "jest": {

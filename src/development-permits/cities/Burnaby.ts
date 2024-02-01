@@ -85,8 +85,6 @@ export async function analyze(options: IOptions) {
 
   const developmentPermitUrls = await scrape(options)
 
-  const developmentPermits: IFullRezoningDetail[] = []
-
   for (const urlObject of developmentPermitUrls) {
 
     const pdf = await downloadPDF(urlObject.url)
