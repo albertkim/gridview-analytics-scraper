@@ -1765,6 +1765,116 @@
     ]
   },
   {
+    "id": "dev-bbx70qrlopuj5opgbnzgp",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "Anthony Boni (Boni Maddison Architects)",
+    "behalf": null,
+    "description": "Construction of a three-storey 25-unit affordable rental housing building at 4831 Steveston Highway. Variance included to allow 37% of the required vehicle parking spaces to be small car spaces. 25 affordable rental apartment units with 10 two-bedroom units and 15 studio units. Building designed to achieve Level 4 of the BC Energy Step Code. Common indoor and outdoor amenity areas proposed.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-20",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 25,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "ZLR48",
+      "previousZoningDescription": "Low Rise Rental Apartment",
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Dec_13_DPP_Chairs_report70971.pdf",
+        "title": "Report to Council",
+        "date": "2023-12-20",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2023/122023s_minutes.htm",
+        "date": "2023-12-20",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-31",
+    "updateDate": "2024-01-31"
+  },
+  {
+    "id": "dev-bbx70qrlopuj5opgbnzgp",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "Anthony Boni (Boni Maddison Architects)",
+    "behalf": null,
+    "description": "Construction of a three-storey 25-unit affordable rental housing building at 4831 Steveston Highway. Variance included to allow 37% of the required vehicle parking spaces to be small car spaces. 25 affordable rental apartment units with 10 two-bedroom units and 15 studio units. Building designed to achieve Level 4 of the BC Energy Step Code. Common indoor and outdoor amenity areas proposed.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-20",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 25,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "ZLR48",
+      "previousZoningDescription": "Low Rise Rental Apartment",
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Dec_13_DPP_Chairs_report70971.pdf",
+        "title": "Report to Council",
+        "date": "2023-12-20",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/council/2023/122023s_minutes.htm",
+        "date": "2023-12-20",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-01-31",
+    "updateDate": "2024-01-31"
+  },
+  {
     "id": "rez-xj0w05czasjr7oa6my272",
     "address": "14723 – 104 Avenue",
     "applicant": "RDG Guildford East Development Ltd.",

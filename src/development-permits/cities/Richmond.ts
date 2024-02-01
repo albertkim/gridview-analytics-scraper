@@ -1,8 +1,8 @@
 import moment from 'moment'
+import chalk from 'chalk'
 import { IMeetingDetail, RawRepository } from '../../repositories/RawRepository'
 import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
 import { chatGPTPartialRezoningQuery, getGPTBaseRezoningQuery } from '../../rezonings/AIUtilities'
-import chalk from 'chalk'
 import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 
@@ -15,13 +15,13 @@ interface IOptions {
 // Development permits are mentioned in scraped city council meetings
 async function scrape(options: IOptions) {
 
-  const news = await RawRepository.getNews({city: 'Richmond'})
+  const news = RawRepository.getNews({city: 'Richmond'})
 
   // Filter by date and development permits
   const filteredNews = news
     .filter((n) => {
       // Check title and make sure it includes "permit - development" or "permits - development", case-insensitive, variable number of spaces/dashes in between
-      const regex = /permit\s*-\s*development/i
+      const regex = /permits?\s*-\s*development/i
       return regex.test(n.title)
     })
     .filter((n) => {
@@ -43,6 +43,7 @@ async function scrape(options: IOptions) {
 }
 
 // Each news item may have one or more development permit reports, and the permit reports may even refer to the same one (ex. a development panel permit minute and an approval report - ex: http://citycouncil.richmond.ca/decisions/search/permalink/15569)
+// TODO: May be an issue if multiple development permits are issued in the same document
 export async function analyze(options: IOptions) {
 
   const newsWithDevelopmentPermits = await scrape(options)
