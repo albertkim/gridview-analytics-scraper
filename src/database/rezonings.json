@@ -1,5 +1,335 @@
 [
   {
+    "id": "rez-abbravpeook14pzawjm9d",
+    "address": "2505 Eastbrook Parkway",
+    "applicant": "T.I. Studios Architecture Inc.",
+    "behalf": null,
+    "description": "The proposed rezoning bylaw amendment is to permit the use of the property as an automotive dealership and service centre for an electric vehicle manufacturer. Minor interior and exterior renovations to the existing building are proposed.",
+    "type": "rezoning",
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2021-11-22",
+      "publicHearingDate": "2021-12-14",
+      "approvalDate": "2024-01-29",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "CD",
+      "previousZoningDescription": "Comprehensive Development District (based on M5 Light Industrial District)",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development District (based on the M5 Light Industrial District and M1 Manufacturing District)"
+    },
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2021-12-14",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=770a969a-b538-4e92-8459-bc47ec1075f1&lang=English",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-11-22",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=15d44279-cfb2-4acb-a8d1-f11e759bf2e4&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=48ec6a47-ee9e-4d85-b460-7b5a1f5cf769&lang=English",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": 49.261311,
+      "longitude": -123.002285
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-31",
+    "buildingType": "commercial",
+    "applicationId": "REZ #21-17",
+    "reportUrls": [
+      {
+        "date": "2021-12-14",
+        "title": "Rezoning Reference 21-17 PH Report 2021.11.22.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57896",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-14",
+        "title": "14400. No. 35, 2021 ACD.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57897",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-14",
+        "title": "Rez 21-17 PH Corresp Tracking No. 2 _Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57898",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-11-22",
+        "title": "Rezoning Reference 21-17 PH Report 2021.11.22.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=56911",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "title": "14400. No. 35, 2021 ACD (FA).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=74167",
+        "status": "approved"
+      },
+      {
+        "date": "2024-01-29",
+        "title": "Memorandum - REZ 21-17 Final Adoption  2024-01-29.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=74168",
+        "status": "approved"
+      }
+    ]
+  },
+  {
+    "id": "rez-3qbxxcrudwxkwjm3ipyk8",
+    "address": "7271 Gilley Avenue",
+    "applicant": "Rajesh Kumar",
+    "behalf": null,
+    "description": "The purpose of the proposed rezoning bylaw amendment is to permit a place of public worship, food production, a childcare facility, and accessory uses on the subject site. The site is irregular in shape with a site area of approximately 6,276m^2 (67,554sq. ft.).",
+    "type": "rezoning",
+    "status": "approved",
+    "dates": {
+      "appliedDate": "2021-08-30",
+      "publicHearingDate": "2022-06-28",
+      "approvalDate": "2024-01-29",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "C2",
+      "previousZoningDescription": "Community Commercial District",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2022-06-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=3f35b5be-526f-4f9a-87cf-936a7d277258&lang=English",
+        "status": "public hearing"
+      },
+      {
+        "date": "2022-05-30",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=7b6a8ba2-f602-4a7b-a700-36f7f6ec991c&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2021-08-30",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=b8619f92-ac48-4296-96e9-3b67c82bfc93&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=48ec6a47-ee9e-4d85-b460-7b5a1f5cf769&lang=English",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": 49.2179285,
+      "longitude": -122.972863
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-31",
+    "buildingType": "mixed use",
+    "applicationId": "REZ #21-27",
+    "reportUrls": [
+      {
+        "date": "2022-06-28",
+        "title": "Rezoning Reference 21-27 PH Report 2022.05.30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=62273",
+        "status": "public hearing"
+      },
+      {
+        "date": "2022-06-28",
+        "title": "14455 No. 18, 2022 CD.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=62274",
+        "status": "public hearing"
+      },
+      {
+        "date": "2022-05-30",
+        "title": "Rezoning Reference 21-27 PH Report 2022.05.30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=60434",
+        "status": "applied"
+      },
+      {
+        "date": "2021-08-30",
+        "title": "Rezoning Reference 21-27 Initial Report 2021.08.30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=53519",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "title": "14455 No. 18, 2022 CD (FA).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=74169",
+        "status": "approved"
+      },
+      {
+        "date": "2024-01-29",
+        "title": "Memorandum - REZ 21-27 Final Adoption 2023-12-11.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=74170",
+        "status": "approved"
+      }
+    ]
+  },
+  {
+    "id": "rez-ibr8p5tkumefqqizxw890",
+    "address": "6229 Marine Drive",
+    "applicant": "Mania Hormozi",
+    "behalf": "CLT 0012 Community Society",
+    "description": "The proposed rezoning is for a non-market housing development on a portion of 6229 Marine Drive. The development will consist of up to 118 housing units provided at different levels of affordability, including 20% at the shelter rate, 50% at RGI (Rent Gear to Income) rates, and 30% at LEM (Low End Market) rates. The proposed development also includes changes to allowable height, density, and parking rates to facilitate the potential for additional units beyond the 118 units that are already funded.",
+    "type": "rezoning",
+    "status": "denied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": "2020-12-15",
+      "approvalDate": null,
+      "denialDate": "2024-01-29",
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 118,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "CD",
+      "previousZoningDescription": "Comprehensive Development District (based on the RM3r Multiple Family Residential District)",
+      "newZoningCode": "Amended CD",
+      "newZoningDescription": "Comprehensive Development District (based on the RM2 Multiple Family Residential District and RM2r Multiple Family Residential District, the Edmonds Town Centre Plan as guidelines)"
+    },
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2023-10-30",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=627a3577-485d-48b0-8770-dc8f0199ea42&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2020-12-15",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=05dd7e95-3161-4236-9589-054271d76f96&lang=English",
+        "status": "public hearing"
+      },
+      {
+        "date": "2020-11-23",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=1633beb4-41eb-4984-a38d-a7d7466cd76f&lang=English",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=48ec6a47-ee9e-4d85-b460-7b5a1f5cf769&lang=English",
+        "status": "denied"
+      }
+    ],
+    "location": {
+      "latitude": 49.20404,
+      "longitude": -122.96476
+    },
+    "createDate": "2024-01-18",
+    "updateDate": "2024-01-31",
+    "buildingType": "multi-family residential",
+    "applicationId": "REZ #20-17",
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Revised REZ 20-17 Ptn 6229 Marine Drive PH Report (2023-11-20).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72014",
+        "status": "applied"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72015",
+        "status": "applied"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72016",
+        "status": "applied"
+      },
+      {
+        "date": "2023-10-30",
+        "title": "REZ 20-17 Ptn 6229 Marine Drive PH Report - 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71282",
+        "status": "applied"
+      },
+      {
+        "date": "2023-10-30",
+        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2 .pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71283",
+        "status": "applied"
+      },
+      {
+        "date": "2023-10-30",
+        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71284",
+        "status": "applied"
+      },
+      {
+        "date": "2020-12-15",
+        "title": "Rezoning Reference 20-17 PH Report 2020.11.23.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71805",
+        "status": "public hearing"
+      },
+      {
+        "date": "2020-12-15",
+        "title": "14250. No. 50, 2020 acd.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71806",
+        "status": "public hearing"
+      },
+      {
+        "date": "2020-12-15",
+        "title": "Rez Ref 20-17 Tracking 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71807",
+        "status": "public hearing"
+      },
+      {
+        "date": "2020-11-23",
+        "title": "Rezoning Reference 20-17 PH Report 2020.11.23(1).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=56025",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-29",
+        "title": "14250. No. 50, 2020 acd (ABANDONMENT).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=74203",
+        "status": "denied"
+      }
+    ]
+  },
+  {
     "id": "rez-ank30amrrvdk32l6opwk7",
     "address": "2015 Main Street, 190 East 4th Avenue",
     "applicant": "Henriquez Partners Architects",
@@ -423,7 +753,7 @@
       "longitude": -123.1288386
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -543,7 +873,7 @@
       "longitude": -123.0345
     },
     "createDate": "2024-01-18",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": null,
     "applicationId": null,
     "reportUrls": [
@@ -614,7 +944,7 @@
       }
     ],
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -686,7 +1016,7 @@
       }
     ],
     "createDate": "2024-01-19",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -747,7 +1077,7 @@
       }
     ],
     "createDate": "2024-01-20",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -802,7 +1132,7 @@
       }
     ],
     "createDate": "2024-01-20",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "multi-family residential",
     "applicationId": null,
     "reportUrls": [
@@ -857,7 +1187,7 @@
       }
     ],
     "createDate": "2024-01-20",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -889,7 +1219,7 @@
       "stratas": 0,
       "rentals": 36,
       "hotels": 0,
-      "fsr": null,
+      "fsr": 4,
       "storeys": 7
     },
     "zoning": {
@@ -912,7 +1242,7 @@
       }
     ],
     "createDate": "2024-01-20",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": "mixed use",
     "applicationId": null,
     "reportUrls": [
@@ -967,7 +1297,7 @@
       "longitude": -123.1152414
     },
     "createDate": "2024-01-20",
-    "updateDate": "2024-01-20",
+    "updateDate": "2024-01-31",
     "buildingType": null,
     "applicationId": null,
     "reportUrls": [
@@ -976,6 +1306,461 @@
         "title": "By-laws",
         "url": "https://council.vancouver.ca/20240123/documents/bylaws1-12.pdf",
         "status": "approved"
+      }
+    ]
+  },
+  {
+    "id": "rez-e831vzxqn6damxamu6pd4",
+    "address": "6113, 6133 - 144 Street",
+    "applicant": "P. Kaur, Bt144 Holdings Ltd.",
+    "behalf": null,
+    "description": "NCP Amendment from 'Proposed Parks and Schools and Townhouses (15 upa max)' to 'Proposed Parks and Schools, Townhouses (25 upa max)' and adjustments to the road and lane network. Rezoning from RA to RM-30. Development Permit / Development Variance Permit to permit the development of 56 townhouse units and an extension to Woodward Hill Park.",
+    "type": "rezoning",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 56,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "One-Acre Residential Zone",
+      "newZoningCode": "RM-30",
+      "newZoningDescription": "Multiple Residential 30 Zone"
+    },
+    "location": {
+      "latitude": 49.11431,
+      "longitude": -122.8236
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2021-12-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-12-20.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-06",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-12-06.pdf",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCPH-2024-01-15.pdf",
+        "status": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2021-12-06",
+      "publicHearingDate": "2021-12-20",
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-31",
+    "buildingType": "townhouse",
+    "applicationId": "7919-0011-00",
+    "reportUrls": [
+      {
+        "date": "2021-12-20",
+        "title": "Planning Report 7919-0011-00 and 7919-0011-01 (6133 - 144 Street\n6113 - 144 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0011-00_0.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-06",
+        "title": "Planning Report 7919-0011-00 and 7919-0011-01 (6133 - 144 Street, 6113 - 144 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0011-00_0.pdf",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-15",
+        "title": "R002: Acquisition of Portions of 6113 and 6133 – 144 Street for Parkland Purposes",
+        "url": "https://www.surrey.ca/sites/default/files/corporate-reports/CR_2024-R002.pdf",
+        "status": "approved"
+      }
+    ]
+  },
+  {
+    "id": "rez-86q2swpxbkvc2qlrpbtyp",
+    "type": "rezoning",
+    "applicationId": "7923-0144-00",
+    "address": "15473, 15485, 15495 - 16A Avenue",
+    "applicant": "Manorlane Properties (Peace Arch) Inc.",
+    "behalf": null,
+    "description": "Rezoning from RF to CD (based on RM-70) to permit the development of a six-storey apartment building consisting of 66 units.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "Single Family Residential Zone",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development Zone"
+    },
+    "location": {
+      "latitude": 49.032245,
+      "longitude": -122.7930447
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "reportUrls": [
+      {
+        "date": "2024-01-15",
+        "title": "Planning Report 7923-0144-00 (15495 - 16A Avenue, 15473 - 16A Avenue\n15485 - 16A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0144-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "applied"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2024-01-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-31",
+    "updateDate": "2024-01-31"
+  },
+  {
+    "id": "rez-y5caq14rcsbonywqhfxwk",
+    "type": "rezoning",
+    "applicationId": "7918-0138-00",
+    "address": "18175 - 74 Avenue",
+    "applicant": "1335178 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning from A-1 to CD (based on RM-30) to permit the development of 74 townhouses.",
+    "buildingType": "townhouse",
+    "status": "applied",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "A-1",
+      "previousZoningDescription": "General Agriculture Zone",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development Zone"
+    },
+    "location": {
+      "latitude": 49.1373257,
+      "longitude": -122.7187461
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "reportUrls": [
+      {
+        "date": "2024-01-15",
+        "title": "Planning Report 7918-0138-00 (18175 - 74 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0138-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "applied"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2024-01-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-31",
+    "updateDate": "2024-01-31"
+  },
+  {
+    "id": "rez-urrzw16ul8nfaejlg47ha",
+    "type": "rezoning",
+    "applicationId": "7923-0163-00",
+    "address": "13417, 13453 and 13487 - 111A Avenue, 13428 and 13488 - 112 Avenue, Portion of unopened lane",
+    "applicant": "1349957 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning from RMS-2 and RF to RM-30 for the development of 74 townhouse units on a consolidated site in City Centre (Bolivar Heights District)",
+    "buildingType": "townhouse",
+    "status": "applied",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RMS-2 and RF",
+      "previousZoningDescription": "Single Family Residential Zone and Special Care Housing 2 Zone",
+      "newZoningCode": "RM-30",
+      "newZoningDescription": "Multiple Residential 30 Zone"
+    },
+    "location": {
+      "latitude": 49.2058146,
+      "longitude": -122.800681
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "reportUrls": [
+      {
+        "date": "2024-01-15",
+        "title": "Planning Report 7923-0163-00 (13417 ‐ 111A Avenue, 13453 ‐ 111A Avenue\n13487 ‐ 111A Avenue\n13428 ‐ 112 Avenue\n13488 ‐ 112 Avenue\nPortion of unopened lane)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0163-00_1.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "applied"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2024-01-15",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-31",
+    "updateDate": "2024-01-31"
+  },
+  {
+    "id": "rez-967y7yau49c3iejw5m11b",
+    "address": "1710 - 140 Street",
+    "applicant": "Mainland Engineering Design Corporation (Rajeev Mangla)",
+    "behalf": null,
+    "description": "Rezoning from RF to RF-10 to allow subdivision of the property into two single family small lots.",
+    "type": "rezoning",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "Single Family Residential Zone",
+      "newZoningCode": "RF-10",
+      "newZoningDescription": "Single Family Residential (10) Zone"
+    },
+    "location": {
+      "latitude": 49.03336059999999,
+      "longitude": -122.8339604
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2021-12-06",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-12-06.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-11-22",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-11-22.pdf",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2021-11-22",
+      "publicHearingDate": "2021-12-06",
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-31",
+    "buildingType": "single-family residential",
+    "applicationId": "7921-0156-00",
+    "reportUrls": [
+      {
+        "date": "2021-12-06",
+        "title": "Planning Report 7921-0156-00 (1710 - 140 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0156-00.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-11-22",
+        "title": "Planning Report 7921-0156-00 (1710 - 140 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0156-00.pdf",
+        "status": "applied"
+      }
+    ]
+  },
+  {
+    "id": "rez-25frjpg7v9bca3daiboah",
+    "address": "6445 - 138 Street",
+    "applicant": "A. Brar, J. Brar, K. Brar",
+    "behalf": null,
+    "description": "Rezoning from One-Acre Residential Zone to Single Family Residential (13) Zone to allow subdivision into two single family small lots.",
+    "type": "rezoning",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "One-Acre Residential Zone",
+      "newZoningCode": "RF-13",
+      "newZoningDescription": "Single Family Residential (13) Zone"
+    },
+    "location": {
+      "latitude": 49.1199841,
+      "longitude": -122.8403063
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2022-01-17",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2022-01-17.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-06",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-12-06.pdf",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2021-12-06",
+      "publicHearingDate": "2022-01-17",
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-31",
+    "buildingType": "single-family residential",
+    "applicationId": "7920-0241-00",
+    "reportUrls": [
+      {
+        "date": "2022-01-17",
+        "title": "Planning Report 7920-0241-00 (6445 - 138 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0241-00.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-12-06",
+        "title": "Planning Report 7920-0241-00 (6445 - 138 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0241-00.pdf",
+        "status": "applied"
+      }
+    ]
+  },
+  {
+    "id": "rez-aybrlqnnrwinc8bn6odxy",
+    "address": "7328 and 7342 – 144 Street",
+    "applicant": "Newton Fellowship Baptist Church",
+    "behalf": "null",
+    "description": "NCP Amendment for a portion of the site from Multiple Residential (Townhouses) to Institutional. Rezoning from RA and PA-1 to CD (based on PA-1) to permit the development of a child care centre on a lot with an existing church.",
+    "type": "rezoning",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA and PA-1",
+      "previousZoningDescription": "One-Acre Residential Zone and Assembly Hall 1 Zone",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development Zone"
+    },
+    "location": {
+      "latitude": 49.1363763,
+      "longitude": -122.8228933
+    },
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "minutesUrls": [
+      {
+        "date": "2021-02-08",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-02-08.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-01-25",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-01-25.pdf",
+        "status": "applied"
+      },
+      {
+        "date": "2024-01-15",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "status": "approved"
+      }
+    ],
+    "dates": {
+      "appliedDate": "2021-01-25",
+      "publicHearingDate": "2021-02-08",
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "createDate": "2024-01-26",
+    "updateDate": "2024-01-31",
+    "buildingType": "mixed use",
+    "applicationId": "7918-0163-00",
+    "reportUrls": [
+      {
+        "date": "2021-02-08",
+        "title": "Planning Report 7918-0163-00 (7328 - 144 Street\n7342 - 144 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0163-00_0.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2021-01-25",
+        "title": "Planning Report 7918-0163-00 (7328 - 144 Street, 7342 - 144 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0163-00_0.pdf",
+        "status": "applied"
       }
     ]
   },
@@ -5048,130 +5833,6 @@
         "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1012670855.pdf",
         "date": "2023-11-27",
         "status": "approved"
-      }
-    ]
-  },
-  {
-    "id": "rez-ibr8p5tkumefqqizxw890",
-    "address": "6229 Marine Drive",
-    "applicant": "Mania Hormozi",
-    "behalf": "CLT 0012 Community Society",
-    "description": "The proposed rezoning is for a non-market housing development on a portion of 6229 Marine Drive. The development will consist of up to 118 housing units provided at different levels of affordability, including 20% at the shelter rate, 50% at RGI (Rent Gear to Income) rates, and 30% at LEM (Low End Market) rates. The proposed development also includes changes to allowable height, density, and parking rates to facilitate the potential for additional units beyond the 118 units that are already funded.",
-    "type": "rezoning",
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2023-11-20",
-      "publicHearingDate": "2020-12-15",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 118,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "CD",
-      "previousZoningDescription": "Comprehensive Development District (based on the RM3r Multiple Family Residential District)",
-      "newZoningCode": "Amended CD",
-      "newZoningDescription": "Comprehensive Development District (based on the RM2 Multiple Family Residential District and RM2r Multiple Family Residential District, the Edmonds Town Centre Plan as guidelines)"
-    },
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2023-11-20",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
-        "status": "applied"
-      },
-      {
-        "date": "2023-10-30",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=627a3577-485d-48b0-8770-dc8f0199ea42&lang=English",
-        "status": "applied"
-      },
-      {
-        "date": "2020-12-15",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=05dd7e95-3161-4236-9589-054271d76f96&lang=English",
-        "status": "public hearing"
-      },
-      {
-        "date": "2020-11-23",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=1633beb4-41eb-4984-a38d-a7d7466cd76f&lang=English",
-        "status": "applied"
-      }
-    ],
-    "location": {
-      "latitude": 49.20404,
-      "longitude": -122.96476
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-18",
-    "buildingType": "multi-family residential",
-    "applicationId": "REZ #20-17",
-    "reportUrls": [
-      {
-        "date": "2023-11-20",
-        "title": "Revised REZ 20-17 Ptn 6229 Marine Drive PH Report (2023-11-20).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72014",
-        "status": "applied"
-      },
-      {
-        "date": "2023-11-20",
-        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72015",
-        "status": "applied"
-      },
-      {
-        "date": "2023-11-20",
-        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72016",
-        "status": "applied"
-      },
-      {
-        "date": "2023-10-30",
-        "title": "REZ 20-17 Ptn 6229 Marine Drive PH Report - 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71282",
-        "status": "applied"
-      },
-      {
-        "date": "2023-10-30",
-        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2 .pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71283",
-        "status": "applied"
-      },
-      {
-        "date": "2023-10-30",
-        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71284",
-        "status": "applied"
-      },
-      {
-        "date": "2020-12-15",
-        "title": "Rezoning Reference 20-17 PH Report 2020.11.23.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71805",
-        "status": "public hearing"
-      },
-      {
-        "date": "2020-12-15",
-        "title": "14250. No. 50, 2020 acd.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71806",
-        "status": "public hearing"
-      },
-      {
-        "date": "2020-12-15",
-        "title": "Rez Ref 20-17 Tracking 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=71807",
-        "status": "public hearing"
-      },
-      {
-        "date": "2020-11-23",
-        "title": "Rezoning Reference 20-17 PH Report 2020.11.23(1).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=56025",
-        "status": "applied"
       }
     ]
   },
@@ -41562,89 +42223,6 @@
     ]
   },
   {
-    "id": "rez-3qbxxcrudwxkwjm3ipyk8",
-    "address": "7271 Gilley Avenue",
-    "applicant": "Rajesh Kumar",
-    "behalf": null,
-    "description": "The purpose of the proposed rezoning bylaw amendment is to permit a place of public worship, food production, a childcare facility, and accessory uses on the subject site. The site is irregular in shape with a site area of approximately 6,276m^2 (67,554sq. ft.).",
-    "type": "rezoning",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2021-08-30",
-      "publicHearingDate": "2022-06-28",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "C2",
-      "previousZoningDescription": "Community Commercial District",
-      "newZoningCode": "CD",
-      "newZoningDescription": "Comprehensive Development District"
-    },
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2022-06-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=3f35b5be-526f-4f9a-87cf-936a7d277258&lang=English",
-        "status": "public hearing"
-      },
-      {
-        "date": "2022-05-30",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=7b6a8ba2-f602-4a7b-a700-36f7f6ec991c&lang=English",
-        "status": "applied"
-      },
-      {
-        "date": "2021-08-30",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=b8619f92-ac48-4296-96e9-3b67c82bfc93&lang=English",
-        "status": "applied"
-      }
-    ],
-    "location": {
-      "latitude": 49.2179285,
-      "longitude": -122.972863
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-18",
-    "buildingType": "mixed use",
-    "applicationId": "REZ #21-27",
-    "reportUrls": [
-      {
-        "date": "2022-06-28",
-        "title": "Rezoning Reference 21-27 PH Report 2022.05.30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=62273",
-        "status": "public hearing"
-      },
-      {
-        "date": "2022-06-28",
-        "title": "14455 No. 18, 2022 CD.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=62274",
-        "status": "public hearing"
-      },
-      {
-        "date": "2022-05-30",
-        "title": "Rezoning Reference 21-27 PH Report 2022.05.30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=60434",
-        "status": "applied"
-      },
-      {
-        "date": "2021-08-30",
-        "title": "Rezoning Reference 21-27 Initial Report 2021.08.30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=53519",
-        "status": "applied"
-      }
-    ]
-  },
-  {
     "id": "rez-zci135igs2ppuw65qzllw",
     "address": "6622, 6688 Willingdon Avenue",
     "applicant": "IDS Group",
@@ -54288,72 +54866,6 @@
     ]
   },
   {
-    "id": "rez-25frjpg7v9bca3daiboah",
-    "address": "6445 - 138 Street",
-    "applicant": "A. Brar, J. Brar, K. Brar",
-    "behalf": null,
-    "description": "Rezoning from One-Acre Residential Zone to Single Family Residential (13) Zone to allow subdivision into two single family small lots.",
-    "type": "rezoning",
-    "status": "public hearing",
-    "stats": {
-      "buildings": 1,
-      "stratas": 2,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "RA",
-      "previousZoningDescription": "One-Acre Residential Zone",
-      "newZoningCode": "RF-13",
-      "newZoningDescription": "Single Family Residential (13) Zone"
-    },
-    "location": {
-      "latitude": 49.1199841,
-      "longitude": -122.8403063
-    },
-    "city": "Surrey",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2022-01-17",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2022-01-17.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-06",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-12-06.pdf",
-        "status": "applied"
-      }
-    ],
-    "dates": {
-      "appliedDate": "2021-12-06",
-      "publicHearingDate": "2022-01-17",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-26",
-    "updateDate": "2024-01-26",
-    "buildingType": "single-family residential",
-    "applicationId": "7920-0241-00",
-    "reportUrls": [
-      {
-        "date": "2022-01-17",
-        "title": "Planning Report 7920-0241-00 (6445 - 138 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0241-00.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-06",
-        "title": "Planning Report 7920-0241-00 (6445 - 138 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0241-00.pdf",
-        "status": "applied"
-      }
-    ]
-  },
-  {
     "id": "rez-w7ie86pzjewa5eevdhoh7",
     "address": "6844, 6854 and 6864 - 147 Street",
     "applicant": "K. Yong, V. Mann, 1160004 B.C. Ltd.",
@@ -55139,72 +55651,6 @@
     ]
   },
   {
-    "id": "rez-e831vzxqn6damxamu6pd4",
-    "address": "6113, 6133 - 144 Street",
-    "applicant": "P. Kaur, Bt144 Holdings Ltd.",
-    "behalf": null,
-    "description": "NCP Amendment from 'Proposed Parks and Schools and Townhouses (15 upa max)' to 'Proposed Parks and Schools, Townhouses (25 upa max)' and adjustments to the road and lane network. Rezoning from RA to RM-30. Development Permit / Development Variance Permit to permit the development of 56 townhouse units and an extension to Woodward Hill Park.",
-    "type": "rezoning",
-    "status": "public hearing",
-    "stats": {
-      "buildings": 1,
-      "stratas": 56,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "RA",
-      "previousZoningDescription": "One-Acre Residential Zone",
-      "newZoningCode": "RM-30",
-      "newZoningDescription": "Multiple Residential 30 Zone"
-    },
-    "location": {
-      "latitude": 49.11431,
-      "longitude": -122.8236
-    },
-    "city": "Surrey",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2021-12-20",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-12-20.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-06",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-12-06.pdf",
-        "status": "applied"
-      }
-    ],
-    "dates": {
-      "appliedDate": "2021-12-06",
-      "publicHearingDate": "2021-12-20",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-26",
-    "updateDate": "2024-01-26",
-    "buildingType": "townhouse",
-    "applicationId": "7919-0011-00",
-    "reportUrls": [
-      {
-        "date": "2021-12-20",
-        "title": "Planning Report 7919-0011-00 and 7919-0011-01 (6133 - 144 Street\n6113 - 144 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0011-00_0.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-06",
-        "title": "Planning Report 7919-0011-00 and 7919-0011-01 (6133 - 144 Street, 6113 - 144 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0011-00_0.pdf",
-        "status": "applied"
-      }
-    ]
-  },
-  {
     "id": "rez-8botnwb0izzbn53a54t5l",
     "address": "7140 - 141A Street, 7138 – 141A Street",
     "applicant": "Arcotech Development Inc. (Daoud Nouri)",
@@ -55416,84 +55862,6 @@
         "date": "2021-11-22",
         "title": "Rezoning Reference 19-49 Public Hearing Report 2021.11.22.pdf",
         "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=56910",
-        "status": "applied"
-      }
-    ]
-  },
-  {
-    "id": "rez-abbravpeook14pzawjm9d",
-    "address": "2505 Eastbrook Parkway",
-    "applicant": "T.I. Studios Architecture Inc.",
-    "behalf": null,
-    "description": "The proposed rezoning bylaw amendment is to permit the use of the property as an automotive dealership and service centre for an electric vehicle manufacturer. Minor interior and exterior renovations to the existing building are proposed.",
-    "type": "rezoning",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": "2021-11-22",
-      "publicHearingDate": "2021-12-14",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "CD",
-      "previousZoningDescription": "Comprehensive Development District (based on M5 Light Industrial District)",
-      "newZoningCode": "CD",
-      "newZoningDescription": "Comprehensive Development District (based on the M5 Light Industrial District and M1 Manufacturing District)"
-    },
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2021-12-14",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=770a969a-b538-4e92-8459-bc47ec1075f1&lang=English",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-11-22",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=15d44279-cfb2-4acb-a8d1-f11e759bf2e4&lang=English",
-        "status": "applied"
-      }
-    ],
-    "location": {
-      "latitude": 49.261311,
-      "longitude": -123.002285
-    },
-    "createDate": "2024-01-18",
-    "updateDate": "2024-01-18",
-    "buildingType": "commercial",
-    "applicationId": "REZ #21-17",
-    "reportUrls": [
-      {
-        "date": "2021-12-14",
-        "title": "Rezoning Reference 21-17 PH Report 2021.11.22.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57896",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-14",
-        "title": "14400. No. 35, 2021 ACD.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57897",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-12-14",
-        "title": "Rez 21-17 PH Corresp Tracking No. 2 _Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=57898",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-11-22",
-        "title": "Rezoning Reference 21-17 PH Report 2021.11.22.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=56911",
         "status": "applied"
       }
     ]
@@ -56662,72 +57030,6 @@
     "buildingType": "other",
     "applicationId": "7916-0073-00",
     "reportUrls": []
-  },
-  {
-    "id": "rez-967y7yau49c3iejw5m11b",
-    "address": "1710 - 140 Street",
-    "applicant": "Mainland Engineering Design Corporation (Rajeev Mangla)",
-    "behalf": null,
-    "description": "Rezoning from RF to RF-10 to allow subdivision of the property into two single family small lots.",
-    "type": "rezoning",
-    "status": "public hearing",
-    "stats": {
-      "buildings": 2,
-      "stratas": 2,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "RF",
-      "previousZoningDescription": "Single Family Residential Zone",
-      "newZoningCode": "RF-10",
-      "newZoningDescription": "Single Family Residential (10) Zone"
-    },
-    "location": {
-      "latitude": 49.03336059999999,
-      "longitude": -122.8339604
-    },
-    "city": "Surrey",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2021-12-06",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-12-06.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-11-22",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-11-22.pdf",
-        "status": "applied"
-      }
-    ],
-    "dates": {
-      "appliedDate": "2021-11-22",
-      "publicHearingDate": "2021-12-06",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-26",
-    "updateDate": "2024-01-26",
-    "buildingType": "single-family residential",
-    "applicationId": "7921-0156-00",
-    "reportUrls": [
-      {
-        "date": "2021-12-06",
-        "title": "Planning Report 7921-0156-00 (1710 - 140 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0156-00.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-11-22",
-        "title": "Planning Report 7921-0156-00 (1710 - 140 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0156-00.pdf",
-        "status": "applied"
-      }
-    ]
   },
   {
     "id": "rez-r3r3r4ifs4wg6xr8qh4op",
@@ -73547,72 +73849,6 @@
         "url": "https://citycouncil.richmond.ca/__shared/assets/BL_9731_CNCL_02082157714.pdf",
         "date": "2021-02-08",
         "status": "approved"
-      }
-    ]
-  },
-  {
-    "id": "rez-aybrlqnnrwinc8bn6odxy",
-    "address": "7328 and 7342 – 144 Street",
-    "applicant": "Newton Fellowship Baptist Church",
-    "behalf": "null",
-    "description": "NCP Amendment for a portion of the site from Multiple Residential (Townhouses) to Institutional. Rezoning from RA and PA-1 to CD (based on PA-1) to permit the development of a child care centre on a lot with an existing church.",
-    "type": "rezoning",
-    "status": "public hearing",
-    "stats": {
-      "buildings": 1,
-      "stratas": 0,
-      "rentals": 0,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "RA and PA-1",
-      "previousZoningDescription": "One-Acre Residential Zone and Assembly Hall 1 Zone",
-      "newZoningCode": "CD",
-      "newZoningDescription": "Comprehensive Development Zone"
-    },
-    "location": {
-      "latitude": 49.1363763,
-      "longitude": -122.8228933
-    },
-    "city": "Surrey",
-    "metroCity": "Metro Vancouver",
-    "minutesUrls": [
-      {
-        "date": "2021-02-08",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2021-02-08.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-01-25",
-        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2021-01-25.pdf",
-        "status": "applied"
-      }
-    ],
-    "dates": {
-      "appliedDate": "2021-01-25",
-      "publicHearingDate": "2021-02-08",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "createDate": "2024-01-26",
-    "updateDate": "2024-01-26",
-    "buildingType": "mixed use",
-    "applicationId": "7918-0163-00",
-    "reportUrls": [
-      {
-        "date": "2021-02-08",
-        "title": "Planning Report 7918-0163-00 (7328 - 144 Street\n7342 - 144 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0163-00_0.pdf",
-        "status": "public hearing"
-      },
-      {
-        "date": "2021-01-25",
-        "title": "Planning Report 7918-0163-00 (7328 - 144 Street, 7342 - 144 Street)",
-        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0163-00_0.pdf",
-        "status": "applied"
       }
     ]
   },
