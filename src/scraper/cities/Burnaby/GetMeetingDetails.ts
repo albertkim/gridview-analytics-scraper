@@ -19,7 +19,7 @@ export async function getMeetingDetailsAfterMar2020(page: Page, url: string, dat
   const results = await page.evaluate(async () => {
 
     // Get the list items
-    const itemElements = $('.AgendaItemContainer').has('img[title="Attachments"]').filter((index, element) => {
+    const itemElements = $('.AgendaItemContainer:has(> .AgendaItem > .AgendaItemTitleRow > .AgendaItemIcons > a:visible)').filter((index, element) => {
       $(element).children().each((index, childElement) => {
         const hasEmptyClass = $(childElement).hasClass('')
         if (hasEmptyClass) return false
@@ -44,7 +44,7 @@ export async function getMeetingDetailsAfterMar2020(page: Page, url: string, dat
       eval(hrefJavascript.replace('javascript:', ''))
       await new Promise((resolve) => {setTimeout(resolve, 2000)})
 
-      const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment:not(:hidden) a').map((index, element) => {
+      const reportUrls = $('.AgendaItemSelectedDetails').find('.AgendaItemAttachment a:visible').map((index, element) => {
         return {
           title: $(element).text(),
           url: new URL($(element).attr('href')!, window.location.origin).href
