@@ -345,14 +345,20 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   let preferred: 'old' | 'new' = 'old'
   const oldMinuteDate = getLatestMinuteDate(oldEntry)
   const newMinuteDate = getLatestMinuteDate(newEntry)
-  if (oldMinuteDate && oldMinuteDate.status === 'applied') {
-    preferred = 'old'
-  } else if (newMinuteDate && newMinuteDate.status === 'applied') {
+
+  // If development permit, always prefer new (don't have progressive statuses with DPs usually)
+  if (oldEntry.type === 'development permit') {
     preferred = 'new'
-  } else if (oldMinuteDate && oldMinuteDate.status === 'public hearing') {
-    preferred = 'old'
-  } else if (newMinuteDate && newMinuteDate.status === 'public hearing') {
-    preferred = 'new'
+  } else if (oldEntry.type === 'rezoning') {
+    if (oldMinuteDate && oldMinuteDate.status === 'applied') {
+      preferred = 'old'
+    } else if (newMinuteDate && newMinuteDate.status === 'applied') {
+      preferred = 'new'
+    } else if (oldMinuteDate && oldMinuteDate.status === 'public hearing') {
+      preferred = 'old'
+    } else if (newMinuteDate && newMinuteDate.status === 'public hearing') {
+      preferred = 'new'
+    }
   }
 
   // Identify whether the old or new entry has the latest minute date

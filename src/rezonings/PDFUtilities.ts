@@ -38,8 +38,13 @@ export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePD
 		singlePagePDF.addPage(copiedPage)
 		const singlePagePDFBytes = await singlePagePDF.save()
 		const pageText = (await pdfParse(singlePagePDFBytes as Buffer)).text
-		if (pageText.replace(/\s/g, '').length > minCharacterCount && expectedWords.every(word => pageText.toLowerCase().includes(word.toLowerCase()))) {
-			finalPDFTextArray.push(pageText)
+		const cleanedText = pageText
+			.split('\n')
+			.map(line => line.trim().replace(/\s+/g, ' '))
+			.join('\n')
+			.replace(/\n+/g, '\n')
+		if (cleanedText.length > minCharacterCount && expectedWords.every(word => cleanedText.toLowerCase().includes(word.toLowerCase()))) {
+			finalPDFTextArray.push(cleanedText)
 		}
 	}
 

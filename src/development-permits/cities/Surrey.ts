@@ -52,6 +52,7 @@ export async function analyze(options: IOptions) {
 
     if (news.reportUrls.length === 0) {
       console.log(chalk.yellow(`No planning report attached for Surrey development permit ${news.date} - ${news.title}`))
+      continue
     }
 
     const report = news.reportUrls[0]

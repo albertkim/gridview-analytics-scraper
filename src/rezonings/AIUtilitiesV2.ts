@@ -59,8 +59,6 @@ export async function AIGetPartialRecords(contents: string, expectedItems: numbe
 
   const summary = await AISummarizeDocument(contents, expectedItems, applicationIDFormat)
 
-  console.log(summary)
-
   const partialRezoningDetails: {
     applicationId: string | null
     address: string
@@ -164,7 +162,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     }`,
     stats: `stats: {
       buildings: your best guess as to the number of new buildings being proposed or null if unclear
-      stratas: your best guess as to the total number of non-rental residential units/townhouses or null if unclear - default to assuming strata if not specified
+      stratas: your best guess as to the total number of non-rental residential units/houses/townhouses - default to assuming strata if not specified - null if unclear
       rentals: total number of rental units or null if unclear - do not default to rental if not specified
       hotels: total number of hotel units (not buildings) or null if unclear
       fsr: total floor space ratio or null if unclear

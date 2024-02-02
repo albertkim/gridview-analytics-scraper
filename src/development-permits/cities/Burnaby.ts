@@ -1,6 +1,6 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
-import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { downloadPDF, generatePDFTextArray, parsePDF } from '../../rezonings/PDFUtilities'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'
@@ -80,63 +80,68 @@ export async function analyze(options: IOptions) {
   for (const urlObject of developmentPermitUrls) {
 
     const pdf = await downloadPDF(urlObject.url)
-    const parsed = await parsePDF(pdf)
+    const parsedArray = await generatePDFTextArray(pdf)
 
-    // Find the number of instances of "Site Address" in the text
-    const regex = /Site Address/g
-    const matches = parsed.match(regex)
-    const uniqueMatches = new Set(matches)
-    const expectedRecords = uniqueMatches.size || 1
+    for (const parsed of parsedArray) {
 
-    const response = await AIGetPartialRecords(parsed, expectedRecords, 'BLDXX-XXXXX where X is a number', {
-      introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
-      fieldsToAnalyze: ['building type', 'stats']
-    })
+      // Find the number of instances of "Site Address" in the text
+      const regex = /Site Address/g
+      const matches = parsed.match(regex)
+      const uniqueMatches = new Set(matches)
+      const expectedRecords = uniqueMatches.size || 1
 
-    // NOTE: For now, the $ value of work is not incorporated, something to think about for the future.
-    // My current thinking is that not enough cities publish these values.
-    const records: IFullRezoningDetail[] = response.map((permit) => {
-      return {
-        id: generateID('dev'),
-        type: 'development permit',
-        city: 'Burnaby',
-        metroCity: 'Metro Vancouver',
-        applicationId: permit.applicationId,
-        address: permit. address,
-        applicant: permit.applicant,
-        behalf: permit.behalf,
-        description: permit.description,
-        buildingType: permit.buildingType,
-        status: 'approved',
-        stats: permit.stats,
-        zoning: permit.zoning,
-        dates: {
-          appliedDate: null,
-          publicHearingDate: null,
-          approvalDate: urlObject.date,
-          denialDate: null,
-          withdrawnDate: null
-        },
-        reportUrls: [
-          {
-            title: urlObject.title,
-            url: urlObject.url,
-            date: urlObject.date,
-            status: 'approved'
-          }
-        ],
-        minutesUrls: [],
-        location: {
-          latitude: null,
-          longitude: null
-        },
-        createDate: moment().format('YYYY-MM-DD'),
-        updateDate: moment().format('YYYY-MM-DD')
+      const response = await AIGetPartialRecords(parsed, expectedRecords, 'BLDXX-XXXXX where X is a number', {
+        introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
+        fieldsToAnalyze: ['building type', 'stats']
+      })
+
+      // NOTE: For now, the $ value of work is not incorporated, something to think about for the future.
+      // My current thinking is that not enough cities publish these values.
+      const records: IFullRezoningDetail[] = response.map((permit) => {
+        return {
+          id: generateID('dev'),
+          type: 'development permit',
+          city: 'Burnaby',
+          metroCity: 'Metro Vancouver',
+          applicationId: permit.applicationId,
+          address: permit. address,
+          applicant: permit.applicant,
+          behalf: permit.behalf,
+          description: permit.description,
+          buildingType: permit.buildingType,
+          status: 'approved',
+          stats: permit.stats,
+          zoning: permit.zoning,
+          dates: {
+            appliedDate: null,
+            publicHearingDate: null,
+            approvalDate: urlObject.date,
+            denialDate: null,
+            withdrawnDate: null
+          },
+          reportUrls: [
+            {
+              title: urlObject.title,
+              url: urlObject.url,
+              date: urlObject.date,
+              status: 'approved'
+            }
+          ],
+          minutesUrls: [],
+          location: {
+            latitude: null,
+            longitude: null
+          },
+          createDate: moment().format('YYYY-MM-DD'),
+          updateDate: moment().format('YYYY-MM-DD')
+        }
+      })
+
+      for (const record of records) {
+        RecordsRepository.upsertRecords('development permit', [record])
       }
-    })
 
-    for (const record of records) {
-      RecordsRepository.upsertRecords('development permit', [record])
+
     }
 
   }

@@ -2,16 +2,15 @@ import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { analyze as analyzeSurrey } from './cities/Surrey'
-import { RecordsRepository } from '../repositories/RecordsRepositoryV2'
 
 // yarn run development-permit
 const startDate = '2023-12-01'
 const endDate = '2024-01-31'
 const citiesToAnalyze: string[] = [
-  'Vancouver',
+  // 'Vancouver',
   'Richmond',
-  'Burnaby',
-  'Surrey'
+  // 'Burnaby',
+  // 'Surrey'
 ]
 
 async function main() {
@@ -32,9 +31,8 @@ async function main() {
     await analyzeSurrey({startDate: startDate, endDate: endDate})
   }
 
-  // Check in drafts into final when ready
-  const repository = new RecordsRepository('final')
-  // repository.finalCheckIn()
+  // Check in drafts with the command
+  // yarn run check-in
 
 }
 

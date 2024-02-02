@@ -137,8 +137,11 @@ export async function analyze(options: IOptions) {
           status: one of "approved", "applied", "denied", "withdrawn"
         }[]
       }
+      Make sure you read carefully, and format your data accurately.
       Here is the text: ${meeting.contents}
     `)
+
+    console.log(developmentPermitDecisionResponse)
 
     if (!developmentPermitDecisionResponse || !developmentPermitDecisionResponse.data) {
       console.log(chalk.red(`No response for Richmond development permit meeting ${meeting.date}`))
@@ -221,8 +224,3 @@ export async function analyze(options: IOptions) {
   }
 
 }
-
-analyze({
-  startDate: '2023-09-27',
-  endDate: '2023-09-28'
-})
