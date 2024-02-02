@@ -2,7 +2,7 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
@@ -25,7 +25,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
     const infoString = `${news.title} - ${news.contents}`
 
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getBurnabyBaseGPTQuery(infoString),
       {analyzeType: true, analyzeStats: false} // No need to get stats, can't get it from the available documents
     )

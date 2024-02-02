@@ -2,7 +2,7 @@ import moment from 'moment'
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
@@ -44,7 +44,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRez
     }
 
     // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getBurnabyBaseGPTQuery(applicationContent),
       {analyzeType: true, analyzeStats: true}
     )

@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
@@ -35,7 +35,7 @@ export async function parseApplication(news: IMeetingDetail) {
 
   try {
 
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getSurreyBaseGPTQuery(news.contents),
       {analyzeType: true, analyzeStats: true}
     )

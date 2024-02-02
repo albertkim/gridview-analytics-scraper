@@ -72,7 +72,7 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 
 // This function returns a partial rezoning detail object and retries if the first time doesn't work
 // Caller is expected to handle thrown errors - best practice is to add to the ErrorsRepository
-export async function chatGPTPartialRezoningQuery(query: string, options: {analyzeType: boolean, analyzeStats: boolean}): Promise<IPartialRezoningDetail | null> {
+export async function chatGPTRezoningQuery(query: string, options: {analyzeType: boolean, analyzeStats: boolean}): Promise<IPartialRezoningDetail | null> {
 	try {
 
 		const content = await chatGPTTextQuery(query)
@@ -205,7 +205,8 @@ export async function imageQuery(query: string, fileData: string, gptVersion?: '
 export function getGPTBaseRezoningQuery(document: string, options?: BaseRezoningQueryParams) {
 
   return `
-		${options?.introduction ? options.introduction : 'Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}.'}
+		Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}.
+		${options?.introduction ? options.introduction : ''}
     {
       applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
       address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist

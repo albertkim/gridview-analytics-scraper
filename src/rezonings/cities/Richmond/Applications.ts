@@ -2,7 +2,7 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'
@@ -34,7 +34,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     const parsedPDF = pdfPageIndexesToParse.map((i) => pdfTextArray[i]).join('\n')
 
     // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getRichmondBaseGPTQuery(parsedPDF),
       {analyzeType: true, analyzeStats: true}
     )

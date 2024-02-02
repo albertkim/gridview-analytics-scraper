@@ -2,7 +2,7 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { getSurreyBylawGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { generateID } from '../../../repositories/GenerateID'
 import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
@@ -24,7 +24,7 @@ export async function parseBylaw(news: IMeetingDetail) {
   try {
 
     // Don't need to be strict with getting stats for bylaws - application data is more accurate anyways, save a GPT 4 call
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getSurreyBylawGPTQuery(news.contents),
       {analyzeType: true, analyzeStats: false}
     )

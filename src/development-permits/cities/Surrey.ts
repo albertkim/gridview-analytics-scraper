@@ -1,5 +1,9 @@
 import moment from 'moment'
+import chalk from 'chalk'
 import { RawRepository } from '../../repositories/RawRepository'
+import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
+import { generateID } from '../../repositories/GenerateID'
+import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
 
 interface IOptions {
   startDate: string | null
@@ -10,7 +14,7 @@ interface IOptions {
 // Development permits are mentioned in scraped city council meetings
 async function scrape(options: IOptions) {
 
-  const news = await RawRepository.getNews({city: 'Surrey'})
+  const news = RawRepository.getNews({city: 'Surrey'})
 
   // Filter by date and development permits
   const filteredNews = news
@@ -37,11 +41,89 @@ async function scrape(options: IOptions) {
 
 }
 
+interface IDevelopmentPermitGPTItem {
+  permitNumber: string
+  address: string
+  buildingType: string
+  stats: {
+    buildings: number | null
+    stratas: number | null
+    rentals: number | null
+    hotels: number | null
+    fsr: number | null
+    storeys: number | null
+  }
+  applicant: string | null
+  description: string
+}
+
 export async function analyze(options: IOptions) {
 
-  const developmentPermits = await scrape(options)
+  const newsWithDevelopmentPermits = await scrape(options)
 
-  // TODO: For each development permit item, check to see if the development permit is for a new building. If so, add to database.
-  // Have to wait for the RezoningsRepository to be refactored first.
+  for (const news of newsWithDevelopmentPermits) {
+
+    if (news.reportUrls.length === 0) {
+      console.log(chalk.yellow(`No planning report attached for Surrey development permit ${news.date} - ${news.title}`))
+    }
+
+    const report = news.reportUrls[0]
+
+    const response = await AIGetPartialRecords(news.contents, 1, 'XXXX-XXXX-XX where X is a number', {
+      introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
+      fieldsToAnalyze: ['building type', 'stats']
+    })
+
+    const records: IFullRezoningDetail[] = response.map((permit) => {
+      return {
+        id: generateID('dev'),
+        city: 'Surrey',
+        metroCity: 'Metro Vancouver',
+        type: 'development permit',
+        applicationId: permit.applicationId,
+        address: permit.address,
+        applicant: permit.applicant,
+        behalf: permit.behalf,
+        description: permit.description,
+        buildingType: permit.buildingType,
+        status: 'approved',
+        stats: permit.stats,
+        zoning: permit.zoning,
+        dates: {
+          appliedDate: null,
+          publicHearingDate: null,
+          approvalDate: news.date,
+          denialDate: null,
+          withdrawnDate: null
+        },
+        reportUrls: [
+          {
+            title: report.title,
+            url: report.url,
+            date: news.date,
+            status: 'approved'
+          }
+        ],
+        minutesUrls: news.minutesUrl ? [
+          {
+            url: news.minutesUrl,
+            date: news.date,
+            status: 'approved'
+          }
+        ] : [],
+        location: {
+          latitude: null,
+          longitude: null
+        },
+        createDate: moment().format('YYYY-MM-DD'),
+        updateDate: moment().format('YYYY-MM-DD')
+      }
+    })
+
+    for (const record of records) {
+      RecordsRepository.upsertRecords('development permit', [record])
+    }
+    
+  }
 
 }

@@ -1,80 +1,169 @@
 import moment from 'moment'
+import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { IMeetingDetail, RawRepository } from '../../repositories/RawRepository'
 import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTPartialRezoningQuery, getGPTBaseRezoningQuery } from '../../rezonings/AIUtilities'
-import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
+import { IFullRezoningDetail, RecordsRepository, ZoningStatus } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
+import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
+import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
+import { formatDateString } from '../../scraper/BulkUtilities'
 
 interface IOptions {
-  startDate: string | null
-  endDate: string | null
+  startDate: string
+  endDate: string
   headless?: boolean | 'new'
 }
 
-// Development permits are mentioned in scraped city council meetings
+// Scrape development permit meeting minutes
 async function scrape(options: IOptions) {
 
-  const news = RawRepository.getNews({city: 'Richmond'})
+  const browser = await puppeteer.launch({
+    headless: 'new'
+  })
 
-  // Filter by date and development permits
-  const filteredNews = news
-    .filter((n) => {
-      // Check title and make sure it includes "permit - development" or "permits - development", case-insensitive, variable number of spaces/dashes in between
-      const regex = /permits?\s*-\s*development/i
-      return regex.test(n.title)
-    })
-    .filter((n) => {
-      if (options.startDate) {
-        if (moment(n.date).isBefore(options.startDate!)) {
-          return false
-        }
-      }
-      if (options.endDate) {
-        if (moment(n.date).isSameOrAfter(options.endDate!)) {
-          return false
-        }
-      }
-      return true
+  const page = await browser.newPage()
+
+  // Get years in YYYY string format between and including startDate and endDate
+  const years: string[] = []
+  let currentYear = moment(options.startDate).year()
+  const endYear = moment(options.endDate).year()
+  while (currentYear <= endYear) {
+    years.push(currentYear.toString())
+    currentYear++
+  }
+
+  const minuteUrlObjects: {date: string, minutesUrl: string, contents: string, reports: {title: string, url: string}[]}[] = []
+
+  for (const year of years) {
+
+    const yearUrl = `https://citycouncil.richmond.ca/schedule/WebAgendaMinutesList.aspx?Category=8&Year=${year}`
+    await page.goto(yearUrl)
+
+    const results = await page.evaluate(() => {
+      // Get all <a> tags with the word "minutes" (case insensitive) and get the closest parent <tr>
+      const tableRows = $('a:contains("Minutes")').closest('tr').closest('td')
+      const results = tableRows
+        .map((index, element) => {
+          const date = $(element).find("span[id$='OpenMeetingDate']").text().trim()
+          const minutesUrl = $(element).find('a:contains("Minutes")')?.attr('href')
+          return {
+            date: date,
+            minutesUrl: minutesUrl ? new URL(minutesUrl, window.location.origin).href : null
+          }
+        })
+        .get()
+        .filter((item) => {
+          return !!item.date && !!item.minutesUrl 
+        })
+      return results as {date: string, minutesUrl: string}[]
     })
 
-  return filteredNews
+    results.forEach((result) => {
+      result.date = formatDateString(result.date)
+    })
+
+    // Only add results that are within the date range
+    const filteredResults = results.filter((result) => {
+      return moment(result.date).isBetween(options.startDate, options.endDate, null, '[)')
+    }).map((result) => {
+      return {
+        date: result.date,
+        minutesUrl: result.minutesUrl,
+        contents: '',
+        reports: []
+      }
+    })
+
+    minuteUrlObjects.push(...filteredResults)
+
+  }
+
+  // For each meeting minute, get the contents and the development permit reports
+  for (const minute of minuteUrlObjects) {
+    await page.goto(minute.minutesUrl)
+    const result = await page.evaluate(() => {
+      // Get all <a> tags that include the words "development" and "permit", case insensitive
+      const contents = $('.content').text()
+        .split('\n')
+        .map((line) => line.trim())
+        .join('\n')
+        .replace(/\n+/g, '\n')
+      const reportUrls = $('.content a')
+        .filter((index, element) => {
+          const text = $(element).text().toLowerCase()
+          return text.includes('permit') && text.includes('development')
+        })
+        .map((index, element) => {
+          return {
+            url: new URL($(element).attr('href')!, window.location.origin).href,
+            title: $(element).text().trim()
+          }
+        })
+        .get()
+      return {
+        contents: contents,
+        reportUrls: reportUrls
+      }
+    })
+    minute.contents = result.contents
+    minute.reports = result.reportUrls
+  }
+
+  browser.close()
+
+  return minuteUrlObjects
 
 }
 
-// Each news item may have one or more development permit reports, and the permit reports may even refer to the same one (ex. a development panel permit minute and an approval report - ex: http://citycouncil.richmond.ca/decisions/search/permalink/15569)
-// TODO: May be an issue if multiple development permits are issued in the same document
+
+// Get every pdf <a> link that relates to a development permit.
+// Summarize the entire .contents of the details page to get the permit decision status
+// Combine permit details with the decision status and the date of the meeting
 export async function analyze(options: IOptions) {
 
-  const newsWithDevelopmentPermits = await scrape(options)
+  const minutes = await scrape(options)
 
-  for (const news of newsWithDevelopmentPermits) {
+  for (const meeting of minutes) {
 
-    // Look for reports that include "report to council" (note that each word could be on separate lines)
-    const matchingReportContents: {news: IMeetingDetail, reportUrl: string, contents: string}[] = []
+    // AI summary of which permits were approved
+    const developmentPermitDecisionResponse = await chatGPTTextQuery(`
+      Given the following text, identify which development permits (format DP XX-XXXXXX where X is a number) were approved. Return the data in the following JSON format:
+      {
+        data: {
+          developmentPermitId: string - DP XX-XXXXXX,
+          status: one of "approved", "applied", "denied", "withdrawn"
+        }[]
+      }
+      Here is the text: ${meeting.contents}
+    `)
 
-    for (const report of news.reportUrls) {
-      const pdf = await downloadPDF(report.url)
-      const parsedReport = await parsePDF(pdf, 3) // These reports are strange because almost every word is on a new line
-      const regex = /report\s+to\s+council/i
-      const match = regex.test(parsedReport.replace(/\n/g, ' '))
-      if (match) matchingReportContents.push({
-        news: news,
-        reportUrl: report.url,
-        contents: parsedReport
-      })
+    if (!developmentPermitDecisionResponse || !developmentPermitDecisionResponse.data) {
+      console.log(chalk.red(`No response for Richmond development permit meeting ${meeting.date}`))
+      continue
     }
 
-    for (const contents of matchingReportContents) {
-      const response = await chatGPTPartialRezoningQuery(
-        getGPTBaseRezoningQuery(contents.contents, {
-          applicationId: `permit id in the format of DP XX-XXXXXX where X is a number`
-        }),
-        {analyzeType: true, analyzeStats: true}
-      )
+    const developmentPermitDecisions = developmentPermitDecisionResponse.data as {developmentPermitId: string, status: string}[]
 
-      if (!response) {
-        console.log(chalk.red(`Error with Richmond development permit ${contents.news.date} - ${contents.reportUrl}`))
+    for (const report of meeting.reports) {
+      const pdf = await downloadPDF(report.url)
+      const parsedReport = await parsePDF(pdf, 3)
+
+      const permits = await AIGetPartialRecords(parsedReport, 1, 'DP XX-XXXXXX where X is a number', {
+        introduction: 'Identify only the development permits that refer to new developments, not alterations.',
+        fieldsToAnalyze: ['building type', 'stats']
+      })
+
+      if (permits.length === 0) {
+        continue
+      }
+
+      const permit = permits[0]
+
+      // Find the development permit by doing a search on only the XX-XXXXXX part (exclude the DP) and then getting the status string, make into lowercase
+      const permitNumber = parsedReport.match(/\d{2}-\d{6}/)![0]
+      const status = developmentPermitDecisions.find((permit) => permit.developmentPermitId.includes(permitNumber))?.status.toLowerCase() as ZoningStatus
+
+      if (!status) {
         continue
       }
 
@@ -83,35 +172,37 @@ export async function analyze(options: IOptions) {
         city: 'Richmond',
         metroCity: 'Metro Vancouver',
         type: 'development permit',
-        applicationId: response.applicationId,
-        address: response.address,
-        applicant: response.applicant,
-        behalf: response.behalf,
-        description: response.description,
-        buildingType: response.buildingType,
-        status: 'approved',
+        applicationId: permit.applicationId,
+        address: permit.address,
+        applicant: permit.applicant,
+        behalf: permit.behalf,
+        description: permit.description,
+        buildingType: permit.buildingType,
+        status: status,
         dates: {
-          appliedDate: null,
+          appliedDate: status === 'applied' ? meeting.date : null,
           publicHearingDate: null,
-          approvalDate: contents.news.date,
-          denialDate: null,
-          withdrawnDate: null
+          approvalDate: status === 'approved' ? meeting.date : null,
+          denialDate: status === 'denied' ? meeting.date : null,
+          withdrawnDate: status === 'withdrawn' ? meeting.date : null
         },
-        stats: response.stats,
-        zoning: response.zoning,
+        stats: permit.stats,
+        zoning: permit.zoning,
         reportUrls: [
           {
-            url: contents.reportUrl,
-            title: 'Report to Council',
-            date: contents.news.date,
-            status: 'approved'
+            url: report.url,
+            title: report.title,
+            date: meeting.date,
+            status: status
           }
         ],
-        minutesUrls: contents.news.minutesUrl ? [{
-          url: contents.news.minutesUrl,
-          date: contents.news.date,
-          status: 'approved'
-        }] : [],
+        minutesUrls: [
+          {
+            url: meeting.minutesUrl,
+            date: meeting.date,
+            status: status
+          }
+        ],
         location: {
           latitude: null,
           longitude: null
@@ -120,10 +211,15 @@ export async function analyze(options: IOptions) {
         updateDate: moment().format('YYYY-MM-DD')
       }
 
-      RecordsRepository.upsertRecords('development permit', [record])
+      console.log(record)
+      // RecordsRepository.upsertRecords('development permit', [record])
     }
 
   }
 
-
 }
+
+analyze({
+  startDate: '2023-09-27',
+  endDate: '2023-09-28'
+})

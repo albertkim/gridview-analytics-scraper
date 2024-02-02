@@ -5,6 +5,9 @@ import path from 'path'
 import csv from 'csvtojson'
 import puppeteer from 'puppeteer'
 import { formatDateString } from '../../scraper/BulkUtilities'
+import { generateID } from '../../repositories/GenerateID'
+import { AIGetRecordDetails } from '../../rezonings/AIUtilitiesV2'
+import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
 
 const startUrl = 'https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear'
 
@@ -12,6 +15,29 @@ interface IOptions {
   startDate: string | null
   endDate: string | null
   headless?: boolean | 'new'
+}
+
+interface IVancouverDevelopmentPermit {
+  PermitNumber: string
+  PermitNumberCreatedDate: string
+  IssueDate: string
+  PermitElapsedDays: string
+  ProjectValue: string
+  TypeOfWork: string
+  Address: string
+  ProjectDescription: string
+  PermitCategory: string
+  Applicant: string
+  ApplicantAddress: string
+  PropertyUse: string
+  SpecificUseCategory: string
+  BuildingContractor: string
+  BuildingContractorAddress: string
+  IssueYear: string
+  GeoLocalArea: string
+  Geom: string
+  YearMonth: string
+  geo_point_2d: string
 }
 
 async function scrape(options: IOptions) {
@@ -38,7 +64,7 @@ async function scrape(options: IOptions) {
   const response = await axios.get(csvExportUrl, { responseType: 'arraybuffer' })
   const csvString = Buffer.from(response.data).toString('utf8')
 
-  const data = await csv({
+  const data: IVancouverDevelopmentPermit[] = await csv({
     delimiter: ';',
     trim: true,
     nullObject: true
@@ -74,10 +100,53 @@ export async function analyze(options: IOptions) {
 
   const data = await scrape(options)
 
-  const developmentPermits = []
-
   for (const entry of data) {
-    // TODO: Need to refactor RezoningsRepository to use this
+
+    const detailsResponse = await AIGetRecordDetails(entry.ProjectDescription, {fieldsToAnalyze: ['building type', 'stats']})
+    if (!detailsResponse) {
+      continue
+    }
+
+    const record: IFullRezoningDetail = {
+      id: generateID('dev'),
+      city: 'Vancouver',
+      metroCity: 'Metro Vancouver',
+      type: 'development permit',
+      applicationId: entry.PermitNumber,
+      address: entry.Address,
+      applicant: entry.Applicant,
+      behalf: null,
+      description: entry.ProjectDescription,
+      buildingType: detailsResponse.buildingType,
+      status: 'approved',
+      dates: {
+        appliedDate: null,
+        publicHearingDate: null,
+        approvalDate: formatDateString(entry.IssueDate),
+        denialDate: null,
+        withdrawnDate: null
+      },
+      stats: detailsResponse.stats,
+      zoning: detailsResponse.zoning,
+      reportUrls: [
+        {
+          url: startUrl,
+          title: 'Vancouver OpenData',
+          date: formatDateString(entry.IssueDate),
+          status: 'approved'
+        }
+      ],
+      minutesUrls: [], // No minutes for vancouver development permits
+      location: {
+        latitude: null,
+        longitude: null
+      },
+      createDate: moment().format('YYYY-MM-DD'),
+      updateDate: moment().format('YYYY-MM-DD')
+    }
+
+    RecordsRepository.upsertRecords('development permit', [record])
+
   }
 
 }

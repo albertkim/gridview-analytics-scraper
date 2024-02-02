@@ -3,7 +3,7 @@ import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
-import { chatGPTPartialRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../AIUtilities'
 import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
 import { generateID } from '../../../repositories/GenerateID'
 import { cleanBurnabyRezoningId, getBurnabyBaseGPTQuery } from './BurnabyUtilities'
@@ -45,7 +45,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<IFullRezon
     }
 
     // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTPartialRezoningQuery(
+    const partialRezoningDetails = await chatGPTRezoningQuery(
       getBurnabyBaseGPTQuery(applicationContent),
       {analyzeType: true, analyzeStats: true}
     )
