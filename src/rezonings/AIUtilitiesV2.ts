@@ -74,7 +74,7 @@ export async function AIGetPartialRecords(contents: string, expectedItems: numbe
   for (const summaryItem of summary) {
 
     const baseResponse = await chatGPTTextQuery(`
-      You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}.
+      You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format, give an empty array if no values to return - otherwise return a {error: message, reason: detailed explanation}.
       ${options?.introduction ? options.introduction : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
@@ -171,8 +171,9 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     status: options.status ? `status: ${options.status}` : `status: one of applied, public hearing, approved, denied, withdrawn`
   }
 
+  // NOTE: I used to run the details query with GPT 4 but it's too expensive for large volumes of data, trying 3.5 for now
   const detailsResponse = await chatGPTTextQuery(`
-    Given the following description, get the following information in JSON format to the best of your ability.
+    You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format.
     {
       ${options.fieldsToAnalyze.includes('building type') ? detailedQueryReference.buildingType : ''}
       ${options.fieldsToAnalyze.includes('zoning') ? detailedQueryReference.zoning : ''}
@@ -180,7 +181,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
       ${options.fieldsToAnalyze.includes('status') ? detailedQueryReference.status : ''}
     }
     Description here: ${contents}
-  `, '4')
+  `, '3.5')
 
   if (!detailsResponse || detailsResponse.error) {
     console.log(chalk.red(`Error with getting details response: ${detailsResponse.error}`))

@@ -5108,9 +5108,9 @@
     "type": "development permit",
     "applicationId": null,
     "address": "4571, 4591 and 4611/4631 Steveston Highway",
-    "applicant": "Jonathan King",
-    "behalf": "Gurpreet Mann",
-    "description": "Construction of 16 townhouse units on a site zoned 'Low Density Townhouses (RTL4)'. Front yard setback along Steveston Highway proposed to be reduced from 6.0 m to 4.50 m.",
+    "applicant": "unknown",
+    "behalf": null,
+    "description": "Construction of 16 townhouse units with a variance to reduce the front yard setback along Steveston Highway from 6.0 m to 4.50 m. Rezoning from 'Single Detached (RS1/E)' and 'Two-Unit Dwellings (RD1)' zones to the 'Low Density Townhouses (RTL4)' zone.",
     "buildingType": "townhouse",
     "status": "approved",
     "dates": {
@@ -5212,6 +5212,226 @@
     "updateDate": "2024-02-02"
   },
   {
+    "id": "dev-388mpige5kfmah3xphpss",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "13888 Wireless Way",
+    "applicant": "Karla Castellanos Architect",
+    "behalf": "Alan Yong, S-506 Holdings Ltd.",
+    "description": "Construction of a three-storey light industrial and ancillary office building on a new lot created through subdivision of the west portion of the subject site. The proposed building would contain 11 strata-titled units and is approximately 3,748 m2 (40,353 ft2) in size. The proposal also involves landscaped restoration within the existing Riparian Management Area (RMA) along the south side of the existing site, as well as improvements to pedestrian circulation and landscaping within the surface parking area on Lot 2.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 11,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_2_13888_Wireless_Way72096.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943418",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-388mpige5kfmah3xphpss",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "13888 Wireless Way",
+    "applicant": "Karla Castellanos Architect",
+    "behalf": "Alan Yong, S-506 Holdings Ltd.",
+    "description": "Construction of a three-storey light industrial and ancillary office building on a new lot created through subdivision of the west portion of the subject site. The proposed building would contain 11 strata-titled units and aligns with the City's objectives of intensifying existing industrial lands. The proposal also involves landscaped restoration within the existing Riparian Management Area (RMA) along the south side of the existing site, as well as improvements to pedestrian circulation and landscaping within the surface parking area on Lot 2.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 11,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_2_13888_Wireless_Way72096.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943418",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-3awtkhyjf5u7bydv8q8hr",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "RZ 16-731275",
+    "address": "6571 No. 1 Road, 6591 No. 1 Road",
+    "applicant": "Not specified",
+    "behalf": null,
+    "description": "Construction of eight townhouse units at 6571 and 6591 No. 1 Road on a site zoned 'Low Density Townhouses (RTL4)'. Variance to reduce minimum required lot width on major arterial roads from 50.0 m to 40.2 m. Rezoning from 'Single Detached (RS 1/F)' to 'Low Density Townhouses (RTL4)'.",
+    "buildingType": "townhouse",
+    "status": "withdrawn",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": "2024-01-17"
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 8,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_3_6571___6591__No72097.pdf",
+        "title": "DEVELOPMENT PERMIT 22-021165",
+        "date": "2024-01-17",
+        "status": "withdrawn"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "withdrawn"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-3awtkhyjf5u7bydv8q8hr",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "RZ 16-731275",
+    "address": "6571 No. 1 Road, 6591 No. 1 Road",
+    "applicant": "Not specified",
+    "behalf": null,
+    "description": "Construction of eight townhouse units at 6571 and 6591 No. 1 Road on a site zoned 'Low Density Townhouses (RTL4)'. Variance to reduce minimum required lot width on major arterial roads from 50.0 m to 40.2 m. Rezoning from 'Single Detached (RS 1/F)' to 'Low Density Townhouses (RTL4)'.",
+    "buildingType": "townhouse",
+    "status": "withdrawn",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": "2024-01-17"
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 8,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_3_6571___6591__No72097.pdf",
+        "title": "DEVELOPMENT PERMIT 22-021165",
+        "date": "2024-01-17",
+        "status": "withdrawn"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "withdrawn"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
     "id": "dev-gqh8adw3jui4k8o98n98n",
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -6282,6 +6502,886 @@
       }
     ],
     "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-mxejna0wbotzu7dl27ae2",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "15473, 15485, 15495 16A Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to CD (based on RM-70) and Development Permit for 15473, 15485 and 15495 - 16A Avenue, with a six-storey apartment building consisting of 66 units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0144-00 (15495 - 16A Avenue\n15473 - 16A Avenue\n15485 - 16A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0144-00_0.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-mxejna0wbotzu7dl27ae2",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "15473, 15485, 15495 16A Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to CD (based on RM-70) and Development Permit for 15473, 15485 and 15495 - 16A Avenue, with a six-storey apartment building consisting of 66 units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0144-00 (15495 - 16A Avenue\n15473 - 16A Avenue\n15485 - 16A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0144-00_0.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-15mem8jtl5dtp5nscqvc6",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0170-00",
+    "address": "12090 - 104 Avenue",
+    "applicant": "1046089 B.C. Ltd.",
+    "behalf": null,
+    "description": "7,390.24 square metre industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0170-00 (12090 - 104 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0170-00_1.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-15mem8jtl5dtp5nscqvc6",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0170-00",
+    "address": "12090 - 104 Avenue",
+    "applicant": "1046089 B.C. Ltd.",
+    "behalf": null,
+    "description": "7,390.24 square metre industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0170-00 (12090 - 104 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0170-00_1.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-l5i0piccqh6ndr3qecxqe",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "18175 - 74 Avenue",
+    "applicant": "1335178 B.C. Ltd.",
+    "behalf": "C. Johl",
+    "description": "The application is for a NCP Amendment from 'Low Density Cluster' to 'Medium Density Cluster', rezoning from A-1 to CD (based on RM-30), and a development permit to allow for the construction of 74 townhouses.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7918-0138-00 (18175 - 74 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0138-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-l5i0piccqh6ndr3qecxqe",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "18175 - 74 Avenue",
+    "applicant": "1335178 B.C. Ltd.",
+    "behalf": "C. Johl",
+    "description": "The application is for a NCP Amendment from 'Low Density Cluster' to 'Medium Density Cluster', rezoning from A-1 to CD (based on RM-30), and a development permit to allow for the construction of 74 townhouses.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7918-0138-00 (18175 - 74 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0138-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-xyl487tup30yj9zm9qiuv",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0342-00",
+    "address": "18872 - 52 Avenue",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "construction of a multi-unit industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0342-00 (18872 - 52 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0342-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-xyl487tup30yj9zm9qiuv",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0342-00",
+    "address": "18872 - 52 Avenue",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "construction of a multi-unit industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0342-00 (18872 - 52 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0342-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-lf6cfesih202dljqylm7u",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0163-00",
+    "address": "13417, 13453, 13487 - 111A Avenue, 13428, 13488 - 112 Avenue",
+    "applicant": "1349957 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for 74 townhouse units at 13417, 13453 and 13487 - 111A Avenue; 13428 and 13488 - 112 Avenue; and a portion of unopened lane. Rezoning from RMS-2 and RF to RM-30. Variance includes increasing maximum allowable lot coverage, reducing minimum front and side yard setbacks.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0163-00 (13417 ‐ 111A Avenue\n13453 ‐ 111A Avenue\n13487 ‐ 111A Avenue\n13428 ‐ 112 Avenue\n13488 ‐ 112 Avenue\nPortion of unopened lane)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0163-00_1.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-lf6cfesih202dljqylm7u",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0163-00",
+    "address": "13417, 13453, 13487 - 111A Avenue, 13428, 13488 - 112 Avenue",
+    "applicant": "1349957 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for 74 townhouse units at 13417, 13453 and 13487 - 111A Avenue; 13428 and 13488 - 112 Avenue; and a portion of unopened lane. Rezoning from RMS-2 and RF to RM-30. Variance includes increasing maximum allowable lot coverage, reducing minimum front and side yard setbacks.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0163-00 (13417 ‐ 111A Avenue\n13453 ‐ 111A Avenue\n13487 ‐ 111A Avenue\n13428 ‐ 112 Avenue\n13488 ‐ 112 Avenue\nPortion of unopened lane)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0163-00_1.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-c8srhp5nnvfmurujmme9y",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0376-00",
+    "address": "15550 – 32 Avenue",
+    "applicant": "1057359 B.C. Ltd.",
+    "behalf": "R. Gill",
+    "description": "3-storey commercial building, including a medical office and small-scale drugstore",
+    "buildingType": "commercial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0376-00 (15550 – 32 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0376-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-c8srhp5nnvfmurujmme9y",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0376-00",
+    "address": "15550 – 32 Avenue",
+    "applicant": "1057359 B.C. Ltd.",
+    "behalf": "R. Gill",
+    "description": "3-storey commercial building, including a medical office and small-scale drugstore",
+    "buildingType": "commercial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0376-00 (15550 – 32 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0376-00.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-34ljo0qwbuokyx8lh54z3",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "19649",
+    "address": "18638 - 74 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning of 18638 - 74 Avenue from RA to RM-30 for the development of 79 townhouse units",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 79,
+      "stratas": 79,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7917-0116-00 and 7917-0116-01 (18638 - 74 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7917-0116-00_0.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-34ljo0qwbuokyx8lh54z3",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "19649",
+    "address": "18638 - 74 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning of 18638 - 74 Avenue from RA to RM-30 for the development of 79 townhouse units",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "stats": {
+      "buildings": 79,
+      "stratas": 79,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7917-0116-00 and 7917-0116-01 (18638 - 74 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7917-0116-00_0.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-cukq5ifeqgvxr7kw40ehx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "16172 - 24 Avenue",
+    "applicant": "LMJB Holdings Ltd., LMJC Holdings Ltd., and LMJA Holdings Ltd.",
+    "behalf": null,
+    "description": "The proposed development includes a mixed-use building, two apartment buildings, and 74 townhouse units. The proposed amendments include an OCP amendment to allow a FAR of 1.97 on the north parcel and 1.86 on the central parcel within the 'Multiple Residential' land use designation, as well as an NCP amendment to introduce two new land use designations: 'Mixed Use Residential 4-6 Storeys' and 'Multiple Residential 4-6 Storeys'. The rezoning is from RA to CD, and the development permit is for a comprehensive sign design package and an Ecosystem Development Plan.",
+    "buildingType": "mixed use",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 1.97,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7916-0225-00 (16172 - 24 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7916-0225-00_2.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-cukq5ifeqgvxr7kw40ehx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "16172 - 24 Avenue",
+    "applicant": "LMJB Holdings Ltd., LMJC Holdings Ltd., and LMJA Holdings Ltd.",
+    "behalf": null,
+    "description": "The proposed development includes a mixed-use building, two apartment buildings, and 74 townhouse units. The proposed amendments include an OCP amendment to allow a FAR of 1.97 on the north parcel and 1.86 on the central parcel within the 'Multiple Residential' land use designation, as well as an NCP amendment to introduce two new land use designations: 'Mixed Use Residential 4-6 Storeys' and 'Multiple Residential 4-6 Storeys'. The rezoning is from RA to CD, and the development permit is for a comprehensive sign design package and an Ecosystem Development Plan.",
+    "buildingType": "mixed use",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": 74,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 1.97,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7916-0225-00 (16172 - 24 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7916-0225-00_2.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN-RCLU-2024-01-15.pdf",
+        "date": "2024-01-15",
+        "status": "approved"
+      }
+    ],
     "location": {
       "latitude": null,
       "longitude": null
@@ -9387,6 +10487,55 @@
     "behalf": "Rhea Custom Homes & Development Ltd",
     "description": "The project involves a new single-family dwelling with a secondary suite and detached garage.",
     "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-29",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "December-29-2023.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/December-29-2023.pdf",
+        "date": "2023-12-29",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-zict33jemfw66v83eh12c",
+    "type": "development permit",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "applicationId": null,
+    "address": "1686 - 4500 Kingsway",
+    "applicant": "Horin Ramen",
+    "behalf": "Prosperous Square Development",
+    "description": "interior alterations and finishing for a new restaurant tenant",
+    "buildingType": "commercial",
     "status": "approved",
     "stats": {
       "buildings": 1,
@@ -13003,6 +14152,116 @@
     "updateDate": "2024-02-02"
   },
   {
+    "id": "dev-dje0nhcb5dt2zdqqg8otz",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "City of Richmond with funding support from the Canada Mortgage and Housing Corporation (CMHC) and BC Housing in partnership with Turning Point Housing Society",
+    "behalf": null,
+    "description": "Construction of a three-storey 25-unit affordable rental housing building, rezoning from 'Single Detached (RS 1/E)' zone to a new site-specific zone, 'Low Rise Rental Apartments (ZLR48) - Steveston' under Bylaw 10478 (RZ 23-018081)",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-13",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 25,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf",
+        "title": "DEVELOPMENT PERMIT 23-025993",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/121323_minutes.htm",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-dje0nhcb5dt2zdqqg8otz",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "City of Richmond",
+    "behalf": null,
+    "description": "Construction of a three-storey 25-unit affordable rental housing building",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-13",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 25,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf",
+        "title": "DEVELOPMENT PERMIT 23-025993",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/121323_minutes.htm",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
     "id": "dev-10c0wpvbrg554etxlah4h",
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -15257,529 +16516,1225 @@
     "updateDate": "2024-02-02"
   },
   {
-    "id": "dev-a4bpayujpyjyjht3fciyi",
-    "city": "Vancouver",
+    "id": "dev-e7rewamtr54v6bqfhiaf7",
+    "city": "Surrey",
     "metroCity": "Metro Vancouver",
     "type": "development permit",
-    "applicationId": "DB-2023-02991",
-    "address": "2564 E 15TH AVENUE, Vancouver, BC V5M 2K1",
-    "applicant": "Michael Lu DBA: Lineform Architecture Inc",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2 storey duplex with a secondary suite and a lock-off unit located in the Basement ($1,100,000.00) with a detached accessory building (garage) and 1 open parking at the rear providing 3 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building, INCLUDING THE ATTACHED GARAGE (if applicable), to be sprinklered to 2 x NFPA 13D \r\n\r\n1. Covenant registered at the Land Title Office under CB1058395\r\n2. Mechanical unit proposed – Exterior component located in front and rear yards, Interior component located in crawlspace.\r\n3. Schedule B: (Y.K. Sharma) P.Eng (778.863.7076) Structural & Geotechnical\r\n4. HPO: Residential Builder - Ranauta Homes Inc. \r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-2564 E 15th Av - Principle Dwelling Unit\r\n#2-2564 E 15th Av - Secondary Suite\r\n\r\nBACK UNIT\r\n#1-2562 E 15th Av - Principle Dwelling Unit\r\n#2-2562 E 15th Av - Lock Off Unit\r\n\r\nAddresses have been assigned per the approved plans, access to the rear unit is from the West side. This access must be provided & maintained at all times and the building addresses posted to be visible from the street in accordance with the Building By-law.\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 2,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 2
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-a4bpayujpyjyjht3fciyi",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DB-2023-02991",
-    "address": "2564 E 15TH AVENUE, Vancouver, BC V5M 2K1",
-    "applicant": "Michael Lu DBA: Lineform Architecture Inc",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2 storey duplex with a secondary suite and a lock-off unit located in the Basement ($1,100,000.00) with a detached accessory building (garage) and 1 open parking at the rear providing 3 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building, INCLUDING THE ATTACHED GARAGE (if applicable), to be sprinklered to 2 x NFPA 13D \r\n\r\n1. Covenant registered at the Land Title Office under CB1058395\r\n2. Mechanical unit proposed – Exterior component located in front and rear yards, Interior component located in crawlspace.\r\n3. Schedule B: (Y.K. Sharma) P.Eng (778.863.7076) Structural & Geotechnical\r\n4. HPO: Residential Builder - Ranauta Homes Inc. \r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-2564 E 15th Av - Principle Dwelling Unit\r\n#2-2564 E 15th Av - Secondary Suite\r\n\r\nBACK UNIT\r\n#1-2562 E 15th Av - Principle Dwelling Unit\r\n#2-2562 E 15th Av - Lock Off Unit\r\n\r\nAddresses have been assigned per the approved plans, access to the rear unit is from the West side. This access must be provided & maintained at all times and the building addresses posted to be visible from the street in accordance with the Building By-law.\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 2,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 2
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-b0p5rwnjl491xb9no2x5t",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DB-2023-03099",
-    "address": "65 E 58TH AVENUE, Vancouver, BC V5X 1V7",
-    "applicant": "Mavco Capital Inc.",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2.5 storey duplex  ($800,000) with a detached accessory building (garage) at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building to be sprinklered to 2 x NFPA 13D \r\n\\t\r\n1.     External mechanical unit proposed\r\n2.\\tSchedule B: (Jaswinder S. Bansal ) P.Eng (604.501.7788) Structural and  Geotechnical; Schedule B: (Jason Hui) P.Eng (778. 319. 3403) Geotechnical\r\n3.\\tHPO: Residential Builder- Saranco Hoes Ltd\r\n\r\nNote: This is a 2.5 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-65 E 58th Av - Principal Dwelling (south portion 1st-3rd floors)\r\n\r\nBACK UNIT \r\n#2-65 E 58th Av - Principal Dwelling (north portion 1st-3rd floors)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019)**\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 2,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 3
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-b0p5rwnjl491xb9no2x5t",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DB-2023-03099",
-    "address": "65 E 58TH AVENUE, Vancouver, BC V5X 1V7",
-    "applicant": "Mavco Capital Inc.",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2.5 storey duplex  ($800,000) with a detached accessory building (garage) at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building to be sprinklered to 2 x NFPA 13D \r\n\\t\r\n1.     External mechanical unit proposed\r\n2.\\tSchedule B: (Jaswinder S. Bansal ) P.Eng (604.501.7788) Structural and  Geotechnical; Schedule B: (Jason Hui) P.Eng (778. 319. 3403) Geotechnical\r\n3.\\tHPO: Residential Builder- Saranco Hoes Ltd\r\n\r\nNote: This is a 2.5 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-65 E 58th Av - Principal Dwelling (south portion 1st-3rd floors)\r\n\r\nBACK UNIT \r\n#2-65 E 58th Av - Principal Dwelling (north portion 1st-3rd floors)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019)**\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": 2,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 3
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-p3b6faifd8u6ewj43dvii",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DB-2023-02097",
-    "address": "4949 CULLODEN STREET, Vancouver, BC V5W 3R3",
-    "applicant": "Thomas Rea DBA: Vancouver General Contractors",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2 storey one-family dwelling with a secondary suite located in the Basement ($600,000) with a detached accessory building (garage)  and an open parking pad, at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nThis Building Permit will remain in a suspended status until the associated (green) Demolition Permit BP-2023-02245 is completed.\r\n \r\n1.\\tCovenant registered at the Land Title Office under CB739785\r\n2.\\tNo Strata Titling permitted\r\n3.\\tExternal mechanical unit proposed\r\n4.\\tSchedule B: (H. Ilbeigi Timouri) P.Eng (778.558.9629) Structural\r\n5.\\tSchedule B: (Thanh Van Le) P.Eng (604.421.3288) Geotechnical\r\n6.\\tHPO: Residential Builder- VGC Vancouver General Contractors Inc.\r\n7.      As shown by an asterisk (*) on the building permit floor plans and/or elevations, exit protection is required to be provided in accordance with Articles 9.9.4.4., 9.9.4.6., and/or 9.37.2.8. of the 2019 VBBL\r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\n#1- 4949 Culloden St - Single Detached House (1st & 2nd floors)\r\n#2- 4949 Culloden St - Secondary Suite (basement)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019) **\r\n\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 2
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-p3b6faifd8u6ewj43dvii",
-    "city": "Vancouver",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DB-2023-02097",
-    "address": "4949 CULLODEN STREET, Vancouver, BC V5W 3R3",
-    "applicant": "Thomas Rea DBA: Vancouver General Contractors",
-    "behalf": null,
-    "description": "Low Density Housing - New Building - To construct a 2 storey one-family dwelling with a secondary suite located in the Basement ($600,000) with a detached accessory building (garage)  and an open parking pad, at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nThis Building Permit will remain in a suspended status until the associated (green) Demolition Permit BP-2023-02245 is completed.\r\n \r\n1.\\tCovenant registered at the Land Title Office under CB739785\r\n2.\\tNo Strata Titling permitted\r\n3.\\tExternal mechanical unit proposed\r\n4.\\tSchedule B: (H. Ilbeigi Timouri) P.Eng (778.558.9629) Structural\r\n5.\\tSchedule B: (Thanh Van Le) P.Eng (604.421.3288) Geotechnical\r\n6.\\tHPO: Residential Builder- VGC Vancouver General Contractors Inc.\r\n7.      As shown by an asterisk (*) on the building permit floor plans and/or elevations, exit protection is required to be provided in accordance with Articles 9.9.4.4., 9.9.4.6., and/or 9.37.2.8. of the 2019 VBBL\r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\n#1- 4949 Culloden St - Single Detached House (1st & 2nd floors)\r\n#2- 4949 Culloden St - Secondary Suite (basement)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019) **\r\n\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-01",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": null,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": 2
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
-        "title": "Vancouver OpenData",
-        "date": "2023-12-01",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-64eist50gwsy384e4b3z2",
-    "city": "Richmond",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "RZ 19-878165",
-    "address": "6531 Francis Road",
-    "applicant": "unknown",
-    "behalf": null,
-    "description": "construction of two front-to-back duplexes at 6531 Francis Road, with shared vehicle access from Francis Road, on lots zoned 'Arterial Road Two-Unit Dwellings (RDA)'",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-09-27",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 2,
-      "stratas": 4,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf",
-        "title": "DEVELOPMENT PERMIT 22-011557",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-64eist50gwsy384e4b3z2",
-    "city": "Richmond",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "RZ 19-878165",
-    "address": "6531 Francis Road",
-    "applicant": "unknown",
-    "behalf": null,
-    "description": "construction of two front-to-back duplexes at 6531 Francis Road, with shared vehicle access from Francis Road, on lots zoned 'Arterial Road Two-Unit Dwellings (RDA)'",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-09-27",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 2,
-      "stratas": 4,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf",
-        "title": "DEVELOPMENT PERMIT 22-011557",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-l4qms6n4kl4cjtunc4f9u",
-    "city": "Richmond",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DP 23-018670",
-    "address": "10408 Dennis Crescent",
-    "applicant": "unknown",
-    "behalf": null,
-    "description": "Construction of a new single detached dwelling and coach house. The coach house is approximately 60 m2 (645 ft2) and is designed to comply with the intent of the design guidelines for coach houses in the Edgemere neighbourhood contained in the City's Official Community Plan (OCP), and complies with the zoning requirements. The proposed coach house has addressed urban design issues and staff comments, and complies with the conditions of adjacency, urban design and site planning, architectural form and character, and landscape design and open space design. The proposed coach house is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties, and has no windows proposed on the north or south side elevations to address concerns of overlook into the neighbouring properties. The primary pedestrian entry to the coach house is from the rear lane, and private outdoor space for the exclusive benefit of the coach house is proposed in the form of a landscaped yard off the west side of the coach house. The proposed exterior building materials and colours of the coach house are consistent with the building styles in the neighbourhood. The site plan provides on-site parking in compliance with the Zoning Bylaw, and a single shared garbage and recycling enclosure is proposed for the site. There are no on-site trees in the area of the proposed coach house and garage, and future assessment of on-site tree retention and removal will be reviewed at the time of the building permit application for the single-family dwelling.",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-09-27",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 2,
-      "stratas": 1,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/__shared/assets/4_dpp_092723_DP_23-018670_10408_Dennis_Crescent69481.pdf",
-        "title": "DEVELOPMENT PERMIT 23-018670",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-l4qms6n4kl4cjtunc4f9u",
-    "city": "Richmond",
-    "metroCity": "Metro Vancouver",
-    "type": "development permit",
-    "applicationId": "DP 23-018670",
-    "address": "10408 Dennis Crescent",
-    "applicant": "unknown",
-    "behalf": null,
-    "description": "Construction of a new single detached dwelling and coach house. The coach house is approximately 60 m2 (645 ft2) and is designed to comply with the intent of the design guidelines for coach houses in the Edgemere neighbourhood contained in the City's Official Community Plan (OCP), and complies with the zoning requirements. The proposed coach house has addressed urban design issues and staff comments, and complies with the conditions of adjacency, urban design and site planning, architectural form and character, and landscape design and open space design. The proposed coach house is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties, and has no windows proposed on the north or south side elevations to address concerns of overlook into the neighbouring properties. The primary pedestrian entry to the coach house is from the rear lane, and private outdoor space for the exclusive benefit of the coach house is proposed in the form of a landscaped yard off the west side of the coach house. The proposed exterior building materials and colours of the coach house are consistent with the building styles in the neighbourhood. The site plan provides on-site parking in compliance with the Zoning Bylaw, and a single shared garbage and recycling enclosure is proposed for the site. There are no on-site trees in the area of the proposed coach house and garage, and future assessment of on-site tree retention and removal will be reviewed at the time of the building permit application for the single-family dwelling.",
-    "buildingType": "single-family residential",
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-09-27",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 2,
-      "stratas": 1,
-      "rentals": null,
-      "hotels": null,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/__shared/assets/4_dpp_092723_DP_23-018670_10408_Dennis_Crescent69481.pdf",
-        "title": "DEVELOPMENT PERMIT 23-018670",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
-        "date": "2023-09-27",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-02",
-    "updateDate": "2024-02-02"
-  },
-  {
-    "id": "dev-zict33jemfw66v83eh12c",
-    "type": "development permit",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
     "applicationId": null,
-    "address": "1686 - 4500 Kingsway",
-    "applicant": "Horin Ramen",
-    "behalf": "Prosperous Square Development",
-    "description": "interior alterations and finishing for a new restaurant tenant",
+    "address": "12538 Old Yale Road",
+    "applicant": "Ruskin Enterprises Ltd.",
+    "behalf": null,
+    "description": "Rezoning from RF to RF-13 to subdivide into 2 single family small lots",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0352-00 (12538 Old Yale Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0352-00_0.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-e7rewamtr54v6bqfhiaf7",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "12538 Old Yale Road",
+    "applicant": "Ruskin Enterprises Ltd.",
+    "behalf": null,
+    "description": "Rezoning from RF to RF-13 to subdivide into 2 single family small lots",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0352-00 (12538 Old Yale Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0352-00_0.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-qoijsgyx7f601zm8jdiia",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "15316 - 88 Avenue",
+    "applicant": "1168766 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for a 6-storey residential apartment building with a childcare centre",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0307-00 (15316 - 88 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0307-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-qoijsgyx7f601zm8jdiia",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "15316 - 88 Avenue",
+    "applicant": "1168766 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for a 6-storey residential apartment building with a childcare centre",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0307-00 (15316 - 88 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0307-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-304tdpn8capt9jbrno3rk",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0199-00",
+    "address": "15780 Fraser Highway",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "construction of a 6-storey apartment building with 119 dwelling units, including 80 secured market rental units, and a child care facility",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 119,
+      "rentals": 80,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0199-00 (15780 Fraser Highway)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0199-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-304tdpn8capt9jbrno3rk",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0199-00",
+    "address": "15780 Fraser Highway",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "construction of a 6-storey apartment building with 119 dwelling units, including 80 secured market rental units, and a child care facility",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 119,
+      "rentals": 80,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0199-00 (15780 Fraser Highway)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0199-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-2spj3ud6ily6etb6vkjqq",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "14275 and 14297 - 103A Avenue, 10365 - 143 Street",
+    "applicant": "1336514 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit application for a 6-storey apartment building with approximately 66 dwelling units and underground parking",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0001-00 (14275 – 103A Avenue\n14297 – 103A Avenue\n10365 – 143 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0001-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-2spj3ud6ily6etb6vkjqq",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "14275 and 14297 - 103A Avenue, 10365 - 143 Street",
+    "applicant": "1336514 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit application for a 6-storey apartment building with approximately 66 dwelling units and underground parking",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0001-00 (14275 – 103A Avenue\n14297 – 103A Avenue\n10365 – 143 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0001-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-kbhhrgwq0wjbpt0drflyp",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "null",
+    "address": "14723 - 104 Avenue",
+    "applicant": "RDG Guildford East Development Ltd.",
+    "behalf": "null",
+    "description": "The proposal is to amend the Official Community Plan from 'Commercial' to 'Multiple Residential' and the Neighbourhood Concept Plan from 'High Rise Residential' and 'High Rise Mixed Use' to 'Low to Mid Rise Residential'. The rezoning is from C-35 to CD based on RM-70. The development permit is for two 6-storey apartment buildings with approximately 192 dwelling units and underground parking in Guildford.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": 192,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0200-00 (14723 – 104 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0200-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-kbhhrgwq0wjbpt0drflyp",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "null",
+    "address": "14723 - 104 Avenue",
+    "applicant": "RDG Guildford East Development Ltd.",
+    "behalf": "null",
+    "description": "The proposal is to amend the Official Community Plan from 'Commercial' to 'Multiple Residential' and the Neighbourhood Concept Plan from 'High Rise Residential' and 'High Rise Mixed Use' to 'Low to Mid Rise Residential'. The rezoning is from C-35 to CD based on RM-70. The development permit is for two 6-storey apartment buildings with approximately 192 dwelling units and underground parking in Guildford.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 2,
+      "stratas": 192,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0200-00 (14723 – 104 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0200-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-zdxfrhs5k81aguhtp04xz",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0375-00",
+    "address": "19355 - 2 Avenue",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "development of a single family residence and accessory structures",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0375-00 (19355 - 2 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0375-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-zdxfrhs5k81aguhtp04xz",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0375-00",
+    "address": "19355 - 2 Avenue",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "development of a single family residence and accessory structures",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0375-00 (19355 - 2 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0375-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-mectlz9jk4vh9xertlfdx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0212-00",
+    "address": "3470 - 192 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "construction of an 8,408 square metre industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 1
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0212-00 (3470 - 192 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0212-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-mectlz9jk4vh9xertlfdx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7923-0212-00",
+    "address": "3470 - 192 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "construction of an 8,408 square metre industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 1
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7923-0212-00 (3470 - 192 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0212-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-yc3hdd7mv2ayn9iv6s0vt",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "A Bylaw was introduced to rezone the subject site from 'Single Family Residential Zone (RF)' to 'Comprehensive Development Zone (CD)'. Council authorized staff to draft Development Permit No. 7922-0218-00 generally in accordance with the attached drawings and the finalized geotechnical report. Council also instructed staff to resolve various issues prior to final adoption, including engineering requirements, urban design issues, landscaping plan, tree preservation, geotechnical report, housing agreement, transportation demand management measures, and other restrictive covenants and reports.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 2.5,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0218-00 (12835 – 111 Avenue\n11138 – 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0218-00_0.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-yc3hdd7mv2ayn9iv6s0vt",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "A Bylaw was introduced to rezone the subject site from 'Single Family Residential Zone (RF)' to 'Comprehensive Development Zone (CD)'. Council authorized staff to draft Development Permit No. 7922-0218-00 generally in accordance with the attached drawings and the finalized geotechnical report. Council also instructed staff to resolve various issues prior to final adoption, including engineering requirements, urban design issues, landscaping plan, tree preservation, geotechnical report, housing agreement, transportation demand management measures, and other restrictive covenants and reports.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": 2.5,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0218-00 (12835 – 111 Avenue\n11138 – 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0218-00_0.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-nta5ys4urrzbd26f8wq1p",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "6081, 6095, 6111, 6121, 6131 King George Boulevard",
+    "applicant": "1075292 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for 6081, 6095, 6111, 6121, and 6131 King George Boulevard from RF to CD (based on RM-70) for the construction of 3 apartment buildings with 198 units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": 198,
+      "rentals": null,
+      "hotels": null,
+      "fsr": "based on RM-70",
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7918-0111-00 (6131 King George Boulevard\n6121 King George Boulevard\n6111 King George Boulevard\n6095 King George Boulevard\n6081 King George Boulevard)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0111-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-nta5ys4urrzbd26f8wq1p",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": null,
+    "address": "6081, 6095, 6111, 6121, 6131 King George Boulevard",
+    "applicant": "1075292 B.C. Ltd.",
+    "behalf": null,
+    "description": "Rezoning and development permit for 6081, 6095, 6111, 6121, and 6131 King George Boulevard from RF to CD (based on RM-70) for the construction of 3 apartment buildings with 198 units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": 198,
+      "rentals": null,
+      "hotels": null,
+      "fsr": "based on RM-70",
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7918-0111-00 (6131 King George Boulevard\n6121 King George Boulevard\n6111 King George Boulevard\n6095 King George Boulevard\n6081 King George Boulevard)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0111-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-gbbonky4xl3hjufa0zo2p",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7921-0153-00",
+    "address": "null",
+    "applicant": "null",
+    "behalf": "null",
+    "description": "construction of a 20-storey mid-rise apartment building with 175 dwelling units",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 175,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 20
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7921-0153-00 (15200 Guildford Drive)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0153-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-gbbonky4xl3hjufa0zo2p",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7921-0153-00",
+    "address": "null",
+    "applicant": "null",
+    "behalf": "null",
+    "description": "construction of a 20-storey mid-rise apartment building with 175 dwelling units",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 175,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 20
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7921-0153-00 (15200 Guildford Drive)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0153-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-m1f16p9ai585nc10oyjuy",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "9952-149",
+    "address": "9952 - 149 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning of 9952 - 149 Street from RM-45 to CD (based on RM-70) for the development of a 5-storey residential apartment building with 45 units and 7 three-storey townhouse units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 52,
+      "rentals": 45,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7921-0357-00 (9952 – 149 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0357-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-m1f16p9ai585nc10oyjuy",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "9952-149",
+    "address": "9952 - 149 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning of 9952 - 149 Street from RM-45 to CD (based on RM-70) for the development of a 5-storey residential apartment building with 45 units and 7 three-storey townhouse units.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 52,
+      "rentals": 45,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7921-0357-00 (9952 – 149 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0357-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-8qsd74t21qoq86g25h7hb",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7919-0017-00",
+    "address": "12350 Pattullo Place, 12333 Pattullo Place, 12345 Pattullo Place",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "The applicant wants to build a banquet hall at 12350 Pattullo Place with a reduced minimum number of off-street parking spaces from 650 to 430. Parking spaces for the banquet hall use will be located at non-abutting or contiguous lots at 12333 and 12345 Pattullo Place. The allowable building height under the CHI Zone will be increased from 9 metres to 14.1 metres to accommodate the banquet hall building.",
     "buildingType": "commercial",
     "status": "approved",
     "stats": {
@@ -15788,6 +17743,116 @@
       "rentals": null,
       "hotels": null,
       "fsr": null,
+      "storeys": 1
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7919-0017-00 (12333 Pattullo Place\n12345 Pattullo Place\n12350 Pattullo Place\nSeptember 11, 2023)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0017-00_2.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-8qsd74t21qoq86g25h7hb",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7919-0017-00",
+    "address": "12350 Pattullo Place, 12333 Pattullo Place, 12345 Pattullo Place",
+    "applicant": "not specified",
+    "behalf": null,
+    "description": "The applicant wants to build a banquet hall at 12350 Pattullo Place with a reduced minimum number of off-street parking spaces from 650 to 430. Parking spaces for the banquet hall use will be located at non-abutting or contiguous lots at 12333 and 12345 Pattullo Place. The allowable building height under the CHI Zone will be increased from 9 metres to 14.1 metres to accommodate the banquet hall building.",
+    "buildingType": "commercial",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 1
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7919-0017-00 (12333 Pattullo Place\n12345 Pattullo Place\n12350 Pattullo Place\nSeptember 11, 2023)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0017-00_2.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-3lnqdhsghnyivvvfj8xf8",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0306-00",
+    "address": "2507 - 128 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": null,
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
       "storeys": null
     },
     "zoning": {
@@ -15799,19 +17864,814 @@
     "dates": {
       "appliedDate": null,
       "publicHearingDate": null,
-      "approvalDate": "2023-12-29",
+      "approvalDate": "2023-12-04",
       "denialDate": null,
       "withdrawnDate": null
     },
     "reportUrls": [
       {
-        "title": "December-29-2023.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/December-29-2023.pdf",
-        "date": "2023-12-29",
+        "title": "Planning Report 7922-0306-00 (2507 - 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0306-00_1.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-3lnqdhsghnyivvvfj8xf8",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0306-00",
+    "address": "2507 - 128 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": null,
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0306-00 (2507 - 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0306-00_1.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-pc1cercblqv95rwy2m5cu",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7917-0544-01",
+    "address": "13744 Bentley Road",
+    "applicant": "0943151 B.C. Ltd.",
+    "behalf": null,
+    "description": "The permit allows for the development of three, 5 to 6-storey apartment buildings.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7917-0544-00 and 7917-0544-01 (13753 Grosvenor Road\n13809 Grosvenor Road\n13790 Harper Road\n13744 Bentley Road\n13726 Bentley Road\n13688 Bentley Road\n13736 Bentley Road\n13690 Bentley Road\n13716 Bentley Road\n13684 Bentley Road\n13702 Bentley Road\nPortion of 13775 Grosvenor Road\nPortion of 13781 Grosvenor Road\nPortion of 13791 Grosvenor Road\nPortion of 13746 Bentley Road\nPortion of 13672 Bentley Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7917-0544-00_2.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-pc1cercblqv95rwy2m5cu",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7917-0544-01",
+    "address": "13744 Bentley Road",
+    "applicant": "0943151 B.C. Ltd.",
+    "behalf": null,
+    "description": "The permit allows for the development of three, 5 to 6-storey apartment buildings.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 3,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7917-0544-00 and 7917-0544-01 (13753 Grosvenor Road\n13809 Grosvenor Road\n13790 Harper Road\n13744 Bentley Road\n13726 Bentley Road\n13688 Bentley Road\n13736 Bentley Road\n13690 Bentley Road\n13716 Bentley Road\n13684 Bentley Road\n13702 Bentley Road\nPortion of 13775 Grosvenor Road\nPortion of 13781 Grosvenor Road\nPortion of 13791 Grosvenor Road\nPortion of 13746 Bentley Road\nPortion of 13672 Bentley Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7917-0544-00_2.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-r0nuzjk8t2ooy5bmp2ait",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0098-00",
+    "address": "12900 - 87 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": null,
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0098-00 (12900 - 87 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0098-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-a4bpayujpyjyjht3fciyi",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-02991",
+    "address": "2564 E 15TH AVENUE, Vancouver, BC V5M 2K1",
+    "applicant": "Michael Lu DBA: Lineform Architecture Inc",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2 storey duplex with a secondary suite and a lock-off unit located in the Basement ($1,100,000.00) with a detached accessory building (garage) and 1 open parking at the rear providing 3 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building, INCLUDING THE ATTACHED GARAGE (if applicable), to be sprinklered to 2 x NFPA 13D \r\n\r\n1. Covenant registered at the Land Title Office under CB1058395\r\n2. Mechanical unit proposed – Exterior component located in front and rear yards, Interior component located in crawlspace.\r\n3. Schedule B: (Y.K. Sharma) P.Eng (778.863.7076) Structural & Geotechnical\r\n4. HPO: Residential Builder - Ranauta Homes Inc. \r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-2564 E 15th Av - Principle Dwelling Unit\r\n#2-2564 E 15th Av - Secondary Suite\r\n\r\nBACK UNIT\r\n#1-2562 E 15th Av - Principle Dwelling Unit\r\n#2-2562 E 15th Av - Lock Off Unit\r\n\r\nAddresses have been assigned per the approved plans, access to the rear unit is from the West side. This access must be provided & maintained at all times and the building addresses posted to be visible from the street in accordance with the Building By-law.\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
         "status": "approved"
       }
     ],
     "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-a4bpayujpyjyjht3fciyi",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-02991",
+    "address": "2564 E 15TH AVENUE, Vancouver, BC V5M 2K1",
+    "applicant": "Michael Lu DBA: Lineform Architecture Inc",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2 storey duplex with a secondary suite and a lock-off unit located in the Basement ($1,100,000.00) with a detached accessory building (garage) and 1 open parking at the rear providing 3 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building, INCLUDING THE ATTACHED GARAGE (if applicable), to be sprinklered to 2 x NFPA 13D \r\n\r\n1. Covenant registered at the Land Title Office under CB1058395\r\n2. Mechanical unit proposed – Exterior component located in front and rear yards, Interior component located in crawlspace.\r\n3. Schedule B: (Y.K. Sharma) P.Eng (778.863.7076) Structural & Geotechnical\r\n4. HPO: Residential Builder - Ranauta Homes Inc. \r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-2564 E 15th Av - Principle Dwelling Unit\r\n#2-2564 E 15th Av - Secondary Suite\r\n\r\nBACK UNIT\r\n#1-2562 E 15th Av - Principle Dwelling Unit\r\n#2-2562 E 15th Av - Lock Off Unit\r\n\r\nAddresses have been assigned per the approved plans, access to the rear unit is from the West side. This access must be provided & maintained at all times and the building addresses posted to be visible from the street in accordance with the Building By-law.\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-b0p5rwnjl491xb9no2x5t",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-03099",
+    "address": "65 E 58TH AVENUE, Vancouver, BC V5X 1V7",
+    "applicant": "Mavco Capital Inc.",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2.5 storey duplex  ($800,000) with a detached accessory building (garage) at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building to be sprinklered to 2 x NFPA 13D \r\n\\t\r\n1.     External mechanical unit proposed\r\n2.\\tSchedule B: (Jaswinder S. Bansal ) P.Eng (604.501.7788) Structural and  Geotechnical; Schedule B: (Jason Hui) P.Eng (778. 319. 3403) Geotechnical\r\n3.\\tHPO: Residential Builder- Saranco Hoes Ltd\r\n\r\nNote: This is a 2.5 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-65 E 58th Av - Principal Dwelling (south portion 1st-3rd floors)\r\n\r\nBACK UNIT \r\n#2-65 E 58th Av - Principal Dwelling (north portion 1st-3rd floors)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019)**\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-b0p5rwnjl491xb9no2x5t",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-03099",
+    "address": "65 E 58TH AVENUE, Vancouver, BC V5X 1V7",
+    "applicant": "Mavco Capital Inc.",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2.5 storey duplex  ($800,000) with a detached accessory building (garage) at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nNote: The entire building to be sprinklered to 2 x NFPA 13D \r\n\\t\r\n1.     External mechanical unit proposed\r\n2.\\tSchedule B: (Jaswinder S. Bansal ) P.Eng (604.501.7788) Structural and  Geotechnical; Schedule B: (Jason Hui) P.Eng (778. 319. 3403) Geotechnical\r\n3.\\tHPO: Residential Builder- Saranco Hoes Ltd\r\n\r\nNote: This is a 2.5 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\nFRONT UNIT\r\n#1-65 E 58th Av - Principal Dwelling (south portion 1st-3rd floors)\r\n\r\nBACK UNIT \r\n#2-65 E 58th Av - Principal Dwelling (north portion 1st-3rd floors)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019)**\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-p3b6faifd8u6ewj43dvii",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-02097",
+    "address": "4949 CULLODEN STREET, Vancouver, BC V5W 3R3",
+    "applicant": "Thomas Rea DBA: Vancouver General Contractors",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2 storey one-family dwelling with a secondary suite located in the Basement ($600,000) with a detached accessory building (garage)  and an open parking pad, at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nThis Building Permit will remain in a suspended status until the associated (green) Demolition Permit BP-2023-02245 is completed.\r\n \r\n1.\\tCovenant registered at the Land Title Office under CB739785\r\n2.\\tNo Strata Titling permitted\r\n3.\\tExternal mechanical unit proposed\r\n4.\\tSchedule B: (H. Ilbeigi Timouri) P.Eng (778.558.9629) Structural\r\n5.\\tSchedule B: (Thanh Van Le) P.Eng (604.421.3288) Geotechnical\r\n6.\\tHPO: Residential Builder- VGC Vancouver General Contractors Inc.\r\n7.      As shown by an asterisk (*) on the building permit floor plans and/or elevations, exit protection is required to be provided in accordance with Articles 9.9.4.4., 9.9.4.6., and/or 9.37.2.8. of the 2019 VBBL\r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\n#1- 4949 Culloden St - Single Detached House (1st & 2nd floors)\r\n#2- 4949 Culloden St - Secondary Suite (basement)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019) **\r\n\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-p3b6faifd8u6ewj43dvii",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DB-2023-02097",
+    "address": "4949 CULLODEN STREET, Vancouver, BC V5W 3R3",
+    "applicant": "Thomas Rea DBA: Vancouver General Contractors",
+    "behalf": null,
+    "description": "Low Density Housing - New Building - To construct a 2 storey one-family dwelling with a secondary suite located in the Basement ($600,000) with a detached accessory building (garage)  and an open parking pad, at the rear providing 2 parking spaces, having vehicular access from the lane.\r\n\r\nThis Building Permit will remain in a suspended status until the associated (green) Demolition Permit BP-2023-02245 is completed.\r\n \r\n1.\\tCovenant registered at the Land Title Office under CB739785\r\n2.\\tNo Strata Titling permitted\r\n3.\\tExternal mechanical unit proposed\r\n4.\\tSchedule B: (H. Ilbeigi Timouri) P.Eng (778.558.9629) Structural\r\n5.\\tSchedule B: (Thanh Van Le) P.Eng (604.421.3288) Geotechnical\r\n6.\\tHPO: Residential Builder- VGC Vancouver General Contractors Inc.\r\n7.      As shown by an asterisk (*) on the building permit floor plans and/or elevations, exit protection is required to be provided in accordance with Articles 9.9.4.4., 9.9.4.6., and/or 9.37.2.8. of the 2019 VBBL\r\n\r\nNote: This is a 2 storey building pursuant to the Zoning and Development By-Law\r\n\r\nAddress Information:\r\n\r\n#1- 4949 Culloden St - Single Detached House (1st & 2nd floors)\r\n#2- 4949 Culloden St - Secondary Suite (basement)\r\n\r\nAddress and suite numbers assigned as per approved plans for Fire and Emergency response. The address number is to be posted on the building to be visible from the street and the suite numbers are to be posted at the suite entries in accordance with the Building By-law prior to final inspection.\r\n\r\n**THIS PERMIT HAS BEEN ISSUED UNDER THE REQUIREMENTS OF VBBL #12511 (2019) **\r\n\r\n\r\n***This permit is issued under the VBBL 2019, with updated energy requirements as per bylaw # 12997 effective Jan 01, 2022.***",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-01",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear",
+        "title": "Vancouver OpenData",
+        "date": "2023-12-01",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-64eist50gwsy384e4b3z2",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "RZ 19-878165",
+    "address": "6531 Francis Road",
+    "applicant": "unknown",
+    "behalf": null,
+    "description": "construction of two front-to-back duplexes at 6531 Francis Road, with shared vehicle access from Francis Road, on lots zoned 'Arterial Road Two-Unit Dwellings (RDA)'",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 4,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf",
+        "title": "DEVELOPMENT PERMIT 22-011557",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-64eist50gwsy384e4b3z2",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "RZ 19-878165",
+    "address": "6531 Francis Road",
+    "applicant": "unknown",
+    "behalf": null,
+    "description": "construction of two front-to-back duplexes at 6531 Francis Road, with shared vehicle access from Francis Road, on lots zoned 'Arterial Road Two-Unit Dwellings (RDA)'",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 4,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf",
+        "title": "DEVELOPMENT PERMIT 22-011557",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-l4qms6n4kl4cjtunc4f9u",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-018670",
+    "address": "10408 Dennis Crescent",
+    "applicant": "unknown",
+    "behalf": null,
+    "description": "Construction of a new single detached dwelling and coach house. The coach house is approximately 60 m2 (645 ft2) and is designed to comply with the intent of the design guidelines for coach houses in the Edgemere neighbourhood contained in the City's Official Community Plan (OCP), and complies with the zoning requirements. The proposed coach house has addressed urban design issues and staff comments, and complies with the conditions of adjacency, urban design and site planning, architectural form and character, and landscape design and open space design. The proposed coach house is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties, and has no windows proposed on the north or south side elevations to address concerns of overlook into the neighbouring properties. The primary pedestrian entry to the coach house is from the rear lane, and private outdoor space for the exclusive benefit of the coach house is proposed in the form of a landscaped yard off the west side of the coach house. The proposed exterior building materials and colours of the coach house are consistent with the building styles in the neighbourhood. The site plan provides on-site parking in compliance with the Zoning Bylaw, and a single shared garbage and recycling enclosure is proposed for the site. There are no on-site trees in the area of the proposed coach house and garage, and future assessment of on-site tree retention and removal will be reviewed at the time of the building permit application for the single-family dwelling.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 1,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/4_dpp_092723_DP_23-018670_10408_Dennis_Crescent69481.pdf",
+        "title": "DEVELOPMENT PERMIT 23-018670",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-l4qms6n4kl4cjtunc4f9u",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-018670",
+    "address": "10408 Dennis Crescent",
+    "applicant": "unknown",
+    "behalf": null,
+    "description": "Construction of a new single detached dwelling and coach house. The coach house is approximately 60 m2 (645 ft2) and is designed to comply with the intent of the design guidelines for coach houses in the Edgemere neighbourhood contained in the City's Official Community Plan (OCP), and complies with the zoning requirements. The proposed coach house has addressed urban design issues and staff comments, and complies with the conditions of adjacency, urban design and site planning, architectural form and character, and landscape design and open space design. The proposed coach house is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties, and has no windows proposed on the north or south side elevations to address concerns of overlook into the neighbouring properties. The primary pedestrian entry to the coach house is from the rear lane, and private outdoor space for the exclusive benefit of the coach house is proposed in the form of a landscaped yard off the west side of the coach house. The proposed exterior building materials and colours of the coach house are consistent with the building styles in the neighbourhood. The site plan provides on-site parking in compliance with the Zoning Bylaw, and a single shared garbage and recycling enclosure is proposed for the site. There are no on-site trees in the area of the proposed coach house and garage, and future assessment of on-site tree retention and removal will be reviewed at the time of the building permit application for the single-family dwelling.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 1,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/4_dpp_092723_DP_23-018670_10408_Dennis_Crescent69481.pdf",
+        "title": "DEVELOPMENT PERMIT 23-018670",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-r0nuzjk8t2ooy5bmp2ait",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "7922-0098-00",
+    "address": "12900 - 87 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": null,
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "Planning Report 7922-0098-00 (12900 - 87 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0098-00.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "date": "2023-12-04",
+        "status": "approved"
+      }
+    ],
     "location": {
       "latitude": null,
       "longitude": null

@@ -126,22 +126,22 @@ export async function analyze(options: IOptions) {
 
   const minutes = await scrape(options)
 
+  console.log(`Richmond development permits - ${minutes.length} meetings identified`)
+
   for (const meeting of minutes) {
 
     // AI summary of which permits were approved
     const developmentPermitDecisionResponse = await chatGPTTextQuery(`
-      Given the following text, identify which development permits (format DP XX-XXXXXX where X is a number) were approved. Return the data in the following JSON format:
+      Given the following text, identify development permits (format DP XX-XXXXXX where X is a number) and their statuses. Return the data in the following JSON format:
       {
         data: {
           developmentPermitId: string - DP XX-XXXXXX,
-          status: one of "approved", "applied", "denied", "withdrawn"
+          status: one of "approved", "applied" (use this for anything pending or sent back for further review), "denied", "withdrawn"
         }[]
       }
       Make sure you read carefully, and format your data accurately.
       Here is the text: ${meeting.contents}
     `)
-
-    console.log(developmentPermitDecisionResponse)
 
     if (!developmentPermitDecisionResponse || !developmentPermitDecisionResponse.data) {
       console.log(chalk.red(`No response for Richmond development permit meeting ${meeting.date}`))
@@ -160,6 +160,7 @@ export async function analyze(options: IOptions) {
       })
 
       if (permits.length === 0) {
+        console.log(chalk.yellow(`No new development DPs found in ${report.url}`))
         continue
       }
 
@@ -170,7 +171,13 @@ export async function analyze(options: IOptions) {
       const status = developmentPermitDecisions.find((permit) => permit.developmentPermitId.includes(permitNumber))?.status.toLowerCase() as ZoningStatus
 
       if (!status) {
+        console.log(chalk.red(`No matching status for Richmond DP ${permitNumber} - ${meeting.minutesUrl}`))
+        console.log(developmentPermitDecisions)
         continue
+      }
+
+      if (status !== 'approved') {
+        console.log(chalk.yellow(`Richmond DP ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - adding anyways`))
       }
 
       const record: IFullRezoningDetail = {
@@ -217,7 +224,7 @@ export async function analyze(options: IOptions) {
         updateDate: moment().format('YYYY-MM-DD')
       }
 
-      console.log(record)
+      console.log(chalk.green(`Adding record`))
       RecordsRepository.upsertRecords('development permit', [record])
     }
 
