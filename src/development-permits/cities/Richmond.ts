@@ -2,17 +2,20 @@ import moment from 'moment'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
 import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { IFullRezoningDetail, RecordsRepository, ZoningStatus } from '../../repositories/RecordsRepository'
+import { IFullRezoningDetail, ZoningStatus } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
 import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
+import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 
 interface IOptions {
   startDate: string
   endDate: string
   headless?: boolean | 'new'
 }
+
+const RecordsRepository = new RecordsRepositoryConstructor('draft')
 
 // Scrape development permit meeting minutes
 async function scrape(options: IOptions) {
@@ -212,7 +215,7 @@ export async function analyze(options: IOptions) {
       }
 
       console.log(record)
-      // RecordsRepository.upsertRecords('development permit', [record])
+      RecordsRepository.upsertRecords('development permit', [record])
     }
 
   }

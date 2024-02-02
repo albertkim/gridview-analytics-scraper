@@ -1,15 +1,18 @@
 import moment from 'moment'
 import chalk from 'chalk'
 import { RawRepository } from '../../repositories/RawRepository'
-import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
+import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
+import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 
 interface IOptions {
   startDate: string | null
   endDate: string | null
   headless?: boolean | 'new'
 }
+
+const RecordsRepository = new RecordsRepositoryConstructor('draft')
 
 // Development permits are mentioned in scraped city council meetings
 async function scrape(options: IOptions) {
@@ -39,22 +42,6 @@ async function scrape(options: IOptions) {
 
   return filteredNews
 
-}
-
-interface IDevelopmentPermitGPTItem {
-  permitNumber: string
-  address: string
-  buildingType: string
-  stats: {
-    buildings: number | null
-    stratas: number | null
-    rentals: number | null
-    hotels: number | null
-    fsr: number | null
-    storeys: number | null
-  }
-  applicant: string | null
-  description: string
 }
 
 export async function analyze(options: IOptions) {

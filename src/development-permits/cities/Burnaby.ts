@@ -1,10 +1,11 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
 import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
+import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
+import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 
 const startUrl = 'https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports'
 
@@ -13,6 +14,8 @@ interface IOptions {
   endDate: string | null
   headless?: boolean | 'new'
 }
+
+const RecordsRepository = new RecordsRepositoryConstructor('draft')
 
 async function scrape(options: IOptions) {
 

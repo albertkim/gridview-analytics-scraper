@@ -7,7 +7,8 @@ import puppeteer from 'puppeteer'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetRecordDetails } from '../../rezonings/AIUtilitiesV2'
-import { IFullRezoningDetail, RecordsRepository } from '../../repositories/RecordsRepository'
+import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
+import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 
 const startUrl = 'https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear'
 
@@ -40,6 +41,8 @@ interface IVancouverDevelopmentPermit {
   geo_point_2d: string
 }
 
+const RecordsRepository = new RecordsRepositoryConstructor('draft')
+
 async function scrape(options: IOptions) {
 
   const browser = await puppeteer.launch({
@@ -71,7 +74,7 @@ async function scrape(options: IOptions) {
   }).fromString(csvString)
 
   // Save file as a local file for future reference
-  fs.writeFileSync(path.join(__dirname, 'vancouver-development-permits.json'), JSON.stringify(data, null, 2))
+  fs.writeFileSync(path.join(__dirname, 'vancouver-dps.json'), JSON.stringify(data, null, 2))
 
   // Only return approved permits for new buildings, filter by date
   const filteredData = data
