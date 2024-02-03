@@ -1,15 +1,22 @@
 import fs from 'fs'
 import path from 'path'
-import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
+import { downloadPDF, generatePDFTextArray, generateScreenshotFromPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { chatGPTTextQuery, imageQuery } from '../../rezonings/AIUtilities'
 import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtilitiesV2'
+
+/**
+ * Sample PDFs:
+ * Encrypted: https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf
+ * Image based: https://citycouncil.richmond.ca/__shared/assets/1_dpp_ketcheson_road69357.pdf
+ * Regular text-based: https://citycouncil.richmond.ca/__shared/assets/1_DP_18-824566_12700___12800_Rice_Mill_Rd_and_12280___12300_No70716.pdf
+ */
 
 (async () => {
 
-  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf'
 
   const pdfData = await downloadPDF(pdfUrl)
-  let parsed = await parsePDF(pdfData, 1)
+  let parsed = await generatePDFTextArray(pdfData, {minCharacterCount: 10})
 
   console.log(parsed)
 

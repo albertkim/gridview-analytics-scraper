@@ -1,8 +1,8 @@
 import axios from 'axios'
 import pdfParse from 'pdf-parse'
-import { PDFDocument } from 'pdf-lib'
 import pdf2img from 'pdf-img-convert'
 import dotenv from 'dotenv'
+import { PDFDocument } from 'pdf-lib'
 import { cleanString } from '../scraper/BulkUtilities'
 
 dotenv.config()
@@ -23,6 +23,7 @@ interface IGeneratePDFTextArrayOptions {
 }
 
 // Given a PDF file, return a new text array with only the pages that have selectable text
+// IMPORTANT: This DOES NOT WORK with encrypted PDFs. For encrypted PDFs, use parsePDF() directly with the maxPages parameter instead
 export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePDFTextArrayOptions = {}) {
 	const minCharacterCount = options.minCharacterCount || 5
 	const expectedWords = options.expectedWords || []
