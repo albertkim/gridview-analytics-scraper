@@ -137,7 +137,7 @@ export class RecordsRepository {
         continue
       }
 
-      // Check for any entries with the same application ID - take precedent over matching addresses
+      // Check for any entries with the same application ID - take precedent over matching addresses if exists
       const recordWithMatchingApplicationID = record.applicationId ?
         previousRecords.find((item) => item.applicationId === record.applicationId)
         : null
@@ -147,6 +147,11 @@ export class RecordsRepository {
         console.log(chalk.green(`Merging record with ID ${recordWithMatchingApplicationID.id}`))
         this.updateRecord(recordWithMatchingApplicationID.id, mergedRecord)
         continue
+      } else if (record.applicationId) {
+        // If there is any application ID at all, then add as a new entry recardless of if a similar address exists
+        // There can be multiple rezonings (unlikely) or development permits (likely) for the same address
+        console.log(chalk.green(`Adding new record with ID ${record.id}`))
+        this.createRecord(record)
       }
 
       // Check for any entries with the same/similar addresses
@@ -160,8 +165,8 @@ export class RecordsRepository {
         continue
       }
 
+      // If nothing similar, just add the entry to the database
       console.log(chalk.green(`Adding new record with ID ${record.id}`))
-      // Otherwise, just add the entry to the database
       this.createRecord(record)
 
     }
