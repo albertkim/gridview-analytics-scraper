@@ -3,6 +3,7 @@ import pdfParse from 'pdf-parse'
 import { PDFDocument } from 'pdf-lib'
 import pdf2img from 'pdf-img-convert'
 import dotenv from 'dotenv'
+import { cleanString } from '../scraper/BulkUtilities'
 
 dotenv.config()
 
@@ -38,11 +39,7 @@ export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePD
 		singlePagePDF.addPage(copiedPage)
 		const singlePagePDFBytes = await singlePagePDF.save()
 		const pageText = (await pdfParse(singlePagePDFBytes as Buffer)).text
-		const cleanedText = pageText
-			.split('\n')
-			.map(line => line.trim().replace(/\s+/g, ' '))
-			.join('\n')
-			.replace(/\n+/g, '\n')
+		const cleanedText = cleanString(pageText)
 		if (cleanedText.length > minCharacterCount && expectedWords.every(word => cleanedText.toLowerCase().includes(word.toLowerCase()))) {
 			finalPDFTextArray.push(cleanedText)
 		}
@@ -107,10 +104,6 @@ export async function parsePDF(pdfData: Buffer, maxPageIndex?: number) {
 	})
 	const text = parsedPDF.text
 	// Clean text - trim each line of text, remove consecutive spaces, remove consecutive newlines
-	const cleanedText = text
-		.split('\n')
-		.map(line => line.trim().replace(/\s+/g, ' '))
-		.join('\n')
-		.replace(/\n+/g, '\n')
+	const cleanedText = cleanString(text)
 	return cleanedText
 }

@@ -118,7 +118,6 @@ async function scrape(options: IOptions) {
 
 }
 
-
 // Get every pdf <a> link that relates to a development permit.
 // Summarize the entire .contents of the details page to get the permit decision status
 // Combine permit details with the decision status and the date of the meeting
@@ -132,11 +131,11 @@ export async function analyze(options: IOptions) {
 
     // AI summary of which permits were approved
     const developmentPermitDecisionResponse = await chatGPTTextQuery(`
-      Given the following text, identify development permits (format DP XX-XXXXXX where X is a number) and their statuses. Return the data in the following JSON format:
+      You are an expert in land use planning and development. Given the following text, identify development permits (DP XX-XXXXXX where X is a number, usually near the start of the document, do not mention any RZ XX-XXXXXX codes). Return the data in the following JSON format:
       {
         data: {
-          developmentPermitId: string - DP XX-XXXXXX,
-          status: one of "approved", "applied" (use this for anything pending or sent back for further review), "denied", "withdrawn"
+          developmentPermitId: string in the format of DP XX-XXXXXX,
+          status: one of "approved", "applied", "denied", "withdrawn"
         }[]
       }
       Make sure you read carefully, and format your data accurately.
@@ -152,11 +151,23 @@ export async function analyze(options: IOptions) {
 
     for (const report of meeting.reports) {
       const pdf = await downloadPDF(report.url)
+      const firstPage = await parsePDF(pdf, 0)
       const parsedReport = await parsePDF(pdf, 3)
 
-      const permits = await AIGetPartialRecords(parsedReport, 1, 'DP XX-XXXXXX where X is a number', {
+      // All permit numbers are mentioned clearly on the first page. Subsequent pages may include completely different rezonings and/or permit numbers referenced from other meetings.
+      // Regex should case-insenstively check for DP XX-XXXXXX where X is a number and there may be any characters (up to 3 max) between the DP and the numbers
+      const permitNumberRegex = /DP.{0,3}\d{2}-\d{6}/i
+      const permitNumbers = Array.from(new Set(firstPage.match(permitNumberRegex)))
+
+      if (!permitNumbers || permitNumbers.length === 0) {
+        console.log(chalk.red(`No DP XX-XXXXXX permit number found for ${meeting.date} - ${report.url}`))
+        continue
+      }
+
+      const permits = await AIGetPartialRecords(parsedReport, 'DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)', {
         introduction: 'Identify only the development permits that refer to new developments, not alterations.',
-        fieldsToAnalyze: ['building type', 'stats']
+        fieldsToAnalyze: ['building type', 'stats'],
+        expectedWords: permitNumbers
       })
 
       if (permits.length === 0) {
@@ -164,68 +175,79 @@ export async function analyze(options: IOptions) {
         continue
       }
 
-      const permit = permits[0]
+      for (const permit of permits) {
 
-      // Find the development permit by doing a search on only the XX-XXXXXX part (exclude the DP) and then getting the status string, make into lowercase
-      const permitNumber = parsedReport.match(/\d{2}-\d{6}/)![0]
-      const status = developmentPermitDecisions.find((permit) => permit.developmentPermitId.includes(permitNumber))?.status.toLowerCase() as ZoningStatus
+        // Find the development permit by doing a search on only the XX-XXXXXX part (exclude the DP) and then getting the status string, make into lowercase
+        const permitNumber = permit.applicationId
 
-      if (!status) {
-        console.log(chalk.red(`No matching status for Richmond DP ${permitNumber} - ${meeting.minutesUrl}`))
-        console.log(developmentPermitDecisions)
-        continue
+        if (!permitNumber) {
+          console.log(chalk.red(`No permit number found for Richmond D - ${meeting.minutesUrl} - skipping`))
+          continue
+        }
+
+        let status = developmentPermitDecisions.find((permit) => permit.developmentPermitId.includes(permitNumber))?.status.toLowerCase() as ZoningStatus
+  
+        // DP status matching may not work
+        if (!status) {
+          console.log(chalk.red(`No matching status for Richmond DP ${permitNumber} - ${meeting.minutesUrl} - skipping`))
+          console.log(developmentPermitDecisions)
+          continue
+        }
+  
+        // Only add approved permits
+        if (status !== 'approved') {
+          console.log(chalk.yellow(`Richmond DP ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - skipping`))
+          continue
+        }
+  
+        const record: IFullRezoningDetail = {
+          id: generateID('dev'),
+          city: 'Richmond',
+          metroCity: 'Metro Vancouver',
+          type: 'development permit',
+          applicationId: `DP ${permitNumber}`, // Use the regex permit number
+          address: permit.address,
+          applicant: permit.applicant,
+          behalf: permit.behalf,
+          description: permit.description,
+          buildingType: permit.buildingType,
+          status: status,
+          dates: {
+            appliedDate: null,
+            publicHearingDate: null,
+            approvalDate: meeting.date,
+            denialDate: null,
+            withdrawnDate: null
+          },
+          stats: permit.stats,
+          zoning: permit.zoning,
+          reportUrls: [
+            {
+              url: report.url,
+              title: report.title,
+              date: meeting.date,
+              status: status
+            }
+          ],
+          minutesUrls: [
+            {
+              url: meeting.minutesUrl,
+              date: meeting.date,
+              status: status
+            }
+          ],
+          location: {
+            latitude: null,
+            longitude: null
+          },
+          createDate: moment().format('YYYY-MM-DD'),
+          updateDate: moment().format('YYYY-MM-DD')
+        }
+  
+        RecordsRepository.upsertRecords('development permit', [record])
+
       }
 
-      if (status !== 'approved') {
-        console.log(chalk.yellow(`Richmond DP ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - adding anyways`))
-      }
-
-      const record: IFullRezoningDetail = {
-        id: generateID('dev'),
-        city: 'Richmond',
-        metroCity: 'Metro Vancouver',
-        type: 'development permit',
-        applicationId: permit.applicationId,
-        address: permit.address,
-        applicant: permit.applicant,
-        behalf: permit.behalf,
-        description: permit.description,
-        buildingType: permit.buildingType,
-        status: status,
-        dates: {
-          appliedDate: status === 'applied' ? meeting.date : null,
-          publicHearingDate: null,
-          approvalDate: status === 'approved' ? meeting.date : null,
-          denialDate: status === 'denied' ? meeting.date : null,
-          withdrawnDate: status === 'withdrawn' ? meeting.date : null
-        },
-        stats: permit.stats,
-        zoning: permit.zoning,
-        reportUrls: [
-          {
-            url: report.url,
-            title: report.title,
-            date: meeting.date,
-            status: status
-          }
-        ],
-        minutesUrls: [
-          {
-            url: meeting.minutesUrl,
-            date: meeting.date,
-            status: status
-          }
-        ],
-        location: {
-          latitude: null,
-          longitude: null
-        },
-        createDate: moment().format('YYYY-MM-DD'),
-        updateDate: moment().format('YYYY-MM-DD')
-      }
-
-      console.log(chalk.green(`Adding record`))
-      RecordsRepository.upsertRecords('development permit', [record])
     }
 
   }

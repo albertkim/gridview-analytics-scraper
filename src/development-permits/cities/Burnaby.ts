@@ -84,15 +84,15 @@ export async function analyze(options: IOptions) {
 
     for (const parsed of parsedArray) {
 
-      // Find the number of instances of "Site Address" in the text
-      const regex = /Site Address/g
-      const matches = parsed.match(regex)
-      const uniqueMatches = new Set(matches)
-      const expectedRecords = uniqueMatches.size || 1
+      // Find the instances of building permit IDs
+      // Don't need to worry about other permid ID references, Burnaby descriptions are too short to include them
+      const regex = /BLD.{0,3}\d{2}-\d{5}/gi
+      const permitNumbers = Array.from(new Set(parsed.match(regex)))
 
-      const response = await AIGetPartialRecords(parsed, expectedRecords, 'BLDXX-XXXXX where X is a number', {
+      const response = await AIGetPartialRecords(parsed, 'BLDXX-XXXXX where X is a number', {
         introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
-        fieldsToAnalyze: ['building type', 'stats']
+        fieldsToAnalyze: ['building type', 'stats'],
+        expectedWords: permitNumbers
       })
 
       // NOTE: For now, the $ value of work is not incorporated, something to think about for the future.

@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
@@ -8,26 +9,30 @@ const startDate = '2023-12-01'
 const endDate = '2024-01-31'
 const citiesToAnalyze: string[] = [
   // 'Vancouver',
-  // 'Richmond',
+  'Richmond',
   // 'Burnaby',
-  'Surrey'
+  // 'Surrey'
 ]
 
 async function main() {
 
   if (citiesToAnalyze.includes('Vancouver')) {
+    console.log(chalk.bgWhite(`Analyzing development permits for Vancouver`))
     await analyzeVancouver({startDate: startDate, endDate: endDate})
   }
 
   if (citiesToAnalyze.includes('Richmond')) {
+    console.log(chalk.bgWhite(`Analyzing development permits for Richmond`))
     await analyzeRichmond({startDate: startDate, endDate: endDate})
   }
 
   if (citiesToAnalyze.includes('Burnaby')) {
+    console.log(chalk.bgWhite(`Analyzing development permits for Burnaby`))
     await analyzeBurnaby({startDate: startDate, endDate: endDate})
   }
 
   if (citiesToAnalyze.includes('Surrey')) {
+    console.log(chalk.bgWhite(`Analyzing development permits for Surrey`))
     await analyzeSurrey({startDate: startDate, endDate: endDate})
   }
 

@@ -6,16 +6,11 @@ import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtil
 
 (async () => {
 
-  const pdfUrl = 'https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/January-2-2024.pdf'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf'
 
   const pdfData = await downloadPDF(pdfUrl)
-  let parsed = await parsePDF(pdfData, 5)
+  let parsed = await parsePDF(pdfData, 2)
 
-  const response = await AIGetPartialRecords(parsed, 5, 'BLDXX-XXXXX', {
-    introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
-    fieldsToAnalyze: ['building type', 'stats']
-  })
-
-  console.log(response)
+  console.log(parsed)
 
 })()

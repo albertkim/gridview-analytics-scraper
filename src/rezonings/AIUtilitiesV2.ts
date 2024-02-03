@@ -3,9 +3,8 @@ import { chatGPTTextQuery } from './AIUtilities'
 import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 
 // This will use GPT 3.5 (not 4 due to cost concerns) to summarize a rezoning/development permit document to the best of its ability
-// However, do not use this function to extract permit IDs, should rely on regex on the original document
-// If there are multiple items in the document, the caller is responsible for splitting the summary into individual items
-export async function AISummarizeDocument(contents: string, expectedItems: number = 1, applicationIDFormat: string | null): Promise<string[]> {
+// You can use this function to extract permit IDs, just include them in the expected words array - too complicated to rely on regex from original document
+export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
 
   const fullQuery = `
     You are an expert in land use planning and development. Summarize the following document in a way that carefully retains all specific details as they relate to a rezoning or development permit. Make sure to include anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, address, applicant, applicant behalfs, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Exclude info referencing other meetings and documents.Include info about any final non-conditional decisions made. The document may include more than one rezoning/development permit. Accuracy is paramount as this summary will be used for further analysis.
@@ -14,17 +13,29 @@ export async function AISummarizeDocument(contents: string, expectedItems: numbe
     {
       data: string[] (array of summaries - combine each into a single summary string please)
     }
-    
-    There is expected to be up to ${expectedItems} item(s).
+
+    You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in the summary.
 
     Here is the document: ${contents}
   `
 
-  const response = await chatGPTTextQuery(fullQuery, '3.5')
+  let response = await chatGPTTextQuery(fullQuery, '3.5')
 
   if (!response || response.error || !response.data) {
     console.log(chalk.red(`Error with document`))
     return []
+  }
+
+  // Try up to 3 times to get all the expected words
+  let count = 1
+
+  while (count < 3 && !expectedWords.every((word) => response.data.includes(word))) {
+
+    console.log(chalk.yellow(`Missing expected words in response, retrying. Expected: ${expectedWords.join(', ')}`))
+    console.log(response.data)
+    response = await chatGPTTextQuery(fullQuery, '3.5')
+    count++
+
   }
 
   return response.data
@@ -36,6 +47,7 @@ interface BaseRezoningQueryParams {
   applicationId?: string // Expected format of the application ID (if any)
 	status?: string
   fieldsToAnalyze: ('building type' | 'zoning' | 'stats' | 'status')[]
+  expectedWords?: string[] // Strings that must be included in the AI response exactly as they are
 }
 
 interface IBuildingStats {
@@ -55,9 +67,9 @@ interface IZoningDetail {
 }
 
 // Note: It is recommended (but not necessary) to replace the application ID with a regex-parsed one from the caller
-export async function AIGetPartialRecords(contents: string, expectedItems: number, applicationIDFormat: string | null, options: BaseRezoningQueryParams) {
+export async function AIGetPartialRecords(contents: string, applicationIDFormat: string | null, options: BaseRezoningQueryParams) {
 
-  const summary = await AISummarizeDocument(contents, expectedItems, applicationIDFormat)
+  const summary = await AISummarizeDocument(contents, options.expectedWords || [], applicationIDFormat)
 
   const partialRezoningDetails: {
     applicationId: string | null
@@ -73,7 +85,7 @@ export async function AIGetPartialRecords(contents: string, expectedItems: numbe
 
   for (const summaryItem of summary) {
 
-    const baseResponse = await chatGPTTextQuery(`
+    const baseQuery = `
       You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format, give an empty array if no values to return - otherwise return a {error: message, reason: detailed explanation}.
       ${options?.introduction ? options.introduction : ''}
       {
@@ -84,12 +96,36 @@ export async function AIGetPartialRecords(contents: string, expectedItems: numbe
         description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
       }
       Document here: ${summaryItem}
-    `, '3.5')
+    `
+
+    let baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
   
     if (!baseResponse || baseResponse.error) {
-      // TODO: Retry once if failed or format is wrong
       continue
     }
+
+    if (!baseResponse.address) {
+      console.log(chalk.yellow(`Missing address in response, retrying`))
+      console.log(baseResponse)
+      baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
+      if (!baseResponse || baseResponse.error) {
+        console.log(chalk.red(`Error in response: ${baseResponse}, skipping`))
+        continue
+      }
+      if (!baseResponse.address) {
+        console.log(chalk.red(`Missing address in response: ${baseResponse}, skipping`))
+        continue
+      }
+    }
+
+    // Check and fix application ID correctness (null, "null", undefined values)
+		if (baseResponse.applicationId === 'null') {
+			baseResponse.applicationId = null
+		} else if (baseResponse.applicationId === undefined) {
+			baseResponse.applicationId = null
+		} else if (baseResponse.applicationId) {
+			baseResponse.applicationId = `${baseResponse.applicationId}`
+		}
 
     const baseObject = {
       applicationId: baseResponse.applicationId as string | null,
@@ -162,9 +198,9 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     }`,
     stats: `stats: {
       buildings: your best guess as to the number of new buildings being proposed or null if unclear
-      stratas: your best guess as to the total number of non-rental residential units/houses/townhouses - default to assuming strata if not specified - null if unclear
-      rentals: total number of rental units or null if unclear - do not default to rental if not specified
-      hotels: total number of hotel units (not buildings) or null if unclear
+      stratas: your best guess as to the total number of non-rental residential units/houses/townhouses - default to assuming strata if not specified - if single family, use number of buildings - null if unclear
+      rentals: total number of rental units - 0 if no rentals mentioned - null if unclear
+      hotels: total number of hotel units (not buildings) - 0 if no hotels mentioned - null if unclear
       fsr: total floor space ratio or null if unclear
       storeys: total number of storeys - pick the tallest if multiple - null if unclear
     }`,

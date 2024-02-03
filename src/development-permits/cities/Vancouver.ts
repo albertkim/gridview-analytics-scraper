@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import csv from 'csvtojson'
 import puppeteer from 'puppeteer'
-import { formatDateString } from '../../scraper/BulkUtilities'
+import { cleanString, formatDateString } from '../../scraper/BulkUtilities'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetRecordDetails } from '../../rezonings/AIUtilitiesV2'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
@@ -116,10 +116,10 @@ export async function analyze(options: IOptions) {
       metroCity: 'Metro Vancouver',
       type: 'development permit',
       applicationId: entry.PermitNumber,
-      address: entry.Address,
+      address: entry.Address.split(', Vancouver')[0],
       applicant: entry.Applicant,
       behalf: null,
-      description: entry.ProjectDescription,
+      description: cleanString(entry.ProjectDescription),
       buildingType: detailsResponse.buildingType,
       status: 'approved',
       dates: {

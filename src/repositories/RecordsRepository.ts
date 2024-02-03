@@ -335,6 +335,8 @@ function getLatestMinuteDate(rezoning: IFullRezoningDetail): {url: string, date:
   return latestDate
 }
 
+// Note that in the params, old/new refers to the old/new entry, not the old/new data
+// For old/new data based on dates, see the old/newMinuteDate functionality inside the function
 export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezoningDetail) {
 
   // city, metroCity, address, and createDate should be consistent
@@ -346,18 +348,23 @@ export function mergeEntries(oldEntry: IFullRezoningDetail, newEntry: IFullRezon
   const oldMinuteDate = getLatestMinuteDate(oldEntry)
   const newMinuteDate = getLatestMinuteDate(newEntry)
 
-  // If development permit, always prefer new (don't have progressive statuses with DPs usually)
-  if (oldEntry.type === 'development permit') {
+  // If the latest dates are the same, this is probably a re-scrape. Prefer the new data
+  if (oldMinuteDate === newMinuteDate) {
     preferred = 'new'
-  } else if (oldEntry.type === 'rezoning') {
-    if (oldMinuteDate && oldMinuteDate.status === 'applied') {
-      preferred = 'old'
-    } else if (newMinuteDate && newMinuteDate.status === 'applied') {
+  } else {
+    // If development permit, always prefer new (don't have progressive statuses with DPs usually)
+    if (oldEntry.type === 'development permit') {
       preferred = 'new'
-    } else if (oldMinuteDate && oldMinuteDate.status === 'public hearing') {
-      preferred = 'old'
-    } else if (newMinuteDate && newMinuteDate.status === 'public hearing') {
-      preferred = 'new'
+    } else if (oldEntry.type === 'rezoning') {
+      if (oldMinuteDate && oldMinuteDate.status === 'applied') {
+        preferred = 'old'
+      } else if (newMinuteDate && newMinuteDate.status === 'applied') {
+        preferred = 'new'
+      } else if (oldMinuteDate && oldMinuteDate.status === 'public hearing') {
+        preferred = 'old'
+      } else if (newMinuteDate && newMinuteDate.status === 'public hearing') {
+        preferred = 'new'
+      }
     }
   }
 

@@ -3,6 +3,7 @@ import path from 'path'
 import moment from 'moment'
 import similarity from 'similarity'
 import { IFullRezoningDetail, mergeEntries } from './RecordsRepository'
+import chalk from 'chalk'
 
 export class RecordsRepository {
 
@@ -130,6 +131,7 @@ export class RecordsRepository {
       const recordWithMatchingID = previousRecords.find((item) => item.id === record.id)
       if (recordWithMatchingID) {
         const mergedRecord = mergeEntries(recordWithMatchingID, record)
+        console.log(chalk.green(`Merging record with ID ${recordWithMatchingID.id}`))
         this.updateRecord(recordWithMatchingID.id, mergedRecord)
         continue
       }
@@ -141,6 +143,7 @@ export class RecordsRepository {
       if (recordWithMatchingApplicationID) {
         const mergedRecord = mergeEntries(recordWithMatchingApplicationID, record)
         mergedRecord.id = recordWithMatchingApplicationID.id
+        console.log(chalk.green(`Merging record with ID ${recordWithMatchingApplicationID.id}`))
         this.updateRecord(recordWithMatchingApplicationID.id, mergedRecord)
         continue
       }
@@ -151,10 +154,12 @@ export class RecordsRepository {
         const similarRecord = similarAddresses[0].rezoning
         const mergedRecord = mergeEntries(similarRecord, record)
         mergedRecord.id = similarRecord.id
+        console.log(chalk.green(`Merging record with ID ${similarRecord.id}`))
         this.updateRecord(similarRecord.id, mergedRecord)
         continue
       }
 
+      console.log(chalk.green(`Adding new record with ID ${record.id}`))
       // Otherwise, just add the entry to the database
       this.createRecord(record)
 

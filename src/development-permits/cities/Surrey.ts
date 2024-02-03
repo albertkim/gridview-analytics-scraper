@@ -57,9 +57,19 @@ export async function analyze(options: IOptions) {
 
     const report = news.reportUrls[0]
 
-    const response = await AIGetPartialRecords(news.contents, 1, 'XXXX-XXXX-XX where X is a number', {
-      introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
-      fieldsToAnalyze: ['building type', 'stats']
+    // Regex to find XXXX-XXXX-XX where X is a number
+    const permitNumberRegex = /\d{4}-\d{4}-\d{2}/
+    const permitNumber = `${report.title} ${news.contents}`.match(permitNumberRegex)?.[0]
+
+    if (!permitNumber) {
+      console.log(chalk.red(`No XXXX-XXXX-XX permit number found for ${news.date} - ${news.title}`))
+      continue
+    }
+
+    const response = await AIGetPartialRecords(news.contents, 'XXXX-XXXX-XX where X is a number', {
+      introduction: 'Identify only the items that refer to new developments, not alterations.',
+      fieldsToAnalyze: ['building type', 'stats'],
+      expectedWords: [permitNumber]
     })
 
     const records: IFullRezoningDetail[] = response.map((permit) => {
@@ -68,7 +78,7 @@ export async function analyze(options: IOptions) {
         city: 'Surrey',
         metroCity: 'Metro Vancouver',
         type: 'development permit',
-        applicationId: permit.applicationId,
+        applicationId: permitNumber,
         address: permit.address,
         applicant: permit.applicant,
         behalf: permit.behalf,
