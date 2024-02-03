@@ -4,7 +4,6 @@ import { RecordsRepository } from '../../repositories/RecordsRepositoryV2'
 
   const repository = new RecordsRepository('draft')
 
-  repository.dangerouslyReplaceRecordsForCity('development permit', 'Richmond', [])
-  repository.dangerouslyReplaceRecordsForCity('development permit', 'Surrey', [])
+  repository.dangerouslyReplaceRecordsForCity('development permit', 'Burnaby', [])
 
 })()

@@ -65,8 +65,9 @@ export async function analyze(options: IOptions) {
       continue
     }
 
-    const response = await AIGetPartialRecords(news.contents, 'XXXX-XXXX-XX where X is a number', {
+    const response = await AIGetPartialRecords(news.contents, {
       instructions: 'Identify only the items that refer to new developments, not alterations.',
+      applicationId: 'XXXX-XXXX-XX where X is a number',
       fieldsToAnalyze: ['building type', 'stats'],
       expectedWords: [permitNumber]
     })

@@ -86,9 +86,9 @@ interface IZoningDetail {
 }
 
 // Note: It is recommended (but not necessary) to replace the application ID with a regex-parsed one from the caller
-export async function AIGetPartialRecords(contents: string, applicationIDFormat: string | null, options: BaseRezoningQueryParams) {
+export async function AIGetPartialRecords(contents: string, options: BaseRezoningQueryParams) {
 
-  const summary = await AISummarizeDocument(contents, options.expectedWords || [], applicationIDFormat)
+  const summary = await AISummarizeDocument(contents, options.expectedWords || [], options.applicationId || null)
 
   const partialRezoningDetails: {
     applicationId: string | null
@@ -108,7 +108,7 @@ export async function AIGetPartialRecords(contents: string, applicationIDFormat:
       You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}. Return only entries with an address.
       ${options?.instructions ? options.instructions : ''}
       {
-        applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
+        applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
         address: address in question - only street address, no city - if multiple addresses, comma separate, should not be null
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist

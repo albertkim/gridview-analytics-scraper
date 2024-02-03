@@ -168,8 +168,9 @@ export async function analyze(options: IOptions) {
         continue
       }
 
-      const permits = await AIGetPartialRecords(parsedReport, 'DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)', {
+      const permits = await AIGetPartialRecords(parsedReport, {
         instructions: 'Identify only the development permits that refer to new developments, not alterations.',
+        applicationId: 'DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)',
         fieldsToAnalyze: ['building type', 'stats'],
         expectedWords: permitNumbers
       })

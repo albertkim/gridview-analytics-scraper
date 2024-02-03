@@ -59,7 +59,7 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		const content = JSON.parse(response.choices[0].message.content!)
 
 		if (content.error) {
-			console.log(chalk.yellow(JSON.stringify(content, null, 2)))
+			// console.log(chalk.yellow(JSON.stringify(content, null, 2)))
 			return null
 		}
 

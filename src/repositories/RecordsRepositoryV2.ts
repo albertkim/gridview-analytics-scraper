@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
+import chalk from 'chalk'
 import moment from 'moment'
 import similarity from 'similarity'
 import { IFullRezoningDetail, mergeEntries } from './RecordsRepository'
-import chalk from 'chalk'
 
 export class RecordsRepository {
 
@@ -176,6 +176,8 @@ export class RecordsRepository {
   // Upserts all draft records into the final database - must be in draft mode
   finalCheckIn() {
 
+    console.log(chalk.bgWhite('Checking in the draft records into the final records database.'))
+
     if (this.database !== this.databaseMapping.final) {
       throw new Error('Repository must be in "final" mode to perform a check-in.')
     }
@@ -185,6 +187,8 @@ export class RecordsRepository {
     for (const record of draftRecords) {
       this.upsertRecords(record.type, [record])
     }
+
+    console.log(chalk.green('Check-in complete. You may now safely clear rezonings-draft.json'))
 
   }
 

@@ -28,7 +28,6 @@ export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePD
 	const expectedWords = options.expectedWords || []
 	const pdfDoc = await PDFDocument.load(pdfData)
 	const pageCount = pdfDoc.getPageCount()
-	console.log(`Original PDF page count is ${pageCount}`)
 
 	const finalPDFTextArray = []
 
@@ -45,7 +44,6 @@ export async function generatePDFTextArray(pdfData: Buffer, options: IGeneratePD
 		}
 	}
 
-	console.log(`Final PDF text array count is ${finalPDFTextArray.length}`)
 	return finalPDFTextArray
 }
 
