@@ -1,6 +1,5 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
-import { downloadPDF, parsePDF } from '../../utilities/PDFUtilities'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'

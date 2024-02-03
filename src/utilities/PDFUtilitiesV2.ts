@@ -1,10 +1,10 @@
+import axios from 'axios'
 import pdfParse from 'pdf-parse'
 import pdf2img from 'pdf-img-convert'
 import { chatGPTTextQuery, imageTextQuery } from './AIUtilities'
 import { PDFRepository } from '../repositories/PDFRepository'
 import { cleanString } from '../scraper/BulkUtilities'
 import { PDFDocument } from 'pdf-lib'
-import axios from 'axios'
 
 interface IParsePDFOptions {
   maxPages: number // Required: 0 means parse all pages, 1 means parse only the first page, etc
@@ -70,7 +70,7 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
 
   }
 
-  PDFRepository.add(url, finalText, options.maxPages)
+  PDFRepository.add(url, finalText, options.maxPages, isImageBased ? 'image' : 'text')
   return finalText
 
 }

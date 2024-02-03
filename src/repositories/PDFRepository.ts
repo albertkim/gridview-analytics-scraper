@@ -7,6 +7,7 @@ interface IPDFItem {
   url: string
   text: string | null // If null there was an error parsing the PDF, need to investigate
   maxPages: number // 0 if entire document
+  type: 'text' | 'image'
   createDate: string
   updateDate: string
 }
@@ -30,7 +31,7 @@ export const PDFRepository = {
 
   },
 
-  add(url: string, text: string | null, maxPages: number) {
+  add(url: string, text: string | null, maxPages: number, type: 'text' | 'image') {
 
     const pdfs = JSON.parse(fs.readFileSync(directory, 'utf8')) as IPDFItem[]
 
@@ -40,6 +41,7 @@ export const PDFRepository = {
       // If there is an existing URL match with lowermaxPages, update
       existing.text = text
       existing.maxPages = maxPages
+      existing.type = type
       existing.updateDate = new Date().toISOString()
       fs.writeFileSync(directory, JSON.stringify(pdfs, null, 2), 'utf8')
     } else if (existing && maxPages <= existing.maxPages) {
@@ -47,7 +49,7 @@ export const PDFRepository = {
       return
     } else {
       // If there is no existing URL match, add new
-      const newPDFs = [{url: url, text: text, maxPages: maxPages, createDate: new Date().toISOString(), updateDate: new Date().toISOString()}, ...pdfs]
+      const newPDFs: IPDFItem[] = [{url: url, text: text, maxPages: maxPages, type: type, createDate: new Date().toISOString(), updateDate: new Date().toISOString()}, ...pdfs]
       fs.writeFileSync(directory, JSON.stringify(newPDFs, null, 2), 'utf8')
     }
 
