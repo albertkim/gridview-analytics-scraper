@@ -19,7 +19,7 @@ async function scrape(options: IOptions) {
 
   const news = RawRepository.getNews({city: 'Surrey'})
 
-  // Filter by date and development permits
+  // Filter by development permits type, dates, and reports
   const filteredNews = news
     .filter((n) => {
       // Check contents and make sure it includes "development permit", case-insensitive
@@ -39,6 +39,9 @@ async function scrape(options: IOptions) {
       }
       return true
     })
+    .filter((n) => {
+      return n.reportUrls.length > 0
+    })
 
   return filteredNews
 
@@ -46,14 +49,10 @@ async function scrape(options: IOptions) {
 
 export async function analyze(options: IOptions) {
 
+  // Filtered to only include news with at least one report URL
   const newsWithDevelopmentPermits = await scrape(options)
 
   for (const news of newsWithDevelopmentPermits) {
-
-    if (news.reportUrls.length === 0) {
-      console.log(chalk.yellow(`No planning report attached for Surrey development permit ${news.date} - ${news.title}`))
-      continue
-    }
 
     const report = news.reportUrls[0]
 
@@ -67,7 +66,7 @@ export async function analyze(options: IOptions) {
     }
 
     const response = await AIGetPartialRecords(news.contents, 'XXXX-XXXX-XX where X is a number', {
-      introduction: 'Identify only the items that refer to new developments, not alterations.',
+      instructions: 'Identify only the items that refer to new developments, not alterations.',
       fieldsToAnalyze: ['building type', 'stats'],
       expectedWords: [permitNumber]
     })

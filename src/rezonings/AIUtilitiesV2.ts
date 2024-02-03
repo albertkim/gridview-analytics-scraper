@@ -26,10 +26,23 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     return []
   }
 
+  // GPT loves to sometimes make the summary an object instead of a string, so if it's an object, just stringify the data.
+  function stringifyArray(array: any[]) {
+    const result: string[] = []
+    for (const item of array) {
+      if (typeof item === 'object') {
+        result.push(JSON.stringify(item))
+      } else {
+        result.push(item)
+      }
+    }
+    return result
+  }
+
   // Try up to 3 times to get all the expected words anywhere in the array of strings
   let count = 1
 
-  while (count < 3 && !expectedWords.every((word) => response.data.join('\n').includes(word))) {
+  while (count < 3 && !expectedWords.every((word) => stringifyArray(response.data).join('\n').includes(word))) {
 
     console.log(chalk.yellow(`Missing expected words in response, retrying. Expected: ${expectedWords.join(', ')}`))
     console.log(response.data)
@@ -39,17 +52,17 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
   }
 
   // Log an error but continue with this summary
-  if (!expectedWords.every((word) => response.data.join('\n').includes(word))) {
+  if (!expectedWords.every((word) => stringifyArray(response.data).join('\n').includes(word))) {
     console.log(chalk.red(`Still missing expected words in response, continuing. Expected: ${expectedWords.join(', ')}`))
     console.log(response.data)
   }
 
-  return response.data
+  return stringifyArray(response.data)
 
 }
 
 interface BaseRezoningQueryParams {
-	introduction?: string // Custom instructions - ex. only include development permits that relate to new developments
+	instructions?: string // Custom instructions - ex. only include development permits that relate to new developments
   applicationId?: string // Expected format of the application ID (if any)
 	status?: string
   fieldsToAnalyze: ('building type' | 'zoning' | 'stats' | 'status')[]
@@ -93,11 +106,11 @@ export async function AIGetPartialRecords(contents: string, applicationIDFormat:
 
     const baseQuery = `
       You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}. Return only entries with an address.
-      ${options?.introduction ? options.introduction : ''}
+      ${options?.instructions ? options.instructions : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
         address: address in question - only street address, no city - if multiple addresses, comma separate, should not be null
-        applicant: who the rezoning applicant is
+        applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
         description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
       }
@@ -110,7 +123,7 @@ export async function AIGetPartialRecords(contents: string, applicationIDFormat:
     if (!baseResponse || !baseResponse.address) {
       baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
       if (!baseResponse || !baseResponse.address) {
-        console.log(chalk.red(`No address found in response, Skipping. Summary: ${summaryItem}`))
+        console.log(chalk.yellow(`No address found in response, Skipping.\nSummary: ${summaryItem}`))
         continue
       }
     }

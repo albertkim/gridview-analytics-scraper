@@ -25,7 +25,11 @@ interface BaseRezoningQueryParams {
 // Make sure that the query includes the word 'JSON'
 // Defaults to 3.5, specify 4 if you want to use 4
 export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
-	console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}`)
+
+	// Only log if using GPT 4 - otherwise too verbose
+	if (gptVersion === '4') {
+		console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}`)
+	}
 
 	const gptVersionMapping = {
 		'3.5': 'gpt-3.5-turbo-1106',
@@ -55,18 +59,19 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		const content = JSON.parse(response.choices[0].message.content!)
 
 		if (content.error) {
-			console.log(chalk.red(JSON.stringify(content, null, 2)))
+			console.log(chalk.yellow(JSON.stringify(content, null, 2)))
 			return null
 		}
+
 		return content
+
 	} catch (error: any) {
 		if (error.response && error.response.data) {
 			console.error(chalk.red(error.response.data))
-			throw new Error()
 		} else {
 			console.error(chalk.red(error))
-			throw new Error()
 		}
+		return null
 	}
 }
 

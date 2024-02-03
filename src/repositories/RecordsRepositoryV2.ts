@@ -10,12 +10,13 @@ export class RecordsRepository {
   private database: string
 
   // Object where key is databaseMode, value is string
-  private databaseMapping: Record<'final' | 'draft', string> = {
+  private databaseMapping: Record<'final' | 'draft' | 'draft2', string> = {
     final: path.join(__dirname, '../database/rezonings.json'),
-    draft: path.join(__dirname, '../database/rezonings-draft.json')
+    draft: path.join(__dirname, '../database/rezonings-draft.json'),
+    draft2: path.join(__dirname, '../database/rezonings-draft-2.json')
   }
 
-  constructor(databaseMode: 'final' | 'draft') {
+  constructor(databaseMode: 'final' | 'draft' | 'draft2') {
     this.database = this.databaseMapping[databaseMode]
   }
 

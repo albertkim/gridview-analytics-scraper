@@ -1,7 +1,10 @@
-import { RecordsRepository } from '../../repositories/RecordsRepository'
+import { RecordsRepository } from '../../repositories/RecordsRepositoryV2'
 
 (async () => {
 
-  RecordsRepository.dangerouslyReplaceRecords('rezoning', 'Surrey', [])
+  const repository = new RecordsRepository('draft')
+
+  repository.dangerouslyReplaceRecordsForCity('development permit', 'Richmond', [])
+  repository.dangerouslyReplaceRecordsForCity('development permit', 'Surrey', [])
 
 })()

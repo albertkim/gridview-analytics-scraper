@@ -9,7 +9,7 @@ const startDate = '2023-12-01'
 const endDate = '2024-01-31'
 const citiesToAnalyze: string[] = [
   // 'Vancouver',
-  'Richmond',
+  // 'Richmond',
   // 'Burnaby',
   // 'Surrey'
 ]
@@ -37,6 +37,7 @@ async function main() {
   }
 
   // Check in drafts with the command
+  // But first make sure to check in the current code to GitHub so that you can see the changes and make debugging easier
   // yarn run check-in
 
 }

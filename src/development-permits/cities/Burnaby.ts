@@ -90,7 +90,7 @@ export async function analyze(options: IOptions) {
       const permitNumbers = Array.from(new Set(parsed.match(regex)))
 
       const response = await AIGetPartialRecords(parsed, 'BLDXX-XXXXX where X is a number', {
-        introduction: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
+        instructions: 'Identify only the items that refer to new developments, not alterations. Number of units is usually a number listed right after the $ value',
         fieldsToAnalyze: ['building type', 'stats'],
         expectedWords: permitNumbers
       })
