@@ -5418,6 +5418,171 @@
     "updateDate": "2024-02-02"
   },
   {
+    "id": "dev-2hv0unjgio9ibxqmswr07",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 20-919145",
+    "address": "4571, 4591 and 4611/4631 Steveston Highway",
+    "applicant": "Jonathan King",
+    "behalf": "Gurpreet Mann, director of 0780012 BC Ltd., Jonathan King and Sandra Rotholc-King, directors of 2517294 Ontario Inc., Azim Bhimani, director of Luxor Homes & Developments Ltd., Gurpreet Mann and Narinder Mann",
+    "description": "Permission to develop 16 townhouse units at the specified addresses. Rezoning from 'Single Detached (RS1/E)' and 'Two-Unit Dwellings (RD1)' zones to the 'Low Density Townhouses (RTL4)' zone for this project under Bylaw 10081 (RZ 18-839945), which is currently at third reading. Servicing Agreement required as a condition of Building Permit issuance including various improvements such as sidewalk removal and replacement, driveway crossings replacement, and construction of a new driveway crossing designed to provide 'right in, right out' access to the site.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 4,
+      "stratas": 16,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4571_4591___4611__Steveston_Hway72095.pdf",
+        "title": "DEVELOPMENT PERMIT 20-919145",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-2hv0unjgio9ibxqmswr07",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 20-919145",
+    "address": "4571, 4591 and 4611/4631 Steveston Highway",
+    "applicant": "Jonathan King",
+    "behalf": null,
+    "description": "Construction of 16 townhouse units on a site zoned 'Low Density Townhouses (RTL4)'. Front yard setback along Steveston Highway proposed to be reduced from 6.0 m to 4.50 m. Rezoning from 'Single Detached (RS1/E)' and 'Two-Unit Dwellings (RD1)' zones to the 'Low Density Townhouses (RTL4)' zone.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 16,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4571_4591___4611__Steveston_Hway72095.pdf",
+        "title": "DEVELOPMENT PERMIT 20-919145",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-efymam5agfjwknyjo908z",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-943418",
+    "address": "13888 Wireless Way",
+    "applicant": "Karla Castellanos Architect",
+    "behalf": "Alan Yong, S-506 Holdings Ltd.",
+    "description": "The application is for a three-storey light industrial and ancillary office building of approximately 3,748 m2 containing 11 strata-titled units on a new lot created through subdivision on the west portion of the site. The site is zoned \"Industrial Business Park (ZI3) - Crestwood Area (East Cambie)\". The proposal aligns with the City's objectives of intensifying existing industrial lands. The proposal also involves land restoration within the existing Riparian Management Area (RMA) along the south side of the site, as well as improvements to pedestrian circulation and landscaping within the surface parking area on Lot 2.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 11,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_2_13888_Wireless_Way72096.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943418",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
     "id": "dev-tayua0nfjftkof4vq99wc",
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -10471,6 +10636,55 @@
     "updateDate": "2024-02-02"
   },
   {
+    "id": "dev-f26k1s03m58xz0n6zfc2t",
+    "type": "development permit",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "applicationId": "BLD22-00715",
+    "address": "8866 Monroe Ave",
+    "applicant": "DESIGN MARQUE CONSULTING LTD",
+    "behalf": "RHEA CUSTOM HOMES & DEVELPOMENT LTD",
+    "description": "Constructing a single-family dwelling with a secondary suite and detached garage",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "stats": {
+      "buildings": 1,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-29",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "reportUrls": [
+      {
+        "title": "December-29-2023.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/December-29-2023.pdf",
+        "date": "2023-12-29",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
     "id": "dev-cvxom6y2j16v8k7jekunj",
     "type": "development permit",
     "city": "Burnaby",
@@ -14979,6 +15193,116 @@
     "updateDate": "2024-02-02"
   },
   {
+    "id": "dev-797h0ravqilzn6w8fptz6",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "Anthony Boni",
+    "behalf": null,
+    "description": "Develop a three-storey 25-unit affordable rental housing building",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-13",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 25,
+      "rentals": 25,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf",
+        "title": "DEVELOPMENT PERMIT 23-025993",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/121323_minutes.htm",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
+    "id": "dev-797h0ravqilzn6w8fptz6",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-025993",
+    "address": "4831 Steveston Highway",
+    "applicant": "Anthony Boni (Boni Maddison Architects)",
+    "behalf": null,
+    "description": "Construction of a three-storey 25-unit affordable rental housing building at 4831 Steveston Highway on a site zoned 'Low Rise Rental Apartment (ZLR48) - Steveston Highway (Steveston)'. The permit would also vary the provisions of Richmond Zoning Bylaw No 8500 to allow 37 per cent of the required vehicle parking spaces to be small car spaces.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-13",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 25,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf",
+        "title": "DEVELOPMENT PERMIT 23-025993",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/121323_minutes.htm",
+        "date": "2023-12-13",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-02",
+    "updateDate": "2024-02-02"
+  },
+  {
     "id": "dev-nlztvzfrxsk1xqckeshm7",
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -18311,24 +18635,31 @@
     "updateDate": "2024-02-02"
   },
   {
-    "id": "dev-f26k1s03m58xz0n6zfc2t",
-    "type": "development permit",
-    "city": "Burnaby",
+    "id": "dev-efymam5agfjwknyjo908z",
+    "city": "Richmond",
     "metroCity": "Metro Vancouver",
-    "applicationId": "BLD22-00715",
-    "address": "8866 Monroe Ave",
-    "applicant": "DESIGN MARQUE CONSULTING LTD",
-    "behalf": "RHEA CUSTOM HOMES & DEVELPOMENT LTD",
-    "description": "Constructing a single-family dwelling with a secondary suite and detached garage",
-    "buildingType": "single-family residential",
+    "type": "development permit",
+    "applicationId": "DP 21-943418",
+    "address": "13888 Wireless Way",
+    "applicant": "Karla Castellanos Architect",
+    "behalf": "Alan Yong, S-506 Holdings Ltd.",
+    "description": "The application is for a three-storey light industrial and ancillary office building of approximately 3,748 m2 containing 11 strata-titled units on a new lot created through subdivision on the west portion of the site. The site is zoned \"Industrial Business Park (ZI3) - Crestwood Area (East Cambie)\". The proposal aligns with the City's objectives of intensifying existing industrial lands. The proposal also involves land restoration within the existing Riparian Management Area (RMA) along the south side of the site, as well as improvements to pedestrian circulation and landscaping within the surface parking area on Lot 2.",
+    "buildingType": "industrial",
     "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
     "stats": {
       "buildings": 1,
-      "stratas": 2,
+      "stratas": 11,
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 2
+      "storeys": 3
     },
     "zoning": {
       "previousZoningCode": null,
@@ -18336,22 +18667,21 @@
       "newZoningCode": null,
       "newZoningDescription": null
     },
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-29",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
     "reportUrls": [
       {
-        "title": "December-29-2023.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/December-29-2023.pdf",
-        "date": "2023-12-29",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_2_13888_Wireless_Way72096.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943418",
+        "date": "2024-01-17",
         "status": "approved"
       }
     ],
-    "minutesUrls": [],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
     "location": {
       "latitude": null,
       "longitude": null

@@ -7,14 +7,14 @@ import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
 
   const fullQuery = `
-    You are an expert in land use planning and development. Summarize the following document in a way that carefully retains all specific details as they relate to a rezoning or development permit. Make sure to include anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, address, applicant, applicant behalfs, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Exclude info referencing other meetings and documents.Include info about any final non-conditional decisions made. The document may include more than one rezoning/development permit. Accuracy is paramount as this summary will be used for further analysis.
-    
-    Return as a json object that looks like this, and make sure to double-check the format:
-    {
-      data: string[] (array of summaries - combine each into a single summary string please)
-    }
+    You are an expert in land use planning and development. Identify what looks like info about a rezoning or development permit, then provide a summary on each one. ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in the summary.` : ''}
 
-    You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in the summary.
+    In each summary, carefully retain all specific details. Make sure to include anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, address, applicant, applicant behalfs, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Include info about any decisions made.
+    
+    Return as a JSON object that looks like this, and make sure to double-check the format:
+    {
+      data: string[] (array of summaries)
+    }
 
     Here is the document: ${contents}
   `
@@ -26,16 +26,22 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     return []
   }
 
-  // Try up to 3 times to get all the expected words
+  // Try up to 3 times to get all the expected words anywhere in the array of strings
   let count = 1
 
-  while (count < 3 && !expectedWords.every((word) => response.data.includes(word))) {
+  while (count < 3 && !expectedWords.every((word) => response.data.join('\n').includes(word))) {
 
     console.log(chalk.yellow(`Missing expected words in response, retrying. Expected: ${expectedWords.join(', ')}`))
     console.log(response.data)
     response = await chatGPTTextQuery(fullQuery, '3.5')
     count++
 
+  }
+
+  // Log an error but continue with this summary
+  if (!expectedWords.every((word) => response.data.join('\n').includes(word))) {
+    console.log(chalk.red(`Still missing expected words in response, continuing. Expected: ${expectedWords.join(', ')}`))
+    console.log(response.data)
   }
 
   return response.data
@@ -47,7 +53,7 @@ interface BaseRezoningQueryParams {
   applicationId?: string // Expected format of the application ID (if any)
 	status?: string
   fieldsToAnalyze: ('building type' | 'zoning' | 'stats' | 'status')[]
-  expectedWords?: string[] // Strings that must be included in the AI response exactly as they are
+  expectedWords?: string[] // There are 2 steps: summarization, then rezoning parsing. These words are expected to be in the summarization stage, but may not exist in the final parse because the LLM might have filtered them out based on a query intro like "only include new building developments" etc.
 }
 
 interface IBuildingStats {
@@ -86,11 +92,11 @@ export async function AIGetPartialRecords(contents: string, applicationIDFormat:
   for (const summaryItem of summary) {
 
     const baseQuery = `
-      You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format, give an empty array if no values to return - otherwise return a {error: message, reason: detailed explanation}.
+      You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}. Return only entries with an address.
       ${options?.introduction ? options.introduction : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, always a string, null if not specified'} 
-        address: address in question - only street address, no city - if multiple addresses, comma separate, null if doesn't exist
+        address: address in question - only street address, no city - if multiple addresses, comma separate, should not be null
         applicant: who the rezoning applicant is
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
         description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
@@ -99,21 +105,12 @@ export async function AIGetPartialRecords(contents: string, applicationIDFormat:
     `
 
     let baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
-  
-    if (!baseResponse || baseResponse.error) {
-      continue
-    }
 
-    if (!baseResponse.address) {
-      console.log(chalk.yellow(`Missing address in response, retrying`))
-      console.log(baseResponse)
+    // Can't check for expected words here because the query may have filtered out some words. Instead just make sure an address exists
+    if (!baseResponse || !baseResponse.address) {
       baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
-      if (!baseResponse || baseResponse.error) {
-        console.log(chalk.red(`Error in response: ${baseResponse}, skipping`))
-        continue
-      }
-      if (!baseResponse.address) {
-        console.log(chalk.red(`Missing address in response: ${baseResponse}, skipping`))
+      if (!baseResponse || !baseResponse.address) {
+        console.log(chalk.red(`No address found in response, Skipping. Summary: ${summaryItem}`))
         continue
       }
     }

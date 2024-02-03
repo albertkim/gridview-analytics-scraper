@@ -151,16 +151,20 @@ export async function analyze(options: IOptions) {
 
     for (const report of meeting.reports) {
       const pdf = await downloadPDF(report.url)
-      const firstPage = await parsePDF(pdf, 0)
+      const firstPage = await parsePDF(pdf, 1)
       const parsedReport = await parsePDF(pdf, 3)
 
-      // All permit numbers are mentioned clearly on the first page. Subsequent pages may include completely different rezonings and/or permit numbers referenced from other meetings.
+      // All permit numbers should be on the first report page
       // Regex should case-insenstively check for DP XX-XXXXXX where X is a number and there may be any characters (up to 3 max) between the DP and the numbers
-      const permitNumberRegex = /DP.{0,3}\d{2}-\d{6}/i
-      const permitNumbers = Array.from(new Set(firstPage.match(permitNumberRegex)))
+      const permitNumberRegex = /DP[\s\S]{0,3}(\d{2}-\d{6})/i
+      const permitNumbers = Array.from(new Set(firstPage.match(permitNumberRegex))).map((match) => {
+        // Use regex to get the XX-XXXXXX part and return the formatted DP XX-XXXXXX
+        return `DP ${match.match(/\d{2}-\d{6}/i)![0]}`
+      })
 
       if (!permitNumbers || permitNumbers.length === 0) {
         console.log(chalk.red(`No DP XX-XXXXXX permit number found for ${meeting.date} - ${report.url}`))
+        console.log(firstPage)
         continue
       }
 
@@ -205,7 +209,7 @@ export async function analyze(options: IOptions) {
           city: 'Richmond',
           metroCity: 'Metro Vancouver',
           type: 'development permit',
-          applicationId: `DP ${permitNumber}`, // Use the regex permit number
+          applicationId: permitNumber, // Use the regex permit number
           address: permit.address,
           applicant: permit.applicant,
           behalf: permit.behalf,

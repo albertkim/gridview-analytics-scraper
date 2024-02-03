@@ -6,10 +6,10 @@ import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtil
 
 (async () => {
 
-  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/2_dpp_092723_DP_22-011557_6531_Francis_Rd69479.pdf'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/Item_1_4831_Steveston_Highway70894.pdf'
 
   const pdfData = await downloadPDF(pdfUrl)
-  let parsed = await parsePDF(pdfData, 2)
+  let parsed = await parsePDF(pdfData, 1)
 
   console.log(parsed)
 
