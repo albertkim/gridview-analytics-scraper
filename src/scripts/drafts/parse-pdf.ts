@@ -1,8 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 import { downloadPDF, generatePDFTextArray, generateScreenshotFromPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTTextQuery, imageQuery } from '../../rezonings/AIUtilities'
+import { chatGPTJSONQuery, imageJSONQuery } from '../../rezonings/AIUtilities'
 import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtilitiesV2'
+import { parseCleanPDF } from '../../rezonings/PDFUtilitiesV2'
 
 /**
  * Sample PDFs:
@@ -15,8 +16,7 @@ import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtil
 
   const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf'
 
-  const pdfData = await downloadPDF(pdfUrl)
-  let parsed = await generatePDFTextArray(pdfData, {minCharacterCount: 10})
+  const parsed = await parseCleanPDF(pdfUrl, {maxPages: 2})
 
   console.log(parsed)
 

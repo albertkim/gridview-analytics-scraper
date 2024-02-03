@@ -2,7 +2,7 @@ import moment from 'moment'
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
-import { imageQuery } from '../../AIUtilities'
+import { imageJSONQuery } from '../../AIUtilities'
 import { cleanRichmondRezoningId } from './RichmondUtilities'
 import { downloadPDF, generateScreenshotFromPDF } from '../../PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
@@ -31,7 +31,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 
         const pdfData = await downloadPDF(pdfUrl.url)
         const screenshot = await generateScreenshotFromPDF(pdfData, 0)
-        const imageQueryResponse = await imageQuery(`
+        const imageQueryResponse = await imageJSONQuery(`
           Given the following data, identify if it is related to a community plan/zoning bylaw. If so, read it carefully and return the following JSON format. Otherwise just return an error.
           {
             address: address in question - if multiple addresses in the same section comma separate - null if not found

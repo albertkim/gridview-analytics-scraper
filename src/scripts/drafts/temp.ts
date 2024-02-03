@@ -5,7 +5,7 @@ import { checkIfApplication } from '../../rezonings/cities/Surrey/Applications'
 import { checkIfBylaw } from '../../rezonings/cities/Surrey/Bylaws'
 import { checkIfPublicHearing, parsePublicHearing } from '../../rezonings/cities/Surrey/PublicHearings'
 import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
+import { chatGPTJSONQuery } from '../../rezonings/AIUtilities'
 
 (async () => {
 
@@ -14,7 +14,7 @@ import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
   const pdf = await downloadPDF(url)
   const parsed = await parsePDF(pdf)
 
-  const response = await chatGPTTextQuery(`
+  const response = await chatGPTJSONQuery(`
     Given the following text extracted from a PDF that represents development permit data, identify only permits that relate to the construction of new buildings, then give me the data in the following JSON data structure:
     {
       data: {

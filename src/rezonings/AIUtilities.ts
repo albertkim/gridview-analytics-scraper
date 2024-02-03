@@ -24,11 +24,11 @@ interface BaseRezoningQueryParams {
 // Send a text query to ChatGPT 3.5 turbo and get data back in JSON format
 // Make sure that the query includes the word 'JSON'
 // Defaults to 3.5, specify 4 if you want to use 4
-export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
+export async function chatGPTJSONQuery(query: string, gptVersion?: '3.5' | '4'): Promise<any | null> {
 
 	// Only log if using GPT 4 - otherwise too verbose
 	if (gptVersion === '4') {
-		console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}`)
+		console.log(`Sending JSON query to ChatGPT ${gptVersion || '3.5'}`)
 	}
 
 	const gptVersionMapping = {
@@ -75,12 +75,55 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 	}
 }
 
+// Return in text format, not JSON
+export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'): Promise<string | null> {
+
+	// Only log if using GPT 4 - otherwise too verbose
+	if (gptVersion === '4') {
+		console.log(`Sending text query to ChatGPT ${gptVersion || '3.5'}`)
+	}
+
+	const gptVersionMapping = {
+		'3.5': 'gpt-3.5-turbo-1106',
+		'4': 'gpt-4-1106-preview'
+	}
+
+	try {
+
+		const response = await openai.chat.completions.create({
+			model: gptVersionMapping[gptVersion || '3.5'],
+			messages:[
+				{
+					'role': 'user',
+					'content': query
+				}
+			],
+			temperature: 0.2
+		})
+
+		if (!response) {
+			return null
+		}
+
+		const content = response.choices[0].message.content
+		return content
+
+	} catch (error: any) {
+		if (error.response && error.response.data) {
+			console.error(chalk.red(error.response.data))
+		} else {
+			console.error(chalk.red(error))
+		}
+		return null
+	}
+}
+
 // This function returns a partial rezoning detail object and retries if the first time doesn't work
 // Caller is expected to handle thrown errors - best practice is to add to the ErrorsRepository
 export async function chatGPTRezoningQuery(query: string, options: {analyzeType: boolean, analyzeStats: boolean}): Promise<IPartialRezoningDetail | null> {
 	try {
 
-		const content = await chatGPTTextQuery(query)
+		const content = await chatGPTJSONQuery(query)
 
 		if (!content) {
 			return null
@@ -112,7 +155,7 @@ export async function chatGPTRezoningQuery(query: string, options: {analyzeType:
 
 			console.warn(chalk.yellow('Partial rezoning details GPT JSON is invalid, running again'))
 
-			const content = await chatGPTTextQuery(`Carefully double-check the json format I'm requesting. ${query}`)
+			const content = await chatGPTJSONQuery(`Carefully double-check the json format I'm requesting. ${query}`)
 
 			if (!content) {
 				return null
@@ -135,7 +178,7 @@ export async function chatGPTRezoningQuery(query: string, options: {analyzeType:
 		console.log(chalk.green('GPT partial rezoning JSON is valid'))
 
 		if (options && options.analyzeType) {
-			const typeContent = await chatGPTTextQuery(getGPTBaseRezoningTypeQuery(content.description))
+			const typeContent = await chatGPTJSONQuery(getGPTBaseRezoningTypeQuery(content.description))
 			if (typeContent && typeContent.buildingType) {
 				content.buildingType = typeContent.buildingType
 			} else {
@@ -144,7 +187,7 @@ export async function chatGPTRezoningQuery(query: string, options: {analyzeType:
 		}
 
 		if (options && options.analyzeStats) {
-			const statsContent = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(content.description), '4')
+			const statsContent = await chatGPTJSONQuery(getGPTBaseRezoningStatsQuery(content.description), '4')
 			if (statsContent) {
 				content.stats = statsContent
 			} else {
@@ -169,7 +212,45 @@ export async function chatGPTRezoningQuery(query: string, options: {analyzeType:
 
 // Use Google Cloud Vision OCR to extract text from an image
 // Process the text data, then use ChatGPT 3.5 Turbo to get data back in JSON format
-export async function imageQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
+export async function imageJSONQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
+
+	try {
+
+		const [result] = await googleVisionClient.textDetection({
+			image: {
+				content: fileData
+			}
+		})
+
+		console.log(`Google Cloud Vision data returned`)
+
+		const detections = result.textAnnotations
+		if (!detections) {
+			return null
+		}
+
+		const textArray = detections.map(text => text.description).join(' ').replace(/\n/g, ' ').trim()
+
+		const gptResponse = await chatGPTJSONQuery(`
+			${query}
+			${textArray}
+		`, gptVersion)
+
+		return gptResponse
+
+	} catch (error: any) {
+		if (error.response && error.response.data) {
+			console.error(error.response.data)
+			throw new Error()
+		} else {
+			console.error(error)
+			throw new Error()
+		}
+	}
+
+}
+
+export async function imageTextQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
 
 	try {
 

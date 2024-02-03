@@ -5,9 +5,10 @@ import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
 import { IFullRezoningDetail, ZoningStatus } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
-import { chatGPTTextQuery } from '../../rezonings/AIUtilities'
+import { chatGPTJSONQuery } from '../../rezonings/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
+import { parseCleanPDF } from '../../rezonings/PDFUtilitiesV2'
 
 interface IOptions {
   startDate: string
@@ -130,7 +131,7 @@ export async function analyze(options: IOptions) {
   for (const meeting of minutes) {
 
     // AI summary of which permits were approved
-    const developmentPermitDecisionResponse = await chatGPTTextQuery(`
+    const developmentPermitDecisionResponse = await chatGPTJSONQuery(`
       You are an expert in land use planning and development. Given the following text, identify development permits (DP XX-XXXXXX where X is a number, usually near the start of the document, do not mention any RZ XX-XXXXXX codes). Return the data in the following JSON format:
       {
         data: {
@@ -150,12 +151,18 @@ export async function analyze(options: IOptions) {
     const developmentPermitDecisions = developmentPermitDecisionResponse.data as {developmentPermitId: string, status: string}[]
 
     for (const report of meeting.reports) {
-      const pdf = await downloadPDF(report.url)
-      const firstPage = await parsePDF(pdf, 1)
-      const parsedReport = await parsePDF(pdf, 3)
 
-      // All permit numbers should be on the first report page
+      // Note that some PDF reports may be image-based
+      const parsedReport = await parseCleanPDF(report.url, {maxPages: 3})
+
+      if (!parsedReport) {
+        console.log(chalk.red(`No parsed report for - ${meeting.date} - ${report.url}`))
+        continue
+      }
+
+      // All permit numbers should be on the first report page (about 120 words of the PDF)
       // Regex should case-insenstively check for DP XX-XXXXXX where X is a number and there may be any characters (up to 3 max) between the DP and the numbers
+      const firstPage = parsedReport.split(' ').slice(0, 120).join(' ')
       const permitNumberRegex = /DP[\s\S]{0,3}(\d{2}-\d{6})/i
       const permitNumbers = Array.from(new Set(firstPage.match(permitNumberRegex))).map((match) => {
         // Use regex to get the XX-XXXXXX part and return the formatted DP XX-XXXXXX

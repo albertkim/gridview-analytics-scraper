@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { chatGPTTextQuery } from './AIUtilities'
+import { chatGPTJSONQuery } from './AIUtilities'
 import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 
 // This will use GPT 3.5 (not 4 due to cost concerns) to summarize a rezoning/development permit document to the best of its ability
@@ -19,7 +19,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     Here is the document: ${contents}
   `
 
-  let response = await chatGPTTextQuery(fullQuery, '3.5')
+  let response = await chatGPTJSONQuery(fullQuery, '3.5')
 
   if (!response || response.error || !response.data) {
     console.log(chalk.red(`Error with document`))
@@ -46,7 +46,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
     console.log(chalk.yellow(`Missing expected words in response, retrying. Expected: ${expectedWords.join(', ')}`))
     console.log(response.data)
-    response = await chatGPTTextQuery(fullQuery, '3.5')
+    response = await chatGPTJSONQuery(fullQuery, '3.5')
     count++
 
   }
@@ -117,11 +117,11 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       Document here: ${summaryItem}
     `
 
-    let baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
+    let baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
 
     // Can't check for expected words here because the query may have filtered out some words. Instead just make sure an address exists
     if (!baseResponse || !baseResponse.address) {
-      baseResponse = await chatGPTTextQuery(baseQuery, '3.5')
+      baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
       if (!baseResponse || !baseResponse.address) {
         console.log(chalk.yellow(`No address found in response, Skipping.\nSummary: ${summaryItem}`))
         continue
@@ -218,7 +218,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
   }
 
   // NOTE: I used to run the details query with GPT 4 but it's too expensive for large volumes of data, trying 3.5 for now
-  const detailsResponse = await chatGPTTextQuery(`
+  const detailsResponse = await chatGPTJSONQuery(`
     You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format.
     {
       ${options.fieldsToAnalyze.includes('building type') ? detailedQueryReference.buildingType : ''}

@@ -1,7 +1,7 @@
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
-import { chatGPTTextQuery } from '../../AIUtilities'
+import { chatGPTJSONQuery } from '../../AIUtilities'
 import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
 import { generateID } from '../../../repositories/GenerateID'
 
@@ -193,7 +193,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
 }
 
 async function getAddressObject(text: string): Promise<IBylawData | null> {
-  let bylawDetailRaw = await chatGPTTextQuery(`
+  let bylawDetailRaw = await chatGPTJSONQuery(`
     Read the provided text and find the street address in question with the following JSON - otherwise return a {error: message, reason: string}.
     {
       address: address in question, if multiple addresses comma separate

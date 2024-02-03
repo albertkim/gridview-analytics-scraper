@@ -3,7 +3,7 @@ import moment from 'moment'
 import { Client } from '@googlemaps/google-maps-services-js'
 import { RecordsRepository } from '../repositories/RecordsRepository'
 import { cleanRichmondRezoningId } from './cities/Richmond/RichmondUtilities'
-import { chatGPTTextQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
+import { chatGPTJSONQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
 
 export const BulkUtilities = {
 
@@ -12,7 +12,7 @@ export const BulkUtilities = {
     const rezonings = RecordsRepository.getRecords('rezoning')
 
     for (const rezoning of rezonings) {
-      const GPTStats = await chatGPTTextQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
+      const GPTStats = await chatGPTJSONQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
       if (GPTStats) {
         rezoning.stats = GPTStats
         rezoning.updateDate = moment().format('YYYY-MM-DD')

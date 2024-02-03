@@ -1,11 +1,12 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
-import { downloadPDF, generatePDFTextArray, parsePDF } from '../../rezonings/PDFUtilities'
+import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
+import { parsePDFAsRawArray } from '../../rezonings/PDFUtilitiesV2'
 
 const startUrl = 'https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports'
 
@@ -79,8 +80,7 @@ export async function analyze(options: IOptions) {
 
   for (const urlObject of developmentPermitUrls) {
 
-    const pdf = await downloadPDF(urlObject.url)
-    const parsedArray = await generatePDFTextArray(pdf)
+    const parsedArray = await parsePDFAsRawArray(urlObject.url)
 
     for (const parsed of parsedArray) {
 
