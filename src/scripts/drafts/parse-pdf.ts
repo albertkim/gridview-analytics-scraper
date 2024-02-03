@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-import { downloadPDF, generatePDFTextArray, generateScreenshotFromPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTJSONQuery, imageJSONQuery } from '../../rezonings/AIUtilities'
-import { AIGetPartialRecords, AISummarizeDocument } from '../../rezonings/AIUtilitiesV2'
-import { parseCleanPDF } from '../../rezonings/PDFUtilitiesV2'
+import { downloadPDF, generatePDFTextArray, generateScreenshotFromPDF, parsePDF } from '../../utilities/PDFUtilities'
+import { chatGPTJSONQuery, imageJSONQuery } from '../../utilities/AIUtilities'
+import { AIGetPartialRecords, AISummarizeDocument } from '../../utilities/AIUtilitiesV2'
+import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 
 /**
  * Sample PDFs:

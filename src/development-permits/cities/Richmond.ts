@@ -1,14 +1,14 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { downloadPDF, parsePDF } from '../../utilities/PDFUtilities'
 import { IFullRezoningDetail, ZoningStatus } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
-import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
-import { chatGPTJSONQuery } from '../../rezonings/AIUtilities'
+import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
+import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
-import { parseCleanPDF } from '../../rezonings/PDFUtilitiesV2'
+import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 
 interface IOptions {
   startDate: string

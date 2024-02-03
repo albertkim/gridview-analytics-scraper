@@ -1,4 +1,4 @@
-import { getGPTBaseRezoningQuery } from '../../AIUtilities'
+import { getGPTBaseRezoningQuery } from '../../../utilities/AIUtilities'
 
 export function getBurnabyBaseGPTQuery(content: string) {
   const baseRezoningIdQuery = 'ID in the format of "REZ #12-12" - interpret/correct the format if necessary - null if not found'

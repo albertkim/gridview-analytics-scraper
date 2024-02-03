@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { chatGPTRezoningQuery } from '../../AIUtilities'
+import { chatGPTRezoningQuery } from '../../../utilities/AIUtilities'
 import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { generateID } from '../../../repositories/GenerateID'

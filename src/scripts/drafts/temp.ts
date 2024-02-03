@@ -4,8 +4,8 @@ import { RecordsRepository, checkGPTRezoningJSON } from '../../repositories/Reco
 import { checkIfApplication } from '../../rezonings/cities/Surrey/Applications'
 import { checkIfBylaw } from '../../rezonings/cities/Surrey/Bylaws'
 import { checkIfPublicHearing, parsePublicHearing } from '../../rezonings/cities/Surrey/PublicHearings'
-import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
-import { chatGPTJSONQuery } from '../../rezonings/AIUtilities'
+import { downloadPDF, parsePDF } from '../../utilities/PDFUtilities'
+import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 
 (async () => {
 

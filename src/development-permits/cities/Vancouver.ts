@@ -6,7 +6,7 @@ import csv from 'csvtojson'
 import puppeteer from 'puppeteer'
 import { cleanString, formatDateString } from '../../scraper/BulkUtilities'
 import { generateID } from '../../repositories/GenerateID'
-import { AIGetRecordDetails } from '../../rezonings/AIUtilitiesV2'
+import { AIGetRecordDetails } from '../../utilities/AIUtilitiesV2'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 

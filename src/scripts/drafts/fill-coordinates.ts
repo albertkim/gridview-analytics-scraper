@@ -1,4 +1,4 @@
-import { BulkUtilities } from '../../rezonings/BulkUtilities'
+import { BulkUtilities } from '../../utilities/BulkUtilities'
 
 (async () => {
 

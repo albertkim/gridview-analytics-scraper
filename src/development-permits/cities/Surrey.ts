@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { RawRepository } from '../../repositories/RawRepository'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
-import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
+import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 
 interface IOptions {

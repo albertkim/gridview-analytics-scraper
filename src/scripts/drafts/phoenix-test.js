@@ -5,7 +5,7 @@ const {
   generatePDF,
   generatePDFTextArray,
   chatGPTTextQuery
-} = require('../../rezonings/PDFUtilities')
+} = require('../../utilities/PDFUtilities')
 
 const bylawUrl = 'https://www.phoenix.gov/cityclerksite/City%20Council%20Meeting%20Files/1-3-24%20Formal%20Agenda%20-%20FINAL.pdf'
 

@@ -1,12 +1,12 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
-import { downloadPDF, parsePDF } from '../../rezonings/PDFUtilities'
+import { downloadPDF, parsePDF } from '../../utilities/PDFUtilities'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'
-import { AIGetPartialRecords } from '../../rezonings/AIUtilitiesV2'
+import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
-import { parsePDFAsRawArray } from '../../rezonings/PDFUtilitiesV2'
+import { parsePDFAsRawArray } from '../../utilities/PDFUtilitiesV2'
 
 const startUrl = 'https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports'
 

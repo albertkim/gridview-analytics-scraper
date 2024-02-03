@@ -1,4 +1,4 @@
-import { getGPTBaseRezoningQuery } from '../../AIUtilities'
+import { getGPTBaseRezoningQuery } from '../../../utilities/AIUtilities'
 
 export function getSurreyBaseGPTQuery(content: string) {
   const baseRezoningIdQuery = 'in the format of XXXX-XXXX-XX where Xs are numbers'

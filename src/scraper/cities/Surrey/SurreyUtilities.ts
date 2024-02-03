@@ -1,4 +1,4 @@
-import { downloadPDF, parsePDF } from '../../../rezonings/PDFUtilities'
+import { downloadPDF, parsePDF } from '../../../utilities/PDFUtilities'
 
 export interface ISurreyMeetingItems {
   section: string

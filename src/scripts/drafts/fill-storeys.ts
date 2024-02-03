@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { RecordsRepository } from '../../repositories/RecordsRepository'
-import { chatGPTJSONQuery } from '../../rezonings/AIUtilities'
+import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 
 (async () => {
 

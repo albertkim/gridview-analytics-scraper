@@ -1,8 +1,8 @@
 import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
-import { chatGPTJSONQuery } from '../../AIUtilities'
-import { downloadPDF, generatePDFTextArray } from '../../PDFUtilities'
+import { chatGPTJSONQuery } from '../../../utilities/AIUtilities'
+import { downloadPDF, generatePDFTextArray } from '../../../utilities/PDFUtilities'
 import { generateID } from '../../../repositories/GenerateID'
 
 interface IBylawData {

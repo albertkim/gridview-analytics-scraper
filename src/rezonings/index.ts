@@ -3,7 +3,7 @@ import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { analyze as analyzeSurrey } from './cities/Surrey'
 import { getStatistics } from './StatisticsUtilities'
-import { BulkUtilities } from './BulkUtilities'
+import { BulkUtilities } from '../utilities/BulkUtilities'
 
 // yarn run rezone
 const startDate = '2024-01-01'
