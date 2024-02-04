@@ -1,6 +1,5 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
-import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'

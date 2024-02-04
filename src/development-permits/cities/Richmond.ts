@@ -1,8 +1,7 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { IFullRezoningDetail, ZoningStatus } from '../../repositories/RecordsRepository'
-import { generateID } from '../../repositories/GenerateID'
+import { ZoningStatus } from '../../repositories/RecordsRepository'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
@@ -177,7 +176,7 @@ export async function analyze(options: IOptions) {
 
       const permits = await AIGetPartialRecords(parsedReport, {
         instructions: 'Identify only the development permits that refer to new developments, not alterations.',
-        applicationId: 'DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)',
+        applicationId: 'file number in the format of DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)',
         fieldsToAnalyze: ['building type', 'stats'],
         expectedWords: permitNumbers
       })

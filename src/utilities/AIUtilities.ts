@@ -84,7 +84,7 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 	}
 
 	const gptVersionMapping = {
-		'3.5': 'gpt-3.5-turbo-1106',
+		'3.5': 'gpt-3.5-turbo-0125',
 		'4': 'gpt-4-1106-preview'
 	}
 
