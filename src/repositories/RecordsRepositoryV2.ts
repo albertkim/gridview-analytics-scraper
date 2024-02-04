@@ -126,9 +126,10 @@ export class RecordsRepository {
   // Add records to the database - merge if there is a record of the same type and the same address
   upsertRecords(type: 'rezoning' | 'development permit', records: FullRecord[]) {
 
-    const previousRecords = this.getRecords(type)
-
     for (const record of records) {
+
+      // Get records for each iteration so that it can properly merge with the provided new records, at the cost of performance
+      const previousRecords = this.getRecords(type)
 
       // Check for any entries with the same ID (not application ID)
       const recordWithMatchingID = previousRecords.find((item) => item.id === record.id)
@@ -153,6 +154,7 @@ export class RecordsRepository {
         // There can be multiple rezonings (unlikely) or development permits (likely) for the same address
         console.log(chalk.green(`Adding new record with ID ${record.id}`))
         this.createRecord(record)
+        continue
       }
 
       // Check for any entries with the same/similar addresses
