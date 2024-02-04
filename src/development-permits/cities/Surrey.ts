@@ -5,6 +5,7 @@ import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
+import { FullRecord } from '../../repositories/FullRecord'
 
 interface IOptions {
   startDate: string | null
@@ -72,9 +73,8 @@ export async function analyze(options: IOptions) {
       expectedWords: [permitNumber]
     })
 
-    const records: IFullRezoningDetail[] = response.map((permit) => {
-      return {
-        id: generateID('dev'),
+    const records = response.map((permit) => {
+      return new FullRecord({
         city: 'Surrey',
         metroCity: 'Metro Vancouver',
         type: 'development permit',
@@ -109,13 +109,7 @@ export async function analyze(options: IOptions) {
             status: 'approved'
           }
         ] : [],
-        location: {
-          latitude: null,
-          longitude: null
-        },
-        createDate: moment().format('YYYY-MM-DD'),
-        updateDate: moment().format('YYYY-MM-DD')
-      }
+      })
     })
 
     for (const record of records) {
@@ -123,5 +117,7 @@ export async function analyze(options: IOptions) {
     }
     
   }
+
+  RecordsRepository.reorderRecords()
 
 }

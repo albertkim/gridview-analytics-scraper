@@ -4,19 +4,21 @@ import chalk from 'chalk'
 import moment from 'moment'
 import similarity from 'similarity'
 import { IFullRezoningDetail, mergeEntries } from './RecordsRepository'
+import { FullRecord } from './FullRecord'
 
 export class RecordsRepository {
 
   private database: string
 
   // Object where key is databaseMode, value is string
-  private databaseMapping: Record<'final' | 'draft' | 'draft2', string> = {
+  private databaseMapping: Record<'final' | 'draft' | 'draft2' | 'test', string> = {
     final: path.join(__dirname, '../database/rezonings.json'),
     draft: path.join(__dirname, '../database/rezonings-draft.json'),
-    draft2: path.join(__dirname, '../database/rezonings-draft-2.json')
+    draft2: path.join(__dirname, '../database/rezonings-draft-2.json'),
+    test: path.join(__dirname, '../database/rezonings-test.json')
   }
 
-  constructor(databaseMode: 'final' | 'draft' | 'draft2') {
+  constructor(databaseMode: 'final' | 'draft' | 'draft2' | 'test') {
     this.database = this.databaseMapping[databaseMode]
   }
 
@@ -28,11 +30,11 @@ export class RecordsRepository {
     if (filter?.city) {
       records = records.filter((item) => item.city === filter.city)
     }
-    return records
+    return records.map((record) => new FullRecord(record))
   }
 
   // Get all records with similar addresses to the provided record (but not including the record)
-  getRecordsWithSimilarAddresses(type: 'rezoning' | 'development permit', record: IFullRezoningDetail): {index: number, rezoning: IFullRezoningDetail, similarity: number}[] {
+  getRecordsWithSimilarAddresses(type: 'rezoning' | 'development permit', record: FullRecord): {index: number, rezoning: FullRecord, similarity: number}[] {
 
     const minimumSimilarity = 0.7
 
@@ -46,7 +48,7 @@ export class RecordsRepository {
 
     const recordsWithMatchingNumbers: {
       index: number
-      rezoning: IFullRezoningDetail
+      rezoning: FullRecord
       similarity: number
     }[] = []
 
@@ -74,7 +76,7 @@ export class RecordsRepository {
 
   }
 
-  dangerouslyReplaceRecordsForCity(type: 'rezoning' | 'development permit', city: string, newRecords: IFullRezoningDetail[]) {
+  dangerouslyReplaceRecordsForCity(type: 'rezoning' | 'development permit', city: string, newRecords: FullRecord[]) {
     const previousRecords = this.getRecords('all')
     const recordsToKeep = previousRecords.filter((item) => item.type !== type || item.city !== city)
     const recordsToWrite = [...recordsToKeep, ...newRecords]
@@ -85,30 +87,30 @@ export class RecordsRepository {
     )
   }
 
-  dangerouslyReplaceAllRecords(type: 'all' | 'rezoning' | 'development permit', newRecords: IFullRezoningDetail[]) {
+  dangerouslyReplaceAllRecords(type: 'all' | 'rezoning' | 'development permit', newRecords: FullRecord[]) {
     const allRecords = this.getRecords('all')
     const recordsToKeep = type === 'all' ? [] : allRecords.filter((item) => item.type !== type) // will be empty if 'all' type is provided, meaning everything should be replaced
     const recordsToWrite = reorderItems([...recordsToKeep, ...newRecords])
     fs.writeFileSync(
-      path.join(__dirname, '../database/rezonings.json'),
+      this.database,
       JSON.stringify(recordsToWrite, null, 2),
       'utf8'
     )
   }
 
-  createRecord(record: IFullRezoningDetail) {
+  createRecord(record: FullRecord) {
     const previousEntries = this.getRecords('all')
     const orderedEntries = reorderItems([...previousEntries, record])
     fs.writeFileSync(
       this.database,
-      JSON.stringify([...orderedEntries, record], null, 2),
+      JSON.stringify(orderedEntries, null, 2),
       'utf8'
     )
   }
 
   // Update a record completely, does not merge with previous entry
   // Most use cases will require the upsertRecords() function, defined below
-  updateRecord(id: string, record: IFullRezoningDetail) {
+  updateRecord(id: string, record: FullRecord) {
     record.id = id
     const previousEntries = this.getRecords('all')
     const matchingRezoningIndex = previousEntries.findIndex((item) => item.id === id)
@@ -122,7 +124,7 @@ export class RecordsRepository {
   }
 
   // Add records to the database - merge if there is a record of the same type and the same address
-  upsertRecords(type: 'rezoning' | 'development permit', records: IFullRezoningDetail[]) {
+  upsertRecords(type: 'rezoning' | 'development permit', records: FullRecord[]) {
 
     const previousRecords = this.getRecords(type)
 
@@ -131,9 +133,9 @@ export class RecordsRepository {
       // Check for any entries with the same ID (not application ID)
       const recordWithMatchingID = previousRecords.find((item) => item.id === record.id)
       if (recordWithMatchingID) {
-        const mergedRecord = mergeEntries(recordWithMatchingID, record)
+        recordWithMatchingID.merge(record)
         console.log(chalk.green(`Merging record with ID ${recordWithMatchingID.id}`))
-        this.updateRecord(recordWithMatchingID.id, mergedRecord)
+        this.updateRecord(recordWithMatchingID.id, recordWithMatchingID)
         continue
       }
 
@@ -142,10 +144,9 @@ export class RecordsRepository {
         previousRecords.find((item) => item.applicationId === record.applicationId)
         : null
       if (recordWithMatchingApplicationID) {
-        const mergedRecord = mergeEntries(recordWithMatchingApplicationID, record)
-        mergedRecord.id = recordWithMatchingApplicationID.id
+        recordWithMatchingApplicationID.merge(record)
         console.log(chalk.green(`Merging record with ID ${recordWithMatchingApplicationID.id}`))
-        this.updateRecord(recordWithMatchingApplicationID.id, mergedRecord)
+        this.updateRecord(recordWithMatchingApplicationID.id, recordWithMatchingApplicationID)
         continue
       } else if (record.applicationId) {
         // If there is any application ID at all, then add as a new entry recardless of if a similar address exists
@@ -158,10 +159,9 @@ export class RecordsRepository {
       const similarAddresses = this.getRecordsWithSimilarAddresses(type, record)
       if (similarAddresses.length > 0) {
         const similarRecord = similarAddresses[0].rezoning
-        const mergedRecord = mergeEntries(similarRecord, record)
-        mergedRecord.id = similarRecord.id
+        similarRecord.merge(record)
         console.log(chalk.green(`Merging record with ID ${similarRecord.id}`))
-        this.updateRecord(similarRecord.id, mergedRecord)
+        this.updateRecord(similarRecord.id, similarRecord)
         continue
       }
 
@@ -171,11 +171,12 @@ export class RecordsRepository {
 
     }
 
-    // Reorder all entries
+  }
+
+  reorderRecords() {
     const allRecords = this.getRecords('all')
     const reorderedRecords = reorderItems(allRecords)
     this.dangerouslyReplaceAllRecords('all', reorderedRecords)
-
   }
 
   // Upserts all draft records into the final database - must be in draft mode
@@ -187,7 +188,8 @@ export class RecordsRepository {
       throw new Error('Repository must be in "final" mode to perform a check-in.')
     }
 
-    const draftRecords = JSON.parse(fs.readFileSync(this.databaseMapping.draft, 'utf8')) as IFullRezoningDetail[]
+    const draftRecordObjects = JSON.parse(fs.readFileSync(this.databaseMapping.draft, 'utf8')) as IFullRezoningDetail[]
+    const draftRecords = draftRecordObjects.map((record) => new FullRecord(record))
 
     for (const record of draftRecords) {
       this.upsertRecords(record.type, [record])
@@ -199,30 +201,12 @@ export class RecordsRepository {
 
 }
 
-// Sort by latest activity date desc, determined by the latest date from either reportUrls or minutesUrls
-function reorderItems(items: IFullRezoningDetail[]): IFullRezoningDetail[] {
-  const mappedItems = items.map((item) => {
-    const reportUrlDates = item.reportUrls.map((report) => report.date)
-    const minutesUrlDates = item.minutesUrls.map((minutes) => minutes.date)
-    const combinedDates = [...reportUrlDates, ...minutesUrlDates]
-    const latestDate = combinedDates.length > 0 ? combinedDates.reduce((latest, current) => {
-      if (!latest) return current
-      if (moment(current).isAfter(moment(latest))) return current
-      return latest
-    }) : '2000-01-01' // If no dates for some reason, set to a very old date
-    return {
-      latestDate: latestDate,
-      item: item
-    }
-  })
-
-  const sortedItems = mappedItems
+function reorderItems(items: FullRecord[]): FullRecord[] {
+  const sortedItems = items
     .sort((a, b) => {
-      if (!a.latestDate) return 1
-      if (!b.latestDate) return -1
-      return moment(b.latestDate).diff(moment(a.latestDate))
+      if (!a.getLatestDate()) return 1
+      if (!b.getLatestDate()) return -1
+      return moment(b.getLatestDate()).diff(moment(a.getLatestDate()))
     })
-    .map((items) => items.item)
-
   return sortedItems
 }

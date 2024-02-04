@@ -4,7 +4,7 @@ import moment from 'moment'
 
 export interface IMeetingDetail {
   city: string
-  metroCity: string | null
+  metroCity: string // TODO: Can be null for provinces/states, figure out how to handle this
   url: string
   date: string // YYYY-MM-DD
   meetingType: string

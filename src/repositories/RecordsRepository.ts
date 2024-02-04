@@ -68,7 +68,7 @@ export interface IPartialRezoningDetail {
 export interface IFullRezoningDetail extends IPartialRezoningDetail {
   id: string
   city: string
-  metroCity: string | null
+  metroCity: string
   type: 'rezoning' | 'development permit'
   status: ZoningStatus
   dates: {

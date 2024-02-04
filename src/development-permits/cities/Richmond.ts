@@ -1,7 +1,6 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { downloadPDF, parsePDF } from '../../utilities/PDFUtilities'
 import { IFullRezoningDetail, ZoningStatus } from '../../repositories/RecordsRepository'
 import { generateID } from '../../repositories/GenerateID'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
@@ -9,6 +8,7 @@ import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
+import { FullRecord } from '../../repositories/FullRecord'
 
 interface IOptions {
   startDate: string
@@ -211,9 +211,8 @@ export async function analyze(options: IOptions) {
           console.log(chalk.yellow(`Richmond DP ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - skipping`))
           continue
         }
-  
-        const record: IFullRezoningDetail = {
-          id: generateID('dev'),
+
+        const record = new FullRecord({
           city: 'Richmond',
           metroCity: 'Metro Vancouver',
           type: 'development permit',
@@ -247,14 +246,8 @@ export async function analyze(options: IOptions) {
               date: meeting.date,
               status: status
             }
-          ],
-          location: {
-            latitude: null,
-            longitude: null
-          },
-          createDate: moment().format('YYYY-MM-DD'),
-          updateDate: moment().format('YYYY-MM-DD')
-        }
+          ]
+        })
   
         RecordsRepository.upsertRecords('development permit', [record])
 

@@ -9,6 +9,7 @@ import { generateID } from '../../repositories/GenerateID'
 import { AIGetRecordDetails } from '../../utilities/AIUtilitiesV2'
 import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
+import { FullRecord } from '../../repositories/FullRecord'
 
 const startUrl = 'https://data.opendatasoft.com/explore/dataset/issued-building-permits%40vancouver/export/?sort=-issueyear'
 
@@ -109,9 +110,8 @@ export async function analyze(options: IOptions) {
     if (!detailsResponse) {
       continue
     }
-
-    const record: IFullRezoningDetail = {
-      id: generateID('dev'),
+    
+    const record = new FullRecord({
       city: 'Vancouver',
       metroCity: 'Metro Vancouver',
       type: 'development permit',
@@ -140,16 +140,12 @@ export async function analyze(options: IOptions) {
         }
       ],
       minutesUrls: [], // No minutes for vancouver development permits
-      location: {
-        latitude: null,
-        longitude: null
-      },
-      createDate: moment().format('YYYY-MM-DD'),
-      updateDate: moment().format('YYYY-MM-DD')
-    }
+    })
 
     RecordsRepository.upsertRecords('development permit', [record])
 
   }
+
+  RecordsRepository.reorderRecords()
 
 }

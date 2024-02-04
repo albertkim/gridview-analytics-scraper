@@ -6,6 +6,7 @@ import { formatDateString } from '../../scraper/BulkUtilities'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { parsePDFAsRawArray } from '../../utilities/PDFUtilitiesV2'
+import { FullRecord } from '../../repositories/FullRecord'
 
 const startUrl = 'https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports'
 
@@ -98,12 +99,12 @@ export async function analyze(options: IOptions) {
       // Only get entries with an applicationId in the response
       // NOTE: For now, the $ value of work is not incorporated, something to think about for the future.
       // My current thinking is that not enough cities publish these values.
-      const records: IFullRezoningDetail[] = response
+      const records = response
         .filter((permit) => permit.applicationId)
-        // Sometimes DEMO permits are included, so we need to filter them out
+        // Sometimes DEMO permits are included from the AI analysis, so we need to filter them out
         .filter((permit) => !permit.applicationId?.includes('DEMO'))
         .map((permit) => {
-          return {
+          return new FullRecord({
             id: generateID('dev'),
             type: 'development permit',
             city: 'Burnaby',
@@ -133,13 +134,7 @@ export async function analyze(options: IOptions) {
               }
             ],
             minutesUrls: [],
-            location: {
-              latitude: null,
-              longitude: null
-            },
-            createDate: moment().format('YYYY-MM-DD'),
-            updateDate: moment().format('YYYY-MM-DD')
-          }
+          })
         })
 
       for (const record of records) {
@@ -150,5 +145,7 @@ export async function analyze(options: IOptions) {
     }
 
   }
+
+  RecordsRepository.reorderRecords()
 
 }

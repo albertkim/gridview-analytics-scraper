@@ -26,7 +26,7 @@ export async function getMeetingDetail(page: Page, url: string, date: string): P
   // Puppeteer page.evaluate cannot access variables outside of it
   return {
     city: 'BC (province)',
-    metroCity: null,
+    metroCity: null as any, // TODO: Figure out how to handle this for provinces/states
     ...results,
     date: date,
     url: url,
