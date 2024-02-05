@@ -31,7 +31,7 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        RecordsRepository.upsertRecords('rezoning', [applicationDetails])
+        RecordsRepository.upsertRecords('rezoning', applicationDetails)
       }
     }
 

@@ -1,12 +1,9 @@
 import chalk from 'chalk'
-import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
-import { chatGPTRezoningQuery } from '../../../utilities/AIUtilities'
-import { downloadPDF, parsePDF } from '../../../utilities/PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
-import { generateID } from '../../../repositories/GenerateID'
-import { getRichmondBaseGPTQuery } from './RichmondUtilities'
+import { parseCleanPDF } from '../../../utilities/PDFUtilitiesV2'
+import { FullRecord } from '../../../repositories/FullRecord'
+import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
 
 export function checkIfPublicHearing(news: IMeetingDetail) {
   const isRichmond = news.city === 'Richmond'
@@ -15,74 +12,84 @@ export function checkIfPublicHearing(news: IMeetingDetail) {
   return isRichmond && hasReportURLs && isPublicHearing
 }
 
-export async function parsePublicHearing(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
+export async function parsePublicHearing(news: IMeetingDetail): Promise<FullRecord[]> {
 
   try {
 
     // Parse the referral report PDF
-    const firstPDFURL = news.reportUrls[0].url
-    const pdfData = await downloadPDF(firstPDFURL)
-    const parsedPDF = await parsePDF(pdfData as Buffer, 2)
+    const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {
+      maxPages: 5
+    })
 
-    // The PDF text should include the words "RZ"
-    if (!parsedPDF.includes('RZ')) {
-      console.log('Not a rezoning public hearing PDF document, skipping')
-      return null
+    if (!parsedPDF) {
+      console.log(chalk.red(`PDF could not be parsed: ${news.reportUrls[0].url}`))
+      return []
     }
 
-    // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTRezoningQuery(
-      getRichmondBaseGPTQuery(parsedPDF),
-      {analyzeType: true, analyzeStats: true}
-    )
-
-    if (!partialRezoningDetails) {
-      throw new Error()
+    // Get the first matching application ID - RZ XX-XXXXXX
+    const permitNumberRegex = /RZ[\s\S]{0,3}(\d{2}-\d{6})/i
+    const permitNumberWithoutPrefix = parsedPDF.match(permitNumberRegex)?.[1]
+    if (!permitNumberWithoutPrefix) {
+      console.log(chalk.red(`No rezoning number found for Richmond public hearing - ${news.reportUrls[0].url}`))
+      return []
     }
 
-    // Return full rezoning details object
-    const fullRezoningDetails: IFullRezoningDetail = {
-      id: generateID('rez'),
-      type: 'rezoning',
-      ...partialRezoningDetails,
-      city: news.city,
-      metroCity: news.metroCity,
-      reportUrls: news.reportUrls.map((urlObject) => {
-        return {
+    const permitNumber = `RZ ${permitNumberWithoutPrefix}`
+
+    const response = await AIGetPartialRecords(parsedPDF, {
+      expectedWords: [permitNumber],
+      fieldsToAnalyze: ['building type', 'stats']
+    })
+
+    if (!response || response.length === 0) {
+      console.log(chalk.red(`No response for Richmond public hearing - ${news.reportUrls[0].url}`))
+      return []
+    }
+
+    const records = response.map((record) => {
+      return new FullRecord({
+        city: 'Richmond',
+        metroCity: 'Metro Vancouver',
+        type: 'rezoning',
+        applicationId: record.applicationId,
+        address: record.address,
+        applicant: record.applicant,
+        behalf: record.behalf,
+        description: record.description,
+        buildingType: record.buildingType,
+        status: 'public hearing',
+        dates: {
+          appliedDate: null,
+          publicHearingDate: news.date,
+          approvalDate: null,
+          denialDate: null,
+          withdrawnDate: null
+        },
+        stats: record.stats,
+        zoning: record.zoning,
+        reportUrls: news.reportUrls.map((urlObject) => {
+          return {
+            date: news.date,
+            title: urlObject.title,
+            url: urlObject.url,
+            status: 'public hearing'
+          }
+        }),
+        minutesUrls: news.minutesUrl ? [{
           date: news.date,
-          title: urlObject.title,
-          url: urlObject.url,
+          url: news.minutesUrl,
           status: 'public hearing'
-        }
-      }),
-      minutesUrls: news.minutesUrl ? [{
-        date: news.date,
-        url: news.minutesUrl,
-        status: 'public hearing'
-      }] : [],
-      status: 'public hearing',
-      dates: {
-        appliedDate: null,
-        publicHearingDate: news.date,
-        approvalDate: null,
-        denialDate: null,
-        withdrawnDate: null
-      },
-      location: {
-        latitude: null,
-        longitude: null
-      },
-      createDate: moment().format('YYYY-MM-DD'),
-      updateDate: moment().format('YYYY-MM-DD')
-    }
+        }] : [],
+      })
+    })
 
-    return fullRezoningDetails
+    return records
 
   } catch (error) {
     console.error(chalk.bgRed('Error parsing public hearing'))
     console.error(chalk.red(error))
     ErrorsRepository.addError(news)
-    return null
+    return []
   }
 
 }

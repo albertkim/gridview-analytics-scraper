@@ -7,7 +7,7 @@ import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
 
   const fullQuery = `
-    You are an expert in land use planning and development. In the provided document, identify sections that talk about a rezoning or development permit, then provide a summary on each one. ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
+    You are an expert in land use planning and development. In the provided document, identify sections that talk about a zoning or development permit, then provide a summary on each one. ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
 
     In each summary, carefully retain all specific details. Make sure to include anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, street addresses, applicants, applicant behalfs, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header.
 
@@ -16,8 +16,8 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     Return as a JSON object that looks like this, and make sure to double-check the format:
     {
       data: {
-        title: string - identifying information about the rezoning or development permit
-        summary: string - summary of the rezoning or development permit
+        title: string - identifying information about the zoning or development permit
+        summary: string - summary of the zoning or development permit
       }[]
     }
 

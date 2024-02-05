@@ -80,7 +80,7 @@ export class FullRecord {
   address: string
   applicant: string | null
   behalf: string | null
-  description: string | null
+  description: string
   buildingType: BuildingType | null
   status: ZoningStatus
   dates: {
@@ -137,7 +137,7 @@ export class FullRecord {
     this.address = params.address
     this.applicant = params.applicant || null
     this.behalf = params.behalf || null
-    this.description = params.description || null
+    this.description = params.description || ''
     this.buildingType = params.buildingType || null
     this.status = params.status
     this.dates = params.dates || {
@@ -214,7 +214,7 @@ export class FullRecord {
     this.applicationId = mergeSimpleField(this.applicationId, incomingRecord.applicationId, preferred)
     this.applicant = mergeSimpleField(this.applicant, incomingRecord.applicant, preferred)
     this.behalf = mergeSimpleField(this.behalf, incomingRecord.behalf, preferred)
-    this.description = mergeSimpleField(this.description, incomingRecord.description, preferred)
+    this.description = mergeSimpleField(this.description, incomingRecord.description, preferred) || ''
     this.buildingType = mergeSimpleField(this.buildingType, incomingRecord.buildingType, preferred)
 
     // Status - update based on which has the latest date
