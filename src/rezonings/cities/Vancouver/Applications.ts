@@ -1,12 +1,9 @@
 import chalk from 'chalk'
-import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
-import { chatGPTRezoningQuery } from '../../../utilities/AIUtilities'
-import { downloadPDF, generatePDF, parsePDF } from '../../../utilities/PDFUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
-import { generateID } from '../../../repositories/GenerateID'
-import { getVancouverBaseGPTQuery } from './VancouverUtilities'
+import { parseCleanPDF } from '../../../utilities/PDFUtilitiesV2'
+import { FullRecord } from '../../../repositories/FullRecord'
+import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
 
 export function checkIfApplication(news: IMeetingDetail) {
   const isVancouver = news.city === 'Vancouver'
@@ -23,72 +20,69 @@ export function checkIfApplication(news: IMeetingDetail) {
   return isVancouver && hasReportURLs && isCouncil && titleIsRezoning && isReferralReport
 }
 
-export async function parseApplication(news: IMeetingDetail): Promise<IFullRezoningDetail | null> {
+export async function parseApplication(news: IMeetingDetail): Promise<FullRecord[]> {
 
   try {
 
-    // Parse the referral report PDF
-    const firstPDFURL = news.reportUrls[0].url
-    const pdfData = await downloadPDF(firstPDFURL)
-    const pdf3pages = await generatePDF(pdfData, {
-      maxPages: 4
+    const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {maxPages: 4})
+
+    if (!parsedPDF) {
+      console.log(chalk.bgRed(`Error parsing PDF: ${news.reportUrls[0].url}`))
+      return []
+    }
+
+    const response = await AIGetPartialRecords(parsedPDF, {
+      expectedWords: [], // Vancouver does not have rezoning IDs for some reason
+      fieldsToAnalyze: ['building type', 'zoning', 'stats']
     })
-    const parsedPDF = await parsePDF(pdf3pages as Buffer)
 
-    // Get partial rezoning details from GPT
-    const partialRezoningDetails = await chatGPTRezoningQuery(
-      getVancouverBaseGPTQuery(parsedPDF),
-      {analyzeType: true, analyzeStats: true}
-    )
-
-    if (!partialRezoningDetails) {
-      throw new Error()
+    if (!response || response.length === 0) {
+      console.log(chalk.bgRed(`Error parsing application: ${news.reportUrls[0].url}`))
+      return []
     }
 
-    // Return full rezoning details object
-    const fullRezoningDetails: IFullRezoningDetail = {
-      id: generateID('rez'),
-      type: 'rezoning',
-      ...partialRezoningDetails,
-      applicationId: null,
-      city: news.city,
-      metroCity: news.metroCity,
-      reportUrls: news.reportUrls.map((urlObject) => {
-        return {
+    return response.map((record) => {
+      return new FullRecord({
+        city: 'Vancouver',
+        metroCity: 'Metro Vancouver',
+        type: 'rezoning',
+        applicationId: null,
+        address: record.address,
+        applicant: record.applicant,
+        behalf: record.behalf,
+        description: record.description,
+        buildingType: record.buildingType,
+        status: 'applied',
+        dates: {
+          appliedDate: news.date,
+          publicHearingDate: null,
+          approvalDate: null,
+          denialDate: null,
+          withdrawnDate: null
+        },
+        stats: record.stats,
+        zoning: record.zoning,
+        reportUrls: news.reportUrls.map((urlObject) => {
+          return {
+            date: news.date,
+            title: urlObject.title,
+            url: urlObject.url,
+            status: 'applied'
+          }
+        }),
+        minutesUrls: news.minutesUrl ? [{
           date: news.date,
-          title: urlObject.title,
-          url: urlObject.url,
+          url: news.minutesUrl,
           status: 'applied'
-        }
-      }),
-      minutesUrls: news.minutesUrl ? [{
-        date: news.date,
-        url: news.minutesUrl,
-        status: 'applied'
-      }] : [],
-      status: 'applied',
-      dates: {
-        appliedDate: news.date,
-        publicHearingDate: null,
-        approvalDate: null,
-        denialDate: null,
-        withdrawnDate: null
-      },
-      location: {
-        latitude: null,
-        longitude: null
-      },
-      createDate: moment().format('YYYY-MM-DD'),
-      updateDate: moment().format('YYYY-MM-DD')
-    }
-
-    return fullRezoningDetails
+        }] : []
+      })
+    })
 
   } catch (error) {
     console.error(chalk.bgRed('Error parsing application'))
     console.error(chalk.red(error))
     ErrorsRepository.addError(news)
-    return null
+    return []
   }
 
 }

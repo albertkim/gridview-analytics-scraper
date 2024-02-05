@@ -222,8 +222,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     status: options.status ? `status: ${options.status}` : `status: one of applied, public hearing, approved, denied, withdrawn`
   }
 
-  // NOTE: I used to run the details query with GPT 4 but it's too expensive for large volumes of data, trying 3.5 for now
-  const detailsResponse = await chatGPTJSONQuery(`
+  const detailsQuery = `
     You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format.
     {
       ${options.fieldsToAnalyze.includes('building type') ? detailedQueryReference.buildingType : ''}
@@ -232,7 +231,29 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
       ${options.fieldsToAnalyze.includes('status') ? detailedQueryReference.status : ''}
     }
     Description here: ${contents}
-  `, '3.5')
+  `
+
+  let detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
+
+  // IMPORTANT: Make sure to update these arrays if more building type or status options are added
+  const validBuildingTypes = ['single-family residential', 'townhouse', 'mixed use', 'multi-family residential', 'industrial', 'commercial', 'other']
+  const validStatuses = ['applied', 'public hearing', 'approved', 'denied', 'withdrawn']
+
+  if (detailsResponse.buildingType && !validBuildingTypes.includes(detailsResponse.buildingType)) {
+    console.log(chalk.yellow(`Invalid building type: ${detailsResponse.buildingType} - trying again`))
+    detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
+    if (!detailsResponse || !validBuildingTypes.includes(detailsResponse.buildingType)) {
+      console.log(chalk.red(`Invalid building type: ${detailsResponse?.buildingType} - but continuing`))
+    }
+  }
+
+  if (detailsResponse.status && !validStatuses.includes(detailsResponse.status)) {
+    console.log(chalk.yellow(`Invalid status: ${detailsResponse.status} - trying again`))
+    detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
+    if (!detailsResponse || !validStatuses.includes(detailsResponse.status)) {
+      console.log(chalk.red(`Invalid status: ${detailsResponse?.status} - but continuing`))
+    }
+  }
 
   if (!detailsResponse || detailsResponse.error) {
     console.log(chalk.red(`Error with getting details response: ${detailsResponse.error}`))

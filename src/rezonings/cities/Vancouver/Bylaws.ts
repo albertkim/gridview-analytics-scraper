@@ -1,14 +1,14 @@
-import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { IFullRezoningDetail, ZoningStatus } from '../../../repositories/RecordsRepository'
 import { chatGPTJSONQuery } from '../../../utilities/AIUtilities'
-import { downloadPDF, generatePDFTextArray } from '../../../utilities/PDFUtilities'
-import { generateID } from '../../../repositories/GenerateID'
+import { FullRecord } from '../../../repositories/FullRecord'
+import { parsePDFAsRawArray } from '../../../utilities/PDFUtilitiesV2'
+import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
 
 interface IBylawData {
   address: string
 }
 
+// If all of these words are included in the news title, it's likely a rezoning withdrawal
 const withdrawalWords = ['rezon', 'withdraw']
 
 // Vancouver rezoning withdrawals are not under the 'By-law' title entries
@@ -21,53 +21,20 @@ export function checkIfBylaw(news: IMeetingDetail) {
   return isVancouver && isCouncil && (isBylaw || isWithdrawal)
 }
 
-export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDetail[]> {
+// Bylaw: https://council.vancouver.ca/20231114/documents/bylaws1-19_000.pdf
+// Withdrawal example: https://council.vancouver.ca/20231003/regu20231003ag.htm
+export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
 
-  const fullRezoningDetails: IFullRezoningDetail[] = []
-
-  // Check for withdrawals
+  // Check to see if the item is a withdrawal
   if (withdrawalWords.every((word) => news.title.toLowerCase().includes(word))) {
-    const bylawDetailRaw = await getAddressObject(news.title)
-    if (bylawDetailRaw && bylawDetailRaw.address) {
-      const bylawDetail = bylawDetailRaw as IBylawData
-      const fullRezoningDetail: IFullRezoningDetail = {
-        id: generateID('rez'),
+    const bylawDetail = await getAddressObject(news.title)
+    if (bylawDetail && bylawDetail.address) {
+      const record = new FullRecord({
+        city: 'Vancouver',
+        metroCity: 'Metro Vancouver',
         type: 'rezoning',
-        address: bylawDetail.address,
-        city: news.city,
-        metroCity: news.metroCity,
         applicationId: null,
-        applicant: null,
-        behalf: null,
-        description: '',
-        buildingType: null,
-        reportUrls: [
-          {
-            date: news.date,
-            title: 'By-laws',
-            url: news.url,
-            status: 'withdrawn'
-          }
-        ],
-        zoning: {
-          previousZoningCode: null,
-          previousZoningDescription: null,
-          newZoningCode: null,
-          newZoningDescription: null
-        },
-        minutesUrls: news.minutesUrl ? [{
-          date: news.date,
-          url: news.minutesUrl,
-          status: 'withdrawn'
-        }] : [],
-        stats: {
-          buildings: null,
-          stratas: null,
-          rentals: null,
-          hotels: null,
-          fsr: null,
-          storeys: null
-        },
+        address: bylawDetail.address,
         status: 'withdrawn',
         dates: {
           appliedDate: null,
@@ -76,30 +43,38 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
           denialDate: null,
           withdrawnDate: news.date
         },
-        location: {
-          latitude: null,
-          longitude: null
-        },
-        createDate: moment().format('YYYY-MM-DD'),
-        updateDate: moment().format('YYYY-MM-DD')
-      }
-      fullRezoningDetails.push(fullRezoningDetail)
-      return fullRezoningDetails
+        reportUrls: [
+          {
+            date: news.date,
+            title: 'By-laws',
+            url: news.url,
+            status: 'withdrawn'
+          }
+        ],
+        minutesUrls: news.minutesUrl ? [{
+          date: news.date,
+          url: news.minutesUrl,
+          status: 'withdrawn'
+        }] : []
+      })
+
+      return [record]
     }
   }
 
+  // Otherwise iterate through bylaw PDF and get details
   try {
 
     // Parse each bylaw URL pdf - each URL pdf may contain multiple rezoning approvals, one on each page
     const bylawPDFPages: {url: string, text: string}[] = []
     const bylawPDFUrls = news.reportUrls.map((urlObject) => urlObject.url)
     for (const bylawPDFURL of bylawPDFUrls) {
-      const pdfData = await downloadPDF(bylawPDFURL)
-      const pdfTextOnlyData = await generatePDFTextArray(pdfData, {
+      const pdfTextArray = await parsePDFAsRawArray(bylawPDFURL, {
         minCharacterCount: 10,
         expectedWords: ['explanation', 'rezon', 'housing agreement']
       })
-      bylawPDFPages.push(...pdfTextOnlyData.map((text) => {
+
+      bylawPDFPages.push(...pdfTextArray.map((text) => {
         return {
           url: bylawPDFURL,
           text
@@ -107,94 +82,74 @@ export async function parseBylaw(news: IMeetingDetail): Promise<IFullRezoningDet
       }))
     }
 
-    // For each page, analyze rezonings
+    // For each page, analyze rezonings, then return thee final array
+    const finalRecords: FullRecord[] = []
+
     for (const page of bylawPDFPages) {
 
-      const bylawDetailRaw = await getAddressObject(page.text)
+      const response = await AIGetPartialRecords(page.text, {
+        expectedWords: [], // Vancouver does not have rezoning IDs for some reason
+        fieldsToAnalyze: ['status'],
+        status: 'one of "approved", "denied", or "withdrawn"'
+      })
 
-      if (!bylawDetailRaw) {
-        continue
+      if (!response) {
+        console.log(`Error parsing bylaw page: ${page.url}`)
       }
 
-      const bylawDetail = bylawDetailRaw as IBylawData
+      const records = response
+        .filter((record) => !!record.status) // Make sure status exists
+        .map((record) => {
+          return new FullRecord({
+            city: 'Vancouver',
+            metroCity: 'Metro Vancouver',
+            type: 'rezoning',
+            applicationId: null,
+            address: record.address,
+            applicant: record.applicant,
+            behalf: record.behalf,
+            description: record.description,
+            buildingType: record.buildingType,
+            status: record.status!,
+            dates: {
+              appliedDate: null,
+              publicHearingDate: null,
+              approvalDate: record.status == 'approved' ? news.date : null,
+              denialDate: record.status === 'denied' ? news.date : null,
+              withdrawnDate: record.status === 'withdrawn' ? news.date : null
+            },
+            reportUrls: news.reportUrls.map((urlObject) => {
+              return {
+                date: news.date,
+                title: urlObject.title,
+                url: urlObject.url,
+                status: record.status!
+              }
+            }),
+            minutesUrls: news.minutesUrl ? [{
+              date: news.date,
+              url: news.minutesUrl,
+              status: record.status!
+            }] : []
+          })
+        })
+      
+      finalRecords.push(...records)
 
-      // Figure out if approved, denied, or withdrawn
-      let status: ZoningStatus = 'approved'
-      const approvedWords = ['enact', 'amend', 'approved', 'passed', 'adopted']
-      const deniedWords = ['abandonment', 'defeated', 'denied', 'rejected', 'refused']
-      const withdrawnWords = ['withdraw']
-      // if (approvedWords.some((word) => page.text.toLowerCase().includes(word))) status = 'approved'
-      if (deniedWords.some((word) => page.text.toLowerCase().includes(word))) status = 'denied'
-      if (withdrawnWords.some((word) => page.text.toLowerCase().includes(word))) status = 'withdrawn'
-
-      const fullRezoningDetail: IFullRezoningDetail = {
-        id: generateID('rez'),
-        type: 'rezoning',
-        address: bylawDetail.address,
-        city: news.city,
-        metroCity: news.metroCity,
-        applicationId: null,
-        applicant: null,
-        behalf: null,
-        description: '',
-        buildingType: null,
-        reportUrls: [
-          {
-            date: news.date,
-            title: 'By-laws',
-            url: page.url,
-            status: status
-          }
-        ],
-        zoning: {
-          previousZoningCode: null,
-          previousZoningDescription: null,
-          newZoningCode: null,
-          newZoningDescription: null
-        },
-        minutesUrls: news.minutesUrl ? [{
-          date: news.date,
-          url: news.minutesUrl,
-          status: status
-        }] : [],
-        stats: {
-          buildings: null,
-          stratas: null,
-          rentals: null,
-          hotels: null,
-          fsr: null,
-          storeys: null
-        },
-        status: status,
-        dates: {
-          appliedDate: null,
-          publicHearingDate: null,
-          approvalDate: news.date,
-          denialDate: null,
-          withdrawnDate: null
-        },
-        location: {
-          latitude: null,
-          longitude: null
-        },
-        createDate: moment().format('YYYY-MM-DD'),
-        updateDate: moment().format('YYYY-MM-DD')
-      }
-      fullRezoningDetails.push(fullRezoningDetail)
     }
 
-    return fullRezoningDetails
+    return finalRecords
 
   } catch (error) {
     console.error(error)
-    return fullRezoningDetails
+    return []
   }
 
 }
 
 async function getAddressObject(text: string): Promise<IBylawData | null> {
   let bylawDetailRaw = await chatGPTJSONQuery(`
-    Read the provided text and find the street address in question with the following JSON - otherwise return a {error: message, reason: string}.
+    Read the provided text and find the street address in question with the following JSON format. Do not include city or postal code. If no address is found, return a {error: message, reason: string}.
     {
       address: address in question, if multiple addresses comma separate
     }
