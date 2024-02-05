@@ -10,8 +10,8 @@ import { RawRepository } from '../repositories/RawRepository'
 
 // yarn run scrape
 // NOTE: All the controls you need to run the city scraper should be here
-const startDate = '2023-12-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
-const endDate = '2024-01-31'                    // Exclusive (reads up to just before date): YYYY-MM-DD
+const startDate = '2024-01-01'                  // Inclusive (reads from this date, including this date): YYYY-MM-DD
+const endDate = '2024-02-31'                    // Exclusive (reads up to just before date): YYYY-MM-DD
 const concurrency = 5                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
   // 'BC (province)',

@@ -1,1 +1,167 @@
-[]
+[
+  {
+    "id": "rez-0ca6wke93l6en9t4z1asz",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-945869",
+    "address": "8120 No. 1 Road, 8140 No. 1 Road",
+    "applicant": "Terra 8120 Number 1 Road Limited Partnership",
+    "behalf": "Cliff Chun and Kai Shen Hsiung of 1296168 BC Ltd. and Yi Jen Wang and Kai Shen Hsiung of Terra West Properties Ltd.",
+    "description": "The applicant wants to rezone the properties at 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” Zone to the “Low Density Townhouses (RTL4)” Zone. The proposed development includes the construction of low-density townhouses with a maximum height of 3 stories and a minimum setback of 10 feet from the property line.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-18",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 9,
+      "stratas": 9,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1-_Application_by_Terra_8120_Number_1_Road70930.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T00:51:24.482Z",
+    "updateDate": "2024-02-05T00:58:34.566Z"
+  },
+  {
+    "id": "rez-ew0ii28csujt1fncww3ey",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-010976",
+    "address": "11831 Seabrook Crescent, 11833 Seabrook Crescent",
+    "applicant": "Navreet Gill",
+    "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
+    "description": "The applicant, Navreet Gill, is applying for the rezoning of 11831/11833 Seabrook Crescent from the \"Single Detached (RS1/E)\" Zone to the \"Single Detached (RS2/B)\" Zone. The proposed development includes building two single detached houses with a minimum lot size of 6000 square feet each.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-18",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook70931.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T00:51:45.544Z",
+    "updateDate": "2024-02-05T00:59:00.595Z"
+  },
+  {
+    "id": "rez-lnr93nr1i5uwiiain8bwn",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-011080",
+    "address": "10511 Lassam Road",
+    "applicant": "Gurjit Pooni",
+    "behalf": null,
+    "description": "The applicant, Gurjit Pooni, is applying for the rezoning of 10511 Lassam Road from the 'Single Detached RS1/E' Zone to the 'Single Detached (RS2/B)' Zone. The proposed development includes building a single detached residential property with specific zoning requirements as per Richmond Zoning Bylaw 8500, Amendment Bylaw 10513.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-12-18",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/3_-_Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70932.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T00:52:21.930Z",
+    "updateDate": "2024-02-05T00:59:16.419Z"
+  }
+]

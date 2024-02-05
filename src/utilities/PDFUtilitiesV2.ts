@@ -44,8 +44,8 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
   const parsed = cleanString(parseResult.text)
   let finalText: string | null = ''
 
-  // Check to see if image-based by using regex to get only letters and numbers, and making sure that the length is greater than 10
-  const isImageBased = !parsed.match(/[a-z0-9]/i) || parsed.length < 20
+  // Check to see if image-based by using regex to get only letters and numbers, and making sure that the length is greater than 50 characters
+  const isImageBased = !parsed.match(/[a-z0-9]/i) || parsed.length < 50
 
   // If image based, use Google Cloud Vision OCR to extract the text for each page index
   if (isImageBased) {

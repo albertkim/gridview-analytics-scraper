@@ -86,6 +86,37 @@ test('Check that FullRecord fields are correctly added to database with upsert',
 
 })
 
+test('Check that merging 2 records with the same application uses values from the new description entry', () => {
+
+  const entry1 = new FullRecord({
+    type: 'rezoning',
+    city: 'city',
+    metroCity: 'metroCity',
+    address: 'address',
+    status: 'applied',
+    applicationId: 'applicationId',
+    description: 'descroption 1',
+  })
+
+  const entry2 = new FullRecord({
+    type: 'rezoning',
+    city: 'city',
+    metroCity: 'metroCity',
+    address: 'address',
+    status: 'applied',
+    applicationId: 'applicationId',
+    description: 'descroption 2'
+  })
+
+  repository.upsertRecords('rezoning', [entry1])
+  repository.upsertRecords('rezoning', [entry2])
+
+  const allRecords = repository.getRecords('all')
+  expect(allRecords.length).toBe(1)
+  expect(allRecords[0].description).toBe(entry2.description)
+
+})
+
 test('Check that upsert with same application IDs works correctly', () => {
 
   const applicationId = 'applicationId'
