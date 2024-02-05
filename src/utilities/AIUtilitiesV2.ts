@@ -7,19 +7,22 @@ import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
 
   const fullQuery = `
-    You are an expert in land use planning and development. In the provided document, identify sections that talk about a zoning or development permit, then provide a summary on each one. ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
+  You are an expert in land use planning and development. In the provided document, identify the specific zoning or development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts.
 
-    In each summary, carefully retain all specific details. Make sure to include anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, street addresses, applicants, applicant behalfs, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header.
+  In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all complete street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
 
-    Also include info about any decisions made.
+    ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
     
-    Return as a JSON object that looks like this, and make sure to double-check the format:
+    Return as a JSON object strictly in this format:
+    
     {
       data: {
-        title: string - identifying information about the zoning or development permit
-        summary: string - summary of the zoning or development permit
+        title: string - identifying information about the zoning or development permit such street address and/or an ID, code
+        summary: string - summary of item
       }[]
     }
+
+    DO NOT give me an item where the title is not a specific zoning or development permit.
 
     Here is the document: ${contents}
   `
@@ -31,7 +34,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     return []
   }
 
-  // GPT loves to sometimes make the summary an object instead of a string, so if it's an object, just stringify the data.
+  // Just stringify the data.
   function stringifyArray(array: any[]) {
     const result: string[] = []
     for (const item of array) {
@@ -110,7 +113,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       ${options?.instructions ? options.instructions : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-        address: street address - do not include city - if multiple addresses, comma separate, should not be null
+        address: street address(es) - if multiple addresses, comma separate - do not include city = should not be null
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
         description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
@@ -204,22 +207,22 @@ interface IDetailsResponse {
 export async function AIGetRecordDetails(contents: string, options: IDetailsParams): Promise<IDetailsResponse | null> {
 
   const detailedQueryReference = {
-    buildingType: 'buildingType: one of single-family residential (including duplexes), townhouse, mixed use (only if there is residential + commercial), multi-family residential (only if there is no commercial), industrial (manufacturing, utilities, etc.), commercial, or other',
+    buildingType: 'buildingType: one of "single-family residential" (including duplexes), "townhouse", "mixed use" (only if there is residential + commercial), "multi-family residential" (only if there is no commercial), "industrial" (manufacturing, utilities, etc.), "commercial", or "other"',
     zoning: `zoning: {
-      previousZoningCode: city zoning code before rezoning or null if unclear - keep short
-      previousZoningDescription: best description of previous zoning code (ex. low density residential)
-      newZoningCode: city zoning code after rezoning or null if unclear - keep short
-      newZoningDescription: best description of new zoning code (ex. high density residential)
+      previousZoningCode: string | null - city zoning code before rezoning - null if unclear - keep short
+      previousZoningDescription: string | null - best description of previous zoning code (ex. low density residential) - null if unclear
+      newZoningCode: string | null - city zoning code after rezoning - null if unclear - keep short
+      newZoningDescription: string | null - best description of new zoning code (ex. high density residential) - null if unclear
     }`,
     stats: `stats: {
-      buildings: your best guess as to the number of new buildings being proposed or null if unclear
-      stratas: your best guess as to the total number of non-rental residential units/houses/townhouses - default to assuming strata if not specified - if single family, use number of buildings - null if unclear
-      rentals: total number of rental units - 0 if no rentals mentioned - null if unclear
-      hotels: total number of hotel units (not buildings) - 0 if no hotels mentioned - null if unclear
-      fsr: total floor space ratio or null if unclear
-      storeys: total number of storeys - pick the tallest if multiple - null if unclear
+      buildings: number | null - your best guess as to the number of new buildings being proposed - null if unclear
+      stratas: number | null - your best guess as to the total number of non-rental residential units/houses/townhouses - 0 if not mentioned - if single family, use number of buildings - null if unclear
+      rentals: number | null - total number of rental units - 0 if no rentals mentioned - null if unclear
+      hotels: number | null - total number of hotel units (not buildings) - 0 if no hotels mentioned - null if unclear
+      fsr: number | null - total floor space ratio - null if unclear
+      storeys: number | null - total number of storeys - pick the tallest if multiple - null if unclear
     }`,
-    status: options.status ? `status: ${options.status}` : `status: one of applied, public hearing, approved, denied, withdrawn`
+    status: options.status ? `status: ${options.status}` : `status: one of "applied", "public hearing", "approved", "denied", "withdrawn"`
   }
 
   const detailsQuery = `

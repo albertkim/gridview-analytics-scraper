@@ -1,19 +1,6 @@
-import { cleanBurnabyRezoningId } from '../rezonings/cities/Burnaby/BurnabyUtilities'
 import { checkIfApplication, parseApplication } from '../rezonings/cities/Burnaby/Applications'
 import { checkIfPublicHearing, parsePublicHearing } from '../rezonings/cities/Burnaby/PublicHearings'
 import { checkIfBylaw, parseBylaw } from '../rezonings/cities/Burnaby/Bylaws'
-
-test('Burnaby ID cleaning', async () => {
-  
-  const shouldBeValid = '  REZ  #44-99'
-  const shouldBeValidCleaned = cleanBurnabyRezoningId(shouldBeValid)
-  expect(shouldBeValidCleaned).toEqual('REZ #44-99')
-
-  const shouldBeInvalid = ' REZ 44-9999'
-  const shouldBeInvalidCleaned = cleanBurnabyRezoningId(shouldBeInvalid)
-  expect(shouldBeInvalidCleaned).toEqual(null)
-
-})
 
 const scrapedApplication = {
   "city": "Burnaby",
@@ -100,12 +87,11 @@ test('Burnaby check bylaw - approved', async () => {
 
 test.skip('Burnaby parse application', async () => {
   
-  const rezoning = await parseApplication(scrapedApplication)
+  const rezonings = await parseApplication(scrapedApplication)
 
-  if (!rezoning) {
-    expect(rezoning).not.toEqual(null)
-    return
-  }
+  expect(rezonings).toHaveLength(1)
+
+  const rezoning = rezonings[0]
 
   expect(rezoning.applicationId).toEqual('REZ #20-09')
   expect(rezoning.city).toEqual('Burnaby')
