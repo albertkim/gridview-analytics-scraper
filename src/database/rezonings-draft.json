@@ -27,10 +27,10 @@
       "storeys": 2
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low Density Townhouses"
     },
     "reportUrls": [
       {
@@ -52,7 +52,7 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:51:24.482Z",
-    "updateDate": "2024-02-05T00:58:34.566Z"
+    "updateDate": "2024-02-05T01:04:17.354Z"
   },
   {
     "id": "rez-ew0ii28csujt1fncww3ey",
@@ -82,10 +82,10 @@
       "storeys": 2
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached"
     },
     "reportUrls": [
       {
@@ -107,7 +107,7 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:51:45.544Z",
-    "updateDate": "2024-02-05T00:59:00.595Z"
+    "updateDate": "2024-02-05T01:04:49.096Z"
   },
   {
     "id": "rez-lnr93nr1i5uwiiain8bwn",
@@ -137,10 +137,10 @@
       "storeys": 2
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached RS1/E Zone",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B) Zone"
     },
     "reportUrls": [
       {
@@ -162,6 +162,6 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:52:21.930Z",
-    "updateDate": "2024-02-05T00:59:16.419Z"
+    "updateDate": "2024-02-05T01:05:04.862Z"
   }
 ]

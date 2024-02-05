@@ -38,7 +38,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
 
     const response = await AIGetPartialRecords(parsedPDF, {
       expectedWords: [permitNumber],
-      fieldsToAnalyze: ['building type', 'stats']
+      fieldsToAnalyze: ['building type', 'zoning', 'stats']
     })
 
     if (!response || response.length === 0) {
