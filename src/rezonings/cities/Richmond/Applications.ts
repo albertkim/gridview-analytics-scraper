@@ -20,7 +20,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
 
     // Parse the referral report PDF
     const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {
-      maxPages: 5
+      maxPages: 3
     })
 
     if (!parsedPDF) {

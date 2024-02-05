@@ -18,7 +18,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
 
     // Parse the referral report PDF
     const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {
-      maxPages: 5
+      maxPages: 3
     })
 
     if (!parsedPDF) {

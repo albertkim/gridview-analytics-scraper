@@ -14,6 +14,7 @@ export function checkIfBylaw(news: IMeetingDetail) {
   return isRichmond && hasReportURLs && isCouncil && titleHasBylaw
 }
 
+// Example: https://citycouncil.richmond.ca/__shared/assets/Bylaw_1043570969.pdf
 export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
 
   const finalRecords: FullRecord[] = []

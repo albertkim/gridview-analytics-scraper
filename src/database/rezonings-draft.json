@@ -7,13 +7,13 @@
     "applicationId": "RZ 21-945869",
     "address": "8120 No. 1 Road, 8140 No. 1 Road",
     "applicant": "Terra 8120 Number 1 Road Limited Partnership",
-    "behalf": "Cliff Chun and Kai Shen Hsiung of 1296168 BC Ltd. and Yi Jen Wang and Kai Shen Hsiung of Terra West Properties Ltd.",
-    "description": "The applicant wants to rezone the properties at 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” Zone to the “Low Density Townhouses (RTL4)” Zone. The proposed development includes the construction of low-density townhouses with a maximum height of 3 stories and a minimum setback of 10 feet from the property line.",
+    "behalf": null,
+    "description": "The application is for rezoning at 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” Zone to the “Low Density Townhouses (RTL4)” Zone. The proposal is to develop nine townhouse units with vehicle access from No. 1 Road. The existing dwellings on the subject site are proposed to be demolished. The surrounding development consists of single-family dwellings and townhouses. The Official Community Plan (OCP) land use designation for the subject properties is “Neighbourhood Residential”, and the Arterial Road Land Use Policy designation is “Arterial Road Townhouse”, subject to specific development criteria. The redevelopment proposal is consistent with these designations. The redevelopment proposal involves land assembly with a frontage less than 50 m on No. 1 Road, but staff support the application due to efforts made to acquire adjacent properties, financial feasibility, and submission of a preliminary concept plan for future redevelopment with shared vehicle access.",
     "buildingType": "townhouse",
     "status": "public hearing",
     "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-18",
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -24,7 +24,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 2
+      "storeys": null
     },
     "zoning": {
       "previousZoningCode": "RS1/E",
@@ -38,6 +38,12 @@
         "title": "Report",
         "url": "https://citycouncil.richmond.ca/__shared/assets/1-_Application_by_Terra_8120_Number_1_Road70930.pdf",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Terra_8120_Number_1_Road_Limited_Partnership_for_Rezoning70635.pdf",
+        "status": "applied"
       }
     ],
     "minutesUrls": [
@@ -45,6 +51,11 @@
         "date": "2023-12-18",
         "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm",
+        "status": "applied"
       }
     ],
     "location": {
@@ -52,7 +63,7 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:51:24.482Z",
-    "updateDate": "2024-02-05T01:04:17.354Z"
+    "updateDate": "2024-02-05T01:22:32.124Z"
   },
   {
     "id": "rez-ew0ii28csujt1fncww3ey",
@@ -63,23 +74,23 @@
     "address": "11831 Seabrook Crescent, 11833 Seabrook Crescent",
     "applicant": "Navreet Gill",
     "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
-    "description": "The applicant, Navreet Gill, is applying for the rezoning of 11831/11833 Seabrook Crescent from the \"Single Detached (RS1/E)\" Zone to the \"Single Detached (RS2/B)\" Zone. The proposed development includes building two single detached houses with a minimum lot size of 6000 square feet each.",
+    "description": "Rezoning of 11831/11833 Seabrook Crescent from 'Single Detached (RS1/E)' zone to 'Single Detached (RS2/B)' zone to permit subdivision into two single-family lots, each with vehicle access from Seabrook Crescent.",
     "buildingType": "single-family residential",
     "status": "public hearing",
     "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-18",
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
     "stats": {
       "buildings": 2,
-      "stratas": 2,
+      "stratas": null,
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 2
+      "storeys": null
     },
     "zoning": {
       "previousZoningCode": "RS1/E",
@@ -93,6 +104,12 @@
         "title": "Report",
         "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook70931.pdf",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook_Crescent70634.pdf",
+        "status": "applied"
       }
     ],
     "minutesUrls": [
@@ -100,6 +117,11 @@
         "date": "2023-12-18",
         "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm",
+        "status": "applied"
       }
     ],
     "location": {
@@ -107,7 +129,7 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:51:45.544Z",
-    "updateDate": "2024-02-05T01:04:49.096Z"
+    "updateDate": "2024-02-05T01:21:54.555Z"
   },
   {
     "id": "rez-lnr93nr1i5uwiiain8bwn",
@@ -116,14 +138,14 @@
     "type": "rezoning",
     "applicationId": "RZ 22-011080",
     "address": "10511 Lassam Road",
-    "applicant": "Gurjit Pooni",
+    "applicant": "Onyx Premier Homes Ltd.",
     "behalf": null,
-    "description": "The applicant, Gurjit Pooni, is applying for the rezoning of 10511 Lassam Road from the 'Single Detached RS1/E' Zone to the 'Single Detached (RS2/B)' Zone. The proposed development includes building a single detached residential property with specific zoning requirements as per Richmond Zoning Bylaw 8500, Amendment Bylaw 10513.",
+    "description": "The applicant wants to rezone 10511 Lassam Road from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone, to permit the property to be subdivided to create two single-family lots with access from Lassam Road.",
     "buildingType": "single-family residential",
     "status": "public hearing",
     "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-12-18",
+      "appliedDate": "2023-11-27",
+      "publicHearingDate": null,
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
@@ -134,13 +156,13 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 2
+      "storeys": null
     },
     "zoning": {
       "previousZoningCode": "RS1/E",
-      "previousZoningDescription": "Single Detached RS1/E Zone",
+      "previousZoningDescription": "Single Detached",
       "newZoningCode": "RS2/B",
-      "newZoningDescription": "Single Detached (RS2/B) Zone"
+      "newZoningDescription": "Single Detached"
     },
     "reportUrls": [
       {
@@ -148,6 +170,12 @@
         "title": "Report",
         "url": "https://citycouncil.richmond.ca/__shared/assets/3_-_Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70932.pdf",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-27",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70760.pdf",
+        "status": "applied"
       }
     ],
     "minutesUrls": [
@@ -155,6 +183,11 @@
         "date": "2023-12-18",
         "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
         "status": "public hearing"
+      },
+      {
+        "date": "2023-11-27",
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm",
+        "status": "applied"
       }
     ],
     "location": {
@@ -162,6 +195,244 @@
       "longitude": null
     },
     "createDate": "2024-02-05T00:52:21.930Z",
-    "updateDate": "2024-02-05T01:05:04.862Z"
+    "updateDate": "2024-02-05T01:18:40.306Z"
+  },
+  {
+    "id": "rez-sq6t5kjponuvy7nv056e5",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-943417",
+    "address": "7300 St. Albans Road",
+    "applicant": "Matthew Cheng",
+    "behalf": "1124053 B.C. LTD",
+    "description": "Rezoning at 7300 St. Albans Road from 'Single Detached (RS1/E)' Zone to 'High Density Townhouses (RTH1)' Zone. The applicant wants to build high-density townhouses with a minimum of 20 units per acre.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 4,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTH1",
+      "newZoningDescription": "High Density Townhouses"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_Matthew_Cheng_-_7300_St70719.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T01:08:35.719Z",
+    "updateDate": "2024-02-05T01:19:23.542Z"
+  },
+  {
+    "id": "rez-y3dczlraqyyg2ypoipzdn",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-026766",
+    "address": "3300 Granville Avenue",
+    "applicant": "Hari Singh Gill",
+    "behalf": null,
+    "description": "Hari Singh Gill has applied to rezone the property at 3300 Granville Avenue from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone to allow the property to be subdivided into two single-family lots. The proposed subdivision plan is shown in Attachment 2. The rezoning and subdivision proposed in this application is consistent with the Lot Size Policy 5447. The proposed rezoning and subdivision application is consistent with the Official Community Plan (OCP) land use designation for the subject property, which is “Neighbourhood Residential” (NRES). The proposed redevelopment must meet the requirements of the Richmond Flood Plain Designation and Protection Bylaw 8204. There is an existing Statutory Right-of-Way (SRW) for the City in the rear yard for sanitary sewer services. The applicant is proposing to rezone the subject site and subdivide into two single-family lots, each with a one bedroom secondary suite. The existing driveway will be removed and new driveways will be constructed through a Servicing Agreement as detailed in the Site Servicing and Frontage Improvements sub-section of this report. The applicant has submitted a Certified Arborist’s Report; which identifies on-site and off-site tree species, assesses tree structure and condition, and provides recommendations on tree retention and removal relative to the proposed development. The City’s Tree Preservation Coordinator has reviewed the Arborist’s Report and supports the Arborist’s findings.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached (RS1/E)",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached (RS2/B)"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_Hari_Singh_Gill_for_Rezoning_at_3300_Granville_Ave70720.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T01:09:14.770Z",
+    "updateDate": "2024-02-05T01:19:54.857Z"
+  },
+  {
+    "id": "rez-5u5pekrp8rnb3rwdnjdm5",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-939470",
+    "address": "5471 Steveston Highway, 5491/5493 Steveston Highway, 5531 Steveston Highway, 5551 Steveston Highway, 5571 Steveston Highway, 5591 Steveston Highway, 5595 Steveston Highway, 5611/5613 Steveston Highway",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": "Steveston Townhouse Ventures Inc.",
+    "description": "The applicant wants to rezone the mentioned addresses from “Single Detached (RS1/B)” Zone, “Single Detached (RS1/E)” Zone and “Two-Unit Dwellings (RD1)” Zone to “Medium Density Townhouses (RTM2)” Zone in order to build medium density townhouses. Staff Recommendation: That Richmond Zoning Bylaw 8500, Amendment Bylaw 10496, for the rezoning of the mentioned addresses to the “Medium Density Townhouses (RTM2)” zone, be introduced and given first reading.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 30,
+      "stratas": 30,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 0.65,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B, RS1/E, RD1",
+      "previousZoningDescription": "Single Detached and Two-Unit Dwellings",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Application_-_Interface_Architecture_Inc70721.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Memorandum_-_Vehicle_Access_at_Steveston_Hwy70722.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Schedule_1_-_Letter_from_J_Nickerson70725.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Schedule_2_-_Letter_from_Frank_Pronk70726.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T01:10:07.335Z",
+    "updateDate": "2024-02-05T01:20:43.043Z"
+  },
+  {
+    "id": "rez-89fvl4bkvl6e6o4gnax9n",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-011063",
+    "address": "10840 Bonavista Gate, 10860 Bonavista Gate",
+    "applicant": "Pati Yik",
+    "behalf": "Kennon Construction",
+    "description": "The applicant, on behalf of Kennon Construction, is applying for rezoning at 10840/10860 Bonavista Gate from the “Two-Unit Dwellings (RD1)” Zone to the “Single Detached (RS2/C)” Zone. The proposed development includes the construction of single detached homes with a minimum lot size of 5000 square feet and a maximum building height of 35 feet.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RD1",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "RS2/C",
+      "newZoningDescription": "Single Detached"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_4-_Application_-_10840_10860_Bonavista_Gate70723.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T01:21:20.037Z",
+    "updateDate": "2024-02-05T01:21:20.044Z"
   }
 ]
