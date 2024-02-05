@@ -9,7 +9,7 @@ export function findApplicationIDsFromTemplate(template: string, content: string
   const cleanedContent = content.replace(/[^A-Za-z0-9-]/g, '')
 
   // Build a regex pattern that matches the template, but ignores spaces/# in the template and interprets 'X' as a number
-  const regexPattern = template.replace(' ', '').replace('#', '').split('').map((char) => {
+  const regexPattern = template.replace(' ', '').replace('#', '').replace('.', '').split('').map((char) => {
     if (char === 'X') {
       return '[0-9]'
     } else {
@@ -17,8 +17,8 @@ export function findApplicationIDsFromTemplate(template: string, content: string
     }
   }).join('')
 
-  // Search for matches in the cleaned content and extract the digits
-  const matches = cleanedContent.match(new RegExp(regexPattern, 'g'))
+  // Search for matches in the cleaned content and extract the digits case insensitive
+  const matches = cleanedContent.match(new RegExp(regexPattern, 'gi'))
 
   if (matches) {
 
@@ -34,8 +34,13 @@ export function findApplicationIDsFromTemplate(template: string, content: string
           applicationId += ' '
         } else if (char === '#') {
           applicationId += '#'
-        } else {
+        } else if (char === '.') {
+          applicationId += '.'
+        } else if (char === 'X') {
           applicationId += match[matchIndex]
+          matchIndex++
+        } else {
+          applicationId += char
           matchIndex++
         }
       }

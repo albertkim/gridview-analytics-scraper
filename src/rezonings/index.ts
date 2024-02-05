@@ -9,7 +9,7 @@ const endDate = '2023-12-30'
 const citiesToAnalyze: string[] = [
   // 'Vancouver',
   // 'Richmond',
-  // 'Burnaby',
+  'Burnaby',
   // 'Surrey'
 ]
 
