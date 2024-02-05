@@ -434,5 +434,1113 @@
     },
     "createDate": "2024-02-05T01:21:20.037Z",
     "updateDate": "2024-02-05T01:21:20.044Z"
+  },
+  {
+    "id": "rez-w6fbzuga7vns5r4mf0gp0",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "3529-3589 Arbutus Street, 2106 West 19th Avenue",
+    "applicant": "Andrew Cheung Architects, Inc.",
+    "behalf": "DXX Investments Ltd.",
+    "description": "To rezone 3529-3589 Arbutus Street and 2106 West 19th Avenue from R1-1 (Residential) District to RR-2B (Residential Rental) District, to permit the development of a five-storey rental building. A height of 16.8 m (55 ft.) and a floor space ratio (FSR) of 2.40 are proposed.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-16",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": 2.4,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1sr.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr4.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1ZDby-law.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1staffpresentation.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Video Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20447?mediaStartTime=20231116130705&mediaEndTime=20231116134600&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-16",
+        "url": "https://council.vancouver.ca/20231116/phea20231116ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:53:58.904Z",
+    "updateDate": "2024-02-05T04:53:58.904Z"
+  },
+  {
+    "id": "rez-mexvuqjqh5t04rrvqt8lq",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "6065-6075 Collingwood Place",
+    "applicant": "Strand Holdings Ltd.",
+    "behalf": "James Stephen Lebedovich and Silse Eileen Lebedovich, Joanne Wong",
+    "description": "To rezone 6065-6075 Collingwood Place from R1-1 (Residential) District to RR-2B (Residential Rental) District, to permit the development of a five-storey rental building. A height of 16.8 m (55 ft.) and a floor space ratio (FSR) of 2.40 are proposed.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-16",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": 2.4,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2sr.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Referral Report dated August 29, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr6.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2ZDby-law.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated October 16, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo_reportsummary.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 15, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo_conditions.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2staffpresentation.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Video Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20447?mediaStartTime=20231116134601&mediaEndTime=20231116152110&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-16",
+        "url": "https://council.vancouver.ca/20231116/phea20231116ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:54:24.835Z",
+    "updateDate": "2024-02-05T04:54:24.835Z"
+  },
+  {
+    "id": "rez-2lrm5hjsz5b9m3q7roo52",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "5515-5525 Elizabeth Street",
+    "applicant": "Ardor Development Ltd.",
+    "behalf": "Ardorhomes 5515 Elizabeth Holdings Ltd., 1396947 B.C. Ltd., Inc. 1",
+    "description": "To rezone 5515-5525 Elizabeth Street from R1-1 (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a four-storey residential building with a partial 5th floor rooftop amenity area with 27 strata-titled residential units. A floor space ratio of 2.0 and a maximum building height of 13.7 m (45 ft.) with additional height to 18.2 m (60 ft.) for a rooftop amenity and mechanical appurtenances are proposed.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 27,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr5.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1_openhouse_boards.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114180118&mediaEndTime=20231114181705&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:54:57.490Z",
+    "updateDate": "2024-02-05T04:54:57.490Z"
+  },
+  {
+    "id": "rez-y8d1ip60pg0ljwtozxcbr",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "1510 West 71st Avenue, 8733 Granville Street",
+    "applicant": "Gradual Architecture Inc.",
+    "behalf": "338888 (Granville) Holdings Ltd., 339999 Granville Holdings Ltd.",
+    "description": "To rezone 1510 West 71st Avenue and 8733 Granville Street from C-2 (Commercial) District and RM-3A (Residential) District to CD-1 (Comprehensive Development) District, to permit the development of a six-storey mixed-use building, with commercial space at-grade and 74 secured market rental units. A height of 22.0 m (72 ft.) and a floor space ratio (FSR) of 3.38 are proposed.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 74,
+      "hotels": 0,
+      "fsr": 3.38,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "C-2, RM-3A",
+      "previousZoningDescription": "Commercial and Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr3.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2-staffpresentation-November142023.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114181710&mediaEndTime=20231114184000&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:55:35.610Z",
+    "updateDate": "2024-02-05T04:55:35.610Z"
+  },
+  {
+    "id": "rez-2nfptan8tp10aollzzh19",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "430-440 West Pender Street",
+    "applicant": "Architectural Collective Inc.",
+    "behalf": "B West Pender Holdings Ltd.",
+    "description": "To rezone 430-440 West Pender Street from DD (Downtown) District to CD-1 (Comprehensive Development) District, to permit the development of a 12-storey mixed-use building with a partial 13th floor rooftop amenity area, with commercial at-grade and 80 secured market rental housing units. A floor space ratio (FSR) of 8.42 and a maximum building height of 32.0 m (105 ft.) with additional height to 35.1 m (115 ft.) for a partial 13th floor rooftop common amenity space are proposed.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 80,
+      "hotels": 0,
+      "fsr": 8.42,
+      "storeys": 12
+    },
+    "zoning": {
+      "previousZoningCode": "DD",
+      "previousZoningDescription": "Downtown District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr1.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114184001&mediaEndTime=20231114191900&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:56:03.296Z",
+    "updateDate": "2024-02-05T04:56:03.296Z"
+  },
+  {
+    "id": "rez-p0i78e626w86m4v82h5s6",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "3231-3245 Fraser Street, 675 East 17th Avenue",
+    "applicant": "Anthem Fraser Developments LP",
+    "behalf": "Anthem Fraser Developments Ltd., Mercer Properties (Fraser 17) Inc.",
+    "description": "To rezone 3231-3245 Fraser Street and 675 East 17th Avenue from C-2 (Commercial) District to CD-1 (Comprehensive Development) District, to permit the development of a 14-storey mixed-use building with a partial 15th floor rooftop amenity area, with commercial at-grade and 110 secured rental housing units, of which 20% of the residential floor area will be secured as moderate income units, over three levels of underground parking. A floor space ratio of 6.9 and a maximum building height of 45.5 m (149 ft.) with additional height to 47.5 m (156 ft.) for a partial 15th floor rooftop amenity area are proposed.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 110,
+      "hotels": 0,
+      "fsr": 6.9,
+      "storeys": 14
+    },
+    "zoning": {
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr2.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_udp_boards.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4-staffpresentation-November142023.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114192258&mediaEndTime=20231114195900&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:56:38.943Z",
+    "updateDate": "2024-02-05T04:56:38.943Z"
+  },
+  {
+    "id": "rez-9h1cz0m5thrarc7twe7ir",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "4711-4787 Cambie Street",
+    "applicant": "Mosaic Homes",
+    "behalf": "Mosaic Flora and Fauna Holdings Ltd.",
+    "description": "The application by Mosaic Homes, on behalf of Mosaic Flora and Fauna Holdings Ltd., the registered owner of the land located at 4711-4787 Cambie Street to rezone from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the permitted floor space ratio (FSR) from 0.70 to 2.65 and the maximum building height from 11.5 m (37.7 ft.) to 23.6 m (77.4 ft.) to permit the development of two six-storey residential buildings with 114 strata-titled residential units, be approved in principle.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 114,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2.65,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr2.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:57:45.112Z",
+    "updateDate": "2024-02-05T04:57:45.125Z"
+  },
+  {
+    "id": "rez-b0cgkzysqm5koxqz2ey0s",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "2231-2247 East 41st Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "This report recommends a plan amendment to the Zoning and Development By-law from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) District, for the site located at 2231-2247 East 41st Avenue. The amendment would allow for a five-storey rental building in accordance with the Secured Rental Policy (“SRP”). An estimated total of 61 secured rental units would be delivered through this application. A future building design would be submitted through the development permit process and reviewed with the public at that time.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 61,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr3.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:58:31.744Z",
+    "updateDate": "2024-02-05T04:58:31.754Z"
+  },
+  {
+    "id": "rez-f0zlrx1rsmo39nev2ahix",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "6470 Larch Street",
+    "applicant": "AVRP Architecture Inc.",
+    "behalf": "Pius Ho",
+    "description": "The applicant, AVRP Architecture Inc. on behalf of Pius Ho, the registered owner of the lands located at 6470 Larch Street, is requesting to rezone the lands from R1-1 (Residential Inclusive) District to RR-2B (Residential Rental) District. The proposed development includes building a residential rental complex with a total of 50 units and 20 parking spaces.",
+    "buildingType": "single-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr4.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T04:59:14.654Z",
+    "updateDate": "2024-02-05T04:59:14.667Z"
+  },
+  {
+    "id": "rez-d53l79t62wxgc0szg0rco",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "1710-1730 East Pender Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "The application proposes an 18-storey mixed-use building containing 191 social housing units, including six live-work units, and ground floor commercial space.",
+    "buildingType": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 191,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 18
+    },
+    "zoning": {
+      "previousZoningCode": "RM-4 and RM-4N",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:00:04.778Z",
+    "updateDate": "2024-02-05T05:00:04.798Z"
+  },
+  {
+    "id": "rez-z70rp3pmn0mvagfk78hd8",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "8120-8168 Lord Street, 540 West 65th Avenue",
+    "applicant": "Francl Architecture Inc.",
+    "behalf": "Lord Street Holdings Ltd.",
+    "description": "The rezoning application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District to increase the maximum floor space ratio (FSR) from 0.70 to 2.88 and the maximum building height from 11.5 m (38 ft.) to 20.7 m (68 ft.), to permit the development of two six-storey residential buildings containing 146 secured-rental units, of which five units will be secured as below-market rental units.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 146,
+      "rentals": 146,
+      "hotels": 0,
+      "fsr": 2.88,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr6.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:00:50.139Z",
+    "updateDate": "2024-02-05T05:00:50.139Z"
+  },
+  {
+    "id": "rez-bv0nrnpjo0xkzhi5hu9jc",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "692 West 30th Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "The subject site at 692 West 30th Avenue is approximately 746.2 sq. m (8,032 sq. ft.) with a frontage of 17.1 m (56 ft.) along 30th Avenue and a depth of 43.8 m (144 ft.) along the east property line. The proposed rezoning is in alignment with the Vancouver Plan and the Cambie Corridor Plan, which guides the transformation of the Corridor into an area where people can live, work, shop, play and learn. The site is located within the Queen Elizabeth neighbourhood, characterized by its existing low-density residential character and green park-like setting.",
+    "buildingType": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "null",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "null",
+      "newZoningDescription": "mixed use"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report ",
+        "url": "https://council.vancouver.ca/20231114/documents/rr7.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:01:39.617Z",
+    "updateDate": "2024-02-05T05:01:39.637Z"
+  },
+  {
+    "id": "rez-cvwh9cjct2lv9z99xz5t6",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "688 West 29th Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "The proposed amendment would rezone the property from R1-1 (Residential Inclusive) District to RM-8A (Residential) District to allow for a townhouse or rowhouse development. The maximum floor space ratio (FSR) for RM-8A can be up to 1.20. Based on the site area, approximately eight townhouses can be achieved at this location.",
+    "buildingType": "townhouse",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 8,
+      "stratas": 8,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 1.2,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "RM-8A",
+      "newZoningDescription": "Residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr8.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:02:24.590Z",
+    "updateDate": "2024-02-05T05:02:24.600Z"
+  },
+  {
+    "id": "rez-xb360woe1cumch0x0f5j4",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
+    "applicant": "Marcon Developments Ltd.",
+    "behalf": "Amica Arbutus Nanton Seniors Inc.",
+    "description": "The application is to rezone the lands from R1-1 (Residential Inclusive) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 0.70 to 3.87 and the maximum building height from 11.5 m (37.7 ft.) to 27.5 m (90 ft.) and to 31.5 m (103 ft.) for the portion with rooftop amenity, to permit the development of a six-storey, 162-unit Community Care Facility – Class B.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 162,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 3.87,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential Inclusive",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:03:05.203Z",
+    "updateDate": "2024-02-05T05:03:05.203Z"
+  },
+  {
+    "id": "rez-vssov7r7gqpw39w2nr5tt",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "848 Seymour Street",
+    "applicant": "Perkins & Will",
+    "behalf": "Paul Y. Construction (B.C.) LTD., Inc.",
+    "description": "The application is to rezone the lands at 848 Seymour Street from DD (Downtown) District to CD-1 (Comprehensive Development) District, to increase the maximum floor space ratio (FSR) from 5.75 to 17.67 and the maximum building height from 91.4 m (300 ft.) to 97.7 m (321 ft.), to permit the development of a 30-storey hotel.",
+    "buildingType": "commercial",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 30,
+      "fsr": 17.67,
+      "storeys": 30
+    },
+    "zoning": {
+      "previousZoningCode": "DD",
+      "previousZoningDescription": "Downtown District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:03:59.304Z",
+    "updateDate": "2024-02-05T05:03:59.304Z"
+  },
+  {
+    "id": "rez-7h5numlsd8ng12xw4ony7",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "Seymour Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "The applicant wants to rezone the four parcels containing a surface parking lot on Seymour Street, with a site size of 1,253.1 sq. m (13,488 sq. ft.), frontage of 34.4 m (113 ft.) along Seymour Street and a depth of 36.6 m (120 ft). The site is located in the Central Business District (CBD) and surrounding sites contain residential, commercial and arts, culture and entertainment uses. Nearby developments range in height from five to 43 storeys, with three residential towers on this block.",
+    "buildingType": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 43
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": "unclear",
+      "newZoningCode": null,
+      "newZoningDescription": "unclear"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-05T05:03:59.304Z",
+    "updateDate": "2024-02-05T05:03:59.304Z"
   }
 ]

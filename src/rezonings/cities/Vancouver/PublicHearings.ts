@@ -29,8 +29,9 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
       fieldsToAnalyze: ['building type', 'zoning', 'stats']
     })
 
-    if (!response) {
-      throw new Error()
+    if (!response || response.length === 0) {
+      console.log(chalk.bgRed(`Error parsing public hearing: ${news.reportUrls[0].url}`))
+      return []
     }
 
     return response.map((record) => {

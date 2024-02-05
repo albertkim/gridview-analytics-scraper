@@ -93,7 +93,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
         status: 'one of "approved", "denied", or "withdrawn"'
       })
 
-      if (!response) {
+      if (!response || response.length === 0) {
         console.log(`Error parsing bylaw page: ${page.url}`)
       }
 
