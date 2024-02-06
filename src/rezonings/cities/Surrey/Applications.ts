@@ -1,11 +1,9 @@
 import chalk from 'chalk'
-import moment from 'moment'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { chatGPTRezoningQuery } from '../../../utilities/AIUtilities'
-import { getSurreyBaseGPTQuery, getSurreyDevelopmentID } from './SurreyUtilities'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
-import { generateID } from '../../../repositories/GenerateID'
-import { IFullRezoningDetail } from '../../../repositories/RecordsRepository'
+import { FullRecord } from '../../../repositories/FullRecord'
+import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
+import { findApplicationIDsFromTemplate } from '../../../utilities/RegexUtilities'
 
 // Note that rezoning applications may show up in council, special, and land use meetings
 export function checkIfApplication(news: IMeetingDetail): boolean {
@@ -18,7 +16,7 @@ export function checkIfApplication(news: IMeetingDetail): boolean {
 
   if (beforeItWasContents) {
 
-    const includesDevelopmentId = !!getSurreyDevelopmentID(beforeItWasContents)
+    const includesDevelopmentId = findApplicationIDsFromTemplate('XXXX-XXXX-XX', beforeItWasContents).length > 0
     const includesRezoning = beforeItWasContents.includes('rezoning')
     const isNotTemporary = !beforeItWasContents.includes('temporary use permit')
     const hasPlanningReport = news.reportUrls.length > 0 && !!news.reportUrls.find((r) => r.title.toLowerCase().includes('planning report'))
@@ -31,62 +29,72 @@ export function checkIfApplication(news: IMeetingDetail): boolean {
 
 }
 
-export async function parseApplication(news: IMeetingDetail) {
+export async function parseApplication(news: IMeetingDetail): Promise<FullRecord[]> {
 
   try {
 
-    const partialRezoningDetails = await chatGPTRezoningQuery(
-      getSurreyBaseGPTQuery(news.contents),
-      {analyzeType: true, analyzeStats: true}
-    )
+    const rezoningIds = findApplicationIDsFromTemplate('XXXX-XXXX-XX', news.contents)
 
-    if (!partialRezoningDetails) {
-      throw new Error()
+    if (rezoningIds.length === 0) {
+      console.log(chalk.red(`No rezoning IDs found in ${news.title}`))
+      return []
     }
 
-    const fullRezoningDetails: IFullRezoningDetail = {
-      id: generateID('rez'),
-      type: 'rezoning',
-      ...partialRezoningDetails,
-      applicationId: getSurreyDevelopmentID(news.contents),
-      city: news.city,
-      metroCity: news.metroCity,
-      reportUrls: news.reportUrls.map((urlObject) => {
-        return {
+    const rezoningId = rezoningIds[0]
+
+    const response = await AIGetPartialRecords(news.contents, {
+      expectedWords: [rezoningId],
+      applicationId: 'in the format of XXXX-XXXX-XX where Xs are numbers',
+      fieldsToAnalyze: ['building type', 'zoning', 'stats']
+    })
+
+    if (!response || response.length === 0) {
+      console.log(chalk.red(`No response for Surrey application - ${news.title}`))
+      return []
+    }
+
+    return response.map((record) => {
+      return new FullRecord({
+        city: 'Surrey',
+        metroCity: 'Metro Vancouver',
+        type: 'rezoning',
+        applicationId: record.applicationId,
+        address: record.address,
+        applicant: record.applicant,
+        behalf: record.behalf,
+        description: record.description,
+        buildingType: record.buildingType,
+        status: 'applied',
+        dates: {
+          appliedDate: news.date,
+          publicHearingDate: null,
+          approvalDate: null,
+          denialDate: null,
+          withdrawnDate: null
+        },
+        stats: record.stats,
+        zoning: record.zoning,
+        reportUrls: news.reportUrls.map((urlObject) => {
+          return {
+            date: news.date,
+            title: urlObject.title,
+            url: urlObject.url,
+            status: 'applied'
+          }
+        }),
+        minutesUrls: news.minutesUrl ? [{
           date: news.date,
-          title: urlObject.title.replace('\n', ', '),
-          url: urlObject.url,
+          url: news.minutesUrl,
           status: 'applied'
-        }
-      }),
-      minutesUrls: news.minutesUrl ? [{
-        date: news.date,
-        url: news.minutesUrl,
-        status: 'applied'
-      }] : [],
-      status: 'applied',
-      dates: {
-        appliedDate: news.date,
-        publicHearingDate: null,
-        approvalDate: null,
-        denialDate: null,
-        withdrawnDate: null
-      },
-      location: {
-        latitude: null,
-        longitude: null
-      },
-      createDate: moment().format('YYYY-MM-DD'),
-      updateDate: moment().format('YYYY-MM-DD')
-    }
-
-    return fullRezoningDetails
+        }] : []
+      })
+    })
 
   } catch (error) {
     console.error(chalk.bgRed('Error parsing application'))
     console.error(chalk.red(error))
     ErrorsRepository.addError(news)
-    return null
+    return []
   }
 
 

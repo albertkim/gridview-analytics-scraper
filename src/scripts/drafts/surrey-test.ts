@@ -30,19 +30,19 @@ import { checkIfBylaw, parseBylaw } from '../../rezonings/cities/Surrey/Bylaws'
     if (checkIfApplication(n)) {
       const rezoning = await parseApplication(n)
       if (rezoning) {
-        applications.push(rezoning)
+        applications.push(...rezoning)
       }
     }
     if (checkIfPublicHearing(n)) {
       const rezoning = await parsePublicHearing(n)
       if (rezoning) {
-        publicHearings.push(rezoning)
+        publicHearings.push(...rezoning)
       }
     }
     if (checkIfBylaw(n)) {
       const rezoning = await parseBylaw(n)
       if (rezoning) {
-        bylaws.push(rezoning)
+        bylaws.push(...rezoning)
       }
     }
   }

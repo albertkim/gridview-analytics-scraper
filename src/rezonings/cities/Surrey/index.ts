@@ -4,7 +4,9 @@ import { IMeetingDetail, RawRepository } from '../../../repositories/RawReposito
 import { checkIfApplication, parseApplication } from './Applications'
 import { checkIfPublicHearing, parsePublicHearing } from './PublicHearings'
 import { checkIfBylaw, parseBylaw } from './Bylaws'
-import { RecordsRepository } from '../../../repositories/RecordsRepository'
+import { RecordsRepository } from '../../../repositories/RecordsRepositoryV2'
+
+const repository = new RecordsRepository('draft')
 
 export async function analyze(startDate: string | null, endDate: string | null) {
 
@@ -35,21 +37,21 @@ export async function analyze(startDate: string | null, endDate: string | null) 
     if (checkIfApplication(news)) {
       const applicationDetails = await parseApplication(news)
       if (applicationDetails) {
-        RecordsRepository.upsertRecords('rezoning', [applicationDetails])
+        repository.upsertRecords('rezoning', applicationDetails)
       }
     }
 
     if (checkIfPublicHearing(news)) {
       const publicHearingDetails = await parsePublicHearing(news)
       if (publicHearingDetails) {
-        RecordsRepository.upsertRecords('rezoning', [publicHearingDetails])
+        repository.upsertRecords('rezoning', publicHearingDetails)
       }
     }
 
     if (checkIfBylaw(news)) {
       const bylawDetails = await parseBylaw(news)
       if (bylawDetails) {
-        RecordsRepository.upsertRecords('rezoning', [bylawDetails])
+        repository.upsertRecords('rezoning', bylawDetails)
       }
     }
 

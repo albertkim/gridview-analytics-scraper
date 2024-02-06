@@ -2,7 +2,6 @@ import chalk from 'chalk'
 import moment from 'moment'
 import { Client } from '@googlemaps/google-maps-services-js'
 import { RecordsRepository } from '../repositories/RecordsRepository'
-import { cleanRichmondRezoningId } from '../rezonings/cities/Richmond/RichmondUtilities'
 import { chatGPTJSONQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
 
 export const BulkUtilities = {

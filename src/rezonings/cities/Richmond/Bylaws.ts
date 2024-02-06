@@ -5,6 +5,7 @@ import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { parseCleanPDF } from '../../../utilities/PDFUtilitiesV2'
 import { FullRecord } from '../../../repositories/FullRecord'
 import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
+import { findApplicationIDsFromTemplate } from '../../../utilities/RegexUtilities'
 
 export function checkIfBylaw(news: IMeetingDetail) {
   const isRichmond = news.city === 'Richmond'
@@ -32,18 +33,16 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
         continue
       }
 
-      // Get the first matching application ID - RZ XX-XXXXXX
-      const permitNumberRegex = /RZ[\s\S]{0,3}(\d{2}-\d{6})/i
-      const permitNumberWithoutPrefix = parsedPDF.match(permitNumberRegex)?.[1]
-      if (!permitNumberWithoutPrefix) {
+      const rezoningIds = findApplicationIDsFromTemplate('RZ XX-XXXXXX', parsedPDF)
+      if (rezoningIds.length === 0) {
         console.log(chalk.red(`No rezoning number found for Richmond bylaw - ${news.reportUrls[0].url}`))
         return []
       }
-
-      const permitNumber = `RZ ${permitNumberWithoutPrefix}`
+      const rezoningId = rezoningIds[0]
 
       const response = await AIGetPartialRecords(parsedPDF, {
-        expectedWords: [permitNumber],
+        expectedWords: [rezoningId],
+        applicationId: 'in the format "RZ XX-XXXXX" where the Xs are numbers',
         fieldsToAnalyze: [] // Don't rely on bylaw data to get specific rezoning details
       })
 

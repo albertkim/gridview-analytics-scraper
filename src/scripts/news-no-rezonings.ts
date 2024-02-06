@@ -16,6 +16,7 @@ import { checkIfBylaw as burnabyCheckIfBylaw, parseBylaw as burnabyParseBylaw } 
 import { checkIfApplication as richmondCheckIfApplication, parseApplication as richmondParseApplication } from '../rezonings/cities/Richmond/Applications'
 import { checkIfPublicHearing as richmondCheckIfPublicHearing, parsePublicHearing as richmondParsePublicHearing } from '../rezonings/cities/Richmond/PublicHearings'
 import { checkIfBylaw as richmondCheckIfBylaw, parseBylaw as richmondParseBylaw } from '../rezonings/cities/Richmond/Bylaws'
+import { FullRecord } from '../repositories/FullRecord'
 
 // Purpose: For a given city, find how many of the rezoning-checked news items are not in the rezonings database
 // Accomplish that by checking for existance of the minutes URL
@@ -36,9 +37,9 @@ interface IFunctionCityMapping {
   checkIfPublicHearing: { [key in CityType]: (news: IMeetingDetail) => boolean }
   checkIfBylaw: { [key in CityType]: (news: IMeetingDetail) => boolean }
 
-  parseApplication: { [key in CityType]: (news: IMeetingDetail) => Promise<IFullRezoningDetail | null> }
-  parsePublicHearing: { [key in CityType]: (news: IMeetingDetail) => Promise<IFullRezoningDetail | null> }
-  parseBylaw: { [key in CityType]: (news: IMeetingDetail) => Promise<IFullRezoningDetail | IFullRezoningDetail[] | null> }
+  parseApplication: { [key in CityType]: (news: IMeetingDetail) => Promise<FullRecord[]> }
+  parsePublicHearing: { [key in CityType]: (news: IMeetingDetail) => Promise<FullRecord[]> }
+  parseBylaw: { [key in CityType]: (news: IMeetingDetail) => Promise<FullRecord[]> }
 
 }
 
@@ -123,7 +124,7 @@ async function main() {
       const n = noApplicationNews[i]
       const parsed = await functionCityMapping.parseApplication[city](n)
       if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', [parsed])
+        await RecordsRepository.upsertRecords('rezoning', parsed)
       }
     }
   }
@@ -134,7 +135,7 @@ async function main() {
       const n = noPublicHearingNews[i]
       const parsed = await functionCityMapping.parsePublicHearing[city](n)
       if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', [parsed])
+        await RecordsRepository.upsertRecords('rezoning', parsed)
       }
     }
   }
@@ -144,10 +145,8 @@ async function main() {
       console.log(chalk.bgWhite(`Parsing bylaw ${i + 1} of ${noBylawNews.length}`))
       const n = noBylawNews[i]
       const parsed = await functionCityMapping.parseBylaw[city](n)
-      if (parsed && Array.isArray(parsed)) {
+      if (parsed) {
         await RecordsRepository.upsertRecords('rezoning', parsed)
-      } else if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', [parsed])
       }
     }
   }
