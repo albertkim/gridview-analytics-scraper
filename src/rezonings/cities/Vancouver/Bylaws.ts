@@ -69,17 +69,21 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
     const bylawPDFPages: {url: string, text: string}[] = []
     const bylawPDFUrls = news.reportUrls.map((urlObject) => urlObject.url)
     for (const bylawPDFURL of bylawPDFUrls) {
-      const pdfTextArray = await parsePDFAsRawArray(bylawPDFURL, {
-        minCharacterCount: 10,
-        expectedWords: ['explanation', 'rezon', 'housing agreement']
-      })
+      const pdfTextArray = await parsePDFAsRawArray(bylawPDFURL)
 
-      bylawPDFPages.push(...pdfTextArray.map((text) => {
-        return {
-          url: bylawPDFURL,
-          text
-        }
-      }))
+      const filteredPDFTextArray = pdfTextArray
+        .filter((text) => text.length > 10)
+        .filter((text) => {
+          return ['explanation', 'rezon', 'housing agreement'].every((word) => text.toLowerCase().includes(word))
+        })
+
+      bylawPDFPages
+        .push(...filteredPDFTextArray.map((text) => {
+          return {
+            url: bylawPDFURL,
+            text
+          }
+        }))
     }
 
     // For each page, analyze rezonings, then return thee final array

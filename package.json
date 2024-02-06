@@ -40,11 +40,13 @@
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
     "pdf2pic": "^3.1.0",
+    "pdfjs-dist": "^4.0.379",
     "puppeteer": "^21.6.1",
     "similarity": "^1.2.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
+    "unpdf": "^0.10.1",
     "uuid": "^9.0.1"
   }
 }

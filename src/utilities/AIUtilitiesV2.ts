@@ -116,7 +116,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
         address: street address(es) - if multiple addresses, comma separate - do not include city = should not be null
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
-        description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, etc - do not mention legal/meeting/process details, only development details
+        description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
       }
       Document here: ${summaryItem}
     `

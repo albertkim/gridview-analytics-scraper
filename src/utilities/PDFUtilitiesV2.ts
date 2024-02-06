@@ -5,10 +5,11 @@ import chalk from 'chalk'
 import { chatGPTTextQuery, imageTextQuery } from './AIUtilities'
 import { PDFRepository } from '../repositories/PDFRepository'
 import { cleanString } from '../scraper/BulkUtilities'
-import { PDFDocument } from 'pdf-lib'
+import { extractText, getDocumentProxy, getResolvedPDFJS } from 'unpdf'
 
 interface IParsePDFOptions {
   maxPages: number // Required: 0 means parse all pages, 1 means parse only the first page, etc
+  pageIndexes?: number[] // Optional: if provided, only parse the pages at the given indexes, ignores maxPages
   expectedWords?: string[]
 }
 
@@ -96,38 +97,21 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
 
 }
 
-interface IGeneratePDFTextArrayOptions {
-  minCharacterCount?: number
-  expectedWords?: string[]
-}
-
-// Given a PDF file, return a new text array with only the pages that have selectable text, no smart functionality
-// IMPORTANT: This DOES NOT WORK with encrypted PDFs. For encrypted PDFs, use parsePDF() directly with the maxPages parameter instead
-export async function parsePDFAsRawArray(url: string, options: IGeneratePDFTextArrayOptions = {}) {
+// Given a PDF file, return a new text array for each page, only works for pages with selectable text, no smart functionality
+export async function parsePDFAsRawArray(url: string) {
 
   const pdfData = await downloadPDF(url)
 
-  const minCharacterCount = options.minCharacterCount || 5
-  const expectedWords = options.expectedWords || []
-  const pdfDoc = await PDFDocument.load(pdfData)
-  const pageCount = pdfDoc.getPageCount()
+  const pdfDocument = await getDocumentProxy(new Uint8Array(pdfData))
+  const extractedText = (await extractText(pdfDocument, {
+    mergePages: false
+  })).text
 
-  const finalPDFTextArray = []
-
-  for (let i = 0; i < pageCount; i++) {
-    // For each page, create a new single-page PDF to parse text
-    const singlePagePDF = await PDFDocument.create()
-    const [copiedPage] = await singlePagePDF.copyPages(pdfDoc, [i])
-    singlePagePDF.addPage(copiedPage)
-    const singlePagePDFBytes = await singlePagePDF.save()
-    const pageText = (await pdfParse(singlePagePDFBytes as Buffer)).text
-    const cleanedText = cleanString(pageText)
-    if (cleanedText.length > minCharacterCount && expectedWords.every(word => cleanedText.toLowerCase().includes(word.toLowerCase()))) {
-      finalPDFTextArray.push(cleanedText)
-    }
+  if (!Array.isArray(extractedText)) {
+    return []
   }
 
-  return finalPDFTextArray
+  return extractedText.map((page) => cleanString(page))
 
 }
 
@@ -139,11 +123,6 @@ export async function downloadPDF(url: string) {
   })
   // console.log(`Downloaded, file size is ${Math.round(response.data.length / 1024)} kb`)
   return response.data
-}
-
-interface IGeneratePDFTextArrayOptions {
-  minCharacterCount?: number
-  expectedWords?: string[]
 }
 
 // Given a PDF file, return an JPEG image file of the page at the given index

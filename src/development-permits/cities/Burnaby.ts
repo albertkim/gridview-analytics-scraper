@@ -17,6 +17,7 @@ interface IOptions {
 
 const RecordsRepository = new RecordsRepositoryConstructor('draft')
 
+// PDF examples: https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports
 async function scrape(options: IOptions) {
 
   const browser = await puppeteer.launch({
@@ -89,7 +90,7 @@ export async function analyze(options: IOptions) {
       const permitNumbers = Array.from(new Set(parsed.match(regex)))
 
       const response = await AIGetPartialRecords(parsed, {
-        instructions: 'Identify only the items that refer to new developments, not alterations nor demolitions. Number of units is usually a number listed right after the $ value',
+        instructions: 'The following text extracted from a PDF is messy but do your best. Identify ONLY the items that refer to new developments, not alterations nor demolitions. Number of units is usually a number listed right after the $ value',
         applicationId: 'must match BLDXX-XXXXX where X is a number',
         fieldsToAnalyze: ['building type', 'stats'],
         expectedWords: permitNumbers
