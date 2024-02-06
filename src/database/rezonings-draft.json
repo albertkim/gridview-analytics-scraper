@@ -198,7 +198,7 @@
     "updateDate": "2024-02-05T01:18:40.306Z"
   },
   {
-    "id": "rez-3uhtcljz1zhte79z4l8dw",
+    "id": "rez-rz0wgx6laxavrwn1oqmk3",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
@@ -206,7 +206,7 @@
     "address": "8955 University High Street",
     "applicant": null,
     "behalf": null,
-    "description": "The purpose of REZ #20-29 is to permit the construction of a mixed-use development with a 6-storey commercial/residential podium and a 17-storey apartment tower with underground parking, and a bus layover facility at 8955 University High Street.",
+    "description": "The new development includes a 6-storey commercial/residential podium, a 17-storey apartment tower with underground parking, and a bus layover facility.",
     "buildingType": null,
     "status": "approved",
     "dates": {
@@ -255,19 +255,19 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:26:25.080Z",
-    "updateDate": "2024-02-05T19:26:25.080Z"
+    "createDate": "2024-02-05T19:47:57.833Z",
+    "updateDate": "2024-02-05T19:47:57.833Z"
   },
   {
-    "id": "rez-fnfl5u5bd2dlpc9re5atv",
+    "id": "rez-qo4qsb0uy7iud1xo5quvr",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #21-16",
     "address": "5292 Kingsway, 5318 Kingsway",
-    "applicant": null,
+    "applicant": "Porte Communities",
     "behalf": null,
-    "description": "The rezoning application is for the construction of two six-storey mixed-use buildings at the addresses 5292 Kingsway and 5318 Kingsway. The buildings will have commercial uses at grade and a total of 85 residential units above, consisting of 75 strata units and 10 non-market rental units. Additionally, there will be underground parking and an exterior amenity area on Level 2.",
+    "description": "Mixed use development in the Royal Oak Community Plan. Current zoning is C4 Service Commercial District, proposed zoning is Comprehensive Development District based on C9 Urban Village District and Royal Oak Community Plan as guidelines.",
     "buildingType": "mixed use",
     "status": "public hearing",
     "dates": {
@@ -278,18 +278,18 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 2,
-      "stratas": 75,
-      "rentals": 10,
-      "hotels": 0,
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
       "fsr": null,
-      "storeys": 6
+      "storeys": null
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "C4",
+      "previousZoningDescription": "Service Commercial District",
+      "newZoningCode": "Comprehensive Development District",
+      "newZoningDescription": "based on C9 Urban Village District and Royal Oak Community Plan"
     },
     "reportUrls": [
       {
@@ -328,19 +328,19 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:26:36.680Z",
-    "updateDate": "2024-02-05T19:26:36.680Z"
+    "createDate": "2024-02-05T19:48:24.242Z",
+    "updateDate": "2024-02-05T19:48:24.242Z"
   },
   {
-    "id": "rez-gmy5g9woru5urf5wh3lqc",
+    "id": "rez-9hat9upbtxkfop7jvno8y",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #22-06",
-    "address": "4141 Lougheed Highway",
+    "address": "4141 LOUGHEED HIGHWAY",
     "applicant": "Adam Nour, Millennium Properties Ltd.",
     "behalf": null,
-    "description": "The purpose is to seek Council authorization to forward REZ #22-06 to a future Public Hearing. The current zoning is M1 Manufacturing District, and the proposed zoning is CD Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan as guidelines. The recommendations include preparing a Rezoning Bylaw for REZ #22-06 and advancing it to First Reading and to a Public Hearing at a future date, authorizing the introduction of a Housing Agreement Bylaw, authorizing the introduction of a Highway Closure Bylaw, approving the sale in principle of City-owned property for inclusion within the subject development site, and establishing prerequisites to the completion of the rezoning.",
+    "description": "The purpose is to seek Council authorization to forward REZ #22-06 to a future Public Hearing. The current zoning is M1 Manufacturing District, and the proposed zoning is CD Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan as guidelines.",
     "buildingType": "mixed use",
     "status": "public hearing",
     "dates": {
@@ -362,7 +362,7 @@
       "previousZoningCode": "M1",
       "previousZoningDescription": "Manufacturing District",
       "newZoningCode": "CD",
-      "newZoningDescription": "Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan as guidelines"
+      "newZoningDescription": "Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan"
     },
     "reportUrls": [
       {
@@ -419,19 +419,19 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:26:50.088Z",
-    "updateDate": "2024-02-05T19:26:50.088Z"
+    "createDate": "2024-02-05T19:48:55.995Z",
+    "updateDate": "2024-02-05T19:48:55.995Z"
   },
   {
-    "id": "rez-zaco7t9ufgzjav4p3oojz",
+    "id": "rez-9jz0ojyeiuf2x4b9fwq26",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #22-08",
     "address": "2211 Rosser Avenue, 2271 Rosser Avenue",
-    "applicant": null,
+    "applicant": "Sean O’Flynn of Amacon Construction Ltd",
     "behalf": null,
-    "description": "The proposed development includes a single high-rise residential building atop a residential and commercial podium with street-fronting commercial space and underground parking.",
+    "description": "The proposed development includes a mix of residential and commercial zoning, with guidelines from the Brentwood Town Centre Development Plan. The development plan involves multiple family residential districts, urban village commercial district, general commercial district, and industrial district. The recommendations also include the introduction of a Housing Agreement Bylaw, a Highway Closure Bylaw, and the sale of City-owned property for inclusion within the subject development site.",
     "buildingType": "mixed use",
     "status": "public hearing",
     "dates": {
@@ -442,7 +442,7 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 1,
+      "buildings": null,
       "stratas": null,
       "rentals": null,
       "hotels": 0,
@@ -450,10 +450,10 @@
       "storeys": null
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
+      "previousZoningCode": "M2 and M2r",
+      "previousZoningDescription": "General Industrial District",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development District based on RM4 Multiple Family Residential District, RM4s Multiple Family Residential District, RM4r Multiple Family Residential District, C9 Urban Village Commercial District, C3 General Commercial District, and the Brentwood Town Centre Development Plan as guidelines"
     },
     "reportUrls": [
       {
@@ -492,11 +492,11 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:26:57.232Z",
-    "updateDate": "2024-02-05T19:26:57.232Z"
+    "createDate": "2024-02-05T19:49:29.508Z",
+    "updateDate": "2024-02-05T19:49:29.508Z"
   },
   {
-    "id": "rez-0tuwqm9v5mv2xbbrdu625",
+    "id": "rez-f7v8l78rrwats1jfms9a5",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
@@ -504,7 +504,7 @@
     "address": "5166 Halifax Street",
     "applicant": null,
     "behalf": null,
-    "description": "The rezoning application is for the construction of two mid-rise residential buildings with underground parking at 5166 Halifax Street in Brentwood Town Centre.",
+    "description": "The proposal is to permit the construction of two mid-rise residential buildings with underground parking.",
     "buildingType": "multi-family residential",
     "status": "public hearing",
     "dates": {
@@ -526,7 +526,7 @@
       "previousZoningCode": null,
       "previousZoningDescription": null,
       "newZoningCode": null,
-      "newZoningDescription": "mid-rise residential"
+      "newZoningDescription": null
     },
     "reportUrls": [
       {
@@ -583,19 +583,19 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:27:07.170Z",
-    "updateDate": "2024-02-05T19:27:07.170Z"
+    "createDate": "2024-02-05T19:50:03.358Z",
+    "updateDate": "2024-02-05T19:50:03.358Z"
   },
   {
-    "id": "rez-e0bdrpipmz66c8zn4m5gr",
+    "id": "rez-v2ylyfuiu7ubsujqgelwm",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #22-36",
     "address": "Portion of 4567 Lougheed Highway",
-    "applicant": null,
+    "applicant": "Shape Properties Corp.",
     "behalf": null,
-    "description": "The rezoning application is for the construction of a high-rise commercial rental residential apartment building atop a commercial podium and underground parking. The proposed zoning is Amended CD Comprehensive Development District based on C3 General Commercial District and Brentwood Town Centre Plan.",
+    "description": "The construction of a high-rise commercial rental residential apartment building atop a commercial podium and underground parking. Current zoning is CD Comprehensive Development District, proposed zoning is Amended CD Comprehensive Development District.",
     "buildingType": "mixed use",
     "status": "public hearing",
     "dates": {
@@ -614,10 +614,10 @@
       "storeys": null
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
+      "previousZoningCode": "CD",
+      "previousZoningDescription": "Comprehensive Development District",
       "newZoningCode": "Amended CD",
-      "newZoningDescription": "Comprehensive Development District based on C3 General Commercial District and Brentwood Town Centre Plan"
+      "newZoningDescription": "Amended Comprehensive Development District"
     },
     "reportUrls": [
       {
@@ -668,19 +668,19 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:27:48.134Z",
-    "updateDate": "2024-02-05T19:27:48.134Z"
+    "createDate": "2024-02-05T19:50:39.768Z",
+    "updateDate": "2024-02-05T19:50:39.768Z"
   },
   {
-    "id": "rez-ti6ayx77eww2q7k6owl8h",
+    "id": "rez-mtebwji2lfzb80xe1ikfh",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #23-06",
-    "address": "Burnaby Lake Village",
-    "applicant": null,
+    "address": "portion of 6800 Lougheed Highway",
+    "applicant": "Sperling Limited Corporation",
     "behalf": null,
-    "description": "The rezoning application is for the construction of two mid-rise strata apartment buildings atop a commercial podium with underground parking, and a mid-rise market and below-market rental building with underground parking in accordance with Phase 1A of the Burnaby Lake Village Conceptual Master Plan. The specific numerical metrics for the buildings are not provided in the document.",
+    "description": "The proposed development includes a mix of RM5uv-a Multiple Family Residential District, RM5r Multiple Family Residential District, and C2 Community Commercial District. The plan involves the construction of multiple family residential buildings, community commercial spaces, and the implementation of the Bainbridge Urban Village Community Plan guidelines.",
     "buildingType": "mixed use",
     "status": "public hearing",
     "dates": {
@@ -691,18 +691,18 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 3,
-      "stratas": 200,
-      "rentals": 100,
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
       "hotels": 0,
       "fsr": null,
-      "storeys": 6
+      "storeys": null
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": "mixed use",
-      "newZoningDescription": "mixed use"
+      "previousZoningCode": "M2, R2",
+      "previousZoningDescription": "General Industrial and Residential District",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development District based on RM5uv-a Multiple Family Residential District, RM5r Multiple Family Residential District, C2 Community Commercial District"
     },
     "reportUrls": [
       {
@@ -747,8 +747,8 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:28:23.142Z",
-    "updateDate": "2024-02-05T19:28:23.142Z"
+    "createDate": "2024-02-05T19:51:07.551Z",
+    "updateDate": "2024-02-05T19:51:07.551Z"
   },
   {
     "id": "rez-sq6t5kjponuvy7nv056e5",
@@ -989,15 +989,15 @@
     "updateDate": "2024-02-05T01:21:20.044Z"
   },
   {
-    "id": "rez-cvlnapxjog7dyvbyypta1",
+    "id": "rez-8z32ecucmlp8vag9hgk01",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
     "applicationId": "REZ #20-17",
     "address": "A portion of 6229 Marine Drive",
-    "applicant": "Mania Hormozi",
-    "behalf": "CLT 0012 Community Society",
-    "description": "The applicant is proposing to amend the current CD Comprehensive Development District to an Amended CD Comprehensive Development District. The proposed zoning is based on the RM2 Multiple Family Residential District and RM2r Multiple Family Residential District, following the guidelines of the Edmonds Town Centre Plan and revised development guidelines provided in Appendix A of the Rezoning Bylaw. The specific metrics of the proposed development are not provided in the document.",
+    "applicant": "Mania Hormozi CLT 0012 Community Society 220-1651 Commercial Drive, Vancouver, BC, V5L 3Y3",
+    "behalf": null,
+    "description": "The purpose of the proposed rezoning bylaw amendment is to establish development guidelines for the subject site to facilitate development of non-market housing.",
     "buildingType": "multi-family residential",
     "status": "applied",
     "dates": {
@@ -1017,9 +1017,9 @@
     },
     "zoning": {
       "previousZoningCode": "CD",
-      "previousZoningDescription": "Comprehensive Development District",
+      "previousZoningDescription": "Comprehensive Development District based on RM3r Multiple Family Residential District",
       "newZoningCode": "Amended CD",
-      "newZoningDescription": "Comprehensive Development District based on RM2 and RM2r Multiple Family Residential District"
+      "newZoningDescription": "Comprehensive Development District based on RM2 and RM2r Multiple Family Residential District, Edmonds Town Centre Plan guidelines"
     },
     "reportUrls": [
       {
@@ -1052,11 +1052,11 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:28:59.526Z",
-    "updateDate": "2024-02-05T19:28:59.526Z"
+    "createDate": "2024-02-05T19:51:41.776Z",
+    "updateDate": "2024-02-05T19:51:41.776Z"
   },
   {
-    "id": "rez-hk8hwmdrih1ht76zpc23o",
+    "id": "rez-nzcfw0rvy8cp60x51cukd",
     "city": "Burnaby",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
@@ -1064,7 +1064,7 @@
     "address": "2330 Douglas Road, 2230/52/70 Springer Avenue, Ptn. Springer Avenue, Ptn. lane",
     "applicant": null,
     "behalf": null,
-    "description": "The purpose of the rezoning is to permit the construction of a mixed tenure high-rise apartment building with street-fronting live/work townhouses along Douglas Street.",
+    "description": "The new development is a mixed tenure high-rise apartment building with street-fronting live/work townhouses along Douglas Street.",
     "buildingType": null,
     "status": "approved",
     "dates": {
@@ -1113,8 +1113,8 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-05T19:29:09.097Z",
-    "updateDate": "2024-02-05T19:29:09.097Z"
+    "createDate": "2024-02-05T19:51:51.555Z",
+    "updateDate": "2024-02-05T19:51:51.555Z"
   },
   {
     "id": "rez-w6fbzuga7vns5r4mf0gp0",

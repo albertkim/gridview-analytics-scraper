@@ -7,9 +7,9 @@ import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
 export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
 
   const fullQuery = `
-  You are an expert in land use planning and development. In the provided document, identify the specific zoning or development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts.
+    You are an expert in land use planning and development. In the provided document, identify the specific zoning/development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts. Note that an item may include a rezoning and development permit and contain multiple buildings/towers, should be summarized into one. Pay attention to the headers and identifiers to know where each item starts and ends.
 
-  In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all complete street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
+    In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all complete street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
 
     ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
     
@@ -116,7 +116,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
         address: street address(es) - if multiple addresses, comma separate - do not include city = should not be null
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
-        description: a description of the rezoning and what the applicant wants to build - be specific, include numerical metrics
+        description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, etc - do not mention legal/meeting/process details, only development details
       }
       Document here: ${summaryItem}
     `
@@ -216,9 +216,9 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     }`,
     stats: `stats: {
       buildings: number | null - your best guess as to the number of new buildings being proposed - null if unclear
-      stratas: number | null - your best guess as to the total number of non-rental residential units/houses/townhouses - 0 if not mentioned - if single family, use number of buildings - null if unclear
-      rentals: number | null - total number of rental units - 0 if no rentals mentioned - null if unclear
-      hotels: number | null - total number of hotel units (not buildings) - 0 if no hotels mentioned - null if unclear
+      stratas: number | null - your best guess as to the total number of non-rental residential units/houses/townhouses - 0 if no residential units mentioned - if single family, use number of buildings - null if unclear
+      rentals: number | null - total number of rental units - 0 if no rentals mentioned
+      hotels: number | null - total number of hotel units (not buildings) - 0 if no hotels mentioned
       fsr: number | null - total floor space ratio - null if unclear
       storeys: number | null - total number of storeys - pick the tallest if multiple - null if unclear
     }`,

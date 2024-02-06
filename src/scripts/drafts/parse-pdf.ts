@@ -12,12 +12,22 @@ import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
  * Regular text-based: https://citycouncil.richmond.ca/__shared/assets/1_DP_18-824566_12700___12800_Rice_Mill_Rd_and_12280___12300_No70716.pdf
  */
 
+// Big Burnaby rezoning application PDF: https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72966
+// Vancouver Bylaw PDF (many items): https://council.vancouver.ca/20230725/documents/By-laws1to18_000.pdf
+
 (async () => {
 
-  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf'
+  const pdfUrl = 'https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72966'
 
-  const parsed = await parseCleanPDF(pdfUrl, {maxPages: 2})
+  const parsed = await parseCleanPDF(pdfUrl, {
+    maxPages: 8
+  })
 
+  console.log('Parsed')
   console.log(parsed)
+
+  const summarized = await AISummarizeDocument(parsed!, [], null)
+
+  console.log(summarized)
 
 })()

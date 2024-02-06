@@ -27,7 +27,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
       // Burnaby rezoning recommendations can be quite lengthy - in the example below, info about storeys and units are at the end of the 4th page
       // Example: https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=69830
       const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {
-        maxPages: 5
+        maxPages: 6
       })
       if (parsedPDF) parsedContents = parsedPDF
     }
