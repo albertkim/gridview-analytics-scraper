@@ -1,15 +1,14 @@
 import axios from 'axios'
-import pdfParse from 'pdf-parse'
 import pdf2img from 'pdf-img-convert'
 import chalk from 'chalk'
 import { chatGPTTextQuery, imageTextQuery } from './AIUtilities'
 import { PDFRepository } from '../repositories/PDFRepository'
 import { cleanString } from '../scraper/BulkUtilities'
-import { extractText, getDocumentProxy, getResolvedPDFJS } from 'unpdf'
+import { extractText, getDocumentProxy } from 'unpdf'
 
 interface IParsePDFOptions {
-  maxPages: number // Required: 0 means parse all pages, 1 means parse only the first page, etc
-  pageIndexes?: number[] // Optional: if provided, only parse the pages at the given indexes, ignores maxPages
+  maxPages?: number // 0 means parse all pages, 1 means parse only the first page, etc - defaults to 5 if not specified
+  pages?: number[] // Optional: if provided, only parse the pages at the given indexes, ignores maxPages
   expectedWords?: string[]
 }
 
@@ -31,19 +30,31 @@ interface IParsePDFOptions {
  */
 export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
 
-  const cached = PDFRepository.check(url, options.maxPages)
+  if (options.maxPages === undefined) {
+    options.maxPages = 5
+  }
 
-  if (cached) {
-    return cached
+  // Only return cached if specific pages are not requested
+  if (!options.pages) {
+    const cached = PDFRepository.check(url, options.maxPages)
+    if (cached) {
+      return cached
+    }
   }
 
   const pdfData = await downloadPDF(url)
 
-  const parseResult = await pdfParse(pdfData, {
-    max: options.maxPages
-  })
+  let rawPDFTextArray = await parsePDFAsRawArray(url)
 
-  let parsedPDF = cleanString(parseResult.text)
+  // Page index filter - take priority over max pages filter
+  if (options.pages) {
+    const pageIndexes = options.pages
+    rawPDFTextArray = rawPDFTextArray.filter((_, index) => pageIndexes.includes(index))
+  } else if (options.maxPages) {
+    rawPDFTextArray = rawPDFTextArray.slice(0, options.maxPages)
+  }
+
+  let parsedPDF = cleanString(rawPDFTextArray.join('\n'))
 
   // Check to see if image-based by using regex to get only letters and numbers, and making sure that the length is greater than 50 characters
   const isImageBased = !parsedPDF.match(/[a-z0-9]/i) || parsedPDF.length < 50
@@ -92,7 +103,11 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
     }
   }
 
-  PDFRepository.add(url, finalText, options.maxPages, isImageBased ? 'image' : 'text')
+  // Only cache the final text if specific pages are not requested
+  if (!options.pages) {
+    PDFRepository.add(url, finalText, options.maxPages, isImageBased ? 'image' : 'text')
+  }
+
   return finalText
 
 }

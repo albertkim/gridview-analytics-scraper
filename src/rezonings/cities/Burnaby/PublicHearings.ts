@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
-import { parseCleanPDF } from '../../../utilities/PDFUtilitiesV2'
+import { parseCleanPDF, parsePDFAsRawArray } from '../../../utilities/PDFUtilitiesV2'
 import { findApplicationIDsFromTemplate } from '../../../utilities/RegexUtilities'
 import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
 import { FullRecord } from '../../../repositories/FullRecord'
@@ -26,8 +26,19 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
     if (news.reportUrls.length > 0) {
       // Burnaby rezoning recommendations can be quite lengthy - in the example below, info about storeys and units are at the end of the 4th page
       // Example: https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=69830
-      const parsedPDF = await parseCleanPDF(news.reportUrls[0].url, {
-        maxPages: 6
+
+      const pdfUrl = news.reportUrls[0].url
+
+      const pdfTextArray = await parsePDFAsRawArray(pdfUrl)
+
+      const firstTwoPageIndex = pdfTextArray.length >= 2 ? [0, 1] : [0]
+      const executiveSummaryPageIndex = pdfTextArray.findIndex((text) => text.includes('EXECUTIVE SUMMARY')) || 0
+      const pageAfterExecutiveSummaryIndex = pdfTextArray[executiveSummaryPageIndex + 1] ? executiveSummaryPageIndex + 1 : 0
+  
+      const pdfPageIndexesToParse = [...new Set([...firstTwoPageIndex, executiveSummaryPageIndex, pageAfterExecutiveSummaryIndex])].sort()
+
+      const parsedPDF = await parseCleanPDF(pdfUrl, {
+        pages: pdfPageIndexesToParse
       })
       if (parsedPDF) parsedContents = parsedPDF
     }

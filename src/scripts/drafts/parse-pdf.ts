@@ -17,10 +17,10 @@ import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 
 (async () => {
 
-  const pdfUrl = 'https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72966'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf'
 
   const parsed = await parseCleanPDF(pdfUrl, {
-    maxPages: 8
+    pages: [0, 1, 2]
   })
 
   console.log('Parsed')
