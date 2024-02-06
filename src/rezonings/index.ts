@@ -10,7 +10,7 @@ const citiesToAnalyze: string[] = [
   // 'Vancouver',
   // 'Richmond',
   'Burnaby',
-  // 'Surrey'
+  'Surrey'
 ]
 
 async function main() {

@@ -35,7 +35,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
     const response = await AIGetPartialRecords(infoString,
       {
         applicationId: 'ID in the format of REZ #XX-XX where X is a number - format if necessary',
-        fieldsToAnalyze: ['building type', 'status'],
+        fieldsToAnalyze: ['building type', 'stats', 'status'],
         status: 'one of "approved" (if text says something like final adoption), "denied", or "withdrawn" - default to approved if unclear',
         expectedWords: [rezoningId]
       }
@@ -67,6 +67,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
             denialDate: status === 'denied' ? news.date : null,
             withdrawnDate: status === 'withdrawn' ? news.date : null
           },
+          stats: record.stats,
           reportUrls: news.reportUrls.map((urlObject) => {
             return {
               date: news.date,
