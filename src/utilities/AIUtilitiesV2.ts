@@ -9,7 +9,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
   const fullQuery = `
     You are an expert in land use planning and development. In the provided document, identify the specific zoning/development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts. Note that an item may include a rezoning and development permit and contain multiple buildings/towers, should be summarized into one. Pay attention to the headers and identifiers to know where each item starts and ends.
 
-    In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all complete street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
+    In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
 
     ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
     
@@ -17,7 +17,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     
     {
       data: {
-        title: string - identifying information about the zoning or development permit such street address and/or an ID, code
+        title: string - identifying information about the zoning or development permit - street address and/or an ID, code - look very carefully for addresses, it definitely exists in the document usually near the start
         summary: string - summary of item
       }[]
     }
@@ -113,7 +113,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       ${options?.instructions ? options.instructions : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-        address: street address(es) - if multiple addresses, comma separate - do not include city = should not be null
+        address: street address(es) - if multiple addresses, comma separate - do not include city - should not be null
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
         description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details

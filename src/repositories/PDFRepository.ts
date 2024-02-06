@@ -7,6 +7,7 @@ interface IPDFItem {
   url: string
   text: string | null // If null there was an error parsing the PDF, need to investigate
   maxPages: number // 0 if entire document
+  pages: number[] // [] if no specific pages were specified
   type: 'text' | 'image'
   createDate: string
   updateDate: string
@@ -14,43 +15,76 @@ interface IPDFItem {
 
 export const PDFRepository = {
 
-  check(url: string, maxPages?: number): string | null {
+  check(url: string, options: {maxPages?: number, pages?: number[]}): string | null {
 
     const pdfs = JSON.parse(fs.readFileSync(directory, 'utf8')) as IPDFItem[]
 
-    const existing = pdfs.find((item) => item.url === url)
+    const matchingURL = pdfs.find((item) => item.url === url)
 
-    if (existing && maxPages && (maxPages <= existing.maxPages)) {
-      return existing.text
-    } else if (existing) {
-      // If the caller expects data from a greater number of pages, return null
-      return null
-    } else {
+    if (!matchingURL) {
       return null
     }
 
+    // Check that the matching item's maxPages is less than or equal to the options.maxPages
+    if (options.maxPages) {
+      if (options.maxPages <= matchingURL.maxPages) {
+        return matchingURL.text
+      } else {
+        return null
+      }
+    }
+
+    // Check that the matching item's pages array is a subset of the options.pages array
+    if (options.pages) {
+      if (options.pages.every((page) => matchingURL.pages.includes(page))) {
+        return matchingURL.text
+      } else {
+        return null
+      }
+    }
+
+    return matchingURL.text
+
   },
 
-  add(url: string, text: string | null, maxPages: number, type: 'text' | 'image') {
+  add(url: string, text: string | null, options: {maxPages?: number, pages?: number[]}, type: 'text' | 'image') {
 
     const pdfs = JSON.parse(fs.readFileSync(directory, 'utf8')) as IPDFItem[]
 
-    const existing = pdfs.find((item) => item.url === url)
+    const matchingURL = pdfs.find((item) => item.url === url)
 
-    if (existing && maxPages > existing.maxPages) {
-      // If there is an existing URL match with lowermaxPages, update
-      existing.text = text
-      existing.maxPages = maxPages
-      existing.type = type
-      existing.updateDate = new Date().toISOString()
-      fs.writeFileSync(directory, JSON.stringify(pdfs, null, 2), 'utf8')
-    } else if (existing && maxPages <= existing.maxPages) {
-      // If there is an existing URL match with higher maxPages, do nothing
-      return
-    } else {
-      // If there is no existing URL match, add new
-      const newPDFs: IPDFItem[] = [{url: url, text: text, maxPages: maxPages, type: type, createDate: new Date().toISOString(), updateDate: new Date().toISOString()}, ...pdfs]
+    if (!matchingURL) {
+      const newPDFs: IPDFItem[] = [{
+        url: url,
+        text: text,
+        maxPages: options.maxPages || 0,
+        pages: options.pages || [],
+        type: type,
+        createDate: new Date().toISOString(),
+        updateDate: new Date().toISOString()
+      }, ...pdfs]
       fs.writeFileSync(directory, JSON.stringify(newPDFs, null, 2), 'utf8')
+      return
+    }
+
+    if (options.maxPages && options.maxPages > matchingURL.maxPages) {
+
+      // If the incoming maxPages is greater than the existing maxPages, update existing entry
+      matchingURL.text = text
+      matchingURL.maxPages = options.maxPages
+      matchingURL.type = type
+      matchingURL.updateDate = new Date().toISOString()
+      fs.writeFileSync(directory, JSON.stringify(pdfs, null, 2), 'utf8')
+
+    } else if (options.pages && options.pages.length > matchingURL.pages.length) {
+
+      // If the incoming pages array is a superset of the existing pages array, update existing entry
+      matchingURL.text = text
+      matchingURL.pages = options.pages
+      matchingURL.type = type
+      matchingURL.updateDate = new Date().toISOString()
+      fs.writeFileSync(directory, JSON.stringify(pdfs, null, 2), 'utf8')
+
     }
 
   }

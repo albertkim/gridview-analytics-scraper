@@ -34,12 +34,12 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
     options.maxPages = 5
   }
 
-  // Only return cached if specific pages are not requested
-  if (!options.pages) {
-    const cached = PDFRepository.check(url, options.maxPages)
-    if (cached) {
-      return cached
-    }
+  const cached = PDFRepository.check(url, {
+    maxPages: options.maxPages,
+    pages: options.pages
+  })
+  if (cached) {
+    return cached
   }
 
   const pdfData = await downloadPDF(url)
@@ -104,9 +104,10 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
   }
 
   // Only cache the final text if specific pages are not requested
-  if (!options.pages) {
-    PDFRepository.add(url, finalText, options.maxPages, isImageBased ? 'image' : 'text')
-  }
+  PDFRepository.add(url, finalText, {
+    maxPages: options.maxPages,
+    pages: options.pages
+  }, isImageBased ? 'image' : 'text')
 
   return finalText
 
