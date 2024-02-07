@@ -147,7 +147,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
         address: street address(es) - if multiple addresses, comma separate - do not include city - if you can't find address, try again harder, it definitely exists usually naer the start of the document
         applicant: who the applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
-        description: a detailed description of the new development in question - be be specific, include any details like addresses, applicants, buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
+        description: a detailed description of the new development in question - be be specific, include any details like address, applicants, buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
       }
 
       Document here:
@@ -283,7 +283,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
       fsr: number | null - total floor space ratio - null if unclear
       storeys: number | null - total number of storeys - pick the tallest if multiple - null if unclear
     }`,
-    status: options.status ? `status: ${options.status}` : `status: one of "applied", "public hearing", "approved", "denied", "withdrawn"`
+    status: options.status ? `status: ${options.status}` : `status: one of "applied", "public hearing", "approved", "denied", or "withdrawn"`
   }
 
   const detailsQuery = `

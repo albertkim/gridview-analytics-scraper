@@ -5,7 +5,7 @@ import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { analyze as analyzeSurrey } from './cities/Surrey'
 
 // yarn run development-permit
-const startDate = '2024-01-01'
+const startDate = '2023-01-01'
 const endDate = '2024-02-01'
 const citiesToAnalyze: string[] = [
   'Vancouver',
