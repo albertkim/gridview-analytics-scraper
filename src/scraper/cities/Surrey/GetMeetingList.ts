@@ -127,6 +127,10 @@ export async function getMeetingList(page: Page, options: IScrapingDateOptions) 
     }
   }
 
+  if (meetings.length === 0) {
+    return []
+  }
+
   // Step 4: Parse meeting minutes and combine with corporate/planning reports
 
   for (const meeting of meetings) {

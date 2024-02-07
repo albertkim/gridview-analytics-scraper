@@ -14,13 +14,13 @@ const startDate = '2024-01-01'                  // Inclusive (reads from this da
 const endDate = '2024-02-31'                    // Exclusive (reads up to just before date): YYYY-MM-DD
 const concurrency = 5                           // Max number of browser tabs to open
 const citiesToScrape: string[] = [
-  // 'BC (province)',
-  // 'Vancouver',
+  'BC (province)',
+  'Vancouver',
   'Richmond',
-  // 'Burnaby',
-  // 'Surrey'
+  'Burnaby',
+  'Surrey'
 ]
-const headless = false                  // true or false (true = no browser UI, false = browser UI, 'new' = new browser UI)
+const headless = true                   // true or false (true = no browser UI, false = browser UI, 'new' = new browser UI)
 const shouldUpdateDatabase = true       // If true, update database, otherwise just print a local file in this directory
 
 async function main() {
@@ -86,6 +86,8 @@ async function main() {
     if (shouldUpdateDatabase) RawRepository.upsertNews(data)
     else fs.writeFileSync(path.join(__dirname, 'surrey.json'), JSON.stringify(data, null, 2))
   }
+
+  process.exit(0)
 
 }
 
