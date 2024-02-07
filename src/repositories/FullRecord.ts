@@ -28,6 +28,12 @@ export interface IFullRecordParams {
   applicant?: string | null
   behalf?: string | null
   description?: string | null
+  rawSummaries?: {
+    summary: string
+    date: string
+    status: ZoningStatus
+    reportUrl: string | null
+  }[]
   buildingType?: BuildingType | null
   status: ZoningStatus
   dates?: {
@@ -81,6 +87,12 @@ export class FullRecord {
   applicant: string | null
   behalf: string | null
   description: string
+  rawSummaries: {             // Stores the raw summaries from the source, can use used for debugging and re-analysis
+    summary: string
+    date: string
+    status: ZoningStatus
+    reportUrl: string | null  // URL to the source page - optional because some summaries are scraped from the website and not a PDF
+  }[]
   buildingType: BuildingType | null
   status: ZoningStatus
   dates: {
@@ -138,6 +150,7 @@ export class FullRecord {
     this.applicant = params.applicant || null
     this.behalf = params.behalf || null
     this.description = params.description || ''
+    this.rawSummaries = params.rawSummaries || []
     this.buildingType = params.buildingType || null
     this.status = params.status
     this.dates = params.dates || {
@@ -217,6 +230,13 @@ export class FullRecord {
     this.description = mergeSimpleField(this.description, incomingRecord.description, preferred) || ''
     this.buildingType = mergeSimpleField(this.buildingType, incomingRecord.buildingType, preferred)
 
+    // Raw summaries
+    this.rawSummaries = [...new Map(
+      [...incomingRecord.rawSummaries, ...this.rawSummaries] // The order is important here, we want to prefer the incoming record
+      .map(obj => [`${obj.date}_${obj.status}`, obj]))
+      .values()
+    ].sort((a, b) => moment(b.date).diff(moment(a.date)))
+
     // Status - update based on which has the latest date
     const thisLatestDate = this.getLatestDate()
     const incomingLatestDate = incomingRecord.getLatestDate()
@@ -277,7 +297,7 @@ export class FullRecord {
 
 }
 
-// Return one of the 2 strongs provided.
+// Return one of the 2 strings provided.
 // If one string is null/empty, return the non-null strong. Otherwise, return based on priority.
 function mergeSimpleField<T extends string | number | null>(thisString: T, incomingString: T, priority: 'this' | 'incoming') {
   if (thisString === null || thisString === undefined) {
