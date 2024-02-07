@@ -93,7 +93,7 @@ export async function analyze(options: IOptions) {
       if (permitNumbers.length === 0) {
         console.log(chalk.red(`No Burnaby BLDXX-XXXXX permit number found for ${urlObject.date} - ${urlObject.title}`))
         continue
-      }ß
+      }
 
       const response = await AIGetPartialRecords(parsed, {
         instructions: 'The following text extracted from a PDF is messy but do your best. Identify ONLY the items that refer to new developments, not alterations nor demolitions. Number of units is usually a number listed right after the $ value',

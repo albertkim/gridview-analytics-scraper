@@ -8,10 +8,10 @@ import { analyze as analyzeSurrey } from './cities/Surrey'
 const startDate = '2023-01-01'
 const endDate = '2024-02-01'
 const citiesToAnalyze: string[] = [
-  'Vancouver',
+  // 'Vancouver',
   'Richmond',
-  'Burnaby',
-  'Surrey'
+  // 'Burnaby',
+  // 'Surrey'
 ]
 
 async function main() {
