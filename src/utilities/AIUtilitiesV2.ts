@@ -1,6 +1,7 @@
 import chalk from 'chalk'
 import { chatGPTJSONQuery } from './AIUtilities'
 import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
+import { IExpectedFormat, checkAndFixAIResponse } from './AIFormatChecker'
 
 // This will use GPT 3.5 (not 4 due to cost concerns) to summarize a rezoning/development permit document to the best of its ability
 // You can use this function to extract permit IDs, just include them in the expected words array - too complicated to rely on regex from original document
@@ -27,38 +28,64 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     Here is the document: ${contents}
   `
 
-  let response = await chatGPTJSONQuery(fullQuery, '3.5')
+  const fullQueryFormat: IExpectedFormat = {
+    type: 'object',
+    required: true,
+    fields: {
+      data: {
+        type: 'array',
+        required: true,
+        elementType: {
+          type: 'object',
+          required: true,
+          fields: {
+            title: {
+              type: 'string',
+              required: true
+            },
+            summary: {
+              type: 'string',
+              required: true
+            }
+          }
+        }
+      }
+    }
+  }
 
-  if (!response || response.error || !response.data) {
-    console.log(chalk.red(`Error with document`))
+  let response = await chatGPTJSONQuery(fullQuery, '3.5')
+  let valid = checkAndFixAIResponse(response, fullQueryFormat)
+  let includesExpectedWords = expectedWords.every((word) => JSON.stringify(response.data).includes(word))
+
+  let count = 1
+
+  while (count < 3 && (!valid || !includesExpectedWords)) {
+
+    console.log(chalk.yellow(`Invalid summary response, trying again`))
+    response = await chatGPTJSONQuery(fullQuery, '3.5')
+    valid = checkAndFixAIResponse(response, fullQueryFormat)
+    includesExpectedWords = expectedWords.every((word) => JSON.stringify(response.data).includes(word))
+    count++
+
+  }
+
+  if (!valid) {
+    console.log(chalk.red(`Invalid summary response, skipping`))
+    console.log(chalk.red(response))
     return []
   }
 
-  // Just stringify the data.
+  if (!includesExpectedWords) {
+    console.log(chalk.yellow(`Missing expected words in summary response, but continuing - expected ${expectedWords.join(', ')}`))
+    console.log(chalk.yellow(response))
+  }
+
   function stringifyArray(array: any[]) {
     const result: string[] = []
     for (const item of array) {
       result.push(JSON.stringify(item))
     }
     return result
-  }
-
-  // Try up to 3 times to get all the expected words anywhere in the array of strings
-  let count = 1
-
-  while (count < 3 && !expectedWords.every((word) => stringifyArray(response.data).join('\n').includes(word))) {
-
-    console.log(chalk.yellow(`Missing expected words in response, retrying. Expected: ${expectedWords.join(', ')}`))
-    console.log(response.data)
-    response = await chatGPTJSONQuery(fullQuery, '3.5')
-    count++
-
-  }
-
-  // Log an error but continue with this summary
-  if (!expectedWords.every((word) => stringifyArray(response.data).join('\n').includes(word))) {
-    console.log(chalk.red(`Still missing expected words in response, continuing. Expected: ${expectedWords.join(', ')}`))
-    console.log(response.data)
   }
 
   return stringifyArray(response.data)
@@ -113,7 +140,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       ${options?.instructions ? options.instructions : ''}
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-        address: street address(es) - if multiple addresses, comma separate - do not include city - should not be null
+        address: street address(es) - if multiple addresses, comma separate - do not include city - should not be null - if you can't find address, try again harder, it definitely exists
         applicant: who the rezoning applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
         description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
@@ -121,29 +148,46 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       Document here: ${summaryItem}
     `
 
-    let baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
-
-    // Can't check for expected words here because the query may have filtered out some words. Instead just make sure an address exists
-    if (!baseResponse || !baseResponse.address) {
-      baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
-      if (!baseResponse) {
-        // Probably doesn't meet a condition given in the custom instructions, don't need to log either
-        continue
-      }
-      if (!baseResponse.address) {
-        console.log(chalk.yellow(`No address found in response, Skipping.\nSummary: ${summaryItem}`))
-        continue
+    const baseQueryFormat: IExpectedFormat = {
+      type: 'object',
+      required: true,
+      fields: {
+        applicationId: {
+          type: 'string',
+          required: false
+        },
+        address: {
+          type: 'string',
+          required: true
+        },
+        applicant: {
+          type: 'string',
+          required: false
+        },
+        behalf: {
+          type: 'string',
+          required: false
+        },
+        description: {
+          type: 'string',
+          required: true
+        }
       }
     }
 
-    // Check and fix application ID correctness (null, "null", undefined values)
-		if (baseResponse.applicationId === 'null') {
-			baseResponse.applicationId = null
-		} else if (baseResponse.applicationId === undefined) {
-			baseResponse.applicationId = null
-		} else if (baseResponse.applicationId) {
-			baseResponse.applicationId = `${baseResponse.applicationId}`
-		}
+    let baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
+
+    const baseResponseValid = checkAndFixAIResponse(baseResponse, baseQueryFormat)
+
+    if (!baseResponseValid) {
+      console.log(chalk.yellow(`Invalid base record response, trying again.\nSummary: ${summaryItem}`))
+      baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
+      const valid2 = checkAndFixAIResponse(baseResponse, baseQueryFormat)
+      if (!valid2) {
+        console.log(chalk.red(`Invalid base record response, skipping.\nSummary: ${summaryItem}`))
+        continue
+      }
+    }
 
     const baseObject = {
       applicationId: baseResponse.applicationId as string | null,
@@ -206,6 +250,11 @@ interface IDetailsResponse {
 
 export async function AIGetRecordDetails(contents: string, options: IDetailsParams): Promise<IDetailsResponse | null> {
 
+  const shouldAnalyzeBuildingType = options.fieldsToAnalyze.includes('building type')
+  const shouldAnalyzeZoning = options.fieldsToAnalyze.includes('zoning')
+  const shouldAnalyzeStats = options.fieldsToAnalyze.includes('stats')
+  const shouldAnalyzeStatus = options.fieldsToAnalyze.includes('status')
+
   const detailedQueryReference = {
     buildingType: 'buildingType: one of "single-family residential" (including duplexes), "townhouse", "mixed use" (only if there is residential + commercial), "multi-family residential" (only if there is no commercial), "industrial" (manufacturing, utilities, etc.), "commercial", or "other"',
     zoning: `zoning: {
@@ -228,39 +277,67 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
   const detailsQuery = `
     You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format.
     {
-      ${options.fieldsToAnalyze.includes('building type') ? detailedQueryReference.buildingType : ''}
-      ${options.fieldsToAnalyze.includes('zoning') ? detailedQueryReference.zoning : ''}
-      ${options.fieldsToAnalyze.includes('stats') ? detailedQueryReference.stats : ''}
-      ${options.fieldsToAnalyze.includes('status') ? detailedQueryReference.status : ''}
+      ${shouldAnalyzeBuildingType ? detailedQueryReference.buildingType : ''}
+      ${shouldAnalyzeZoning ? detailedQueryReference.zoning : ''}
+      ${shouldAnalyzeStats ? detailedQueryReference.stats : ''}
+      ${shouldAnalyzeStatus ? detailedQueryReference.status : ''}
     }
     Description here: ${contents}
   `
 
+  const detailsQueryFormat: IExpectedFormat = {
+    type: 'object',
+    required: true,
+    fields: {
+      // Fill in conditionally based on fieldsToAnalyze below
+    }
+  }
+
+  if (shouldAnalyzeBuildingType) detailsQueryFormat.fields!.buildingType = {
+    type: 'string',
+    required: false,
+    possibleValues: ['single-family residential', 'townhouse', 'mixed use', 'multi-family residential', 'industrial', 'commercial', 'other']
+  }
+  if (shouldAnalyzeZoning) detailsQueryFormat.fields!.zoning = {
+    type: 'object',
+    required: true,
+    fields: {
+      previousZoningCode: { type: 'string', required: false },
+      previousZoningDescription: { type: 'string', required: false },
+      newZoningCode: { type: 'string', required: false },
+      newZoningDescription: { type: 'string', required: false }
+    }
+  }
+  if (shouldAnalyzeStats) detailsQueryFormat.fields!.stats = {
+    type: 'object',
+    required: true,
+    fields: {
+      buildings: { type: 'number', required: false },
+      stratas: { type: 'number', required: false },
+      rentals: { type: 'number', required: false },
+      hotels: { type: 'number', required: false },
+      fsr: { type: 'number', required: false },
+      storeys: { type: 'number', required: false }
+    }
+  }
+  if (shouldAnalyzeStatus) detailsQueryFormat.fields!.status = {
+    type: 'string',
+    required: false,
+    possibleValues: ['applied', 'public hearing', 'approved', 'denied', 'withdrawn']
+  }
+
   let detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
+  const detailsResponseValid1 = checkAndFixAIResponse(detailsResponse, detailsQueryFormat)
 
-  // IMPORTANT: Make sure to update these arrays if more building type or status options are added
-  const validBuildingTypes = ['single-family residential', 'townhouse', 'mixed use', 'multi-family residential', 'industrial', 'commercial', 'other']
-  const validStatuses = ['applied', 'public hearing', 'approved', 'denied', 'withdrawn']
-
-  if (detailsResponse.buildingType && !validBuildingTypes.includes(detailsResponse.buildingType)) {
-    console.log(chalk.yellow(`Invalid building type: ${detailsResponse.buildingType} - trying again`))
+  if (!detailsResponseValid1) {
+    console.log(chalk.yellow(`Invalid response, trying again`))
     detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
-    if (!detailsResponse || !validBuildingTypes.includes(detailsResponse.buildingType)) {
-      console.log(chalk.red(`Invalid building type: ${detailsResponse?.buildingType} - but continuing`))
+    const detailsResponseValid2 = checkAndFixAIResponse(detailsResponse, detailsQueryFormat)
+    if (!detailsResponseValid2) {
+      console.log(chalk.red(`Invalid record details response, skipping`))
+      console.log(chalk.red(detailsResponse))
+      return null
     }
-  }
-
-  if (detailsResponse.status && !validStatuses.includes(detailsResponse.status)) {
-    console.log(chalk.yellow(`Invalid status: ${detailsResponse.status} - trying again`))
-    detailsResponse = await chatGPTJSONQuery(detailsQuery, '3.5')
-    if (!detailsResponse || !validStatuses.includes(detailsResponse.status)) {
-      console.log(chalk.red(`Invalid status: ${detailsResponse?.status} - but continuing`))
-    }
-  }
-
-  if (!detailsResponse || detailsResponse.error) {
-    console.log(chalk.red(`Error with getting details response: ${detailsResponse.error}`))
-    return null
   }
 
   const detailsObject = {

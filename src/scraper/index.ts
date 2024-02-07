@@ -20,7 +20,7 @@ const citiesToScrape: string[] = [
   // 'Burnaby',
   // 'Surrey'
 ]
-const headless = 'new'                  // true, false, or 'new' (true = no browser UI, false = browser UI, 'new' = new browser UI)
+const headless = false                  // true or false (true = no browser UI, false = browser UI, 'new' = new browser UI)
 const shouldUpdateDatabase = true       // If true, update database, otherwise just print a local file in this directory
 
 async function main() {

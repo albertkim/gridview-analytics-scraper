@@ -9,7 +9,7 @@ import ts from 'typescript'
   const startUrl = 'https://citycouncil.richmond.ca/agendas/archives/dpp/2019/103019_minutes.htm'
 
   const browser = await puppeteer.launch({
-    headless: 'new'
+    headless: true
   })
 
   const page = await browser.newPage()

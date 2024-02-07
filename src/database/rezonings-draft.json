@@ -1,146 +1,49 @@
 [
   {
-    "id": "rez-cim5wz0u7jhp9v2lftd8u",
-    "city": "Burnaby",
+    "id": "rez-18bbk6k4ob14r61wjljmq",
+    "city": "Surrey",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
-    "applicationId": "REZ #20-29",
-    "address": "8955 University High Street",
-    "applicant": null,
-    "behalf": null,
-    "description": "The purpose of REZ #20-29 is to permit the construction of a mixed-use development with a 6-storey commercial/residential podium and a 17-storey apartment tower with underground parking, and a bus layover facility at 8955 University High Street.",
-    "buildingType": null,
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-12-04",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": null,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": 17
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "date": "2023-12-04",
-        "title": "14482 No. 34, 2022 ACD (FA).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72989",
-        "status": "approved"
-      },
-      {
-        "date": "2023-12-04",
-        "title": "REZ 20-29 Final Adoption Memo 2023-12-04.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72990",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-12-04",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=a5b67266-f8d2-4152-94a2-b7e20ea21333&lang=English",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T17:58:03.289Z",
-    "updateDate": "2024-02-06T18:05:31.194Z"
-  },
-  {
-    "id": "rez-y159rl4ucsdu2ii54zl81",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #22-06",
-    "address": "4141 Lougheed Highway",
-    "applicant": "Adam Nour, Millennium Properties Ltd.",
-    "behalf": null,
-    "description": "A rezoning application has been received to permit the construction of a high-density mixed-tenure residential development atop a commercial/retail podium and underground parking. The purpose of this report is to provide Council with information on the proposal and recommend forwarding the rezoning application to a future Public Hearing. The proposed development district will use RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and Brentwood Town Centre Development Plan as guidelines. The applicant submitted a development plan for two high-rise residential apartment buildings on top of a commercial/retail podium and underground parking. Vehicle access is currently through 1934 Gilmore Avenue and will also be provided from and to the east once 4199 Lougheed Highway is redeveloped. Pedestrian access is available from Lougheed Highway and the future east-west street on the site's northern portion. The development will be constructed in a single phase. It involves demolishing the existing warehouse and surface parking and constructing a 62-storey residential strata building (Building A) in the northeast corner and a 54-storey residential market and non-market rental building (Building B) in the southwest corner. Both buildings sit on a 10-storey commercial podium that includes a hotel(s) with amenities and retail units. The commercial podium can be used for offices or other employment generating uses if the hotel market softens in the future.",
-    "buildingType": "mixed use",
+    "applicationId": "7922-0221-00",
+    "address": "7790 King George Boulevard, 7850 King George Boulevard, 7890 King George Boulevard",
+    "applicant": "Crispen Development Ltd., BCG Village Ltd.",
+    "behalf": "Dawson and Sawyer Properties Ltd.",
+    "description": "The applicant is requesting to amend Official Community Plan (OCP) Figure 3: General Land Use Designations from Urban to Multiple Residential and to amend Table 7A: Land Use Designation Exceptions by permitting a floor area ratio up to 2.78 FAR for Block 1, 2.79 FAR for Block 2, 2.45 FAR for Block 3, 2.75 FAR for Block 4, 2.35 FAR for Block 5, and 2.48 FAR for Block 6. The proposal also includes rezoning Blocks 1, 2, 3, 4, 5 and 6 from Manufactured Home Residential Zone to Comprehensive Development Zone in order to permit the development of 20 apartment buildings, some with ground floor commercial space.",
+    "buildingType": "multi-family residential",
     "status": "public hearing",
     "dates": {
       "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
+      "publicHearingDate": "2023-12-04",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 2,
+      "buildings": 20,
       "stratas": null,
       "rentals": null,
-      "hotels": null,
+      "hotels": 0,
       "fsr": null,
-      "storeys": 62
+      "storeys": null
     },
     "zoning": {
-      "previousZoningCode": "M1",
-      "previousZoningDescription": "Manufacturing District",
-      "newZoningCode": "CD",
-      "newZoningDescription": "Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan"
+      "previousZoningCode": "Manufactured Home Residential Zone",
+      "previousZoningDescription": "Manufactured Home Residential",
+      "newZoningCode": "Comprehensive Development Zone",
+      "newZoningDescription": "Comprehensive Development"
     },
     "reportUrls": [
       {
-        "date": "2023-11-28",
-        "title": "REZ 22-06 4141 Lougheed Hwy PH Report 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72959",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Attachment 1 - REZ 22-06 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72960",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14620 No. 42 (CD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72961",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-06 PH Corresp Tracking No. 2 - 4_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72962",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-06 PH Corresp Tracking No. 5_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72963",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-06 PH Corresp Tracking No. 6.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72964",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-06 PH Corresp Tracking No. 7_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72965",
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0221-00 and 7922-0222-00 (7790 King George Boulevard\n7850 King George Boulevard\n(7890 King George Boulevard))",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0221-00%20and%207922-0222-00_0.pdf",
         "status": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
         "status": "public hearing"
       }
     ],
@@ -148,327 +51,54 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-06T17:59:10.481Z",
-    "updateDate": "2024-02-06T18:06:05.368Z"
+    "createDate": "2024-02-07T00:45:44.256Z",
+    "updateDate": "2024-02-07T00:45:44.257Z"
   },
   {
-    "id": "rez-wjr9cnzhqbvv7j36vgsq7",
-    "city": "Burnaby",
+    "id": "rez-18gckd0jyj59srb9uau0s",
+    "city": "Surrey",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
-    "applicationId": "REZ #22-08",
-    "address": "2211 Rosser Avenue, 2271 Rosser Avenue",
-    "applicant": null,
+    "applicationId": "7923-0065-00",
+    "address": "6568 - 129A Street",
+    "applicant": "Owners: P. Sunnerd, S. Sunnerd",
     "behalf": null,
-    "description": "Rezoning application received for the construction of a high-rise residential building with commercial space and underground parking at 2211 and 2271 Rosser Avenue. Density transfer approved for the subject site, approximately 4,333 m2 in size and currently improved with industrial units and a residential sales centre. Designated for medium to high-density development under the Brentwood Town Centre Development Plan. High-density mixed-use development will be implemented using the RM4, RM4s, RM4r, and C9 Districts as guidelines. The addition of the C3 District designation is supported by staff to allow for the development of a hotel on the site. The hotel will complement the existing and potential future commercial and residential development in the area. The C3 District designation is limited to hotel use and does not allow for additional density beyond what is necessary for the hotel. The hotel and commercial uses will be located at 2211 Rosser Avenue. The applicant has submitted a suitable plan of development that meets the standards for new developments under the 's' zoning category and can be presented at a Public Hearing.",
-    "buildingType": "mixed use",
+    "description": "The applicant is requesting to rezone the site from Single Family Residential Gross Density Zone to Single Family Residential Zone in order to develop a new single-family dwelling on an existing lot.",
+    "buildingType": "single-family residential",
     "status": "public hearing",
     "dates": {
       "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
+      "publicHearingDate": "2023-12-04",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
     "stats": {
       "buildings": 1,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 1,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": "RM4, RM4s, RM4r, C9, C3",
-      "newZoningDescription": "medium to high-density mixed-use development with hotel use"
-    },
-    "reportUrls": [
-      {
-        "date": "2023-11-28",
-        "title": "REZ 22-08 2211, 2271 Rosser Ave PH Report - 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72955",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Attachment 1 - REZ 22-08 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72956",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14617 No. 39 (CD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72957",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-08 PH Corresp Tracking No. 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72958",
-        "status": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
-        "status": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T17:59:41.161Z",
-    "updateDate": "2024-02-06T18:03:26.454Z"
-  },
-  {
-    "id": "rez-ftdcbqnizy0n1gcl0h5dz",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #22-09",
-    "address": "5166 Halifax Street",
-    "applicant": null,
-    "behalf": null,
-    "description": "Rezoning application received for the construction of two mid-rise residential buildings with underground parking at 5166 Halifax Street. The proposed development plan includes two six-storey midrise, mixed-tenure rental residential buildings with an internal courtyard, amenity spaces, and underground parking. Demolition of existing site improvements and replacement with two buildings totaling 257 rental residential dwelling units. The development provides a range of housing types including studios, one-bedroom units, and family-oriented units such as three-bedroom and den units and three-bedroom townhouses. The subject proposal exemplifies high quality urban design and architectural expression related to building's siting, massing, pedestrian orientation, and materiality.",
-    "buildingType": "multi-family residential",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 2,
-      "stratas": 0,
-      "rentals": 257,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": 6
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "date": "2023-11-28",
-        "title": "REZ 22-09 5166 Halifax Street PH Report - 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72948",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Attachment 1 - REZ 22-09 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72949",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14618 No. 40 (CD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72950",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-09 PH Corresp Tracking No. 2_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72951",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-09 PH Corresp Tracking No. 3.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72952",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-09 PH Corresp Tracking No. 4_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72953",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-09 PH Corresp Tracking No. 5.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72954",
-        "status": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
-        "status": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T18:00:00.909Z",
-    "updateDate": "2024-02-06T18:03:45.154Z"
-  },
-  {
-    "id": "rez-63mnmhsl6sb9ozce4d790",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #22-36",
-    "address": "Portion of 4567 Lougheed Highway",
-    "applicant": "Shape Properties Corp.",
-    "behalf": null,
-    "description": "A rezoning application has been received to construct a high-rise commercial rental residential apartment building in accordance with the Brentwood Site Conceptual Master Plan and associated Development Guidelines. The proposed rezoning is based on the C3 General Commercial District and Brentwood Town Centre Plan as guidelines. The applicant has submitted a development plan for a Public Hearing.",
-    "buildingType": "mixed use",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": null,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": "CD",
-      "previousZoningDescription": "Comprehensive Development District",
-      "newZoningCode": "Amended CD",
-      "newZoningDescription": "Amended Comprehensive Development District"
-    },
-    "reportUrls": [
-      {
-        "date": "2023-11-28",
-        "title": "REZ 22-36 Commercial Rental Tower VII PH Report -2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72966",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-36 PH Corresp Tracking No. 7.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72967",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Attachment 1 - REZ 22-36 - Sketch 1 and Sketch 2 .pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72968",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14619 No. 41 (ACD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72969",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-36 PH Corresp Tracking No. 2-6.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72970",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 22-36 PH Corresp Tracking No. 7 - 8.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72971",
-        "status": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
-        "status": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T18:00:35.904Z",
-    "updateDate": "2024-02-06T18:06:30.308Z"
-  },
-  {
-    "id": "rez-8oirzra5twhzypef5f8oo",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #23-06",
-    "address": "6800 Lougheed Highway, Burnaby, BC",
-    "applicant": null,
-    "behalf": null,
-    "description": "The proposal is for the construction of two mid-rise strata apartment buildings, a commercial podium, and a mid-rise market and rental building in accordance with Phase 1A of the Burnaby Lake Village Conceptual Master Plan. The subject site comprises Phase 1A of the Master Plan, including two mid-rise strata apartment buildings, a commercial podium, a mid-rise market and rental building, the Esplanade, and the Forest Walk. Two new north-south streets will be created, one south from Lougheed Highway and one north from Winston Street, connected by a new east-west street called Esplanade. The Phase 1A site is located on the south side of Lougheed Highway between Bainbridge Avenue and Sperling Avenue. The site is designated for high-density mixed-use development, utilizing the RM5uv-a Multiple Family Residential District, RM5r Multiple Family Residential District, and the C2 Community Commercial District as guidelines. The net Phase 1A site is approximately 9,564 m2 (102,946 sq. ft.) in size and is part of 6800 Lougheed Highway. The current improvement on the site is an industrial building with surface parking.",
-    "buildingType": "mixed use",
-    "status": "public hearing",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 3,
-      "stratas": 2,
+      "stratas": 1,
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 6
+      "storeys": 2
     },
     "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": "RM5uv-a, RM5r, C2",
-      "newZoningDescription": "Multiple Family Residential District, Community Commercial District"
+      "previousZoningCode": "SFR",
+      "previousZoningDescription": "Single Family Residential Gross Density Zone",
+      "newZoningCode": "SFR",
+      "newZoningDescription": "Single Family Residential Zone"
     },
     "reportUrls": [
       {
-        "date": "2023-11-28",
-        "title": "REZ 23-06 Bby Lake Village Master Plan Phase 1A PH Report - 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72972",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "REZ 23-06 Bby Lake Village Master Plan Phase 1A PH Report - Attachment 1 - Sketch 1 and Sketch 2 - 2023-10-30.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72973",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14616 No. 38 (CD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72974",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 23-06 PH Corresp Tracking No. 2_Redacted.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72975",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 23-06 PH Corresp Tracking No. 3.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72976",
+        "date": "2023-12-04",
+        "title": "Planning Report 7923-0065-00 (6568 - 129A St)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0065-00_0.pdf",
         "status": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
         "status": "public hearing"
       }
     ],
@@ -476,208 +106,62 @@
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-06T18:01:06.336Z",
-    "updateDate": "2024-02-06T18:04:19.140Z"
+    "createDate": "2024-02-07T00:45:54.863Z",
+    "updateDate": "2024-02-07T00:45:54.863Z"
   },
   {
-    "id": "rez-0a15gbbrwibvigr0s09ye",
-    "city": "Burnaby",
+    "id": "rez-efz4khjtlvgy42fk1zb61",
+    "city": "Surrey",
     "metroCity": "Metro Vancouver",
     "type": "rezoning",
-    "applicationId": "REZ #21-16",
-    "address": "5292 Kingsway, 5318 Kingsway",
-    "applicant": null,
+    "applicationId": "7921-0282-00",
+    "address": null,
+    "applicant": "Owners: L. Zhang, C. Li, Agent: Hub Engineering Inc. (Mike Kompter)",
     "behalf": null,
-    "description": "Mixed-use development with two six-storey buildings and 85 residential units.",
-    "buildingType": "mixed use",
+    "description": "The applicant is seeking to amend the Official Community Plan (OCP) Figure 3: General Land Use Designations to redesignate a portion of the site from Suburban to Urban. The proposal also includes rezoning a portion of the site from One-Acre Residential Zone to Single Family Residential Zone and from One-Acre Residential Zone to Quarter Acre Residential Zone in order to subdivide the subject site into 1 suburban and 4 urban single-family residential lots. In addition, the proposal includes a Development Variance Permit to reduce the minimum lot width from 15 metres to 13.5 metres for proposed Lot 2; to reduce the minimum north side yard setback for proposed Lot 3 from 2.4 metres to 1.8 metres to the principal building; and to reduce the minimum east front yard setback for proposed Lot 3 from 7.5 metres to 7.4 metres to the principal building.",
+    "buildingType": "single-family residential",
     "status": "public hearing",
     "dates": {
       "appliedDate": null,
-      "publicHearingDate": "2023-11-28",
+      "publicHearingDate": "2023-12-04",
       "approvalDate": null,
       "denialDate": null,
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 2,
-      "stratas": 85,
+      "buildings": 5,
+      "stratas": 5,
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 6
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "date": "2023-11-28",
-        "title": "REZ 21-16 5292 and 5318 Kingsway PH Report (2023-10-30).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72944",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Attachment 1 - REZ 21-16 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72945",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Bylaw 14612 No. 34 (CD).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72946",
-        "status": "public hearing"
-      },
-      {
-        "date": "2023-11-28",
-        "title": "Rez 21-16 PH Corresp Tracking No. 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72947",
-        "status": "public hearing"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-11-28",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
-        "status": "public hearing"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T18:05:42.691Z",
-    "updateDate": "2024-02-06T18:05:42.691Z"
-  },
-  {
-    "id": "rez-5ec30hpl56nbb1ai6v1rj",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #20-17",
-    "address": "A portion of 6229 Marine Drive",
-    "applicant": "Mania Hormozi, CLT 0012 Community Society, 220-1651 Commercial Drive, Vancouver, BC, V5L 3Y3",
-    "behalf": null,
-    "description": "The proposed rezoning bylaw amendment aims to establish development guidelines for non-market housing on the subject site, a portion of 6229 Marine Drive, which measures approximately 0.81 hectares and is located within Sub-Area 3 of the Edmonds Town Centre Plan. The current zoning is CD Comprehensive Development District, based on the RM3r Multiple Family Residential District, and the proposed zoning is Amended CD Comprehensive Development District, based on the RM2 Multiple Family Residential District and RM2r Multiple Family Residential District, the Edmonds Town Centre Plan as guidelines, and in accordance with the revised development guidelines provided in Appendix A of the Rezoning Bylaw.",
-    "buildingType": "multi-family residential",
-    "status": "applied",
-    "dates": {
-      "appliedDate": "2023-11-20",
-      "publicHearingDate": null,
-      "approvalDate": null,
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": null,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": null,
       "storeys": null
     },
     "zoning": {
-      "previousZoningCode": "CD",
-      "previousZoningDescription": "Comprehensive Development District, based on the RM3r Multiple Family Residential District",
-      "newZoningCode": "Amended CD",
-      "newZoningDescription": "Comprehensive Development District, based on the RM2 Multiple Family Residential District and RM2r Multiple Family Residential District"
+      "previousZoningCode": "One-Acre Residential Zone",
+      "previousZoningDescription": "Suburban",
+      "newZoningCode": "Single Family Residential Zone, Quarter Acre Residential Zone",
+      "newZoningDescription": "Urban"
     },
     "reportUrls": [
       {
-        "date": "2023-11-20",
-        "title": "Revised REZ 20-17 Ptn 6229 Marine Drive PH Report (2023-11-20).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72014",
-        "status": "applied"
-      },
-      {
-        "date": "2023-11-20",
-        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72015",
-        "status": "applied"
-      },
-      {
-        "date": "2023-11-20",
-        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72016",
-        "status": "applied"
+        "date": "2023-12-04",
+        "title": "Planning Report 7921-0282-00 (10187 - 173 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0282-00.pdf",
+        "status": "public hearing"
       }
     ],
     "minutesUrls": [
       {
-        "date": "2023-11-20",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
-        "status": "applied"
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "public hearing"
       }
     ],
     "location": {
       "latitude": null,
       "longitude": null
     },
-    "createDate": "2024-02-06T18:01:46.144Z",
-    "updateDate": "2024-02-06T18:07:03.573Z"
-  },
-  {
-    "id": "rez-1nt6jp1an1b5jugwlo472",
-    "city": "Burnaby",
-    "metroCity": "Metro Vancouver",
-    "type": "rezoning",
-    "applicationId": "REZ #21-22",
-    "address": "2330 Douglas Road, 2230/52/70 Springer Avenue",
-    "applicant": null,
-    "behalf": null,
-    "description": "Construction of a mixed tenure high-rise apartment building with street-fronting live/work townhouses along Douglas Street. The permit includes portions of Springer Avenue and a lane.",
-    "buildingType": null,
-    "status": "approved",
-    "dates": {
-      "appliedDate": null,
-      "publicHearingDate": null,
-      "approvalDate": "2023-11-20",
-      "denialDate": null,
-      "withdrawnDate": null
-    },
-    "stats": {
-      "buildings": 1,
-      "stratas": null,
-      "rentals": null,
-      "hotels": 0,
-      "fsr": null,
-      "storeys": null
-    },
-    "zoning": {
-      "previousZoningCode": null,
-      "previousZoningDescription": null,
-      "newZoningCode": null,
-      "newZoningDescription": null
-    },
-    "reportUrls": [
-      {
-        "date": "2023-11-20",
-        "title": "14439. No. 10, 2022 CD (FA).pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72036",
-        "status": "approved"
-      },
-      {
-        "date": "2023-11-20",
-        "title": "REZ 21-22 Final Adoption Memo 2023-11-20.pdf",
-        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72037",
-        "status": "approved"
-      }
-    ],
-    "minutesUrls": [
-      {
-        "date": "2023-11-20",
-        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
-        "status": "approved"
-      }
-    ],
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "createDate": "2024-02-06T18:01:59.209Z",
-    "updateDate": "2024-02-06T18:07:13.780Z"
+    "createDate": "2024-02-07T00:46:05.104Z",
+    "updateDate": "2024-02-07T00:46:05.104Z"
   }
 ]

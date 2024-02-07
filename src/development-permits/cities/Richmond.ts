@@ -21,7 +21,7 @@ const RecordsRepository = new RecordsRepositoryConstructor('draft')
 async function scrape(options: IOptions) {
 
   const browser = await puppeteer.launch({
-    headless: 'new'
+    headless: true
   })
 
   const page = await browser.newPage()

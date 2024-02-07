@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 import OpenAI from 'openai'
 import chalk from 'chalk'
 import { ImageAnnotatorClient } from '@google-cloud/vision'
-import { IPartialRezoningDetail, checkGPTRezoningJSON } from '../repositories/RecordsRepository'
 
 dotenv.config()
 
@@ -59,7 +58,7 @@ export async function chatGPTJSONQuery(query: string, gptVersion?: '3.5' | '4'):
 		const content = JSON.parse(response.choices[0].message.content!)
 
 		if (content.error) {
-			// console.log(chalk.yellow(JSON.stringify(content, null, 2)))
+			console.log(chalk.yellow(JSON.stringify(content, null, 2)))
 			return null
 		}
 
@@ -116,138 +115,6 @@ export async function chatGPTTextQuery(query: string, gptVersion?: '3.5' | '4'):
 		}
 		return null
 	}
-}
-
-// This function returns a partial rezoning detail object and retries if the first time doesn't work
-// Caller is expected to handle thrown errors - best practice is to add to the ErrorsRepository
-export async function chatGPTRezoningQuery(query: string, options: {analyzeType: boolean, analyzeStats: boolean}): Promise<IPartialRezoningDetail | null> {
-	try {
-
-		const content = await chatGPTJSONQuery(query)
-
-		if (!content) {
-			return null
-		}
-
-		// Check and fix application ID correctness (null, "null", undefined values)
-		if (content && content.applicationId === 'null') {
-			content.applicationId = null
-		} else if (content && content.applicationId === undefined) {
-			content.applicationId = null
-		} else if (content && content.applicationId) {
-			content.applicationId = `${content.applicationId}`
-		}
-
-		// Check and fix location correctness
-		if (content && !content.location) {
-			content.location = {
-				latitude: null,
-				longitude: null
-			}
-		}
-
-		if (!content.address) {
-			return null
-		}
-
-		// Re-try once if invalid JSON
-		if (!checkGPTRezoningJSON(content)) {
-
-			console.warn(chalk.yellow('Partial rezoning details GPT JSON is invalid, running again'))
-
-			const content = await chatGPTJSONQuery(`Carefully double-check the json format I'm requesting. ${query}`)
-
-			if (!content) {
-				return null
-			}
-
-			if (!checkGPTRezoningJSON(content)) {
-        console.error(chalk.red('Partial rezoning details GPT JSON is invalid 2nd time, returning null'))
-        console.error(chalk.red(JSON.stringify(content, null, 2)))
-				return null
-			}
-
-		}
-
-		if (content.error) {
-			console.error(chalk.red('GPT response error'))
-			console.error(content.error)
-			return null
-		}
-
-		console.log(chalk.green('GPT partial rezoning JSON is valid'))
-
-		if (options && options.analyzeType) {
-			const typeContent = await chatGPTJSONQuery(getGPTBaseRezoningTypeQuery(content.description))
-			if (typeContent && typeContent.buildingType) {
-				content.buildingType = typeContent.buildingType
-			} else {
-				console.error(chalk.red('Failed to get rezoning type'))
-			}
-		}
-
-		if (options && options.analyzeStats) {
-			const statsContent = await chatGPTJSONQuery(getGPTBaseRezoningStatsQuery(content.description), '4')
-			if (statsContent) {
-				content.stats = statsContent
-			} else {
-				console.error(chalk.red('Failed to get rezoning stats'))
-			}
-		}
-
-		return content
-
-	} catch (error: any) {
-
-		if (error.response && error.response.data) {
-			console.error(error.response.data)
-			throw error
-		} else {
-			console.error(error)
-			throw error
-		}
-
-	}
-}
-
-// Use Google Cloud Vision OCR to extract text from an image
-// Process the text data, then use ChatGPT 3.5 Turbo to get data back in JSON format
-export async function imageJSONQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {
-
-	try {
-
-		const [result] = await googleVisionClient.textDetection({
-			image: {
-				content: fileData
-			}
-		})
-
-		console.log(`Google Cloud Vision data returned`)
-
-		const detections = result.textAnnotations
-		if (!detections) {
-			return null
-		}
-
-		const textArray = detections.map(text => text.description).join(' ').replace(/\n/g, ' ').trim()
-
-		const gptResponse = await chatGPTJSONQuery(`
-			${query}
-			${textArray}
-		`, gptVersion)
-
-		return gptResponse
-
-	} catch (error: any) {
-		if (error.response && error.response.data) {
-			console.error(error.response.data)
-			throw new Error()
-		} else {
-			console.error(error)
-			throw new Error()
-		}
-	}
-
 }
 
 export async function imageTextQuery(query: string, fileData: string, gptVersion?: '3.5' | '4') {

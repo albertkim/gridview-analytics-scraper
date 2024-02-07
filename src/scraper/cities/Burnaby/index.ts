@@ -12,14 +12,14 @@ interface IOptions {
   startDate: string | null
   endDate: string | null
   concurrency: number
-  headless?: boolean | 'new'
+  headless?: boolean
   verbose?: boolean
 }
 
 export async function scrape(options: IOptions): Promise<IMeetingDetail[]> {
 
   const browser = await puppeteer.launch({
-    headless: options.headless !== undefined ? options.headless : 'new'
+    headless: options.headless
   })
 
   const page = await browser.newPage()

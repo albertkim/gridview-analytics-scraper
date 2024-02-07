@@ -4,7 +4,7 @@ import chalk from 'chalk'
 import { chatGPTTextQuery, imageTextQuery } from './AIUtilities'
 import { PDFRepository } from '../repositories/PDFRepository'
 import { cleanString } from '../scraper/BulkUtilities'
-import { extractText, getDocumentProxy } from 'unpdf'
+import { extractText, getDocumentProxy, renderPageAsImage } from 'unpdf'
 
 interface IParsePDFOptions {
   maxPages?: number // 0 means parse all pages, 1 means parse only the first page, etc - defaults to 5 if not specified
@@ -65,13 +65,23 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
     // Clear the parsed PDF because it doesn't contain any useful data
     parsedPDF = ''
 
-    for (let i = 0; i < options.maxPages; i++) {
-      const screenshot = await generateScreenshotFromPDF(pdfData, i)
-      const text = await imageTextQuery(`
-        Clean and format the following text extracted from a PDF document. Retain original information, do not summarize. Only give me the results, do not explain anything.
-        Here is the document:
-      `, screenshot)
-      parsedPDF += text
+    const imageQuery = `
+      Clean and format the following text extracted from a PDF document. Retain original information, do not summarize. Only give me the results, do not explain anything.
+      Here is the document:
+    `
+
+    if (options.pages) {
+      for (const pageIndex of options.pages) {
+        const screenshot = await generateScreenshotFromPDF(pdfData, pageIndex)
+        const text = await imageTextQuery(imageQuery, screenshot)
+        parsedPDF += text
+      }
+    } else if (options.maxPages) {
+      for (let i = 0; i < options.maxPages; i++) {
+        const screenshot = await generateScreenshotFromPDF(pdfData, i)
+        const text = await imageTextQuery(imageQuery, screenshot)
+        parsedPDF += text
+      }
     }
 
   }
@@ -120,7 +130,7 @@ export async function parsePDFAsRawArray(url: string) {
 
   const pdfDocument = await getDocumentProxy(new Uint8Array(pdfData))
   const extractedText = (await extractText(pdfDocument, {
-    mergePages: false
+    mergePages: false // must be false to get text for each page, otherwise unpdf returns a single string
   })).text
 
   if (!Array.isArray(extractedText)) {
@@ -141,16 +151,13 @@ export async function downloadPDF(url: string) {
   return response.data
 }
 
-// Given a PDF file, return an JPEG image file of the page at the given index
+// Given a PDF file, return a base64 image file of the page at the given index
 async function generateScreenshotFromPDF(pdfData: Uint8Array, pageIndex: number) {
-  const screenshot = await pdf2img.convert(pdfData, {
-    page_numbers: [pageIndex + 1],
-    base64: true
+  const result = await renderPageAsImage(new Uint8Array(pdfData), pageIndex + 1, {
+    canvas: () => import('canvas'),
   })
-  const fileSize = Math.round(screenshot[0].length / 1024)
-  console.log(`Generated. PDF screenshot file size is ${fileSize} kb`)
-
-  return screenshot[0] as string
+  const base64String = Buffer.from(result).toString('base64')
+  return base64String
 }
 
 function chunkTextWithOverlapAvoidingWordSplit(text: string, chunkSize: number, overlap: number) {

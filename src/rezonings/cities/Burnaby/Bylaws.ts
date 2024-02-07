@@ -36,7 +36,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
       {
         applicationId: 'ID in the format of REZ #XX-XX where X is a number - format if necessary',
         fieldsToAnalyze: ['building type', 'stats', 'status'],
-        status: 'one of "approved" (if text says something like final adoption), "denied", or "withdrawn" - default to approved if unclear',
+        status: 'one of "approved" (if text says something like final adoption), "denied", or "withdrawn" - default to "approved" if unclear',
         expectedWords: [rezoningId]
       }
     )

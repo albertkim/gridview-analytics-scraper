@@ -1,4 +1,6 @@
-import { downloadPDF, parsePDF } from '../../../utilities/PDFUtilities'
+import { parsePDFAsRawArray } from '../../../utilities/PDFUtilitiesV2'
+import { findApplicationIDsFromTemplate } from '../../../utilities/RegexUtilities'
+import { cleanString } from '../../BulkUtilities'
 
 export interface ISurreyMeetingItems {
   section: string
@@ -44,35 +46,28 @@ const sectionWordsToIgnore = ['adoption', 'correspondence', 'clerk', 'other busi
 // Call this on a big Surrey public hearing PDF and get partially organized data that you can parse with LLMs
 export async function parseSurreyMeetingMinutes(pdfUrl: string): Promise<ISurreyMeetingItems[]> {
 
-  let pdfData: Buffer
-  let parsed: string
+  const parsed = cleanString((await parsePDFAsRawArray(pdfUrl)).join('\n'))
 
-  try {
-    pdfData = await downloadPDF(pdfUrl)
-    parsed = await parsePDF(pdfData)
-  } catch (error) {
-    console.error(error)
-    return []
-  }
-
-  // Find all instances of RES.RXX-XXXX and read the lines
-
-  // Clean the PDF text
-
-  // Remove consecutive spaces
-  parsed = parsed.replace(/  +/g, ' ')
-
-  // Split the text by sections where the section titles are in the format of "X. TITLE" where X is a single capital letter, there may be multiple spaces after the period, and TITLE may be multiple words that are all capitalized
   const results: ISurreyMeetingItems[] = []
 
   // Split everything by new line, and find the sections
   const lines = parsed.split('\n').map((line) => line.trim())
 
-  // Find the line indexes that match the format of "X. TITLE" where X is a single capital letter, there may be multiple spaces after the period, and TITLE may be multiple words that are all capitalized and dashes
+  // Find the line indexes that match for format of X. TITLE where X is a single capital letter. The TITLE may be on the next line, but always fully capitalized, may contain dashes and symbols. Add the index of the next and not the letter prefix.
   const sectionIndexes: number[] = []
+
   lines.forEach((line, index) => {
-    if (line.match(/^[A-Z]\. +[A-Z -]+$/)) {
-      sectionIndexes.push(index)
+    const matches = line.match(/^[A-Z\s\-$]+$/)
+    if (matches) {
+      // Now make sure that the previous line is a single capital letter with a dot
+      const previousLine = lines[index - 1]
+      if (previousLine) {
+        const prefixRegex = /^\s*[A-Z]\.\s*$/
+        const prefixMatch = previousLine.match(prefixRegex)
+        if (prefixMatch) {
+          sectionIndexes.push(index)
+        }
+      }
     }
   })
 
@@ -110,30 +105,30 @@ export async function parseSurreyMeetingMinutes(pdfUrl: string): Promise<ISurrey
 
 }
 
-// Split by "RES.RXX-XXXX"
+// Split by "RES.RXX-XX"
 function splitResolutions(pdfUrl: string, sectionTitle: string, sectionContent: string): ISurreyMeetingItems[] {
 
   const results: ISurreyMeetingItems[] = []
 
-  const resolutionIdRegex = /(RES\.R[\d-]+)\s+(\w+)/
-
-  // Split by "RES.RXX-XXXX" where X is a number and make sure it's the only entry on the line
+  // Split by "RES.RXX-XX" where X is a number and make sure it's the only entry on the line
   const resLines = sectionContent.split('\n').map((line) => line.trim())
   const resIndexes: number[] = []
   resLines.forEach((line, index) => {
-    const matches = line.match(resolutionIdRegex)
-    if (matches) {
+    const resolutionIds = findApplicationIDsFromTemplate('RES.RXX-XX', line)
+    if (resolutionIds.length > 0) {
       resIndexes.push(index)
     }
   })
+
   // Get the content up to each resIndex from resLines
   resIndexes.forEach((resIndex, index) => {
     const start = index === 0 ? 0 : resIndexes[index - 1] + 1
     const resContent = resLines.slice(start, resIndex)
-    const matches = resLines[resIndex].match(resolutionIdRegex)
-    if (matches) {
-      const resolutionId = matches[1]
-      const status = matches[2]
+    const resolutionIds = findApplicationIDsFromTemplate('RES.RXX-XX', resLines[resIndex])
+    if (resolutionIds.length > 0) {
+      const resolutionId = resolutionIds[0]
+      // The resolution status is on the next line
+      const status = resLines[resIndex + 1]
       results.push({
         section: sectionTitle,
         resolutionId: resolutionId,

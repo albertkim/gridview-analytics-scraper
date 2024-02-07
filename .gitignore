@@ -28,12 +28,6 @@ google-cloud.json
 *.njsproj
 *.sln
 
-# Ignore dependencies file
-package-lock.json
-
-# Ignore yarn.lock file
-yarn.lock
-
 # Ignore environment-specific configuration files
 config/*.json
 

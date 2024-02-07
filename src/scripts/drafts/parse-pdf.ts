@@ -1,8 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import { downloadPDF, generatePDFTextArray, generateScreenshotFromPDF, parsePDF } from '../../utilities/PDFUtilities'
-import { chatGPTJSONQuery, imageJSONQuery } from '../../utilities/AIUtilities'
-import { AIGetPartialRecords, AISummarizeDocument } from '../../utilities/AIUtilitiesV2'
+import { AISummarizeDocument } from '../../utilities/AIUtilitiesV2'
 import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 
 /**
@@ -17,17 +13,13 @@ import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 
 (async () => {
 
-  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_Application_11230_WilliamsRd_PH_02222261140.pdf'
+  const pdfUrl = 'https://citycouncil.richmond.ca/__shared/assets/1_dpp_ketcheson_road69357.pdf'
 
   const parsed = await parseCleanPDF(pdfUrl, {
-    pages: [0, 1, 2]
+    pages: [0]
   })
 
   console.log('Parsed')
   console.log(parsed)
-
-  const summarized = await AISummarizeDocument(parsed!, [], null)
-
-  console.log(summarized)
 
 })()

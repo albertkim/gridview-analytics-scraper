@@ -795,5 +795,102 @@
     "date": "2023-11-28",
     "meetingType": "Public Hearing",
     "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English"
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15568/",
+    "date": "2023-12-20",
+    "meetingType": "Council Minutes",
+    "title": "BYLAWS FOR ADOPTION - BYLAWS 10520 AND 10435",
+    "resolutionId": "SP23/6-13",
+    "contents": "SP23/6-13Outcome: It was moved and seconded That the following bylaws be adopted: Public Notice Bylaw No. 10520; and Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 10435",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/archives/council/2023/122023s_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1052070970.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1043570969.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15568/",
+    "date": "2023-12-20",
+    "meetingType": "Council Minutes",
+    "title": "BYLAWS FOR ADOPTION - BYLAWS 10520 AND 10435",
+    "resolutionId": "SP23/6-13",
+    "contents": "SP23/6-13Outcome: It was moved and seconded That the following bylaws be adopted: Public Notice Bylaw No. 10520; and Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 10435",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/archives/council/2023/122023s_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1052070970.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1043570969.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15568/",
+    "date": "2023-12-20",
+    "meetingType": "Council Minutes",
+    "title": "BYLAWS FOR ADOPTION - BYLAWS 10520 AND 10435",
+    "resolutionId": "SP23/6-13",
+    "contents": "SP23/6-13Outcome: It was moved and seconded That the following bylaws be adopted: Public Notice Bylaw No. 10520; and Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 10435",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/archives/council/2023/122023s_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1052070970.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_1043570969.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15554/",
+    "date": "2023-12-18",
+    "meetingType": "Public Hearing Minutes",
+    "title": "RICHMOND ZONING BYLAW 8500, AMENDMENT BYLAW 10498 (RZ 21-945869)\n(Location:  8120 and 8140 No. 1 Road; Applicant:  Terra 8120 Number 1 Road Limited Partnership)",
+    "resolutionId": "PH23/11-1",
+    "contents": "Resolution: It was moved and seconded That Richmond Zoning Bylaw 8500, Amendment Bylaw 10498 be given second and third readings. The question on the motion was not called as in response to queries from Council, staff advised that the details of the upper level decks can be reviewed at the Development Permit stage. Discussion ensued with respect to tree retention and replacement and increase in density. The question on the motion was then called and it was CARRIED with Cllr. Wolfe opposed.See minutes for detail.",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1-_Application_by_Terra_8120_Number_1_Road70930.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15555/",
+    "date": "2023-12-18",
+    "meetingType": "Public Hearing Minutes",
+    "title": "RICHMOND ZONING BYLAW 8500, AMENDMENT BYLAW 10510 (RZ 22-010976)\n(Location:  11831/11833 Seabrook Crescent; Applicant:  Navreet Gill)",
+    "resolutionId": "PH23/11-2",
+    "contents": "Resolution: It was moved and seconded That Richmond Zoning Bylaw 8500, Amendment Bylaw 10510 be given second and third readings. The question on the motion was not called as in response to queries from Council, the applicant advised that it is not possible to build a two-bedroom secondary suite due to the floor area ratio and an easement on one side of the property. The question on the motion was then called and it was CARRIED.See minutes for detail.",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook70931.pdf"
+      }
+    ]
   }
 ]
