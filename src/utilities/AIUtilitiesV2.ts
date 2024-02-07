@@ -61,7 +61,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
   let count = 1
 
-  while (count < 3 && (!valid || !includesExpectedWords)) {
+  while (count < 2 && (!valid || !includesExpectedWords)) {
 
     console.log(chalk.yellow(`Invalid summary response, trying again`))
     response = await chatGPTJSONQuery(fullQuery, '3.5')
@@ -194,7 +194,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     let baseResponseValid = checkAndFixAIResponse(baseResponse, baseQueryFormat)
     let count = 1
 
-    while (count < 3 && !baseResponseValid) {
+    while (count < 2 && !baseResponseValid) {
       console.log(chalk.yellow(`Invalid base record response, trying again.`))
       baseResponse = await chatGPTJSONQuery(`
         This is the ${count}th time you've failed to find the address. Try again.
@@ -205,8 +205,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       count++
     }
 
-    // Sometimes GPT 3.5 really struggles to get the address. In this case, we'll try a Hail Mary strategy to find the address in the first 50 words of the document.
-    // I don't do this at the start just in case the addresss shows up later the the document, but usually the address is at the start
+    // Sometimes GPT 3.5 really struggles to get the address. In this case, we'll try a Hail Mary strategy to find the address in the first 50 words of the document. I don't do this at the start of this function just in case the addresss shows up later the the document, but usually the address is at the start
     if (!baseResponseValid) {
       console.log(chalk.yellow(`Invalid base record response, probably can't find address. Trying hail mary strategy.`))
 
