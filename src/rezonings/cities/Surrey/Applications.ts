@@ -36,7 +36,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
     const rezoningIds = findApplicationIDsFromTemplate('XXXX-XXXX-XX', news.contents)
 
     if (rezoningIds.length === 0) {
-      console.log(chalk.red(`No rezoning IDs found in ${news.title}`))
+      console.log(chalk.yellow(`No rezoning IDs found in ${news.title}`))
       return []
     }
 

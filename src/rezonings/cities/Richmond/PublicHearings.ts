@@ -29,7 +29,7 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
 
     const rezoningIds = findApplicationIDsFromTemplate('RZ XX-XXXXXX', parsedPDF)
     if (rezoningIds.length === 0) {
-      console.log(chalk.red(`No rezoning number found for Richmond public hearing - ${news.reportUrls[0].url}`))
+      console.log(chalk.yellow(`No rezoning number found for Richmond public hearing - ${news.reportUrls[0].url}`))
       return []
     }
     const rezoningId = rezoningIds[0]

@@ -1,1 +1,3822 @@
-[]
+[
+  {
+    "id": "rez-ffzxvlumi6sdbah4jatx3",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-945869",
+    "address": "8120 No. 1 Road, 8140 No. 1 Road",
+    "applicant": "Terra 8120 Number 1 Road Limited Partnership",
+    "behalf": null,
+    "description": "The proposal is to rezone 8120 and 8140 No. 1 Road from the “Single Detached (RS1/E)” zone to the “Low Density Townhouses (RTL4)” zone in order to develop nine townhouse units with vehicle access from No. 1 Road. Existing dwellings on the site will be demolished. Surrounding development includes single-family dwellings and townhouses. The redevelopment proposal is consistent with the Official Community Plan and Arterial Road Land Use Policy. Although the frontage is less than the required 50 m, staff support the application due to efforts made to acquire adjacent properties and the submission of a preliminary concept plan for future redevelopment. A Statutory Right-of-Way agreement must be registered to secure shared access to adjacent properties.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 9,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTL4",
+      "newZoningDescription": "Low Density Townhouses"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1-_Application_by_Terra_8120_Number_1_Road70930.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Terra_8120_Number_1_Road_Limited_Partnership_for_Rezoning70635.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:37:05.378Z",
+    "updateDate": "2024-02-07T01:41:47.469Z"
+  },
+  {
+    "id": "rez-ji1p1g7av5v2vbf0lvruf",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-010976",
+    "address": "11831/11833 Seabrook Crescent",
+    "applicant": "Navreet Gill",
+    "behalf": "1303287 B.C. Ltd. (Balraj Singh Sanghera and Rajbir Kaur Chatha)",
+    "description": "Rezoning of 11831/11833 Seabrook Crescent from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone in order to permit the property to be subdivided into two single-family lots, each with vehicle access from Seabrook Crescent. The subject site contains an existing un-stratified non-conforming duplex (two-unit dwelling), which will be demolished prior to subdivision. Both dwelling units are currently tenant occupied and do not contain any secondary suites. The proposed rezoning and subdivision complies with Section 2.3.7 and would result in the creation of two single-family lots being 444.9 m2 and 450.2 m2 in area. Preliminary confirmation has been received from MOTI indicating that they have no objections to the proposed redevelopment. Final approval from MOTI is required prior to final adoption of the rezoning bylaw. Registration of a flood indemnity covenant on Title is required prior to final adoption of the rezoning bylaw. A rezoning sign has been installed on the subject property.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook70931.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook_Crescent70634.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-14",
+        "url": "https://citycouncil.richmond.ca/agendas/council/111423_minutes.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:37:19.082Z",
+    "updateDate": "2024-02-07T01:41:25.993Z"
+  },
+  {
+    "id": "rez-92p0tsz2vlyq7ljkmvxjb",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-011080",
+    "address": "10511 Lassam Road",
+    "applicant": "Onyx Premier Homes Ltd.",
+    "behalf": null,
+    "description": "The proposal is to rezone 10511 Lassam Road from the 'Single Detached (RS1/E)' zone to the 'Single Detached (RS2/B)' zone in order to subdivide the property and create two single-family lots with access from Lassam Road. The proposed subdivision is provided in Attachment 2. The proposed rezoning complies with the Lot Size Policy and must meet the requirements of the Richmond Flood Plain Designation and Protection Bylaw 8204.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-27",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-18",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/3_-_Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70932.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-27",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Application_by_Gurjit_Pooni_for_Rezoning_at_10511_Lassam_Road70760.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-18",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/121823_minutes.htm",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-27",
+        "url": "https://citycouncil.richmond.ca/agendas/council/112723_minutes.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:37:29.337Z",
+    "updateDate": "2024-02-07T01:38:03.112Z"
+  },
+  {
+    "id": "rez-87srmtozupk0osmt7a1t1",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #20-29",
+    "address": "8955 University High Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "The application is for the construction of a mixed-use development at 8955 University High Street. The development will consist of a 6-storey commercial/residential podium and a 17-storey apartment tower with underground parking, as well as a bus layover facility. Final decision pending.",
+    "buildingType": null,
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 17
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "14482 No. 34, 2022 ACD (FA).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72989",
+        "status": "approved"
+      },
+      {
+        "date": "2023-12-04",
+        "title": "REZ 20-29 Final Adoption Memo 2023-12-04.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72990",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=a5b67266-f8d2-4152-94a2-b7e20ea21333&lang=English",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:42:26.064Z",
+    "updateDate": "2024-02-07T01:42:26.064Z"
+  },
+  {
+    "id": "rez-0i479cx0e1wpgq0u57iov",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0221-00",
+    "address": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "An OCP Amendment from 'Urban' to 'Multiple Residential' and to allow higher floor area ratio (FAR) within the 'Multiple Residential' designation, as well as a Rezoning from RM-M to CD and a Development Permit to permit the development of 20 apartment buildings, some with ground floor commercial space. The final decision was to introduce a Bylaw to amend the OCP and rezone the subject site, and to authorize staff to draft General Development Permit Nos. 7922-0221-00 and 7922-0222-00 generally in accordance with the attached drawings and finalized Ecosystem Development Plan and geotechnical report.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 20,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RM-M",
+      "previousZoningDescription": "Multiple Residential",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Commercial Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0221-00 and 7922-0222-00 (7790 King George Boulevard\n7850 King George Boulevard\n(7890 King George Boulevard))",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0221-00%20and%207922-0222-00_0.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0221-00 and 7922-0222-00 (7790 King George Boulevard\n7850 King George Boulevard\n(7890 King George Boulevard))",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0221-00%20and%207922-0222-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:44:34.024Z",
+    "updateDate": "2024-02-07T06:51:42.700Z"
+  },
+  {
+    "id": "rez-c0p1xhtfk0atwdlivpcht",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7923-0065-00",
+    "address": "6568 - 129A Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RH-G to RF at 6568 - 129A Street to permit the development of a new single-family dwelling on an existing lot.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 1,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RH-G",
+      "previousZoningDescription": "Single Family Residential Gross Density Zone",
+      "newZoningCode": "RF",
+      "newZoningDescription": "Single Family Residential Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7923-0065-00 (6568 - 129A St)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0065-00_0.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7923-0065-00 (6568 - 129A St)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0065-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:44:41.385Z",
+    "updateDate": "2024-02-07T06:51:00.926Z"
+  },
+  {
+    "id": "rez-hjfi6psdsv5toe32axjz3",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0282-00",
+    "address": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "OCP Amendment of a portion from 'Suburban' to 'Urban', Rezoning from RA to RQ and RF, LAP Amendment, Development Variance Permit to allow subdivision into 1 suburban and 4 urban single-family residential lots.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 5,
+      "stratas": 5,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "One-Acre Residential Zone",
+      "newZoningCode": "RF, RQ",
+      "newZoningDescription": "Single Family Residential Zone, Quarter Acre Residential Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7921-0282-00 (10187 - 173 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0282-00.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7921-0282-00 (10187 - 173 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0282-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:44:52.978Z",
+    "updateDate": "2024-02-07T06:50:52.956Z"
+  },
+  {
+    "id": "rez-q2ttnugdzccjzjp51tryr",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0352-00",
+    "address": "12538 Old Yale Road",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to RF-13 and Development Permit for Hazard Lands (Steep Slope) / Development Variance Permit to allow subdivision into 2 single family small lots. A Bylaw be introduced to rezone the subject site from 'Single Family Residential Zone (RF)' to 'Single Family Residential (13) Zone (RF-13)' and a date be set for Public Hearing. Council approve Development Variance Permit No. 7922-0352-00, varying the following, to proceed to Public Notification: (a) to reduce the minimum lot depth in the RF-13 Zone for a Type II corner lot, from 24 metres to 17 metres for proposed Lot 1; (b) to reduce the minimum front (west) yard setback for the principal building in the RF-13 Zone from 6 metres to 2.4 metres for proposed Lot 1; (c) to reduce the minimum rear (east) yard setback for the principal building in the RF-13 Zone, from 7.5 metres to 1.2 metres for proposed Lot 1; (d) to reduce the minimum side yard setback (north) on a flanking street for the principal building in the RF-13 Zone, from 2.4 metres to 2 metres to the veranda and 4 metres to the principal building face for proposed Lot 1; and (e) to increase the minimum south side yard setback from 1.2 metres to 6 metres to the garage and 7.5 metres to the remainder of the principal building face for proposed Lot 1. Council instruct staff to resolve various issues prior to final adoption, and pass a resolution to amend the South Westminster Neighbourhood Concept Plan to redesignate the subject site from 'Parks and Open Spaces' to 'Urban Residential' when the project is considered for final adoption.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "Single Family Residential Zone",
+      "newZoningCode": "RF-13",
+      "newZoningDescription": "Single Family Residential (13) Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0352-00 (12538 Old Yale Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0352-00_0.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0352-00 (12538 Old Yale Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0352-00_0.pdf",
+        "status": "approved"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0352-00 (12538 Old Yale Road)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0352-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_12_04.pdf",
+        "status": "approved"
+      },
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:45:06.834Z",
+    "updateDate": "2024-02-07T06:51:27.980Z"
+  },
+  {
+    "id": "rez-srxxeemttxp0ocy8yj155",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0307-00",
+    "address": "15316 - 88 Avenue",
+    "applicant": "1168766 B.C. Ltd.",
+    "behalf": null,
+    "description": "The permit is for the development of a 6-storey residential apartment building with a childcare centre. The OCP amendment is from 'Urban' to 'Multiple Residential' with a text amendment to allow higher density in the 'Multiple Residential' designation. The rezoning is from RF to CD. The permit includes specific requirements for engineering, urban design, landscaping, tree preservation, noise mitigation, public art, affordable housing, and zero carbon emissions.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD",
+      "newZoningDescription": "comprehensive development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0307-00 (15316 - 88 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0307-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:45:29.224Z",
+    "updateDate": "2024-02-07T06:48:22.198Z"
+  },
+  {
+    "id": "rez-xqjfxtg7cmfj4k3utnvti",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7923-0001-00",
+    "address": "Guildford",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to CD (based on RM-70). Development Permit to permit the development of a 6-storey apartment building with approximately 66 dwelling units and underground parking on a consolidated site in Guildford. A Bylaw was introduced to amend Official Community Plan (OCP) to permit a density up to 2.5 FAR.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 66,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2.5,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "Single Family Residential Zone",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7923-0001-00 (14275 – 103A Avenue\n14297 – 103A Avenue\n10365 – 143 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0001-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:45:39.115Z",
+    "updateDate": "2024-02-07T06:48:34.240Z"
+  },
+  {
+    "id": "rez-3dp6bqt2msi958ufnh8zw",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7923-0200-00",
+    "address": "Guildford",
+    "applicant": null,
+    "behalf": null,
+    "description": "An OCP Amendment from 'Commercial' to 'Multiple Residential' and NCP Amendment from 'High Rise Residential' and 'High Rise Mixed Use' to 'Low to Mid Rise Residential' is requested for the address 14723 - 104 Avenue. The rezoning from C-35 to CD (based on RM-70) and a development permit to permit the development of two, 6-storey apartment buildings with approximately 192 dwelling units and underground parking in Guildford is also requested.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 192,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "C-35",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD (based on RM-70)",
+      "newZoningDescription": "Multiple Residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7923-0200-00 (14723 – 104 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0200-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:45:52.917Z",
+    "updateDate": "2024-02-07T06:48:43.672Z"
+  },
+  {
+    "id": "rez-yw2njntg7fu1zdtd0f0mx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0320-00",
+    "address": "13357 - 62 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RA to RF and Development Variance Permit for the property located at 13357 - 62 Avenue. The proposed development includes the rezone of the subject site from 'One-Acre Residential Zone (RA)' to 'Single Family Residential Zone (RF)'. Additionally, Development Variance Permit No. 7922-0320-00 has been approved, varying the minimum lot width and minimum side yard setbacks of the RF Zone for proposed Lots 1 and 2. Prior to final adoption, various issues need to be resolved including engineering requirements, tree preservation, affordable housing strategy, and demolition of existing buildings and structures.",
+    "buildingType": "single-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "One-Acre Residential Zone",
+      "newZoningCode": "RF",
+      "newZoningDescription": "Single Family Residential Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0320-00 (13357 – 62 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0320-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:46:03.606Z",
+    "updateDate": "2024-02-07T06:48:56.593Z"
+  },
+  {
+    "id": "rez-sjuvy3mpkvfzj6vzm5p0m",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0218-00",
+    "address": "South Westminster",
+    "applicant": null,
+    "behalf": null,
+    "description": "The development permit 7922-0218-00 is for the construction of a 6-storey market rental apartment building with a child care centre located on a consolidated site in South Westminster. The permit includes rezoning from RF to CD (based on RM-70) and an OCP amendment from 'Mixed Employment' to 'Multiple Residential'. The permit also involves an OCP text amendment to permit a higher density in the Multiple Residential designation.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD (based on RM-70)",
+      "newZoningDescription": "high density residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0218-00 (12835 – 111 Avenue\n11138 – 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0218-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:46:13.144Z",
+    "updateDate": "2024-02-07T06:49:13.746Z"
+  },
+  {
+    "id": "rez-8v52j67ijgze5gi5vui0p",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0357-00",
+    "address": "portion of the site",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning a portion of the site from RM-45 to CD (based on RM-70) and Development Permit / Development Variance Permit to permit the development of an infill 5-storey residential apartment building, containing 45 dwelling units over 2 levels of underground parking, as well as 7, three-storey townhouse units, on a portion of the site.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 52,
+      "rentals": 45,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "RM-45",
+      "previousZoningDescription": "medium density residential",
+      "newZoningCode": "CD",
+      "newZoningDescription": "comprehensive development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7921-0357-00 (9952 – 149 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0357-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:46:32.967Z",
+    "updateDate": "2024-02-07T06:49:37.128Z"
+  },
+  {
+    "id": "rez-f3n47fhcgjskwca024lyg",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "20314",
+    "address": "19124 - 61A Avenue",
+    "applicant": "J. Singh",
+    "behalf": null,
+    "description": "The application is for the rezoning of the property from RA to RF in order to subdivide the site into two single family residential lots.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RF",
+      "newZoningDescription": "single family residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7919-0295-00 (19124 - 61A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0295-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:46:40.736Z",
+    "updateDate": "2024-02-07T06:38:17.400Z"
+  },
+  {
+    "id": "rez-wx9tb82er4dpvukg70sj2",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0292-00",
+    "address": "12674 - 88 Avenue",
+    "applicant": "1243153 B.C. Ltd.",
+    "behalf": null,
+    "description": "To develop a 3,500 square metre industrial building",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "Residential Agricultural",
+      "newZoningCode": "IL",
+      "newZoningDescription": "Light Industrial"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7921-0292-00 (12674 – 88 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0292-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:46:48.287Z",
+    "updateDate": "2024-02-07T06:49:55.425Z"
+  },
+  {
+    "id": "rez-u7dma9qozj75fe6ehbge8",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0306-00",
+    "address": "2507 - 128 Street",
+    "applicant": "Crescent Park Developments Inc.",
+    "behalf": null,
+    "description": "Rezoning from C-4 to C-5 to permit a Child Care Centre within an existing commercial building.",
+    "buildingType": "commercial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "C-4",
+      "previousZoningDescription": "commercial",
+      "newZoningCode": "C-5",
+      "newZoningDescription": "commercial"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0306-00 (2507 - 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0306-00_1.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:47:02.306Z",
+    "updateDate": "2024-02-07T01:47:02.306Z"
+  },
+  {
+    "id": "rez-pzudkv2yus6cuajhnn9i9",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7920-0223-00",
+    "address": "17697, 17707, 17719, 17725, 17739 - 56A Avenue",
+    "applicant": "Ekam Holdings Ltd., 1177009 B.C. Ltd.",
+    "behalf": null,
+    "description": "The application is for the rezoning of a consolidated site in Cloverdale Town Centre to permit the development of a 5-storey, 72-unit, mid-rise residential building over one level of underground parking. The development is proposed by Ekam Holdings Ltd. and 1177009 B.C. Ltd. The building will include residential units and underground parking. The rezoning details are from C-15 to CD. The estimated dollar value of the development is not mentioned in the document.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 72,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "C-15",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7920-0223-00 (17697, 17707, 17719, 17725 and\n17739 - 56A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0223-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:47:21.801Z",
+    "updateDate": "2024-02-07T06:50:30.199Z"
+  },
+  {
+    "id": "rez-mtoorrgqpswqgygxbe3fs",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7918-0111-00",
+    "address": "6081 King George Boulevard, 6095 King George Boulevard, 6111 King George Boulevard, 6121 King George Boulevard, 6131 King George Boulevard",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to CD (based on RM-70) and development permit for the development of 3 apartment buildings with a total of 198 units. The development includes specific instructions to resolve various issues prior to final adoption.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-12-04",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 3,
+      "stratas": 198,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD",
+      "newZoningDescription": "based on RM-70"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7918-0111-00 (6131 King George Boulevard\n6121 King George Boulevard\n6111 King George Boulevard\n6095 King George Boulevard\n6081 King George Boulevard)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0111-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T06:31:47.112Z",
+    "updateDate": "2024-02-07T06:49:22.980Z"
+  },
+  {
+    "id": "rez-nmp7ab0fms6uzwmntseje",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7919-0295-00",
+    "address": "19124 - 61A Avenue",
+    "applicant": "J. Singh",
+    "behalf": null,
+    "description": "The application is for a rezoning from RA to RF in order to subdivide the site into two single family residential lots. The development will result in the creation of two single-family residential lots. The rezoning details include Surrey Zoning Bylaw, 1993, No. 12000, Amendment Bylaw, 2021, No. 20314.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RF",
+      "newZoningDescription": "single family residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7919-0295-00 (19124 - 61A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7919-0295-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T06:32:10.893Z",
+    "updateDate": "2024-02-07T06:49:43.848Z"
+  },
+  {
+    "id": "rez-7pg4twz6jntttkcpn7xsf",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "2023-21014-XX",
+    "address": "2507 - 128 Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "The application is for a rezoning from C-4 to C-5 to permit a Child Care Centre within an existing commercial building located at 2507 - 128 Street. The proposed development will involve the conversion of a portion of the existing building into a child care facility. The specifics of the child care centre such as the number of children it will accommodate, the age groups it will cater to, and any outdoor play areas should be included in the proposal. The proposal should also address any parking requirements, outdoor space requirements, and any potential impact on the surrounding area. The estimated cost of the renovation and the projected timeline for completion should also be included in the application.",
+    "buildingType": "commercial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-12-04",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 0,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "C-4",
+      "previousZoningDescription": "commercial",
+      "newZoningCode": "C-5",
+      "newZoningDescription": "commercial"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-12-04",
+        "title": "Planning Report 7922-0306-00 (2507 - 128 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0306-00_1.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-12-04",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_12_04.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T06:50:11.460Z",
+    "updateDate": "2024-02-07T06:50:11.460Z"
+  },
+  {
+    "id": "rez-iru96ilfug7oeskanzh9y",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #21-16",
+    "address": "5292 Kingsway, 5318 Kingsway",
+    "applicant": null,
+    "behalf": null,
+    "description": "Mixed-use development with two six-storey buildings and 85 residential units.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 85,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 21-16 5292 and 5318 Kingsway PH Report (2023-10-30).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72944",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Attachment 1 - REZ 21-16 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72945",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14612 No. 34 (CD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72946",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 21-16 PH Corresp Tracking No. 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72947",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:42:35.629Z",
+    "updateDate": "2024-02-07T01:42:35.629Z"
+  },
+  {
+    "id": "rez-qe2cu71jblx0rb3ey05iu",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #22-06",
+    "address": "4141 Lougheed Highway",
+    "applicant": "Adam Nour, Millennium Properties Ltd.",
+    "behalf": null,
+    "description": "A rezoning application has been received to permit the construction of a high-density mixed-tenure residential development atop a commercial/retail podium and underground parking. The purpose of this report is to provide Council with information on the proposal and recommend forwarding the rezoning application to a future Public Hearing. The proposed development district will use RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and Brentwood Town Centre Development Plan as guidelines. The applicant submitted a development plan for two high-rise residential apartment buildings on top of a commercial/retail podium and underground parking. Vehicle access is currently through 1934 Gilmore Avenue and will also be provided from and to the east once 4199 Lougheed Highway is redeveloped. Pedestrian access is available from Lougheed Highway and the future east-west street on the site's northern portion. The development will be constructed in a single phase. It involves demolishing the existing warehouse and surface parking and constructing a 62-storey residential strata building (Building A) in the northeast corner and a 54-storey residential market and non-market rental building (Building B) in the southwest corner. Both buildings sit on a 10-storey commercial podium that includes a hotel(s) with amenities and retail units. The commercial podium can be used for offices or other employment generating uses if the hotel market softens in the future.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": 62
+    },
+    "zoning": {
+      "previousZoningCode": "M1",
+      "previousZoningDescription": "Manufacturing District",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Comprehensive Development District based on RM5s Multiple Family Residential District, RM5r Multiple Family Residential District, C3 General Commercial District, and the Brentwood Town Centre Development Plan"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 22-06 4141 Lougheed Hwy PH Report 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72959",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Attachment 1 - REZ 22-06 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72960",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14620 No. 42 (CD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72961",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-06 PH Corresp Tracking No. 2 - 4_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72962",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-06 PH Corresp Tracking No. 5_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72963",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-06 PH Corresp Tracking No. 6.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72964",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-06 PH Corresp Tracking No. 7_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72965",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:42:59.238Z",
+    "updateDate": "2024-02-07T01:42:59.238Z"
+  },
+  {
+    "id": "rez-use8u0fhqf07bis47bzsp",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #22-08-2211",
+    "address": "2211 and 2271 Rosser Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Construction of a high-rise residential building with commercial space and underground parking. Site is approximately 4,333 m2 in size and currently improved with industrial units and a residential sales centre. Proposed development is consistent with the Brentwood Town Centre Development Plan and will implement high-density mixed-use development using the RM4, RM4s, RM4r, and C9 Districts as guidelines. Addition of the C3 District designation is supported to allow for the development of a hotel on the site. Hotel and commercial uses will be located at 2211 Rosser Avenue. Applicant has submitted a suitable plan of development that meets the standards for new developments under the 's' zoning category.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": null,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": "RM4, RM4s, RM4r, C9, C3",
+      "newZoningDescription": "high-density mixed-use development with residential and commercial, including hotel"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 22-08 2211, 2271 Rosser Ave PH Report - 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72955",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Attachment 1 - REZ 22-08 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72956",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14617 No. 39 (CD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72957",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-08 PH Corresp Tracking No. 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72958",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:43:13.546Z",
+    "updateDate": "2024-02-07T01:43:13.546Z"
+  },
+  {
+    "id": "rez-eogwwkgszyoyzhxly47mj",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #22-09",
+    "address": "5166 Halifax Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning application received for the construction of two mid-rise residential buildings with underground parking. The proposed development plan includes two six-storey midrise, mixed-tenure rental residential buildings with an internal courtyard, amenity spaces, and underground parking. The demolition of existing site improvements and replacement with two buildings totaling 257 rental residential dwelling units is proposed. The development offers a range of housing types including studios, one-bedroom units, and family-oriented units such as three-bedroom and den units and three-bedroom townhouses. The subject proposal exemplifies high quality urban design and architectural expression related to building's siting, massing, pedestrian orientation, and materiality.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 257,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 22-09 5166 Halifax Street PH Report - 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72948",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Attachment 1 - REZ 22-09 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72949",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14618 No. 40 (CD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72950",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-09 PH Corresp Tracking No. 2_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72951",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-09 PH Corresp Tracking No. 3.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72952",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-09 PH Corresp Tracking No. 4_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72953",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-09 PH Corresp Tracking No. 5.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72954",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:43:24.376Z",
+    "updateDate": "2024-02-07T01:43:24.376Z"
+  },
+  {
+    "id": "rez-f6xhmw7hw2ddbth8oaaez",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #22-36",
+    "address": "Portion of 4567 Lougheed Highway",
+    "applicant": "Shape Properties Corp.",
+    "behalf": null,
+    "description": "A rezoning application has been received to construct a high-rise commercial rental residential apartment building in accordance with the Brentwood Site Conceptual Master Plan and associated Development Guidelines. The proposed zoning is based on the C3 General Commercial District and Brentwood Town Centre Plan as guidelines. The applicant has submitted a development plan for a Public Hearing.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "CD",
+      "previousZoningDescription": "Comprehensive Development District",
+      "newZoningCode": "Amended CD",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 22-36 Commercial Rental Tower VII PH Report -2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72966",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-36 PH Corresp Tracking No. 7.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72967",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Attachment 1 - REZ 22-36 - Sketch 1 and Sketch 2 .pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72968",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14619 No. 41 (ACD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72969",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-36 PH Corresp Tracking No. 2-6.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72970",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 22-36 PH Corresp Tracking No. 7 - 8.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72971",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:43:39.377Z",
+    "updateDate": "2024-02-07T01:43:39.377Z"
+  },
+  {
+    "id": "rez-9xlt4linx8zmv2pdk4s6z",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #23-06",
+    "address": "6800 Lougheed Highway, Burnaby Lake Village",
+    "applicant": null,
+    "behalf": null,
+    "description": "The proposal is for the construction of two mid-rise strata apartment buildings, a commercial podium, and a mid-rise market and rental building in accordance with Phase 1A of the Burnaby Lake Village Conceptual Master Plan. The subject site comprises Phase 1A of the Master Plan, including two mid-rise strata apartment buildings, a commercial podium, a mid-rise market and rental building, the Esplanade, and the Forest Walk. Two new north-south streets will be created, one south from Lougheed Highway and one north from Winston Street, connected by a new east-west street called Esplanade. The Phase 1A site is located on the south side of Lougheed Highway between Bainbridge Avenue and Sperling Avenue. The site is designated for high-density mixed-use development, utilizing the RM5uv-a Multiple Family Residential District, RM5r Multiple Family Residential District, and the C2 Community Commercial District as guidelines. The net Phase 1A site is approximately 9,564 m2 (102,946 sq. ft.) in size and is part of 6800 Lougheed Highway. The current improvement on the site is an industrial building with surface parking.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-28",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 4,
+      "stratas": 0,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "RM5uv-a, RM5r, C2",
+      "previousZoningDescription": "Multiple Family Residential and Community Commercial",
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-28",
+        "title": "REZ 23-06 Bby Lake Village Master Plan Phase 1A PH Report - 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72972",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "REZ 23-06 Bby Lake Village Master Plan Phase 1A PH Report - Attachment 1 - Sketch 1 and Sketch 2 - 2023-10-30.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72973",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Bylaw 14616 No. 38 (CD).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72974",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 23-06 PH Corresp Tracking No. 2_Redacted.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72975",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-28",
+        "title": "Rez 23-06 PH Corresp Tracking No. 3.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72976",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-28",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=47459237-e513-425e-a5d8-70443b46202f&lang=English",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:43:51.042Z",
+    "updateDate": "2024-02-07T01:43:51.042Z"
+  },
+  {
+    "id": "rez-m1rcb1fy0088wc3q9j2jl",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-943417",
+    "address": "7300 St. Albans Road",
+    "applicant": "Matthew Cheng",
+    "behalf": null,
+    "description": "The proposal is for the development of four townhouse units with one secondary suite. The subject site contains an unoccupied single-family dwelling. The surrounding developments include a church to the North, a townhouse complex to the South, another townhouse complex to the East, and a three-storey apartment to the West. The proposed development is consistent with the Official Community Plan and the St. Albans Sub-Area Plan. A legal agreement on Title is required, ensuring that future owners are aware of potential impacts due to other developments. The proposed redevelopment must meet the requirements of the Richmond Flood Plain Designation and Protection Bylaw 8204.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 4,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RTH1",
+      "newZoningDescription": "High Density Townhouses"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_Matthew_Cheng_-_7300_St70719.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:38:57.889Z",
+    "updateDate": "2024-02-07T01:38:57.889Z"
+  },
+  {
+    "id": "rez-4gnbd8tf5jaog3tyxbftr",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ22-026766",
+    "address": "3300 Granville Avenue",
+    "applicant": "Hari Singh Gill",
+    "behalf": null,
+    "description": "The applicant is proposing to rezone the subject site at 3300 Granville Avenue and subdivide it into two single-family lots, each with a one bedroom secondary suite. The proposed rezoning is from the “Single Detached (RS1/E)” zone to the “Single Detached (RS2/B)” zone. This development proposal is consistent with the redevelopment along this block of Granville Avenue, including the adjacent properties.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/E",
+      "previousZoningDescription": "Single Detached",
+      "newZoningCode": "RS2/B",
+      "newZoningDescription": "Single Detached"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_2_-_Application_-_Hari_Singh_Gill_for_Rezoning_at_3300_Granville_Ave70720.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:39:38.332Z",
+    "updateDate": "2024-02-07T01:39:38.332Z"
+  },
+  {
+    "id": "rez-m8bc0oeb6dvx9de2089tv",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 21-939470",
+    "address": "5471 Steveston Highway, 5491 Steveston Highway, 5493 Steveston Highway, 5531 Steveston Highway, 5551 Steveston Highway, 5571 Steveston Highway, 5591 Steveston Highway, 5595 Steveston Highway, 5611 Steveston Highway, 5613 Steveston Highway",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": null,
+    "description": "The proposed development is for 30 townhouse units with seven secondary suites and a right-in/right-out vehicle access from Steveston Highway. The site layout includes 12 two-storey units and 18 three-storey units in ten townhouse clusters. The proposal also complies with the Arterial Road Land Use Policy and the Floodplain Management Implementation Strategy.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 30,
+      "rentals": 7,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": "RS1/B, RS1/E, RD1",
+      "previousZoningDescription": "Single Detached, Two-Unit Dwellings",
+      "newZoningCode": "RTM2",
+      "newZoningDescription": "Medium Density Townhouses"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Application_-_Interface_Architecture_Inc70721.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_3_-_Memorandum_-_Vehicle_Access_at_Steveston_Hwy70722.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Schedule_1_-_Letter_from_J_Nickerson70725.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Schedule_2_-_Letter_from_Frank_Pronk70726.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:40:19.970Z",
+    "updateDate": "2024-02-07T01:40:19.970Z"
+  },
+  {
+    "id": "rez-4ugjwrk7n8sijohgfivs2",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "RZ 22-011063",
+    "address": "10840 Bonavista Gate, 10860 Bonavista Gate",
+    "applicant": "Pati Yik of Kennon Construction",
+    "behalf": "Thomas Mau Shing Ng, Ling Y Ha and Shui Ting Chua",
+    "description": "The rezoning application is to rezone 10840 and 10860 Bonavista Gate from the “Two-Unit Dwellings (RD1)” zone to the “Single Detached (RS2/C)” zone in order to subdivide the existing duplex lot into two single-family lots, each with vehicle access from Bonavista Gate. The proposal includes the subdivision of the site into two single-family lots, each with a secondary suite and vehicle access from Bonavista Gate. The development plan also includes modification of the building envelope to retain trees on site, removal of existing driveways and construction of new driveways, and provision of two parking spaces for each dwelling unit in the garage.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RD1",
+      "previousZoningDescription": "Two-Unit Dwellings",
+      "newZoningCode": "RS2/C",
+      "newZoningDescription": "Single Detached"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_4-_Application_-_10840_10860_Bonavista_Gate70723.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://citycouncil.richmond.ca/agendas/hearings/112023_minutes.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:40:52.938Z",
+    "updateDate": "2024-02-07T01:40:52.938Z"
+  },
+  {
+    "id": "rez-3fnwe140hjcr4zjlglym2",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #20-17",
+    "address": "A portion of 6229 Marine Drive",
+    "applicant": "Mania Hormozi, CLT 0012 Community Society, 220-1651 Commercial Drive, Vancouver, BC, V5L 3Y3",
+    "behalf": null,
+    "description": "Proposed rezoning bylaw amendment aims to establish development guidelines for non-market housing on the subject site. Subject site measures approximately 0.81 hectares and is located within Sub-Area 3 of the Edmonds Town Centre Plan. Subject site, together with a larger site to the southwest, forms the 'Bevan Lands' development site. Council advanced a program in 2019 for non-market housing development on City-owned sites, including the subject site (REZ# 19-59). Public Hearing report for the subject site (REZ# 20-17) submitted in 2020 outlined detailed development for non-market co-operative buildings. CLT was not successful in obtaining BC Housing's Community Housing Fund at that time. BC Housing announced funding for the subject site in 2023. Council referred a report back to staff to explore opportunities for additional density and non-market housing units on the subject site. Revised report provides updated CD Guidelines to facilitate potential for additional units on the subject site. City staff are exploring the option of adding additional units to the proposed development in coordination with BC Housing and CLT. Finalized density and request for City housing grant will be subject of future Council report.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "CD",
+      "previousZoningDescription": "Comprehensive Development District",
+      "newZoningCode": "Amended CD",
+      "newZoningDescription": "Comprehensive Development District based on RM2 and RM2r Multiple Family Residential District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Revised REZ 20-17 Ptn 6229 Marine Drive PH Report (2023-11-20).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72014",
+        "status": "applied"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Attachment 1 - REZ 20-17 - Sketch 1 and 2.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72015",
+        "status": "applied"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "Attachment 2 - REZ 20-17 - Appendix A - Development Guidelines.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72016",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:44:14.141Z",
+    "updateDate": "2024-02-07T01:44:14.141Z"
+  },
+  {
+    "id": "rez-k0htgu63nc46h7qm0gq9w",
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "REZ #21-22",
+    "address": "2330 Douglas Road, 2230/52/70 Springer Avenue, Ptn. Springer Avenue, Ptn. lane",
+    "applicant": null,
+    "behalf": null,
+    "description": "The new development in question is the construction of a mixed tenure high-rise apartment building with street-fronting live/work townhouses along Douglas Street.",
+    "buildingType": null,
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-11-20",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "14439. No. 10, 2022 CD (FA).pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72036",
+        "status": "approved"
+      },
+      {
+        "date": "2023-11-20",
+        "title": "REZ 21-22 Final Adoption Memo 2023-11-20.pdf",
+        "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=72037",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=d2a93368-043a-48c6-8fa6-dc0cbf0b10ea&lang=English",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:44:22.935Z",
+    "updateDate": "2024-02-07T01:44:22.935Z"
+  },
+  {
+    "id": "rez-wd7wvftil3y0unv0582sa",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "21090-7922-0351-00",
+    "address": "18536 - 64 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to RF-13 for 18536 - 64 Avenue to allow subdivision into 3 small residential lots. The development will involve the demolition of existing buildings and structures. Council has instructed staff to resolve various issues prior to final adoption, including engineering requirements, subdivision layout, tree preservation, tree replacement, and Affordable Housing Strategy.",
+    "buildingType": "single-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 3,
+      "stratas": 3,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RF-13",
+      "newZoningDescription": "residential with minimum lot size of 13,000 sq.ft."
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0351-00 (18536 - 64 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0351-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:47:31.419Z",
+    "updateDate": "2024-02-07T06:39:16.991Z"
+  },
+  {
+    "id": "rez-bzgca11uprj16f9i2eyud",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0332-00",
+    "address": "12252 - 97 Avenue",
+    "applicant": "M. Islam",
+    "behalf": "CitiWest Consulting Ltd. (Roger Jawanda)",
+    "description": "Rezoning a portion of the site from RF to RF-10 at 12252 - 97 Avenue, owned by M. Islam and represented by CitiWest Consulting Ltd. (Roger Jawanda). The development variance permit is to allow subdivision into 3 single-family residential lots. The council endorsed the public notification to proceed for Bylaw No. 21094 to rezone the portion of the subject site and approved Development Variance Permit No. 7921-0332-00, varying several aspects related to lot depth, driveway location, and garage attachment. Staff was instructed to resolve various issues prior to final adoption, including engineering requirements, tree preservation, park facilities, building removal, and addressing the city's needs with respect to the Affordable Housing Strategy.",
+    "buildingType": "single-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 3,
+      "stratas": 3,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RF-10",
+      "newZoningDescription": "medium density residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7921-0332-00 (12252 - 97 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0332-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:48:00.854Z",
+    "updateDate": "2024-02-07T06:51:11.255Z"
+  },
+  {
+    "id": "rez-c528agok2lfvsa9oe49gm",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0259-00",
+    "address": "14744, 14754, 14764 and portion of 14774 - 106 Avenue",
+    "applicant": "DS 106 Developments Ltd.",
+    "behalf": null,
+    "description": "To amend OCP Figure 3: General Land Use Designations to redesignate a portion of the subject site 14744, 14754, 14764 and portion of 14774 - 106 Avenue from 'Urban' to 'Multiple Residential', and to amend Table 7A: Land Use Designation Exceptions by adding site-specific permission to allow density up to 2.38 FAR. Council direction received July 11, 2022. It was Moved by Councillor Kooner, Seconded by Councillor Stutt, That Council amend the Guildford Plan to redesignate a portion of the site from 'Townhouse' and 'Low Rise Transition Residential' to 'Low to Mid Rise Residential'.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-11-20",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": 2.38,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "Urban",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "Multiple Residential",
+      "newZoningDescription": "allow density up to 2.38 FAR"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7921-0259-00 (14774 - 106 Avenue\n14764 - 106 Avenue\n14754 - 106 Avenue\n14744 - 106 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0259-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:48:30.391Z",
+    "updateDate": "2024-02-07T06:51:57.172Z"
+  },
+  {
+    "id": "rez-6m6i9hq0nlz4d8cwb99lx",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0307-00",
+    "address": "12068 and 12076 - 90 Avenue",
+    "applicant": "1322699 B.C. Ltd.",
+    "behalf": null,
+    "description": "The rezoning application is for the development of a 1,867 square metre multi-tenant industrial building.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-11-20",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RA",
+      "previousZoningDescription": "Residential Agricultural",
+      "newZoningCode": "IL",
+      "newZoningDescription": "Light Industrial"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7921-0307-00 (12068 - 90 Avenue\n12076 - 90 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0307-00.pdf",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:48:38.598Z",
+    "updateDate": "2024-02-07T06:52:14.508Z"
+  },
+  {
+    "id": "rez-mz2jd2rf1bhpmjj6uplod",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7920-0159-01",
+    "address": "16620, 16648, 16674 - 20 Avenue",
+    "applicant": "1242842 B.C. Ltd.",
+    "behalf": null,
+    "description": "The applicant, 1242842 B.C. Ltd., is requesting to rezone a portion of the site at 16620, 16648, and 16674 - 20 Avenue from One-Acre Residential Zone to Multiple Residential 30 Zone to allow for the development of 62 townhouse units. Additionally, there is a Development Variance Permit to reduce minimum setbacks for several buildings.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 62,
+      "stratas": 62,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "One-Acre Residential Zone",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "Multiple Residential 30 Zone",
+      "newZoningDescription": "medium density residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7920-0159-00, 7920-0159-01, and 7920-0159-02 (16674 - 20 Avenue\n16648 - 20 Avenue\n16620 - 20 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7920-0159-00_0.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:48:48.361Z",
+    "updateDate": "2024-02-07T06:52:25.351Z"
+  },
+  {
+    "id": "rez-q7z6rb5jhy0g6kee9xr9u",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7918-0221-00",
+    "address": "Alder Place",
+    "applicant": "Owners: B. Johal, Mortise Titleco (Alder Place) Ltd., 670805 B.C. Ltd.",
+    "behalf": "Mortise Construction Ltd. (Baljit Johal)",
+    "description": "The applicant is requesting to rezone the site from Single Family Residential Zone to Comprehensive Development Zone in order to amend the original application to remove the rental housing component and build market condominiums on the site.",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "Single Family Residential Zone",
+      "previousZoningDescription": "Single Family Residential",
+      "newZoningCode": "Comprehensive Development Zone",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7918-0221-00 (15961 - 16 Avenue\n15975 - 16 Avenue\n1609 - 160 Street\n1627 - 160 Street\nSeptember 11, 2023)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7918-0221-00_0.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:48:55.311Z",
+    "updateDate": "2024-02-07T06:52:38.929Z"
+  },
+  {
+    "id": "rez-533zcyyt8xqkdfnjq7gio",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7923-0081-00",
+    "address": "3450 and 3498 - 194 Street, 3452 - 194 Street",
+    "applicant": "Hpoint Holdings Ltd. and Kevinco Holdings Ltd.",
+    "behalf": null,
+    "description": "The rezoning request is to change the addresses from General Agriculture Zone to Business Park 1 Zone in order to develop a 9,226 square metres multi-tenant industrial building. The proposal also includes a Development Variance Permit to reduce the minimum rear yard (north) setback from 7.5 metres to 0 metres to the principal building face.",
+    "buildingType": "industrial",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 9226,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "General Agriculture",
+      "previousZoningDescription": "General Agriculture Zone",
+      "newZoningCode": "Business Park 1",
+      "newZoningDescription": "Business Park 1 Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7923-0081-00 (3450 - 194 Street (3452 - 194 Street)\n3498 - 194 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7923-0081-00.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:49:33.673Z",
+    "updateDate": "2024-02-07T06:52:57.629Z"
+  },
+  {
+    "id": "rez-dw3v8vebsm0hzavcvnhkq",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0053-00",
+    "address": "Cloverdale Town Centre",
+    "applicant": "A. Patel, G. Rai, S. Gakhal",
+    "behalf": null,
+    "description": "The applicant is requesting to rezone the subject site from Single Family Residential Zone to Multiple Residential 30 Zone in order to permit the development of 11 townhouse units in Cloverdale Town Centre. In addition, the proposal includes a Development Variance Permit to reduce various minimum yard setbacks and indoor amenity space requirements, permit parking within the required east side yard setback for two visitor parking spaces, and locate the outdoor amenity space within the required east side yard setback.",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 11,
+      "stratas": 11,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "Single Family Residential Zone",
+      "previousZoningDescription": "single-family residential",
+      "newZoningCode": "Multiple Residential 30 Zone",
+      "newZoningDescription": "multiple residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0053-00 (17424 - 58 Avenue\n17434 - 58 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0053-00_1.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:49:41.261Z",
+    "updateDate": "2024-02-07T06:53:10.337Z"
+  },
+  {
+    "id": "rez-f5kbrfh17c7hzocm44y1k",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0183-00",
+    "address": "6075 - 144 Street",
+    "applicant": "1364301 B.C. Ltd.",
+    "behalf": null,
+    "description": "The applicant, 1364301 B.C. Ltd., is requesting to rezone the site from One-Acre Residential Zone to Multiple Residential 30 Zone in order to develop 29 townhouse units at 6075 - 144 Street. The proposal also includes a Development Variance Permit to reduce the minimum side yard on flanking lane setback (north) from 4.5 metres to 4.2 metres to the principal building face for Unit 29 (Building 9); and to reduce the minimum side yard setback (south) from 6.0 metres to 3.1 metres to the principal building face for Units 14, 15, 23 and 24 (Buildings 4, 5, 7 and 8).",
+    "buildingType": "townhouse",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 9,
+      "stratas": 29,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "One-Acre Residential Zone",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "Multiple Residential 30 Zone",
+      "newZoningDescription": "multiple residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0183-00 (6075 - 144 Street)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0183-00.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:49:55.201Z",
+    "updateDate": "2024-02-07T06:53:26.206Z"
+  },
+  {
+    "id": "rez-wqkv4ad1nkrckg6nf4kqz",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7921-0230-00",
+    "address": "150th Street",
+    "applicant": "150th Street Holdings Ltd.",
+    "behalf": null,
+    "description": "The proposal includes rezoning the site from Single Family Residential Zone to Comprehensive Development Zone in order to develop a 6-storey apartment building with approximately 102 dwelling units and underground parking on a consolidated site in Guildford.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-20",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 102,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2.5,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "Single Family Residential Zone",
+      "previousZoningDescription": "single-family residential",
+      "newZoningCode": "Comprehensive Development Zone",
+      "newZoningDescription": "mixed use"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7921-0230-00 (10275 – 150 Street\n10289 – 150 Street\n10299 – 150 Street\n14983 – 102A Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0230-00_0.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCPH_2023_11_20.pdf",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:50:04.322Z",
+    "updateDate": "2024-02-07T06:53:35.114Z"
+  },
+  {
+    "id": "rez-u2zdeckgdw51fdgngotaq",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "7922-0222-00",
+    "address": null,
+    "applicant": null,
+    "behalf": null,
+    "description": "An OCP Amendment from 'Urban' to 'Multiple Residential' and to allow higher floor area ratio (FAR) within the 'Multiple Residential' designation, as well as a Rezoning from RM-M to CD and a Development Permit to permit the development of 20 apartment buildings, some with ground floor commercial space.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 20,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RM-M",
+      "previousZoningDescription": "Multiple Residential",
+      "newZoningCode": "CD",
+      "newZoningDescription": "Commercial Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0221-00 and 7922-0222-00 (7790 King George Boulevard\n7850 King George Boulevard\n(7890 King George Boulevard))",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0221-00%20and%207922-0222-00_0.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T06:33:47.734Z",
+    "updateDate": "2024-02-07T06:51:42.704Z"
+  },
+  {
+    "id": "rez-o9qo8ef8gpt2bflrweky5",
+    "city": "Surrey",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": "21090",
+    "address": "18536 - 64 Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezoning from RF to RF-13 at 18536 - 64 Avenue to allow subdivision into 3 small residential lots. Council endorsed the Public Notification to proceed for Bylaw No. 21090 to rezone the subject site from 'Single Family Residential Zone (RF)' to 'Single Family Residential (13) Zone (RF-13)'. Council instructed staff to resolve various issues prior to final adoption, including engineering requirements, subdivision layout, tree preservation, tree replacement, Affordable Housing Strategy, and demolition of existing buildings and structures.",
+    "buildingType": "single-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-20",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 3,
+      "stratas": 3,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "RF",
+      "previousZoningDescription": "Single Family Residential Zone",
+      "newZoningCode": "RF-13",
+      "newZoningDescription": "Single Family Residential (13) Zone"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-20",
+        "title": "Planning Report 7922-0351-00 (18536 - 64 Avenue)",
+        "url": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7922-0351-00.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-20",
+        "url": "https://www.surrey.ca/sites/default/files/minutes/MIN_RCLU_2023_11_20.pdf",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T06:50:39.763Z",
+    "updateDate": "2024-02-07T06:50:39.763Z"
+  },
+  {
+    "id": "rez-6ug2rmcuw3sbsopc2i4sx",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "3529-3589 Arbutus Street, 2106 West 19th Avenue",
+    "applicant": "Andrew Cheung Architects, Inc.",
+    "behalf": null,
+    "description": "Rezone 3529-3589 Arbutus Street and 2106 West 19th Avenue from R1-1 (Residential) District to RR-2B (Residential Rental) District for a five-storey rental building with a height of 16.8 m (55 ft.) and a floor space ratio (FSR) of 2.40.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-16",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": 2.4,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "Residential Rental"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1sr.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr4.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1ZDby-law.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea1staffpresentation.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Video Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20447?mediaStartTime=20231116130705&mediaEndTime=20231116134600&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-16",
+        "url": "https://council.vancouver.ca/20231116/phea20231116ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:32:22.954Z",
+    "updateDate": "2024-02-07T01:32:22.954Z"
+  },
+  {
+    "id": "rez-xla7dizpajztwej4yz1cy",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "6065 Collingwood Place, 6075 Collingwood Place",
+    "applicant": "Strand Holdings Ltd.",
+    "behalf": null,
+    "description": "The rezoning of 6065-6075 Collingwood Place from R1-1 District to RR-2B District. The new development will include [specific details of the new development such as buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc.].",
+    "buildingType": "single-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-16",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "medium density residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-16",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2sr.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Referral Report dated August 29, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr6.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2ZDby-law.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated October 16, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo_reportsummary.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Yellow Memorandum dated November 15, 2023",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2yellowmemo_conditions.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231116/documents/phea2staffpresentation.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-16",
+        "title": "Video Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20447?mediaStartTime=20231116134601&mediaEndTime=20231116152110&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-16",
+        "url": "https://council.vancouver.ca/20231116/phea20231116ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:32:33.468Z",
+    "updateDate": "2024-02-07T01:32:33.468Z"
+  },
+  {
+    "id": "rez-r05qzqm77n3f9astx8n4y",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "5515-5525 Elizabeth Street",
+    "applicant": "Ardor Development Ltd.",
+    "behalf": null,
+    "description": "Ardor Development Ltd. is requesting to rezone 5515-5525 Elizabeth Street from Residential to Comprehensive Development District. This would allow for the construction of a four-storey residential building with a partial 5th floor rooftop amenity area, containing 27 strata-titled residential units. The proposed floor space ratio is 2.0 and the maximum building height is 13.7 m (45 ft.), with additional height for the rooftop amenity and mechanical appurtenances.",
+    "buildingType": "multi-family residential",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 27,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": "Residential",
+      "previousZoningDescription": "Residential",
+      "newZoningCode": "Comprehensive Development District",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr5.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1_openhouse_boards.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea1_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114180118&mediaEndTime=20231114181705&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:32:46.277Z",
+    "updateDate": "2024-02-07T01:32:46.277Z"
+  },
+  {
+    "id": "rez-x1u3wmv9upjug23fh5d3d",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "1510 West 71st Avenue, 8733 Granville Street",
+    "applicant": "Gradual Architecture Inc.",
+    "behalf": null,
+    "description": "The proposal is for a six-storey mixed-use building with commercial space at-grade and 74 secured market rental units. The building is planned to have a height of 22.0 m (72 ft.) and a floor space ratio (FSR) of 3.38.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 74,
+      "hotels": 0,
+      "fsr": 3.38,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "C-2, RM-3A",
+      "previousZoningDescription": "Commercial, Residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr3.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea2-staffpresentation-November142023.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114181710&mediaEndTime=20231114184000&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:32:59.958Z",
+    "updateDate": "2024-02-07T01:32:59.958Z"
+  },
+  {
+    "id": "rez-44bbbn0u6r6hlseaextdw",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "430-440 West Pender Street",
+    "applicant": "Architectural Collective Inc.",
+    "behalf": null,
+    "description": "Rezone 430-440 West Pender Street from DD District to CD-1 District. Permit development of a 12-storey mixed-use building with a partial 13th floor rooftop amenity area, commercial at-grade, and 80 secured market rental housing units. Proposed floor space ratio (FSR) of 8.42 and maximum building height of 32.0 m (105 ft.), with additional height to 35.1 m (115 ft.) for rooftop common amenity space.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 80,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 8.42,
+      "storeys": 12
+    },
+    "zoning": {
+      "previousZoningCode": "DD",
+      "previousZoningDescription": "Downtown District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr1.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Yellow Memorandum dated November 9, 2023",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3yellowmemo.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea3_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114184001&mediaEndTime=20231114191900&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:33:15.815Z",
+    "updateDate": "2024-02-07T01:33:15.815Z"
+  },
+  {
+    "id": "rez-hwtrdb95827kqzbaln39l",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "3231-3245 Fraser Street, 675 East 17th Avenue",
+    "applicant": "Anthem Fraser Developments LP",
+    "behalf": null,
+    "description": "The properties are proposed to be rezoned from C-2 (Commercial) District to CD-1 (Comprehensive Development) District to allow for an increase in the maximum floor space ratio (FSR) from 3.5 to 6.9 and the maximum building height from 22.0 m (72 ft.) to 45.5 m (149.3 ft.). The proposed development is for a 14-storey mixed-use building with a maximum height of 47.5 m (155.8 ft.) to accommodate a partial 15th floor rooftop amenity area. The building will contain 110 secured rental housing units, with 20% of the residential floor area secured as moderate income units. Additionally, there will be commercial space on the ground floor.",
+    "buildingType": "mixed use",
+    "status": "public hearing",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": "2023-11-15",
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 110,
+      "rentals": 110,
+      "hotels": 0,
+      "fsr": 6.9,
+      "storeys": 15
+    },
+    "zoning": {
+      "previousZoningCode": "C-2",
+      "previousZoningDescription": "Commercial",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-15",
+        "title": "Summary and Recommendation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4SR.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Referral Report dated October 3, 2023",
+        "url": "https://council.vancouver.ca/20231017/documents/rr2.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Zoning and Development",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4CD1.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Draft By-law - Sign",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4sign.PDF",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Boards",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_udp_boards.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Applicant Renderings",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4_renderings.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "Staff Presentation",
+        "url": "https://council.vancouver.ca/20231114/documents/phea4-staffpresentation-November142023.pdf",
+        "status": "public hearing"
+      },
+      {
+        "date": "2023-11-15",
+        "title": "VIdeo Clip on this Item",
+        "url": "https://csg001-harmony.sliq.net/00317/Harmony/en/PowerBrowser/PowerBrowserV2/20231116/-1/20440?mediaStartTime=20231114192258&mediaEndTime=20231114195900&viewMode=3",
+        "status": "public hearing"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-15",
+        "url": "https://council.vancouver.ca/20231114/phea20231114ag.htm",
+        "status": "public hearing"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:33:39.598Z",
+    "updateDate": "2024-02-07T01:33:39.598Z"
+  },
+  {
+    "id": "rez-erzat8ctlfri1lxej43ib",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "4711-4787 Cambie Street",
+    "applicant": "Mosaic Homes",
+    "behalf": "Mosaic Flora and Fauna Holdings Ltd.",
+    "description": "The application is to rezone 4711-4787 Cambie Street from R1-1 District to CD-1 District. The proposed development includes increasing the permitted floor space ratio (FSR) from 0.70 to 2.65 and the maximum building height from 11.5 m to 23.6 m. This will allow for the development of two six-storey residential buildings with 114 strata-titled units. The draft CD-1 By-law and proposed form of development should also be approved in principle.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 114,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 2.65,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "comprehensive development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr2.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:34:03.749Z",
+    "updateDate": "2024-02-07T01:34:03.749Z"
+  },
+  {
+    "id": "rez-25x4b8wg5zywoby19fwyu",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "2231-2247 East 41st Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Recommends rezoning the site at 2231-2247 East 41st Avenue to RR-2B District for a five-storey rental building. Estimated 61 secured rental units.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 61,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "multi-family residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr3.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:34:20.519Z",
+    "updateDate": "2024-02-07T01:34:20.519Z"
+  },
+  {
+    "id": "rez-4dyj0n8dtj2tfiixfebfy",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "6470 Larch Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Recommends rezoning the site at 6470 Larch Street to RR-2B District for a five-storey rental building with 33 secured rental units.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": null,
+      "rentals": 33,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": "RR-2B",
+      "newZoningDescription": "multi-family residential"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr4.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:34:37.092Z",
+    "updateDate": "2024-02-07T01:34:37.092Z"
+  },
+  {
+    "id": "rez-1bzgm7rfmgw09b1hm3hv0",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "1710-1730 East Pender Street",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezone the lands from RM-4 and RM-4N District to CD-1 District. Increase maximum floor space ratio from 1.45 to 5.58. Increase maximum building height from 10.7m to 60.8m. Develop an 18-storey social housing mixed-use building with 191 units.",
+    "buildingType": "mixed use",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 191,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 5.58,
+      "storeys": 18
+    },
+    "zoning": {
+      "previousZoningCode": "RM-4 and RM-4N",
+      "previousZoningDescription": "residential multi-unit district",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "comprehensive development district"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr5.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:34:55.431Z",
+    "updateDate": "2024-02-07T01:34:55.431Z"
+  },
+  {
+    "id": "rez-qh3n0xw5ijts2oo1d3bqz",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "8120-8168 Lord Street, 540 West 65th Avenue",
+    "applicant": "Francl Architecture Inc.",
+    "behalf": "Lord Street Holdings Ltd.",
+    "description": "The development will consist of two six-storey residential buildings with 146 secured-rental units, including five below-market rental units. The maximum floor space ratio (FSR) should be increased from 0.70 to 2.88 and the maximum building height should be increased from 11.5 m to 20.7 m.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 0,
+      "rentals": 146,
+      "hotels": 0,
+      "fsr": 2.88,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "comprehensive development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr6.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:35:20.737Z",
+    "updateDate": "2024-02-07T01:35:20.737Z"
+  },
+  {
+    "id": "rez-h7mzkoyi618area3y3faj",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "692 West 30th Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "The rezoning application is for 692 West 30th Avenue from R1-1 District to RM-8A District to allow for a townhouse or rowhouse development. The development will meet the requirements of the Cambie Corridor Plan and staff recommend referring it to a Public Hearing with the recommendation to approve it in principle, subject to conditions.",
+    "buildingType": "townhouse",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RM-8A",
+      "newZoningDescription": "townhouse or rowhouse development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report ",
+        "url": "https://council.vancouver.ca/20231114/documents/rr7.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:35:41.358Z",
+    "updateDate": "2024-02-07T01:35:41.358Z"
+  },
+  {
+    "id": "rez-373qk2xqsnagf2acjoxg7",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "688 West 29th Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezone the property at 688 West 29th Avenue from R1-1 District to RM-8A District for townhouse or rowhouse development. Maximum floor space ratio (FSR) can be up to 1.20, allowing for approximately eight townhouses. Meets the intent of the Cambie Corridor Plan.",
+    "buildingType": "townhouse",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 8,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": 1.2,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "RM-8A",
+      "newZoningDescription": "townhouse or rowhouse development"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr8.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:36:02.735Z",
+    "updateDate": "2024-02-07T01:36:02.735Z"
+  },
+  {
+    "id": "rez-4d5gi3eoas6h2ouz4xne5",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "4330-4408 Arbutus Street, 2092 Nanton Avenue",
+    "applicant": null,
+    "behalf": null,
+    "description": "Rezone the lands from R1-1 District to CD-1 District, increase maximum FSR and building height, and permit the development of a six-storey, 162-unit Community Care Facility - Class B. Properties along Arbutus Street are eligible for rezoning consideration under the Secured Market Rental Policy. Neighbourhood amenities include parks, cultural/community spaces, and a local shopping area. The Vancouver Plan and Arbutus Ridge, Kerrisdale and Shaughnessy Community Vision support the rezoning.",
+    "buildingType": "multi-family residential",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 162,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": "R1-1",
+      "previousZoningDescription": "low density residential",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "mixed use"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr9.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:36:26.170Z",
+    "updateDate": "2024-02-07T01:36:26.170Z"
+  },
+  {
+    "id": "rez-hpk1szqn1xa5dom51u883",
+    "city": "Vancouver",
+    "metroCity": "Metro Vancouver",
+    "type": "rezoning",
+    "applicationId": null,
+    "address": "848 Seymour Street",
+    "applicant": "Perkins & Will",
+    "behalf": "Paul Y. Construction (B.C.) LTD., Inc.",
+    "description": "Rezone the lands at 848 Seymour Street from DD District to CD-1 District, increase maximum floor space ratio (FSR) from 5.75 to 17.67, and maximum building height from 91.4 m to 97.7 m to allow for a 30-storey hotel.",
+    "buildingType": "commercial",
+    "status": "applied",
+    "dates": {
+      "appliedDate": "2023-11-14",
+      "publicHearingDate": null,
+      "approvalDate": null,
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 30,
+      "fsr": 17.67,
+      "storeys": 30
+    },
+    "zoning": {
+      "previousZoningCode": "DD",
+      "previousZoningDescription": "Downtown District",
+      "newZoningCode": "CD-1",
+      "newZoningDescription": "Comprehensive Development District"
+    },
+    "reportUrls": [
+      {
+        "date": "2023-11-14",
+        "title": "Referral Report",
+        "url": "https://council.vancouver.ca/20231114/documents/rr10.pdf",
+        "status": "applied"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "date": "2023-11-14",
+        "url": "https://council.vancouver.ca/20231114/regu20231114ag.htm",
+        "status": "applied"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T01:36:49.754Z",
+    "updateDate": "2024-02-07T01:36:49.754Z"
+  }
+]

@@ -17,7 +17,6 @@ export interface IExpectedFormat {
 export function checkAndFixAIResponse(object: any, format: IExpectedFormat) {
 
   if (object === null || object === undefined) {
-    console.log(chalk.yellow(`Root object is null or undefined`))
     return false
   }
 

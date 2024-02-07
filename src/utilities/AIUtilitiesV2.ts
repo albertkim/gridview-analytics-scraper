@@ -71,13 +71,13 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
   if (!valid) {
     console.log(chalk.red(`Invalid summary response, skipping`))
-    console.log(chalk.red(response))
+    console.log(chalk.red(JSON.stringify(response, null, 2)))
     return []
   }
 
   if (!includesExpectedWords) {
     console.log(chalk.yellow(`Missing expected words in summary response, but continuing - expected ${expectedWords.join(', ')}`))
-    console.log(chalk.yellow(response))
+    console.log(chalk.yellow(JSON.stringify(response, null, 2)))
   }
 
   function stringifyArray(array: any[]) {
@@ -136,16 +136,26 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
   for (const summaryItem of summary) {
 
     const baseQuery = `
-      You are an expert in land use planning and development. Carefully read the provided document and give me the following in a JSON format - otherwise return a {error: message, reason: detailed explanation}. Return only entries with an address.
+      You are an expert in land use planning and development. Your objective is make structured data from the following document. Carefully read through it and identify an the address - usually found near the start of the document with numbers and words like "road", "ave", "st", "crescent", etc.
+      
+      Then read the rest of the document and structure your findings in the following JSON format - otherwise return a {error: message, reason: detailed explanation}. Only you successfully return an entry with an address I will tip you $10.
+
       ${options?.instructions ? options.instructions : ''}
+
       {
-        applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this rezoning, null if not specified'} 
-        address: street address(es) - if multiple addresses, comma separate - do not include city - should not be null - if you can't find address, try again harder, it definitely exists
-        applicant: who the rezoning applicant is - null if doesn't exist
+        applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this development, null if not specified'}
+        address: street address(es) - if multiple addresses, comma separate - do not include city - if you can't find address, try again harder, it definitely exists usually naer the start of the document
+        applicant: who the applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
-        description: a description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
+        description: a detailed description of the new development in question - be be specific, include any details like buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
       }
-      Document here: ${summaryItem}
+
+      Document here:
+      ${summaryItem}
+
+      ---
+
+      If any piece of information is unavailable, make a concerted effort to re-examine the document, as addresses are generally present near the beginning.
     `
 
     const baseQueryFormat: IExpectedFormat = {
@@ -176,17 +186,19 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     }
 
     let baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
+    let baseResponseValid = checkAndFixAIResponse(baseResponse, baseQueryFormat)
+    let count = 1
 
-    const baseResponseValid = checkAndFixAIResponse(baseResponse, baseQueryFormat)
+    while (count < 3 && !baseResponseValid) {
+      console.log(chalk.yellow(`Invalid base record response, trying again.`))
+      baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
+      baseResponseValid = checkAndFixAIResponse(baseResponse, baseQueryFormat)
+      count++
+    }
 
     if (!baseResponseValid) {
-      console.log(chalk.yellow(`Invalid base record response, trying again.\nSummary: ${summaryItem}`))
-      baseResponse = await chatGPTJSONQuery(baseQuery, '3.5')
-      const valid2 = checkAndFixAIResponse(baseResponse, baseQueryFormat)
-      if (!valid2) {
-        console.log(chalk.red(`Invalid base record response, skipping.\nSummary: ${summaryItem}`))
-        continue
-      }
+      console.log(chalk.red(`Invalid base record response, skipping.\nSummary: ${summaryItem}`))
+      continue
     }
 
     const baseObject = {
@@ -275,7 +287,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
   }
 
   const detailsQuery = `
-    You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format.
+    You are an expert in land use planning and development. Carefully read the following description and get the following information in JSON format. If you manage to fill out everything accurately, I will tip you $10.
     {
       ${shouldAnalyzeBuildingType ? detailedQueryReference.buildingType : ''}
       ${shouldAnalyzeZoning ? detailedQueryReference.zoning : ''}

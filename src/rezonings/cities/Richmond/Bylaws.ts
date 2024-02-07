@@ -35,7 +35,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
 
       const rezoningIds = findApplicationIDsFromTemplate('RZ XX-XXXXXX', parsedPDF)
       if (rezoningIds.length === 0) {
-        console.log(chalk.red(`No rezoning number found for Richmond bylaw - ${news.reportUrls[0].url}`))
+        console.log(chalk.yellow(`No rezoning number found for Richmond bylaw - ${news.reportUrls[0].url}`))
         return []
       }
       const rezoningId = rezoningIds[0]

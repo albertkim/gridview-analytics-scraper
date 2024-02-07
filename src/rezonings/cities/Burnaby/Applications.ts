@@ -50,7 +50,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
     const rezoningId = rezoningIds.length > 0 ? rezoningIds[0] : null
 
     if (!rezoningId) {
-      console.log(chalk.bgRed(`Error finding rezoning ID from application - ${news.title} - ${news.date} - ${news.contents}`))
+      console.log(chalk.yellow(`Error finding rezoning ID from application - ${news.title} - ${news.date} - ${news.contents}`))
       return []
     }
 
