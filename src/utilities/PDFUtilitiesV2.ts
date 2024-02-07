@@ -90,7 +90,7 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
 
   // Chunk the text into 2500 character chunks with a 500 character overlap between the chunks to avoid GPT 3.5's token limit, avoid splitting words
   console.log(`Parsed PDF length is ${parsedPDF.length}`)
-  let chunkedText = chunkTextWithOverlapAvoidingWordSplit(parsedPDF, 8000, 100)
+  let chunkedText = chunkTextWithOverlapAvoidingWordSplit(parsedPDF, 7000, 100)
 
   // Can realistically have a max of 3 chunks before things get very unwieldy
   chunkedText = chunkedText.slice(0, 3)

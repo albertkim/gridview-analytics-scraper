@@ -88,7 +88,7 @@ export async function analyze(options: IOptions) {
 
       // Find the instances of building permit IDs
       // Don't need to worry about other permid ID references inside descriptions, Burnaby descriptions are too short to include them
-      const permitNumbers = findApplicationIDsFromTemplate(parsed, 'BLDXX-XXXXX')
+      const permitNumbers = findApplicationIDsFromTemplate('BLDXX-XXXXX', parsed)
 
       if (permitNumbers.length === 0) {
         console.log(chalk.red(`No Burnaby BLDXX-XXXXX permit number found for ${urlObject.date} - ${urlObject.title}`))

@@ -2205,6 +2205,116 @@
     "updateDate": "2024-02-07T08:51:05.203Z"
   },
   {
+    "id": "dev-n8k293s5sdwayrj12gcpn",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 20-919145",
+    "address": "4571 Steveston Highway, 4591 Steveston Highway, 4611 Steveston Highway, 4631 Steveston Highway",
+    "applicant": "Jonathan King",
+    "behalf": null,
+    "description": "Jonathan King has applied to develop 16 townhouse units at 4571, 4591, and 4611/4631 Steveston Highway. The site is being rezoned from 'Single Detached (RSl/E)' and 'Two-Unit Dwellings (RDl)' zones to the 'Low Density Townhouses (RTL4)' zone for this project under Bylaw 10081 (RZ 18-839945). The proposed scheme has satisfactorily addressed urban design issues and complies with the Official Community Plan. The applicant requests to vary the provisions of Richmond Zoning Bylaw 8500 to reduce the front yard setback along Steveston Highway from 6.0 m to 4.50 m, which is supported by staff. The Advisory Design Panel has reviewed the project and supports it. The proposed form, massing, and orientation of the buildings are compatible with the existing adjacent developments on the block.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 4,
+      "stratas": 16,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_1_4571_4591___4611__Steveston_Hway72095.pdf",
+        "title": "DEVELOPMENT PERMIT 20-919145",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T17:00:10.682Z",
+    "updateDate": "2024-02-07T17:30:41.005Z"
+  },
+  {
+    "id": "dev-evifqr4k1qed901i3oxc1",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-943418",
+    "address": "13888 Wireless Way",
+    "applicant": "Karla Castellanos Architect",
+    "behalf": null,
+    "description": "Karla Castellanos Architect has applied for a Development Permit at 13888 Wireless Way to construct a three-storey light industrial and ancillary office building of approximately 3,748 m2 containing 11 strata-titled units on a new lot created through subdivision on the west portion of the subject site. The proposal aligns with the City's objectives of intensifying existing industrial lands. The site is proposed to be subdivided into two new lots of approximately 3,861 m2 (41,548 ft2) in area (Lot 1) and 16,227 m2 (174,698 ft2) in area (Lot 2). The proposed scheme has satisfactorily addressed the significant urban design issues and other staff comments identified as part of the review of the subject DP application. The Applicant has proposed Transportation Demand Management (TDM) measures to support the requested variance, including an employee shuttle service between the subject site and the Bridgeport Canada Line station during peak hours, and a subsidized monthly transit pass program to Lot 1 employees, which will run for three years.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2024-01-17",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 11,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Item_2_13888_Wireless_Way72096.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943418",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/dpp/011724_minutes.htm",
+        "date": "2024-01-17",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T17:01:08.060Z",
+    "updateDate": "2024-02-07T17:30:55.791Z"
+  },
+  {
     "id": "dev-1x2een5pg2ptqegkgv3ji",
     "city": "Vancouver",
     "metroCity": "Metro Vancouver",
@@ -5398,7 +5508,7 @@
     "address": "4831 Steveston Highway",
     "applicant": "Anthony Boni",
     "behalf": null,
-    "description": "Anthony Boni has applied to develop a three-storey 25-unit affordable rental housing building at 4831 Steveston Highway. The site is being rezoned from 'Single Detached (RS 1/E)' to 'Low Rise Rental Apartments (ZLR48) - Steveston Highway (Steveston)' under Bylaw 10478 (RZ 23-018081). The proposed project has funding support from the Canada Mortgage and Housing Corporation (CMHC) and BC Housing in partnership with Turning Point Housing Society.",
+    "description": "The Development Permit is for the construction of a three-storey 25-unit affordable rental housing building at 4831 Steveston Highway. The site is being rezoned from 'Single Detached (RS 1/E)' to 'Low Rise Rental Apartments (ZLR48) - Steveston Highway (Steveston)' under Bylaw 10478 (RZ 23-018081). The proposed project has funding support from the Canada Mortgage and Housing Corporation (CMHC) and BC Housing in partnership with Turning Point Housing Society. Design issues identified during the rezoning process include compliance with Development Permit Guidelines, enhancing residential streetscape, refining the site plan for aboveground private utility infrastructure improvements, landscaping and tree management, common amenity space programming and design, accessibility, pedestrian circulation, sustainability, crime prevention through environmental design, parking, loading, waste management, and off-site frontage elements. Concerns expressed during the Public Hearing include direct connection to the Railway Greenway and providing more bicycle parking opportunities for residents. Staff have worked with the applicant to ensure the proposed architectural form and character align with design guidelines and interface well with adjacent properties.",
     "buildingType": "multi-family residential",
     "status": "approved",
     "dates": {
@@ -5410,7 +5520,7 @@
     },
     "stats": {
       "buildings": 1,
-      "stratas": 25,
+      "stratas": null,
       "rentals": 25,
       "hotels": 0,
       "fsr": null,
@@ -5442,7 +5552,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:54:58.305Z",
-    "updateDate": "2024-02-07T08:54:58.305Z"
+    "updateDate": "2024-02-07T17:21:53.659Z"
   },
   {
     "id": "dev-ioevlacd4f7sj8la5zgbe",
@@ -6727,7 +6837,7 @@
     "address": "7580 No. 1 Road",
     "applicant": "1132865 BC Ltd.",
     "behalf": null,
-    "description": "The development permit (DP 18-829236) is for the construction of 30 townhouse units at 7580 No. 1 Road. The rezoning of the site to the 'Medium Density Townhouse (RTM2)' zone was approved by Council on October 12, 2021. The proposed modification to the Tree Management Plan and Landscape Plan is to address the deterioration and irreversible decline of a tree (Tree Tag #726) that was supposed to be retained. The applicant agreed to plant 62 new trees on-site, including 13 conifers and 49 deciduous trees. Tree 726 has shown signs of decline since June 2022 and is in an advanced state of irreversible decline, according to the Project Arborist's findings. The City's Tree Preservation staff have reviewed and agreed with these findings.",
+    "description": "The application is for a General Compliance Ruling for the construction of 30 townhouse units at 7580 No. 1 Road. The rezoning of the site to the 'Medium Density Townhouse (RTM2)' zone was approved by Council on October 12, 2021. The proposed modification to the Tree Management Plan and Landscape Plan is to address the deterioration and irreversible decline of a tree (Tree Tag #726) that was supposed to be retained. The south side yard setback at the southwest corner of the site was increased to 7.56 m to retain the Sycamore maple tree (Tree 726). The applicant agreed to plant 62 new trees on-site, including 13 conifers and 49 deciduous trees. Tree 726 has shown signs of decline since June 2022 and is in an advanced state of irreversible decline, according to the Project Arborist's findings. The City's Tree Preservation staff have reviewed and agreed with these findings.",
     "buildingType": "townhouse",
     "status": "approved",
     "dates": {
@@ -6771,7 +6881,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:55:19.667Z",
-    "updateDate": "2024-02-07T08:55:19.667Z"
+    "updateDate": "2024-02-07T17:22:16.487Z"
   },
   {
     "id": "dev-87cr9isr3u4hnk3tf7e1t",
@@ -6826,7 +6936,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:55:40.328Z",
-    "updateDate": "2024-02-07T08:55:40.328Z"
+    "updateDate": "2024-02-07T17:22:38.010Z"
   },
   {
     "id": "dev-ueoy0zzi8yggxlmo99hwq",
@@ -6837,7 +6947,7 @@
     "address": "10700 Cambie Road, #115",
     "applicant": "Lovick Scott Architects",
     "behalf": null,
-    "description": "Lovick Scott Architects has applied for permission to undertake exterior building renovations to the existing McDonald's restaurant located at #115 10700 Cambie Road. This includes upgrades to the on-site landscaping and the existing garbage and recycling enclosure on a site zoned 'Auto-Oriented Commercial (CA)'. The proposed modifications will only be made to the McDonald's restaurant and not the neighboring commercial retail unit. The site is part of a commercial complex with other businesses and off-street parking. The proposed scheme satisfactorily addresses urban design issues and staff comments. It complies with the Official Community Plan and the 'Auto-Oriented Commercial (CA)' zone. Due to the minor nature of the renovations, the application was not presented to the Advisory Design Panel.",
+    "description": "Lovick Scott Architects has applied for permission to undertake exterior building renovations to the existing McDonald's restaurant located at #115 10700 Cambie Road. This includes upgrades to the on-site landscaping and the existing garbage and recycling enclosure on a site zoned 'Auto-Oriented Commercial (CA)'. The proposed modifications will only be made to the McDonald's restaurant and not the neighboring commercial retail unit. The site is part of a commercial complex with other businesses and off-street parking. The proposed scheme satisfactorily addresses urban design issues and staff comments. It complies with the Official Community Plan and the 'Auto-Oriented Commercial (CA)' zone. Due to the minor nature of the renovations, the application was not presented to the Advisory Design Panel. Conditions of Adjacency include modifications to the on-site enclosure for garbage, recycling, and organic waste, drive-through operations audio/speaker box system orientation, and screening of existing rooftop mechanical units. Urban Design and Site Planning modifications are primarily limited to the building exterior, existing landscape areas, and service area, with off-street parking, vehicle circulation, and drive-through servicing generally remaining unchanged.",
     "buildingType": "commercial",
     "status": "approved",
     "dates": {
@@ -6881,7 +6991,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:56:07.169Z",
-    "updateDate": "2024-02-07T08:56:07.169Z"
+    "updateDate": "2024-02-07T17:22:50.449Z"
   },
   {
     "id": "dev-y3cvmzrnbh6qxmr4leh69",
@@ -8262,9 +8372,9 @@
     "type": "development permit",
     "applicationId": "DP 18-824566",
     "address": "12700 and 12800 Rice Mill Road, 12280 and 12300 No. 5 Road",
-    "applicant": "SNC Lavalin Inc.",
-    "behalf": "BC Ferry Services Inc.",
-    "description": "SNC Lavalin Inc., on behalf of BC Ferry Services Inc., has applied for a Development Permit for the redevelopment of the BC Ferries Fleet Maintenance Unit and future subdivision at 12700 and 12800 Rice Mill Road and 12280 and 12300 No. 5 Road. The site is being rezoned from Agricultural (AGl) and Light Industrial (IL) to BC Ferries Fleet Maintenance and Moorage (ZI 14) to allow for the upgrading of the BC Ferries FMU. The Development Permit application includes habitat compensation and mitigation measures for the designated Environmentally Sensitive Areas and Riparian Management Areas on the site. Construction of a new machine shop building and supporting uses, renovations, modifications, additions to existing buildings, addition of off-street parking, loading, and bike parking provisions, grade and elevation increases, demolition of existing buildings, and compensation and enhancements to the Environmentally Sensitive Areas and Riparian Management Areas are part of the project. The revised scope of FMU redevelopment includes retrofitting and modifying existing buildings to accommodate FMU activities. The surrounding development includes vacant lands zoned Agriculture (AGl) to the north and a model airplane park also zoned Agriculture (AGl). There is a designated Riparian Management Area associated with an existing watercourse along Rice Mill Road.",
+    "applicant": null,
+    "behalf": null,
+    "description": "The Development Permit is for the redevelopment of the BC Ferries Fleet Maintenance Unit and future subdivision at the specified addresses. The site is being rezoned from Agricultural (AGl) and Light Industrial (IL) to BC Ferries Fleet Maintenance and Moorage (ZI 14) to allow for the upgrading of the BC Ferries FMU. The Development Permit application includes habitat compensation and mitigation measures for the designated Environmentally Sensitive Areas and Riparian Management Areas on the site. The permit also requires a Servicing Agreement for infrastructure upgrades and dike works. The scope of the FMU redevelopment includes construction of a new machine shop building, renovations to existing buildings, addition of parking provisions, grade and elevation increases, demolition of existing buildings, and compensation and enhancements to the Environmentally Sensitive Areas and Riparian Management Areas. The revised scope of the redevelopment indicates that two new buildings and a tower crane are not being constructed at this time, and existing buildings will be retrofitted and modified to accommodate FMU activities.",
     "buildingType": "industrial",
     "status": "approved",
     "dates": {
@@ -8275,9 +8385,9 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": null,
+      "buildings": 2,
       "stratas": null,
-      "rentals": null,
+      "rentals": 0,
       "hotels": 0,
       "fsr": null,
       "storeys": null
@@ -8308,7 +8418,62 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:56:37.019Z",
-    "updateDate": "2024-02-07T08:56:37.019Z"
+    "updateDate": "2024-02-07T17:23:13.432Z"
+  },
+  {
+    "id": "dev-awmzfbd6y9ctriw6qi45z",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 22-013200",
+    "address": "6011 RIVER ROAD",
+    "applicant": null,
+    "behalf": null,
+    "description": "The development permit DP 22-013200 at 6011 River Road, Richmond, BC, is for the construction of a new building with 40 BUH (Basic Universal Housing) units, including aging in place features such as stairwell handrails, lever-type handles for doors and plumbing fixtures, and solid wall blocking in washrooms to facilitate future grab bar installation. The project also includes provisions for up to 35 bicycle lockers in each bicycle storage room, 2 car share parking spaces with 24/7 public access, bicycle maintenance facilities, minimum 24% EV visitor parking spaces, charging outlets for a minimum of 10% of class 1 bicycle storage, and other TDMs as per legal agreements. The building will have a maximum height of 7 storeys and will feature an urban agriculture area on the podium, irrigation automatic system for all planted areas, and tree protection for City trees on the west side. Variance is sought for balcony encroachment into SRW and for the number of bicycle lockers. The project also includes communal standard stall, servicing agreement for off-site works, and works in PROPSRW. The development is designed to incorporate all of the Basic Universal Housing (BUH) Features as described in Section 4.16 of the Richmond Zoning Bylaw 8500.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-11-16",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 40,
+      "rentals": null,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 7
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_DP_22-013200_6011_River_Rd__Revised_70717.pdf",
+        "title": "DEVELOPMENT PERMIT 22-013200",
+        "date": "2023-11-16",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/111623_minutes.htm",
+        "date": "2023-11-16",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T17:24:07.504Z",
+    "updateDate": "2024-02-07T17:24:07.504Z"
   },
   {
     "id": "dev-useoo690lrxspri8vfnuf",
@@ -10034,7 +10199,7 @@
     "address": "9291 No. 2 Road, 9311 No. 2 Road, 9331 No. 2 Road, 9211 No. 2 Road",
     "applicant": "Jhujar Construction Ltd.",
     "behalf": null,
-    "description": "Jhujar Construction Ltd. has applied to the City of Richmond to develop 12 townhouse units at 9291 and 9311/9331 No. 2 Road. Vehicle access will be through a Statutory Right-of-Way (SRW) registered on the adjacent property at 9211 No. 2 Road. One of the townhouse units will have a ground-level secondary suite and two units will be designed as convertible units. The site is being rezoned from 'Single Detached (RS 1/E)' and 'Two-Unit Dwellings (RDl)' zones to 'Low Density Townhouses (RTL4)' zone. A Servicing Agreement is required prior to Building Permit issuance. The proposed scheme satisfactorily addresses urban design issues and complies with the Official Community Plan and the 'Low Density Townhouses (RTL4)' zone. The Advisory Design Panel supports the project.",
+    "description": "Jhujar Construction Ltd. has applied for a Development Permit to construct 12 townhouse units and one secondary suite at 9291 and 9311/9331 No. 2 Road. The site is being rezoned from 'Single Detached (RS 1/E)' and 'Two-Unit Dwellings (RDl)' zones to 'Low Density Townhouses (RTL4)' zone. Vehicle access will be through a Statutory Right-of-Way (SRW) registered on the adjacent property at 9211 No. 2 Road. The proposed scheme satisfactorily addresses urban design issues and complies with the Official Community Plan and the 'Low Density Townhouses (RTL4)' zone. The Advisory Design Panel supports the project. The Public Hearing for the rezoning of this site was held on October 16, 2017, with no concerns expressed. Staff recommends issuing a Development Permit for this project.",
     "buildingType": "townhouse",
     "status": "approved",
     "dates": {
@@ -10045,12 +10210,12 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 12,
+      "buildings": 13,
       "stratas": 12,
-      "rentals": 0,
+      "rentals": 1,
       "hotels": 0,
       "fsr": null,
-      "storeys": null
+      "storeys": 2
     },
     "zoning": {
       "previousZoningCode": null,
@@ -10078,7 +10243,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:57:23.756Z",
-    "updateDate": "2024-02-07T08:57:23.756Z"
+    "updateDate": "2024-02-07T17:24:25.290Z"
   },
   {
     "id": "dev-a3whdn8cjbg0887itm207",
@@ -14596,8 +14761,8 @@
     "applicationId": "DP 22-011557",
     "address": "6531 Francis Road",
     "applicant": "Jacky He",
-    "behalf": "Ya T Wang",
-    "description": "Jacky He has applied on behalf of the property owner, Ya T Wang, to develop two front-to-back duplexes at 6531 Francis Road. The site is being rezoned from 'Single Detached (RSl/E)' to 'Arterial Road Two-Unit Dwellings (RDA)' under Bylaw 10332 (RZ 19-878165). The proposed duplexes have been refined to comply with design guidelines and fit into the neighborhood. Aging-in-place features and a convertible unit have been included in all units. Landscape plans have been provided, including on-site tree planting. The proposed scheme satisfactorily addresses urban design issues and staff comments. It complies with the Official Community Plan and the 'RDA' zone.",
+    "behalf": null,
+    "description": "The Development Permit is for the construction of two front-to-back duplexes at 6531 Francis Road. The site is being rezoned from 'Single Detached (RSl/E)' to 'Arterial Road Two-Unit Dwellings (RDA)' under Bylaw 10332 (RZ 19-878165). The proposed duplexes have been refined to comply with design guidelines and fit into the neighborhood. Aging-in-place features and a convertible unit have been included in all units. Landscape plans have been provided, including on-site tree planting. The proposed scheme satisfactorily addresses urban design issues and staff comments, and complies with the Official Community Plan and the 'RDA' zone.",
     "buildingType": "single-family residential",
     "status": "approved",
     "dates": {
@@ -14641,7 +14806,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:58:31.410Z",
-    "updateDate": "2024-02-07T08:58:31.410Z"
+    "updateDate": "2024-02-07T17:25:10.942Z"
   },
   {
     "id": "dev-rzjw9r9v2huejqrflv105",
@@ -14652,7 +14817,7 @@
     "address": "6333 Cooney Road",
     "applicant": null,
     "behalf": null,
-    "description": "A new Development Permit (DP 22-023105) is required for the construction of a high-rise building with approximately 81 dwelling units at 6333 Cooney Road, which is zoned as 'High Rise Apartment (ZHR8) Brighouse Village (City Centre)'. Zoning Bylaw 8500, Amendment Bylaw 8738 (RZ 09-506908), and associated Development Permit (DP 09-506909) were approved in 2012, but the development did not proceed. A new Development Permit (DP 17-791045) was issued in 2022, and due to design changes, a new Development Permit (DP 22-023105) is required.",
+    "description": "Construction of a high-rise building with approximately 81 dwelling units at 6333 Cooney Road, zoned as \"High Rise Apartment (ZHR8) Brighouse Village (City Centre)\"",
     "buildingType": "multi-family residential",
     "status": "approved",
     "dates": {
@@ -14668,7 +14833,7 @@
       "rentals": 0,
       "hotels": 0,
       "fsr": null,
-      "storeys": 22
+      "storeys": 20
     },
     "zoning": {
       "previousZoningCode": null,
@@ -14696,7 +14861,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:58:56.111Z",
-    "updateDate": "2024-02-07T08:58:56.111Z"
+    "updateDate": "2024-02-07T17:25:43.044Z"
   },
   {
     "id": "dev-kwx4ljoe3dt8ih7dmwb10",
@@ -14707,7 +14872,7 @@
     "address": "10408 Dennis Crescent",
     "applicant": "Sandeep Mann",
     "behalf": null,
-    "description": "Sandeep Mann has applied for permission to develop a 60 m2 (645 ft2) coach house at 10408 Dennis Crescent on a site zoned 'Single Detached with Granny Flat or Coach House - Edgemere (REl)'. The existing single detached house on the site will be demolished, and a new single detached dwelling and coach house will be constructed. The proposed scheme addresses urban design issues and staff comments, complies with the design guidelines for coach houses in the Edgemere neighborhood, and complies with the 'Single Detached with Granny Flat or Coach House - Edgemere (REl)' zone. The coach house is located on the east portion of the property, separated from the existing single detached dwelling, and is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties. The primary pedestrian entry to the coach house is from the rear lane, with secondary pedestrian access from Dennis Crescent along the north side of the property. The proposed exterior building materials and colors of the coach house are consistent with the neighborhood, including taupe Hardie-plank siding, taupe stucco with grey trim, cedar, and black stone accents.",
+    "description": "Sandeep Mann has applied for permission to develop a 60 m2 (645 ft2) coach house at 10408 Dennis Crescent on a site zoned 'Single Detached with Granny Flat or Coach House - Edgemere (REl)'. The existing single detached house on the site will be demolished, and a new single detached dwelling and coach house will be constructed. The proposed scheme addresses urban design issues and staff comments, complies with the design guidelines for coach houses in the Edgemere neighborhood, and complies with the 'Single Detached with Granny Flat or Coach House - Edgemere (REl)' zone. The coach house is located on the east portion of the property, separated from the existing single detached dwelling, and is set back 2.0 m from the south side lot line to minimize shadowing of adjacent properties. The coach house has primary pedestrian entry from the rear lane, with secondary pedestrian access from Dennis Crescent along the north side of the property. The east elevation of the coach house facing the lane is designed as the primary facade, with a bay window, front entry, and exterior lighting to enhance visibility and appearance of the lane. Private outdoor space for the coach house is proposed off the west side, accessible from the rear or front door. The proposed exterior building materials and colors of the coach house are consistent with the neighborhood, including taupe Hardie-plank siding, taupe stucco with grey trim, cedar, and black stone accents.",
     "buildingType": "single-family residential",
     "status": "approved",
     "dates": {
@@ -14751,7 +14916,62 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:59:27.927Z",
-    "updateDate": "2024-02-07T08:59:27.927Z"
+    "updateDate": "2024-02-07T17:26:08.966Z"
+  },
+  {
+    "id": "dev-ys6dm10j44sl40fgz5mnp",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-945828",
+    "address": "900 Ferguson Road, 1000 Ferguson Road",
+    "applicant": "The Greater Vancouver Sewerage and Drainage District",
+    "behalf": null,
+    "description": "The Greater Vancouver Sewerage and Drainage District has applied for a Development Permit at 900 and 1000 Ferguson Road to upgrade the wastewater treatment plant in the designated Environmentally Sensitive Area. The proposed project footprint is 23.9 ha, with 20.96 ha situated within the designated ESA. In compensation for disturbing 21 ha of ESA, GVS&DD has committed to planting and rehabilitating 26.2 ha of the island. The subject site is currently occupied by buildings and structures associated with the existing wastewater treatment plant. The proposed scheme addresses ESA issues and complies with the Official Community Plan and zoning requirements. No variances are being sought. The proposed upgrades will enhance the treatment process.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-09-27",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_dpp_900_and_1000_Ferguson_Road69478.pdf",
+        "title": "DEVELOPMENT PERMIT 21-945828",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/092723_minutes.htm",
+        "date": "2023-09-27",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:32:00.582Z",
+    "updateDate": "2024-02-07T17:24:53.624Z"
   },
   {
     "id": "dev-6qkzs36j73oudw0421mnt",
@@ -19368,7 +19588,7 @@
     "address": "3588 Ketcheson Road",
     "applicant": "Polygon Talisman Park Ltd.",
     "behalf": null,
-    "description": "A Development Permit is recommended for the construction of 178 residential units in a 14-storey high-rise multi-family apartment building at 3588 Ketcheson Road. The site is zoned \"Residential / Limited Commercial (ZMU47)-Capstan Village (City Centre)\".",
+    "description": "Issue a Development Permit for the construction of 178 residential units in a 14-storey high-rise multi-family apartment building at 3588 Ketcheson Road. The site is zoned 'Residential / Limited Commercial (ZMU47)-Capstan Village (City Centre)'. Application by Polygon Talisman Park Ltd. for a Development Permit at 3588 Ketcheson Road",
     "buildingType": "multi-family residential",
     "status": "approved",
     "dates": {
@@ -19412,7 +19632,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T08:59:38.367Z",
-    "updateDate": "2024-02-07T08:59:38.367Z"
+    "updateDate": "2024-02-07T17:26:21.943Z"
   },
   {
     "id": "dev-3knn6k6gwxmamazp9x5vk",
@@ -19423,7 +19643,7 @@
     "address": "20455 Dyke Road, 7500 No. 9 Road",
     "applicant": "Farrell Estates Ltd.",
     "behalf": null,
-    "description": "Farrell Estates Ltd. has applied for a Development Permit for the construction of a light industrial building at 20455 Dyke Road, 7500 No. 9 Road, and a portion of PID 031-553-231 on a site zoned 'Industrial Business Park and Marina (Z120) - Graybar Road (East Richmond)'. The proposed development includes the consolidation of the site into two lots and the construction of a multi-phase light industrial development. Phase 2 of the development includes the construction of a two-storey multi-tenant industrial building with parking, loading, and outdoor amenities. The design and sustainability features are consistent with the overall development plan.",
+    "description": "Farrell Estates Ltd. has applied for a Development Permit for the construction of a multi-phase light industrial development at 20455 Dyke Road, 7500 No. 9 Road, and a portion of PID 031-553-231. The proposed development includes the consolidation of the site into two lots and the construction of a two-storey multi-tenant industrial building with parking, loading, and outdoor amenities. Phase 2 of the development includes the construction of a two-storey multi-tenant industrial building with parking, loading, and outdoor amenities, and the design and sustainability features are consistent with the overall development plan.",
     "buildingType": "industrial",
     "status": "approved",
     "dates": {
@@ -19434,7 +19654,7 @@
       "withdrawnDate": null
     },
     "stats": {
-      "buildings": 1,
+      "buildings": 2,
       "stratas": 0,
       "rentals": 0,
       "hotels": 0,
@@ -19467,7 +19687,7 @@
       "longitude": null
     },
     "createDate": "2024-02-07T09:00:29.318Z",
-    "updateDate": "2024-02-07T09:00:29.318Z"
+    "updateDate": "2024-02-07T17:26:45.083Z"
   },
   {
     "id": "dev-7g6fsubr7dkaelsr9bzrd",
@@ -21624,6 +21844,61 @@
     },
     "createDate": "2024-02-07T08:05:52.391Z",
     "updateDate": "2024-02-07T08:05:52.391Z"
+  },
+  {
+    "id": "dev-c80n8ak57b7hkpd3xdpnt",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-940028",
+    "address": "10140 No.1 Road, 10160 No.1 Road, 10180 No.1 Road, 4051 Cavendish Drive",
+    "applicant": "The Panatch Group",
+    "behalf": null,
+    "description": "The Panatch Group has applied for a Development Permit for the construction of 35 townhouse units at the specified locations. The proposed development includes 6 Low-End Market Rental (LEMR) units and 29 market residential units, with 4 market units having a ground-level secondary suite. The plan also includes the retention of two trees on-site and the provision of a public walkway along the south property line. Surrounding developments consist of single-family dwellings, a church, and various townhouse complexes. The rezoning application received no concerns at the Public Hearing held on May 19, 2020. The proposed scheme satisfactorily addresses urban design issues and complies with the Official Community Plan and the 'Town Housing (ZT88) - No. 1 Road (Steveston)' zone. The Advisory Design Panel supports the project.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-08-09",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 35,
+      "stratas": 35,
+      "rentals": 6,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/_1_-_Application_-_10140__10160__10180_No69253.pdf",
+        "title": "DEVELOPMENT PERMIT 21-940028",
+        "date": "2023-08-09",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/080923_minutes.htm",
+        "date": "2023-08-09",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:34:00.170Z",
+    "updateDate": "2024-02-07T17:27:06.906Z"
   },
   {
     "id": "dev-tbnhrxqnmbhb2xup6rsy8",
@@ -24074,6 +24349,61 @@
     },
     "createDate": "2024-02-07T08:47:48.872Z",
     "updateDate": "2024-02-07T08:47:48.872Z"
+  },
+  {
+    "id": "dev-trzptqaev7v6b9tfot5e4",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 23-011608",
+    "address": "8220 Gilbert Road",
+    "applicant": "Rick Bowal",
+    "behalf": null,
+    "description": "Rick Bowal has applied for a Development Permit at 8220 Gilbert Road to construct two front-to-back duplexes on lots zoned 'Arterial Road Two-Unit Dwellings (RDA)'. The site is being rezoned from 'Single Detached (RS 1/E)' zone to 'Arterial Road Two-Unit Dwellings (RDA)' zone under Bylaw 10428 (RZ 21-926304). The rezoning Bylaw was given third reading at the Public Hearing held on December 19, 2022. The application included an amendment to the Single Family Lot Size Policy 5442 to exclude the subject site from the policy, which was approved following the Public Hearing. The site currently contains a single-family dwelling that is occupied by a rental tenant who has been made aware of the application and timeline. The rezoning process identified design issues to be resolved at the Development Permit stage, which have been addressed to staff's satisfaction. The Public Hearing for the rezoning of this site was held on December 19, 2022, and no concerns about rezoning the property were expressed by members of the public. Bylaw 10428 for the rezoning of the subject site was given third reading following the Public Hearing.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-07-26",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": 2,
+      "rentals": 1,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_Rick_Bowal_DPP_072623_8220_Gilbert_Rd69190.pdf",
+        "title": "DEVELOPMENT PERMIT 23-011608",
+        "date": "2023-07-26",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/072623_minutes.htm",
+        "date": "2023-07-26",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:52:44.813Z",
+    "updateDate": "2024-02-07T17:27:26.142Z"
   },
   {
     "id": "dev-n7yu9elwfze8fccbjhrq4",
@@ -27749,6 +28079,171 @@
     },
     "createDate": "2024-02-07T08:49:12.318Z",
     "updateDate": "2024-02-07T08:49:12.318Z"
+  },
+  {
+    "id": "dev-aly4qcxnghxp6npl3i51d",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-934415",
+    "address": "9200, 9220, 9240, 9260, 9280, 9300, 9320, 9340 Francis Road",
+    "applicant": "Zhao XD Architect Ltd.",
+    "behalf": null,
+    "description": "Development Permit for the construction of 25 townhouse units at 9200, 9220, 9240, 9260, 9280, 9300, 9320, 9340 Francis Road. Rezoning from 'Single Detached (RS 1/E)' to 'Town Housing (ZT94) Francis Road (Broadmoor)' for this project under Bylaw 10254 (RZ 20-907463). The proposed development includes 25 townhouse units, with three-storey units along Francis Road and two-storey duplex style units along the rear property line. Nine existing bylaw-sized trees will be retained on-site. A Servicing Agreement is required as a condition of Building Permit issuance. The Public Hearing for the rezoning of this site was held on July 19, 2021, and concerns about increased traffic, construction impacts, and neighboring fences were addressed. The Traffic and Parking Assessment Report concluded that the proposed 25-unit townhouse development will have a very minor impact on the traffic operations of the future road network, and no traffic or parking issues are expected.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-28",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 25,
+      "stratas": 25,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_Zhao_XD_Architect_DPP_Francis_Road69014.pdf",
+        "title": "DEVELOPMENT PERMIT 21-934415",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/062823_minutes.htm",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:53:35.083Z",
+    "updateDate": "2024-02-07T17:27:44.375Z"
+  },
+  {
+    "id": "dev-56413atm4k2qvj9211ghs",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-936427",
+    "address": "10340, 10360, 10380, 10400, 10420 No. 4 Road",
+    "applicant": "Kadium No. 4 Development Ltd.",
+    "behalf": null,
+    "description": "Development Permit for the construction of 19 townhouse units at 10340, 10360, 10380, 10400, and 10420 No. 4 Road on a site zoned 'Medium Density Townhouses (RTM2)'. The project includes four secondary suites and involves a rezoning from the 'Single Detached (RS 1/E)' zone to the 'Medium Density Townhouses (RTM2)' zone under Richmond Zoning Bylaw 8500, Amendment Bylaw 10261 (RZ 18-831725). The proposal also includes variances to reduce the minimum front yard setback and lot depth. The applicant has worked with the city to address design issues related to form and character, noise levels and mitigation, landscape design, shared outdoor amenity space, units with secondary suites, accessibility features, sustainability strategy, and statutory right-of-way requirements. The proposal has been revised to address these design issues, including changes to the Landscape Plan, demonstration of functional design for units containing secondary suites, incorporation of relevant accessibility features, refinement of lot grading, and ensuring appropriate transition to neighboring lots.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-28",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 19,
+      "stratas": 19,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_Kadium_No_4_Development__DPP_062823_No_4_Road69015.pdf",
+        "title": "DEVELOPMENT PERMIT 21-936427",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/062823_minutes.htm",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:54:17.754Z",
+    "updateDate": "2024-02-07T17:28:10.997Z"
+  },
+  {
+    "id": "dev-2jxen7ontu7ppyyeccj09",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 22-015851",
+    "address": "8731 Cambie Road, 8771 Cambie Road, 8831/8851 Cambie Road, 8791 Cambie Road/3600 Sexsmith Road",
+    "applicant": "Polygon Talisman Park Ltd.",
+    "behalf": null,
+    "description": "Polygon Talisman Park Ltd. has applied to develop 276 rental housing units in two six-storey apartment buildings over a common parking structure on a development site comprising portions of the properties located at 8731, 8771, 8831/8851 Cambie Road and 8791 Cambie Road/3600 Sexsmith Road. The subject application is the first phase of a four-phase development. The subject development provides a range of unit types from studio to three-bedroom, with unit areas proposed to range from 40 m2 to 94 m2 (431 ft2 to 1,012 ft2). All the units will be connected to a City-owned Low Carbon Energy System. Approximately 568 m2 (6,114 ft2) of indoor amenity space is provided, along with approximately 1,793 m2 (19,300 ft2) of common outdoor amenity space and approximately 651 m2 (7,006 ft2) of pathway area. A rooftop urban agriculture gardening area is provided at the roof level of the affordable housing building.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-28",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 276,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 6
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/3_Polygon_Talisman_Park_Ltd_DPP_062823_Cambie_Road_and_Sexsmith_Road69016.pdf",
+        "title": "DEVELOPMENT PERMIT 22-015851",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/062823_minutes.htm",
+        "date": "2023-06-28",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:55:02.149Z",
+    "updateDate": "2024-02-07T17:28:25.243Z"
   },
   {
     "id": "dev-uqfrlir3fcqdq88qrspbi",
@@ -32159,6 +32654,116 @@
     },
     "createDate": "2024-02-07T08:51:44.256Z",
     "updateDate": "2024-02-07T08:51:44.256Z"
+  },
+  {
+    "id": "dev-zyjbzkm7zaqm1y7vcy4g0",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-935984",
+    "address": "12551 No. 1 Road",
+    "applicant": "Gordon Chan",
+    "behalf": null,
+    "description": "Gordon Chan has applied for a Development Permit at 12551 No. 1 Road to replace all the existing 18 single-glazed windows with double-glazed windows, replace two doors on the front (north) elevation, and remove the existing overhead garage door on the rear (south) elevation. The subject property is split-zoned: most of the site is zoned 'Light Industrial (IL)', and the small triangular portion along Bayview Street is zoned 'Steveston Commercial (CS2)'. The applicant has requested a variance to reduce the minimum front yard setback to the garbage and recycling enclosure from 3.0 m to 0m, which has been supported by staff. The Richmond Heritage Commission has also supported the DP and HAP applications for 12551 No. 1 Road subject to a future review of the encroachment issue to ensure the streetscape and urban design is compatible with the Steveston Village Heritage Conservation Area.",
+    "buildingType": "commercial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-14",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": null,
+      "stratas": 0,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_12551_No_1_Road68875.pdf",
+        "title": "DEVELOPMENT PERMIT 21-935984",
+        "date": "2023-06-14",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/061423_minutes.htm",
+        "date": "2023-06-14",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:56:08.406Z",
+    "updateDate": "2024-02-07T17:29:00.260Z"
+  },
+  {
+    "id": "dev-4cio42sd3bh6nz12eo4zl",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-936149",
+    "address": "6520 Williams Road",
+    "applicant": "Gradual Architecture Inc.",
+    "behalf": null,
+    "description": "Gradual Architecture Inc. has applied for a Development Permit at 6520 Williams Road to construct eight townhouse units on a site zoned 'Low Density Townhouses (RTL4)'. The site is being rezoned from the 'Single Detached (RS 1/E)' zone to the 'Low Density Townhouses (RTL4)' zone under Bylaw 10224 (RZ 17-792242). The existing single detached dwelling on the site will be demolished. The proposed development has been reviewed and approved by the Transportation Department, and a sustainability strategy has been provided to achieve Step 3 of the BC Energy Step Code consistent with current City regulations. The Public Hearing for the rezoning of this site was held on February 16, 2021, and no public correspondence was received. Staff recommendation is to issue the Development Permit.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-06-14",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 8,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_6520_Williams_Road68876.pdf",
+        "title": "DEVELOPMENT PERMIT 21-936149",
+        "date": "2023-06-14",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/061423_minutes.htm",
+        "date": "2023-06-14",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:56:43.207Z",
+    "updateDate": "2024-02-07T17:29:14.376Z"
   },
   {
     "id": "dev-gf4n3h1atit6tkg067rsc",
@@ -36765,6 +37370,171 @@
     },
     "createDate": "2024-02-07T08:53:21.870Z",
     "updateDate": "2024-02-07T08:53:21.870Z"
+  },
+  {
+    "id": "dev-vi05n7lglwkcfahk3odiq",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-932383",
+    "address": "8951 Spires Road, 8971 Spires Road, 8991 Spires Gate",
+    "applicant": "Flat Architecture Inc.",
+    "behalf": null,
+    "description": "Flat Architecture Inc. has applied to develop 22 residential units and two secondary suites at 8951, 8971 Spires Road and 8991 Spires Gate. The proposed development includes 20 multi-level townhouse units and two ground-level flats. The unit sizes range between 71.27 m2 and 139.91 m2, providing a mix of two to five-bedroom units. Two of the townhouse units will have a two-bedroom secondary suite. The site is being rezoned from 'Single Detached (RS 1/E)' zone to 'Parking Structure Townhouses (RTP4)' zone under Bylaw 10218 (RZ 18-818420). The proposed scheme addresses urban design issues and complies with the Official Community Plan and the 'Parking Structure Townhouses (RTP4)' zone. The Advisory Design Panel supports the project. The staff recommends permitting the construction of the units and two secondary suites and varying the provisions of Richmond Zoning Bylaw 8500 to reduce the minimum lot width and area.",
+    "buildingType": "townhouse",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-05-10",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 11,
+      "stratas": 22,
+      "rentals": 2,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 3
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_8951_8971_Spires_Road_and_8991_Spires_Gate_DPP_05102366515.pdf",
+        "title": "DEVELOPMENT PERMIT 21-932383",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/051023_minutes.htm",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:57:15.800Z",
+    "updateDate": "2024-02-07T17:29:29.424Z"
+  },
+  {
+    "id": "dev-thp2vlhxku18of1hcxyf5",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-943565",
+    "address": "9800 Van Horne Way",
+    "applicant": "Orion Construction",
+    "behalf": null,
+    "description": "Orion Construction has applied for a Development Permit at 9800 Van Horne Way to construct two multi-tenant light industrial buildings. The site is currently zoned \"Light Industrial (IL)\" and the owner intends to sell the buildings as strata titled units after completion. A Servicing Agreement is required prior to Development Permit issuance, including decommissioning and replacement of existing water, sanitary, and storm sewer mains, as well as frontage improvements to both River Drive and Van Horne Way. The proposed scheme has addressed urban design issues and complies with the Official Community Plan, City Centre Area Plan, and the \"Light Industrial (IL)\" zoning regulations. The Advisory Design Panel supported the application, subject to certain design changes being incorporated, which the applicant has done.",
+    "buildingType": "industrial",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-05-10",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 2,
+      "stratas": null,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": null
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/2_9800_Van_Horne_Way_DPP_05102366516.pdf",
+        "title": "DEVELOPMENT PERMIT 21-943565",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/051023_minutes.htm",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:57:52.535Z",
+    "updateDate": "2024-02-07T17:29:43.149Z"
+  },
+  {
+    "id": "dev-v49h5s6q7vdrqlmbrn9b3",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 22-019430",
+    "address": "10151 Ainsworth Crescent",
+    "applicant": "Talvinder Jagde",
+    "behalf": null,
+    "description": "Talvinder Jagde has applied to develop a 58.3 m2 coach house at 10151 Ainsworth Crescent. The site is currently zoned 'Single Detached with Granny Flat or Coach House - Edgemere (RE 1)' and contains one single detached house, which is proposed to be demolished. The proposed scheme has satisfactorily addressed urban design issues and staff comments. The applicant has requested variances to increase the maximum setback from the south property line and decrease the minimum setback from the north property line. The proposed variances do not interfere with the overall design of the coach house and provide for the retention of a significant tree. The proposed location of the coach house provides an adequate buffer to the adjacent lot to the west and addresses concerns of overlook into the neighboring properties.",
+    "buildingType": "single-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-05-10",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 1,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 2
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/3_10151_Ainsworth_Crescent_DPP_05102366517.pdf",
+        "title": "DEVELOPMENT PERMIT 22-019430",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/051023_minutes.htm",
+        "date": "2023-05-10",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:58:32.009Z",
+    "updateDate": "2024-02-07T17:29:56.252Z"
   },
   {
     "id": "dev-qnmfx5uzd3o399aed3buc",
@@ -49505,6 +50275,61 @@
     },
     "createDate": "2024-02-07T08:52:19.765Z",
     "updateDate": "2024-02-07T08:52:19.765Z"
+  },
+  {
+    "id": "dev-yipqhwksefe80elzoqqtk",
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "type": "development permit",
+    "applicationId": "DP 21-933765",
+    "address": "9300 Cambie Road, 9320 Cambie Road",
+    "applicant": "Interface Architecture Inc.",
+    "behalf": "Westmark Developments (Camosun) Ltd.",
+    "description": "Interface Architecture Inc. has applied to the City of Richmond on the behalf of Westmark Developments (Camosun) Ltd. for permission to develop 126 residential units in a five-storey multi-family apartment building over a common parkade at 9300 and 9320 Cambie Road on a site zoned 'Low Rise Apartment (ZLR43)-Alexandra Neighbourhood (West Cambie)'. The site is being rezoned from 'Single Detached (RS 1/F)' to 'Low Rise Apartment (ZLR43) Alexandra Neighbourhood (West Cambie)' for this project under Bylaw 10219 (RZ 18-835042) which received third reading on January 18, 2021. The development proposal provides five affordable housing units distributed throughout the building, consistent with the West Cambie Area Plan. The development site is split into two parts due to the required dedication of McKim Way east-west through the lots. The northern portion of the site will have a residential building containing 126 apartment units. The southern portion of the site will have an outdoor amenity space with garden plots for the exclusive use of the residents in the apartment block. The development provides a range of unit types from one bedroom to three-bedroom plus den, with unit areas proposed to range from 58.9 m2 to 152.3 m2 (634 ft2 to 1,639 ft2). The indoor amenity space encompasses approximately 548.5 m2 (5,904 ft2) and will include a fitness centre and a multipurpose room on the first floor, as well as a common amenity room on each resident floor. The outdoor amenity space will be approximately 1,147 m2 (12,347 ft2) in area, including a community garden on the south side of McKim Way and three programmed areas on top of the parking podium. A Servicing Agreement will be required for this development, and includes new fire hydrants, watermain and storm sewer upgrades, frontage improvements along Cambie Road, full road construction of McKim Way, and greenway extension south side of McKim Way.",
+    "buildingType": "multi-family residential",
+    "status": "approved",
+    "dates": {
+      "appliedDate": null,
+      "publicHearingDate": null,
+      "approvalDate": "2023-02-15",
+      "denialDate": null,
+      "withdrawnDate": null
+    },
+    "stats": {
+      "buildings": 1,
+      "stratas": 126,
+      "rentals": 0,
+      "hotels": 0,
+      "fsr": null,
+      "storeys": 5
+    },
+    "zoning": {
+      "previousZoningCode": null,
+      "previousZoningDescription": null,
+      "newZoningCode": null,
+      "newZoningDescription": null
+    },
+    "reportUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/__shared/assets/1_9300_9320_Cambie_Road66187.pdf",
+        "title": "DEVELOPMENT PERMIT 21-933765",
+        "date": "2023-02-15",
+        "status": "approved"
+      }
+    ],
+    "minutesUrls": [
+      {
+        "url": "https://citycouncil.richmond.ca/agendas/archives/dpp/2023/021523_minutes.htm",
+        "date": "2023-02-15",
+        "status": "approved"
+      }
+    ],
+    "location": {
+      "latitude": null,
+      "longitude": null
+    },
+    "createDate": "2024-02-07T16:59:24.307Z",
+    "updateDate": "2024-02-07T17:30:21.099Z"
   },
   {
     "id": "dev-qpxmfn8gwkmw42rwhkodr",

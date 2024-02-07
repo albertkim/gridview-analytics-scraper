@@ -131,10 +131,10 @@ export async function analyze(options: IOptions) {
 
     // AI summary of which permits were approved
     const developmentPermitDecisionResponse = await chatGPTJSONQuery(`
-      You are an expert in land use planning and development. Given the following text, identify development permits (DP XX-XXXXXX where X is a number, usually near the start of the document, do not mention any RZ XX-XXXXXX codes). Return the data in the following JSON format:
+      You are an expert in land use planning and development. Given the following text, identify development permits (XX-XXXXXX where X is a number, usually near the start of the document, do not mention any RZ XX-XXXXXX codes). Return the data in the following JSON format:
       {
         data: {
-          developmentPermitId: string in the format of DP XX-XXXXXX,
+          developmentPermitId: string in the format of XX-XXXXXX,
           status: one of "approved", "applied", "denied", "withdrawn"
         }[]
       }
@@ -143,7 +143,7 @@ export async function analyze(options: IOptions) {
     `)
 
     if (!developmentPermitDecisionResponse || !developmentPermitDecisionResponse.data) {
-      console.log(chalk.red(`No response for Richmond development permit meeting ${meeting.date}`))
+      console.log(chalk.red(`No decisions response for Richmond development permit meeting ${meeting.date}`))
       continue
     }
 
@@ -160,47 +160,49 @@ export async function analyze(options: IOptions) {
       }
 
       // All permit numbers should be on the first report page (about 120 words of the PDF)
-      const permitNumbers = findApplicationIDsFromTemplate(parsedReport, 'DP XX-XXXXXX')
+      const permitNumbers = findApplicationIDsFromTemplate('DP XX-XXXXXX', parsedReport)
 
       if (!permitNumbers || permitNumbers.length === 0) {
         console.log(chalk.red(`No Richmond DP XX-XXXXXX permit number found for ${meeting.date} - ${report.url}`))
         continue
       }
 
-      const permits = await AIGetPartialRecords(parsedReport, {
+      const response = await AIGetPartialRecords(parsedReport, {
         instructions: 'Identify only the development permits that refer to new developments, not alterations.',
         applicationId: 'file number in the format of DP XX-XXXXXX where X is a number (do not mention RZ XX-XXXXXX codes)',
         fieldsToAnalyze: ['building type', 'stats'],
         expectedWords: permitNumbers
       })
 
-      if (permits.length === 0) {
+      if (response.length === 0) {
         console.log(chalk.yellow(`No new development DPs found in ${report.url}`))
         continue
       }
 
-      for (const permit of permits) {
+      for (const responseItem of response) {
 
         // Find the development permit by doing a search on only the XX-XXXXXX part (exclude the DP) and then getting the status string, make into lowercase
-        const permitNumber = permit.applicationId
+        const permitNumber = responseItem.applicationId
 
         if (!permitNumber) {
-          console.log(chalk.red(`No permit number found for Richmond D - ${meeting.minutesUrl} - skipping`))
+          console.log(chalk.red(`No permit number found for Richmond - ${meeting.minutesUrl} - skipping`))
           continue
         }
 
-        let status = developmentPermitDecisions.find((permit) => permit.developmentPermitId.includes(permitNumber))?.status.toLowerCase() as ZoningStatus
+        // NOTE: developmentPermitDecisions contains XX-XXXXXX, a subset of DP XX-XXXXXX
+        let status = developmentPermitDecisions.find((permit) => permitNumber.includes(permit.developmentPermitId))?.status.toLowerCase() as ZoningStatus
   
         // DP status matching may not work
         if (!status) {
-          console.log(chalk.red(`No matching status for Richmond DP ${permitNumber} - ${meeting.minutesUrl} - skipping`))
-          console.log(developmentPermitDecisions)
+          console.log(chalk.red(`No matching status for Richmond ${permitNumber} - ${meeting.minutesUrl} - skipping`))
+          console.log(chalk.yellow(JSON.stringify(responseItem)))
+          console.log(chalk.yellow(JSON.stringify(developmentPermitDecisions)))
           continue
         }
   
         // Only add approved permits
         if (status !== 'approved') {
-          console.log(chalk.yellow(`Richmond DP ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - skipping`))
+          console.log(chalk.yellow(`Richmond ${permitNumber} not approved - ${status} - ${meeting.minutesUrl} - skipping`))
           continue
         }
 
@@ -209,11 +211,11 @@ export async function analyze(options: IOptions) {
           metroCity: 'Metro Vancouver',
           type: 'development permit',
           applicationId: permitNumber, // Use the regex permit number
-          address: permit.address,
-          applicant: permit.applicant,
-          behalf: permit.behalf,
-          description: permit.description,
-          buildingType: permit.buildingType,
+          address: responseItem.address,
+          applicant: responseItem.applicant,
+          behalf: responseItem.behalf,
+          description: responseItem.description,
+          buildingType: responseItem.buildingType,
           status: status,
           dates: {
             appliedDate: null,
@@ -222,8 +224,8 @@ export async function analyze(options: IOptions) {
             denialDate: null,
             withdrawnDate: null
           },
-          stats: permit.stats,
-          zoning: permit.zoning,
+          stats: responseItem.stats,
+          zoning: responseItem.zoning,
           reportUrls: [
             {
               url: report.url,

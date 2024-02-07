@@ -9,9 +9,9 @@ const startDate = '2023-01-01'
 const endDate = '2024-02-01'
 const citiesToAnalyze: string[] = [
   // 'Vancouver',
-  'Richmond',
+  // 'Richmond',
   // 'Burnaby',
-  // 'Surrey'
+  'Surrey'
 ]
 
 async function main() {
