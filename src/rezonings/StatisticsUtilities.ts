@@ -1,14 +1,17 @@
 import chalk from 'chalk'
 import similarity from 'similarity'
-import { IFullRezoningDetail, RecordsRepository } from '../repositories/RecordsRepository'
-import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
 import moment from 'moment'
+import { RecordsRepository } from '../repositories/RecordsRepositoryV2'
+import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
+import { FullRecord } from '../repositories/FullRecord'
+
+const recordsRepository = new RecordsRepository('final')
 
 // Get a birds-eye view of the rezoning data
 export async function getStatistics() {
 
   const news = RawRepository.getNews()
-  const rezonings = RecordsRepository.getRecords('rezoning')
+  const rezonings = recordsRepository.getRecords('rezoning')
 
   console.log()
 
@@ -94,7 +97,7 @@ function getNewsDateRangesPerCity(news: IMeetingDetail[]) {
 
 }
 
-function getRezoningCountPerCity(rezonings: IFullRezoningDetail[]) {
+function getRezoningCountPerCity(rezonings: FullRecord[]) {
 
   const countPerCity = rezonings.reduce<Record<string, number>>((acc, obj) => {
     acc[obj.city] = (acc[obj.city] || 0) + 1
@@ -115,7 +118,7 @@ interface ICityDateUrlErrors {
   emptyDates: number
 }
 
-function getURLDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
+function getURLDateErrorsPerCity(rezonings: FullRecord[]) {
 
   const results: ICityDateUrlErrors[] = []
 
@@ -136,7 +139,7 @@ function getURLDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
 }
 
 // For every address, use the similarity library to find addresses that are similar, then return matching addresses with minimum score
-function getSimilarAddresses(rezonings: IFullRezoningDetail[], similarityScore: number) {
+function getSimilarAddresses(rezonings: FullRecord[], similarityScore: number) {
 
   const results: {city: string, address: string, similarAddresses: {address: string, similarity: number}[]}[] = []
 
@@ -181,7 +184,7 @@ function getSimilarAddresses(rezonings: IFullRezoningDetail[], similarityScore: 
 
 }
 
-function getCoordinateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
+function getCoordinateErrorsPerCity(rezonings: FullRecord[]) {
   const results: {city: string, count: number}[] = []
 
   const cities = [...new Set(rezonings.map(rezoning => rezoning.city))]
@@ -207,7 +210,7 @@ interface ICityErrors {
   withdrawnDateErrors: number
 }
 
-function getDateErrorsPerCity(rezonings: IFullRezoningDetail[]) {
+function getDateErrorsPerCity(rezonings: FullRecord[]) {
 
   const results: ICityErrors[] = []
 

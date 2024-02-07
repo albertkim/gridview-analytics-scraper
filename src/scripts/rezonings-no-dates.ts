@@ -1,16 +1,14 @@
 import chalk from 'chalk'
-import { RawRepository } from '../repositories/RawRepository'
-import { RecordsRepository } from '../repositories/RecordsRepository'
-import { checkIfApplication, parseApplication } from '../rezonings/cities/Vancouver/Applications'
-import { checkIfBylaw } from '../rezonings/cities/Vancouver/Bylaws'
-import { checkIfPublicHearing } from '../rezonings/cities/Vancouver/PublicHearings'
 import moment from 'moment'
+import { RecordsRepository } from '../repositories/RecordsRepositoryV2'
 
 // Purpose: To find rezonings that don't have the correct dates given their meeting minute URL types
 (async () => {
 
+  const recordsRepository = new RecordsRepository('final')
+
   // City
-  const rezonings = RecordsRepository.getRecords('rezoning', {city: 'Vancouver'})
+  const rezonings = recordsRepository.getRecords('rezoning', {city: 'Vancouver'})
 
   // Application checks
   const applicationRezonings = rezonings

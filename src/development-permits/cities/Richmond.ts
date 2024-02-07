@@ -1,13 +1,12 @@
 import moment from 'moment'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { ZoningStatus } from '../../repositories/RecordsRepository'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { chatGPTJSONQuery } from '../../utilities/AIUtilities'
 import { formatDateString } from '../../scraper/BulkUtilities'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
-import { FullRecord } from '../../repositories/FullRecord'
+import { FullRecord, ZoningStatus } from '../../repositories/FullRecord'
 
 interface IOptions {
   startDate: string

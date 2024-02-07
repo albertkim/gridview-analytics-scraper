@@ -1,7 +1,6 @@
 import puppeteer from 'puppeteer'
 import fs from 'fs'
 import path from 'path'
-import ts from 'typescript'
 
 // Purpose of this test is to see if I can extract details from Richmond meeting minutes more effectively
 (async () => {

@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import { chatGPTJSONQuery } from './AIUtilities'
-import { ZoningStatus, ZoningType } from '../repositories/RecordsRepository'
+import { ZoningStatus, BuildingType } from '../repositories/FullRecord'
 import { IExpectedFormat, checkAndFixAIResponse } from './AIFormatChecker'
 
 // This will use GPT 3.5 (not 4 due to cost concerns) to summarize a rezoning/development permit document to the best of its ability
@@ -127,7 +127,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     applicant: string | null
     behalf: string | null
     description: string
-    buildingType: ZoningType | null
+    buildingType: BuildingType | null
     zoning: IZoningDetail
     stats: IBuildingStats
     status: ZoningStatus | null
@@ -219,7 +219,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     }
 
     const detailsObject = {
-      buildingType: detailsResponse.buildingType || null as ZoningType | null,
+      buildingType: detailsResponse.buildingType || null as BuildingType | null,
       zoning: detailsResponse.zoning || {
         previousZoningCode: null as string | null,
         previousZoningDescription: null as string | null,
@@ -254,7 +254,7 @@ interface IDetailsParams {
 }
 
 interface IDetailsResponse {
-  buildingType: ZoningType | null
+  buildingType: BuildingType | null
   zoning: IZoningDetail
   stats: IBuildingStats
   status: ZoningStatus | null

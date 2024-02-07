@@ -1,16 +1,19 @@
-import { IFullRezoningDetail, RecordsRepository, mergeEntries } from '../../repositories/RecordsRepository'
+import { FullRecord } from '../../repositories/FullRecord'
+import { RecordsRepository } from '../../repositories/RecordsRepositoryV2'
 
 // NOTE: Due to array handling complexity, this only merges one address at a time
 (async () =>{
 
-  const rezonings = RecordsRepository.getRecords('rezoning')
+  const recordsRepository = new RecordsRepository('draft')
+
+  const rezonings = recordsRepository.getRecords('rezoning')
 
   interface ISimilarAddressStructure {
     index: number
-    rezoning: IFullRezoningDetail
+    rezoning: FullRecord
     similarAddressRezonings: {
       index: number
-      rezoning: IFullRezoningDetail
+      rezoning: FullRecord
       similarity: number
     }[]
   }
@@ -19,7 +22,7 @@ import { IFullRezoningDetail, RecordsRepository, mergeEntries } from '../../repo
 
   for (let i = 0; i < rezonings.length; i++) {
     const rezoning = rezonings[i]
-    const similarAddressRezonings = RecordsRepository.getRecordsWithSimilarAddresses('rezoning', rezoning)
+    const similarAddressRezonings = recordsRepository.getRecordsWithSimilarAddresses('rezoning', rezoning)
     if (similarAddressRezonings.length > 0) {
       rezoningWithSimilarAddresses = {
         index: i,
@@ -40,7 +43,7 @@ import { IFullRezoningDetail, RecordsRepository, mergeEntries } from '../../repo
     // Merge into the first entry
     let mergedEntry = rezoningWithSimilarAddresses.rezoning
     rezoningWithSimilarAddresses.similarAddressRezonings.forEach((similarAddressRezoning) => {
-      mergedEntry = mergeEntries(mergedEntry, similarAddressRezoning.rezoning)
+      mergedEntry.merge(similarAddressRezoning.rezoning)
     })
     console.log('Final entry')
     console.log(mergedEntry)
@@ -59,7 +62,7 @@ import { IFullRezoningDetail, RecordsRepository, mergeEntries } from '../../repo
     // Update the database
     console.log(`Previous database length: ${rezonings.length}`)
     console.log(`Previous database length: ${updatedRezonings.length}`)
-    RecordsRepository.dangerouslyUpdateAllRecords('rezoning', updatedRezonings)
+    recordsRepository.dangerouslyReplaceAllRecords('rezoning', updatedRezonings)
 
   }
 

@@ -2,10 +2,10 @@ import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
 import { RawRepository } from '../../repositories/RawRepository'
-import { IFullRezoningDetail } from '../../repositories/RecordsRepository'
 import { checkIfApplication, parseApplication } from '../../rezonings/cities/Surrey/Applications'
 import { checkIfPublicHearing, parsePublicHearing } from '../../rezonings/cities/Surrey/PublicHearings'
 import { checkIfBylaw, parseBylaw } from '../../rezonings/cities/Surrey/Bylaws'
+import { FullRecord } from '../../repositories/FullRecord'
 
 (async () => {
 
@@ -22,9 +22,9 @@ import { checkIfBylaw, parseBylaw } from '../../rezonings/cities/Surrey/Bylaws'
     return true
   })
 
-  const applications: IFullRezoningDetail[] = []
-  const publicHearings: IFullRezoningDetail[] = []
-  const bylaws: IFullRezoningDetail[] = []
+  const applications: FullRecord[] = []
+  const publicHearings: FullRecord[] = []
+  const bylaws: FullRecord[] = []
 
   for (const n of news) {
     if (checkIfApplication(n)) {

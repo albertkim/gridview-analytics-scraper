@@ -1,9 +1,8 @@
 import chalk from 'chalk'
 import { IMeetingDetail } from '../../../repositories/RawRepository'
-import { ZoningStatus } from '../../../repositories/RecordsRepository'
 import { ErrorsRepository } from '../../../repositories/ErrorsRepository'
 import { parseCleanPDF } from '../../../utilities/PDFUtilitiesV2'
-import { FullRecord } from '../../../repositories/FullRecord'
+import { FullRecord, ZoningStatus } from '../../../repositories/FullRecord'
 import { AIGetPartialRecords } from '../../../utilities/AIUtilitiesV2'
 import { findApplicationIDsFromTemplate } from '../../../utilities/RegexUtilities'
 

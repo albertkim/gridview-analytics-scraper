@@ -1,32 +1,17 @@
 import chalk from 'chalk'
 import moment from 'moment'
 import { Client } from '@googlemaps/google-maps-services-js'
-import { RecordsRepository } from '../repositories/RecordsRepository'
-import { chatGPTJSONQuery, getGPTBaseRezoningStatsQuery } from './AIUtilities'
+import { RecordsRepository } from '../repositories/RecordsRepositoryV2'
+
+const recordsRepository = new RecordsRepository('final')
 
 export const BulkUtilities = {
-
-  async bulkUpdateStats() {
-
-    const rezonings = RecordsRepository.getRecords('rezoning')
-
-    for (const rezoning of rezonings) {
-      const GPTStats = await chatGPTJSONQuery(getGPTBaseRezoningStatsQuery(rezoning.description), '4')
-      if (GPTStats) {
-        rezoning.stats = GPTStats
-        rezoning.updateDate = moment().format('YYYY-MM-DD')
-      }
-    }
-
-    RecordsRepository.dangerouslyUpdateAllRecords('rezoning', rezonings)
-
-  },
 
   async bulkAddCoordinates() {
 
     const client = new Client({})
 
-    const records = RecordsRepository.getRecords('all')
+    const records = recordsRepository.getRecords('all')
   
     for (const record of records) {
       
@@ -66,7 +51,8 @@ export const BulkUtilities = {
         console.log(chalk.bgWhite(message))
       }
   
-      RecordsRepository.dangerouslyUpdateAllRecords('all', records)
+      recordsRepository.dangerouslyReplaceAllRecords('all', records)
+
     }
 
   }

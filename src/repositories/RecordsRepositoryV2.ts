@@ -3,8 +3,7 @@ import path from 'path'
 import chalk from 'chalk'
 import moment from 'moment'
 import similarity from 'similarity'
-import { IFullRezoningDetail, mergeEntries } from './RecordsRepository'
-import { FullRecord } from './FullRecord'
+import { FullRecord, IFullRecordParams } from './FullRecord'
 
 export class RecordsRepository {
 
@@ -23,7 +22,7 @@ export class RecordsRepository {
   }
 
   getRecords(type: 'all' | 'rezoning' | 'development permit', filter?: {city?: string}) {
-    let records = JSON.parse(fs.readFileSync(this.database, 'utf8')) as IFullRezoningDetail[]
+    let records = JSON.parse(fs.readFileSync(this.database, 'utf8')) as IFullRecordParams[]
     if (type !== 'all') {
       records = records.filter((item) => item.type === type)
     }
@@ -190,7 +189,7 @@ export class RecordsRepository {
       throw new Error('Repository must be in "final" mode to perform a check-in.')
     }
 
-    const draftRecordObjects = JSON.parse(fs.readFileSync(this.databaseMapping.draft, 'utf8')) as IFullRezoningDetail[]
+    const draftRecordObjects = JSON.parse(fs.readFileSync(this.databaseMapping.draft, 'utf8')) as IFullRecordParams[]
     const draftRecords = draftRecordObjects.map((record) => new FullRecord(record))
 
     for (const record of draftRecords) {

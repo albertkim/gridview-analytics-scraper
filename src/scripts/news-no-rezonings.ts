@@ -1,6 +1,9 @@
 import chalk from 'chalk'
 import { IMeetingDetail, RawRepository } from '../repositories/RawRepository'
-import { IFullRezoningDetail, RecordsRepository } from '../repositories/RecordsRepository'
+import { RecordsRepository } from '../repositories/RecordsRepositoryV2'
+import { FullRecord } from '../repositories/FullRecord'
+
+const recordsRepository = new RecordsRepository('final')
 
 // Vancouver imports
 import { checkIfApplication as vancouverCheckIfApplication, parseApplication as vancouverParseApplication } from '../rezonings/cities/Vancouver/Applications'
@@ -16,7 +19,11 @@ import { checkIfBylaw as burnabyCheckIfBylaw, parseBylaw as burnabyParseBylaw } 
 import { checkIfApplication as richmondCheckIfApplication, parseApplication as richmondParseApplication } from '../rezonings/cities/Richmond/Applications'
 import { checkIfPublicHearing as richmondCheckIfPublicHearing, parsePublicHearing as richmondParsePublicHearing } from '../rezonings/cities/Richmond/PublicHearings'
 import { checkIfBylaw as richmondCheckIfBylaw, parseBylaw as richmondParseBylaw } from '../rezonings/cities/Richmond/Bylaws'
-import { FullRecord } from '../repositories/FullRecord'
+
+// Surrey imoprts
+import { checkIfApplication as surreyCheckIfApplication, parseApplication as surreyParseApplication } from '../rezonings/cities/Surrey/Applications'
+import { checkIfPublicHearing as surreyCheckIfPublicHearing, parsePublicHearing as surreyParsePublicHearing } from '../rezonings/cities/Surrey/PublicHearings'
+import { checkIfBylaw as surreyCheckIfBylaw, parseBylaw as surreyParseBylaw } from '../rezonings/cities/Surrey/Bylaws'
 
 // Purpose: For a given city, find how many of the rezoning-checked news items are not in the rezonings database
 // Accomplish that by checking for existance of the minutes URL
@@ -29,7 +36,7 @@ const updateBylaws: boolean = false
 
 // --------------------------------------------------
 
-type CityType = 'Vancouver' | 'Burnaby' | 'Richmond'
+type CityType = 'Vancouver' | 'Burnaby' | 'Richmond' | 'Surrey'
 
 interface IFunctionCityMapping {
 
@@ -49,37 +56,43 @@ async function main() {
     checkIfApplication: {
       Vancouver: vancouverCheckIfApplication,
       Burnaby: burnabyCheckIfApplication,
-      Richmond: richmondCheckIfApplication
+      Richmond: richmondCheckIfApplication,
+      Surrey: surreyCheckIfApplication
     },
     parseApplication: {
       Vancouver: vancouverParseApplication,
       Burnaby: burnabyParseApplication,
-      Richmond: richmondParseApplication
+      Richmond: richmondParseApplication,
+      Surrey: surreyParseApplication
     },
     checkIfPublicHearing: {
       Vancouver: vancouverCheckIfPublicHearing,
       Burnaby: burnabyCheckIfPublicHearing,
-      Richmond: richmondCheckIfPublicHearing
+      Richmond: richmondCheckIfPublicHearing,
+      Surrey: surreyCheckIfPublicHearing
     },
     parsePublicHearing: {
       Vancouver: vancouverParsePublicHearing,
       Burnaby: burnabyParsePublicHearing,
-      Richmond: richmondParsePublicHearing
+      Richmond: richmondParsePublicHearing,
+      Surrey: surreyParsePublicHearing
     },
     checkIfBylaw: {
       Vancouver: vancouverCheckIfBylaw,
       Burnaby: burnabyCheckIfBylaw,
-      Richmond: richmondCheckIfBylaw
+      Richmond: richmondCheckIfBylaw,
+      Surrey: surreyCheckIfBylaw
     },
     parseBylaw: {
       Vancouver: vancouverParseBylaw,
       Burnaby: burnabyParseBylaw,
-      Richmond: richmondParseBylaw
+      Richmond: richmondParseBylaw,
+      Surrey: surreyParseBylaw
     }
   }
 
   const news = RawRepository.getNews({city: city})
-  const rezonings = RecordsRepository.getRecords('rezoning', {city: city})
+  const rezonings = recordsRepository.getRecords('rezoning', {city: city})
 
   // Application checks
   const applicationNews = news.filter((n) => functionCityMapping.checkIfApplication[city](n))
@@ -124,7 +137,7 @@ async function main() {
       const n = noApplicationNews[i]
       const parsed = await functionCityMapping.parseApplication[city](n)
       if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', parsed)
+        await recordsRepository.upsertRecords('rezoning', parsed)
       }
     }
   }
@@ -135,7 +148,7 @@ async function main() {
       const n = noPublicHearingNews[i]
       const parsed = await functionCityMapping.parsePublicHearing[city](n)
       if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', parsed)
+        await recordsRepository.upsertRecords('rezoning', parsed)
       }
     }
   }
@@ -146,7 +159,7 @@ async function main() {
       const n = noBylawNews[i]
       const parsed = await functionCityMapping.parseBylaw[city](n)
       if (parsed) {
-        await RecordsRepository.upsertRecords('rezoning', parsed)
+        await recordsRepository.upsertRecords('rezoning', parsed)
       }
     }
   }
