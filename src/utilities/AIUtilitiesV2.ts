@@ -55,7 +55,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
   let response = await chatGPTJSONQuery(fullQuery, '3.5')
   let valid = checkAndFixAIResponse(response, fullQueryFormat)
-  let includesExpectedWords = expectedWords.every((word) => JSON.stringify(response.data).includes(word))
+  let includesExpectedWords = response ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
 
   let count = 1
 
@@ -83,7 +83,8 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
   function stringifyArray(array: any[]) {
     const result: string[] = []
     for (const item of array) {
-      result.push(JSON.stringify(item))
+      const combinedString = `${item.title}\n${item.summary}`
+      result.push(combinedString)
     }
     return result
   }
@@ -136,7 +137,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
   for (const summaryItem of summary) {
 
     const baseQuery = `
-      You are an expert in land use planning and development. Your objective is make structured data from the following document. Carefully read through it and identify an the address - usually found near the start of the document with numbers and words like "road", "ave", "st", "crescent", etc.
+      You are an expert in land use planning and development. Your objective is make structured data from the following document. Carefully read through it and identify an address - usually found near the start of the document with numbers and words like "road", "avenue", "street", "crescent", etc.
       
       Then read the rest of the document and structure your findings in the following JSON format - otherwise return a {error: message, reason: detailed explanation}. Only you successfully return an entry with an address I will tip you $10.
 
@@ -147,7 +148,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
         address: street address(es) - if multiple addresses, comma separate - do not include city - if you can't find address, try again harder, it definitely exists usually naer the start of the document
         applicant: who the applicant is - null if doesn't exist
         behalf: if the applicant is applying on behalf of someone else, who is it - null if doesn't exist
-        description: a detailed description of the new development in question - be be specific, include any details like address, applicants, buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
+        description: a detailed description of the new development in question - be be specific, include any details such as address, applicants, buildings, number/types of units, rentals, fsr, storeys, rezoning details, dollar values etc. - do not mention legal/meeting/process details, only development details
       }
 
       Document here:

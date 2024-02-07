@@ -101,7 +101,7 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
 
   for (const chunk of chunkedText) {
     const chunkSummary = await chatGPTTextQuery(`
-      You are cleaning and formatting PDF document to be easy to read. You must retain original information, do not summarize. Shorten sentences without losing information. Only give me the results, do not explain anything.
+      You are cleaning and formatting a messy PDF document to be easy to read. You must retain original information, do not summarize. Shorten sentences without losing information. Only give me the results, do not explain anything. The words/sentences may be split up into many lines, but they should be joined together as you see fit.
 
       Here is the document:
       ${chunk}
@@ -109,7 +109,8 @@ export async function parseCleanPDF(url: string, options: IParsePDFOptions) {
     if (chunkSummary) {
       finalText += `${chunkSummary}\n`
     } else {
-      console.log(chalk.red(`Failed to get a summary for the chunk: ${chunk} for the PDF at ${url}`))
+      console.log(chalk.red(`Failed to get a summary for a chunk for the PDF at ${url}`))
+      return null
     }
   }
 
