@@ -6,6 +6,8 @@ import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { parsePDFAsRawArray } from '../../utilities/PDFUtilitiesV2'
 import { FullRecord } from '../../repositories/FullRecord'
+import { findApplicationIDsFromTemplate } from '../../utilities/RegexUtilities'
+import chalk from 'chalk'
 
 const startUrl = 'https://www.burnaby.ca/services-and-payments/permits-and-applications/building-permits-issued-and-tabulation-reports'
 
@@ -85,9 +87,13 @@ export async function analyze(options: IOptions) {
     for (const parsed of parsedArray) {
 
       // Find the instances of building permit IDs
-      // Don't need to worry about other permid ID references, Burnaby descriptions are too short to include them
-      const regex = /BLD.{0,3}\d{2}-\d{5}/gi
-      const permitNumbers = Array.from(new Set(parsed.match(regex)))
+      // Don't need to worry about other permid ID references inside descriptions, Burnaby descriptions are too short to include them
+      const permitNumbers = findApplicationIDsFromTemplate(parsed, 'BLDXX-XXXXX')
+
+      if (permitNumbers.length === 0) {
+        console.log(chalk.red(`No Burnaby BLDXX-XXXXX permit number found for ${urlObject.date} - ${urlObject.title}`))
+        continue
+      }ß
 
       const response = await AIGetPartialRecords(parsed, {
         instructions: 'The following text extracted from a PDF is messy but do your best. Identify ONLY the items that refer to new developments, not alterations nor demolitions. Number of units is usually a number listed right after the $ value',

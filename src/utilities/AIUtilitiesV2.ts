@@ -12,7 +12,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
     In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
 
-    ${expectedWords ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
+    ${(expectedWords && expectedWords.length > 0) ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
     
     Return as a JSON object strictly in this format:
     

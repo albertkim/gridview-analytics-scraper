@@ -4,6 +4,7 @@ import { RawRepository } from '../../repositories/RawRepository'
 import { AIGetPartialRecords } from '../../utilities/AIUtilitiesV2'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { FullRecord } from '../../repositories/FullRecord'
+import { findApplicationIDsFromTemplate } from '../../utilities/RegexUtilities'
 
 interface IOptions {
   startDate: string | null
@@ -56,13 +57,14 @@ export async function analyze(options: IOptions) {
     const report = news.reportUrls[0]
 
     // Regex to find XXXX-XXXX-XX where X is a number
-    const permitNumberRegex = /\d{4}-\d{4}-\d{2}/
-    const permitNumber = `${report.title} ${news.contents}`.match(permitNumberRegex)?.[0]
+    const permitNumbers = findApplicationIDsFromTemplate('XXXX-XXXX-XX', `${report.title} ${news.contents}`)
 
-    if (!permitNumber) {
-      console.log(chalk.red(`No XXXX-XXXX-XX permit number found for ${news.date} - ${news.title}`))
+    if (permitNumbers.length === 0) {
+      console.log(chalk.red(`No Surrey XXXX-XXXX-XX permit number found for ${news.date} - ${news.title}`))
       continue
     }
+
+    const permitNumber = permitNumbers[0]
 
     const response = await AIGetPartialRecords(news.contents, {
       instructions: 'Identify only the items that refer to new developments, not alterations.',

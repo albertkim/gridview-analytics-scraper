@@ -7,6 +7,7 @@ import { formatDateString } from '../../scraper/BulkUtilities'
 import { RecordsRepository as RecordsRepositoryConstructor } from '../../repositories/RecordsRepositoryV2'
 import { parseCleanPDF } from '../../utilities/PDFUtilitiesV2'
 import { FullRecord, ZoningStatus } from '../../repositories/FullRecord'
+import { findApplicationIDsFromTemplate } from '../../utilities/RegexUtilities'
 
 interface IOptions {
   startDate: string
@@ -159,17 +160,10 @@ export async function analyze(options: IOptions) {
       }
 
       // All permit numbers should be on the first report page (about 120 words of the PDF)
-      // Regex should case-insenstively check for DP XX-XXXXXX where X is a number and there may be any characters (up to 3 max) between the DP and the numbers
-      const firstPage = parsedReport.split(' ').slice(0, 120).join(' ')
-      const permitNumberRegex = /DP[\s\S]{0,3}(\d{2}-\d{6})/i
-      const permitNumbers = Array.from(new Set(firstPage.match(permitNumberRegex))).map((match) => {
-        // Use regex to get the XX-XXXXXX part and return the formatted DP XX-XXXXXX
-        return `DP ${match.match(/\d{2}-\d{6}/i)![0]}`
-      })
+      const permitNumbers = findApplicationIDsFromTemplate(parsedReport, 'DP XX-XXXXXX')
 
       if (!permitNumbers || permitNumbers.length === 0) {
-        console.log(chalk.red(`No DP XX-XXXXXX permit number found for ${meeting.date} - ${report.url}`))
-        console.log(firstPage)
+        console.log(chalk.red(`No Richmond DP XX-XXXXXX permit number found for ${meeting.date} - ${report.url}`))
         continue
       }
 
