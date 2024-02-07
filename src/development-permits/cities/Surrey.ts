@@ -66,7 +66,7 @@ export async function analyze(options: IOptions) {
 
     const permitNumber = permitNumbers[0]
 
-    const response = await AIGetPartialRecords(news.contents, {
+    const response = await AIGetPartialRecords(`${news.title}\n${news.contents}`, {
       instructions: 'Identify only the items that refer to new developments, not alterations.',
       applicationId: 'XXXX-XXXX-XX where X is a number',
       fieldsToAnalyze: ['building type', 'stats'],
@@ -83,6 +83,14 @@ export async function analyze(options: IOptions) {
         applicant: permit.applicant,
         behalf: permit.behalf,
         description: permit.description,
+        rawSummaries: permit.rawSummaries.map((summaryObject) => {
+          return {
+            summary: summaryObject.summary,
+            date: news.date,
+            status: 'approved',
+            reportUrl: null
+          }
+        }),
         buildingType: permit.buildingType,
         status: 'approved',
         stats: permit.stats,

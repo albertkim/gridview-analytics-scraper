@@ -55,6 +55,14 @@ export async function parsePublicHearing(news: IMeetingDetail): Promise<FullReco
         applicant: record.applicant,
         behalf: record.behalf,
         description: record.description,
+        rawSummaries: record.rawSummaries.map((summaryObject) => {
+          return {
+            summary: summaryObject.summary,
+            date: news.date,
+            status: 'public hearing',
+            reportUrl: news.reportUrls[0].url
+          }
+        }),
         buildingType: record.buildingType,
         status: 'public hearing',
         dates: {

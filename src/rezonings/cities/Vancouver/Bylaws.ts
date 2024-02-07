@@ -34,6 +34,12 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
         metroCity: 'Metro Vancouver',
         type: 'rezoning',
         applicationId: null,
+        rawSummaries: [{
+          summary: news.title,
+          date: news.date,
+          status: 'withdrawn',
+          reportUrl: null
+        }],
         address: bylawDetail.address,
         status: 'withdrawn',
         dates: {
@@ -94,7 +100,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
       const response = await AIGetPartialRecords(page.text, {
         expectedWords: [], // Vancouver does not have rezoning IDs for some reason
         fieldsToAnalyze: ['status'],
-        status: 'one of "approved", "denied", or "withdrawn"'
+        statusOptions: 'one of "approved", "denied", or "withdrawn"'
       })
 
       if (!response || response.length === 0) {
@@ -113,6 +119,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
             applicant: record.applicant,
             behalf: record.behalf,
             description: record.description,
+            rawSummaries: record.rawSummaries.map((summaryObject) => {
+              return {
+                summary: summaryObject.summary,
+                date: news.date,
+                status: record.status!,
+                reportUrl: page.url
+              }
+            }),
             buildingType: record.buildingType,
             status: record.status!,
             dates: {

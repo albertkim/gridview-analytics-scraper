@@ -215,6 +215,14 @@ export async function analyze(options: IOptions) {
           applicant: responseItem.applicant,
           behalf: responseItem.behalf,
           description: responseItem.description,
+          rawSummaries: responseItem.rawSummaries.map((summaryObject) => {
+            return {
+              summary: summaryObject.summary,
+              date: meeting.date,
+              status: status,
+              reportUrl: report.url
+            }
+          }),
           buildingType: responseItem.buildingType,
           status: status,
           dates: {

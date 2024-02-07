@@ -91,7 +91,7 @@ export async function analyze(options: IOptions) {
       const permitNumbers = findApplicationIDsFromTemplate('BLDXX-XXXXX', parsed)
 
       if (permitNumbers.length === 0) {
-        console.log(chalk.red(`No Burnaby BLDXX-XXXXX permit number found for ${urlObject.date} - ${urlObject.title}`))
+        console.log(chalk.red(`No Burnaby BLDXX-XXXXX permit number found for ${urlObject.date} - ${urlObject.url}`))
         continue
       }
 
@@ -120,6 +120,14 @@ export async function analyze(options: IOptions) {
             applicant: permit.applicant,
             behalf: permit.behalf,
             description: permit.description,
+            rawSummaries: permit.rawSummaries.map((summaryObject) => {
+              return {
+                summary: summaryObject.summary,
+                date: urlObject.date,
+                status: 'approved',
+                reportUrl: urlObject.url
+              }
+            }),
             buildingType: permit.buildingType,
             status: 'approved',
             stats: permit.stats,

@@ -65,6 +65,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
           applicant: record.applicant,
           behalf: record.behalf,
           description: record.description,
+          rawSummaries: record.rawSummaries.map((summaryObject) => {
+            return {
+              summary: summaryObject.summary,
+              date: news.date,
+              status: status,
+              reportUrl: pdfUrl.url
+            }
+          }),
           buildingType: record.buildingType,
           status: status,
           dates: {
@@ -74,14 +82,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
             denialDate: status === 'denied' ? news.date : null,
             withdrawnDate: status === 'withdrawn' ? news.date : null
           },
-          reportUrls: news.reportUrls.map((urlObject) => {
-            return {
+          reportUrls: [
+            {
+              title: pdfUrl.title,
+              url: pdfUrl.url,
               date: news.date,
-              title: urlObject.title,
-              url: urlObject.url,
               status: status
             }
-          }),
+          ],
           minutesUrls: news.minutesUrl ? [{
             url: news.minutesUrl,
             date: news.date,

@@ -118,6 +118,14 @@ export async function analyze(options: IOptions) {
       applicant: entry.Applicant,
       behalf: null,
       description: cleanString(entry.ProjectDescription),
+      rawSummaries: [
+        {
+          summary: JSON.stringify(entry),
+          date: formatDateString(entry.IssueDate),
+          status: 'approved',
+          reportUrl: startUrl
+        }
+      ],
       buildingType: detailsResponse.buildingType,
       status: 'approved',
       dates: {

@@ -31,11 +31,11 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
     // Expect one rezoning item per application
     const rezoningId = rezoningIds[0]
 
-    const response = await AIGetPartialRecords(news.contents, {
+    const response = await AIGetPartialRecords(`${news.title}\n${news.contents}`, {
       expectedWords: [rezoningId],
       fieldsToAnalyze: ['building type', 'zoning', 'stats', 'status'],
       applicationId: 'in the format of XXXX-XXXX-XX where Xs are numbers',
-      status: 'one of "approved", "denied", "withdrawn" - default to "approved" if unclear'
+      statusOptions: 'one of "approved", "denied", "withdrawn" - default to "approved" if unclear'
     })
 
     if (!response || response.length === 0) {
@@ -54,6 +54,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
         applicant: record.applicant,
         behalf: record.behalf,
         description: record.description,
+        rawSummaries: record.rawSummaries.map((summaryObject) => {
+          return {
+            summary: summaryObject.summary,
+            date: news.date,
+            status: status,
+            reportUrl: null
+          }
+        }),
         buildingType: record.buildingType,
         status: status,
         dates: {

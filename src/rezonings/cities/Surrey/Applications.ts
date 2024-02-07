@@ -42,7 +42,7 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
 
     const rezoningId = rezoningIds[0]
 
-    const response = await AIGetPartialRecords(news.contents, {
+    const response = await AIGetPartialRecords(`${news.title}\n${news.contents}`, {
       expectedWords: [rezoningId],
       applicationId: 'in the format of XXXX-XXXX-XX where Xs are numbers',
       fieldsToAnalyze: ['building type', 'zoning', 'stats']
@@ -63,6 +63,14 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
         applicant: record.applicant,
         behalf: record.behalf,
         description: record.description,
+        rawSummaries: record.rawSummaries.map((summaryObject) => {
+          return {
+            summary: summaryObject.summary,
+            date: news.date,
+            status: 'applied',
+            reportUrl: news.reportUrls[0].url
+          }
+        }),
         buildingType: record.buildingType,
         status: 'applied',
         dates: {

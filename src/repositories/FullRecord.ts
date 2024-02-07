@@ -28,7 +28,7 @@ export interface IFullRecordParams {
   applicant?: string | null
   behalf?: string | null
   description?: string | null
-  rawSummaries?: {
+  rawSummaries: {
     summary: string
     date: string
     status: ZoningStatus

@@ -36,7 +36,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
       {
         applicationId: 'ID in the format of REZ #XX-XX where X is a number - format if necessary',
         fieldsToAnalyze: ['building type', 'stats', 'status'],
-        status: 'one of "approved" (if text says something like final adoption), "denied", or "withdrawn" - default to "approved" if unclear',
+        statusOptions: 'one of "approved" (if text says something like final adoption), "denied", or "withdrawn" - default to "approved" if unclear',
         expectedWords: [rezoningId]
       }
     )
@@ -59,6 +59,14 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
           applicant: record.applicant,
           behalf: record.behalf,
           description: record.description,
+          rawSummaries: record.rawSummaries.map((summaryObject) => {
+            return {
+              summary: summaryObject.summary,
+              date: news.date,
+              status: status,
+              reportUrl: news.reportUrls[0].url
+            }
+          }),
           status: status!,
           dates: {
             appliedDate: null,

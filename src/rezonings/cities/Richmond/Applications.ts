@@ -57,6 +57,14 @@ export async function parseApplication(news: IMeetingDetail): Promise<FullRecord
         applicant: record.applicant,
         behalf: record.behalf,
         description: record.description,
+        rawSummaries: record.rawSummaries.map((summaryObject) => {
+          return {
+            summary: summaryObject.summary,
+            date: news.date,
+            status: 'applied',
+            reportUrl: news.reportUrls[0].url
+          }
+        }),
         buildingType: record.buildingType,
         status: 'applied',
         dates: {

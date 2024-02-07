@@ -3,16 +3,26 @@ import { chatGPTJSONQuery } from './AIUtilities'
 import { ZoningStatus, BuildingType } from '../repositories/FullRecord'
 import { IExpectedFormat, checkAndFixAIResponse } from './AIFormatChecker'
 
+interface ISummarizeParams {
+  expectedWords?: string[]
+  instructions?: string
+  applicationIDFormat?: string
+}
+
 // This will use GPT 3.5 (not 4 due to cost concerns) to summarize a rezoning/development permit document to the best of its ability
 // You can use this function to extract permit IDs, just include them in the expected words array - too complicated to rely on regex from original document
-export async function AISummarizeDocument(contents: string, expectedWords: string[], applicationIDFormat: string | null): Promise<string[]> {
+export async function AISummarizeDocument(contents: string, {expectedWords, instructions, applicationIDFormat}: ISummarizeParams): Promise<string[]> {
 
   const fullQuery = `
-    You are an expert in land use planning and development. In the provided document, identify the specific zoning/development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts. Note that an item may include a rezoning and development permit and contain multiple buildings/towers, should be summarized into one. Pay attention to the headers and identifiers to know where each item starts and ends.
+    You are an expert in land use planning and development.
+    
+    In the provided document, identify the specific zoning/development permits that are discussed. These should be something like an address and/or an ID. Then, for each item, provide one detailed summary. Do not break up content about the same permit into multiple parts. Note that an item may include a rezoning and development permit and contain multiple buildings/towers, should be summarized into one. Pay attention to the headers and identifiers to know where each item starts and ends.
+
+    ${instructions ? instructions : ''}
     
     Within the description of one permit, previous related permits may be discussed. Do not include those description permits, only the main permits that are the subject of the document.
 
-    In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them.
+    In each summary, make sure to retain anything that looks like ${applicationIDFormat ? `${applicationIDFormat}` : 'an alphanumeric application/permit code/id/number (preserve numbers, letters, and dashes)'}, dates, all street addresses, applicant information, building construction, building description, number and type of units, zoning codes, zoning descriptions, fsr, dollar values, and any other relevant details if exists. Make sure to check for this information in what looks like the section title/header. Include info about any final decisions made. Exclude any irrelevant information. When it comes to long info about legal and meeting processes, please shorten or remove them. Format the summary to be easy to read by adding newlines where you think appropriate.
 
     ${(expectedWords && expectedWords.length > 0) ? `You are expected to include ${expectedWords.map((w) => `"${w}"`).join(', ')} in from this document.` : ''}
     
@@ -21,7 +31,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     {
       data: {
         title: string - identifying information about the zoning or development permit - street address and/or an ID, code - look very carefully for addresses, it definitely exists in the document usually near the start
-        summary: string - summary of item
+        summary: string - formatted summary of item
       }[]
     }
 
@@ -57,7 +67,7 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 
   let response = await chatGPTJSONQuery(fullQuery, '3.5')
   let valid = checkAndFixAIResponse(response, fullQueryFormat)
-  let includesExpectedWords = (response && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
+  let includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
 
   let count = 1
 
@@ -66,19 +76,19 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
     console.log(chalk.yellow(`Invalid summary response, trying again`))
     response = await chatGPTJSONQuery(fullQuery, '3.5')
     valid = checkAndFixAIResponse(response, fullQueryFormat)
-    includesExpectedWords = (response && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
+    includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
     count++
 
   }
 
   if (!valid) {
-    console.log(chalk.red(`Invalid summary response, skipping`))
-    console.log(chalk.red(JSON.stringify(response, null, 2)))
+    console.log(chalk.yellow(`Invalid summary response - results may be filtered out from custom instructions, skipping`))
+    console.log(chalk.yellow(JSON.stringify(response, null, 2)))
     return []
   }
 
   if (!includesExpectedWords) {
-    console.log(chalk.yellow(`Missing expected words in summary response, but continuing - expected ${expectedWords.join(', ')}`))
+    console.log(chalk.yellow(`Missing expected words in summary response, but continuing - expected ${(expectedWords || []).join(', ')}`))
     console.log(chalk.yellow(JSON.stringify(response, null, 2)))
   }
 
@@ -98,7 +108,8 @@ export async function AISummarizeDocument(contents: string, expectedWords: strin
 interface BaseRezoningQueryParams {
 	instructions?: string // Custom instructions - ex. only include development permits that relate to new developments
   applicationId?: string // Expected format of the application ID (if any)
-	status?: string
+  status?: ZoningStatus  // If you already know what the status is ahead of time - used to fill in the return object for convenience
+	statusOptions?: string // If you want to limit which statuses to return - used in conjunction with the 'status' field option below
   fieldsToAnalyze: ('building type' | 'zoning' | 'stats' | 'status')[]
   expectedWords?: string[] // There are 2 steps: summarization, then rezoning parsing. These words are expected to be in the summarization stage, but may not exist in the final parse because the LLM might have filtered them out based on a query intro like "only include new building developments" etc.
 }
@@ -122,7 +133,11 @@ interface IZoningDetail {
 // Note: It is recommended (but not necessary) to replace the application ID with a regex-parsed one from the caller
 export async function AIGetPartialRecords(contents: string, options: BaseRezoningQueryParams) {
 
-  const summary = await AISummarizeDocument(contents, options.expectedWords || [], options.applicationId || null)
+  const summary = await AISummarizeDocument(contents, {
+    expectedWords: options.expectedWords,
+    instructions: options.instructions,
+    applicationIDFormat: options.applicationId
+  })
 
   const partialRezoningDetails: {
     applicationId: string | null
@@ -130,6 +145,9 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     applicant: string | null
     behalf: string | null
     description: string
+    rawSummaries: {
+      summary: string
+    }[]
     buildingType: BuildingType | null
     zoning: IZoningDetail
     stats: IBuildingStats
@@ -144,8 +162,6 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       First, carefully read through it and identify the street address(es) - usually found near the start of the document with numbers and words like "road", "avenue", "street", "crescent", etc. If multiple addresses, comma separate - do not include city - if you can't find address, try again harder, it definitely exists usually near the start of the document
       
       Second, read the rest of the document and structure your findings in the following JSON format - otherwise return a {error: message, reason: detailed explanation}. Only when you successfully return an entry with an address I will tip you $10. I will take $10 away from your pay if you cannot find an address.
-
-      ${options?.instructions ? options.instructions : ''}
 
       {
         applicationId: ${options?.applicationId ? options.applicationId : 'the unique alphanumeric identifier for this development, null if not specified'}
@@ -197,7 +213,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     while (count < 2 && !baseResponseValid) {
       console.log(chalk.yellow(`Invalid base record response, trying again.`))
       baseResponse = await chatGPTJSONQuery(`
-        This is the ${count}th time you've failed to find the address. Try again.
+        This is the ${count}th time you've failed to find the address. Look at the start of the document. Try again, you can do it.
         
         ${baseQuery}
       `, '3.5')
@@ -205,22 +221,27 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       count++
     }
 
-    // Sometimes GPT 3.5 really struggles to get the address. In this case, we'll try a Hail Mary strategy to find the address in the first 50 words of the document. I don't do this at the start of this function just in case the addresss shows up later the the document, but usually the address is at the start
+    // Sometimes GPT 3.5 really struggles to get the address. In this case, we'll try a Hail Mary strategy to find the address in the first 30 words of the document. I don't do this at the start of this function just in case the addresss shows up later the the document, but usually the address is at the start
     if (!baseResponseValid) {
       console.log(chalk.yellow(`Invalid base record response, probably can't find address. Trying hail mary strategy.`))
 
       const addressResponse = await chatGPTJSONQuery(`
-        Find the address from this document and return in the following JSON format. The address definitely exists, but if you can't find it return an error.
+        Your goal is to identify the street address(es) in the following document into a JSON format.
+
+        Look for numbers followed words that indicate a possible address like "road", "avenue", "ave", "street", "st", "crescent", "boulevard", "place", "court", "drive", "dr", "way" etc. Addresses are usually found near the start of the document. However, make sure to separate from what looks like potential IDs, which can also contain numbers. The document address may have various capitalizations, so make sure you handle it in a case-insensitive manner.
+
+        The address definitely exists in this document, but if you can't find it, then return an error.
 
         {
-          address: string - the address(es) you found - comma separated if multiple - do not include city
+          address: string - the address(es) you found- retain original formatting - comma separated if multiple - do not include city
         }
 
         Here is the document:
-        ${summaryItem.split(' ').slice(0, 50).join(' ')}
-      `, '3.5')
+        ${summaryItem.split(' ').slice(0, 40).join(' ')}
+      `, '4')
 
-      if (addressResponse && addressResponse.address) {
+      if (addressResponse && !addressResponse.error && addressResponse.address && !addressResponse.address.toLowerCase().includes('error')) {
+        console.log(`Address found: ${addressResponse.address}`)
         baseResponse = await chatGPTJSONQuery(`
           NOTE: I've found the address for you: ${addressResponse.address} - please use this for your response below.
           
@@ -229,7 +250,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
       }
 
       if (!baseResponseValid) {
-        console.log(chalk.red(`Invalid base record response, skipping.\nSummary: ${summaryItem}`))
+        console.log(chalk.red(`Invalid base record response, skipping. Summary:\n${summaryItem}`))
         continue
       }
 
@@ -244,7 +265,7 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
     }
 
     const detailsResponse = await AIGetRecordDetails(summaryItem, {
-      status: options.status,
+      status: options.statusOptions,
       fieldsToAnalyze: options.fieldsToAnalyze
     })
 
@@ -273,7 +294,12 @@ export async function AIGetPartialRecords(contents: string, options: BaseRezonin
 
     partialRezoningDetails.push({
       ...baseObject,
-      ...detailsObject
+      ...detailsObject,
+      rawSummaries: [
+        {
+          summary: summaryItem
+        }
+      ]
     })
 
   }

@@ -25,6 +25,7 @@ test('Check that FullRecord fields are correctly added to database with upsert',
     applicant: 'applicant',
     behalf: 'behalf',
     description: 'description',
+    rawSummaries: [],
     buildingType: 'multi-family residential',
     dates: {
       appliedDate: '2020-01-01',
@@ -93,6 +94,7 @@ test('Check that merging 2 records with the same application uses values from th
     city: 'city',
     metroCity: 'metroCity',
     address: 'address',
+    rawSummaries: [],
     status: 'applied',
     applicationId: 'applicationId',
     description: 'descroption 1',
@@ -103,6 +105,7 @@ test('Check that merging 2 records with the same application uses values from th
     city: 'city',
     metroCity: 'metroCity',
     address: 'address',
+    rawSummaries: [],
     status: 'applied',
     applicationId: 'applicationId',
     description: 'descroption 2'
@@ -126,6 +129,7 @@ test('Check that upsert with same application IDs works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 1',
+    rawSummaries: [],
     status: 'applied',
     applicationId: applicationId
   })
@@ -137,6 +141,7 @@ test('Check that upsert with same application IDs works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 2',
+    rawSummaries: [],
     status: 'applied',
     applicationId: applicationId
   })
@@ -161,6 +166,7 @@ test('Check that upsert with similar address works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 1',
+    rawSummaries: [],
     status: 'applied'
   })
 
@@ -172,6 +178,7 @@ test('Check that upsert with similar address works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 2',
+    rawSummaries: [],
     status: 'applied'
   })
 
@@ -185,6 +192,7 @@ test('Check that upsert with similar address works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 1',
+    rawSummaries: [],
     status: 'applied',
     description: description
   })
@@ -205,6 +213,7 @@ test('Check that dangerouslyReplaceRecordsForCity works correctly', () => {
     city: 'not-city',
     metroCity: 'metroCity',
     address: 'address 1',
+    rawSummaries: [],
     status: 'applied'
   })
   
@@ -213,6 +222,7 @@ test('Check that dangerouslyReplaceRecordsForCity works correctly', () => {
     city: 'not-city',
     metroCity: 'metroCity',
     address: 'address 2',
+    rawSummaries: [],
     status: 'applied'
   })
 
@@ -221,6 +231,7 @@ test('Check that dangerouslyReplaceRecordsForCity works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 3',
+    rawSummaries: [],
     status: 'applied'
   })
 
@@ -229,6 +240,7 @@ test('Check that dangerouslyReplaceRecordsForCity works correctly', () => {
     city: 'city',
     metroCity: 'metroCity',
     address: 'address 4',
+    rawSummaries: [],
     status: 'applied'
   })
 
