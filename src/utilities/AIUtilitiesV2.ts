@@ -67,7 +67,7 @@ export async function AISummarizeDocument(contents: string, {expectedWords, inst
 
   let response = await chatGPTJSONQuery(fullQuery, '3.5')
   let valid = checkAndFixAIResponse(response, fullQueryFormat)
-  let includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
+  let includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : true
 
   let count = 1
 
@@ -76,7 +76,7 @@ export async function AISummarizeDocument(contents: string, {expectedWords, inst
     console.log(chalk.yellow(`Invalid summary response, trying again`))
     response = await chatGPTJSONQuery(fullQuery, '3.5')
     valid = checkAndFixAIResponse(response, fullQueryFormat)
-    includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : false
+    includesExpectedWords = (response && expectedWords && expectedWords.length > 0) ? expectedWords.every((word) => JSON.stringify(response.data).includes(word)) : true
     count++
 
   }
