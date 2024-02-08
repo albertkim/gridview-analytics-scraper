@@ -100,7 +100,7 @@ export async function parseBylaw(news: IMeetingDetail): Promise<FullRecord[]> {
       const response = await AIGetPartialRecords(page.text, {
         expectedWords: [], // Vancouver does not have rezoning IDs for some reason
         fieldsToAnalyze: ['status'],
-        statusOptions: 'one of "approved", "denied", or "withdrawn"'
+        statusOptions: 'one of "approved", "denied", or "withdrawn" - default to "approved" if unclear'
       })
 
       if (!response || response.length === 0) {

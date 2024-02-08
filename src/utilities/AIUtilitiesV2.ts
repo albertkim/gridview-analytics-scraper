@@ -394,7 +394,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
   }
   if (shouldAnalyzeStatus) detailsQueryFormat.fields!.status = {
     type: 'string',
-    required: false,
+    required: true,
     possibleValues: ['applied', 'public hearing', 'approved', 'denied', 'withdrawn']
   }
 
@@ -407,7 +407,7 @@ export async function AIGetRecordDetails(contents: string, options: IDetailsPara
     const detailsResponseValid2 = checkAndFixAIResponse(detailsResponse, detailsQueryFormat)
     if (!detailsResponseValid2) {
       console.log(chalk.red(`Invalid record details response, skipping`))
-      console.log(chalk.red(detailsResponse))
+      console.log(chalk.red(JSON.stringify(detailsResponse, null, 2)))
       return null
     }
   }

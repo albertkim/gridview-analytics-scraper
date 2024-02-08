@@ -892,5 +892,83 @@
         "url": "https://citycouncil.richmond.ca/__shared/assets/2_-_Application_by_Navreet_Gill_for_Rezoning_at_11831_11833_Seabrook70931.pdf"
       }
     ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15333/",
+    "date": "2023-07-10",
+    "meetingType": "Council Minutes",
+    "title": "BYLAWS FOR ADOPTION - BYLAWS 10462, 10468, 10471, 10470 AND 10380",
+    "resolutionId": "R23/13-6",
+    "contents": "R23/13-6Outcome: It was moved and seconded That the following bylaws be adopted: Bylaw Enforcement Officer Bylaw No. 9742, Amendment Bylaw No. 10462 Inter-Municipal Business Licence Agreement Bylaw No. 10134, Amendment Bylaw No. 10468 Inter-Municipal Business Licence No. 10159, Amendment Bylaw No. 10471 Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 10370 Richmond Zoning Bylaw No. 8500, Amendment Bylaw No. 10380",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/council/071023_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/bylaw1046269051.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/blyaw1046869049.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/bylaw1047169052.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/blyaw1037069048.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/bylaw1038069050.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Richmond",
+    "metroCity": "Metro Vancouver",
+    "url": "http://citycouncil.richmond.ca/decisions/search/permalink/15086/",
+    "date": "2023-02-13",
+    "meetingType": "Council Minutes",
+    "title": "BYLAWS FOR ADOPTION - BYLAWS 10434 AND 10084",
+    "resolutionId": "R23/3-8",
+    "contents": "Resolution: It was moved and seconded That the following bylaws be adopted: Traffic Bylaw No. 5870, Amendment Bylaw No. 10434 Consolidated Fees Bylaw No. 8636, Amendment Bylaw No. 10084 n/a",
+    "minutesUrl": "https://citycouncil.richmond.ca/agendas/council/021323_minutes.htm",
+    "reportUrls": [
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_10434_CNCL_02132366300.pdf"
+      },
+      {
+        "title": "Report",
+        "url": "https://citycouncil.richmond.ca/__shared/assets/Bylaw_10084_CNCL_02132366299.pdf"
+      }
+    ]
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=44e94fd6-bb7e-4db8-bfa1-d83551c40fec&Agenda=Agenda&lang=English&Item=53&Tab=attachments",
+    "title": "RECONSIDERATION AND FINAL ADOPTION - #14525 - Burnaby Zoning Bylaw 1965, Amendment Bylaw No. 39, 2022 - Rez. #21-32 (4750 Kingsway)",
+    "resolutionId": null,
+    "contents": "Purpose: to permit construction of the second phase of the Concord Metrotown site, including three high-rise market residential strata buildings atop non-market rental and commercial/retail podiums, and two commercial high-rise buildings (one being market rental and the other being office/hospitality) atop a combined commercial/retail podium. Parking is provided fully underground with some on-street convenience parking(Item 6.12., CAO's Report, Council 2022 October 24)Memorandum - GM Planning & Development - September 14, 2023",
+    "reportUrls": [],
+    "date": "2023-09-25",
+    "meetingType": "City Council Meeting",
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=44e94fd6-bb7e-4db8-bfa1-d83551c40fec&lang=English"
+  },
+  {
+    "city": "Burnaby",
+    "metroCity": "Metro Vancouver",
+    "url": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=11cb2b2c-8f3f-4fb0-abc8-c31ea52208aa&Agenda=Agenda&lang=English&Item=32&Tab=attachments",
+    "title": "ABANDONMENT - #14544 - Burnaby Zoning Bylaw 1965, Amendment Bylaw No. 2, 2023 - REZ #22-11 (#5 - 8063 North Fraser Way) (First Reading)",
+    "resolutionId": null,
+    "contents": "Purpose: to permit a minor increase in interior floor area(Item 7.15, CAO's Report, Council January 23, 2023)This Bylaw was authorized for abandonment by Administrative Report Item 6.6., Council June 5, 2023, and was replaced by Bylaw #14579 that received Second Reading on July 10, 2023",
+    "reportUrls": [],
+    "date": "2023-07-24",
+    "meetingType": "City Council Meeting",
+    "minutesUrl": "https://pub-burnaby.escribemeetings.com/Meeting.aspx?Id=11cb2b2c-8f3f-4fb0-abc8-c31ea52208aa&lang=English"
   }
 ]
