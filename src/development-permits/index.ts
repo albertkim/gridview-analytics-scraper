@@ -3,37 +3,39 @@ import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { analyze as analyzeSurrey } from './cities/Surrey'
+import { getArgs } from '../utilities/CommandLineUtilities'
 
 // yarn run development-permit
-const startDate = '2023-01-01'
-const endDate = '2024-02-30'
-const citiesToAnalyze: string[] = [
-  // 'Vancouver',
+
+const availableCities: string[] = [
+  'Vancouver',
   'Richmond',
   'Burnaby',
   'Surrey'
 ]
 
+const args = getArgs(availableCities)
+
 async function main() {
 
-  if (citiesToAnalyze.includes('Vancouver')) {
+  if (args.cities.includes('Vancouver')) {
     console.log(chalk.bgWhite(`Analyzing development permits for Vancouver`))
-    await analyzeVancouver({startDate: startDate, endDate: endDate})
+    await analyzeVancouver({startDate: args.startDate, endDate: args.endDate})
   }
 
-  if (citiesToAnalyze.includes('Richmond')) {
+  if (args.cities.includes('Richmond')) {
     console.log(chalk.bgWhite(`Analyzing development permits for Richmond`))
-    await analyzeRichmond({startDate: startDate, endDate: endDate})
+    await analyzeRichmond({startDate: args.startDate, endDate: args.endDate})
   }
 
-  if (citiesToAnalyze.includes('Burnaby')) {
+  if (args.cities.includes('Burnaby')) {
     console.log(chalk.bgWhite(`Analyzing development permits for Burnaby`))
-    await analyzeBurnaby({startDate: startDate, endDate: endDate})
+    await analyzeBurnaby({startDate: args.startDate, endDate: args.endDate})
   }
 
-  if (citiesToAnalyze.includes('Surrey')) {
+  if (args.cities.includes('Surrey')) {
     console.log(chalk.bgWhite(`Analyzing development permits for Surrey`))
-    await analyzeSurrey({startDate: startDate, endDate: endDate})
+    await analyzeSurrey({startDate: args.startDate, endDate: args.endDate})
   }
 
   // Check in drafts with the command

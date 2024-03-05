@@ -2,33 +2,35 @@ import { analyze as analyzeVancouver } from './cities/Vancouver'
 import { analyze as analyzeRichmond } from './cities/Richmond'
 import { analyze as analyzeBurnaby } from './cities/Burnaby'
 import { analyze as analyzeSurrey } from './cities/Surrey'
+import { getArgs } from '../utilities/CommandLineUtilities'
 
 // yarn run rezone
-const startDate = '2023-01-01'
-const endDate = '2024-02-30'
-const citiesToAnalyze: string[] = [
+
+const availableCities: string[] = [
   'Vancouver',
   'Richmond',
   'Burnaby',
   'Surrey'
 ]
 
+const args = getArgs(availableCities)
+
 async function main() {
 
-  if (citiesToAnalyze.includes('Vancouver')) {
-    await analyzeVancouver(startDate, endDate)
+  if (args.cities.includes('Vancouver')) {
+    await analyzeVancouver(args.startDate, args.endDate)
   }
 
-  if (citiesToAnalyze.includes('Richmond')) {
-    await analyzeRichmond(startDate, endDate)
+  if (args.cities.includes('Richmond')) {
+    await analyzeRichmond(args.startDate, args.endDate)
   }
 
-  if (citiesToAnalyze.includes('Burnaby')) {
-    await analyzeBurnaby(startDate, endDate)
+  if (args.cities.includes('Burnaby')) {
+    await analyzeBurnaby(args.startDate, args.endDate)
   }
 
-  if (citiesToAnalyze.includes('Surrey')) {
-    await analyzeSurrey(startDate, endDate)
+  if (args.cities.includes('Surrey')) {
+    await analyzeSurrey(args.startDate, args.endDate)
   }
 
   // BulkUtilities.bulkAddCoordinates()
