@@ -1,5 +1,4 @@
 import axios from 'axios'
-import pdf2img from 'pdf-img-convert'
 import chalk from 'chalk'
 import { chatGPTTextQuery, imageTextQuery } from './AIUtilities'
 import { PDFRepository } from '../repositories/PDFRepository'
