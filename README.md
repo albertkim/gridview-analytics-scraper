@@ -6,6 +6,8 @@ NODE_ENV
 CHAT_GPT_API_KEY
 GOOGLE_APPLICATION_CREDENTIALS
 
+Not really an environment variable, but if you are scraping, make sure that you are not on a VPN. Some city websites (namely Burnaby) do not work well on VPN connections, especially those outside of Canada.
+
 ### AI tools
 
 ChatGPT 3.5 Turbo

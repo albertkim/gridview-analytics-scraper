@@ -30,6 +30,7 @@ async function main() {
   console.log(`Concurrency: ${concurrency}`)
 
   if (args.cities.includes('BC (province)')) {
+    console.log(chalk.bgWhite(`Scraping: BC (province)`))
     const data = await scrapeBC({
       startDate: args.startDate,
       endDate: args.endDate,
@@ -41,6 +42,7 @@ async function main() {
   }
 
   if (args.cities.includes('Vancouver')) {
+    console.log(chalk.bgWhite(`Scraping: Vancouver`))
     const data = await scrapeVancouver({
       startDate: args.startDate,
       endDate: args.endDate,
@@ -52,6 +54,7 @@ async function main() {
   }
 
   if (args.cities.includes('Richmond')) {
+    console.log(chalk.bgWhite(`Scraping: Richmond`))
     const data = await scrapeRichmond({
       startDate: args.startDate,
       endDate: args.endDate,
@@ -64,6 +67,7 @@ async function main() {
 
   // Burnaby code may require running in multiple date ranges because of rate limiting
   if (args.cities.includes('Burnaby')) {
+    console.log(chalk.bgWhite(`Scraping: Burnaby`))
     const data = await scrapeBurnaby({
       startDate: args.startDate,
       endDate: args.endDate,
